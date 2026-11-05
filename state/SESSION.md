@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery kyselina močová mg/dL ↔ µmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `2f5ea0cb`; feature `2f5ea0cb`)
-- Runtime / `DEPLOY_COMMIT`: `2f5ea0cb`
+- Vetva: `main` (HEAD `139e40ec`; feature `2f5ea0cb`)
+- Runtime / `DEPLOY_COMMIT`: `2f5ea0cb` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
