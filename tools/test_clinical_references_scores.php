@@ -55,7 +55,7 @@ scoresRefTest(str_contains(plasmicRiskLabel(6), '62 až 82'), 'Štítok vysokéh
 scoresRefApprox(8.0 * 59.48, TLS_URIC_ACID, 0.5, 'Prah kyseliny močovej 476 µmol/L.');
 scoresRefApprox(4.5 / 3.097, TLS_PHOS_ADULT, 0.01, 'Prah fosfátu dospelí 1,45 mmol/L.');
 scoresRefApprox(6.5 / 3.097, TLS_PHOS_CHILD, 0.01, 'Prah fosfátu deti 2,1 mmol/L.');
-scoresRefApprox(7.0 / 4.008, TLS_CALCIUM, 0.01, 'Prah vápnika 1,75 mmol/L.');
+scoresRefApprox(7.0 / CALCIUM_MMOLL_TO_MGDL, TLS_CALCIUM, 0.01, 'Prah vápnika 1,75 mmol/L.');
 // Hranice sú neostré (≥ / ≤)
 $tlsEdges = tlsCairoBishop(476.0, 6.0, 1.45, 1.75, false, false, false, false);
 scoresRefTest($tlsEdges['lab_count'] === 4 && $tlsEdges['ltls'] && !$tlsEdges['ctls'], 'Hraničné hodnoty sa počítajú (≥, ≤).');

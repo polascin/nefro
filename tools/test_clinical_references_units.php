@@ -48,7 +48,9 @@ unitsRefApprox(2.8, UREA_MMOLL_TO_BUN_MGDL, 0.0, 'UREA_MMOLL_TO_BUN_MGDL = 2,8')
 unitsRefApprox(GLUCOSE_MGDL_TO_MMOLL, (float) $byName['Glukóza'][3], 1e-12, 'Glukóza faktor z konštanty');
 unitsRefApprox(0.0555, GLUCOSE_MGDL_TO_MMOLL, 0.0, 'GLUCOSE_MGDL_TO_MMOLL = 0,0555');
 unitsRefApprox(18.0182, GLUCOSE_MMOLL_TO_MGDL, 0.0, 'GLUCOSE_MMOLL_TO_MGDL = 18,0182');
-unitsRefApprox(0.2495, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor 0,2495');
+unitsRefApprox(CALCIUM_MGDL_TO_MMOLL, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor z konštanty');
+unitsRefApprox(0.2495, CALCIUM_MGDL_TO_MMOLL, 0.0, 'CALCIUM_MGDL_TO_MMOLL = 0,2495');
+unitsRefApprox(4.008, CALCIUM_MMOLL_TO_MGDL, 0.0, 'CALCIUM_MMOLL_TO_MGDL = 4,008');
 unitsRefApprox(0.3229, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor 0,3229');
 unitsRefApprox(0.4114, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor 0,4114');
 unitsRefApprox(59.48, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor 59,48');
@@ -124,6 +126,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(100.0, GLUCOSE_MGDL_TO_MMOLL),
     0.0,
     'glucose helper = prevodník s GLUCOSE_MGDL_TO_MMOLL',
+);
+
+$caSi = calculatorConvertConventionalToSi(10.0, (float) $byName['Vápnik'][3]);
+unitsRefApprox(2.495, $caSi, 1e-9, 'Vápnik 10 mg/dL → 2,495 mmol/L');
+unitsRefApprox(2.495, calciumMgDlToMmolL(10.0), 1e-9, 'calciumMgDlToMmolL(10)');
+unitsRefApprox(40.08, calciumMmolLToMgDl(10.0), 1e-9, 'calciumMmolLToMgDl(10)');
+unitsRefApprox(
+    calciumMgDlToMmolL(10.0),
+    calculatorConvertConventionalToSi(10.0, CALCIUM_MGDL_TO_MMOLL),
+    0.0,
+    'calcium helper = prevodník s CALCIUM_MGDL_TO_MMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -240,6 +253,20 @@ unitsRefTest(
     str_contains($naPage, 'glucoseMmolLToMgDl')
         && !preg_match('/\*\s*18\.0182\b|\/\s*0\.0555\b/', $naPage),
     'calculator_na.php používa glucoseMmolLToMgDl bez inline 18,0182 / 0,0555',
+);
+
+// Vápnik mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.2495 / 4.008 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'CALCIUM_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'CALCIUM_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'calciumMgDlToMmolL')
+        && str_contains($commonSrc, 'calciumMmolLToMgDl'),
+    'calculators_common má vápnikové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Vápnik['\"].*0\.2495/", $commonSrc)
+        && !preg_match('/\*\s*4\.008\b/', $commonSrc),
+    'calculators_common bez literálu 0,2495 v prevodníku a bez inline × 4,008',
 );
 
 echo "Clinical references (units): $checks PASS\n";

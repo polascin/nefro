@@ -407,6 +407,19 @@ const GLUCOSE_MGDL_TO_MMOLL = 0.0555;
  */
 const GLUCOSE_MMOLL_TO_MGDL = 18.0182;
 
+/**
+ * Vápnik mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 10 / 40,08).
+ * Približne reciproký k CALCIUM_MMOLL_TO_MGDL (MW Ca ≈ 40,08 / 10).
+ */
+const CALCIUM_MGDL_TO_MMOLL = 0.2495;
+
+/**
+ * Vápnik mmol/L → mg/dL (≈ MW vápnika / 10 = 4,008).
+ * Nie je odvodený ako 1/0,2495: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 0,2495; TLS / korekcia albumínu 4,008).
+ */
+const CALCIUM_MMOLL_TO_MGDL = 4.008;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1355,6 +1368,18 @@ function glucoseMmolLToMgDl(float $mmolL): float
     return $mmolL * GLUCOSE_MMOLL_TO_MGDL;
 }
 
+/** Vápnik mg/dL → mmol/L. */
+function calciumMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * CALCIUM_MGDL_TO_MMOLL;
+}
+
+/** Vápnik mmol/L → mg/dL. */
+function calciumMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * CALCIUM_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1704,7 +1729,7 @@ function calculatorUnitConversionRows(): array
         ['Kreatinín', 'mg/dL', 'µmol/L', CREATININE_UMOL_PER_MGDL, 2, 0],
         ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', BUN_MGDL_TO_UREA_MMOLL, 1, 1],
         ['Glukóza', 'mg/dL', 'mmol/L', GLUCOSE_MGDL_TO_MMOLL, 0, 1],
-        ['Vápnik', 'mg/dL', 'mmol/L', 0.2495, 1, 2],
+        ['Vápnik', 'mg/dL', 'mmol/L', CALCIUM_MGDL_TO_MMOLL, 1, 2],
         ['Fosfát (P)', 'mg/dL', 'mmol/L', 0.3229, 1, 2],
         ['Magnézium', 'mg/dL', 'mmol/L', 0.4114, 1, 2],
         ['Kyselina močová', 'mg/dL', 'µmol/L', 59.48, 1, 0],

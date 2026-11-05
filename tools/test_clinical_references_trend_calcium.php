@@ -58,8 +58,8 @@ trendCaRefTest(str_starts_with(egfrSlopeInterpretation(0.5), 'eGFR sa v čase zl
 trendCaRefApprox(2.30, calculatorCorrectedCalcium(2.00, 25.0), 0.0001, 'Hypoalbuminémia');
 trendCaRefApprox(2.40, calculatorCorrectedCalcium(2.40, 40.0), 0.0001, 'Albumín 40 g/L korekciu nemení');
 trendCaRefApprox(2.30, calculatorCorrectedCalcium(2.40, 45.0), 0.0001, 'Hyperalbuminémia znižuje korigovanú hodnotu');
-// 0,02 mmol/L na g/L = 0,8 mg/dL na g/dL (1 mmol/L Ca = 4,008 mg/dL; 1 g/dL = 10 g/L)
-trendCaRefApprox(0.8, 0.02 * 10.0 * 4.008, 0.01, 'Ekvivalencia koeficientu s 0,8 mg/dL');
+// 0,02 mmol/L na g/L = 0,8 mg/dL na g/dL (1 mmol/L Ca = CALCIUM_MMOLL_TO_MGDL; 1 g/dL = 10 g/L)
+trendCaRefApprox(0.8, 0.02 * 10.0 * CALCIUM_MMOLL_TO_MGDL, 0.01, 'Ekvivalencia koeficientu s 0,8 mg/dL');
 
 // ─── Wiring ───
 $root = dirname(__DIR__);
