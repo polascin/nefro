@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery BUN ↔ urea. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `792c16ce`)
-- Runtime / `DEPLOY_COMMIT`: `792c16ce`
+- Vetva: `main` (HEAD `44a5c533`; feature `792c16ce`)
+- Runtime / `DEPLOY_COMMIT`: `792c16ce` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
