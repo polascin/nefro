@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 22:36 Europe/Bratislava
+Aktualizované: 2026-11-05 22:56 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery BUN ↔ urea. Handoff:
-`.codex/handoffs/2026-11-05-223548-bun-urea-helpers.md`.
+Beh: spoločné konštanty/helpery glukóza mg/dL ↔ mmol/L. Handoff:
+`.codex/handoffs/2026-11-05-225530-glucose-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `44a5c533`; feature `792c16ce`)
-- Runtime / `DEPLOY_COMMIT`: `792c16ce` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `e34dc727`)
+- Runtime / `DEPLOY_COMMIT`: `e34dc727`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -24,6 +24,7 @@ Beh: spoločné konštanty/helpery BUN ↔ urea. Handoff:
 7. Slučka tick 8: `UACR_MG_G_PER_MG_MMOL` + `uacrToMgG`; 5 súborov bez inline 8,84; units 81 PASS; suite 56 PASS
 8. Slučka tick 9: `CREATININE_MOLAR_MASS_G_PER_MOL` + `creatinineMmolLToGL`; bez inline 113,12; units 87 PASS; suite 56 PASS
 9. Slučka tick 10: `BUN_MGDL_TO_UREA_MMOLL` + `UREA_MMOLL_TO_BUN_MGDL` + helpery; units 96 PASS; suite 56 PASS
+10. Slučka tick 11: `GLUCOSE_MGDL_TO_MMOLL` + `GLUCOSE_MMOLL_TO_MGDL` + helpery; units 104 PASS; sodium 31 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -33,9 +34,9 @@ Beh: spoločné konštanty/helpery BUN ↔ urea. Handoff:
 ## Executable next step
 
 ```text
-rg -n 0.0555 calculator_*.php calculators_common.php
+rg -n 0.2495 calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-223548-bun-urea-helpers.md`
+`.codex/handoffs/2026-11-05-225530-glucose-helpers.md`
