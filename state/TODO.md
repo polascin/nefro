@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Zjednotiť faktor cholesterolu `0.02586` na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
+1. Zjednotiť faktor triglyceridov `0.01129` na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-b (cholesterol)
+
+- [x] `CHOLESTEROL_MGDL_TO_MMOLL` + `CHOLESTEROL_MMOLL_TO_MGDL` + helpery; PREVENT; units 145 PASS; scores 26 PASS; deploy `64712578`
 
 ## Hotové: slučka 2026-11-06-a (kyselina močová)
 

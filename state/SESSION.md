@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 00:14 Europe/Bratislava
+Aktualizované: 2026-11-06 00:34 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery kyselina močová mg/dL ↔ µmol/L. Handoff:
-`.codex/handoffs/2026-11-06-001430-uric-acid-helpers.md`.
+Beh: spoločné konštanty/helpery cholesterol mg/dL ↔ mmol/L. Handoff:
+`.codex/handoffs/2026-11-06-003430-cholesterol-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `139e40ec`; feature `2f5ea0cb`)
-- Runtime / `DEPLOY_COMMIT`: `2f5ea0cb` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `64712578`)
+- Runtime / `DEPLOY_COMMIT`: `64712578`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -29,6 +29,7 @@ Beh: spoločné konštanty/helpery kyselina močová mg/dL ↔ µmol/L. Handoff:
 12. Slučka tick 13: `PHOSPHATE_MGDL_TO_MMOLL` + `PHOSPHATE_MMOLL_TO_MGDL` + helpery; units 120 PASS; scores 26 PASS; suite 56 PASS
 13. Slučka tick 14: `MAGNESIUM_MGDL_TO_MMOLL` + `MAGNESIUM_MMOLL_TO_MGDL` + helpery; units 128 PASS; scores 26 PASS; suite 56 PASS
 14. Slučka tick 15: `URIC_ACID_MGDL_TO_UMOLL` + `URIC_ACID_UMOLL_TO_MGDL` + helpery; units 136 PASS; scores 26 PASS; suite 56 PASS
+15. Slučka tick 16: `CHOLESTEROL_MGDL_TO_MMOLL` + `CHOLESTEROL_MMOLL_TO_MGDL` + helpery; PREVENT bez inline 0,02586; units 145 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -38,9 +39,9 @@ Beh: spoločné konštanty/helpery kyselina močová mg/dL ↔ µmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n 0.02586 calculator_*.php calculators_common.php
+rg -n 0.01129 calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-001430-uric-acid-helpers.md`
+`.codex/handoffs/2026-11-06-003430-cholesterol-helpers.md`
