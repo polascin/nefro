@@ -73,13 +73,25 @@ function upsertArticles(
 
     foreach ($articles as $a) {
         try {
+            // Šablóny (add_TEMPLATE_*.php) majú prázdne slug/title ako placeholder —
+            // takýto „článok“ sa nikdy nesmie dostať do DB (deploy spúšťa každý
+            // zmenený add_*_article.php a prázdny slug by vytvoril neplatný riadok).
+            $slug = trim((string) ($a['slug'] ?? ''));
+            $title = trim((string) ($a['title'] ?? ''));
+            if ($slug === '' || preg_match('/^[a-z0-9][a-z0-9-]{0,79}$/', $slug) !== 1 || $title === '') {
+                $errors[] = 'Preskočené: neplatný alebo prázdny slug/titul ('
+                    . ($slug === '' ? 'prázdny slug' : 'slug: ' . $slug) . ')';
+                $skipped++;
+                continue;
+            }
+
             $isPublishedValue = $isPublishedOverride !== null
                 ? $isPublishedOverride
                 : (int) ($a['is_published'] ?? 1);
 
             $stmt->execute([
-                'title' => (string) ($a['title'] ?? ''),
-                'slug' => (string) ($a['slug'] ?? ''),
+                'title' => $title,
+                'slug' => $slug,
                 'author' => (string) ($a['author'] ?? ''),
                 'content' => (string) ($a['content'] ?? ''),
                 'excerpt' => (string) ($a['excerpt'] ?? ''),

@@ -108,6 +108,13 @@ foreach ($rows as $a) {
         $kb = round(filesize(__DIR__ . '/pdf/' . $res['file']) / 1024);
         echo "  ✓ {$res['file']}  ({$kb} KB)" . ($res['error'] ? "  ⚠ {$res['error']}" : '') . "\n";
     } else {
+        // Článok s neplatným slugom nikdy nedostane PDF — nesmie ale zhodiť
+        // celú dávku (deploy by inak končil RC=1 aj keď je všetko ostatné OK).
+        if (($res['error'] ?? '') === 'neplatný slug') {
+            $skipped++;
+            fwrite(STDERR, "  ⚠ #{$a['id']} (prázdny/neplatný slug): PDF preskočené\n");
+            continue;
+        }
         $fail++;
         $errors[] = "{$a['slug']}: {$res['error']}";
         fwrite(STDERR, "  ✗ {$a['slug']}: {$res['error']}\n");
@@ -115,7 +122,7 @@ foreach ($rows as $a) {
 }
 
 echo "──────────────────────────────────────────────────────\n";
-echo "Hotovo: vytvorených {$ok}, zlyhaní {$fail}, preskočených (už majú PDF) {$skipped}.\n";
+echo "Hotovo: vytvorených {$ok}, zlyhaní {$fail}, preskočených (už majú PDF alebo neplatný slug) {$skipped}.\n";
 if ($errors) {
     echo "\nChyby:\n";
     foreach ($errors as $e) { echo "  - $e\n"; }

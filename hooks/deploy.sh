@@ -403,11 +403,11 @@ declare -a CHANGED_ARTICLES=()
 if [[ -n $BASE_REF ]]; then
 	while IFS= read -r -d '' path; do
 		CHANGED_ARTICLES+=("$path")
-	done < <(git diff --name-only -z --diff-filter=M "$BASE_REF" "$DEPLOY_HEAD" -- ':(glob)add_*_article.php')
+	done < <(git diff --name-only -z --diff-filter=M "$BASE_REF" "$DEPLOY_HEAD" -- ':(glob)add_*_article.php' ':(exclude,glob)add_TEMPLATE_*')
 else
 	while IFS= read -r -d '' path; do
 		CHANGED_ARTICLES+=("$path")
-	done < <(git diff-tree --no-commit-id -r -z --diff-filter=M --name-only "$DEPLOY_HEAD" -- ':(glob)add_*_article.php')
+	done < <(git diff-tree --no-commit-id -r -z --diff-filter=M --name-only "$DEPLOY_HEAD" -- ':(glob)add_*_article.php' ':(exclude,glob)add_TEMPLATE_*')
 fi
 
 if ((${#CHANGED_ARTICLES[@]} > 0)); then
