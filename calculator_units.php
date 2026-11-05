@@ -6,25 +6,8 @@ require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php';
 
 // Prevodník je čisto klientský (nonce'd JS), bez ukladania a bez spracovania POST.
-// Konverzné faktory: SI = konvenčné × faktor. Zhodné s dokumentovanými hodnotami
-// projektu (cholesterol ÷38,67; glukóza ÷18; triglyceridy ÷88,57).
-$unitRows = [
-    // [analyt, konv. jednotka, SI jednotka, faktor (SI = konv × faktor), dec_konv, dec_si]
-    ["Kreatinín", "mg/dL", "µmol/L", 88.4, 2, 0],
-    ["Urea (BUN)", "mg/dL (BUN)", "mmol/L (urea)", 0.357, 1, 1],
-    ["Glukóza", "mg/dL", "mmol/L", 0.0555, 0, 1],
-    ["Vápnik", "mg/dL", "mmol/L", 0.2495, 1, 2],
-    ["Fosfát (P)", "mg/dL", "mmol/L", 0.3229, 1, 2],
-    ["Magnézium", "mg/dL", "mmol/L", 0.4114, 1, 2],
-    ["Kyselina močová", "mg/dL", "µmol/L", 59.48, 1, 0],
-    ["Cholesterol", "mg/dL", "mmol/L", 0.02586, 0, 2],
-    ["Triglyceridy", "mg/dL", "mmol/L", 0.01129, 0, 2],
-    ["Hemoglobín", "g/dL", "g/L", 10.0, 1, 0],
-    ["Albumín", "g/dL", "g/L", 10.0, 1, 0],
-    ["Bilirubín", "mg/dL", "µmol/L", 17.1, 1, 0],
-    // eGFR: SI = ml/s/1,73 m² = ml/min/1,73 m² ÷ 60.
-    ["eGFR", "ml/min/1,73 m²", "ml/s/1,73 m²", 1 / 60, 1, 3],
-];
+// Faktory žijú v calculatorUnitConversionRows() (SI = konvenčné × faktor).
+$unitRows = calculatorUnitConversionRows();
 ?>
 <!DOCTYPE html>
 <html lang="sk">

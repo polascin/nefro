@@ -168,6 +168,23 @@ clinicalRefTest(
     str_contains($ekfcPageSrc, 'calculator_ekfc_logic.php'),
     'calculator_ekfc.php musí načítavať calculator_ekfc_logic.php',
 );
+$unitsSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_units.php');
+clinicalRefTest(
+    str_contains($unitsSrc, 'calculatorUnitConversionRows()')
+        && !preg_match('/\$unitRows\s*=\s*\[/', $unitsSrc),
+    'calculator_units.php musí volať calculatorUnitConversionRows()',
+);
+$crFactor = calculatorUnitFactorByName('Kreatinín');
+clinicalRefTest(
+    $crFactor !== null && abs($crFactor['factor'] - 88.4) < 1e-12,
+    'Prevodník: kreatinín faktor 88,4',
+);
+clinicalRefApprox(
+    88.4,
+    calculatorConvertConventionalToSi(1.0, $crFactor['factor']),
+    1e-9,
+    'Prevodník: 1 mg/dL kreatinínu → 88,4 µmol/L',
+);
 
 // ─── PREVENT AHA 2024 (preventr README / ACC/AHA golden case) ───
 $preventBase = [

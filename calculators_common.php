@@ -1576,6 +1576,70 @@ function mehranCategory(int $score): array
     return ['risk-very-high', 'Veľmi vysoké riziko', '57,3 %', '12,6 %'];
 }
 
+/**
+ * Konverzné riadky prevodníka jednotiek.
+ *
+ * SI = konvenčné × faktor. Zhodné s dokumentovanými reciprokami projektu
+ * (cholesterol ÷ 38,67; glukóza ÷ 18; triglyceridy ÷ 88,57) a eGFR ÷ 60.
+ *
+ * @return list<array{0:string,1:string,2:string,3:float,4:int,5:int}>
+ *   [analyt, konv. jednotka, SI jednotka, faktor, dec_konv, dec_si]
+ */
+function calculatorUnitConversionRows(): array
+{
+    return [
+        ['Kreatinín', 'mg/dL', 'µmol/L', 88.4, 2, 0],
+        ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', 0.357, 1, 1],
+        ['Glukóza', 'mg/dL', 'mmol/L', 0.0555, 0, 1],
+        ['Vápnik', 'mg/dL', 'mmol/L', 0.2495, 1, 2],
+        ['Fosfát (P)', 'mg/dL', 'mmol/L', 0.3229, 1, 2],
+        ['Magnézium', 'mg/dL', 'mmol/L', 0.4114, 1, 2],
+        ['Kyselina močová', 'mg/dL', 'µmol/L', 59.48, 1, 0],
+        ['Cholesterol', 'mg/dL', 'mmol/L', 0.02586, 0, 2],
+        ['Triglyceridy', 'mg/dL', 'mmol/L', 0.01129, 0, 2],
+        ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],
+        ['Albumín', 'g/dL', 'g/L', 10.0, 1, 0],
+        ['Bilirubín', 'mg/dL', 'µmol/L', 17.1, 1, 0],
+        ['eGFR', 'ml/min/1,73 m²', 'ml/s/1,73 m²', 1 / 60, 1, 3],
+    ];
+}
+
+/** SI = konvenčné × faktor. */
+function calculatorConvertConventionalToSi(float $conventional, float $factor): float
+{
+    return $conventional * $factor;
+}
+
+/** Konvenčné = SI ÷ faktor. */
+function calculatorConvertSiToConventional(float $si, float $factor): float
+{
+    if ($factor == 0.0) {
+        throw new InvalidArgumentException('Konverzný faktor nesmie byť nula.');
+    }
+
+    return $si / $factor;
+}
+
+/**
+ * Faktor podľa názvu analytu (presná zhoda s calculatorUnitConversionRows).
+ *
+ * @return array{factor: float, dec_conv: int, dec_si: int}|null
+ */
+function calculatorUnitFactorByName(string $name): ?array
+{
+    foreach (calculatorUnitConversionRows() as $row) {
+        if ($row[0] === $name) {
+            return [
+                'factor' => (float) $row[3],
+                'dec_conv' => (int) $row[4],
+                'dec_si' => (int) $row[5],
+            ];
+        }
+    }
+
+    return null;
+}
+
 function ckdGCategory(float $value): string
 {
     if ($value >= 90.0) {

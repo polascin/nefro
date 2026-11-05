@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-05 21:15',
+                'category' => 'calculators',
+                'title' => 'Prevodník jednotiek: spoločné konverzné faktory',
+                'description' => 'Konverzné faktory SI ⇄ konvenčné (vrátane eGFR ml/min ⇄ ml/s) sú v spoločnej funkcii s referenčnými testami. Živý prevodník na stránke ostáva klientský; číselné faktory sa nemenia.',
+                'url' => 'calculator_units.php',
+            ],
+            [
                 'date' => '2026-11-05 20:55',
                 'category' => 'calculators',
                 'title' => 'Mehran skóre: spoločná funkcia a citácia',
