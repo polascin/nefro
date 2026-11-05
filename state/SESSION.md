@@ -9,8 +9,8 @@ Beh: Mehran skóre CI-AKI (spoločná funkcia + citácia). Handoff:
 
 ## Stav repozitára
 
-- Vetva: `main` (HEAD `a9e99f84`)
-- Runtime / `DEPLOY_COMMIT`: `a9e99f84`
+- Vetva: `main` (HEAD `075ca14e`; feature `a9e99f84`)
+- Runtime / `DEPLOY_COMMIT`: `a9e99f84` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
