@@ -472,6 +472,19 @@ const CHOLESTEROL_MGDL_TO_MMOLL = 0.02586;
  */
 const CHOLESTEROL_MMOLL_TO_MGDL = 38.67;
 
+/**
+ * Triglyceridy mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 1 / 88,57).
+ * Približne reciproký k TRIGLYCERIDES_MMOLL_TO_MGDL (≈ MW trioleínu / 10).
+ */
+const TRIGLYCERIDES_MGDL_TO_MMOLL = 0.01129;
+
+/**
+ * Triglyceridy mmol/L → mg/dL (dokumentovaný deliteľ projektu ÷ 88,57).
+ * Nie je odvodený ako 1/0,01129: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 0,01129; lipidové texty používajú ÷ 88,57).
+ */
+const TRIGLYCERIDES_MMOLL_TO_MGDL = 88.57;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1480,6 +1493,18 @@ function cholesterolMmolLToMgDl(float $mmolL): float
     return $mmolL * CHOLESTEROL_MMOLL_TO_MGDL;
 }
 
+/** Triglyceridy mg/dL → mmol/L. */
+function triglyceridesMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * TRIGLYCERIDES_MGDL_TO_MMOLL;
+}
+
+/** Triglyceridy mmol/L → mg/dL. */
+function triglyceridesMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * TRIGLYCERIDES_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1834,7 +1859,7 @@ function calculatorUnitConversionRows(): array
         ['Magnézium', 'mg/dL', 'mmol/L', MAGNESIUM_MGDL_TO_MMOLL, 1, 2],
         ['Kyselina močová', 'mg/dL', 'µmol/L', URIC_ACID_MGDL_TO_UMOLL, 1, 0],
         ['Cholesterol', 'mg/dL', 'mmol/L', CHOLESTEROL_MGDL_TO_MMOLL, 0, 2],
-        ['Triglyceridy', 'mg/dL', 'mmol/L', 0.01129, 0, 2],
+        ['Triglyceridy', 'mg/dL', 'mmol/L', TRIGLYCERIDES_MGDL_TO_MMOLL, 0, 2],
         ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],
         ['Albumín', 'g/dL', 'g/L', 10.0, 1, 0],
         ['Bilirubín', 'mg/dL', 'µmol/L', 17.1, 1, 0],

@@ -63,7 +63,9 @@ unitsRefApprox(0.0168, URIC_ACID_UMOLL_TO_MGDL, 0.0, 'URIC_ACID_UMOLL_TO_MGDL = 
 unitsRefApprox(CHOLESTEROL_MGDL_TO_MMOLL, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor z konštanty');
 unitsRefApprox(0.02586, CHOLESTEROL_MGDL_TO_MMOLL, 0.0, 'CHOLESTEROL_MGDL_TO_MMOLL = 0,02586');
 unitsRefApprox(38.67, CHOLESTEROL_MMOLL_TO_MGDL, 0.0, 'CHOLESTEROL_MMOLL_TO_MGDL = 38,67');
-unitsRefApprox(0.01129, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor 0,01129');
+unitsRefApprox(TRIGLYCERIDES_MGDL_TO_MMOLL, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor z konštanty');
+unitsRefApprox(0.01129, TRIGLYCERIDES_MGDL_TO_MMOLL, 0.0, 'TRIGLYCERIDES_MGDL_TO_MMOLL = 0,01129');
+unitsRefApprox(88.57, TRIGLYCERIDES_MMOLL_TO_MGDL, 0.0, 'TRIGLYCERIDES_MMOLL_TO_MGDL = 88,57');
 unitsRefApprox(10.0, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor 10');
 unitsRefApprox(10.0, (float) $byName['Albumín'][3], 1e-12, 'Albumín faktor 10');
 unitsRefApprox(17.1, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor 17,1');
@@ -72,7 +74,7 @@ unitsRefApprox(1 / 60, (float) $byName['eGFR'][3], 1e-12, 'eGFR faktor 1/60');
 // Dokumentované reciproké hodnoty projektu
 unitsRefApprox(CHOLESTEROL_MMOLL_TO_MGDL, 1.0 / (float) $byName['Cholesterol'][3], 0.01, 'Cholesterol ÷ 38,67');
 unitsRefApprox(18.0, 1.0 / (float) $byName['Glukóza'][3], 0.02, 'Glukóza ÷ 18');
-unitsRefApprox(88.57, 1.0 / (float) $byName['Triglyceridy'][3], 0.05, 'Triglyceridy ÷ 88,57');
+unitsRefApprox(TRIGLYCERIDES_MMOLL_TO_MGDL, 1.0 / (float) $byName['Triglyceridy'][3], 0.05, 'Triglyceridy ÷ 88,57');
 
 // Obojsmerné konverzie (referenčné príklady)
 $crSi = calculatorConvertConventionalToSi(1.0, (float) $byName['Kreatinín'][3]);
@@ -189,6 +191,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(200.0, CHOLESTEROL_MGDL_TO_MMOLL),
     0.0,
     'cholesterol helper = prevodník s CHOLESTEROL_MGDL_TO_MMOLL',
+);
+
+$trigSi = calculatorConvertConventionalToSi(100.0, (float) $byName['Triglyceridy'][3]);
+unitsRefApprox(1.129, $trigSi, 1e-9, 'Triglyceridy 100 mg/dL → 1,129 mmol/L');
+unitsRefApprox(1.129, triglyceridesMgDlToMmolL(100.0), 1e-9, 'triglyceridesMgDlToMmolL(100)');
+unitsRefApprox(885.7, triglyceridesMmolLToMgDl(10.0), 1e-9, 'triglyceridesMmolLToMgDl(10)');
+unitsRefApprox(
+    triglyceridesMgDlToMmolL(100.0),
+    calculatorConvertConventionalToSi(100.0, TRIGLYCERIDES_MGDL_TO_MMOLL),
+    0.0,
+    'triglycerides helper = prevodník s TRIGLYCERIDES_MGDL_TO_MMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -375,6 +388,20 @@ unitsRefTest(
     !preg_match("/['\"]Cholesterol['\"].*0\.02586/", $commonSrc)
         && !preg_match('/\*\s*38\.67\b/', $commonSrc),
     'calculators_common bez literálu 0,02586 v prevodníku a bez inline × 38,67',
+);
+
+// Triglyceridy mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.01129 / 88.57 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'TRIGLYCERIDES_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'TRIGLYCERIDES_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'triglyceridesMgDlToMmolL')
+        && str_contains($commonSrc, 'triglyceridesMmolLToMgDl'),
+    'calculators_common má triglyceridové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Triglyceridy['\"].*0\.01129/", $commonSrc)
+        && !preg_match('/\*\s*88\.57\b/', $commonSrc),
+    'calculators_common bez literálu 0,01129 v prevodníku a bez inline × 88,57',
 );
 
 $preventSrc = (string) file_get_contents(dirname(__DIR__) . '/prevent_model.php');
