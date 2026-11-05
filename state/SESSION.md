@@ -1,23 +1,22 @@
 # SESSION
 
-Aktualizované: 2026-11-05 19:53 Europe/Bratislava
+Aktualizované: 2026-11-05 20:00 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh 163 (opakovaný audit). Handoff po predchádzajúcej slučke:
-`.codex/handoffs/2026-11-05-194517-egfr-cys-clinical-refs.md`.
+Beh: referenčné testy aniónovej medzery (Figge, Δ/Δ). Handoff:
+`.codex/handoffs/2026-11-05-200000-acidbase-clinical-refs.md`.
 
 ## Stav repozitára
 
-- Vetva: `main` (HEAD po auditnom commite; runtime `fc543a83`)
-- Runtime / `DEPLOY_COMMIT`: `fc543a83`
+- Vetva: `main` (HEAD `23b0ffe1`)
+- Runtime / `DEPLOY_COMMIT`: `23b0ffe1`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
 
-1. Beh 150 až 163; MGRS, KDRI, CKD-EPI Cr–Cys referenčné testy
-2. Regresie 53 PASS; lint 718/0 po exclude worktrees
-3. Beh 163: živo OK, §15 dvoch článkov, bez kritického FAIL
+1. Beh 150 až 163 + slučka tick 2: AG / Figge / ΔΔ
+2. Regresie 54 PASS; acidbase ref 21 PASS; display 15 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -27,9 +26,9 @@ Beh 163 (opakovaný audit). Handoff po predchádzajúcej slučke:
 ## Executable next step
 
 ```text
-php tools/test_acidbase_display.php
+php tools/test_a11y_form_alerts.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-194517-egfr-cys-clinical-refs.md`
+`.codex/handoffs/2026-11-05-200000-acidbase-clinical-refs.md`

@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. `php tools/test_acidbase_display.php` (alebo prvý FAIL); a11y / PHPStan new / live smoke; hlbšia logika acidbase mimo display.
+1. `php tools/test_a11y_form_alerts.php` (alebo prvý FAIL); PHPStan new / live smoke / ops; Wintersova kompenzácia mimo aktuálnej AG kalkulačky.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-c (AG / Figge / ΔΔ)
+
+- [x] Logika v calculators_common + test 21 PASS; deploy `23b0ffe1`
 
 ## Hotové: slučka 2026-11-05-b (eGFR Cr–Cys)
 
