@@ -25,6 +25,7 @@ $form = [
     "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 $winters = null;
+$alkalosisComp = null;
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
@@ -65,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (empty($errors)) {
             $calculated = calculatorAnionGapAnalysis($na, $cl, $hco3, $alb);
             $winters = calculatorWintersCompensation($hco3, $pco2);
+            $alkalosisComp = calculatorMetabolicAlkalosisCompensation($hco3, $pco2);
             if ($winters !== null) {
                 $calculated = array_merge($calculated, [
                     "expected_pco2" => $winters["expected_pco2"],
@@ -72,6 +74,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     "expected_pco2_high" => $winters["expected_pco2_high"],
                     "measured_pco2" => $winters["measured_pco2"],
                     "winters_interpretation" => $winters["interpretation"],
+                ]);
+            } elseif ($alkalosisComp !== null) {
+                $calculated = array_merge($calculated, [
+                    "expected_pco2" => $alkalosisComp["expected_pco2"],
+                    "expected_pco2_low" => $alkalosisComp["expected_pco2_low"],
+                    "expected_pco2_high" => $alkalosisComp["expected_pco2_high"],
+                    "measured_pco2" => $alkalosisComp["measured_pco2"],
+                    "alkalosis_interpretation" => $alkalosisComp["interpretation"],
                 ]);
             }
 
@@ -137,10 +147,10 @@ if (isLoggedIn()) {
 <head>
   <?php
   $pageTitle =
-      "Aniónová medzera, Delta Ratio a Wintersova kompenzácia | Kalkulačky | Nefro-projekt Slovensko";
+      "Aniónová medzera, Delta Ratio a respiračná kompenzácia | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_acidbase.php";
   $seoDescription =
-      "Nefrologická kalkulačka: aniónová medzera, Δ/Δ pomer a Wintersova očakávaná pCO₂ pri metabolickej acidóze. Presné klinické výpočty pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka: aniónová medzera, Δ/Δ pomer a očakávané pCO₂ pri metabolickej acidóze (Winters) aj alkalóze (Javaheri). Presné klinické výpočty pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -183,7 +193,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Aniónová medzera, Delta-Delta pomer a Wintersova kompenzácia</h2>
+                <h2>Aniónová medzera, Delta-Delta pomer a respiračná kompenzácia</h2>
                 <p class="auth-subtitle">Základný nástroj na diagnostiku zmiešaných porúch acidobázickej rovnováhy.</p>
 
                 <details open class="calc-formula-box">
@@ -192,16 +202,21 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \text{AG} = \text{Na} - (\text{Cl} + \text{HCO}_3) \]</div>
                         <div class="calc-formula-line">\[ \text{AG}_{\text{korig}} = \text{AG} + 0.25 \times (40 - \text{Albumín}) \]</div>
                         <div class="calc-formula-line">\[ \Delta\text{-Ratio} = \frac{\text{AG}_{\text{korig}} - 12}{24 - \text{HCO}_3} \]</div>
-                        <div class="calc-formula-line">\[ \text{pCO}_{2,\text{očak.}} = 1{,}5 \times \text{HCO}_3 + 8 \pm 2\ \text{mmHg} \]</div>
+                        <div class="calc-formula-line">\[ \text{pCO}_{2,\text{očak.}} = 1{,}5 \times \text{HCO}_3 + 8 \pm 2\ \text{mmHg}\ (\text{acidóza}) \]</div>
+                        <div class="calc-formula-line">\[ \text{pCO}_{2,\text{očak.}} = 0{,}7 \times \text{HCO}_3 + 20 \pm 5\ \text{mmHg}\ (\text{alkalóza}) \]</div>
                         <div class="calc-formula-vars">
                             Normálna aniónová medzera je cca 10–14&nbsp;mmol/L.<br>
                             U pacientov s hypoalbuminémiou (časté pri nefrotickom syndróme, závažnom CKD) musí byť AG korigovaná, inak sa falošne podhodnotí.<br>
-                            Wintersova rovnica odhaduje očakávané pCO₂ pri <em>primárnej metabolickej acidóze</em> (HCO₃ &lt; 24&nbsp;mmol/L); voliteľné namerané pCO₂ sa porovná s pásmom ±&nbsp;2&nbsp;mmHg.<br>
+                            Wintersova rovnica odhaduje očakávané pCO₂ pri <em>primárnej metabolickej acidóze</em> (HCO₃ &lt; 24&nbsp;mmol/L); pásmo ±&nbsp;2&nbsp;mmHg.<br>
+                            Pri <em>primárnej metabolickej alkalóze</em> (HCO₃ &gt; 24&nbsp;mmol/L) platí Javaheriho vzťah 0,7&nbsp;·&nbsp;HCO₃&nbsp;+&nbsp;20 s pásmom ±&nbsp;5&nbsp;mmHg.<br>
+                            Voliteľné namerané pCO₂ sa porovná s príslušným pásmom.<br>
                             <a href="https://pubmed.ncbi.nlm.nih.gov/9824071/" target="_blank" rel="noopener noreferrer">Figge J. et&nbsp;al., Crit Care Med 1998;26(11):1807–10</a>
                             &ensp;&bull;&ensp;
                             <a href="https://pubmed.ncbi.nlm.nih.gov/17656477/" target="_blank" rel="noopener noreferrer">Rastegar A., J Am Soc Nephrol 2007;18(9):2429–31</a>
                             &ensp;&bull;&ensp;
                             <a href="https://pubmed.ncbi.nlm.nih.gov/6016545/" target="_blank" rel="noopener noreferrer">Albert MS, Dell RB, Winters RW, Ann Intern Med 1967;66(2):312–22</a>
+                            &ensp;&bull;&ensp;
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/6799256/" target="_blank" rel="noopener noreferrer">Javaheri S. et&nbsp;al., Chest 1982;81(3):296–301</a>
                         </div>
                     </div>
                 </details>
@@ -289,6 +304,20 @@ if (isLoggedIn()) {
                             <?php endif; ?>
                             <p class="calc-accent-text"><?= htmlspecialchars(
                                 $winters["interpretation"],
+                            ) ?></p>
+                        <?php elseif ($alkalosisComp !== null): ?>
+                            <p class="calc-result-mt16"><strong>Očakávaná pCO₂ pri metabolickej alkalóze:</strong> <?= htmlspecialchars(
+                                (string) $alkalosisComp["expected_pco2"],
+                            ) ?> mmHg
+                            (pásmo <?= htmlspecialchars((string) $alkalosisComp["expected_pco2_low"]) ?>
+                            až <?= htmlspecialchars((string) $alkalosisComp["expected_pco2_high"]) ?> mmHg)</p>
+                            <?php if ($alkalosisComp["measured_pco2"] !== null): ?>
+                                <p><strong>Nameraná pCO₂:</strong> <?= htmlspecialchars(
+                                    (string) $alkalosisComp["measured_pco2"],
+                                ) ?> mmHg</p>
+                            <?php endif; ?>
+                            <p class="calc-accent-text"><?= htmlspecialchars(
+                                $alkalosisComp["interpretation"],
                             ) ?></p>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">

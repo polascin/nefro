@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-05 20:40',
+                'category' => 'calculators',
+                'title' => 'Očakávané pCO₂ pri metabolickej alkalóze',
+                'description' => 'Pri HCO₃ nad 24 mmol/L kalkulačka aniónovej medzery dopočíta očakávané pCO₂ podľa Javaheriho vzťahu (0,7 · HCO₃ + 20 ± 5 mmHg) a voliteľne porovná namerané pCO₂ s týmto pásmom. Wintersova rovnica ostáva pre metabolickú acidózu.',
+                'url' => 'calculator_acidbase.php',
+            ],
+            [
                 'date' => '2026-11-05 20:20',
                 'category' => 'calculators',
                 'title' => 'Wintersova kompenzácia v acidobázickej kalkulačke',

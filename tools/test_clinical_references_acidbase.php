@@ -11,6 +11,8 @@ declare(strict_types=1);
  * ΔAG/ΔHCO₃; pásma < 0,4 / < 0,8 / < 2,0 sú výučbová konvencia pinovaná tu.
  * Albert MS, Dell RB, Winters RW (Ann Intern Med 1967;66(2):312–322, PMID 6016545):
  * pCO₂_očak. = 1,5 · HCO₃ + 8 (± 2 mmHg) pri metabolickej acidóze.
+ * Javaheri S, Shore NS, Rose B, Kazemi H (Chest 1982;81(3):296–301, PMID 6799256):
+ * pCO₂_očak. = 0,7 · HCO₃ + 20 (± 5 mmHg) pri metabolickej alkalóze.
  * Očakávané hodnoty sú z rovníc; wiring asserty proti kópii logiky na stránke.
  */
 
@@ -134,24 +136,75 @@ acidbaseRefApprox(
     'Winters pri HCO₃ 10 → 23,0',
 );
 
+// ─── Metabolická alkalóza (PMID 6799256) ───
+// HCO₃ 34 → 0,7 · 34 + 20 = 43,8; pásmo 38,8 až 48,8 mmHg
+$alk = calculatorMetabolicAlkalosisCompensation(34.0, null);
+acidbaseRefTest($alk !== null, 'Alkalóza platí pri HCO₃ 34.');
+acidbaseRefTest($alk['expected_pco2'] === 43.8, 'Alkalóza: očakávané pCO₂ 43,8 pri HCO₃ 34.');
+acidbaseRefTest(
+    $alk['expected_pco2_low'] === 38.8 && $alk['expected_pco2_high'] === 48.8,
+    'Alkalóza pásmo ± 5.',
+);
+acidbaseRefTest(
+    str_contains($alk['interpretation'], 'bez nameranej'),
+    'Bez pCO₂ ostáva všeobecná hláška alkalózy.',
+);
+$alkOk = calculatorMetabolicAlkalosisCompensation(34.0, 44.0);
+acidbaseRefTest(
+    $alkOk !== null && str_contains($alkOk['interpretation'], 'primeraná'),
+    'pCO₂ 44 v pásme = primeraná kompenzácia alkalózy.',
+);
+$alkLow = calculatorMetabolicAlkalosisCompensation(34.0, 35.0);
+acidbaseRefTest(
+    $alkLow !== null && str_contains($alkLow['interpretation'], 'respiračná alkalóza'),
+    'pCO₂ pod pásmom alkalózy = súbežná respiračná alkalóza.',
+);
+$alkHigh = calculatorMetabolicAlkalosisCompensation(34.0, 52.0);
+acidbaseRefTest(
+    $alkHigh !== null && str_contains($alkHigh['interpretation'], 'respiračná acidóza'),
+    'pCO₂ nad pásmom alkalózy = súbežná respiračná acidóza.',
+);
+acidbaseRefTest(
+    calculatorMetabolicAlkalosisCompensation(24.0, 40.0) === null,
+    'Pri HCO₃ ≤ 24 alkalóza neplatí.',
+);
+acidbaseRefTest(
+    calculatorMetabolicAlkalosisCompensation(16.0, 32.0) === null
+        && calculatorWintersCompensation(34.0, 44.0) === null,
+    'Winters a alkalóza sú vzájomne vylučujúce.',
+);
+acidbaseRefApprox(
+    0.7 * 30.0 + 20.0,
+    (float) (calculatorMetabolicAlkalosisCompensation(30.0)['expected_pco2'] ?? 0.0),
+    1e-9,
+    'Alkalóza pri HCO₃ 30 → 41,0',
+);
+
 // ─── Wiring + citácie ───
 $page = (string) file_get_contents(dirname(__DIR__) . '/calculator_acidbase.php');
 acidbaseRefTest(str_contains($page, 'calculatorAnionGapAnalysis('), 'calculator_acidbase.php musí volať calculatorAnionGapAnalysis.');
 acidbaseRefTest(str_contains($page, 'calculatorWintersCompensation('), 'calculator_acidbase.php musí volať calculatorWintersCompensation.');
 acidbaseRefTest(
+    str_contains($page, 'calculatorMetabolicAlkalosisCompensation('),
+    'calculator_acidbase.php musí volať calculatorMetabolicAlkalosisCompensation.',
+);
+acidbaseRefTest(
     !str_contains($page, '0.25 * (40.0')
         && !str_contains($page, 'function calculatorAnionGap')
-        && !str_contains($page, 'function calculatorWinters'),
+        && !str_contains($page, 'function calculatorWinters')
+        && !str_contains($page, 'function calculatorMetabolicAlkalosis'),
     'calculator_acidbase.php nesmie mať vlastnú kópiu logiky.',
 );
 acidbaseRefTest(
     str_contains($page, 'pubmed.ncbi.nlm.nih.gov/9824071/')
         && str_contains($page, 'pubmed.ncbi.nlm.nih.gov/17656477/')
         && str_contains($page, 'pubmed.ncbi.nlm.nih.gov/6016545/')
+        && str_contains($page, 'pubmed.ncbi.nlm.nih.gov/6799256/')
         && str_contains($page, 'Figge')
         && str_contains($page, 'Rastegar')
-        && str_contains($page, 'Winters'),
-    'Citácie Figge 1998, Rastegar 2007 a Albert/Winters 1967 s PMID.',
+        && str_contains($page, 'Winters')
+        && str_contains($page, 'Javaheri'),
+    'Citácie Figge 1998, Rastegar 2007, Albert/Winters 1967 a Javaheri 1982 s PMID.',
 );
 
-echo "Clinical references (AG, Figge, Δ/Δ, Winters): $checks PASS\n";
+echo "Clinical references (AG, Figge, Δ/Δ, Winters, alkalóza): $checks PASS\n";

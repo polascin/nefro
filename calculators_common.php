@@ -1039,6 +1039,11 @@ const ACIDBASE_WINTERS_SLOPE = 1.5;
 const ACIDBASE_WINTERS_INTERCEPT = 8.0;
 const ACIDBASE_WINTERS_TOLERANCE_MMHG = 2.0;
 
+/** Javaheri: očakávané pCO₂ = 0,7 · HCO₃ + 20 (± 5 mmHg) pri metabolickej alkalóze. */
+const ACIDBASE_ALKALOSIS_SLOPE = 0.7;
+const ACIDBASE_ALKALOSIS_INTERCEPT = 20.0;
+const ACIDBASE_ALKALOSIS_TOLERANCE_MMHG = 5.0;
+
 /**
  * Wintersova rovnica: očakávané pCO₂ pri primárnej metabolickej acidóze.
  *
@@ -1093,6 +1098,63 @@ function calculatorWintersCompensationInterpretation(
     }
 
     return 'Namerané pCO₂ je v Wintersovom pásme: primeraná respiračná kompenzácia.';
+}
+
+/**
+ * Očakávané pCO₂ pri primárnej metabolickej alkalóze (kompenzačná hypoventilácia).
+ *
+ * expected_pCO₂ = 0,7 · [HCO₃⁻] + 20 (± 5 mmHg)
+ * (Javaheri S, Shore NS, Rose B, Kazemi H, Chest 1982;81(3):296–301, PMID 6799256).
+ * Pásmo ± 5 mmHg je výučbová konštanta (Brandis); pôvodná práca uvádza lineárny vzťah ± SEM.
+ * Platí len pri HCO₃ > 24 mmol/L; inak null.
+ *
+ * @return array{
+ *   applicable: bool,
+ *   expected_pco2: ?float,
+ *   expected_pco2_low: ?float,
+ *   expected_pco2_high: ?float,
+ *   measured_pco2: ?float,
+ *   interpretation: string
+ * }|null null len pri neaplikovateľnom HCO₃ (nie alkalóza)
+ */
+function calculatorMetabolicAlkalosisCompensation(float $hco3, ?float $measuredPco2 = null): ?array
+{
+    if ($hco3 <= ACIDBASE_NORMAL_HCO3) {
+        return null;
+    }
+
+    $expected = ACIDBASE_ALKALOSIS_SLOPE * $hco3 + ACIDBASE_ALKALOSIS_INTERCEPT;
+    $low = $expected - ACIDBASE_ALKALOSIS_TOLERANCE_MMHG;
+    $high = $expected + ACIDBASE_ALKALOSIS_TOLERANCE_MMHG;
+    $interpretation = calculatorMetabolicAlkalosisCompensationInterpretation($measuredPco2, $low, $high);
+
+    return [
+        'applicable' => true,
+        'expected_pco2' => round($expected, 1),
+        'expected_pco2_low' => round($low, 1),
+        'expected_pco2_high' => round($high, 1),
+        'measured_pco2' => $measuredPco2 !== null ? round($measuredPco2, 1) : null,
+        'interpretation' => $interpretation,
+    ];
+}
+
+/** Slovná interpretácia nameraného pCO₂ voči pásmu metabolickej alkalózy ± 5 mmHg. */
+function calculatorMetabolicAlkalosisCompensationInterpretation(
+    ?float $measuredPco2,
+    float $expectedLow,
+    float $expectedHigh
+): string {
+    if ($measuredPco2 === null) {
+        return 'Kompenzácia pri metabolickej alkalóze: očakávané pCO₂ (bez nameranej hodnoty).';
+    }
+    if ($measuredPco2 < $expectedLow) {
+        return 'Namerané pCO₂ je nižšie než očakávané pásmo: súbežná respiračná alkalóza (nedostatočná hypoventilácia).';
+    }
+    if ($measuredPco2 > $expectedHigh) {
+        return 'Namerané pCO₂ je vyššie než očakávané pásmo: súbežná respiračná acidóza.';
+    }
+
+    return 'Namerané pCO₂ je v očakávanom pásme: primeraná respiračná kompenzácia.';
 }
 
 /**

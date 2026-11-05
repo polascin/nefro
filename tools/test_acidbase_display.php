@@ -45,6 +45,13 @@ foreach (['expected_pco2', 'expected_pco2_low', 'expected_pco2_high', 'measured_
         ),
         'Winters pole ' . $key . ' ide do htmlspecialchars ako string.',
     );
+    acidbaseDisplayTest(
+        (bool) preg_match(
+            '/htmlspecialchars\(\s*\(string\)\s*\$alkalosisComp\["' . preg_quote($key, '/') . '"\]/',
+            $source,
+        ),
+        'Alkalóza pole ' . $key . ' ide do htmlspecialchars ako string.',
+    );
 }
 
 $ag = round(140.0 - (104.0 + 16.0), 1);
