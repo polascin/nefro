@@ -47,7 +47,7 @@ $articles[] = [
 <h2>1) Kedy poslať pacienta na biopsiu</h2>
 
 <ul>
-  <li>☐ Zvážiť biopsiu, ak dospelý má <strong>proteinúriu ≥ 0,5 g/deň</strong> alebo ekvivalent.</li>
+  <li>☐ Zvážiť biopsiu, ak dospelý má <strong>proteinúriu ≥ 0,5&nbsp;g/deň</strong> alebo ekvivalent.</li>
   <li>☐ Biopsiu nepovažovať za „voliteľnú“, ak výsledok zásadne zmení liečbu a nie sú kontraindikácie.</li>
   <li>☐ Do dokumentácie uviesť: hematuriu a proteinúriu s kvantifikáciou, vylúčenie významnej alternatívnej príčiny, eGFR a komorbidity relevantné pre riziko biopsie.</li>
 </ul>
@@ -56,17 +56,17 @@ $articles[] = [
 
 <ul>
   <li>☐ Po potvrdení IgAN určiť rizikovosť najmä podľa <strong>eGFR</strong> a <strong>proteinúrie</strong>; histologické parametre využiť podľa Oxfordskej klasifikácie.</li>
-  <li>☐ Cieľ liečby: znížiť proteinúriu čo najskôr a čo najviac, prakticky minimálne <strong>&lt; 0,5 g/deň</strong>, ideálne <strong>&lt; 0,3 g/deň</strong>, ak je to dosiahnuteľné.</li>
+  <li>☐ Cieľ liečby: znížiť proteinúriu čo najskôr a čo najviac, prakticky minimálne <strong>&lt; 0,5&nbsp;g/deň</strong>, ideálne <strong>&lt; 0,3&nbsp;g/deň</strong>, ak je to dosiahnuteľné.</li>
   <li>☐ Súčasne sledovať spomalenie poklesu eGFR, tlak krvi a kardiovaskulárne riziká.</li>
 </ul>
 
 <h2>3) Základ pre všetkých</h2>
 
 <ul>
-  <li>☐ Sodík <strong>&lt; 2 g/deň</strong>.</li>
+  <li>☐ Sodík <strong>&lt; 2&nbsp;g/deň</strong>.</li>
   <li>☐ Zanechať fajčenie aj vaping.</li>
   <li>☐ Kontrola hmotnosti a aeróbna aktivita podľa tolerancie.</li>
-  <li>☐ Cieľ tlaku krvi približne <strong>≤ 120/70 mm Hg</strong>, podľa individuálnej tolerancie.</li>
+  <li>☐ Cieľ tlaku krvi približne <strong>≤ 120/70&nbsp;mm Hg</strong>, podľa individuálnej tolerancie.</li>
   <li>☐ Ak je indikovaná a tolerovaná, použiť <strong>blokádu RAS</strong> (ACEi/ARB).</li>
   <li>☐ Zvážiť <strong>inhibítor SGLT2</strong>, ak je pre pacienta indikovaná a realizovateľná.</li>
   <li>☐ Po týchto krokoch prehodnotiť proteinúriu podľa trendu, nie podľa jednorazovej hodnoty.</li>

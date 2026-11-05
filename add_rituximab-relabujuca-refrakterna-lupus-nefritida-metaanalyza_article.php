@@ -35,7 +35,7 @@ $articles[] = [
 
 <p>Prehľadávané boli databázy PubMed, Embase a Web of Science od ich vzniku do 30. marca 2026. Zaradené boli pôvodné klinické štúdie u pacientov s relabujúcou alebo refraktérnou lupusovou nefritídou liečených režimom založeným na rituximabe, ak uvádzali extrahovateľné renálne výstupy. Vylúčené boli práce o novodiagnostikovanej lupusovej nefritíde bez samostatne extrahovateľných údajov pre cieľovú populáciu a výlučne pediatrické súbory.</p>
 
-<p>Primárnymi ukazovateľmi boli kompletná renálna odpoveď (CRR), parciálna renálna odpoveď (PRR) a celková renálna odpoveď (ORR) v časových bodoch 6, 12 a 24 mesiacov. Sekundárnymi ukazovateľmi boli zmena proteinúrie, štandardizovaná na ekvivalent gramov za deň, a zmena sérového kreatinínu v µmol/l. Použitý bol model náhodných efektov.</p>
+<p>Primárnymi ukazovateľmi boli kompletná renálna odpoveď (CRR), parciálna renálna odpoveď (PRR) a celková renálna odpoveď (ORR) v časových bodoch 6, 12 a 24&nbsp;mesiacov. Sekundárnymi ukazovateľmi boli zmena proteinúrie, štandardizovaná na ekvivalent gramov za deň, a zmena sérového kreatinínu v µmol/l. Použitý bol model náhodných efektov.</p>
 
 <p>Zaradených bolo <strong>19 štúdií so 445 pacientmi</strong>. Väčšinu tvorili observačné kohorty; dve randomizované štúdie prispeli iba ramenom s rituximabom, teda údajmi bez priameho komparátora. Metodická kvalita bola hodnotená nekomparatívnou verziou nástroja MINORS, ktorý je určený práve pre jednoramenné súbory.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <div class="table-responsive" role="region" aria-label="Zlúčené miery renálnej odpovede po liečbe rituximabom" tabindex="0">
 <table>
-  <thead><tr><th scope="col">Ukazovateľ</th><th scope="col">6 mesiacov</th><th scope="col">12 mesiacov</th><th scope="col">24 mesiacov</th></tr></thead>
+  <thead><tr><th scope="col">Ukazovateľ</th><th scope="col">6&nbsp;mesiacov</th><th scope="col">12&nbsp;mesiacov</th><th scope="col">24&nbsp;mesiacov</th></tr></thead>
   <tbody>
     <tr><th scope="row">Celková odpoveď (ORR)</th><td>0,67 (0,52–0,80)</td><td>0,70 (0,51–0,86)</td><td>0,66 (0,43–0,86)</td></tr>
     <tr><th scope="row">Kompletná odpoveď (CRR)</th><td>0,33 (0,21–0,46)</td><td>0,41 (0,28–0,54)</td><td>0,42 (0,26–0,60)</td></tr>
@@ -56,9 +56,9 @@ $articles[] = [
 
 <p>Hodnoty v zátvorkách sú 95 % intervaly spoľahlivosti. Celková odpoveď zostávala v čase stabilná okolo dvoch tretín, kompletná odpoveď mierne narastala z približne jednej tretiny na dve pätiny a parciálna odpoveď klesala, čo je očakávané: časť pacientov s parciálnou odpoveďou prechádza do kompletnej.</p>
 
-<p>Pri spojitých ukazovateľoch sa proteinúria znížila o <strong>2,69 g/deň</strong> v prepočítanom ekvivalente (95 % IS −3,23 až −2,16; I² 86,4 %) a sérový kreatinín o <strong>11,79 µmol/l</strong> (95 % IS −19,86 až −3,72; I² 58,5 %). Podporná analýza zohľadňujúca východiskové hodnoty dala relatívny pokles kreatinínu o 12,8 % (95 % IS −20,0 % až −5,7 %).</p>
+<p>Pri spojitých ukazovateľoch sa proteinúria znížila o <strong>2,69&nbsp;g/deň</strong> v prepočítanom ekvivalente (95 % IS −3,23 až −2,16; I² 86,4 %) a sérový kreatinín o <strong>11,79 µmol/l</strong> (95 % IS −19,86 až −3,72; I² 58,5 %). Podporná analýza zohľadňujúca východiskové hodnoty dala relatívny pokles kreatinínu o 12,8 % (95 % IS −20,0 % až −5,7 %).</p>
 
-<p>Analýzy s postupným vynechávaním jednotlivých štúdií ukázali stabilitu výsledku proteinúrie, ktorý zostal záporný v rozpätí −2,84 až −2,48 g/deň, a to aj po vyradení jedinej štúdie, ktorá údaje prepočítavala z pomeru bielkovina/kreatinín. Výsledok pri kreatiníne bol menej robustný: zlúčený odhad kolísal od −14,25 do −8,91 µmol/l a v jednom z týchto behov stratil štatistickú významnosť, hoci smer efektu zostal zachovaný. Eggerov test nezistil významné dôkazy publikačného skreslenia pri žiadnom z ukazovateľov, pri malom počte štúdií má však tento test nízku silu.</p>
+<p>Analýzy s postupným vynechávaním jednotlivých štúdií ukázali stabilitu výsledku proteinúrie, ktorý zostal záporný v rozpätí −2,84 až −2,48&nbsp;g/deň, a to aj po vyradení jedinej štúdie, ktorá údaje prepočítavala z pomeru bielkovina/kreatinín. Výsledok pri kreatiníne bol menej robustný: zlúčený odhad kolísal od −14,25 do −8,91 µmol/l a v jednom z týchto behov stratil štatistickú významnosť, hoci smer efektu zostal zachovaný. Eggerov test nezistil významné dôkazy publikačného skreslenia pri žiadnom z ukazovateľov, pri malom počte štúdií má však tento test nízku silu.</p>
 
 <h2>Prečo sa dve tretiny nedajú čítať ako účinnosť</h2>
 
@@ -88,9 +88,9 @@ $articles[] = [
 
 <h2>Čo sa medzitým zmenilo: trieda funguje, len s inou molekulou</h2>
 
-<p>Pre rozhodovanie v roku 2026 je dôležité, že deplécia B-lymfocytov pri lupusovej nefritíde už <em>má</em> pozitívny randomizovaný dôkaz. V štúdii fázy 3 REGENCY bolo 271 dospelých s biopticky potvrdenou aktívnou lupusovou nefritídou randomizovaných na obinutuzumab, humanizovanú protilátku proti CD20 typu II, alebo na placebo; obe ramená dostávali mykofenolátmofetil a prednizón s cieľovou dávkou 7,5 mg denne do 12. týždňa a 5 mg denne do 24. týždňa.</p>
+<p>Pre rozhodovanie v roku 2026 je dôležité, že deplécia B-lymfocytov pri lupusovej nefritíde už <em>má</em> pozitívny randomizovaný dôkaz. V štúdii fázy 3 REGENCY bolo 271 dospelých s biopticky potvrdenou aktívnou lupusovou nefritídou randomizovaných na obinutuzumab, humanizovanú protilátku proti CD20 typu II, alebo na placebo; obe ramená dostávali mykofenolátmofetil a prednizón s cieľovou dávkou 7,5&nbsp;mg denne do 12. týždňa a 5&nbsp;mg denne do 24. týždňa.</p>
 
-<p>Kompletnú renálnu odpoveď v 76. týždni dosiahlo 46,4 % pacientov na obinutuzumabe a 33,1 % na placebe (upravený rozdiel 13,4 percentuálneho bodu; 95 % IS 2,0–24,8; p = 0,02). Kompletná odpoveď pri dávke prednizónu najviac 7,5 mg denne medzi 64. a 76. týždňom bola 42,7 % oproti 30,9 % a pomer bielkovina/kreatinín pod 0,8 bez interkurentnej udalosti 55,5 % oproti 41,9 %. Neočakávané bezpečnostné signály sa nevyskytli, závažných nežiaducich udalostí, najmä infekcií, však bolo pri obinutuzumabe viac.</p>
+<p>Kompletnú renálnu odpoveď v 76. týždni dosiahlo 46,4 % pacientov na obinutuzumabe a 33,1 % na placebe (upravený rozdiel 13,4 percentuálneho bodu; 95 % IS 2,0–24,8; p = 0,02). Kompletná odpoveď pri dávke prednizónu najviac 7,5&nbsp;mg denne medzi 64. a 76. týždňom bola 42,7 % oproti 30,9 % a pomer bielkovina/kreatinín pod 0,8 bez interkurentnej udalosti 55,5 % oproti 41,9 %. Neočakávané bezpečnostné signály sa nevyskytli, závažných nežiaducich udalostí, najmä infekcií, však bolo pri obinutuzumabe viac.</p>
 
 <p>Klinická otázka sa tým posúva. Nestojí už „rituximab, alebo nič“, ale „ktorý anti-CD20 liek, v akom režime a u ktorého pacienta“. Pri refraktérnom priebehu po zlyhaní základnej liečby zostáva rituximab prakticky dostupnou možnosťou, ale pri rozhodovaní treba vedieť, že jeho vlastná randomizovaná štúdia primárny ukazovateľ nesplnila, zatiaľ čo iná látka z tej istej triedy ho pri aktívnej lupusovej nefritíde splnila.</p>
 

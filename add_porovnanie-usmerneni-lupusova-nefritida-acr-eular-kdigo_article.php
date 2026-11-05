@@ -42,14 +42,14 @@ $articles[] = [
 <p>Všetky tri usmernenia podporujú prísne sledovanie renálneho postihnutia u pacientov so systémovým lupus erythematosus (SLE).</p>
 
 <ul>
-  <li><strong>ACR</strong> preferuje <strong>fixný harmonogram</strong> hodnotení každých <strong>6 až 12 mesiacov</strong>.</li>
+  <li><strong>ACR</strong> preferuje <strong>fixný harmonogram</strong> hodnotení každých <strong>6 až 12&nbsp;mesiacov</strong>.</li>
   <li><strong>EULAR aj KDIGO</strong> idú skôr cestou <strong>individualizovaného, rizikovo orientovaného monitorovania</strong>.</li>
 </ul>
 
 <p><strong>Biopsiu obličky</strong> pri podozrení na LN odporúčajú všetky tri zdroje, najmä vtedy, ak:</p>
 
 <ul>
-  <li>proteinúria presahuje <strong>0,5 g/deň</strong>, alebo</li>
+  <li>proteinúria presahuje <strong>0,5&nbsp;g/deň</strong>, alebo</li>
   <li>dochádza k <strong>poklesu funkcie obličiek</strong>.</li>
 </ul>
 
@@ -66,7 +66,7 @@ $articles[] = [
   <li><strong>glukokortikoidy</strong> s dôrazom na <strong>rýchlu minimalizáciu dávky steroidov</strong>.</li>
 </ul>
 
-<p>Všetky tri rámce uvádzajú použitie <strong>krátkych intravenóznych pulzov metylprednizolónu</strong> (v rozmedzí <strong>250 až 1000 mg denne počas najviac 3 dní</strong>), následne prechod na perorálne glukokortikoidy a <strong>zrýchlené znižovanie dávky (taperovanie)</strong> tak, aby sa približne do <strong>4 až 6 mesiacov</strong> dosiahla dávka <strong>5 mg/deň alebo nižšia</strong>.</p>
+<p>Všetky tri rámce uvádzajú použitie <strong>krátkych intravenóznych pulzov metylprednizolónu</strong> (v rozmedzí <strong>250 až 1000&nbsp;mg denne počas najviac 3&nbsp;dní</strong>), následne prechod na perorálne glukokortikoidy a <strong>zrýchlené znižovanie dávky (taperovanie)</strong> tak, aby sa približne do <strong>4 až 6&nbsp;mesiacov</strong> dosiahla dávka <strong>5&nbsp;mg/deň alebo nižšia</strong>.</p>
 
 <h3>Odlišnosti v úvodných režimoch (trojkombinácia verzus dvojkombinácia)</h3>
 
@@ -92,7 +92,7 @@ $articles[] = [
 <ul>
   <li><strong>ACR</strong> poskytuje <strong>najkonkrétnejšie odporúčania</strong>:
     <ul>
-      <li>pri <strong>ťažkej proteinúrii (3 g/deň alebo viac)</strong> preferuje režimy založené na <strong>CNI</strong>,</li>
+      <li>pri <strong>ťažkej proteinúrii (3&nbsp;g/deň alebo viac)</strong> preferuje režimy založené na <strong>CNI</strong>,</li>
       <li>pri <strong>výraznom extrarenálnom postihnutí</strong> alebo pri <strong>zníženej funkcii obličiek</strong> uprednostňuje <strong>belimumab</strong>.</li>
     </ul>
   </li>
@@ -105,14 +105,14 @@ $articles[] = [
 <p>Všeobecná zhoda je v definícii:</p>
 
 <ul>
-  <li><strong>kompletná renálna odpoveď</strong>: <strong>proteinúria &lt; 0,5 g/deň</strong> pri stabilnej funkcii obličiek.</li>
+  <li><strong>kompletná renálna odpoveď</strong>: <strong>proteinúria &lt; 0,5&nbsp;g/deň</strong> pri stabilnej funkcii obličiek.</li>
 </ul>
 
 <p>Tempo, do ktorého sa má tento cieľ dosiahnuť, však vnímajú odlišne:</p>
 
 <ul>
-  <li><strong>KDIGO aj ACR</strong> zdôrazňujú dosiahnutie v horizonte <strong>6 až 12 mesiacov</strong>.</li>
-  <li><strong>EULAR</strong> používa praktickejší priebežný cieľ: <strong>proteinúria &lt; 0,7 g/deň v 12. mesiaci</strong> ako referenčný bod na rutinné vyhodnotenie.</li>
+  <li><strong>KDIGO aj ACR</strong> zdôrazňujú dosiahnutie v horizonte <strong>6 až 12&nbsp;mesiacov</strong>.</li>
+  <li><strong>EULAR</strong> používa praktickejší priebežný cieľ: <strong>proteinúria &lt; 0,7&nbsp;g/deň v 12. mesiaci</strong> ako referenčný bod na rutinné vyhodnotenie.</li>
 </ul>
 
 <h2>Súhrnné porovnanie</h2>
@@ -130,7 +130,7 @@ $articles[] = [
   <tbody>
     <tr>
       <td><strong>Monitorovanie</strong></td>
-      <td>Skôr <strong>fixný harmonogram</strong> hodnotení (typicky každých <strong>6 až 12 mesiacov</strong>)</td>
+      <td>Skôr <strong>fixný harmonogram</strong> hodnotení (typicky každých <strong>6 až 12&nbsp;mesiacov</strong>)</td>
       <td>Viac <strong>individualizovaný, rizikovo orientovaný</strong> prístup</td>
       <td>Rizikovo orientované monitorovanie, praktický dôraz na načasovanie</td>
     </tr>
@@ -160,19 +160,19 @@ $articles[] = [
     </tr>
     <tr>
       <td><strong>Liečebný cieľ a časový rámec</strong></td>
-      <td>Kompletná renálna odpoveď: <strong>proteinúria &lt; 0,5 g/deň</strong> pri stabilnej funkcii; hodnotenie v horizonte <strong>6 až 12 mesiacov</strong></td>
-      <td>Praktický cieľový rámec; uvádza sa referenčný bod <strong>proteinúria &lt; 0,7 g/deň v 12. mesiaci</strong></td>
-      <td>Kompatibilné s rámcom kompletnej renálnej odpovede a hodnotením v horizonte <strong>6 až 12 mesiacov</strong></td>
+      <td>Kompletná renálna odpoveď: <strong>proteinúria &lt; 0,5&nbsp;g/deň</strong> pri stabilnej funkcii; hodnotenie v horizonte <strong>6 až 12&nbsp;mesiacov</strong></td>
+      <td>Praktický cieľový rámec; uvádza sa referenčný bod <strong>proteinúria &lt; 0,7&nbsp;g/deň v 12. mesiaci</strong></td>
+      <td>Kompatibilné s rámcom kompletnej renálnej odpovede a hodnotením v horizonte <strong>6 až 12&nbsp;mesiacov</strong></td>
     </tr>
     <tr>
       <td><strong>Biopsia a histológia</strong></td>
-      <td>Biopsia najmä pri podozrení na aktívnu LN so závažnejšími parametrami (prah typicky <strong>proteinúria &gt; 0,5 g/deň</strong> a/alebo pokles funkcie)</td>
+      <td>Biopsia najmä pri podozrení na aktívnu LN so závažnejšími parametrami (prah typicky <strong>proteinúria &gt; 0,5&nbsp;g/deň</strong> a/alebo pokles funkcie)</td>
       <td>Podobný koncept potreby biopsie pri klinickej indikácii</td>
       <td>Biopsia s dôrazom na detailné „kompartmentové“ histologické hodnotenie pre čo najcielenejšiu liečbu</td>
     </tr>
     <tr>
       <td><strong>Eskalačné kroky / zmena stratégie</strong></td>
-      <td>Po úvodnej imunosupresii sa nastavuje tempo hodnotenia (6 až 12 mesiacov); pri nedostatočnej odpovedi sa zvažuje úprava stratégie (presun medzi režimami / eskalácia intenzity)</td>
+      <td>Po úvodnej imunosupresii sa nastavuje tempo hodnotenia (6 až 12&nbsp;mesiacov); pri nedostatočnej odpovedi sa zvažuje úprava stratégie (presun medzi režimami / eskalácia intenzity)</td>
       <td>Podobný princíp s dôrazom na priebežné vyhodnotenie odpovede v čase a následnú úpravu podľa rizika a odpovede</td>
       <td>Dôraz na štruktúrovanú stratifikáciu; pri nedostatočnej odpovedi logika „uprav a prehodnoť“ (úprava typu a intenzity imunosupresie)</td>
     </tr>
@@ -201,7 +201,7 @@ $articles[] = [
   <li><strong>EULAR</strong> lieči triedu V podobne ako proliferatívne ochorenie,</li>
   <li><strong>ACR a KDIGO</strong> sa viac riadia závažnosťou proteinúrie:
     <ul>
-      <li>pri proteinúrii <strong>&gt; 1 g/deň</strong> ACR odporúča <strong>úvodnú trojkombináciu</strong> (glukokortikoidy + MMF + CNI),</li>
+      <li>pri proteinúrii <strong>&gt; 1&nbsp;g/deň</strong> ACR odporúča <strong>úvodnú trojkombináciu</strong> (glukokortikoidy + MMF + CNI),</li>
       <li>KDIGO preferuje <strong>dvojkombinovanú imunosupresiu</strong>.</li>
     </ul>
   </li>
@@ -220,7 +220,7 @@ $articles[] = [
 <p>Okrem imunosupresie všetky tri dokumenty zdôrazňujú nefroprotekciu:</p>
 
 <ul>
-  <li>kontrola krvného tlaku na približne <strong>&lt; 120–130/80 mmHg</strong>,</li>
+  <li>kontrola krvného tlaku na približne <strong>&lt; 120–130/80&nbsp;mmHg</strong>,</li>
   <li><strong>blokáda systému renín-angiotenzín (RAAS)</strong>,</li>
   <li>selektívne zváženie <strong>inhibítorov SGLT2</strong>.</li>
 </ul>

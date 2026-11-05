@@ -2,12 +2,12 @@
 
 /**
  * add_sibeprenlimab-povetacicept-ravulizumab-iga-nefropatia_article.php
- * Tri studie fazy 3 pri IgA nefropatii (NEJM, oktober 2026):
+ * Tri štúdie fazy 3 pri IgA nefropatii (NEJM, oktober 2026):
  * VISIONARY (sibeprenlimab), RAINIER (povetacicept), I CAN (ravulizumab).
  *
- * Clanok je povodne spracovanie troch studii, nie prepis jedneho zdroja.
- * Autori studii su v literature, nie v source_authors.php.
- * enqueue_newsletter je zamerne false: aviza sa pri tomto clanku neposielaju.
+ * Článok je povodne spracovanie troch štúdií, nie prepis jedneho zdroja.
+ * Autori štúdií su v literature, nie v source_authors.php.
+ * enqueue_newsletter je zamerne false: aviza sa pri tomto článku neposielaju.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -31,7 +31,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/sibeprenlimab-povetacicept-ravulizumab-iga-nefropatia.webp" rel="noopener noreferrer" target="_blank"><img src="img/sibeprenlimab-povetacicept-ravulizumab-iga-nefropatia.webp" alt="Ilustračná polopriesvitná oblička v tme, do ktorej sa zbiehajú tri svietiace dráhy" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie snímka pacienta ani zobrazenie konkrétneho lieku. Tri dráhy sa zbiehajú v glomerule: blokáda APRIL, duálna blokáda BAFF a APRIL a terminálna inhibícia C5. Rovnaký cieľový orgán neznamená rovnakú zrelosť dôkazu.</figcaption></figure>
 
-<p class="article-dek"><em>V jednom týždni vyšli tri placebom kontrolované štúdie fázy 3 pri IgA nefropatii. Len jedna z nich, VISIONARY, už ukazuje, čo sa za 24 mesiacov stane so sklonom odhadovanej glomerulovej filtrácie. Ďalšie dve zatiaľ odpovedajú na otázku proteinúrie.</em></p>
+<p class="article-dek"><em>V jednom týždni vyšli tri placebom kontrolované štúdie fázy 3 pri IgA nefropatii. Len jedna z nich, VISIONARY, už ukazuje, čo sa za 24&nbsp;mesiacov stane so sklonom odhadovanej glomerulovej filtrácie. Ďalšie dve zatiaľ odpovedajú na otázku proteinúrie.</em></p>
 
 <p>Sibeprenlimab, povetacicept a ravulizumab zasahujú rôzne miesta tej istej choroby. Sibeprenlimab je humanizovaná monoklonálna protilátka proti ligandu indukujúcemu proliferáciu (APRIL). Povetacicept je upravený fúzny proteín s extracelulárnou doménou receptora TACI (TACI-Fc), skonštruovaný na súčasnú inhibíciu aktivačného faktora B-lymfocytov (BAFF) aj APRIL. Ravulizumab je terminálny inhibítor komplementu C5 a bráni vzniku C5a a komplexu C5b-9.<sup>1,2,3</sup> Spoločný cieľ, spomalenie straty nefrónov, z týchto troch publikácií ešte nevyplýva rovnakým spôsobom.</p>
 
@@ -41,13 +41,13 @@ $articles[] = [
 
 <p>Povetacicept a ravulizumab sú v nových prácach v skoršej fáze toho istého oblúka. Ich priebežné analýzy majú ako primárny ukazovateľ 24-hodinový pomer bielkovín ku kreatinínu v moči (UPCR). Sklon eGFR majú štúdie naplánovaný, v týchto publikáciách ho však neudávajú.<sup>2,3,8,9</sup></p>
 
-<h2>VISIONARY: sibeprenlimab a sklon eGFR za 24 mesiacov</h2>
+<h2>VISIONARY: sibeprenlimab a sklon eGFR za 24&nbsp;mesiacov</h2>
 
-<p>VISIONARY (NCT05248646) randomizovala dospelých s IgA nefropatiou na sibeprenlimab 400 mg subkutánne každé 4 týždne alebo na placebo. Randomizovaných bolo 510 pacientov, 259 na sibeprenlimab a 251 na placebo. Štúdiu financovala spoločnosť Otsuka.<sup>1</sup></p>
+<p>VISIONARY (NCT05248646) randomizovala dospelých s IgA nefropatiou na sibeprenlimab 400&nbsp;mg subkutánne každé 4&nbsp;týždne alebo na placebo. Randomizovaných bolo 510 pacientov, 259 na sibeprenlimab a 251 na placebo. Štúdiu financovala spoločnosť Otsuka.<sup>1</sup></p>
 
-<p>Primárnym ukazovateľom štúdie bol 24-hodinový UPCR v 9. mesiaci. Ten už bol podkladom zrýchleného schválenia. V priebežnej analýze prvých 320 pacientov (152 a 168) americké označenie udáva geometrický priemer zmeny približne −50 % pri sibeprenlimabe a +2 % pri placebe, čo zodpovedá 51-percentnej redukcii oproti placebu (96,5 % interval spoľahlivosti [IS] od 43 do 58; <em>P</em> &lt; 0,0001). V tej istej priebežnej populácii bola priemerná vstupná eGFR 63 ml/min/1,73 m<sup>2</sup>, priemerný 24-hodinový UPCR 1,5 g/g a inhibítor SGLT2 užívalo 40 % pacientov.<sup>5</sup> Finálny abstrakt tieto deväťmesačné čísla neopakuje.</p>
+<p>Primárnym ukazovateľom štúdie bol 24-hodinový UPCR v 9. mesiaci. Ten už bol podkladom zrýchleného schválenia. V priebežnej analýze prvých 320 pacientov (152 a 168) americké označenie udáva geometrický priemer zmeny približne −50 % pri sibeprenlimabe a +2 % pri placebe, čo zodpovedá 51-percentnej redukcii oproti placebu (96,5 % interval spoľahlivosti [IS] od 43 do 58; <em>P</em> &lt; 0,0001). V tej istej priebežnej populácii bola priemerná vstupná eGFR 63&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, priemerný 24-hodinový UPCR 1,5&nbsp;g/g a inhibítor SGLT2 užívalo 40 % pacientov.<sup>5</sup> Finálny abstrakt tieto deväťmesačné čísla neopakuje.</p>
 
-<p>Kľúčovým sekundárnym ukazovateľom finálnej analýzy bol anualizovaný sklon eGFR počas 24 mesiacov.<sup>1</sup></p>
+<p>Kľúčovým sekundárnym ukazovateľom finálnej analýzy bol anualizovaný sklon eGFR počas 24&nbsp;mesiacov.<sup>1</sup></p>
 
 <div class="table-responsive" role="region" aria-label="Finálna analýza štúdie VISIONARY, sklon eGFR a bezpečnosť" tabindex="0">
   <table>
@@ -61,16 +61,16 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Anualizovaný sklon eGFR</th>
-        <td>0,3 ml/min/1,73 m<sup>2</sup> za rok (95 % IS od −0,4 do 0,9)</td>
-        <td>−4,2 ml/min/1,73 m<sup>2</sup> za rok (95 % IS od −4,9 do −3,6)</td>
+        <td>0,3&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok (95 % IS od −0,4 do 0,9)</td>
+        <td>−4,2&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok (95 % IS od −4,9 do −3,6)</td>
       </tr>
       <tr>
         <th scope="row">Rozdiel sklonov</th>
-        <td colspan="2">4,5 ml/min/1,73 m<sup>2</sup> za rok (95 % IS od 3,6 do 5,4; <em>P</em> &lt; 0,001)</td>
+        <td colspan="2">4,5&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok (95 % IS od 3,6 do 5,4; <em>P</em> &lt; 0,001)</td>
       </tr>
       <tr>
         <th scope="row">Rozdiel v zmene eGFR od vstupu do 24. mesiaca</th>
-        <td colspan="2">9,2 ml/min/1,73 m<sup>2</sup> (95 % IS od 7,1 do 11,4; <em>P</em> &lt; 0,001)</td>
+        <td colspan="2">9,2&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> (95 % IS od 7,1 do 11,4; <em>P</em> &lt; 0,001)</td>
       </tr>
       <tr>
         <th scope="row">Kombinovaný ukazovateľ poklesu funkcie alebo zlyhania obličiek</th>
@@ -105,7 +105,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Sklon 0,3 ml/min/1,73 m<sup>2</sup> za rok má interval, ktorý zahŕňa nulu. Ide teda o výsledok zhodný so stabilizáciou, nie o preukázaný vzostup filtrácie. Rozdiel 4,5 ml/min/1,73 m<sup>2</sup> za rok oproti placebu je veľký a štatisticky jednoznačný. Hodnota 9,2 ml/min/1,73 m<sup>2</sup> je rozdiel zmien od vstupu do 24. mesiaca, nie eGFR, ktorú pacienti na konci štúdie mali.<sup>1</sup></p>
+<p>Sklon 0,3&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok má interval, ktorý zahŕňa nulu. Ide teda o výsledok zhodný so stabilizáciou, nie o preukázaný vzostup filtrácie. Rozdiel 4,5&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok oproti placebu je veľký a štatisticky jednoznačný. Hodnota 9,2&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> je rozdiel zmien od vstupu do 24. mesiaca, nie eGFR, ktorú pacienti na konci štúdie mali.<sup>1</sup></p>
 
 <p>Kombinovaný ukazovateľ abstrakt opisuje ako pokles funkcie obličiek alebo zlyhanie obličiek. Jednotlivé zložky, napríklad hranicu percentuálneho poklesu eGFR, dialýzu alebo transplantáciu, abstrakt nevymenúva. V aktívnom ramene nastala jedna udalosť, v placebovom ramene 28. Absolútny rozdiel je 10,8 percentuálnych bodov. Pomer rizík 0,029 je extrémny práve preto, že stojí na jednej udalosti, a interval od 0,004 do 0,214 je široký. Jeho doplnok do jednotky je približne 97 %. To je len iný zápis toho istého pomeru, nie 97-percentné zníženie rizika terminálneho zlyhania obličiek.<sup>1</sup></p>
 
@@ -113,11 +113,11 @@ $articles[] = [
 
 <p>V tom istom označení vznikli protilátky proti lieku u 88 z 256 hodnotiteľných pacientov (34 %). U 21 z týchto 88 pacientov mali protilátky neutralizačnú aktivitu. Expozícia bola pri pozitívnych protilátkach približne o 40 % nižšia a pokles UPCR do 9. mesiaca bol číselne menší (41,6 % oproti 52,7 %). Klinický význam tohto rozdielu označenie nepokladá za objasnený.<sup>5</sup> Ide o údaj z tej časti štúdie, ktorá hodnotila proteinúriu v 9. mesiaci, nie o výsledok októbrovej analýzy eGFR.</p>
 
-<p>Abstrakt finálnej analýzy vstupné kritériá nevypisuje. Označenie opisuje dospelých s biopsiou potvrdenou IgA nefropatiou, eGFR najmenej 30 ml/min/1,73 m<sup>2</sup>, 24-hodinovým UPCR najmenej 0,75 g/g alebo proteinúriou najmenej 1,0 g/deň a so stabilnou maximálne tolerovanou dávkou inhibítora ACE alebo blokátora receptora AT<sub>1</sub>, s inhibítorom SGLT2 alebo bez neho. Vylúčení boli pacienti s inou glomerulopatiou a pacienti so systémovou imunosupresiou v 16 týždňoch pred skríningom.<sup>5</sup> Register má navyše exploratívnu kohortu s eGFR od 20 do menej ako 30 ml/min/1,73 m<sup>2</sup>. Či je táto kohorta súčasťou publikovaných 510 pacientov, abstrakt nehovorí.<sup>7</sup></p>
+<p>Abstrakt finálnej analýzy vstupné kritériá nevypisuje. Označenie opisuje dospelých s biopsiou potvrdenou IgA nefropatiou, eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, 24-hodinovým UPCR najmenej 0,75&nbsp;g/g alebo proteinúriou najmenej 1,0&nbsp;g/deň a so stabilnou maximálne tolerovanou dávkou inhibítora ACE alebo blokátora receptora AT<sub>1</sub>, s inhibítorom SGLT2 alebo bez neho. Vylúčení boli pacienti s inou glomerulopatiou a pacienti so systémovou imunosupresiou v 16 týždňoch pred skríningom.<sup>5</sup> Register má navyše exploratívnu kohortu s eGFR od 20 do menej ako 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Či je táto kohorta súčasťou publikovaných 510 pacientov, abstrakt nehovorí.<sup>7</sup></p>
 
 <h2>RAINIER: povetacicept a proteinúria v 36. týždni</h2>
 
-<p>RAINIER (NCT06564142) je prebiehajúca randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3. Dospelí s biopsiou potvrdenou IgA nefropatiou na stabilnej podpornej liečbe boli randomizovaní v pomere 2 : 1 na povetacicept 80 mg subkutánne každé 4 týždne alebo na placebo. Liečbu dostalo 557 účastníkov, 372 povetacicept a 185 placebo. Prespecifikovaná priebežná analýza účinnosti zahŕňa prvých 199 randomizovaných, 131 a 68. Abstrakt uvádza financovanie spoločnosťou Vertex. V registri je ako zadávateľ uvedená spoločnosť Alpine Immune Sciences.<sup>2,8</sup></p>
+<p>RAINIER (NCT06564142) je prebiehajúca randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3. Dospelí s biopsiou potvrdenou IgA nefropatiou na stabilnej podpornej liečbe boli randomizovaní v pomere 2 : 1 na povetacicept 80&nbsp;mg subkutánne každé 4&nbsp;týždne alebo na placebo. Liečbu dostalo 557 účastníkov, 372 povetacicept a 185 placebo. Prespecifikovaná priebežná analýza účinnosti zahŕňa prvých 199 randomizovaných, 131 a 68. Abstrakt uvádza financovanie spoločnosťou Vertex. V registri je ako zadávateľ uvedená spoločnosť Alpine Immune Sciences.<sup>2,8</sup></p>
 
 <p>Primárnym ukazovateľom tejto analýzy bol 24-hodinový UPCR v 36. týždni. Klesol o 52,0 % pri povetacicepte a o 4,3 % pri placebe. Upravený rozdiel bol −49,8 percentuálnych bodov (95 % interval spoľahlivosti od −58,6 do −39,2; <em>P</em> &lt; 0,001).<sup>2</sup></p>
 
@@ -131,9 +131,9 @@ $articles[] = [
 
 <h2>I CAN: ravulizumab a proteinúria v 34. týždni</h2>
 
-<p>I CAN (NCT06291376) zaradila dospelých s IgA nefropatiou, eGFR najmenej 30 ml/min/1,73 m<sup>2</sup> a proteinúriou napriek štandardnej liečbe. Proteinúria znamenala 24-hodinový UPCR najmenej 0,75, pri bielkovine aj kreatiníne v gramoch, alebo celkovú proteinúriu najmenej 1,0 g/deň. Randomizácia bola 1 : 1 na intravenózny ravulizumab alebo placebo každé 8 týždňov. Randomizovaných bolo 485 pacientov, 240 a 245. Do priebežnej analýzy vstúpilo 352 pacientov, 176 v každom ramene. Štúdiu financovali Alexion a AstraZeneca Rare Disease Unit.<sup>3</sup></p>
+<p>I CAN (NCT06291376) zaradila dospelých s IgA nefropatiou, eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a proteinúriou napriek štandardnej liečbe. Proteinúria znamenala 24-hodinový UPCR najmenej 0,75, pri bielkovine aj kreatiníne v gramoch, alebo celkovú proteinúriu najmenej 1,0&nbsp;g/deň. Randomizácia bola 1 : 1 na intravenózny ravulizumab alebo placebo každé 8&nbsp;týždňov. Randomizovaných bolo 485 pacientov, 240 a 245. Do priebežnej analýzy vstúpilo 352 pacientov, 176 v každom ramene. Štúdiu financovali Alexion a AstraZeneca Rare Disease Unit.<sup>3</sup></p>
 
-<p>Register opisuje hmotnostne určenú úvodnú dávku v 1. deň, udržiavaciu dávku od 15. dňa a ďalej podanie každé 8 týždňov. Miligramové dávky abstrakt neuvádza a z dávkovania schválených indikácií ich nemožno do štúdie doplniť.<sup>3,9</sup></p>
+<p>Register opisuje hmotnostne určenú úvodnú dávku v 1. deň, udržiavaciu dávku od 15. dňa a ďalej podanie každé 8&nbsp;týždňov. Miligramové dávky abstrakt neuvádza a z dávkovania schválených indikácií ich nemožno do štúdie doplniť.<sup>3,9</sup></p>
 
 <p>Geometrický priemer 24-hodinového UPCR klesol pri ravulizumabe z 1,56 na 0,83 a pri placebe z 1,60 na 1,48. Vnútri ramien to je zmena −46,6 % a −5,6 %. Primárne porovnanie je iné číslo: upravený geometrický priemer UPCR bol pri ravulizumabe o 43,4 % nižší než pri placebe (99 % interval spoľahlivosti od 30,1 do 54,2; <em>P</em> &lt; 0,001). Interval 99 %, nie 95 %, patrí k prísnejšej hladine priebežnej analýzy. Týchto 43,4 % nie je rozdiel vnútroskupinových zmien a nie je to 43,4 percentuálnych bodov.<sup>3</sup></p>
 
@@ -158,19 +158,19 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Liečba v štúdii</th>
-        <td>sibeprenlimab 400 mg subkutánne každé 4 týždne</td>
-        <td>povetacicept 80 mg subkutánne každé 4 týždne</td>
-        <td>ravulizumab intravenózne, hmotnostne, každé 8 týždňov</td>
+        <td>sibeprenlimab 400&nbsp;mg subkutánne každé 4&nbsp;týždne</td>
+        <td>povetacicept 80&nbsp;mg subkutánne každé 4&nbsp;týždne</td>
+        <td>ravulizumab intravenózne, hmotnostne, každé 8&nbsp;týždňov</td>
       </tr>
       <tr>
         <th scope="row">Čo táto publikácia rieši</th>
-        <td>finálny sklon eGFR za 24 mesiacov</td>
+        <td>finálny sklon eGFR za 24&nbsp;mesiacov</td>
         <td>priebežný UPCR v 36. týždni</td>
         <td>priebežný UPCR v 34. týždni</td>
       </tr>
       <tr>
         <th scope="row">Hlavný rozdiel oproti placebu</th>
-        <td>4,5 ml/min/1,73 m<sup>2</sup> za rok</td>
+        <td>4,5&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok</td>
         <td>−49,8 percentuálnych bodov UPCR</td>
         <td>geometrický priemer UPCR nižší o 43,4 %</td>
       </tr>
@@ -198,7 +198,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Sibeprenlimab v dávke 400 mg subkutánne každé 4 týždne udržal v štúdii VISIONARY dvojročný sklon eGFR pri nule (0,3 oproti −4,2 ml/min/1,73 m<sup>2</sup> za rok) a výrazne znížil výskyt kombinovaného ukazovateľa poklesu funkcie alebo zlyhania obličiek (1 oproti 28 udalostiam). Povetacicept a ravulizumab majú v týchto priebežných analýzach presvedčivý účinok na proteinúriu. Kým nepríde ich údaj o eGFR, nie je dôvod radiť ich so sibeprenlimabom podľa veľkosti percenta na UPCR.</p>
+<p>Sibeprenlimab v dávke 400&nbsp;mg subkutánne každé 4&nbsp;týždne udržal v štúdii VISIONARY dvojročný sklon eGFR pri nule (0,3 oproti −4,2&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok) a výrazne znížil výskyt kombinovaného ukazovateľa poklesu funkcie alebo zlyhania obličiek (1 oproti 28 udalostiam). Povetacicept a ravulizumab majú v týchto priebežných analýzach presvedčivý účinok na proteinúriu. Kým nepríde ich údaj o eGFR, nie je dôvod radiť ich so sibeprenlimabom podľa veľkosti percenta na UPCR.</p>
 
 <hr>
 
@@ -221,7 +221,7 @@ $articles[] = [
   <li id="ref-barratt-rainier-2026"><strong>Jonathan Barratt, Hong Zhang, Seung Hyeok Han, Yuzuke Suzuki, James Tumlin, Bobby Chacko, Irene L. Noronha, Arvind Madan, Raphaël Duivenvoorden, Jamil R. Azzi, Carla Nester, Cassie Dong, Neil Ahluwalia, Jiahua Li, Carmen Bozic, Ogo Egbuna, Muh Geot Wong, Richard Lafayette, RAINIER AIS-D08 Trial Group.</strong> <em>Interim Analysis of a Phase 3 Trial of Povetacicept in IgA Nephropathy.</em> New England Journal of Medicine. Zverejnené online 23. októbra 2026. Ročník, číslo a strany v čase overenia neboli pridelené. Krstné meno štvrtého autora je v PubMed aj v Crossref uvedené ako Yuzuke. V štúdiách VISIONARY a I CAN je ten istý autor uvedený ako Yusuke Suzuki. Citácia zachováva znenie tejto publikácie. <a href="https://doi.org/10.1056/NEJMoa2608682" target="_blank" rel="noopener noreferrer">DOI 10.1056/NEJMoa2608682</a>. <a href="https://pubmed.ncbi.nlm.nih.gov/42912669/" target="_blank" rel="noopener noreferrer">PubMed 42912669</a>.</li>
   <li id="ref-barratt-ican-2026"><strong>Jonathan Barratt, Youssef M. K. Farag, Kara Rice, Tobin J. Cammett, Lesley A. Inker, Hernán Trimarchi, Annette Bruchfeld, Hiddo J. L. Heerspink, Adrian Liew, Kevin Carroll, Hong Zhang, Sayna Norouzi, Shuang Hou, Sehoon Park, Miguel Ángel Pérez Valdivia, Jai Radhakrishnan, Yusuke Suzuki, Bonnie Schneider, John Marsala, Cynthia Carrillo-Infante, Stephen L. Lake, Ajay K. Singh, Stephen Nolan, Richard A. Lafayette, I CAN Trial Group.</strong> <em>Ravulizumab in IgA Nephropathy. Interim Analysis of a Phase 3 Trial.</em> New England Journal of Medicine. Zverejnené online 23. októbra 2026. Ročník, číslo a strany v čase overenia neboli pridelené. <a href="https://doi.org/10.1056/NEJMoa2607544" target="_blank" rel="noopener noreferrer">DOI 10.1056/NEJMoa2607544</a>. <a href="https://pubmed.ncbi.nlm.nih.gov/42912700/" target="_blank" rel="noopener noreferrer">PubMed 42912700</a>.</li>
   <li id="ref-fda-voyxact-2025"><strong>U.S. Food and Drug Administration, Center for Drug Evaluation and Research.</strong> <em>Approval letter, BLA 761434, Voyxact (sibeprenlimab-szsi).</em> 25. november 2025. Zrýchlené schválenie na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou s rizikom progresie. <a href="https://www.accessdata.fda.gov/drugsatfda_docs/nda/2025/761434Orig1s000Approv.pdf" target="_blank" rel="noopener noreferrer">FDA, schvaľovací list</a>.</li>
-  <li id="ref-dailymed-voyxact"><strong>Otsuka America Pharmaceutical.</strong> <em>Voyxact (sibeprenlimab-szsi) injection, for subcutaneous use. Prescribing information.</em> DailyMed, aktualizácia 17. marca 2026. Indikácia, dávka 400 mg každé 4 týždne, populácia a deväťmesačný UPCR štúdie VISIONARY, imunogenicita, infekcie a živé vakcíny. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c8a93b32-0676-4704-86dc-cb65f425c6e5" target="_blank" rel="noopener noreferrer">DailyMed</a>.</li>
+  <li id="ref-dailymed-voyxact"><strong>Otsuka America Pharmaceutical.</strong> <em>Voyxact (sibeprenlimab-szsi) injection, for subcutaneous use. Prescribing information.</em> DailyMed, aktualizácia 17. marca 2026. Indikácia, dávka 400&nbsp;mg každé 4&nbsp;týždne, populácia a deväťmesačný UPCR štúdie VISIONARY, imunogenicita, infekcie a živé vakcíny. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c8a93b32-0676-4704-86dc-cb65f425c6e5" target="_blank" rel="noopener noreferrer">DailyMed</a>.</li>
   <li id="ref-ema-ultomiris"><strong>European Medicines Agency.</strong> <em>Ultomiris, INN-ravulizumab. Product information.</em> Časť 4.1 (indikácie bez IgA nefropatie) a časť 4.4 (meningokoková infekcia a očkovanie). <a href="https://www.ema.europa.eu/en/documents/product-information/ultomiris-epar-product-information_en.pdf" target="_blank" rel="noopener noreferrer">EMA, súhrn informácií o lieku</a>.</li>
   <li id="ref-nct-visionary"><strong>ClinicalTrials.gov.</strong> <em>Trial of Sibeprenlimab in the Treatment of IgA Nephropathy (VISIONARY), NCT05248646.</em> Otsuka Pharmaceutical Development and Commercialization. Vstupné kritériá vrátane exploratívnej kohorty. <a href="https://clinicaltrials.gov/study/NCT05248646" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
   <li id="ref-nct-rainier"><strong>ClinicalTrials.gov.</strong> <em>Evaluation of Efficacy of Povetacicept in Adults With Immunoglobulin A Nephropathy (RAINIER), NCT06564142.</em> Alpine Immune Sciences. Primárne ukazovatele UPCR v 36. týždni a sklon eGFR do 104. týždňa. <a href="https://clinicaltrials.gov/study/NCT06564142" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
@@ -229,7 +229,7 @@ $articles[] = [
   <li id="ref-vertex-2026"><strong>Vertex Pharmaceuticals.</strong> <em>Vertex Announces US FDA Acceptance of Biologics License Application for Accelerated Approval of Povetacicept in IgA Nephropathy.</em> Oznámenie spoločnosti, 1. jún 2026. Cieľový dátum rozhodnutia 30. november 2026. <a href="https://investors.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-acceptance-biologics-license-application" target="_blank" rel="noopener noreferrer">Vertex</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom.</strong> Abstrakty troch prác boli načítané z PubMed (efetch, PMID 42911185, 42912669 a 42912700). Úplné autorské zoznamy a dátumy online zverejnenia 22. a 23. októbra 2026 boli porovnané s Crossref. Skupinové autorstvo je z PubMed, lebo Crossref ho neuvádza. Ročník, číslo a strany Crossref ani PubMed v čase overenia nemali. Plný text NEJM nebol dostupný. Deväťmesačný UPCR, vstupné charakteristiky priebežných 320 pacientov, protilátky proti sibeprenlimabu, dávka 400 mg a upozornenie na živé vakcíny sú z označenia na DailyMed aktualizovaného 17. marca 2026, nie z októbrového abstraktu. Dátum zrýchleného schválenia je zo schvaľovacieho listu FDA. Indikácie ravulizumabu a znenie o očkovaní sú z častí 4.1 a 4.4 súhrnu EMA. Neskoršie ukazovatele eGFR a schéma úvodnej a udržiavacej dávky ravulizumabu sú z ClinicalTrials.gov, nie z abstraktu. Oznámenie Vertexu je sekundárny zdroj o podaní žiadosti, nie dokument FDA. Vlastné je čítanie hierarchie ukazovateľov, upozornenie na nestabilitu pomeru rizík pri jednej udalosti a odmietnutie poradia liečby. Európska registrácia sibeprenlimabu a povetaciceptu nebola v prehľade dokumentov EMA nájdená. Register ŠÚKL som osobitne neprešiel.</em></p>
+<p><em><strong>Poznámka k dôkazom.</strong> Abstrakty troch prác boli načítané z PubMed (efetch, PMID 42911185, 42912669 a 42912700). Úplné autorské zoznamy a dátumy online zverejnenia 22. a 23. októbra 2026 boli porovnané s Crossref. Skupinové autorstvo je z PubMed, lebo Crossref ho neuvádza. Ročník, číslo a strany Crossref ani PubMed v čase overenia nemali. Plný text NEJM nebol dostupný. Deväťmesačný UPCR, vstupné charakteristiky priebežných 320 pacientov, protilátky proti sibeprenlimabu, dávka 400&nbsp;mg a upozornenie na živé vakcíny sú z označenia na DailyMed aktualizovaného 17. marca 2026, nie z októbrového abstraktu. Dátum zrýchleného schválenia je zo schvaľovacieho listu FDA. Indikácie ravulizumabu a znenie o očkovaní sú z častí 4.1 a 4.4 súhrnu EMA. Neskoršie ukazovatele eGFR a schéma úvodnej a udržiavacej dávky ravulizumabu sú z ClinicalTrials.gov, nie z abstraktu. Oznámenie Vertexu je sekundárny zdroj o podaní žiadosti, nie dokument FDA. Vlastné je čítanie hierarchie ukazovateľov, upozornenie na nestabilitu pomeru rizík pri jednej udalosti a odmietnutie poradia liečby. Európska registrácia sibeprenlimabu a povetaciceptu nebola v prehľade dokumentov EMA nájdená. Register ŠÚKL som osobitne neprešiel.</em></p>
 HTML,
 ];
 

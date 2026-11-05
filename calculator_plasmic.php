@@ -246,7 +246,7 @@ if (isLoggedIn()) {
                             bez transplantácie solídneho orgánu / kmeňových buniek &bull;
                             MCV &lt; 90 fL &bull;
                             INR &lt; 1,5 &bull;
-                            kreatinín &lt; 176,8 µmol/L (2,0 mg/dL)
+                            kreatinín &lt; 176,8 µmol/L (2,0 mg/dL)
                         </div>
                         <div class="calc-formula-vars">
                             0 až 4 → nízke riziko (≈ 0 až 4 %) &bull;
@@ -306,7 +306,7 @@ if (isLoggedIn()) {
                             <div class="form-group">
                                 <label for="creatinine">Kreatinín (µmol/L) <span class="required">*</span></label>
                                 <input type="text" id="creatinine" name="creatinine" required class="form-control" value="<?= htmlspecialchars($form["creatinine"]) ?>" placeholder="napr. 110">
-                                <small class="form-hint">Bod pri &lt; 176,8 (2,0 mg/dL).</small>
+                                <small class="form-hint">Bod pri &lt; 176,8 (2,0 mg/dL).</small>
                             </div>
                         </div>
                     </div>

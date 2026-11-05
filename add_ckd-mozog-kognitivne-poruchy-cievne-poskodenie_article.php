@@ -1,8 +1,8 @@
 <?php
 /**
  * add_ckd-mozog-kognitivne-poruchy-cievne-poskodenie_article.php
- * Idempotentny UPSERT odborneho clanku o kognitivnych a cerebrovaskularnych
- * dosledkoch chronickej choroby obliciek.
+ * Idempotentný UPSERT odborného článku o kognitivnych a cerebrovaskularnych
+ * dosledkoch chronickej choroby obličiek.
  */
 
 // Ochrana - len admin alebo CLI
@@ -15,7 +15,7 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/article_publisher.php';
 
-// Data clanku
+// Data článku
 
 $articles = [];
 
@@ -41,7 +41,7 @@ $articles[] = [
 
 <h2>Ako častá je kognitívna porucha</h2>
 
-<p>Metaanalýza 50 štúdií so 25 289 pacientmi s CKD odhadla súhrnnú prevalenciu kognitívnej poruchy na 40 % (95 % interval spoľahlivosti 33 až 46 %). Podľa typu liečby boli súhrnné odhady 32 % bez dialýzy, 53 % pri hemodialýze, 39 % pri peritoneálnej dialýze a 26 % po transplantácii obličky.</p>
+<p>Metaanalýza 50 štúdií so 25&nbsp;289 pacientmi s CKD odhadla súhrnnú prevalenciu kognitívnej poruchy na 40 % (95 % interval spoľahlivosti 33 až 46 %). Podľa typu liečby boli súhrnné odhady 32 % bez dialýzy, 53 % pri hemodialýze, 39 % pri peritoneálnej dialýze a 26 % po transplantácii obličky.</p>
 
 <p>Tieto čísla nemožno zamieňať za prevalenciu demencie. Zahrnuté štúdie používali rozdielne skríningové nástroje, diagnostické prahy a populácie, preto bola heterogenita vysoká. Odhad 53 % pri hemodialýze znamená, že určitý stupeň kognitívnej poruchy je v tejto skupine častý, nie že polovica dialyzovaných pacientov má demenciu alebo stratila schopnosť rozhodovať.</p>
 
@@ -51,7 +51,7 @@ $articles[] = [
 
 <p>Obličky aj mozog majú hustú mikrocirkuláciu citlivú na hypertenziu, diabetes, aterosklerózu a arteriálnu tuhosť. Pri poškodení mozgových arteriol a kapilár sa na magnetickej rezonancii môžu objaviť hyperintenzity bielej hmoty, lakúny a mikrokrvácania. Tieto nálezy patria do spektra cerebrálnej choroby malých ciev.</p>
 
-<p>Aktualizovaná metaanalýza 63 observačných štúdií so 57 030 osobami zistila pri eGFR nižšej ako 60 ml/min/1,73 m<sup>2</sup> asociáciu s mikrokrvácaniami, hyperintenzitami bielej hmoty a lakunárnymi infarktmi. Proteinúria sa takisto spájala s väčšou záťažou chorobou malých ciev. Ide o observačné údaje. Podporujú spoločný mikrovaskulárny mechanizmus, ale samy nedokazujú, že znížená eGFR priamo spôsobila konkrétny mozgový nález.</p>
+<p>Aktualizovaná metaanalýza 63 observačných štúdií so 57&nbsp;030 osobami zistila pri eGFR nižšej ako 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> asociáciu s mikrokrvácaniami, hyperintenzitami bielej hmoty a lakunárnymi infarktmi. Proteinúria sa takisto spájala s väčšou záťažou chorobou malých ciev. Ide o observačné údaje. Podporujú spoločný mikrovaskulárny mechanizmus, ale samy nedokazujú, že znížená eGFR priamo spôsobila konkrétny mozgový nález.</p>
 
 <h2>Hematoencefalická bariéra: ľudský signál, nie hotové vysvetlenie</h2>
 
@@ -69,13 +69,13 @@ $articles[] = [
 
 <p>Hemodialýza koriguje uremické a elektrolytové prostredie, počas procedúry však mení cirkulujúci objem, osmolalitu a krvný tlak. Cerebrálny prietok môže počas dialýzy klesať, najmä pri vyššej ultrafiltrácii a výraznejšom poklese tlaku.</p>
 
-<p>V prospektívnej observačnej kohorte 121 starších hemodialyzovaných pacientov klesala stredná rýchlosť prietoku v mozgových artériách počas procedúry. Väčší pokles sa spájal so zhoršením niektorých kognitívnych skóre počas 12 mesiacov. Štúdia podporuje význam obehovej záťaže, ale nedokazuje, že intradialyzačná hypotenzia priamo spôsobuje demenciu. Krvný tlak je navyše iba nepriamym ukazovateľom cerebrálnej perfúzie a individuálna autoregulácia sa líši.</p>
+<p>V prospektívnej observačnej kohorte 121 starších hemodialyzovaných pacientov klesala stredná rýchlosť prietoku v mozgových artériách počas procedúry. Väčší pokles sa spájal so zhoršením niektorých kognitívnych skóre počas 12&nbsp;mesiacov. Štúdia podporuje význam obehovej záťaže, ale nedokazuje, že intradialyzačná hypotenzia priamo spôsobuje demenciu. Krvný tlak je navyše iba nepriamym ukazovateľom cerebrálnej perfúzie a individuálna autoregulácia sa líši.</p>
 
 <p>Praktickým cieľom je obmedziť opakovanú hemodynamickú intoleranciu: realisticky stanoviť cieľovú hmotnosť, predchádzať nadmernému medzidialyzačnému prírastku, podľa potreby predĺžiť čas liečby, znížiť ultrafiltračnú rýchlosť a individuálne posúdiť načasovanie antihypertenzív. Nie je však preukázané, že jediný konkrétny dialyzačný zásah spoľahlivo zabráni kognitívnemu poklesu.</p>
 
 <h2>Riziko cievnej mozgovej príhody nie je jedno číslo</h2>
 
-<p>Riziko mozgovej príhody rastie s klesajúcou GFR aj so stúpajúcou albuminúriou. Metaanalýza 83 štúdií s viac ako 2,25 milióna účastníkov zistila pri každom poklese GFR o 10 ml/min/1,73 m<sup>2</sup> relatívne zvýšenie rizika mozgovej príhody o 7 %. Zvýšenie pomeru albumínu ku kreatinínu o 25 mg/mmol sa spájalo s relatívnym zvýšením rizika o 10 %, nezávisle od GFR.</p>
+<p>Riziko mozgovej príhody rastie s klesajúcou GFR aj so stúpajúcou albuminúriou. Metaanalýza 83 štúdií s viac ako 2,25 milióna účastníkov zistila pri každom poklese GFR o 10&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> relatívne zvýšenie rizika mozgovej príhody o 7 %. Zvýšenie pomeru albumínu ku kreatinínu o 25&nbsp;mg/mmol sa spájalo s relatívnym zvýšením rizika o 10 %, nezávisle od GFR.</p>
 
 <p>Ide o priemerné populačné asociácie, nie predpoveď pre jednotlivca. Paušálne tvrdenie, že každý pacient s CKD má trojnásobné riziko mozgovej príhody, je nesprávne. Absolútne riziko závisí od veku, štádia CKD, albuminúrie, krvného tlaku, diabetu, fibrilácie predsiení, fajčenia, predchádzajúcej príhody a dialyzačného statusu.</p>
 
@@ -219,9 +219,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo "Migracia clanku: " . $articles[0]['title'] . "\n";
+    echo "Migrácia článku: " . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

@@ -1,7 +1,7 @@
 <?php
 /**
  * add_sparsentan-realna-prax-iga-nefropatia-12-mesiacov_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie Garcia-Carro et al. (Clinical Kidney Journal, 2026).
  */
 
@@ -35,11 +35,11 @@ $articles[] = [
 
 <h2>Čo štúdia sledovala</h2>
 
-<p>Práca <em>Twelve-month real-world outcomes of sparsentan in a multicenter Spanish IgA nephropathy cohort</em> bola publikovaná v časopise <em>Clinical Kidney Journal</em>. Išlo o retrospektívnu multicentrickú analýzu pacientov s biopsiou potvrdenou IgAN, ktorí začali sparsentan mimo klinického skúšania a mali najmenej 3 mesiace sledovania.</p>
+<p>Práca <em>Twelve-month real-world outcomes of sparsentan in a multicenter Spanish IgA nephropathy cohort</em> bola publikovaná v časopise <em>Clinical Kidney Journal</em>. Išlo o retrospektívnu multicentrickú analýzu pacientov s biopsiou potvrdenou IgAN, ktorí začali sparsentan mimo klinického skúšania a mali najmenej 3&nbsp;mesiace sledovania.</p>
 
 <ul>
-  <li>Do analýzy bolo zaradených <strong>41 pacientov</strong>; medián veku bol 42 rokov.</li>
-  <li>Medián vstupného eGFR bol <strong>44 ml/min/1,73 m²</strong>, teda išlo o kohortu s už zníženou funkciou obličiek.</li>
+  <li>Do analýzy bolo zaradených <strong>41 pacientov</strong>; medián veku bol 42&nbsp;rokov.</li>
+  <li>Medián vstupného eGFR bol <strong>44&nbsp;ml/min/1,73&nbsp;m²</strong>, teda išlo o kohortu s už zníženou funkciou obličiek.</li>
   <li><strong>95 %</strong> pacientov užívalo pri začatí sparsentanu aj inhibítor SGLT2.</li>
   <li>Všetci pacienti mali biopsiou potvrdenú IgAN a liečba bola podaná v rutinnej praxi, nie v randomizovanom skúšaní.</li>
   <li>Primárnym cieľom bol podiel pacientov s redukciou proteinúrie o <strong>viac než 50 %</strong> po 3 mesiacoch.</li>
@@ -49,7 +49,7 @@ $articles[] = [
 
 <h2>Rýchly pokles proteinúrie</h2>
 
-<p>Medián proteinúrie klesol z <strong>1 163 mg/24 h</strong> na <strong>772 mg/24 h</strong> po 3 mesiacoch. Autori uvádzajú medián relatívnej redukcie <strong>44,1 %</strong> a 51 % pacientov dosiahlo pokles o viac než 50 %.</p>
+<p>Medián proteinúrie klesol z <strong>1&nbsp;163&nbsp;mg/24&nbsp;h</strong> na <strong>772&nbsp;mg/24&nbsp;h</strong> po 3 mesiacoch. Autori uvádzajú medián relatívnej redukcie <strong>44,1 %</strong> a 51 % pacientov dosiahlo pokles o viac než 50 %.</p>
 
 <div class="table-responsive" role="region" aria-label="Vývoj proteinúrie po nasadení sparsentanu" tabindex="0">
 <table>
@@ -63,21 +63,21 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Vstup</th>
-      <td>Medián 1 163 mg/24 h</td>
+      <td>Medián 1&nbsp;163&nbsp;mg/24&nbsp;h</td>
       <td>Východisková proteinúria pred sparsentanom</td>
     </tr>
     <tr>
-      <th scope="row">3 mesiace</th>
-      <td>Medián 772 mg/24 h; redukcia 44,1 %</td>
+      <th scope="row">3&nbsp;mesiace</th>
+      <td>Medián 772&nbsp;mg/24&nbsp;h; redukcia 44,1 %</td>
       <td>51 % pacientov dosiahlo redukciu o viac než 50 %</td>
     </tr>
     <tr>
-      <th scope="row">6 mesiacov</th>
+      <th scope="row">6&nbsp;mesiacov</th>
       <td>Medián redukcie 46,9 %</td>
       <td>Efekt pretrvával v dostupnej podskupine</td>
     </tr>
     <tr>
-      <th scope="row">12 mesiacov</th>
+      <th scope="row">12&nbsp;mesiacov</th>
       <td>Medián redukcie 38,9 %</td>
       <td>Efekt pretrvával, s väčšou variabilitou a menším počtom pozorovaní</td>
     </tr>
@@ -89,13 +89,13 @@ $articles[] = [
 
 <h2>Funkcia obličiek a bezpečnosť</h2>
 
-<p>Funkcia obličiek podľa abstraktu zostala počas sledovania stabilná napriek mierne až stredne zníženému vstupnému eGFR. Toto pozorovanie je upokojujúce, ale 12 mesiacov a nekontrolovaný dizajn nestačia na spoľahlivé určenie skutočného sklonu eGFR ani na preukázanie prevencie zlyhania obličiek.</p>
+<p>Funkcia obličiek podľa abstraktu zostala počas sledovania stabilná napriek mierne až stredne zníženému vstupnému eGFR. Toto pozorovanie je upokojujúce, ale 12&nbsp;mesiacov a nekontrolovaný dizajn nestačia na spoľahlivé určenie skutočného sklonu eGFR ani na preukázanie prevencie zlyhania obličiek.</p>
 
 <p>Autori nepozorovali <strong>klinicky významnú hyperkaliémiu ani závažné nežiaduce udalosti</strong>. Monitorovanie to však nerobí zbytočným. Pri sparsentane treba individuálne sledovať krvný tlak, objemový stav, kreatinín alebo eGFR, draslík a podľa platných informácií o lieku aj pečeňové testy. Pri poklese tlaku, akútnom zhoršení funkcie obličiek alebo objemovej deplecii je potrebné prehodnotiť súbežnú liečbu a hydratáciu pacienta.</p>
 
 <h2>Ako výsledky zapadajú do randomizovaných dát</h2>
 
-<p>Randomizované skúšanie PROTECT porovnávalo sparsentan s maximálne titrovaným irbesartanom u dospelých pacientov s IgAN a pretrvávajúcou proteinúriou napriek RAS blokáde. Randomizovaných bolo 406 pacientov (po 203 v každej skupine). Po 110 týždňoch bola proteinúria pri sparsentane približne o 40 % nižšia než pri irbesartane (pomer geometrických priemerov 0,60; 95 % IS 0,50–0,72). Chronický sklon eGFR (týždne 6–110) bol <strong>−2,7 oproti −3,8 ml/min/1,73 m² za rok</strong> (rozdiel 1,1; 95 % IS 0,1–2,1; <em>P</em> = 0,037), zatiaľ čo celkový 2-ročný sklon tesne nedosiahol významnosť (rozdiel 1,0; 95 % IS −0,03 až 1,94; <em>P</em> = 0,058). Kompozitný ukazovateľ zlyhania obličiek dosiahlo 18 (9 %) pacientov pri sparsentane oproti 26 (13 %) pri irbesartane – relatívne riziko 0,7 (95 % IS 0,4–1,2), teda bez štatisticky jednoznačného rozdielu.</p>
+<p>Randomizované skúšanie PROTECT porovnávalo sparsentan s maximálne titrovaným irbesartanom u dospelých pacientov s IgAN a pretrvávajúcou proteinúriou napriek RAS blokáde. Randomizovaných bolo 406 pacientov (po 203 v každej skupine). Po 110 týždňoch bola proteinúria pri sparsentane približne o 40 % nižšia než pri irbesartane (pomer geometrických priemerov 0,60; 95 % IS 0,50–0,72). Chronický sklon eGFR (týždne 6–110) bol <strong>−2,7 oproti −3,8&nbsp;ml/min/1,73&nbsp;m² za rok</strong> (rozdiel 1,1; 95 % IS 0,1–2,1; <em>P</em> = 0,037), zatiaľ čo celkový 2-ročný sklon tesne nedosiahol významnosť (rozdiel 1,0; 95 % IS −0,03 až 1,94; <em>P</em> = 0,058). Kompozitný ukazovateľ zlyhania obličiek dosiahlo 18 (9 %) pacientov pri sparsentane oproti 26 (13 %) pri irbesartane – relatívne riziko 0,7 (95 % IS 0,4–1,2), teda bez štatisticky jednoznačného rozdielu.</p>
 
 <p>Systematický prehľad a meta-analýza z roku 2024 zahŕňali <strong>tri štúdie s celkovo 884 pacientmi</strong> s IgAN alebo fokálnou segmentovou glomerulosklerózou, nie iba pacientov s IgAN. V porovnaní s irbesartanom bol sparsentan spojený s priaznivejším UPCR (pomer percentuálnej redukcie 0,66; 95 % interval spoľahlivosti [IS] 0,58–0,74), častejšou kompletnou remisiou proteinúrie (relatívne riziko 2,57; 95 % IS 1,73–3,81) a čiastočnou remisiou (relatívne riziko 1,63; 95 % IS 1,40–1,91). Rozdiel v eGFR oproti irbesartanu nebol štatisticky významný a hypotenzia bola častejšia pri sparsentane (relatívne riziko 2,02; 95 % IS 1,30–3,16).</p>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <h2>Záver pre klinickú prax</h2>
 
-<p>V multicentrickej španielskej kohorte bol sparsentan spojený s rýchlym poklesom proteinúrie po 3 mesiacoch a s pretrvávaním účinku do 12 mesiacov. Výsledok je pozoruhodný najmä v prostredí, kde väčšina pacientov už užívala inhibítor SGLT2 a mala znížené vstupné eGFR. Nejde však o dôkaz, že sparsentan sám spôsobil celý pozorovaný efekt, ani o dôkaz, že krátkodobá stabilita eGFR znamená prevenciu zlyhania obličiek.</p>
+<p>V multicentrickej španielskej kohorte bol sparsentan spojený s rýchlym poklesom proteinúrie po 3 mesiacoch a s pretrvávaním účinku do 12&nbsp;mesiacov. Výsledok je pozoruhodný najmä v prostredí, kde väčšina pacientov už užívala inhibítor SGLT2 a mala znížené vstupné eGFR. Nejde však o dôkaz, že sparsentan sám spôsobil celý pozorovaný efekt, ani o dôkaz, že krátkodobá stabilita eGFR znamená prevenciu zlyhania obličiek.</p>
 
 <p>V praxi má rozhodnutie o sparsentane vychádzať z celkového rizika progresie IgAN, stupňa proteinúrie, krvného tlaku, funkcie obličiek, objemového stavu, súbežnej liečby, kontraindikácií a dostupnosti lieku. Po nasadení je potrebné plánované klinické a laboratórne sledovanie, predovšetkým krvného tlaku, kreatinínu alebo eGFR, draslíka a pečeňových testov.</p>
 

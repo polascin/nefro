@@ -60,7 +60,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><th scope="row">Základ starostlivosti</th><td>Podpora zdravého životného štýlu – zdravé stravovanie, <strong>24-hodinové pohybové správanie vrátane spánku</strong>, vyhýbanie sa tabaku a návykovým látkam – spolu s <strong>psychologickou podporou</strong> a intervenciami zameranými na manažment hmotnosti</td></tr>
-    <tr><th scope="row">Farmakoterapia</th><td><strong>Skoršie použitie, potenciálne už od diagnózy</strong>, inhibítorov SGLT2 a/alebo liečby založenej na GLP-1 s cieľom <strong>orgánovej ochrany</strong> a zlepšenia dlhodobých výsledkov</td></tr>
+    <tr><th scope="row">Farmakoterapia</th><td><strong>Skoršie použitie, potenciálne už od diagnózy</strong>, inhibítorov SGLT2 a/alebo liečby založenej na GLP-1&nbsp;s cieľom <strong>orgánovej ochrany</strong> a zlepšenia dlhodobých výsledkov</td></tr>
     <tr><th scope="row">Kombinačná liečba</th><td><strong>Skoršie kombinované použitie</strong> inhibítora SGLT2 a liečby založenej na GLP-1 treba zvážiť u ľudí so súčasne prítomným <strong>kardiovaskulárnym ochorením, chronickou chorobou obličiek a srdcovým zlyhávaním</strong></td></tr>
   </tbody>
 </table>
@@ -77,7 +77,7 @@ $articles[] = [
 
 <p>Konsenzus vychádza zo systematického prehľadu publikácií od roku 2022 – a práve v tomto období pribudli dáta, ktoré renálnu indikáciu obidvoch skupín podstatne posilnili.</p>
 
-<p>Pre nefrológiu je najvýznamnejšia štúdia <strong>FLOW</strong> (<em>New England Journal of Medicine</em>, 2024), ktorá zaradila 3533 pacientov s diabetom 2. typu a chronickou chorobou obličiek a randomizovala ich na subkutánny semaglutid 1,0 mg týždenne alebo placebo. Pri mediáne sledovania 3,4 roka bol primárny zložený renálny a kardiovaskulárny ukazovateľ o <strong>24 % nižší</strong> (pomer rizík 0,76; 95 % IS 0,66 – 0,88), kardiovaskulárne úmrtie o 29 % nižšie (0,71; 0,56 – 0,89) a úmrtie z akejkoľvek príčiny o 20 % nižšie (0,80; 0,67 – 0,95). Štúdia bola <strong>predčasne ukončená</strong> na odporúčanie po prednastavenej priebežnej analýze.</p>
+<p>Pre nefrológiu je najvýznamnejšia štúdia <strong>FLOW</strong> (<em>New England Journal of Medicine</em>, 2024), ktorá zaradila 3533 pacientov s diabetom 2. typu a chronickou chorobou obličiek a randomizovala ich na subkutánny semaglutid 1,0&nbsp;mg týždenne alebo placebo. Pri mediáne sledovania 3,4 roka bol primárny zložený renálny a kardiovaskulárny ukazovateľ o <strong>24 % nižší</strong> (pomer rizík 0,76; 95 % IS 0,66 – 0,88), kardiovaskulárne úmrtie o 29 % nižšie (0,71; 0,56 – 0,89) a úmrtie z akejkoľvek príčiny o 20 % nižšie (0,80; 0,67 – 0,95). Štúdia bola <strong>predčasne ukončená</strong> na odporúčanie po prednastavenej priebežnej analýze.</p>
 
 <p>Dôkazový základ pre inhibítory SGLT2 pri CKD bol pevný už predtým. Novinkou roku 2026 teda nie je samotný dôkaz, ale <strong>posun v načasovaní a v tom, že obe skupiny sa čoraz častejšie majú kombinovať, nie zoraďovať za sebou</strong>. Praktické dôsledky kombinačnej liečby rozoberá samostatný článok <a href="article.php?slug=kombinacna-liecba-ckd-styri-piliere-hranice-dokazov">o štyroch pilieroch a hraniciach dôkazov</a>.</p>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <h2>Čo tento článok zámerne neobsahuje</h2>
 
-<p>Na kongrese EASD 2026 odzneli aj výsledky štúdií, ktoré zatiaľ <strong>nie sú recenzovane publikované</strong> – napríklad randomizovanej štúdie <strong>RESET for REMISSION</strong>, ktorá u mladých dospelých (18 až 45 rokov) do 6 rokov od diagnózy diabetu 2. typu skúma remisiu po kombinácii nízkoenergetickej diéty (800 až 900 kcal denne počas 12 týždňov) so supervidovaným aeróbnym a silovým tréningom trikrát týždenne, s následnou 12-týždňovou udržiavacou fázou; primárnym ukazovateľom je remisia definovaná ako HbA1c pod 6,5 % v 24. týždni bez liečiv znižujúcich glykémiu počas udržiavacej fázy.</p>
+<p>Na kongrese EASD 2026 odzneli aj výsledky štúdií, ktoré zatiaľ <strong>nie sú recenzovane publikované</strong> – napríklad randomizovanej štúdie <strong>RESET for REMISSION</strong>, ktorá u mladých dospelých (18 až 45&nbsp;rokov) do 6&nbsp;rokov od diagnózy diabetu 2. typu skúma remisiu po kombinácii nízkoenergetickej diéty (800 až 900&nbsp;kcal denne počas 12&nbsp;týždňov) so supervidovaným aeróbnym a silovým tréningom trikrát týždenne, s následnou 12-týždňovou udržiavacou fázou; primárnym ukazovateľom je remisia definovaná ako HbA1c pod 6,5 % v 24. týždni bez liečiv znižujúcich glykémiu počas udržiavacej fázy.</p>
 
 <p>Protokol tejto štúdie je publikovaný a overiteľný; <strong>jej výsledky tu neuvádzame</strong>, kým nebudú dostupné v recenzovanej podobe. To isté platí pre prezentácie nových inkretínových liečiv. Kongresová prezentácia je legitímny spôsob komunikácie vedy, ale nie je dostatočným podkladom na čísla v odbornom texte ani na zmenu praxe.</p>
 

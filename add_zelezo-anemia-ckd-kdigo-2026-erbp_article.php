@@ -59,8 +59,8 @@ $articles[] = [
     <tr><th scope="col">Pôvodný názov</th><th scope="col">Nový názov podľa KDIGO 2026</th><th scope="col">Orientačná definícia</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Absolútny deficit železa</th><td>Systémový nedostatok železa<br><em>(systemic iron deficiency)</em></td><td>TSAT &lt; 20 % a zároveň ferritín &lt; 100 ng/ml pri CKD bez dialýzy, resp. ferritín &lt; 200 ng/ml pri CKD G5HD</td></tr>
-    <tr><th scope="row">Funkčný deficit železa</th><td>Erytropoéza obmedzená železom<br><em>(iron-restricted erythropoiesis)</em></td><td>Ferritín &gt; 100 – 200 ng/ml pri TSAT &lt; 20 %</td></tr>
+    <tr><th scope="row">Absolútny deficit železa</th><td>Systémový nedostatok železa<br><em>(systemic iron deficiency)</em></td><td>TSAT &lt; 20 % a zároveň ferritín &lt; 100&nbsp;ng/ml pri CKD bez dialýzy, resp. ferritín &lt; 200&nbsp;ng/ml pri CKD G5HD</td></tr>
+    <tr><th scope="row">Funkčný deficit železa</th><td>Erytropoéza obmedzená železom<br><em>(iron-restricted erythropoiesis)</em></td><td>Ferritín &gt; 100 – 200&nbsp;ng/ml pri TSAT &lt; 20 %</td></tr>
   </tbody>
 </table>
 <p><em>Podľa obrázka 2 a obrázka 3 výkonného súhrnu KDIGO 2026. Ide o orientačné, nie absolútne hranice.</em></p>
@@ -70,12 +70,12 @@ $articles[] = [
 
 <h2>Diagnostika: čo vyšetriť hneď a kedy panel rozšíriť</h2>
 
-<p>Základná sada pri podozrení na anémiu v CKD je krátka: <strong>krvný obraz, retikulocyty, ferritín a TSAT</strong>. Anémia sa diagnostikuje pri hemoglobíne &lt; 130 g/l u mužov a &lt; 120 g/l u žien. Ak úvodné testy príčinu nevysvetlia, dokument navrhuje rozšírený panel: krvný náter, haptoglobín a LDH, CRP, vitamín B12, folát, pečeňové testy, elektroforézu bielkovín s imunofixáciou, voľné ľahké reťazce, Bence-Jonesovu bielkovinu v moči, TSH a vyšetrenie stolice; parathormón podľa klinickej indikácie s odkazom na odporúčania KDIGO 2024 pre CKD-MBD.</p>
+<p>Základná sada pri podozrení na anémiu v CKD je krátka: <strong>krvný obraz, retikulocyty, ferritín a TSAT</strong>. Anémia sa diagnostikuje pri hemoglobíne &lt; 130&nbsp;g/l u mužov a &lt; 120&nbsp;g/l u žien. Ak úvodné testy príčinu nevysvetlia, dokument navrhuje rozšírený panel: krvný náter, haptoglobín a LDH, CRP, vitamín B12, folát, pečeňové testy, elektroforézu bielkovín s imunofixáciou, voľné ľahké reťazce, Bence-Jonesovu bielkovinu v moči, TSH a vyšetrenie stolice; parathormón podľa klinickej indikácie s odkazom na odporúčania KDIGO 2024 pre CKD-MBD.</p>
 
 <p>Dva body si zaslúžia zvýraznenie:</p>
 
 <ul>
-  <li><strong>Ferritín &lt; 45 ng/ml</strong> alebo mikrocytová anémia (stredný objem erytrocytu &lt; 80 fl) má viesť k <strong>cielenému pátraniu po zdroji krvácania</strong> a podľa klinického úsudku k odoslaniu ku gastroenterológovi, gynekológovi alebo urológovi. Substitúcia železa bez tejto úvahy môže zamaskovať karcinóm hrubého čreva.</li>
+  <li><strong>Ferritín &lt; 45&nbsp;ng/ml</strong> alebo mikrocytová anémia (stredný objem erytrocytu &lt; 80 fl) má viesť k <strong>cielenému pátraniu po zdroji krvácania</strong> a podľa klinického úsudku k odoslaniu ku gastroenterológovi, gynekológovi alebo urológovi. Substitúcia železa bez tejto úvahy môže zamaskovať karcinóm hrubého čreva.</li>
   <li>Vitamín B12 a folát <strong>nie sú</strong> súčasťou úvodného panela, len rozšíreného. Komentár ERBP to považuje za slabinu: folát sa pri liečbe ESA spotrebúva a účinne sa odstraňuje dialýzou, vitamín B12 sa odstraňuje najmä pri high-flux technikách, mnohé potraviny bohaté na B12 majú pre dialyzovaných nevhodný obsah elektrolytov a dialyzačná populácia je prevažne staršia, krehká a polypragmaticky liečená. Oba deficity sú navyše modifikovateľným rizikovým faktorom kognitívneho poškodenia.</li>
 </ul>
 
@@ -87,22 +87,22 @@ $articles[] = [
     <tr><th scope="col">Skupina</th><th scope="col">Začať železo, ak</th><th scope="col">Cesta podania</th><th scope="col">Stupeň</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">CKD G5 na hemodialýze (G5HD)</th><td>ferritín ≤ 500 ng/ml <strong>a</strong> TSAT ≤ 30 %</td><td>Prednostne <strong>intravenózne</strong> pred perorálnym (odporúčanie 2.2)</td><td>2D</td></tr>
-    <tr><th scope="row">CKD bez dialýzy a CKD G5 na peritoneálnej dialýze (G5PD)</th><td>ferritín &lt; 100 ng/ml <strong>a</strong> TSAT &lt; 40 %,<br><strong>alebo</strong><br>ferritín 100 – 299 ng/ml <strong>a</strong> TSAT &lt; 25 %</td><td>Perorálne <strong>alebo</strong> intravenózne podľa hodnôt a preferencií pacienta, závažnosti anémie a deficitu, účinnosti, znášanlivosti, dostupnosti a ceny (odporúčanie 2.4)</td><td>2D</td></tr>
+    <tr><th scope="row">CKD G5 na hemodialýze (G5HD)</th><td>ferritín ≤ 500&nbsp;ng/ml <strong>a</strong> TSAT ≤ 30 %</td><td>Prednostne <strong>intravenózne</strong> pred perorálnym (odporúčanie 2.2)</td><td>2D</td></tr>
+    <tr><th scope="row">CKD bez dialýzy a CKD G5 na peritoneálnej dialýze (G5PD)</th><td>ferritín &lt; 100&nbsp;ng/ml <strong>a</strong> TSAT &lt; 40 %,<br><strong>alebo</strong><br>ferritín 100 – 299&nbsp;ng/ml <strong>a</strong> TSAT &lt; 25 %</td><td>Perorálne <strong>alebo</strong> intravenózne podľa hodnôt a preferencií pacienta, závažnosti anémie a deficitu, účinnosti, znášanlivosti, dostupnosti a ceny (odporúčanie 2.4)</td><td>2D</td></tr>
   </tbody>
 </table>
 <p><em>Odporúčania 2.1 až 2.4, KDIGO 2026. Všetky podmienky v stĺpci „Začať železo, ak“ musia platiť súčasne.</em></p>
 </div>
 
-<p>Z tabuľky vyplýva prakticky najdôležitejší rozdiel: <strong>hranice pre hemodialýzu sú podstatne voľnejšie než pre ostatných</strong>. Pacient na hemodialýze s ferritínom 450 ng/ml a TSAT 28 % je podľa odporúčania kandidátom na železo; pacient v ambulancii s rovnakými hodnotami nie je.</p>
+<p>Z tabuľky vyplýva prakticky najdôležitejší rozdiel: <strong>hranice pre hemodialýzu sú podstatne voľnejšie než pre ostatných</strong>. Pacient na hemodialýze s ferritínom 450&nbsp;ng/ml a TSAT 28 % je podľa odporúčania kandidátom na železo; pacient v ambulancii s rovnakými hodnotami nie je.</p>
 
 <h3>Čo na to ERBP</h3>
 
 <p>Komentár obe sady prahov podporuje. Dve výhrady však formuluje ostro:</p>
 
 <ul>
-  <li><strong>Horná hranica TSAT &lt; 40 %</strong> v kombinácii s ferritínom &lt; 100 ng/ml je podľa ERBP sporná. Optimálna hodnota TSAT pre maximálnu odpoveď hemoglobínu na ESA sa pohybuje okolo 30 %, takže začínať železo pri ferritíne tesne pod 100 ng/ml a TSAT napríklad 35 % nemusí dávať zmysel. Na druhej strane observačné dáta (japonský register: menej kardiovaskulárnych príhod pri TSAT 30 – 40 % oproti 20 – 30 %; analýza so splajnami, kde najnižšie riziko vychádza okolo TSAT 40 %) hovoria opačne. ERBP uzatvára, že tieto údaje <strong>nestačia na podporu cieľovej hodnoty TSAT nad 40 %</strong>, ktorá by časom mohla viesť k akumulácii železa.</li>
-  <li><strong>Pásmo ferritínu 100 – 299 ng/ml s TSAT &lt; 25 %</strong> nevychádza z randomizovaných dôkazov o prínose, ale z <em>vstupných kritérií</em> štúdií s ESA a HIF-PHI. Autori odporúčaní to priznávajú a uvádzajú, že prah prevzali kvôli zjednodušeniu.</li>
+  <li><strong>Horná hranica TSAT &lt; 40 %</strong> v kombinácii s ferritínom &lt; 100&nbsp;ng/ml je podľa ERBP sporná. Optimálna hodnota TSAT pre maximálnu odpoveď hemoglobínu na ESA sa pohybuje okolo 30 %, takže začínať železo pri ferritíne tesne pod 100&nbsp;ng/ml a TSAT napríklad 35 % nemusí dávať zmysel. Na druhej strane observačné dáta (japonský register: menej kardiovaskulárnych príhod pri TSAT 30 – 40 % oproti 20 – 30 %; analýza so splajnami, kde najnižšie riziko vychádza okolo TSAT 40 %) hovoria opačne. ERBP uzatvára, že tieto údaje <strong>nestačia na podporu cieľovej hodnoty TSAT nad 40 %</strong>, ktorá by časom mohla viesť k akumulácii železa.</li>
+  <li><strong>Pásmo ferritínu 100 – 299&nbsp;ng/ml s TSAT &lt; 25 %</strong> nevychádza z randomizovaných dôkazov o prínose, ale z <em>vstupných kritérií</em> štúdií s ESA a HIF-PHI. Autori odporúčaní to priznávajú a uvádzajú, že prah prevzali kvôli zjednodušeniu.</li>
 </ul>
 
 <h2>Proaktívne i.v. železo pri hemodialýze: štúdia PIVOTAL</h2>
@@ -112,20 +112,20 @@ $articles[] = [
 <p><strong>PIVOTAL</strong> randomizovala <strong>2141 dospelých</strong> v prvom roku hemodialýzy liečených ESA do dvoch ramien:</p>
 
 <ul>
-  <li><strong>proaktívne vysokodávkové</strong> železo-sacharóza 400 mg mesačne, pokiaľ ferritín nepresiahol 700 µg/l alebo TSAT nedosiahla 40 %,</li>
-  <li><strong>reaktívne nízkodávkové</strong> 0 – 400 mg mesačne, spúšťané až pri ferritíne &lt; 200 µg/l alebo TSAT &lt; 20 %.</li>
+  <li><strong>proaktívne vysokodávkové</strong> železo-sacharóza 400&nbsp;mg mesačne, pokiaľ ferritín nepresiahol 700 µg/l alebo TSAT nedosiahla 40 %,</li>
+  <li><strong>reaktívne nízkodávkové</strong> 0 – 400&nbsp;mg mesačne, spúšťané až pri ferritíne &lt; 200 µg/l alebo TSAT &lt; 20 %.</li>
 </ul>
 
-<p>Pri mediáne sledovania 2,1 roka dostávali pacienti v proaktívnej vetve medián 264 mg železa mesačne oproti 145 mg v reaktívnej. Výsledky:</p>
+<p>Pri mediáne sledovania 2,1 roka dostávali pacienti v proaktívnej vetve medián 264&nbsp;mg železa mesačne oproti 145&nbsp;mg v reaktívnej. Výsledky:</p>
 
 <ul>
   <li><strong>Primárny zložený ukazovateľ</strong> (nefatálny infarkt myokardu, nefatálna cievna mozgová príhoda, hospitalizácia pre srdcové zlyhávanie alebo úmrtie) nastal u <strong>29,3 % oproti 32,3 %</strong> pacientov; pomer rizík 0,85 (95 % IS 0,73 – 1,00); p &lt; 0,001 pre non-inferioritu a <strong>p = 0,04 pre superioritu</strong>.</li>
   <li>Pri analýze opakovaných príhod 429 oproti 507 udalostiam; pomer incidencií 0,77 (95 % IS 0,66 – 0,92).</li>
-  <li><strong>Mesačná dávka ESA</strong> klesla z mediánu 38 805 IU na 29 757 IU (rozdiel mediánov −7539 IU; 95 % IS −9485 až −5582).</li>
+  <li><strong>Mesačná dávka ESA</strong> klesla z mediánu 38&nbsp;805&nbsp;IU na 29&nbsp;757&nbsp;IU (rozdiel mediánov −7539&nbsp;IU; 95 % IS −9485 až −5582).</li>
   <li><strong>Výskyt infekcií bol v oboch ramenách rovnaký.</strong></li>
 </ul>
 
-<p>ERBP výsledok podporuje, ale vymedzuje hranice jeho platnosti: štúdia zahrnula <strong>incidentných</strong> pacientov na dialýze kratšie než rok, všetci boli liečení ESA (teda nie ESA-naivní), a vylúčení boli pacienti s krátkou očakávanou dĺžkou života, aktívnou malignitou, chronickým ochorením pečene, srdcovým zlyhávaním NYHA IV a tehotné. Zároveň upozorňuje na logickú pascu: PIVOTAL porovnávala <em>stratégie</em>, nie <em>cieľové hodnoty</em>. Z jej výsledku nevyplýva, že udržiavanie ferritínu okolo 400 ng/ml by bolo horšie než proaktívna schéma.</p>
+<p>ERBP výsledok podporuje, ale vymedzuje hranice jeho platnosti: štúdia zahrnula <strong>incidentných</strong> pacientov na dialýze kratšie než rok, všetci boli liečení ESA (teda nie ESA-naivní), a vylúčení boli pacienti s krátkou očakávanou dĺžkou života, aktívnou malignitou, chronickým ochorením pečene, srdcovým zlyhávaním NYHA IV a tehotné. Zároveň upozorňuje na logickú pascu: PIVOTAL porovnávala <em>stratégie</em>, nie <em>cieľové hodnoty</em>. Z jej výsledku nevyplýva, že udržiavanie ferritínu okolo 400&nbsp;ng/ml by bolo horšie než proaktívna schéma.</p>
 
 <h2>CKD bez dialýzy: štúdia FIND-CKD</h2>
 
@@ -142,10 +142,10 @@ $articles[] = [
     <tr><th scope="row">Perorálne železo</th><td>98 pacientov (31,8 %)</td><td>referencia</td></tr>
   </tbody>
 </table>
-<p><em>Primárnym ukazovateľom bol čas do začatia inej liečby anémie (ESA, iné železo alebo transfúzia) alebo pokles hemoglobínu pod 100 g/l v dvoch po sebe nasledujúcich meraniach medzi 8. a 52. týždňom.</em></p>
+<p><em>Primárnym ukazovateľom bol čas do začatia inej liečby anémie (ESA, iné železo alebo transfúzia) alebo pokles hemoglobínu pod 100&nbsp;g/l v dvoch po sebe nasledujúcich meraniach medzi 8. a 52. týždňom.</em></p>
 </div>
 
-<p>Vzostup hemoglobínu bol vo vetve s vyšším cieľovým ferritínom väčší než pri perorálnom železe (p = 0,014) a vzostup o aspoň 10 g/l dosiahlo viac pacientov (HR 2,04; 95 % IS 1,52 – 2,72; p &lt; 0,001). Výskyt nežiaducich a závažných nežiaducich udalostí bol vo všetkých ramenách porovnateľný, bez renálnej toxicity a bez rozdielu v kardiovaskulárnych či infekčných príhodách.</p>
+<p>Vzostup hemoglobínu bol vo vetve s vyšším cieľovým ferritínom väčší než pri perorálnom železe (p = 0,014) a vzostup o aspoň 10&nbsp;g/l dosiahlo viac pacientov (HR 2,04; 95 % IS 1,52 – 2,72; p &lt; 0,001). Výskyt nežiaducich a závažných nežiaducich udalostí bol vo všetkých ramenách porovnateľný, bez renálnej toxicity a bez rozdielu v kardiovaskulárnych či infekčných príhodách.</p>
 
 <p><strong>Poznámka k názvu.</strong> Skratka FIND-CKD sa používa pre <em>dve rôzne</em> štúdie. Pôvodná (<em>Ferinject assessment in patients with Iron deficiency anaemia and Non-Dialysis-dependent CKD</em>, 2014) je tá, o ktorej je reč tu. Novšia FIND-CKD z roku 2025 je štúdia <strong>finerenónu pri nediabetickej CKD</strong> a so železom nesúvisí. Pri citovaní je nutné rozlišovať.</p>
 
@@ -154,11 +154,11 @@ $articles[] = [
 <p>Praktický bod 2.2 uvádza, že je rozumné <strong>zadržať rutinné podávanie železa</strong>, ak:</p>
 
 <ul>
-  <li><strong>ferritín presiahne 700 ng/ml</strong>, alebo</li>
+  <li><strong>ferritín presiahne 700&nbsp;ng/ml</strong>, alebo</li>
   <li><strong>TSAT dosiahne 40 %</strong>.</li>
 </ul>
 
-<p>Formulácia neodlišuje populácie, a práve tam smeruje výhrada ERBP: tieto hodnoty pochádzajú <strong>priamo z protokolu štúdie PIVOTAL</strong>, teda z prostredia hemodialýzy. Pre pacientov bez dialýzy je najväčšou relevantnou štúdiou FIND-CKD, ktorá pripúšťala ferritín najviac 600 ng/ml a odporúčala zadržať železo pri TSAT 40 % a viac. Z metodického hľadiska považuje ERBP v tejto populácii za rozumný cieľ ferritín <strong>400 – 600 ng/ml</strong>.</p>
+<p>Formulácia neodlišuje populácie, a práve tam smeruje výhrada ERBP: tieto hodnoty pochádzajú <strong>priamo z protokolu štúdie PIVOTAL</strong>, teda z prostredia hemodialýzy. Pre pacientov bez dialýzy je najväčšou relevantnou štúdiou FIND-CKD, ktorá pripúšťala ferritín najviac 600&nbsp;ng/ml a odporúčala zadržať železo pri TSAT 40 % a viac. Z metodického hľadiska považuje ERBP v tejto populácii za rozumný cieľ ferritín <strong>400 – 600&nbsp;ng/ml</strong>.</p>
 
 <p>Druhé pravidlo je nezávislé od čísel: <strong>počas systémovej infekcie liečbu železom dočasne pozastavte</strong> (praktický bod 2.8). ERBP ho podporuje výslovne ako prejav opatrnosti: ani FIND-CKD, ani PIVOTAL, ani systematický prehľad zvýšené riziko infekcií nepreukázali, ale <em>všetky</em> protokoly podávanie železa počas infekcie prerušovali, takže dôkaz o bezpečnosti pri pokračovaní jednoducho neexistuje. Železo je pritom nevyhnutné pre množenie mnohých patogénov.</p>
 
@@ -185,12 +185,12 @@ $articles[] = [
     <tr><th scope="col">Prípravok</th><th scope="col">Koncentrácia elementárneho železa</th><th scope="col">Maximálna jednotlivá dávka</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Nízkomolekulový dextrán železa</th><td>50 mg/ml</td><td>20 mg/kg</td></tr>
-    <tr><th scope="row">Železo-sacharóza</th><td>20 mg/ml</td><td>200 mg (CKD), 400 mg (peritoneálna dialýza)</td></tr>
-    <tr><th scope="row">Glukonát železitý</th><td>12,5 mg/ml</td><td>125 mg</td></tr>
-    <tr><th scope="row">Ferric carboxymaltose</th><td>50 mg/ml</td><td>750 mg (FDA), 1000 mg (EMA)</td></tr>
-    <tr><th scope="row">Ferric derisomaltose (železo-izomaltozid)</th><td>100 mg/ml</td><td>1000 mg (FDA), 20 mg/kg (EMA)</td></tr>
-    <tr><th scope="row">Ferumoxytol</th><td>30 mg/ml</td><td>510 mg – <strong>v Európskej únii nie je na trhu</strong></td></tr>
+    <tr><th scope="row">Nízkomolekulový dextrán železa</th><td>50&nbsp;mg/ml</td><td>20&nbsp;mg/kg</td></tr>
+    <tr><th scope="row">Železo-sacharóza</th><td>20&nbsp;mg/ml</td><td>200&nbsp;mg (CKD), 400&nbsp;mg (peritoneálna dialýza)</td></tr>
+    <tr><th scope="row">Glukonát železitý</th><td>12,5&nbsp;mg/ml</td><td>125&nbsp;mg</td></tr>
+    <tr><th scope="row">Ferric carboxymaltose</th><td>50&nbsp;mg/ml</td><td>750&nbsp;mg (FDA), 1000&nbsp;mg (EMA)</td></tr>
+    <tr><th scope="row">Ferric derisomaltose (železo-izomaltozid)</th><td>100&nbsp;mg/ml</td><td>1000&nbsp;mg (FDA), 20&nbsp;mg/kg (EMA)</td></tr>
+    <tr><th scope="row">Ferumoxytol</th><td>30&nbsp;mg/ml</td><td>510&nbsp;mg – <strong>v Európskej únii nie je na trhu</strong></td></tr>
   </tbody>
 </table>
 <p><em>Podľa tabuľky 4 odporúčaní KDIGO 2026. Minimálne časy podania sa medzi prípravkami aj medzi registráciami FDA a EMA líšia; riaďte sa platným súhrnom charakteristických vlastností lieku.</em></p>
@@ -217,10 +217,10 @@ $articles[] = [
     <tr><th scope="col">Závažnosť</th><th scope="col">Obraz</th><th scope="col">Postup</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Nešpecifické príznaky</th><td>Tlak na hrudi, závrat, nevoľnosť, svrbenie, asymptomatická hypotenzia</td><td>Zastaviť infúziu, sledovať 15 minút; ak je pacient v poriadku, pokračovať 25 – 50 % rýchlosťou. Pri opakovaní ukončiť.</td></tr>
+    <tr><th scope="row">Nešpecifické príznaky</th><td>Tlak na hrudi, závrat, nevoľnosť, svrbenie, asymptomatická hypotenzia</td><td>Zastaviť infúziu, sledovať 15&nbsp;minút; ak je pacient v poriadku, pokračovať 25 – 50 % rýchlosťou. Pri opakovaní ukončiť.</td></tr>
     <tr><th scope="row">Mierna infúzna reakcia</th><td>Nešpecifické príznaky <strong>plus</strong> drobná urtikária</td><td>Zastaviť infúziu, sledovať; prípadný opakovaný pokus hodinu po podaní kortikoidu alebo perorálneho blokátora H1, pokračovať 25 – 50 % rýchlosťou. Pri opakovaní ukončiť.</td></tr>
-    <tr><th scope="row">Stredne ťažká reakcia</th><td>Silná bolesť na hrudi, kašeľ, tachykardia, hypotenzia, ťažká generalizovaná urtikária</td><td>Zastaviť infúziu, podať i.v. tekutiny, hydrokortizón 100 mg i.v. a blokátor H1; pokračovať len pri úprave stavu 25 – 50 % rýchlosťou. Zvážiť iný prípravok železa podľa pomeru prínosu a rizika.</td></tr>
-    <tr><th scope="row">Ťažká reakcia</th><td>Náhly vznik piskotov, stridoru, cyanózy, hypotenzie, tachykardie</td><td>Zastaviť infúziu, i.v. tekutiny, kyslík 15 l/min, <strong>adrenalín 0,5 mg 1 : 1000 intramuskulárne</strong>, kortikoid i.v., inhalačné beta-2-mimetikum nebulizátorom, <strong>hospitalizovať</strong>, i.v. železo do budúcna <strong>nepodávať</strong>.</td></tr>
+    <tr><th scope="row">Stredne ťažká reakcia</th><td>Silná bolesť na hrudi, kašeľ, tachykardia, hypotenzia, ťažká generalizovaná urtikária</td><td>Zastaviť infúziu, podať i.v. tekutiny, hydrokortizón 100&nbsp;mg i.v. a blokátor H1; pokračovať len pri úprave stavu 25 – 50 % rýchlosťou. Zvážiť iný prípravok železa podľa pomeru prínosu a rizika.</td></tr>
+    <tr><th scope="row">Ťažká reakcia</th><td>Náhly vznik piskotov, stridoru, cyanózy, hypotenzie, tachykardie</td><td>Zastaviť infúziu, i.v. tekutiny, kyslík 15&nbsp;l/min, <strong>adrenalín 0,5&nbsp;mg 1 : 1000 intramuskulárne</strong>, kortikoid i.v., inhalačné beta-2-mimetikum nebulizátorom, <strong>hospitalizovať</strong>, i.v. železo do budúcna <strong>nepodávať</strong>.</td></tr>
   </tbody>
 </table>
 <p><em>Podľa obrázka 7 odporúčaní KDIGO 2026.</em></p>
@@ -231,30 +231,30 @@ $articles[] = [
 <p>Praktický bod 2.5 stanovuje intervaly pre hemoglobín, ferritín a TSAT u pacientov liečených železom:</p>
 
 <ul>
-  <li><strong>CKD bez dialýzy a CKD G5PD: každé 3 mesiace.</strong></li>
-  <li><strong>CKD G5HD: každý 1 až 3 mesiace.</strong> (Centrálna ilustrácia pre hemodialýzu uvádza mesačnú kontrolu; v praxi sa teda na dialýze pohybujeme skôr pri hornej frekvencii.)</li>
+  <li><strong>CKD bez dialýzy a CKD G5PD: každé 3&nbsp;mesiace.</strong></li>
+  <li><strong>CKD G5HD: každý 1 až 3&nbsp;mesiace.</strong> (Centrálna ilustrácia pre hemodialýzu uvádza mesačnú kontrolu; v praxi sa teda na dialýze pohybujeme skôr pri hornej frekvencii.)</li>
 </ul>
 
 <p>Praktický bod 2.6 vymenúva situácie, ktoré opodstatňujú častejšie testovanie: začatie alebo zvýšenie dávky ESA či HIF-PHI, epizóda známej straty krvi, nedávna hospitalizácia a významný vzostup ferritínu alebo TSAT, prípadne prekročenie cieľového limitu.</p>
 
 <h2>Deficit železa bez anémie</h2>
 
-<p>Praktický bod 2.11 je ľahko prehliadnuteľný, ale klinicky zaujímavý: pri <strong>hlbokom deficite železa (ferritín &lt; 30 ng/ml a TSAT &lt; 20 %) aj bez anémie</strong> treba zvážiť perorálnu alebo i.v. liečbu železom.</p>
+<p>Praktický bod 2.11 je ľahko prehliadnuteľný, ale klinicky zaujímavý: pri <strong>hlbokom deficite železa (ferritín &lt; 30&nbsp;ng/ml a TSAT &lt; 20 %) aj bez anémie</strong> treba zvážiť perorálnu alebo i.v. liečbu železom.</p>
 
 <p>ERBP tento bod podporuje, hoci opatrne. Dve malé randomizované štúdie nepreukázali zlepšenie záťažovej kapacity pri i.v. železe u neanemických pacientov s CKD bez dialýzy. Novší systematický prehľad naznačuje zníženie rizika hospitalizácie pre srdcové zlyhávanie a kardiovaskulárneho úmrtia, konzistentne pri dialyzovaných aj nedialyzovaných; prínos však pochádza prevažne od pacientov s CKD zaradených do <em>kardiologických</em> štúdií, nie z nefrologických kohort, a efekty na pokles eGFR či proteinúriu sa nepotvrdili.</p>
 
 <h2>Ako to zhrnúť do postupu pri lôžku</h2>
 
 <ol>
-  <li><strong>Potvrď anémiu</strong> (Hb &lt; 130 g/l u mužov, &lt; 120 g/l u žien) a odober krvný obraz, retikulocyty, ferritín a TSAT.</li>
-  <li><strong>Pri ferritíne &lt; 45 ng/ml alebo mikrocytóze</strong> pátraj po zdroji krvácania, a to skôr, než začneš substituovať.</li>
+  <li><strong>Potvrď anémiu</strong> (Hb &lt; 130&nbsp;g/l u mužov, &lt; 120&nbsp;g/l u žien) a odober krvný obraz, retikulocyty, ferritín a TSAT.</li>
+  <li><strong>Pri ferritíne &lt; 45&nbsp;ng/ml alebo mikrocytóze</strong> pátraj po zdroji krvácania, a to skôr, než začneš substituovať.</li>
   <li><strong>Urči skupinu:</strong> CKD G5HD verzus CKD bez dialýzy alebo G5PD.</li>
-  <li><strong>Použi príslušný prah:</strong> hemodialýza ferritín ≤ 500 ng/ml a TSAT ≤ 30 %; mimo hemodialýzy ferritín &lt; 100 ng/ml s TSAT &lt; 40 %, alebo ferritín 100 – 299 ng/ml s TSAT &lt; 25 %.</li>
+  <li><strong>Použi príslušný prah:</strong> hemodialýza ferritín ≤ 500&nbsp;ng/ml a TSAT ≤ 30 %; mimo hemodialýzy ferritín &lt; 100&nbsp;ng/ml s TSAT &lt; 40 %, alebo ferritín 100 – 299&nbsp;ng/ml s TSAT &lt; 25 %.</li>
   <li><strong>Zvoľ cestu:</strong> na hemodialýze prednostne i.v. a proaktívne; mimo nej perorálne alebo i.v. podľa preferencií, závažnosti deficitu, znášanlivosti a dostupnosti.</li>
   <li><strong>Ak perorálne železo po 1 až 3 mesiacoch nezaberá alebo ho pacient neznáša,</strong> prepni na i.v.</li>
   <li><strong>Pri výbere i.v. prípravku zohľadni kontext</strong>: po transplantácii a v skorších štádiách CKD pozor na hypofosfatémiu po ferric carboxymaltose.</li>
-  <li><strong>Zadrž rutinné železo</strong> pri ferritíne nad 700 ng/ml alebo TSAT 40 % a viac; <strong>preruš ho pri systémovej infekcii</strong>.</li>
-  <li><strong>Nastav monitoring</strong>: 3 mesiace mimo hemodialýzy, 1 až 3 mesiace na hemodialýze, častejšie pri zmene ESA/HIF-PHI, krvácaní alebo hospitalizácii.</li>
+  <li><strong>Zadrž rutinné železo</strong> pri ferritíne nad 700&nbsp;ng/ml alebo TSAT 40 % a viac; <strong>preruš ho pri systémovej infekcii</strong>.</li>
+  <li><strong>Nastav monitoring</strong>: 3&nbsp;mesiace mimo hemodialýzy, 1 až 3&nbsp;mesiace na hemodialýze, častejšie pri zmene ESA/HIF-PHI, krvácaní alebo hospitalizácii.</li>
   <li><strong>Ak sú parametre železa v poriadku a anémia trvá,</strong> rozšír diferenciálnu diagnostiku a až potom uvažuj o ESA; ESA zostávajú preferovanou prvou líniou pred HIF-PHI.</li>
 </ol>
 

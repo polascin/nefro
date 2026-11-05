@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($ageYears === null) {
                 $errors[] = 'Dátum narodenia nemôže byť po dátume vyšetrenia.';
             } elseif ($ageYears < 18 || $ageYears > 120) {
-                $errors[] = 'Vek k dátumu vyšetrenia musí byť v intervale 18 až 120 rokov.';
+                $errors[] = 'Vek k dátumu vyšetrenia musí byť v intervale 18 až 120 rokov.';
             }
         }
 
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $egfr = calculatorEgfrToMlMin($egfr, $form['egfr_unit']);
             }
             if ($egfr === null || $egfr > 200.0) {
-                $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m² (t. j. 3,333 ml/s/1,73 m²).';
+                $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m² (t. j. 3,333 ml/s/1,73 m²).';
                 $egfr = null;
             }
         }
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (trim($form['sbp']) !== '') {
             $sbp = calculatorParsePositiveFloat($form['sbp']);
             if ($sbp === null || $sbp < 70.0 || $sbp > 250.0) {
-                $errors[] = 'Systolický TK musí byť v rozsahu 70 až 250 mmHg.';
+                $errors[] = 'Systolický TK musí byť v rozsahu 70 až 250 mmHg.';
                 $sbp = null;
             }
         }
@@ -220,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (trim($form['bmi']) !== '') {
             $bmi = calculatorParsePositiveFloat($form['bmi']);
             if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
-                $errors[] = 'BMI musí byť v rozsahu 10 až 80 kg/m².';
+                $errors[] = 'BMI musí byť v rozsahu 10 až 80 kg/m².';
                 $bmi = null;
             }
         }
@@ -467,7 +467,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="form-group">
                                 <label for="chronicity">Chronicita abnormalít <span class="required">*</span></label>
                                 <select id="chronicity" name="chronicity" required class="form-control">
-                                    <option value="confirmed" <?= $form['chronicity'] === 'confirmed' ? 'selected' : '' ?>>Potvrdená (≥ 3 mesiace)</option>
+                                    <option value="confirmed" <?= $form['chronicity'] === 'confirmed' ? 'selected' : '' ?>>Potvrdená (≥ 3 mesiace)</option>
                                     <option value="unconfirmed" <?= $form['chronicity'] === 'unconfirmed' ? 'selected' : '' ?>>Nepotvrdená</option>
                                 </select>
                             </div>
@@ -543,7 +543,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <fieldset class="calc-fieldset">
                             <legend>Doplňujúce kritériá CKM</legend>
                             <div class="ambulatory-check-grid">
-                                <label class="form-check"><input type="checkbox" name="asian_ancestry" value="1" <?= $form['asian_ancestry'] === '1' ? 'checked' : '' ?>> Ázijský pôvod (BMI hranica 23 kg/m²)</label>
+                                <label class="form-check"><input type="checkbox" name="asian_ancestry" value="1" <?= $form['asian_ancestry'] === '1' ? 'checked' : '' ?>> Ázijský pôvod (BMI hranica 23 kg/m²)</label>
                                 <label class="form-check"><input type="checkbox" name="increased_waist" value="1" <?= $form['increased_waist'] === '1' ? 'checked' : '' ?>> Zvýšený obvod pása</label>
                                 <label class="form-check"><input type="checkbox" name="subclinical_cvd" value="1" <?= $form['subclinical_cvd'] === '1' ? 'checked' : '' ?>> Subklinické KV ochorenie alebo vysoké predikované KV riziko</label>
                                 <label class="form-check"><input type="checkbox" name="other_clinical_cvd" value="1" <?= $form['other_clinical_cvd'] === '1' ? 'checked' : '' ?>> NCMP, PAO alebo iné klinické KV ochorenie</label>
@@ -612,9 +612,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <section class="primary-article auth-container auth-container--wide" aria-labelledby="ambulatory-limits-heading">
                 <h3 id="ambulatory-limits-heading">Dôležité hranice interpretácie</h3>
                 <ul>
-                    <li>CKD vyžaduje abnormalitu štruktúry alebo funkcie obličiek trvajúcu najmenej 3 mesiace. Jediný abnormálny eGFR alebo uACR chronicitu nepotvrdzuje.</li>
+                    <li>CKD vyžaduje abnormalitu štruktúry alebo funkcie obličiek trvajúcu najmenej 3 mesiace. Jediný abnormálny eGFR alebo uACR chronicitu nepotvrdzuje.</li>
                     <li>Pri G1–G2 a A1 bez iného markera poškodenia obličiek nie sú z uvedených údajov splnené kritériá CKD.</li>
-                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m², s kalibráciou mimo Severnej Ameriky (Tangri 2016). CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov. Ak niektorý vstup chýba, príslušný model sa vo výstupe vynechá.</li>
+                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m², s kalibráciou mimo Severnej Ameriky (Tangri 2016). CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov. Ak niektorý vstup chýba, príslušný model sa vo výstupe vynechá.</li>
                     <li>Automatický kód N18.x vyjadruje štádium CKD. Príčinu CKD a pridružené diagnózy vyberáte z importovaného číselníka MKCH-10-SK verzie 26, platného od 1. 1. 2026; k príčine možno doplniť vlastný text. Klinickú správnosť výberu musí potvrdiť lekár.</li>
                 </ul>
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * add_krvna-skupina-a-mortalita-hemodialyza_article.php
- * Idempotentny UPSERT odborneho clanku o krvnej skupine a mortalite pri hemodialyze.
+ * Idempotentný UPSERT odborného článku o krvnej skupine a mortalite pri hemodialyze.
  */
 
 // Ochrana - len admin alebo CLI
@@ -14,7 +14,7 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/article_publisher.php';
 
-// Data clanku
+// Data článku
 
 $articles = [];
 
@@ -40,7 +40,7 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Autori analyzovali údaje z prospektívnej Osaka Dialysis Complication Study. Do pôvodnej kohorty zaradili 1 696 pacientov z 17 dialyzačných pracovísk v prefektúre Osaka. Po vylúčení 25 osôb s chýbajúcimi údajmi zahŕňala analýza 1 671 pacientov, ktorí už pri vstupe podstupovali udržiavaciu hemodialýzu. Sledovanie prebiehalo v rokoch 2012 až 2017, najviac päť rokov; medián dosiahol 1 826 dní.</p>
+<p>Autori analyzovali údaje z prospektívnej Osaka Dialysis Complication Study. Do pôvodnej kohorty zaradili 1&nbsp;696 pacientov z 17 dialyzačných pracovísk v prefektúre Osaka. Po vylúčení 25 osôb s chýbajúcimi údajmi zahŕňala analýza 1&nbsp;671 pacientov, ktorí už pri vstupe podstupovali udržiavaciu hemodialýzu. Sledovanie prebiehalo v rokoch 2012 až 2017, najviac päť rokov; medián dosiahol 1&nbsp;826&nbsp;dní.</p>
 
 <div class="table-responsive" role="region" aria-label="Ako bola štúdia navrhnutá" tabindex="0">
 <table>
@@ -129,7 +129,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V prospektívnej japonskej kohorte 1 671 hemodialyzovaných pacientov bola krvná skupina A oproti skupine O spojená s nižšou celkovou a kardiovaskulárnou mortalitou, nie však s nekardiovaskulárnou mortalitou. Nález je neočakávaný, mechanisticky nevysvetlený a jeho príspevok k prognostickému modelu bol minimálny.</p>
+<p>V prospektívnej japonskej kohorte 1&nbsp;671 hemodialyzovaných pacientov bola krvná skupina A oproti skupine O spojená s nižšou celkovou a kardiovaskulárnou mortalitou, nie však s nekardiovaskulárnou mortalitou. Nález je neočakávaný, mechanisticky nevysvetlený a jeho príspevok k prognostickému modelu bol minimálny.</p>
 
 <p><strong>Štúdia vytvára výskumnú hypotézu, nie nový postup pre dialyzačnú prax.</strong> Bez nezávislej replikácie a mechanistického vysvetlenia nemožno z krvnej skupiny vyvodzovať individuálnu prognózu ani podľa nej upravovať liečbu.</p>
 

@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Čo výskumníci skutočne sledovali</h2>
 
-<p>Grace V. Riley a spoluautori analyzovali údaje platformy Epic Cosmos od januára 2016 do decembra 2024. Súbor zahŕňal 248 564 812 návštev dospelých na urgentných príjmoch, z ktorých 2 762 879, teda 1,11 %, bolo spojených s príslušným diagnostickým kódom močových kameňov. Výsledky publikovali v časopise <em>The Journal of Emergency Medicine</em>. [1]</p>
+<p>Grace V. Riley a spoluautori analyzovali údaje platformy Epic Cosmos od januára 2016 do decembra 2024. Súbor zahŕňal 248&nbsp;564&nbsp;812 návštev dospelých na urgentných príjmoch, z ktorých 2&nbsp;762&nbsp;879, teda 1,11 %, bolo spojených s príslušným diagnostickým kódom močových kameňov. Výsledky publikovali v časopise <em>The Journal of Emergency Medicine</em>. [1]</p>
 
 <p>Jednotkou analýzy bola <strong>návšteva urgentného príjmu, nie jedinečný pacient</strong>. Človek s opakovanými kolikami mohol prispieť viacerými návštevami. Veľkosť súboru preto nemožno opisovať ako počet rôznych pacientov.</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Podanie opioidov počas návštevy kleslo zo 61,5 % na 49,7 %. Ketorolak bol zaznamenaný pri 61,6 % návštev za celé obdobie. Údaje opisujú predpisové zvyklosti v USA; nepreukazujú vhodnosť konkrétneho lieku pre každého pacienta ani účinnosť určitého programu na obmedzenie opioidov. [1]</p>
 
-<p>Pri liekoch zaznamenaných pri prepustení je v prílohe 6 nesúlad. Tabuľka uvádza počet prepustených návštev, ale publikované percentá zodpovedajú celkovému počtu návštev s urolitiázou. V roku 2016 napríklad 13 429 opioidových predpisov predstavuje 8,8 % zo všetkých 152 597 návštev, nie z 139 091 prepustených návštev. Bez vysvetlenia autorov preto nie je presné tvrdiť, že „8,8 % prepustených pacientov dostalo opioid“, ani vytvárať vlastné opravené odhady.</p>
+<p>Pri liekoch zaznamenaných pri prepustení je v prílohe 6 nesúlad. Tabuľka uvádza počet prepustených návštev, ale publikované percentá zodpovedajú celkovému počtu návštev s urolitiázou. V roku 2016 napríklad 13&nbsp;429 opioidových predpisov predstavuje 8,8 % zo všetkých 152&nbsp;597 návštev, nie z 139&nbsp;091 prepustených návštev. Bez vysvetlenia autorov preto nie je presné tvrdiť, že „8,8 % prepustených pacientov dostalo opioid“, ani vytvárať vlastné opravené odhady.</p>
 
 <h2>Odporúčania nie sú jednotným príkazom „ultrasonografia ako prvá“</h2>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <p>Americké kritériá ACR naopak považujú natívne CT za zvyčajne vhodné úvodné vyšetrenie dospelého s akútnou bolesťou v boku a podozrením na kameň bez predchádzajúcej anamnézy urolitiázy. V gravidite odporúčajú ako úvodnú metódu ultrasonografiu. [3] Rozdiel nemožno zúžiť na tvrdenie, že jedna odborná spoločnosť má pravdu a druhá nie: odporúčania vychádzajú z rozdielne formulovaných scenárov, váženia diagnostickej výťažnosti a radiačnej záťaže.</p>
 
-<p>Multiodborový konsenzus urológov, urgentných lekárov a rádiológov hodnotil 29 modelových scenárov. CT odporučil v 7, ultrasonografiu v 9 a žiadne ďalšie zobrazenie v 13 scenároch; ak bolo CT potrebné, uprednostnil zníženú dávku. [4] Randomizovaná štúdia s 2 759 pacientmi navyše ukázala, že úvodná ultrasonografia znížila kumulatívnu radiačnú expozíciu bez zisteného nárastu závažných komplikácií s vysokým rizikom, návratov na urgentný príjem či hospitalizácií oproti úvodnému CT. Následné zobrazenie však bolo ponechané na klinickom rozhodnutí, takže nešlo o stratégiu „ultrasonografia a nikdy CT“. [5]</p>
+<p>Multiodborový konsenzus urológov, urgentných lekárov a rádiológov hodnotil 29 modelových scenárov. CT odporučil v 7, ultrasonografiu v 9 a žiadne ďalšie zobrazenie v 13 scenároch; ak bolo CT potrebné, uprednostnil zníženú dávku. [4] Randomizovaná štúdia s 2&nbsp;759 pacientmi navyše ukázala, že úvodná ultrasonografia znížila kumulatívnu radiačnú expozíciu bez zisteného nárastu závažných komplikácií s vysokým rizikom, návratov na urgentný príjem či hospitalizácií oproti úvodnému CT. Následné zobrazenie však bolo ponechané na klinickom rozhodnutí, takže nešlo o stratégiu „ultrasonografia a nikdy CT“. [5]</p>
 
 <p>Rozumným cieľom preto nie je mechanicky maximalizovať jednu metódu, ale zvoliť vyšetrenie podľa klinického rizika a otázky, na ktorú má odpovedať. Pri typickej recidivujúcej kolike u stabilného pacienta môže byť primeraný iný postup než pri prvom ataku, horúčke, oligoanúrii, solitárnej obličke, zhoršení funkcie obličiek, nezvládnutej bolesti alebo nejasnej diagnóze.</p>
 

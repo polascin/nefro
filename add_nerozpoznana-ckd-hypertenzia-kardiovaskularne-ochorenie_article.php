@@ -3,7 +3,7 @@
 /**
  * add_nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie_article.php
  * Nerozpoznana CKD u pacientov s hypertenziou a KV ochorenim -
- * konferencny abstrakt Tangri a spol. + recenzovana studia REVEAL-CKD.
+ * konferencny abstrakt Tangri a spol. + recenzovana štúdia REVEAL-CKD.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -37,7 +37,7 @@ $articles[] = [
 
 <h2>Čo skúmala americká analýza</h2>
 
-<p>Navdeep Tangri a spolupracovníci analyzovali údaje z americkej databázy elektronických zdravotných záznamov TriNetX za roky 2015 až 2020. Zaradili dospelých pacientov, ktorí mali dve po sebe nasledujúce hodnoty odhadovanej glomerulovej filtrácie (eGFR) od 30 do menej ako 60 ml/min/1,73 m², merané s odstupom 91 až 730 dní. Takéto hodnoty zodpovedajú kategóriám <strong>G3a</strong> (45 – 59) a <strong>G3b</strong> (30 – 44 ml/min/1,73 m²).</p>
+<p>Navdeep Tangri a spolupracovníci analyzovali údaje z americkej databázy elektronických zdravotných záznamov TriNetX za roky 2015 až 2020. Zaradili dospelých pacientov, ktorí mali dve po sebe nasledujúce hodnoty odhadovanej glomerulovej filtrácie (eGFR) od 30 do menej ako 60&nbsp;ml/min/1,73&nbsp;m², merané s odstupom 91 až 730&nbsp;dní. Takéto hodnoty zodpovedajú kategóriám <strong>G3a</strong> (45 – 59) a <strong>G3b</strong> (30 – 44&nbsp;ml/min/1,73&nbsp;m²).</p>
 
 <p>Za nerozpoznanú chronickú chorobu obličiek autori považovali stav, pri ktorom nebol v dokumentácii zaznamenaný diagnostický kód CKD pred druhým meraním eGFR ani počas nasledujúcich šiestich mesiacov. Pacientov rozdelili do štyroch skupín:</p>
 
@@ -62,7 +62,7 @@ $articles[] = [
 
 <h2>REVEAL-CKD: recenzované medzinárodné údaje</h2>
 
-<p>Tie isté kritériá – dve po sebe idúce hodnoty eGFR 30 až menej ako 60 ml/min/1,73 m² a chýbajúci diagnostický kód pred druhým meraním aj šesť mesiacov po ňom – použila štúdia REVEAL-CKD, publikovaná v recenzovanom časopise <em>BMJ Open</em>. Zahrnula šesť databáz v piatich krajinách:</p>
+<p>Tie isté kritériá – dve po sebe idúce hodnoty eGFR 30 až menej ako 60&nbsp;ml/min/1,73&nbsp;m² a chýbajúci diagnostický kód pred druhým meraním aj šesť mesiacov po ňom – použila štúdia REVEAL-CKD, publikovaná v recenzovanom časopise <em>BMJ Open</em>. Zahrnula šesť databáz v piatich krajinách:</p>
 
 <div class="table-responsive" role="region" aria-label="Prevalencia nerozpoznanej CKD kategórie G3 podľa krajiny" tabindex="0">
   <table>
@@ -74,12 +74,12 @@ $articles[] = [
       </tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Francúzsko</th><td>95,5 %</td><td>19 120 / 20 012</td></tr>
-      <tr><th scope="row">Japonsko</th><td>92,1 %</td><td>83 693 / 90 902</td></tr>
-      <tr><th scope="row">Nemecko</th><td>84,3 %</td><td>22 557 / 26 767</td></tr>
-      <tr><th scope="row">Taliansko</th><td>77,0 %</td><td>50 547 / 65 676</td></tr>
-      <tr><th scope="row">USA – TriNetX</th><td>64,3 %</td><td>161 254 / 250 879</td></tr>
-      <tr><th scope="row">USA – Explorys</th><td>61,6 %</td><td>13 845 / 22 470</td></tr>
+      <tr><th scope="row">Francúzsko</th><td>95,5 %</td><td>19&nbsp;120 / 20&nbsp;012</td></tr>
+      <tr><th scope="row">Japonsko</th><td>92,1 %</td><td>83&nbsp;693 / 90&nbsp;902</td></tr>
+      <tr><th scope="row">Nemecko</th><td>84,3 %</td><td>22&nbsp;557 / 26&nbsp;767</td></tr>
+      <tr><th scope="row">Taliansko</th><td>77,0 %</td><td>50&nbsp;547 / 65&nbsp;676</td></tr>
+      <tr><th scope="row">USA – TriNetX</th><td>64,3 %</td><td>161&nbsp;254 / 250&nbsp;879</td></tr>
+      <tr><th scope="row">USA – Explorys</th><td>61,6 %</td><td>13&nbsp;845 / 22&nbsp;470</td></tr>
     </tbody>
   </table>
 </div>
@@ -117,7 +117,7 @@ $articles[] = [
 
 <h2>Bola chronická choroba obličiek potvrdená správne?</h2>
 
-<p>Podľa KDIGO je CKD definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má zdravotné dôsledky. Dve hodnoty eGFR od 30 do menej ako 60 ml/min/1,73 m² s odstupom najmenej 91 dní podporujú diagnózu CKD a spĺňajú základnú požiadavku chronickosti.</p>
+<p>Podľa KDIGO je CKD definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má zdravotné dôsledky. Dve hodnoty eGFR od 30 do menej ako 60&nbsp;ml/min/1,73&nbsp;m² s odstupom najmenej 91&nbsp;dní podporujú diagnózu CKD a spĺňajú základnú požiadavku chronickosti.</p>
 
 <p>Údaje však neumožňujú úplne vylúčiť prechodný pokles eGFR súvisiaci napríklad s akútnym poškodením obličiek, infekciou, dehydratáciou, hemodynamickou zmenou alebo liečbou. Riziko nesprávnej klasifikácie je väčšie najmä vtedy, keď boli dve merania od seba vzdialené takmer dva roky a medzi nimi neboli dostupné ďalšie výsledky.</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Albuminúria je samostatným ukazovateľom rizika progresie CKD, akútneho poškodenia obličiek, srdcového zlyhávania, aterosklerotických príhod a mortality. Pacient s eGFR 55 ml/min/1,73 m² a výraznou albuminúriou má zásadne odlišnú prognózu než pacient s rovnakou eGFR bez albuminúrie. <strong>Samotná eGFR preto nestačí na úplnú klasifikáciu CKD ani na spoľahlivé stanovenie prognózy.</strong></p>
+<p>Albuminúria je samostatným ukazovateľom rizika progresie CKD, akútneho poškodenia obličiek, srdcového zlyhávania, aterosklerotických príhod a mortality. Pacient s eGFR 55&nbsp;ml/min/1,73&nbsp;m² a výraznou albuminúriou má zásadne odlišnú prognózu než pacient s rovnakou eGFR bez albuminúrie. <strong>Samotná eGFR preto nestačí na úplnú klasifikáciu CKD ani na spoľahlivé stanovenie prognózy.</strong></p>
 
 <h2>Obojsmerný vzťah hypertenzie a CKD</h2>
 
@@ -205,7 +205,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Približne 68 % pacientov s hypertenziou alebo kardiovaskulárnym ochorením bez diabetu 2. typu, ktorí mali dvakrát zaznamenanú eGFR od 30 do menej ako 60 ml/min/1,73 m², nemalo v elektronickej dokumentácii uvedenú diagnózu CKD. U pacientov s diabetom predstavoval tento podiel približne 52 %. Recenzovaná medzinárodná štúdia REVEAL-CKD ukázala, že v európskych krajinách je podiel nerozpoznaných prípadov ešte vyšší – vo Francúzsku 95,5 %.</p>
+<p>Približne 68 % pacientov s hypertenziou alebo kardiovaskulárnym ochorením bez diabetu 2. typu, ktorí mali dvakrát zaznamenanú eGFR od 30 do menej ako 60&nbsp;ml/min/1,73&nbsp;m², nemalo v elektronickej dokumentácii uvedenú diagnózu CKD. U pacientov s diabetom predstavoval tento podiel približne 52 %. Recenzovaná medzinárodná štúdia REVEAL-CKD ukázala, že v európskych krajinách je podiel nerozpoznaných prípadov ešte vyšší – vo Francúzsku 95,5 %.</p>
 
 <p>Tieto analýzy nepreukázali, že všetci títo pacienti boli klinicky úplne nediagnostikovaní. Spoľahlivo však identifikovali veľký rozdiel medzi laboratórnymi nálezmi a administratívnym zaznamenaním diagnózy.</p>
 
@@ -236,7 +236,7 @@ $articles[] = [
   <li><strong>Panagiotis I. Georgianos, Rajiv Agarwal.</strong> <em>Hypertension in chronic kidney disease — treatment standard 2023.</em> Nephrology Dialysis Transplantation. 2023;38(12):2694–2703. <a href="https://doi.org/10.1093/ndt/gfad118" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Údaje štúdie REVEAL-CKD – prevalencia nerozpoznanej CKD kategórie G3 vo Francúzsku 95,5 % (19 120/20 012), Japonsku 92,1 % (83 693/90 902), Nemecku 84,3 % (22 557/26 767), Taliansku 77,0 % (50 547/65 676), v americkej databáze TriNetX 64,3 % (161 254/250 879) a Explorys 61,6 % (13 845/22 470), ako aj faktory spojené s chýbajúcou diagnózou (ženské pohlavie OR 1,29 – 1,77; kategória G3a oproti G3b 1,81 – 3,66; neprítomnosť diabetu 1,26 – 2,77; neprítomnosť hypertenzie 1,35 – 1,78) – boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; opravené bolo meno <strong>Panagiotis I. Georgianos</strong> (v podklade nesprávne „Nikolay A. Georgianos“). <strong>Upozornenie:</strong> percentá 68,4 / 68,7 / 68,6 / 51,7 % pochádzajú z konferenčného abstraktu, ktorý je za platobnou bariérou vydavateľa a <strong>nebolo možné ich nezávisle overiť</strong>; sú však konzistentné s hodnotou 64,3 % pre tú istú databázu TriNetX v recenzovanej štúdii REVEAL-CKD, ktorá používa zhodnú definíciu. Doplnenie štúdie REVEAL-CKD, medzikrajinové porovnanie, nález o ženskom pohlaví a komentáre k rozdielom v kódovacích zvyklostiach sú <strong>vlastným odborným spracovaním</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Údaje štúdie REVEAL-CKD – prevalencia nerozpoznanej CKD kategórie G3 vo Francúzsku 95,5 % (19&nbsp;120/20&nbsp;012), Japonsku 92,1 % (83&nbsp;693/90&nbsp;902), Nemecku 84,3 % (22&nbsp;557/26&nbsp;767), Taliansku 77,0 % (50&nbsp;547/65&nbsp;676), v americkej databáze TriNetX 64,3 % (161&nbsp;254/250&nbsp;879) a Explorys 61,6 % (13&nbsp;845/22&nbsp;470), ako aj faktory spojené s chýbajúcou diagnózou (ženské pohlavie OR 1,29 – 1,77; kategória G3a oproti G3b 1,81 – 3,66; neprítomnosť diabetu 1,26 – 2,77; neprítomnosť hypertenzie 1,35 – 1,78) – boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; opravené bolo meno <strong>Panagiotis I. Georgianos</strong> (v podklade nesprávne „Nikolay A. Georgianos“). <strong>Upozornenie:</strong> percentá 68,4 / 68,7 / 68,6 / 51,7 % pochádzajú z konferenčného abstraktu, ktorý je za platobnou bariérou vydavateľa a <strong>nebolo možné ich nezávisle overiť</strong>; sú však konzistentné s hodnotou 64,3 % pre tú istú databázu TriNetX v recenzovanej štúdii REVEAL-CKD, ktorá používa zhodnú definíciu. Doplnenie štúdie REVEAL-CKD, medzikrajinové porovnanie, nález o ženskom pohlaví a komentáre k rozdielom v kódovacích zvyklostiach sú <strong>vlastným odborným spracovaním</strong>.</em></p>
 HTML,
 ];
 

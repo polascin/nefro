@@ -49,12 +49,12 @@ $articles[] = [
 
 <h2>Rozsah problému</h2>
 
-<p>Systematický prehľad s modelovaním publikovaný v <em>The Lancet Global Health</em> (2026) spracoval <strong>157 prác z 37 krajín a vyše 9,7 milióna účastníkov</strong>. Globálna prevalencia PAD u osôb vo veku <strong>25 rokov a viac</strong> bola v roku 2023 <strong>6,58 % (95 % IS 4,83 – 9,02)</strong>, čo zodpovedá <strong>316,54 milióna</strong> postihnutých (232,34 – 433,78 milióna).</p>
+<p>Systematický prehľad s modelovaním publikovaný v <em>The Lancet Global Health</em> (2026) spracoval <strong>157 prác z 37 krajín a vyše 9,7 milióna účastníkov</strong>. Globálna prevalencia PAD u osôb vo veku <strong>25&nbsp;rokov a viac</strong> bola v roku 2023 <strong>6,58 % (95 % IS 4,83 – 9,02)</strong>, čo zodpovedá <strong>316,54 milióna</strong> postihnutých (232,34 – 433,78 milióna).</p>
 
 <p>Dva údaje z tej istej práce stoja za zapamätanie:</p>
 
 <ul>
-  <li><strong>Prevalencia rastie s vekom plynulo</strong> – od 4,31 % vo veku 25 až 29 rokov po 22,09 % vo veku 90 až 99 rokov, s podobným priebehom u oboch pohlaví. Predstava, že ide o chorobu výhradne starých ľudí, teda neplatí; už v štvrtej dekáde je prevalencia nezanedbateľná.</li>
+  <li><strong>Prevalencia rastie s vekom plynulo</strong> – od 4,31 % vo veku 25 až 29&nbsp;rokov po 22,09 % vo veku 90 až 99&nbsp;rokov, s podobným priebehom u oboch pohlaví. Predstava, že ide o chorobu výhradne starých ľudí, teda neplatí; už v štvrtej dekáde je prevalencia nezanedbateľná.</li>
   <li><strong>Krajiny s nízkym a stredným príjmom nesú vyše troch štvrtín všetkých prípadov</strong> (239,35 milióna), hoci ich prevalencia je nižšia – rozhoduje veľkosť populácie.</li>
 </ul>
 
@@ -115,7 +115,7 @@ $articles[] = [
 
 <h3>A čo mortalita</h3>
 
-<p>Aktualizovaný systematický prehľad s metaanalýzou (<em>Critical Pathways in Cardiology</em>, 2025) zahrnul <strong>10 kohortových štúdií a 13 378 účastníkov</strong> s CKD vrátane hemodialyzovaných:</p>
+<p>Aktualizovaný systematický prehľad s metaanalýzou (<em>Critical Pathways in Cardiology</em>, 2025) zahrnul <strong>10 kohortových štúdií a 13&nbsp;378 účastníkov</strong> s CKD vrátane hemodialyzovaných:</p>
 
 <div class="table-responsive" role="region" aria-label="Abnormálne ABI a mortalita pri CKD podľa metaanalýzy 2025" tabindex="0">
 <table>

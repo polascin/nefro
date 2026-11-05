@@ -33,7 +33,7 @@ function kdriXbeta(
     bool $hcv,
     bool $dcd
 ): float {
-    // OPTN: sérový kreatinín sa pri výpočte stropuje na 8,0 mg/dL.
+    // OPTN: sérový kreatinín sa pri výpočte stropuje na 8,0 mg/dL.
     $cr = min($creatMgDl, 8.0);
 
     $x = 0.0128 * ($ageYears - 40.0);
@@ -137,15 +137,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $age = kdpiParseNonNeg($form["age_years"]);
         if ($age === null || $age > 100.0) {
-            $errors[] = "Vek darcu musí byť 0 – 100 rokov.";
+            $errors[] = "Vek darcu musí byť 0 – 100 rokov.";
         }
         $height = calculatorParsePositiveFloat($form["height_cm"]);
         if ($height === null || $height < 20.0 || $height > 250.0) {
-            $errors[] = "Výška darcu musí byť 20 – 250 cm.";
+            $errors[] = "Výška darcu musí byť 20 – 250 cm.";
         }
         $weight = calculatorParsePositiveFloat($form["weight_kg"]);
         if ($weight === null || $weight > 300.0) {
-            $errors[] = "Hmotnosť darcu musí byť kladné číslo (≤ 300 kg).";
+            $errors[] = "Hmotnosť darcu musí byť kladné číslo (≤ 300 kg).";
         }
         $creatValue = calculatorParsePositiveFloat($form["creatinine_value"]);
         if ($creatValue === null) {
@@ -348,14 +348,14 @@ if (isLoggedIn()) {
                         <div class="calc-formula-vars">
                             vek: +0,0128·(vek−40); ak &lt;18: −0,0194·(vek−18); ak &gt;50: +0,0107·(vek−50) &bull;
                             výška: −0,0464·(výška−170)/10 &bull;
-                            hmotnosť (ak &lt;80 kg): −0,0199·(hmotnosť−80)/5 &bull;
+                            hmotnosť (ak &lt;80 kg): −0,0199·(hmotnosť−80)/5 &bull;
                             afroamerický pôvod: +0,179 &bull; hypertenzia: +0,126 &bull;
                             diabetes: +0,130 &bull; CVA príčina smrti: +0,0881 &bull;
                             kreatinín: +0,220·(S<sub>cr</sub>−1); ak &gt;1,5: −0,209·(S<sub>cr</sub>−1,5) &bull;
                             HCV+: +0,240 &bull; DCD: +0,133
                         </div>
                         <div class="calc-formula-vars">
-                            S<sub>cr</sub> sa stropuje na 8,0 mg/dL. Referenčný darca (všetky členy = 0) má KDRI = 1,00.
+                            S<sub>cr</sub> sa stropuje na 8,0 mg/dL. Referenčný darca (všetky členy = 0) má KDRI = 1,00.
                         </div>
                     </div>
                 </details>

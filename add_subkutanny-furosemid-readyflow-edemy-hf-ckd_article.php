@@ -26,7 +26,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/subkutanny-furosemid-readyflow-edemy-hf-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/subkutanny-furosemid-readyflow-edemy-hf-ckd.webp" alt="Autoinjektor na nočnom stolíku v teplom svetle lampy, prúd z neho odvádza opuchovú tekutinu; v pozadí v tme nemocničné vybavenie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétneho prípravku. Zmysel podkožného podania je presunúť zvládnuteľnú dekompenzáciu z lôžka domov, nie nahradiť hospitalizáciu tam, kde je potrebná.</figcaption></figure>
 
-<p class="article-dek"><em>Americký FDA v júli 2026 schválil autoinjektor Furoscix ReadyFlow, ktorý dospelému podá 80 mg furosemidu podkožne približne za desať sekúnd. Zariadenie môže vybraným stabilným pacientom rozšíriť možnosti včasnej ambulantnej dekongesčnej liečby. Nie je však náhradou urgentnej intravenóznej liečby a zatiaľ nemáme dôkaz, že znižuje hospitalizácie alebo mortalitu.</em></p>
+<p class="article-dek"><em>Americký FDA v júli 2026 schválil autoinjektor Furoscix ReadyFlow, ktorý dospelému podá 80&nbsp;mg furosemidu podkožne približne za desať sekúnd. Zariadenie môže vybraným stabilným pacientom rozšíriť možnosti včasnej ambulantnej dekongesčnej liečby. Nie je však náhradou urgentnej intravenóznej liečby a zatiaľ nemáme dôkaz, že znižuje hospitalizácie alebo mortalitu.</em></p>
 
 <p>Pri chronickom srdcovom zlyhávaní a chronickej chorobe obličiek (CKD) býva kontrola objemového preťaženia náročná. Perorálny furosemid má variabilnú biologickú dostupnosť a pri zhoršení kongescie môže jeho účinok slabnúť. Parenterálne podanie preto často znamená návštevu ambulancie urgentného príjmu alebo hospitalizáciu.</p>
 
@@ -38,7 +38,7 @@ $articles[] = [
 
 <ul>
   <li>jednorazový mechanický pružinový autoinjektor,</li>
-  <li>80 mg furosemidu v 1 ml roztoku,</li>
+  <li>80&nbsp;mg furosemidu v 1&nbsp;ml roztoku,</li>
   <li>podanie do podkožia brucha približne za 10 sekúnd,</li>
   <li>určenie iba pre dospelých,</li>
   <li>aplikácia po predchádzajúcom zaškolení zdravotníkom.</li>
@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>Furoscix podľa registračnej informácie <strong>nie je určený na chronické používanie</strong> a čo najskôr sa má nahradiť perorálnym diuretikom. Ide teda o liečbu konkrétnej epizódy objemového preťaženia podľa vopred určeného plánu, nie o novú formu pravidelnej udržiavacej dávky.</p>
 
-<p>Miesto aplikácie má byť na bruchu približne najmenej 5 cm od pupka. Miesta treba striedať a vyhnúť sa porušenej či podráždenej koži, jazvám a striám. Autoinjektor sa drží pritlačený, kým sa žltý piest neprestane pohybovať a nevyplní kontrolné okienko.</p>
+<p>Miesto aplikácie má byť na bruchu približne najmenej 5&nbsp;cm od pupka. Miesta treba striedať a vyhnúť sa porušenej či podráždenej koži, jazvám a striám. Autoinjektor sa drží pritlačený, kým sa žltý piest neprestane pohybovať a nevyplní kontrolné okienko.</p>
 
 <div class="pdf-avoid-break">
 <h2>Dva systémy pod jedným názvom nie sú totožné</h2>
@@ -68,18 +68,18 @@ $articles[] = [
     </tr>
     <tr>
       <td>Dávka a objem</td>
-      <td>80 mg v 1 ml</td>
-      <td>80 mg v 10 ml</td>
+      <td>80&nbsp;mg v 1&nbsp;ml</td>
+      <td>80&nbsp;mg v 10&nbsp;ml</td>
     </tr>
     <tr>
       <td>Trvanie podania</td>
       <td>približne 10 sekúnd</td>
-      <td>5 hodín: 30 mg v prvej hodine, potom 12,5 mg/h počas 4 hodín</td>
+      <td>5&nbsp;hodín: 30&nbsp;mg v prvej hodine, potom 12,5&nbsp;mg/h počas 4&nbsp;hodín</td>
     </tr>
     <tr>
       <td>Americká veková indikácia</td>
       <td>iba dospelí</td>
-      <td>dospelí a pediatrickí pacienti s hmotnosťou najmenej 43 kg</td>
+      <td>dospelí a pediatrickí pacienti s hmotnosťou najmenej 43&nbsp;kg</td>
     </tr>
   </tbody>
 </table>
@@ -102,17 +102,17 @@ $articles[] = [
   <li>distálna tubulárna adaptácia pri dlhodobej diuretickej liečbe.</li>
 </ul>
 
-<p>Subkutánna cesta odstraňuje neistotu gastrointestinálnej absorpcie, neodstraňuje však diuretickú rezistenciu vznikajúcu pri výrazne zníženej funkcii obličiek, nízkej perfúzii alebo distálnej retencii sodíka. Americká registračná informácia výslovne upozorňuje, že fixná dávka 80 mg nemusí pri významne zníženej renálnej funkcii postačovať.</p>
+<p>Subkutánna cesta odstraňuje neistotu gastrointestinálnej absorpcie, neodstraňuje však diuretickú rezistenciu vznikajúcu pri výrazne zníženej funkcii obličiek, nízkej perfúzii alebo distálnej retencii sodíka. Americká registračná informácia výslovne upozorňuje, že fixná dávka 80&nbsp;mg nemusí pri významne zníženej renálnej funkcii postačovať.</p>
 
 <h2>Čo presne znamená „intravenózne ekvivalentný“</h2>
 
-<p>Registračné farmakokinetické porovnanie zahŕňalo <strong>19 zdravých dospelých</strong>. Hodnotilo 80 mg furosemidu podaného autoinjektorom oproti celkovej intravenóznej dávke 80 mg, ktorá bola rozdelená do dvoch 40 mg bolusov s odstupom 120 minút.</p>
+<p>Registračné farmakokinetické porovnanie zahŕňalo <strong>19 zdravých dospelých</strong>. Hodnotilo 80&nbsp;mg furosemidu podaného autoinjektorom oproti celkovej intravenóznej dávke 80&nbsp;mg, ktorá bola rozdelená do dvoch 40&nbsp;mg bolusov s odstupom 120&nbsp;minút.</p>
 
 <ul>
   <li>Relatívna biologická dostupnosť ReadyFlow bola <strong>107,3 %</strong> (90 % interval spoľahlivosti 103,9 až 110,8 %).</li>
-  <li>Medián času do maximálnej koncentrácie bol <strong>0,75 hodiny</strong> (rozmedzie 0,5 až 1,5 hodiny).</li>
-  <li>Priemerná maximálna koncentrácia dosiahla približne <strong>4 530 ng/ml</strong> po ReadyFlow a <strong>10 100 ng/ml</strong> po porovnávacom intravenóznom režime.</li>
-  <li>Diuréza, natriuréza a kaliuréza boli v hodnotených časoch po 6, 8 a 12 hodinách podobné; diuretický účinok ReadyFlow pretrvával do približne 6 hodín od podania.</li>
+  <li>Medián času do maximálnej koncentrácie bol <strong>0,75&nbsp;hodiny</strong> (rozmedzie 0,5 až 1,5&nbsp;hodiny).</li>
+  <li>Priemerná maximálna koncentrácia dosiahla približne <strong>4&nbsp;530&nbsp;ng/ml</strong> po ReadyFlow a <strong>10&nbsp;100&nbsp;ng/ml</strong> po porovnávacom intravenóznom režime.</li>
+  <li>Diuréza, natriuréza a kaliuréza boli v hodnotených časoch po 6, 8 a 12 hodinách podobné; diuretický účinok ReadyFlow pretrvával do približne 6&nbsp;hodín od podania.</li>
 </ul>
 
 <p>Porovnateľná plocha pod krivkou znamená podobnú <strong>celkovú systémovú expozíciu</strong>. Neznamená identický koncentračný profil, rovnaký nástup účinku ako po jednorazovom intravenóznom boluse ani zameniteľnosť vo všetkých klinických situáciách. Výsledok navyše pochádza zo zdravej populácie, nie z pacientov s anasarkou, pokročilou CKD alebo akútnou dekompenzáciou.</p>
@@ -127,7 +127,7 @@ $articles[] = [
 
 <p>ReadyFlow nebol schválený na základe veľkej randomizovanej štúdie, ktorá by preukázala zníženie hospitalizácií, mortality alebo progresie CKD. Najčastejšie citovaná štúdia <strong>AT HOME-HF</strong> skúmala skoršiu subkutánnu formuláciu podávanú päťhodinovým systémom On-body Infusor.</p>
 
-<p>V otvorenej pilotnej štúdii bolo 51 ambulantných pacientov so srdcovým zlyhávaním a zhoršujúcou sa kongesciou randomizovaných v pomere 2 : 1: 34 dostalo subkutánny furosemid a 17 obvyklú starostlivosť. Rozdiel v priemernej zmene hmotnosti na tretí deň bol −2,02 kg v prospech subkutánnej liečby (95 % interval spoľahlivosti −3,90 až −0,14 kg). Priaznivejšie boli aj niektoré sekundárne hodnotenia dyspnoe a šesťminútového testu chôdze.</p>
+<p>V otvorenej pilotnej štúdii bolo 51 ambulantných pacientov so srdcovým zlyhávaním a zhoršujúcou sa kongesciou randomizovaných v pomere 2 : 1: 34 dostalo subkutánny furosemid a 17 obvyklú starostlivosť. Rozdiel v priemernej zmene hmotnosti na tretí deň bol −2,02&nbsp;kg v prospech subkutánnej liečby (95 % interval spoľahlivosti −3,90 až −0,14&nbsp;kg). Priaznivejšie boli aj niektoré sekundárne hodnotenia dyspnoe a šesťminútového testu chôdze.</p>
 
 <p>Primárny hierarchický kombinovaný ukazovateľ kardiovaskulárneho úmrtia, príhod srdcového zlyhávania a zmeny NT-proBNP však štatisticky významný nebol (pomer víťazstiev 1,11; 95 % interval spoľahlivosti 0,48 až 2,50). Najčastejším nežiaducim účinkom súvisiacim s liečbou bola mierna bolesť v mieste infúzie u 11,8 % pacientov.</p>
 
@@ -197,7 +197,7 @@ $articles[] = [
   <li>miesto aplikácie a úplnosť podanej dávky.</li>
 </ul>
 
-<p>Pri vysoko rizikovom pacientovi môže byť rozumná laboratórna kontrola v priebehu 24 až 72 hodín. Ide o klinický bezpečnostný návrh, nie o univerzálny interval určený americkou registračnou informáciou.</p>
+<p>Pri vysoko rizikovom pacientovi môže byť rozumná laboratórna kontrola v priebehu 24 až 72&nbsp;hodín. Ide o klinický bezpečnostný návrh, nie o univerzálny interval určený americkou registračnou informáciou.</p>
 
 <h2>Regulačný kontext pre Slovensko</h2>
 
@@ -208,11 +208,11 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Záver</h2>
 
-<p>Furoscix ReadyFlow je prakticky významnou inováciou: podá 80 mg furosemidu podkožne približne za desať sekúnd a obíde variabilnú gastrointestinálnu absorpciu. Pre vybraného stabilného dospelého môže byť súčasťou vopred pripraveného ambulantného dekongesčného protokolu.</p>
+<p>Furoscix ReadyFlow je prakticky významnou inováciou: podá 80&nbsp;mg furosemidu podkožne približne za desať sekúnd a obíde variabilnú gastrointestinálnu absorpciu. Pre vybraného stabilného dospelého môže byť súčasťou vopred pripraveného ambulantného dekongesčného protokolu.</p>
 
-<p>Výraz „intravenózne ekvivalentný“ však treba obmedziť na porovnateľnú celkovú expozíciu a podobnú diuretickú odpoveď voči konkrétnemu režimu dvoch 40 mg intravenóznych bolusov. Neznamená identickú farmakokinetiku, preukázanú účinnosť pri urgentnej dekompenzácii ani dokázané zníženie hospitalizácií alebo mortality.</p>
+<p>Výraz „intravenózne ekvivalentný“ však treba obmedziť na porovnateľnú celkovú expozíciu a podobnú diuretickú odpoveď voči konkrétnemu režimu dvoch 40&nbsp;mg intravenóznych bolusov. Neznamená identickú farmakokinetiku, preukázanú účinnosť pri urgentnej dekompenzácii ani dokázané zníženie hospitalizácií alebo mortality.</p>
 
-<p>Najväčšie neistoty sa týkajú klinických výsledkov pri samotnej CKD a nefrotickom syndróme, pacientov s výrazným podkožným edémom a situácií, keď fixná dávka 80 mg pri pokročilej renálnej dysfunkcii nestačí. Rozhodujúce preto zostávajú výber pacienta, jasné hranice pre urgentné vyšetrenie a rýchlo dostupné klinické i laboratórne monitorovanie.</p>
+<p>Najväčšie neistoty sa týkajú klinických výsledkov pri samotnej CKD a nefrotickom syndróme, pacientov s výrazným podkožným edémom a situácií, keď fixná dávka 80&nbsp;mg pri pokročilej renálnej dysfunkcii nestačí. Rozhodujúce preto zostávajú výber pacienta, jasné hranice pre urgentné vyšetrenie a rýchlo dostupné klinické i laboratórne monitorovanie.</p>
 </div>
 
 <div class="pdf-avoid-break">

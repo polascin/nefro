@@ -39,9 +39,9 @@ $articles[] = [
     <tr><th scope="col">Štúdia</th><th scope="col">Populácia</th><th scope="col">Intervencia</th><th scope="col">Hlavný výsledok</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">SHARP (2011)</th><td>CKD vrátane dialyzovaných; 4 650 vs 4 620 účastníkov</td><td>Simvastatín 20 mg + ezetimib 10 mg</td><td>Veľké aterosklerotické príhody 526 (11,3 %) vs 619 (13,4 %); RR 0,83; 95 % IS 0,74 – 0,94; p = 0,0021</td></tr>
-    <tr><th scope="row">4D (2005)</th><td>Diabetes 2. typu na hemodialýze</td><td>Atorvastatín 20 mg</td><td>Primárny zložený ukazovateľ RR 0,92; 95 % IS 0,77 – 1,10; p = 0,37</td></tr>
-    <tr><th scope="row">AURORA (2009)</th><td>Hemodialyzovaní pacienti</td><td>Rosuvastatín 10 mg</td><td>Primárny ukazovateľ HR 0,96; 95 % IS 0,84 – 1,11; p = 0,59</td></tr>
+    <tr><th scope="row">SHARP (2011)</th><td>CKD vrátane dialyzovaných; 4&nbsp;650 vs 4&nbsp;620 účastníkov</td><td>Simvastatín 20&nbsp;mg + ezetimib 10&nbsp;mg</td><td>Veľké aterosklerotické príhody 526 (11,3 %) vs 619 (13,4 %); RR 0,83; 95 % IS 0,74 – 0,94; p = 0,0021</td></tr>
+    <tr><th scope="row">4D (2005)</th><td>Diabetes 2. typu na hemodialýze</td><td>Atorvastatín 20&nbsp;mg</td><td>Primárny zložený ukazovateľ RR 0,92; 95 % IS 0,77 – 1,10; p = 0,37</td></tr>
+    <tr><th scope="row">AURORA (2009)</th><td>Hemodialyzovaní pacienti</td><td>Rosuvastatín 10&nbsp;mg</td><td>Primárny ukazovateľ HR 0,96; 95 % IS 0,84 – 1,11; p = 0,59</td></tr>
   </tbody>
 </table>
 </div>
@@ -50,7 +50,7 @@ $articles[] = [
 
 <p>V štúdii 4D atorvastatín neovplyvnil primárny ukazovateľ, znížil nominálne všetky srdcové príhody dohromady (RR 0,82; 95 % IS 0,68 – 0,99; p = 0,03), ale <strong>relatívne riziko fatálnej cievnej mozgovej príhody bolo v ramene s atorvastatínom 2,03</strong> (95 % IS 1,05 – 3,93; p = 0,04). Ide o nález z mnohonásobného testovania a nepotvrdil sa v ďalších štúdiách, pri rozhodovaní ho však nemožno ignorovať.</p>
 
-<p>V štúdii AURORA rosuvastatín znížil LDL cholesterol o 43 % z priemernej východiskovej hodnoty 2,6 mmol/l, no počas mediánu sledovania 3,8 roka neovplyvnil primárny ukazovateľ ani celkovú mortalitu (HR 0,96; 95 % IS 0,86 – 1,07; p = 0,51).</p>
+<p>V štúdii AURORA rosuvastatín znížil LDL cholesterol o 43 % z priemernej východiskovej hodnoty 2,6&nbsp;mmol/l, no počas mediánu sledovania 3,8 roka neovplyvnil primárny ukazovateľ ani celkovú mortalitu (HR 0,96; 95 % IS 0,86 – 1,07; p = 0,51).</p>
 
 <h2>Prečo dialýza výsledok mení</h2>
 
@@ -111,7 +111,7 @@ $articles[] = [
   <li><strong>Štúdia SHARP netestovala samotný statín.</strong> Intervenciou bola kombinácia simvastatínu s ezetimibom, takže podiel jednotlivých zložiek na účinku nemožno oddeliť.</li>
   <li><strong>Štúdie 4D a AURORA boli negatívne, nie noninferioritné.</strong> Nedokazujú, že liečba v dialýze neúčinkuje; dokazujú, že v danom usporiadaní sa prínos nepreukázal.</li>
   <li><strong>Nález o fatálnej cievnej mozgovej príhode v štúdii 4D</strong> pochádza z mnohonásobného testovania sekundárnych ukazovateľov a nebol replikovaný.</li>
-  <li><strong>Dôkazy sú staré 15 až 20 rokov.</strong> Súbežná liečba sa odvtedy výrazne zmenila – inhibítory SGLT2, agonisty GLP-1, nesteroidné antagonisty mineralokortikoidných receptorov. Výsledky dnešnej dialyzačnej populácie môžu vyzerať inak.</li>
+  <li><strong>Dôkazy sú staré 15 až 20&nbsp;rokov.</strong> Súbežná liečba sa odvtedy výrazne zmenila – inhibítory SGLT2, agonisty GLP-1, nesteroidné antagonisty mineralokortikoidných receptorov. Výsledky dnešnej dialyzačnej populácie môžu vyzerať inak.</li>
   <li><strong>Pre nestatínovú liečbu pri pokročilej CKD chýbajú výsledkové štúdie.</strong> Dostupné sú analýzy podskupín a farmakologické štúdie.</li>
   <li><strong>Transplantovaní pacienti sú samostatná skupina</strong> s osobitným rizikom interakcií medzi statínmi a kalcineurínovými inhibítormi; tomuto článku sa vymykajú.</li>
 </ul>

@@ -42,7 +42,7 @@ $articles[] = [
 <p>Chia semienka (<em>Salvia hispanica</em>) majú reálnu nutričnú hodnotu. V zdrojovom článku sa zdôrazňuje najmä:</p>
 
 <ul>
-  <li>vysoký obsah vlákniny (2 polievkové lyžice približne 10 g vlákniny),</li>
+  <li>vysoký obsah vlákniny (2 polievkové lyžice približne 10&nbsp;g vlákniny),</li>
   <li>omega-3 mastné kyseliny (alfa-linolénová),</li>
   <li>bielkoviny a minerály.</li>
 </ul>
@@ -95,7 +95,7 @@ $articles[] = [
 
 <ul>
   <li>pacient začne nárazovo (napr. „z nuly na plnú dávku“),</li>
-  <li>do približne 72 hodín môže dôjsť k výraznému nadúvaniu, kŕčom a paradoxne aj k zhoršeniu zápchy.</li>
+  <li>do približne 72&nbsp;hodín môže dôjsť k výraznému nadúvaniu, kŕčom a paradoxne aj k zhoršeniu zápchy.</li>
 </ul>
 
 <p>Dôvod je jednoduchý: črevný mikrobiom potrebuje čas prispôsobiť sa zvýšenému prísunu fermentovateľného substrátu a náhle zvýšenie môže zmeniť plynatosť aj motilitu.</p>
@@ -115,7 +115,7 @@ $articles[] = [
 <p>Rozhovor možno zároveň presmerovať na postupy s oporou v dôkazoch:</p>
 
 <ul>
-  <li>denný cieľ vlákniny sa v zdrojovom článku uvádza približne <strong>25 až 35 g denne</strong> z rôznych potravín,</li>
+  <li>denný cieľ vlákniny sa v zdrojovom článku uvádza približne <strong>25 až 35&nbsp;g denne</strong> z rôznych potravín,</li>
   <li>pri zápche má psyllium silnú oporu v štúdiách,</li>
   <li>ako doplnok v praxi môžu fungovať aj konkrétne potraviny (napr. slivky, kiwi, ovos),</li>
   <li>na motilitu má podstatný vplyv aj pohyb a denný režim.</li>

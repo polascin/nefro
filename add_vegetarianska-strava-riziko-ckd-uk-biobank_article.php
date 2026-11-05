@@ -36,7 +36,7 @@ $articles[] = [
 
 <h2>Dizajn</h2>
 
-<p>Východiskom bolo <strong>502 166</strong> účastníkov UK Biobank vo veku <strong>40 – 69 rokov</strong>, získaných v rokoch 2006 – 2010 v 22 vyšetrovacích centrách v Anglicku, Škótsku a Walese. Po vylúčení chýbajúcich údajov o stravovaní, chýbajúcich spojitých premenných (BMI, obvod pása, eGFR, ACR) a po vylúčení <strong>9 057</strong> osôb s prevalentnou chorobou obličiek zostala analytická kohorta <strong>416 584</strong> účastníkov.</p>
+<p>Východiskom bolo <strong>502&nbsp;166</strong> účastníkov UK Biobank vo veku <strong>40 – 69&nbsp;rokov</strong>, získaných v rokoch 2006 – 2010 v 22 vyšetrovacích centrách v Anglicku, Škótsku a Walese. Po vylúčení chýbajúcich údajov o stravovaní, chýbajúcich spojitých premenných (BMI, obvod pása, eGFR, ACR) a po vylúčení <strong>9&nbsp;057</strong> osôb s prevalentnou chorobou obličiek zostala analytická kohorta <strong>416&nbsp;584</strong> účastníkov.</p>
 
 <p>Stravovanie sa hodnotilo vstupným dotazníkom frekvencie potravín (FFQ) s 29 položkami. Účastníci sa zaradili do piatich skupín:</p>
 
@@ -48,13 +48,13 @@ $articles[] = [
   <li><strong>Vegetariáni</strong> – bez mäsa a rýb. Vegánov bolo na samostatnú analýzu primálo (<strong>n = 367</strong>), preto ich autori zlúčili s vegetariánmi.</li>
 </ul>
 
-<p>Incidentná choroba obličiek sa zisťovala z <strong>hospitalizačných záznamov</strong> podľa kódov MKCH-10 (N03, N06, N08, N11 – N16, N18, N19, Z49, I12, I13) a podľa procedurálnej klasifikácie OPCS-4. Prevalentná choroba obličiek na začiatku bola definovaná predchádzajúcou diagnózou alebo vstupným <strong>eGFR &lt; 60 ml/min/1,73 m²</strong>; eGFR sa počítal rovnicou CKD-EPI 2021 z kreatinínu.</p>
+<p>Incidentná choroba obličiek sa zisťovala z <strong>hospitalizačných záznamov</strong> podľa kódov MKCH-10 (N03, N06, N08, N11 – N16, N18, N19, Z49, I12, I13) a podľa procedurálnej klasifikácie OPCS-4. Prevalentná choroba obličiek na začiatku bola definovaná predchádzajúcou diagnózou alebo vstupným <strong>eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m²</strong>; eGFR sa počítal rovnicou CKD-EPI 2021 z kreatinínu.</p>
 
 <p>Použili sa Coxove modely proporcionálnych rizík s <strong>vekom ako časovou osou</strong>, upravené na pohlavie, príjem, vzdelanie, obvod pása, BMI, pohybovú aktivitu a fajčenie. Etnicita a diabetes 2. typu porušovali predpoklad proporcionality rizík, preto boli v modeloch <strong>stratifikované</strong>, nie adjustované – metodicky korektné riešenie.</p>
 
 <h2>Výsledky</h2>
 
-<p>Počas priemerného sledovania <strong>12,9 (± 2,8) roka</strong> vzniklo ochorenie obličiek u <strong>23 084</strong> účastníkov.</p>
+<p>Počas priemerného sledovania <strong>12,9 (± 2,8) roka</strong> vzniklo ochorenie obličiek u <strong>23&nbsp;084</strong> účastníkov.</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Veľkosť stravovacích skupín, počty incidentných prípadov a pomery rizík vzniku chronickej choroby obličiek" tabindex="0">
   <table>
@@ -69,31 +69,31 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Vysoká spotreba mäsa</th>
-        <td>195 030</td>
-        <td>11 796 (6 %)</td>
+        <td>195&nbsp;030</td>
+        <td>11&nbsp;796 (6 %)</td>
         <td>referencia</td>
       </tr>
       <tr>
         <th scope="row">Nízka spotreba mäsa</th>
-        <td>199 478</td>
-        <td>10 516 (5 %)</td>
+        <td>199&nbsp;478</td>
+        <td>10&nbsp;516 (5 %)</td>
         <td>0,97 (0,943 – 0,996)</td>
       </tr>
       <tr>
         <th scope="row">Konzumenti hydiny</th>
-        <td>4 779</td>
+        <td>4&nbsp;779</td>
         <td>221 (5 %)</td>
         <td>asi o 2 % nižšie, bez štatistickej významnosti</td>
       </tr>
       <tr>
         <th scope="row">Pescatariáni</th>
-        <td>9 647</td>
+        <td>9&nbsp;647</td>
         <td>319 (3 %)</td>
         <td>asi o 9 % nižšie, bez štatistickej významnosti</td>
       </tr>
       <tr>
         <th scope="row">Vegetariáni (vrátane vegánov)</th>
-        <td>7 650</td>
+        <td>7&nbsp;650</td>
         <td>232 (3 %)</td>
         <td>0,81 (0,711 – 0,927)</td>
       </tr>
@@ -153,7 +153,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V populačnej kohorte s viac než 400 000 účastníkmi a takmer 13 rokmi sledovania sa vegetariánska strava spájala s približne o pätinu nižším rizikom vzniku chronickej choroby obličiek, s odstupňovaným vzťahom kopírujúcim klesajúci príjem živočíšnych bielkovín a s výsledkom stabilným po zohľadnení vstupnej funkcie obličiek, albuminúrie aj genetickej predispozície. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale podpora pre argument, ktorý pri prevencii aj tak používame: posun jedálnička smerom k rastlinným zdrojom je rozumný. Dôkazový základ pre pacientov, ktorí chorobu obličiek už majú, zatiaľ chýba – a ten sa observačnou analýzou nahradiť nedá.</p>
+<p>V populačnej kohorte s viac než 400&nbsp;000 účastníkmi a takmer 13 rokmi sledovania sa vegetariánska strava spájala s približne o pätinu nižším rizikom vzniku chronickej choroby obličiek, s odstupňovaným vzťahom kopírujúcim klesajúci príjem živočíšnych bielkovín a s výsledkom stabilným po zohľadnení vstupnej funkcie obličiek, albuminúrie aj genetickej predispozície. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale podpora pre argument, ktorý pri prevencii aj tak používame: posun jedálnička smerom k rastlinným zdrojom je rozumný. Dôkazový základ pre pacientov, ktorí chorobu obličiek už majú, zatiaľ chýba – a ten sa observačnou analýzou nahradiť nedá.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -171,7 +171,7 @@ $articles[] = [
 
 <p><small><em><strong>Spracovaný zdroj:</strong> Candussi CJ, Bell W, Mutapcic M, Thompson AS, Rohrmann S, Cassidy A, Kühn T, Gaggl M. Vegetarian diet is associated with a lower risk of chronic kidney disease in a population-based study. <em>Scientific Reports</em>. 2026;16(1). doi: <a href="https://doi.org/10.1038/s41598-026-62827-2" target="_blank" rel="noopener noreferrer">10.1038/s41598-026-62827-2</a>. PMID 42547796, PMCID PMC13434791. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13434791/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (8 mien), veľkosti kohorty a jednotlivých stravovacích skupín, počty incidentných prípadov, dĺžka sledovania, všetky uvedené pomery rizík aj intervaly spoľahlivosti boli overené 28. augusta 2026 v plnom texte spracovanej práce cez PubMed Central. Presné intervaly spoľahlivosti pre konzumentov hydiny a pre pescatariánov sú v pôvodnej práci uvedené len v obrázku, nie v texte – preto sa tu uvádza iba veľkosť a významnosť odhadu. Údaje o príjme živín pochádzajú z podskupiny s dostupným 24-hodinovým záznamom (n = 178 209) a autori ich neporovnávali štatisticky.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (8 mien), veľkosti kohorty a jednotlivých stravovacích skupín, počty incidentných prípadov, dĺžka sledovania, všetky uvedené pomery rizík aj intervaly spoľahlivosti boli overené 28. augusta 2026 v plnom texte spracovanej práce cez PubMed Central. Presné intervaly spoľahlivosti pre konzumentov hydiny a pre pescatariánov sú v pôvodnej práci uvedené len v obrázku, nie v texte – preto sa tu uvádza iba veľkosť a významnosť odhadu. Údaje o príjme živín pochádzajú z podskupiny s dostupným 24-hodinovým záznamom (n = 178&nbsp;209) a autori ich neporovnávali štatisticky.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne klinické rozhodovanie. Zistenie sa týka vzniku ochorenia u osôb bez choroby obličiek; nejde o výživové odporúčanie pre pacientov, ktorí chronickú chorobu obličiek už majú. Úpravu príjmu bielkovín, draslíka a fosforu treba prispôsobiť štádiu ochorenia a aktuálnym laboratórnym hodnotám.</em></small></p>
 HTML,

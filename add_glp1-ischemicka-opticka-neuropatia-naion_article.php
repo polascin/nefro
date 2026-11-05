@@ -42,7 +42,7 @@ $articles[] = [
 
 <h2>Čo je NAION</h2>
 
-<p>Neartériitická predná ischemická optická neuropatia je najčastejšou akútnou optickou neuropatiou u dospelých nad 50 rokov. Vzniká pri zhoršenom prekrvení prednej časti zrakového nervu, čo vedie k ischemickému poškodeniu.</p>
+<p>Neartériitická predná ischemická optická neuropatia je najčastejšou akútnou optickou neuropatiou u dospelých nad 50&nbsp;rokov. Vzniká pri zhoršenom prekrvení prednej časti zrakového nervu, čo vedie k ischemickému poškodeniu.</p>
 
 <p>Typický obraz je:</p>
 
@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Pretože poškodenie zraku môže byť trvalé, treba každú náhlu zmenu videnia považovať za urgentný stav. Pacient nemá čakať, či sa stav „sám upraví“.</p>
 
-<p>Výskyt NAION sa odhaduje približne na 2 až 10 prípadov na 100 000 osôb ročne. Riziko rastie s vekom a s prítomnosťou vaskulárnych rizikových faktorov.</p>
+<p>Výskyt NAION sa odhaduje približne na 2 až 10 prípadov na 100&nbsp;000 osôb ročne. Riziko rastie s vekom a s prítomnosťou vaskulárnych rizikových faktorov.</p>
 
 <h2>Prečo sa diskutuje práve o GLP-1 liekoch</h2>
 

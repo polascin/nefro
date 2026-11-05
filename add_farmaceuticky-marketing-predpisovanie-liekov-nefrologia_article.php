@@ -51,10 +51,10 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Expozícia</th><th scope="col">Vhodnosť predpisovania</th><th scope="col">Množstvo</th><th scope="col">Náklady</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Dary a platby</th><td>znížená (10 štúdií; 2 941 948 predpisujúcich)</td><td>zvýšené (39 štúdií; 3 858 871)</td><td>pravdepodobne zvýšené (25 štúdií; 2 505 292)</td></tr>
-    <tr><th scope="row">Reklama a vzdelávanie</th><td>môže byť znížená (6 štúdií; 1 335)</td><td>pravdepodobne zvýšené (7 štúdií; 151 399)</td><td>môžu byť zvýšené (2 štúdie; 986)</td></tr>
-    <tr><th scope="row">Bezplatné vzorky</th><td>veľmi neisté (1 štúdia; 10 praxí)</td><td>veľmi neisté (4 štúdie; 150 050)</td><td>veľmi neisté (4 štúdie; 2 508)</td></tr>
-    <tr><th scope="row">Politiky konfliktu záujmov</th><td>pravdepodobne zlepšená (2 štúdie; 3 065)</td><td>môže byť znížené (6 štúdií; 110 470)</td><td>neisté (2 štúdie; 33 975)</td></tr>
+    <tr><th scope="row">Dary a platby</th><td>znížená (10 štúdií; 2&nbsp;941&nbsp;948 predpisujúcich)</td><td>zvýšené (39 štúdií; 3&nbsp;858&nbsp;871)</td><td>pravdepodobne zvýšené (25 štúdií; 2&nbsp;505&nbsp;292)</td></tr>
+    <tr><th scope="row">Reklama a vzdelávanie</th><td>môže byť znížená (6 štúdií; 1&nbsp;335)</td><td>pravdepodobne zvýšené (7 štúdií; 151&nbsp;399)</td><td>môžu byť zvýšené (2 štúdie; 986)</td></tr>
+    <tr><th scope="row">Bezplatné vzorky</th><td>veľmi neisté (1 štúdia; 10 praxí)</td><td>veľmi neisté (4 štúdie; 150&nbsp;050)</td><td>veľmi neisté (4 štúdie; 2&nbsp;508)</td></tr>
+    <tr><th scope="row">Politiky konfliktu záujmov</th><td>pravdepodobne zlepšená (2 štúdie; 3&nbsp;065)</td><td>môže byť znížené (6 štúdií; 110&nbsp;470)</td><td>neisté (2 štúdie; 33&nbsp;975)</td></tr>
   </tbody>
 </table>
 </div>
@@ -79,9 +79,9 @@ $articles[] = [
 
 <p>Obsah správy je podrobný. Podľa § 15 ods. 8 sa výdavky členia na marketing, propagáciu lieku, peňažné plnenia a nepeňažné plnenia poskytnuté priamo alebo nepriamo zdravotníckemu pracovníkovi alebo poskytovateľovi zdravotnej starostlivosti. Podľa ods. 9 sa pri plneniach uvádza meno, priezvisko a zdravotnícke povolanie pracovníka, názov a adresa zdravotníckeho zariadenia, výška a účel plnenia a pri plnení viazanom na liek aj názov lieku alebo jeho anatomicko-terapeuticko-chemickej skupiny, s členením účelu na klinické skúšanie, neintervenčnú klinickú štúdiu, štúdiu o bezpečnosti po registrácii, prieskum trhu, odborné prednášky, odborné konzultácie, účastnícke a registračné poplatky a dary.</p>
 
-<p>Zákon pamätá aj na nepriame cesty. Podľa ods. 11 a 12 je pri plnení poskytnutom cez tretiu osobu nutné oznámiť aj identifikáciu tejto tretej osoby, a samotná tretia osoba musí držiteľovi povolenia do 30 dní oznámiť zoznam príjemcov.</p>
+<p>Zákon pamätá aj na nepriame cesty. Podľa ods. 11 a 12 je pri plnení poskytnutom cez tretiu osobu nutné oznámiť aj identifikáciu tejto tretej osoby, a samotná tretia osoba musí držiteľovi povolenia do 30&nbsp;dní oznámiť zoznam príjemcov.</p>
 
-<p>Podľa § 15 ods. 13 Národné centrum zdravotníckych informácií bezodkladne zverejní oznámené údaje na svojom webovom sídle. Ak zdravotnícky pracovník alebo poskytovateľ zistí, že zverejnené informácie o jeho osobe nie sú presné, úplné alebo pravdivé, môže podať námietku; centrum o nej rozhodne do 30 dní.</p>
+<p>Podľa § 15 ods. 13 Národné centrum zdravotníckych informácií bezodkladne zverejní oznámené údaje na svojom webovom sídle. Ak zdravotnícky pracovník alebo poskytovateľ zistí, že zverejnené informácie o jeho osobe nie sú presné, úplné alebo pravdivé, môže podať námietku; centrum o nej rozhodne do 30&nbsp;dní.</p>
 
 <p>Z toho vyplýva praktická možnosť, ktorú väčšina lekárov nevyužíva: <strong>údaje o vlastnej osobe sú verejné a dajú sa skontrolovať</strong>. Nejde o obvinenie ani o vyzvanie k pocitu viny. Ide o to, že dáta, ktoré Cochranov prehľad analyzoval v americkom prostredí, sú u nás k dispozícii na úrovni jednotlivca a dajú sa použiť na vlastnú kontrolu.</p>
 

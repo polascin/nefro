@@ -87,19 +87,19 @@ $articles[] = [
 
 <h3>Primárna biliárna cholangitída</h3>
 
-<p>Pri primárnej biliárnej cholangitíde (PBC) je UDCA liečbou prvej línie. Odporúčania Európskej asociácie pre štúdium pečene uvádzajú dávku <strong>13 až 15 mg/kg/deň</strong> pre pacientov s PBC; pri dobrej tolerancii sa liečba zvyčajne podáva dlhodobo až celoživotne. Slovenský súhrn charakteristických vlastností lieku Ursofalk 250 mg kapsuly uvádza pri symptomatickej PBC bez dekompenzovanej cirhózy dávku 14 ± 2 mg/kg/deň, pričom konkrétny počet kapsúl sa zaokrúhľuje podľa telesnej hmotnosti.</p>
+<p>Pri primárnej biliárnej cholangitíde (PBC) je UDCA liečbou prvej línie. Odporúčania Európskej asociácie pre štúdium pečene uvádzajú dávku <strong>13 až 15&nbsp;mg/kg/deň</strong> pre pacientov s PBC; pri dobrej tolerancii sa liečba zvyčajne podáva dlhodobo až celoživotne. Slovenský súhrn charakteristických vlastností lieku Ursofalk 250&nbsp;mg kapsuly uvádza pri symptomatickej PBC bez dekompenzovanej cirhózy dávku 14 ± 2&nbsp;mg/kg/deň, pričom konkrétny počet kapsúl sa zaokrúhľuje podľa telesnej hmotnosti.</p>
 
 <p>Biochemická odpoveď sa štandardne hodnotí po 12 mesiacoch, hoci skoršie hodnotenie môže poskytnúť prognostickú informáciu. Dôležité sú najmä alkalická fosfatáza a bilirubín spolu so štádiom ochorenia. Nedostatočná odpoveď znamená vyššie riziko progresie a je dôvodom na špecializované prehodnotenie ďalšej liečby. Nie je dôvodom nahradiť UDCA kyselinou ursolovou.</p>
 
 <h3>Vybrané cholesterolové žlčníkové kamene</h3>
 
-<p>UDCA možno použiť na rozpúšťanie starostlivo vybraných cholesterolových žlčníkových kameňov. Podľa slovenského súhrnu charakteristických vlastností lieku musia byť kamene röntgenovo nekontrastné, nesmú byť väčšie ako 15 mm a žlčník musí zostať funkčný. Liečba zvyčajne trvá 6 až 24 mesiacov; ak sa kamene po 12 mesiacoch nezmenšujú, v liečbe sa nemá pokračovať.</p>
+<p>UDCA možno použiť na rozpúšťanie starostlivo vybraných cholesterolových žlčníkových kameňov. Podľa slovenského súhrnu charakteristických vlastností lieku musia byť kamene röntgenovo nekontrastné, nesmú byť väčšie ako 15&nbsp;mm a žlčník musí zostať funkčný. Liečba zvyčajne trvá 6 až 24&nbsp;mesiacov; ak sa kamene po 12 mesiacoch nezmenšujú, v liečbe sa nemá pokračovať.</p>
 
 <p>Citovaný liek sa nemá používať pri kalcifikovaných kameňoch, obštrukcii žlčových ciest, akútnom zápale žlčníka alebo žlčových ciest, častých biliárnych kolikách ani pri narušenej kontraktilite žlčníka. Nejde teda o univerzálnu konzervatívnu liečbu každého pacienta so žlčníkovými kameňmi.</p>
 
 <h3>Indikácie, bezpečnosť a sledovanie liečby závisia od konkrétneho lieku</h3>
 
-<p>Rozsah schválených indikácií sa líši podľa lieku a jurisdikcie. Slovenský súhrn charakteristických vlastností lieku Ursofalk 250 mg kapsuly okrem PBC a vybraných žlčníkových kameňov uvádza biliárnu refluxnú gastritídu a hepatobiliárne poruchy pri cystickej fibróze u detí vo veku od 6 rokov do menej ako 18 rokov. Z toho nemožno vyvodiť, že UDCA je účinná pri každej cholestáze alebo pri každom ochorení pečene.</p>
+<p>Rozsah schválených indikácií sa líši podľa lieku a jurisdikcie. Slovenský súhrn charakteristických vlastností lieku Ursofalk 250&nbsp;mg kapsuly okrem PBC a vybraných žlčníkových kameňov uvádza biliárnu refluxnú gastritídu a hepatobiliárne poruchy pri cystickej fibróze u detí vo veku od 6&nbsp;rokov do menej ako 18&nbsp;rokov. Z toho nemožno vyvodiť, že UDCA je účinná pri každej cholestáze alebo pri každom ochorení pečene.</p>
 
 <p>Najčastejším nežiaducim účinkom uvedeným v slovenskej informácii o lieku je mäkká stolica alebo hnačka. Pri pretrvávajúcej hnačke môže byť potrebné zníženie dávky alebo ukončenie liečby. Pri PBC sa môže na začiatku zriedkavo zintenzívniť svrbenie. Ošetrujúci lekár má podľa citovaného súhrnu kontrolovať AST, ALT a GGT každé štyri týždne počas prvých troch mesiacov a potom každé tri mesiace.</p>
 
@@ -113,9 +113,9 @@ $articles[] = [
 
 <h3>Čo ukázali klinické štúdie</h3>
 
-<p>V publikovanej štúdii fázy I dostalo 24 zdravých dobrovoľníkov jednorazovú intravenóznu dávku nanolipozomálnej kyseliny ursolovej a osem pacientov s pokročilými solídnymi nádormi dostávalo opakované dávky počas 14 dní. Farmakokinetika bola v skúmanom rozmedzí približne lineárna a väčšina súvisiacich nežiaducich udalostí bola mierna až stredne závažná. Štúdia však nebola navrhnutá na preukázanie protinádorovej účinnosti, dlhodobej bezpečnosti ani účinku pri hepatobiliárnom ochorení.</p>
+<p>V publikovanej štúdii fázy I dostalo 24 zdravých dobrovoľníkov jednorazovú intravenóznu dávku nanolipozomálnej kyseliny ursolovej a osem pacientov s pokročilými solídnymi nádormi dostávalo opakované dávky počas 14&nbsp;dní. Farmakokinetika bola v skúmanom rozmedzí približne lineárna a väčšina súvisiacich nežiaducich udalostí bola mierna až stredne závažná. Štúdia však nebola navrhnutá na preukázanie protinádorovej účinnosti, dlhodobej bezpečnosti ani účinku pri hepatobiliárnom ochorení.</p>
 
-<p>Systematický prehľad a metaanalýza z roku 2024 zahrnuli šesť klinických prác so suplementáciou UA v dávkach približne 51 až 450 mg/deň. Súhrnná analýza nepreukázala významnú zmenu hodnotených antropometrických, glykemických, lipidových ani tlakových ukazovateľov oproti kontrolným skupinám. Malý počet a heterogenita štúdií neumožňujú vylúčiť každý možný účinok, neposkytujú však podklad na tvrdenie o širokom klinickom prínose.</p>
+<p>Systematický prehľad a metaanalýza z roku 2024 zahrnuli šesť klinických prác so suplementáciou UA v dávkach približne 51 až 450&nbsp;mg/deň. Súhrnná analýza nepreukázala významnú zmenu hodnotených antropometrických, glykemických, lipidových ani tlakových ukazovateľov oproti kontrolným skupinám. Malý počet a heterogenita štúdií neumožňujú vylúčiť každý možný účinok, neposkytujú však podklad na tvrdenie o širokom klinickom prínose.</p>
 
 <h3>Bezpečnosť a doplnky výživy</h3>
 
@@ -151,7 +151,7 @@ $articles[] = [
 
 <ol>
   <li><strong>European Association for the Study of the Liver.</strong> <em>EASL Clinical Practice Guidelines: The diagnosis and management of patients with primary biliary cholangitis.</em> J Hepatol. 2017;67(1):145–172. doi: <a href="https://doi.org/10.1016/j.jhep.2017.03.022" target="_blank" rel="noopener noreferrer">10.1016/j.jhep.2017.03.022</a>. PMID 28427765. <a href="https://pubmed.ncbi.nlm.nih.gov/28427765/" target="_blank" rel="noopener noreferrer">PubMed</a>; <a href="https://easl.eu/wp-content/uploads/2018/10/PBC-English-report.pdf" target="_blank" rel="noopener noreferrer">plný text EASL</a>.</li>
-  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Ursofalk 250 mg kapsuly: súhrn charakteristických vlastností lieku.</em> Schválený text 06/2025. <a href="https://www.sukl.sk/document/download?dok_id=863851&amp;dok_sec=887a177273c78ff79dc02b494a0c8b8b" target="_blank" rel="noopener noreferrer">SPC</a>; <a href="https://www.sukl.sk/ursofalk-250-mg-kapsuly-27028" target="_blank" rel="noopener noreferrer">detail registrovaného lieku</a>.</li>
+  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Ursofalk 250&nbsp;mg kapsuly: súhrn charakteristických vlastností lieku.</em> Schválený text 06/2025. <a href="https://www.sukl.sk/document/download?dok_id=863851&amp;dok_sec=887a177273c78ff79dc02b494a0c8b8b" target="_blank" rel="noopener noreferrer">SPC</a>; <a href="https://www.sukl.sk/ursofalk-250-mg-kapsuly-27028" target="_blank" rel="noopener noreferrer">detail registrovaného lieku</a>.</li>
   <li><strong>Hofmann AF.</strong> <em>Pharmacology of ursodeoxycholic acid, an enterohepatic drug.</em> Scand J Gastroenterol Suppl. 1994;204:1–15. doi: <a href="https://doi.org/10.3109/00365529409103618" target="_blank" rel="noopener noreferrer">10.3109/00365529409103618</a>. PMID 7824870. <a href="https://pubmed.ncbi.nlm.nih.gov/7824870/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Paumgartner G, Beuers U.</strong> <em>Ursodeoxycholic acid in cholestatic liver disease: mechanisms of action and therapeutic use revisited.</em> Hepatology. 2002;36(3):525–531. doi: <a href="https://doi.org/10.1053/jhep.2002.36088" target="_blank" rel="noopener noreferrer">10.1053/jhep.2002.36088</a>. PMID 12198643. <a href="https://pubmed.ncbi.nlm.nih.gov/12198643/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>National Center for Biotechnology Information.</strong> PubChem Compound Summary: <em>Ursodeoxycholic Acid</em> (CID 31401) a <em>Ursolic Acid</em> (CID 64945). <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Ursodiol" target="_blank" rel="noopener noreferrer">UDCA</a>; <a href="https://pubchem.ncbi.nlm.nih.gov/compound/ursolic_acid" target="_blank" rel="noopener noreferrer">UA</a>.</li>

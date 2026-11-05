@@ -89,7 +89,7 @@ if ($requestMethod === 'POST') {
                 );
                 if (!$reauth['ok']) {
                     $errors[] = $reauth['blocked']
-                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
                         : 'Aktuálne heslo nie je správne.';
                 } else {
                     $secret = generateTotpSecret();
@@ -168,7 +168,7 @@ if ($requestMethod === 'POST') {
                 );
                 if (!$reauth['ok']) {
                     $errors[] = $reauth['blocked']
-                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
                         : 'Zadané heslo nie je správne.';
                 } else {
                     try {
@@ -205,7 +205,7 @@ if ($requestMethod === 'POST') {
                 );
                 if (!$reauth['ok']) {
                     $errors[] = $reauth['blocked']
-                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
                         : 'Zadané heslo nie je správne.';
                 } else {
                     $backup = generateBackupCodes();

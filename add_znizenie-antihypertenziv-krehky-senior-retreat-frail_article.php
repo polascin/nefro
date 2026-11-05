@@ -33,9 +33,9 @@ $articles[] = [
 
 <h2>Čo RETREAT-FRAIL skutočne skúmal</h2>
 
-<p>RETREAT-FRAIL bola multicentrická randomizovaná kontrolovaná štúdia vo francúzskych zariadeniach dlhodobej starostlivosti. Zaradení boli obyvatelia vo veku najmenej 80 rokov s krehkosťou, systolickým krvným tlakom nižším ako 130 mmHg a liečbou viac než jedným antihypertenzívom. Celkovo 1 048 účastníkov bolo pridelených v pomere 1 : 1 k protokolovo riadenej postupnej redukcii liečby alebo k obvyklej starostlivosti. Plánované sledovanie trvalo najviac štyri roky; odhadovaný medián potenciálneho sledovania bol 38,4 mesiaca.</p>
+<p>RETREAT-FRAIL bola multicentrická randomizovaná kontrolovaná štúdia vo francúzskych zariadeniach dlhodobej starostlivosti. Zaradení boli obyvatelia vo veku najmenej 80&nbsp;rokov s krehkosťou, systolickým krvným tlakom nižším ako 130&nbsp;mmHg a liečbou viac než jedným antihypertenzívom. Celkovo 1&nbsp;048 účastníkov bolo pridelených v pomere 1 : 1 k protokolovo riadenej postupnej redukcii liečby alebo k obvyklej starostlivosti. Plánované sledovanie trvalo najviac štyri roky; odhadovaný medián potenciálneho sledovania bol 38,4 mesiaca.</p>
 
-<p>Medzi východiskom a poslednou návštevou klesol priemerný počet antihypertenzív v redukčnom ramene z 2,6 na 1,5 a v ramene obvyklej starostlivosti z 2,5 na 2,0. Systolický tlak sa pri redukcii zvýšil v priemere o 4,1 mmHg viac než pri obvyklej starostlivosti (95 % interval spoľahlivosti 1,9–5,7 mmHg).</p>
+<p>Medzi východiskom a poslednou návštevou klesol priemerný počet antihypertenzív v redukčnom ramene z 2,6 na 1,5 a v ramene obvyklej starostlivosti z 2,5 na 2,0. Systolický tlak sa pri redukcii zvýšil v priemere o 4,1&nbsp;mmHg viac než pri obvyklej starostlivosti (95 % interval spoľahlivosti 1,9–5,7&nbsp;mmHg).</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky štúdie RETREAT-FRAIL" tabindex="0">
 <table>
@@ -63,19 +63,19 @@ $articles[] = [
 <p>Výsledky RETREAT-FRAIL nemožno automaticky preniesť na:</p>
 
 <ul>
-  <li>funkčne zdatných ľudí vo veku nad 80 rokov,</li>
+  <li>funkčne zdatných ľudí vo veku nad 80&nbsp;rokov,</li>
   <li>pacientov užívajúcich iba jedno antihypertenzívum,</li>
-  <li>pacientov so systolickým tlakom ≥ 130 mmHg,</li>
+  <li>pacientov so systolickým tlakom ≥ 130&nbsp;mmHg,</li>
   <li>mladších pacientov s krehkosťou,</li>
   <li>dialyzovaných pacientov ani osoby po transplantácii obličky,</li>
   <li>pacientov s akútnou obehovou nestabilitou.</li>
 </ul>
 
-<p>Odporúčania ESC z roku 2024 zdôrazňujú, že dobre tolerovanú liečbu netreba u veľmi starého alebo krehkého pacienta automaticky rušiť. Pri progresii krehkosti, poklese tlaku, symptomatickej ortostatickej hypotenzii alebo obmedzenej očakávanej dĺžke života však môže byť potrebná individualizácia a depreskripcia. Cieľ 120–129/70–79 mmHg sa na stredne až ťažko krehkých pacientov nemusí dať bezpečne zovšeobecniť.</p>
+<p>Odporúčania ESC z roku 2024 zdôrazňujú, že dobre tolerovanú liečbu netreba u veľmi starého alebo krehkého pacienta automaticky rušiť. Pri progresii krehkosti, poklese tlaku, symptomatickej ortostatickej hypotenzii alebo obmedzenej očakávanej dĺžke života však môže byť potrebná individualizácia a depreskripcia. Cieľ 120–129/70–79&nbsp;mmHg sa na stredne až ťažko krehkých pacientov nemusí dať bezpečne zovšeobecniť.</p>
 
-<h2>Hodnota 130 mmHg nie je automatický prah na vysadenie</h2>
+<h2>Hodnota 130&nbsp;mmHg nie je automatický prah na vysadenie</h2>
 
-<p>Systolický tlak pod 130 mmHg bol vstupným kritériom štúdie, nie univerzálnou terapeutickou hranicou. Jednorazové meranie nestačí. Pred zmenou liečby treba posúdiť:</p>
+<p>Systolický tlak pod 130&nbsp;mmHg bol vstupným kritériom štúdie, nie univerzálnou terapeutickou hranicou. Jednorazové meranie nestačí. Pred zmenou liečby treba posúdiť:</p>
 
 <ul>
   <li>opakovateľnosť hodnôt a správnosť techniky merania,</li>
@@ -126,7 +126,7 @@ $articles[] = [
   <li><strong>Výsledok znovu vyhodnotiť.</strong> Opätovné nasadenie lieku pri návrate indikácie alebo nežiaducom vzostupe tlaku je správna súčasť reverzibilného procesu, nie jeho zlyhanie.</li>
 </ol>
 
-<p>Predchádzajúca štúdia OPTIMISE ukázala, že u vybraných ambulantných pacientov vo veku najmenej 80 rokov možno po odstránení jedného lieku krátkodobo zachovať systolický tlak pod 150 mmHg. Išlo však o menej krehkú populáciu vybranú všeobecným lekárom a iba 12-týždňové primárne sledovanie. OPTIMISE a RETREAT-FRAIL sa preto dopĺňajú, ale nie sú vzájomne zameniteľné.</p>
+<p>Predchádzajúca štúdia OPTIMISE ukázala, že u vybraných ambulantných pacientov vo veku najmenej 80&nbsp;rokov možno po odstránení jedného lieku krátkodobo zachovať systolický tlak pod 150&nbsp;mmHg. Išlo však o menej krehkú populáciu vybranú všeobecným lekárom a iba 12-týždňové primárne sledovanie. OPTIMISE a RETREAT-FRAIL sa preto dopĺňajú, ale nie sú vzájomne zameniteľné.</p>
 
 <h2>Kedy treba konať bezodkladne</h2>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>RETREAT-FRAIL nepreukázal, že postupná redukcia antihypertenzív znižuje mortalitu, ani nedokázal úplnú rovnocennosť oboch postupov. Ukázal však, že v protokolom sledovanej skupine veľmi starých krehkých obyvateľov zariadení dlhodobej starostlivosti bolo možné znížiť počet liekov za cenu priemerného zvýšenia systolického tlaku približne o 4 mmHg bez zjavného rozdielu v nežiaducich udalostiach.</p>
+<p>RETREAT-FRAIL nepreukázal, že postupná redukcia antihypertenzív znižuje mortalitu, ani nedokázal úplnú rovnocennosť oboch postupov. Ukázal však, že v protokolom sledovanej skupine veľmi starých krehkých obyvateľov zariadení dlhodobej starostlivosti bolo možné znížiť počet liekov za cenu priemerného zvýšenia systolického tlaku približne o 4&nbsp;mmHg bez zjavného rozdielu v nežiaducich udalostiach.</p>
 
 <p>Najvhodnejším kandidátom na prehodnotenie liečby je krehký pacient s opakovane nízkym alebo zle tolerovaným tlakom, viacerými liekmi a nepriaznivým pomerom očakávaného prínosu a záťaže. Rozhodnutie musí rešpektovať ďalšie indikácie, objemový stav, funkciu obličiek, ciele pacienta a reálnu možnosť následného monitorovania.</p>
 

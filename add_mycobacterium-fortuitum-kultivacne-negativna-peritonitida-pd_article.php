@@ -97,7 +97,7 @@ $articles[] = [
 
 <h2>Refraktérna peritonitída a rozhodnutie o katétri</h2>
 
-<p>ISPD definuje refraktérnu peritonitídu ako zlyhanie vyčistenia dialyzátu po piatich dňoch vhodnej antibiotickej liečby a pri nej odporúča odstránenie katétra (stupeň 1D). Po začatí liečby zvyčajne nastáva klinické zlepšenie do 72 hodín.</p>
+<p>ISPD definuje refraktérnu peritonitídu ako zlyhanie vyčistenia dialyzátu po piatich dňoch vhodnej antibiotickej liečby a pri nej odporúča odstránenie katétra (stupeň 1D). Po začatí liečby zvyčajne nastáva klinické zlepšenie do 72&nbsp;hodín.</p>
 
 <p>Aktualizácia z roku 2022 však priniesla dôležité zmiernenie: ak sa počet leukocytov v dialyzáte znižuje smerom k norme, je namieste ďalej sledovať účinok antibiotík aj po piatom dni namiesto povinného odstránenia katétra (stupeň 2C). Samotná päťdňová hranica sa v texte odporúčania označuje za <strong>arbitrárny referenčný nástroj</strong> – údaje porovnávajúce dlhodobé výsledky pri päťdňovom pravidle a pri dlhšom čakaní chýbajú.</p>
 

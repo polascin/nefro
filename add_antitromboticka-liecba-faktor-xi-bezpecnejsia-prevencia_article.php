@@ -87,7 +87,7 @@ $articles[] = [
 
 <ul>
   <li>približne <strong>1 mesiac trojkombinácie</strong> (antikoagulancium + kyselina acetylsalicylová + inhibítor P2Y12; ako bezpečnejšia voľba do trojkombinácie sa najčastejšie uvádza <strong>klopidogrel</strong>),</li>
-  <li>následne prechod na <strong>dvojkombináciu</strong> na ďalšie obdobie (v príklade približne 5 mesiacov),</li>
+  <li>následne prechod na <strong>dvojkombináciu</strong> na ďalšie obdobie (v príklade približne 5&nbsp;mesiacov),</li>
   <li>a napokon často návrat k <strong>samotnému perorálnemu antikoagulanciu (DOAC)</strong> – približne po 6 mesiacoch alebo neskôr – podľa ischemického aj krvácavého profilu pacienta.</li>
 </ul>
 

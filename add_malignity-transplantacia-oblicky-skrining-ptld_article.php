@@ -66,7 +66,7 @@ $articles[] = [
 <ul>
   <li><strong>Prostata:</strong> odporúčania sa skôr držia všeobecných odporúčaní, keďže benefit a dopad na mortalitu nie sú úplne jednoznačné a nadmerný skríning môže byť bariérou pri zaraďovaní na čakaciu listinu.</li>
   <li><strong>Koža:</strong> namiesto štandardného skríningu sa odporúča „posilnený“ (enhanced) prístup.</li>
-  <li><strong>Renálny karcinóm (RCC) a urotel:</strong> pri rizikových skupinách sa zvažuje ultrazvuk a/alebo cytológia moču v intervaloch uvedených v prehľade (často sa uvádza 1 až 3 roky pred transplantáciou; konkrétne frekvencie sa medzi odporúčaniami líšia; spomína sa aj nesúhlas s rutinným ročným ultrazvukom po transplantácii v stanovisku EAU).</li>
+  <li><strong>Renálny karcinóm (RCC) a urotel:</strong> pri rizikových skupinách sa zvažuje ultrazvuk a/alebo cytológia moču v intervaloch uvedených v prehľade (často sa uvádza 1 až 3&nbsp;roky pred transplantáciou; konkrétne frekvencie sa medzi odporúčaniami líšia; spomína sa aj nesúhlas s rutinným ročným ultrazvukom po transplantácii v stanovisku EAU).</li>
   <li><strong>Krčok maternice (cervix):</strong> prehľad zdôrazňuje, že väčšina odporúčaní po transplantácii smeruje k častejšiemu skríningu oproti všeobecnej populácii (v článku sa spomína približovanie k frekvencii odporúčanej pri HIV).</li>
 </ul>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Očkovať treba ideálne ešte v predtransplantačnej fáze</strong>, kým imunosupresia neoslabí odpoveď na vakcínu.</li>
-  <li>Ak sa očkuje <strong>po transplantácii</strong>, prehľad odporúča počkať <strong>minimálne 3 mesiace po transplantácii</strong>.</li>
+  <li>Ak sa očkuje <strong>po transplantácii</strong>, prehľad odporúča počkať <strong>minimálne 3&nbsp;mesiace po transplantácii</strong>.</li>
   <li><strong>Živým vakcínam sa treba u pacientov na imunosupresii vyhnúť.</strong></li>
 </ul>
 
@@ -115,9 +115,9 @@ $articles[] = [
 <p>U EBV-séronegatívneho príjemcu sa odporúča sledovať EBV PCR:</p>
 
 <ul>
-  <li>každých <strong>7 až 14 dní</strong> počas prvého mesiaca,</li>
-  <li>následne každých <strong>28 dní</strong> do konca prvých 6 mesiacov,</li>
-  <li>potom každé <strong>3 až 6 mesiacov</strong> do 1 roka, pokiaľ je pacient avirémický.</li>
+  <li>každých <strong>7 až 14&nbsp;dní</strong> počas prvého mesiaca,</li>
+  <li>následne každých <strong>28&nbsp;dní</strong> do konca prvých 6&nbsp;mesiacov,</li>
+  <li>potom každé <strong>3 až 6&nbsp;mesiacov</strong> do 1 roka, pokiaľ je pacient avirémický.</li>
 </ul>
 
 <p>Pri príznakoch pripomínajúcich infekčnú mononukleózu alebo pri podozrení na PTLD sa testovanie spravidla rozšíri aj nad rámec rutiny.</p>

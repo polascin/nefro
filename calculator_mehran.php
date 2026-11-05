@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "options" => ["min_range" => 18, "max_range" => 120],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
@@ -252,7 +252,7 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <ul class="mb-0">
                             <li>Hypotenzia: <strong>5</strong> &bull; intraaortálna balónová kontrapulzácia (IABP): <strong>5</strong> &bull; kongestívne srdcové zlyhanie (NYHA III/IV alebo pľúcny edém): <strong>5</strong></li>
-                            <li>Vek &gt; 75 rokov: <strong>4</strong> &bull; anémia (Hct &lt; 39 % muži / &lt; 36 % ženy): <strong>3</strong> &bull; diabetes mellitus: <strong>3</strong></li>
+                            <li>Vek &gt; 75 rokov: <strong>4</strong> &bull; anémia (Hct &lt; 39 % muži / &lt; 36 % ženy): <strong>3</strong> &bull; diabetes mellitus: <strong>3</strong></li>
                             <li>Objem kontrastu: <strong>1 bod / 100 mL</strong></li>
                             <li>eGFR &lt; 60: 40 až 60 → <strong>2</strong>, 20 až &lt; 40 → <strong>4</strong>, &lt; 20 → <strong>6</strong></li>
                         </ul>

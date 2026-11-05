@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Čo presne stúplo</h2>
 
-<p>Najlepší dostupný kvantitatívny podklad pochádza z prierezovej štúdie v sieti dvanástich amerických zdravotníckych systémov združených v Mental Health Research Network. Analyzovali sa elektronické zdravotné záznamy od 1. januára 2011 do 31. decembra 2022; v roku 2022 bolo v systémoch evidovaných 12 264 003 poistencov.</p>
+<p>Najlepší dostupný kvantitatívny podklad pochádza z prierezovej štúdie v sieti dvanástich amerických zdravotníckych systémov združených v Mental Health Research Network. Analyzovali sa elektronické zdravotné záznamy od 1. januára 2011 do 31. decembra 2022; v roku 2022 bolo v systémoch evidovaných 12&nbsp;264&nbsp;003 poistencov.</p>
 
 <div class="table-responsive" role="region" aria-label="Zmena diagnostickej miery poruchy autistického spektra v USA medzi rokmi 2011 a 2022" tabindex="0">
 <table>
@@ -41,8 +41,8 @@ $articles[] = [
     <tr><th scope="col">Skupina</th><th scope="col">Relatívny nárast 2011 – 2022</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Celá vzorka</th><td>175 % (z 2,3 na 6,3 na 1 000 osôb)</td></tr>
-    <tr><th scope="row">Dospelí vo veku 26 – 34 rokov</th><td>450 %</td></tr>
+    <tr><th scope="row">Celá vzorka</th><td>175 % (z 2,3 na 6,3 na 1&nbsp;000 osôb)</td></tr>
+    <tr><th scope="row">Dospelí vo veku 26 – 34&nbsp;rokov</th><td>450 %</td></tr>
     <tr><th scope="row">Dievčatá</th><td>305 %</td></tr>
     <tr><th scope="row">Chlapci</th><td>185 %</td></tr>
     <tr><th scope="row">Ženy (dospelé)</th><td>315 %</td></tr>
@@ -51,7 +51,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Najvyššia diagnostická miera bola počas celého obdobia u detí vo veku 5 až 8 rokov. U detí boli relatívne nárasty vyššie v rasových a etnických menšinových skupinách než u bielych detí; u dospelých sa tento rozdiel nepotvrdil.</p>
+<p>Najvyššia diagnostická miera bola počas celého obdobia u detí vo veku 5 až 8&nbsp;rokov. U detí boli relatívne nárasty vyššie v rasových a etnických menšinových skupinách než u bielych detí; u dospelých sa tento rozdiel nepotvrdil.</p>
 
 <p>Dôležité je presné pomenovanie toho, čo sa meria. Ide o <strong>diagnostickú mieru</strong> – podiel ľudí, ktorí majú v zdravotnej dokumentácii kódovanú diagnózu. To nie je to isté ako prevalencia poruchy v populácii. Samotný rozdiel medzi týmito dvoma veličinami je jadrom celej diskusie.</p>
 
@@ -59,7 +59,7 @@ $articles[] = [
 
 <h3>Zmena diagnostickej praxe je kvantifikovateľná</h3>
 
-<p>Retrospektívna analýza záznamov kalifornského Department of Developmental Services preskúmala 7 003 pacientov s autizmom narodených pred rokom 1987 a evidovaných v rokoch 1992 až 2005. V centre pozornosti bolo 631 pacientov, ktorí mali pôvodne iba diagnózu mentálnej retardácie a neskôr k nej pribudla diagnóza autizmu.</p>
+<p>Retrospektívna analýza záznamov kalifornského Department of Developmental Services preskúmala 7&nbsp;003 pacientov s autizmom narodených pred rokom 1987 a evidovaných v rokoch 1992 až 2005. V centre pozornosti bolo 631 pacientov, ktorí mali pôvodne iba diagnózu mentálnej retardácie a neskôr k nej pribudla diagnóza autizmu.</p>
 
 <p>V rokoch, keď sa diagnostická prax menila, bola šanca na zmenu diagnózy významne vyššia (pomery šancí 1,68; 1,55; 1,58; 1,82 a 1,61). Autori odhadli, že <strong>26,4 % (95 % IS 16,25 – 36,48) nárastu počtu prípadov autizmu v Kalifornii</strong> súvisí výlučne so zmenou diagnostickej praxe, a to <em>jedinou cestou</em> – u ľudí, ktorí predtým mali diagnózu mentálnej retardácie.</p>
 
@@ -81,9 +81,9 @@ $articles[] = [
 
 <h2>Skríning a jeho hranice</h2>
 
-<p>Americká akadémia pediatrov odporúča univerzálny skríning poruchy autistického spektra vo veku 18 a 24 mesiacov popri všeobecnom skríningu vývinových oneskorení. Skríning má zachytiť rizikové deti, nie stanoviť diagnózu; pri pozitívnom výsledku musí nasledovať klinické vyšetrenie.</p>
+<p>Americká akadémia pediatrov odporúča univerzálny skríning poruchy autistického spektra vo veku 18 a 24&nbsp;mesiacov popri všeobecnom skríningu vývinových oneskorení. Skríning má zachytiť rizikové deti, nie stanoviť diagnózu; pri pozitívnom výsledku musí nasledovať klinické vyšetrenie.</p>
 
-<p>Výpovedná hodnota skríningových nástrojov je však obmedzenejšia, než sa bežne predpokladá. Nórska štúdia v rámci kohorty Norwegian Mother and Child Cohort Study hodnotila <strong>68 197 detí, ktoré v 18 mesiacoch prešli skríningom M-CHAT ako negatívne</strong>. Časť z nich neskôr dostala diagnózu poruchy autistického spektra – a už v 18 mesiacoch mala merateľné oneskorenia v sociálnych, komunikačných a motorických schopnostiach. Skríningový nástroj ich teda nezachytil, hoci rozdiel bol prítomný.</p>
+<p>Výpovedná hodnota skríningových nástrojov je však obmedzenejšia, než sa bežne predpokladá. Nórska štúdia v rámci kohorty Norwegian Mother and Child Cohort Study hodnotila <strong>68&nbsp;197 detí, ktoré v 18 mesiacoch prešli skríningom M-CHAT ako negatívne</strong>. Časť z nich neskôr dostala diagnózu poruchy autistického spektra – a už v 18 mesiacoch mala merateľné oneskorenia v sociálnych, komunikačných a motorických schopnostiach. Skríningový nástroj ich teda nezachytil, hoci rozdiel bol prítomný.</p>
 
 <p>Z praxe k tomu pribúda dôležité pozorovanie: najlepším jednotlivým prediktorom neskoršej diagnózy bol v tejto kohorte <strong>rodičovský nepokoj o vývin dieťaťa v jednom roku veku</strong> a otázka, či niekto iný už vyjadril obavu. Európska pediatria univerzálny skríning väčšinou nepoužíva práve pre slabosť dôkazov. Prakticky to znamená, že negatívny skríning nemá prebiť pretrvávajúcu obavu rodiča.</p>
 

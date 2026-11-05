@@ -2,7 +2,7 @@
 
 /**
  * add_neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt_article.php
- * Neochota zdielat osobne hodnoty pri spolocnom rozhodovani o nahrade funkcie obliciek.
+ * Neochota zdielat osobne hodnoty pri spolocnom rozhodovani o nahrade funkcie obličiek.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */

@@ -57,8 +57,8 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Hemoglobín</th>
-      <td>−0,04 g/dl</td>
-      <td>−2,00 až +1,86 g/dl</td>
+      <td>−0,04&nbsp;g/dl</td>
+      <td>−2,00 až +1,86&nbsp;g/dl</td>
       <td>r = 0,64</td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Tieto čísla sa dajú prečítať dvoma spôsobmi a oba sú pravdivé. Systematická odchýlka je zanedbateľná, takže <strong>na sledovanie trendu v skupine aj u jednotlivca je metóda použiteľná</strong>. Hranice zhody však znamenajú, že jednotlivé meranie sa od laboratórnej hodnoty môže líšiť približne o 2 g/dl. To je rozdiel, ktorý sám osebe rozhoduje o zmene dávky látky stimulujúcej erytropoézu alebo o podaní železa. <strong>Náhrada laboratórneho vyšetrenia pred zmenou dávky teda z týchto údajov nevyplýva.</strong></p>
+<p>Tieto čísla sa dajú prečítať dvoma spôsobmi a oba sú pravdivé. Systematická odchýlka je zanedbateľná, takže <strong>na sledovanie trendu v skupine aj u jednotlivca je metóda použiteľná</strong>. Hranice zhody však znamenajú, že jednotlivé meranie sa od laboratórnej hodnoty môže líšiť približne o 2&nbsp;g/dl. To je rozdiel, ktorý sám osebe rozhoduje o zmene dávky látky stimulujúcej erytropoézu alebo o podaní železa. <strong>Náhrada laboratórneho vyšetrenia pred zmenou dávky teda z týchto údajov nevyplýva.</strong></p>
 
 <p>K tomu patria limity, ktoré autori sami uvádzajú: hodnotenie prebehlo počas jedného dialyzačného sedenia, pacienti s hemoglobinopatiami boli vylúčení, analyzovali sa iba natívne fistuly (nie protetické graftové prístupy) a správanie zariadenia naprieč typmi pokožky si vyžaduje ďalšie sledovanie.</p>
 
@@ -123,7 +123,7 @@ $articles[] = [
     <tr>
       <th scope="row">Neinvazívne meranie hemoglobínu je pri hemodialýze presné</th>
       <td>Čiastočne</td>
-      <td>Systematická odchýlka je zanedbateľná, hranice zhody však dosahujú približne ±2 g/dl. Vhodné na sledovanie trendu, nie na rozhodnutie o dávke pred laboratórnym overením.</td>
+      <td>Systematická odchýlka je zanedbateľná, hranice zhody však dosahujú približne ±2&nbsp;g/dl. Vhodné na sledovanie trendu, nie na rozhodnutie o dávke pred laboratórnym overením.</td>
     </tr>
     <tr>
       <th scope="row">Neinvazívna detekcia arytmií je pri zlyhaní obličiek preukázaná</th>

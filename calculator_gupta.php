@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $age = guptaParseNonNeg($form["age_years"]);
         if ($age === null || $age > 120.0) {
-            $errors[] = "Vek musí byť 0 až 120 rokov.";
+            $errors[] = "Vek musí byť 0 až 120 rokov.";
         }
 
         // Hemoglobín → g/dL
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             $hbGdl = $form["hemoglobin_unit"] === "g_dl" ? (float) $hbRaw : (float) $hbRaw / 10.0;
             if ($hbGdl < 2.0 || $hbGdl > 25.0) {
-                $errors[] = "Hemoglobín je mimo prijateľného rozsahu (2 až 25 g/dL).";
+                $errors[] = "Hemoglobín je mimo prijateľného rozsahu (2 až 25 g/dL).";
             }
         }
 
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             $albGdl = $form["albumin_unit"] === "g_dl" ? (float) $albRaw : (float) $albRaw / 10.0;
             if ($albGdl < 1.0 || $albGdl > 7.0) {
-                $errors[] = "Albumín je mimo prijateľného rozsahu (1 až 7 g/dL).";
+                $errors[] = "Albumín je mimo prijateľného rozsahu (1 až 7 g/dL).";
             }
         }
 
@@ -272,7 +272,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box">
                     <strong>Čo počíta:</strong> jednoduché bodové skóre predikuje riziko
-                    <strong>ťažkého cisplatínom indukovaného AKI</strong> (CP-AKI) do 14 dní od
+                    <strong>ťažkého cisplatínom indukovaného AKI</strong> (CP-AKI) do 14 dní od
                     podania. Ťažké CP-AKI = vzostup kreatinínu na <strong>≥ 2× východisko</strong>
                     alebo potreba dialýzy (≈ KDIGO 2 až 3). Skóre 0 až 22,5 zaraďuje pacienta do
                     štyroch rizikových kategórií. Hodnoty zadávaj <strong>pred podaním</strong>

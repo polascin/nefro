@@ -103,7 +103,7 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         if (!$isBotRequest && !validateFormTime('publication_order', 4)) {
             if ($isLocalDev) {
-                $errors[] = '[DEV] Formulár odoslaný príliš rýchlo (pod 4 s).';
+                $errors[] = '[DEV] Formulár odoslaný príliš rýchlo (pod 4 s).';
             } else {
                 $isBotRequest = true;
             }
@@ -150,7 +150,7 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = 'Fakturačná adresa je príliš dlhá.';
         }
         if (mb_strlen($formValues['note']) > 1000) {
-            $errors[] = 'Poznámka je príliš dlhá (najviac 1 000 znakov).';
+            $errors[] = 'Poznámka je príliš dlhá (najviac 1 000 znakov).';
         }
         if (($_POST['agree_terms'] ?? '') !== '1') {
             $errors[] = 'Bez súhlasu s obchodnými podmienkami nemôžeme objednávku prijať.';

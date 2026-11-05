@@ -44,7 +44,7 @@ $articles[] = [
 
 <h2>Čo presne skúmala varšavská štúdia</h2>
 
-<p>Autori analyzovali pacientov edukovaných od januára 2020 do decembra 2023 v ambulancii peritoneálnej dialýzy Vojenského lekárskeho inštitútu vo Varšave. Stretnutie trvalo približne 90–120 minút, viedol ho stály tím dvoch lekárov a dvoch sestier a podľa možnosti sa ho zúčastnili aj blízki pacienta.</p>
+<p>Autori analyzovali pacientov edukovaných od januára 2020 do decembra 2023 v ambulancii peritoneálnej dialýzy Vojenského lekárskeho inštitútu vo Varšave. Stretnutie trvalo približne 90–120&nbsp;minút, viedol ho stály tím dvoch lekárov a dvoch sestier a podľa možnosti sa ho zúčastnili aj blízki pacienta.</p>
 
 <p>Lekárska časť zahŕňala vysvetlenie indikácií, PD, strediskovej hemodialýzy a podmienok transplantácie. Sestry prakticky ukazovali vaky s dialyzačným roztokom, Tenckhoffov katéter, cyklér, ohrievač aj výmenu pri kontinuálnej ambulantnej peritoneálnej dialýze. Pacienti videli aj hemodialyzačné pracovisko a prístroj. Domáca hemodialýza sa nepreberala, pretože v Poľsku nebola dostupná.</p>
 
@@ -63,7 +63,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Vek</td>
-      <td>priemer 54,3 roka; rozpätie 18–86 rokov</td>
+      <td>priemer 54,3 roka; rozpätie 18–86&nbsp;rokov</td>
     </tr>
     <tr>
       <td>Ženy</td>
@@ -83,7 +83,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Forma edukácie</td>
-      <td>individuálne stretnutie, približne 90–120 minút</td>
+      <td>individuálne stretnutie, približne 90–120&nbsp;minút</td>
     </tr>
   </tbody>
 </table>
@@ -149,7 +149,7 @@ $articles[] = [
 <ul>
   <li>vyšší vek: OR 0,967 na každý ďalší rok; p = 0,010,</li>
   <li>diabetes mellitus: OR 0,353; p = 0,008,</li>
-  <li>vyšší BMI: OR 0,884 na 1 kg/m<sup>2</sup>; p = 0,010,</li>
+  <li>vyšší BMI: OR 0,884 na 1&nbsp;kg/m<sup>2</sup>; p = 0,010,</li>
   <li>jazvy po abdominálnej operácii: OR 0,423; p = 0,029,</li>
   <li>posúdená potreba asistovanej PD: OR 0,264; p = 0,013.</li>
 </ul>

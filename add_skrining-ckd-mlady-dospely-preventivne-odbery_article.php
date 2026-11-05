@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Komplexný metabolický panel obsahuje kreatinín, takže odhad glomerulárnej filtrácie z neho vypadne akoby mimochodom, bez toho, aby ho niekto cielene indikoval. Čo na paneli chýba, je pomer albumínu ku kreatinínu v moči (UACR).</p>
 
-<p>Tento rozdiel nie je formálny. U dvadsaťtriročnej ženy bez komorbidít bude odhadnutá glomerulárna filtrácia takmer s istotou nad 90 ml/min/1,73 m². Normálna hodnota tu nevylučuje prakticky nič: glomerulárna filtrácia klesá až vtedy, keď je stratená podstatná časť funkčnej rezervy, a v rannom štádiu poškodenia býva dokonca zvýšená. Jediný ukazovateľ, ktorý pri normálnej filtrácii dokáže poškodenie obličiek odhaliť, je albuminúria. Doplnkovo urinárny sediment, ktorý pri mikroskopickej hematúrii v tomto veku otvára úplne inú diferenciálnu diagnostiku, predovšetkým IgA nefropatiu a ochorenie tenkých bazálnych membrán.</p>
+<p>Tento rozdiel nie je formálny. U dvadsaťtriročnej ženy bez komorbidít bude odhadnutá glomerulárna filtrácia takmer s istotou nad 90&nbsp;ml/min/1,73&nbsp;m². Normálna hodnota tu nevylučuje prakticky nič: glomerulárna filtrácia klesá až vtedy, keď je stratená podstatná časť funkčnej rezervy, a v rannom štádiu poškodenia býva dokonca zvýšená. Jediný ukazovateľ, ktorý pri normálnej filtrácii dokáže poškodenie obličiek odhaliť, je albuminúria. Doplnkovo urinárny sediment, ktorý pri mikroskopickej hematúrii v tomto veku otvára úplne inú diferenciálnu diagnostiku, predovšetkým IgA nefropatiu a ochorenie tenkých bazálnych membrán.</p>
 
 <div class="table-responsive" role="region" aria-label="Čo jednotlivé vyšetrenia u mladého dospelého skutočne zachytia" tabindex="0">
 <table>
@@ -64,13 +64,13 @@ $articles[] = [
 
 <p>Kľúčové slovo je „s rizikom“. KDIGO plošný skríning celej populácie neodporúča. Medzi klasické rizikové konštelácie patrí diabetes mellitus, artériová hypertenzia, kardiovaskulárne ochorenie, srdcové zlyhávanie, prekonané akútne poškodenie obličiek, rodinná anamnéza ochorenia obličiek, štrukturálna anomália močových ciest, systémové ochorenie s obličkovým postihnutím a dlhodobá expozícia nefrotoxickým liekom.</p>
 
-<p>Pacientka zo scenára nespĺňa ani jedno z týchto kritérií. Má index telesnej hmotnosti 28 a obvod pása 92 cm, otca s hypertenziou a starú matku z otcovej strany s cievnou mozgovou príhodou vo veku 66 rokov. To je kardiometabolický rizikový profil, nie nefrologický rizikový profil, a rozdiel medzi nimi je podstatný.</p>
+<p>Pacientka zo scenára nespĺňa ani jedno z týchto kritérií. Má index telesnej hmotnosti 28 a obvod pása 92&nbsp;cm, otca s hypertenziou a starú matku z otcovej strany s cievnou mozgovou príhodou vo veku 66&nbsp;rokov. To je kardiometabolický rizikový profil, nie nefrologický rizikový profil, a rozdiel medzi nimi je podstatný.</p>
 
 <h2>Čo o tom hovorí zdravotná ekonomika</h2>
 
-<p>Najpriaznivejšia moderná analýza skríningu albuminúrie pochádza z Markovovho modelu publikovaného v <em>Annals of Internal Medicine</em> v roku 2023. Po započítaní účinku inhibítorov SGLT2, ktoré prirodzený priebeh chronickej choroby obličiek skutočne menia, vyšiel jednorazový skríning vo veku 55 rokov s pomerom prírastkovej nákladovej efektívnosti 86 300 USD na získaný rok života s upravenou kvalitou. Skríning raz za desať rokov vo vekovom rozmedzí 35 až 75 rokov stál menej než 100 000 USD na takýto rok.</p>
+<p>Najpriaznivejšia moderná analýza skríningu albuminúrie pochádza z Markovovho modelu publikovaného v <em>Annals of Internal Medicine</em> v roku 2023. Po započítaní účinku inhibítorov SGLT2, ktoré prirodzený priebeh chronickej choroby obličiek skutočne menia, vyšiel jednorazový skríning vo veku 55&nbsp;rokov s pomerom prírastkovej nákladovej efektívnosti 86&nbsp;300 USD na získaný rok života s upravenou kvalitou. Skríning raz za desať rokov vo vekovom rozmedzí 35 až 75&nbsp;rokov stál menej než 100&nbsp;000 USD na takýto rok.</p>
 
-<p>Pre náš scenár je rozhodujúce, že <strong>najnižší modelovaný vek bol 35 rokov</strong>. Ani analýza, ktorá sa argumentačne snaží skríning rozšíriť čo najširšie, nezahŕňa dvadsaťtriročných. Model bol navyše americký a jeho prahy nákladovej efektívnosti nemožno prenášať do slovenských podmienok bez samostatnej úvahy.</p>
+<p>Pre náš scenár je rozhodujúce, že <strong>najnižší modelovaný vek bol 35&nbsp;rokov</strong>. Ani analýza, ktorá sa argumentačne snaží skríning rozšíriť čo najširšie, nezahŕňa dvadsaťtriročných. Model bol navyše americký a jeho prahy nákladovej efektívnosti nemožno prenášať do slovenských podmienok bez samostatnej úvahy.</p>
 
 <p>Podobne vyznieva editoriál v <em>Clinical Kidney Journal</em> komentujúci systematický prehľad nákladovej efektívnosti: skríning vo vysokorizikových populáciách je nákladovo efektívny, pre celopopulačný skríning sú dôkazy obmedzené. Autori zároveň uvádzajú tri dôvody, prečo sa bilancia bude zlepšovať: doterajšie modely nezapočítavali prevenciu kardiovaskulárnych príhod, nezohľadňovali nové lieky a nepočítali s domácim odberom.</p>
 
@@ -105,7 +105,7 @@ $articles[] = [
 <p>Pri pacientke, ktorá behá štyrikrát do týždňa a má nepravidelný menštruačný cyklus po zavedení progesterónového implantátu, je riziko falošne pozitívneho nálezu výrazne vyššie než priemerné. Albuminúria je biologicky premenlivá a na jej hodnotu vplýva celý rad prechodných stavov.</p>
 
 <ul>
-  <li><strong>Telesná záťaž.</strong> Intenzívne cvičenie vyvoláva prechodnú albuminúriu. Vzorka sa má odoberať s odstupom najmenej 24 hodín od väčšej záťaže.</li>
+  <li><strong>Telesná záťaž.</strong> Intenzívne cvičenie vyvoláva prechodnú albuminúriu. Vzorka sa má odoberať s odstupom najmenej 24&nbsp;hodín od väčšej záťaže.</li>
   <li><strong>Menštruačné krvácanie a vaginálny výtok.</strong> Kontaminácia vzorky skresľuje albuminúriu aj sediment. Pri nepravidelnom cykle treba na načasovanie myslieť aktívne.</li>
   <li><strong>Infekcia močových ciest a horúčka.</strong> Oba stavy prechodne zvyšujú albuminúriu.</li>
   <li><strong>Poloha tela.</strong> Ortostatická proteinúria je u mladých ľudí relatívne častá a benígna; prvá ranná vzorka ju odlíši.</li>
@@ -130,7 +130,7 @@ $articles[] = [
 
 <p>Ak je však indikácia prítomná, platí, že sa testuje v dvoch rozmeroch naraz, teda glomerulárna filtrácia aj albuminúria, pretože u mladého človeka je normálna filtrácia pravidlom a albuminúria je jediný ukazovateľ, ktorý poškodenie odhalí včas. Abnormálny nález sa potvrdzuje opakovaním a hodnotí sa s vedomím predanalytických vplyvov, nie jedným odberom.</p>
 
-<p>Ekonomické modelovanie dnes podporuje skríning albuminúrie od veku 35 rokov. Pre dvadsaťtriročných takýto podklad neexistuje, a pokiaľ nevznikne, je správnou odpoveďou na žiadosť o „kompletné odbery“ rozhovor o riziku, nie dlhší zoznam.</p>
+<p>Ekonomické modelovanie dnes podporuje skríning albuminúrie od veku 35&nbsp;rokov. Pre dvadsaťtriročných takýto podklad neexistuje, a pokiaľ nevznikne, je správnou odpoveďou na žiadosť o „kompletné odbery“ rozhovor o riziku, nie dlhší zoznam.</p>
 
 <hr>
 
@@ -150,7 +150,7 @@ $articles[] = [
 
 <h3>Poznámka k dôkazom</h3>
 
-<p><small><em>Znenie praktických bodov 1.1.1.1, 1.1.1.2, 1.1.3.2 a 1.1.3.3 a odstupňovaného odporúčania 1.1.2.1 bolo overené doslovne v plnom texte odporúčania KDIGO 2024 stiahnutom zo stránok KDIGO, nie v sekundárnych zhrnutiach. Bibliografické údaje odporúčania (ročník, číslo, strany, 27 autorov) boli overené v databáze Crossref. Čísla z analýzy nákladovej efektívnosti a vekové rozmedzie 35 až 75 rokov pochádzajú zo štruktúrovaného abstraktu v PubMed. Stav odporúčania USPSTF bol overený priamo na jeho stránke 24. 10. 2026. Meno autora východiskového komentára bolo overené v byline na verejne prístupnej stránke Medscape.</em></small></p>
+<p><small><em>Znenie praktických bodov 1.1.1.1, 1.1.1.2, 1.1.3.2 a 1.1.3.3 a odstupňovaného odporúčania 1.1.2.1 bolo overené doslovne v plnom texte odporúčania KDIGO 2024 stiahnutom zo stránok KDIGO, nie v sekundárnych zhrnutiach. Bibliografické údaje odporúčania (ročník, číslo, strany, 27 autorov) boli overené v databáze Crossref. Čísla z analýzy nákladovej efektívnosti a vekové rozmedzie 35 až 75&nbsp;rokov pochádzajú zo štruktúrovaného abstraktu v PubMed. Stav odporúčania USPSTF bol overený priamo na jeho stránke 24. 10. 2026. Meno autora východiskového komentára bolo overené v byline na verejne prístupnej stránke Medscape.</em></small></p>
 
 <p><small><em>Vlastným prínosom tohto spracovania je nefrologický rozbor konkrétneho preventívneho panelu, upozornenie na to, že praktický bod KDIGO nie je odstupňované odporúčanie, porovnanie veku pacientky s najnižším vekom modelovaným v ekonomickej analýze, zoznam okolností, ktoré indikáciu menia, a prehľad predanalytických vplyvov na albuminúriu u fyzicky aktívnej mladej ženy. Tieto väzby nie sú obsiahnuté vo východiskovom komentári.</em></small></p>
 

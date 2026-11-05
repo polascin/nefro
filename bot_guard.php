@@ -26,7 +26,7 @@ declare(strict_types=1);
 
 // Ochrana pred priamym prístupom k súboru
 if (basename($_SERVER['PHP_SELF'] ?? '') === basename(__FILE__)) {
-    header('HTTP/1.1 403 Forbidden');
+    header('HTTP/1.1 403 Forbidden');
     exit('Prístup odmietnutý.');
 }
 
@@ -43,11 +43,11 @@ const BOT_GUARD_WINDOW       = 60;      // sekundy — krátke okno
 const BOT_GUARD_MAX          = 90;      // max požiadaviek v krátkom okne
 const BOT_GUARD_MAX_TOOL     = 20;      // to isté pre curl/wget a spol.
 const BOT_GUARD_MAX_SEARCH   = 300;     // overené vyhľadávače
-const BOT_GUARD_BURST_WINDOW = 900;     // sekundy — dlhé okno (15 min)
+const BOT_GUARD_BURST_WINDOW = 900;     // sekundy — dlhé okno (15 min)
 const BOT_GUARD_BURST_MAX    = 600;     // max požiadaviek v dlhom okne
 const BOT_GUARD_BAN_SECONDS  = 1800;    // ban po prekročení burst limitu
 const BOT_GUARD_TRAP_BAN     = 3600;    // ban po spadnutí do honeypotu
-const BOT_GUARD_RDNS_TTL     = 604800;  // 7 dní — cache overenia vyhľadávača
+const BOT_GUARD_RDNS_TTL     = 604800;  // 7 dní — cache overenia vyhľadávača
 const BOT_GUARD_STATE_TTL    = 86400;   // po dni je súbor stavu na zmazanie
 
 // ── Dôveryhodné vlastné nástroje (podpísaný token) ─────────────────────────
@@ -58,7 +58,7 @@ const BOT_GUARD_STATE_TTL    = 86400;   // po dni je súbor stavu na zmazanie
 const BOT_GUARD_TRUST_HEADER  = 'HTTP_X_NEFRO_TRUST';
 const BOT_GUARD_MAX_TRUSTED   = 600;    // požiadaviek v krátkom okne
 const BOT_GUARD_BURST_TRUSTED = 20000;  // požiadaviek v dlhom okne
-const BOT_GUARD_TRUST_MAX_TTL = 604800; // najdlhšia akceptovaná platnosť (7 dní)
+const BOT_GUARD_TRUST_MAX_TTL = 604800; // najdlhšia akceptovaná platnosť (7 dní)
 const BOT_GUARD_TRUST_SKEW    = 300;    // tolerancia rozdielu hodín (s)
 const BOT_GUARD_TRUST_PREFIX  = 'nefro1';
 
@@ -673,7 +673,7 @@ function botGuardReject(string $reason): void
     );
 }
 
-/** Odošle 429 s Retry-After a ukončí požiadavku. */
+/** Odošle 429 s Retry-After a ukončí požiadavku. */
 function botGuardThrottle(int $retryAfter, string $reason): void
 {
     botGuardLog('throttle', $reason);

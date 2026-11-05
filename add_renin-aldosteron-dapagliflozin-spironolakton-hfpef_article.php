@@ -39,11 +39,11 @@ $articles[] = [
 
 <h2>Čo SOGALDI-PEF je – a čo v nej nebolo</h2>
 
-<p>SOGALDI-PEF (NCT05676684, EudraCT 2020-000973-26) je dvojcentrová, skúšajúcim iniciovaná randomizovaná prekrížená (crossover) štúdia s otvorenou liečbou a zaslepeným hodnotením ukazovateľov (dizajn PROBE), vykonaná v Porte. Zaradila 108 ambulantných pacientov vo veku ≥ 50 rokov s NYHA II–IV, ejekčnou frakciou > 40 %, štrukturálnym postihnutím srdca a zvýšenými natriuretickými peptidmi; podmienkou bola eGFR ≥ 30 ml/min/1,73 m² a kálium ≤ 5,5 mmol/l. Medián veku bol 76 rokov, 57 % tvorili ženy, 46 % malo diabetes 2. typu a 33 % eGFR pod 60 ml/min/1,73 m².</p>
+<p>SOGALDI-PEF (NCT05676684, EudraCT 2020-000973-26) je dvojcentrová, skúšajúcim iniciovaná randomizovaná prekrížená (crossover) štúdia s otvorenou liečbou a zaslepeným hodnotením ukazovateľov (dizajn PROBE), vykonaná v Porte. Zaradila 108 ambulantných pacientov vo veku ≥ 50 rokov s NYHA II–IV, ejekčnou frakciou > 40 %, štrukturálnym postihnutím srdca a zvýšenými natriuretickými peptidmi; podmienkou bola eGFR ≥ 30&nbsp;ml/min/1,73&nbsp;m² a kálium ≤ 5,5&nbsp;mmol/l. Medián veku bol 76&nbsp;rokov, 57 % tvorili ženy, 46 % malo diabetes 2. typu a 33 % eGFR pod 60&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Dizajn je potrebné uviesť presne, lebo predlohy ho zvyknú zjednodušovať. Pôvodne išlo o <strong>tri</strong> sekvencie po 12 týždňoch – dapagliflozín, spironolaktón, a ich kombinácia – oddelené štvortýždňovým vymývacím obdobím. V júli 2023, po publikovaní štúdií EMPEROR-Preserved a DELIVER, bol protokol zmenený: rameno so samotným spironolaktónom bolo zrušené a vymývacie obdobie skrátené na jeden týždeň. Preto je počet pozorovaní pre monoterapiu spironolaktónom nízky (n = 39–41) a hlavné porovnanie znie <strong>spironolaktón/dapagliflozín verzus dapagliflozín samotný</strong>.</p>
 
-<p>Dávka dapagliflozínu bola 10 mg denne bez úpravy. Spironolaktón sa titroval podľa eGFR a kália od 25 mg každý druhý deň po 25 mg denne; 45 % pacientov zostalo na dávke každý druhý deň a <strong>vážený medián dávky bol približne 19 mg denne</strong>. To je dôležité: ide o dávky, ktoré sa nepovažujú za natriuretické.</p>
+<p>Dávka dapagliflozínu bola 10&nbsp;mg denne bez úpravy. Spironolaktón sa titroval podľa eGFR a kália od 25&nbsp;mg každý druhý deň po 25&nbsp;mg denne; 45 % pacientov zostalo na dávke každý druhý deň a <strong>vážený medián dávky bol približne 19&nbsp;mg denne</strong>. To je dôležité: ide o dávky, ktoré sa nepovažujú za natriuretické.</p>
 
 <p>V hlavnej publikácii štúdie bola kombinácia lepšia ako samotný dapagliflozín v znížení NT-proBNP aj krvného tlaku, ale za cenu výraznejšieho poklesu eGFR a vyššieho sérového kália. Práve to je dôvod, prečo má zmysel hľadať podskupinu s najlepším pomerom prínosu a rizika.</p>
 
@@ -51,23 +51,23 @@ $articles[] = [
 
 <h2>Dva fenotypy, ktoré sa neprekrývajú</h2>
 
-<p>Medián bazálneho renínu bol 29,7 mU/l (25.–75. percentil 17,6–61,6). Prvá tertila – teda <strong>renín ≤ 21 mU/l</strong> – mala medián 12,4 mU/l, tretia 96,1 mU/l. Rozdiely medzi tertilami nakreslili veľmi konzistentný obraz.</p>
+<p>Medián bazálneho renínu bol 29,7&nbsp;mU/l (25.–75. percentil 17,6–61,6). Prvá tertila – teda <strong>renín ≤ 21&nbsp;mU/l</strong> – mala medián 12,4&nbsp;mU/l, tretia 96,1&nbsp;mU/l. Rozdiely medzi tertilami nakreslili veľmi konzistentný obraz.</p>
 
 <div class="table-responsive" role="region" aria-label="Vybrané vstupné charakteristiky podľa tertíl plazmatického renínu v štúdii SOGALDI-PEF" tabindex="0">
 <table>
 <caption>Vybrané vstupné charakteristiky podľa tertíl plazmatického renínu (n = 106). Hodnoty sú priemer ± SD alebo podiel.</caption>
 <thead>
-<tr><th scope="col">Ukazovateľ</th><th scope="col">T1 (≤ 21 mU/l), n = 36</th><th scope="col">T2, n = 35</th><th scope="col">T3, n = 35</th><th scope="col">P pre trend</th></tr>
+<tr><th scope="col">Ukazovateľ</th><th scope="col">T1 (≤ 21&nbsp;mU/l), n = 36</th><th scope="col">T2, n = 35</th><th scope="col">T3, n = 35</th><th scope="col">P pre trend</th></tr>
 </thead>
 <tbody>
 <tr><th scope="row">Systolický TK (mm Hg)</th><td>139,7 ± 17,2</td><td>132,2 ± 18,8</td><td>128,1 ± 19,6</td><td>0,030</td></tr>
 <tr><th scope="row">Diastolický TK (mm Hg)</th><td>76,3 ± 8,8</td><td>73,8 ± 11,6</td><td>69,3 ± 10,2</td><td>0,017</td></tr>
-<tr><th scope="row">TK &gt; 130/80 mm Hg</th><td>75 %</td><td>46 %</td><td>37 %</td><td>0,004</td></tr>
+<tr><th scope="row">TK &gt; 130/80&nbsp;mm Hg</th><td>75 %</td><td>46 %</td><td>37 %</td><td>0,004</td></tr>
 <tr><th scope="row">Periférny edém</th><td>81 %</td><td>80 %</td><td>57 %</td><td>0,042</td></tr>
 <tr><th scope="row">Sérový sodík (mmol/l)</th><td>140,8 ± 2,2</td><td>139,4 ± 2,5</td><td>138,7 ± 3,8</td><td>0,008</td></tr>
 <tr><th scope="row">Laterálne E/e′</th><td>12,6 ± 6,2</td><td>11,6 ± 4,2</td><td>9,7 ± 3,5</td><td>0,037</td></tr>
 <tr><th scope="row">Rýchlosť pulzovej vlny (m/s)</th><td>11,9 ± 1,7</td><td>10,9 ± 1,5</td><td>11,2 ± 1,4</td><td>0,019</td></tr>
-<tr><th scope="row">eGFR (ml/min/1,73 m²)</th><td>74,1 ± 20,3</td><td>70,2 ± 22,4</td><td>63,9 ± 22,6</td><td>0,14</td></tr>
+<tr><th scope="row">eGFR (ml/min/1,73&nbsp;m²)</th><td>74,1 ± 20,3</td><td>70,2 ± 22,4</td><td>63,9 ± 22,6</td><td>0,14</td></tr>
 <tr><th scope="row">Urea (mg/dl)</th><td>45,0 ± 16,7</td><td>52,3 ± 27,6</td><td>63,5 ± 39,5</td><td>0,032</td></tr>
 <tr><th scope="row">Kyselina močová (mg/dl)</th><td>5,4 ± 1,7</td><td>6,0 ± 2,1</td><td>6,9 ± 2,2</td><td>0,009</td></tr>
 <tr><th scope="row">Sodík v moči (mmol/l)</th><td>82,1 ± 32,3</td><td>85,2 ± 41,2</td><td>62,2 ± 29,9</td><td>0,022</td></tr>
@@ -78,9 +78,9 @@ $articles[] = [
 
 <p>Pacient s nízkym renínom je teda hypertenznejší, viac opuchnutý, má vyšší sérový sodík, tuhšie cievy a horšiu diastolickú funkciu – a napriek tomu <strong>lepšiu, nie horšiu obličkovú funkciu</strong>. Rozdiel v eGFR nedosiahol štatistickú významnosť (P = 0,14), ale urea aj kyselina močová boli u nízkeho renínu jednoznačne nižšie, čo rovnaký smer podporuje.</p>
 
-<p>Vysoký aldosterón (tretia tertila, ≥ 98 pg/ml; medián celej kohorty 68,1 pg/ml) kreslí iný obraz: nižšia eGFR, nižší sérový sodík, nižšia exkrécia sodíka a vyššia exkrécia kália v moči, častejšia hospitalizácia pre srdcové zlyhávanie v predchádzajúcom roku – ale <strong>bez gradientu v krvnom tlaku, echokardiografických ukazovateľoch, rýchlosti pulzovej vlny či periférnom edéme</strong>.</p>
+<p>Vysoký aldosterón (tretia tertila, ≥ 98&nbsp;pg/ml; medián celej kohorty 68,1&nbsp;pg/ml) kreslí iný obraz: nižšia eGFR, nižší sérový sodík, nižšia exkrécia sodíka a vyššia exkrécia kália v moči, častejšia hospitalizácia pre srdcové zlyhávanie v predchádzajúcom roku – ale <strong>bez gradientu v krvnom tlaku, echokardiografických ukazovateľoch, rýchlosti pulzovej vlny či periférnom edéme</strong>.</p>
 
-<p>Oba hormóny pritom spolu prakticky nesúviseli: Spearmanovo <em>rho</em> = 0,15, P = 0,12. Nejde teda o „slabú nekoreláciu“, ale o <strong>absenciu štatisticky významnej korelácie</strong> – dva čiastočne nezávislé patofyziologické rozmery v tej istej populácii. Vo viacrozmernom modeli boli s nízkym renínom spojené TK &gt; 130/80 mm Hg, vyšší sérový sodík, vyššie laterálne E/e′ a nižšia kyselina močová (plocha pod krivkou 0,68) – teda skromná, nie však zanedbateľná diskriminácia.</p>
+<p>Oba hormóny pritom spolu prakticky nesúviseli: Spearmanovo <em>rho</em> = 0,15, P = 0,12. Nejde teda o „slabú nekoreláciu“, ale o <strong>absenciu štatisticky významnej korelácie</strong> – dva čiastočne nezávislé patofyziologické rozmery v tej istej populácii. Vo viacrozmernom modeli boli s nízkym renínom spojené TK &gt; 130/80&nbsp;mm Hg, vyšší sérový sodík, vyššie laterálne E/e′ a nižšia kyselina močová (plocha pod krivkou 0,68) – teda skromná, nie však zanedbateľná diskriminácia.</p>
 
 <h2>Spätná väzba RAAS: koľko presne pridá blokáda receptora</h2>
 
@@ -113,25 +113,25 @@ $articles[] = [
 <tr><th scope="col">Tertila renínu</th><th scope="col">Systolický TK</th><th scope="col">Diastolický TK</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">T1 (≤ 21 mU/l)</th><td>−10,9 (−16,4 až −5,4)</td><td>−6,3 (−10,2 až −2,4)</td></tr>
-<tr><th scope="row">T2 (~30 mU/l)</th><td>−5,6 (−11,3 až 0,02)</td><td>0,1 (−3,8 až 4,2)</td></tr>
-<tr><th scope="row">T3 (~96 mU/l)</th><td>1,5 (−4,1 až 7,0)</td><td>0,4 (−3,5 až 4,4)</td></tr>
+<tr><th scope="row">T1 (≤ 21&nbsp;mU/l)</th><td>−10,9 (−16,4 až −5,4)</td><td>−6,3 (−10,2 až −2,4)</td></tr>
+<tr><th scope="row">T2 (~30&nbsp;mU/l)</th><td>−5,6 (−11,3 až 0,02)</td><td>0,1 (−3,8 až 4,2)</td></tr>
+<tr><th scope="row">T3 (~96&nbsp;mU/l)</th><td>1,5 (−4,1 až 7,0)</td><td>0,4 (−3,5 až 4,4)</td></tr>
 <tr><th scope="row">P pre trend interakcie</th><td>0,007</td><td>0,006</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Pri nízkom reníne pridanie spironolaktónu k dapagliflozínu takmer zdvojnásobilo pokles tlaku: samotný dapagliflozín znížil systolický tlak o 12,3 mm Hg oproti východisku, kombinácia o 23,3 mm Hg. Pri vyššom reníne kombinácia tlak významne neznižovala vôbec. Rovnaký vzorec sa zopakoval pri diastolickom tlaku.</p>
+<p>Pri nízkom reníne pridanie spironolaktónu k dapagliflozínu takmer zdvojnásobilo pokles tlaku: samotný dapagliflozín znížil systolický tlak o 12,3&nbsp;mm Hg oproti východisku, kombinácia o 23,3&nbsp;mm Hg. Pri vyššom reníne kombinácia tlak významne neznižovala vôbec. Rovnaký vzorec sa zopakoval pri diastolickom tlaku.</p>
 
-<p>Prvá námietka, ktorá napadne – regresia k priemeru, keďže skupina T1 mala vyšší vstupný tlak – autorov neobišla a nevysvetľuje nález. Samotný dapagliflozín v tejto skupine tlak už znížil výrazne; až <em>prídavok</em> spironolaktónu k tomuto už zníženému tlaku priniesol ďalších ~11 mm Hg. Interakcia bola navyše významná aj pri reníne ako spojitej premennej a zachovala sa bez ohľadu na prítomnosť hypertenzie či počet antihypertenzív.</p>
+<p>Prvá námietka, ktorá napadne – regresia k priemeru, keďže skupina T1 mala vyšší vstupný tlak – autorov neobišla a nevysvetľuje nález. Samotný dapagliflozín v tejto skupine tlak už znížil výrazne; až <em>prídavok</em> spironolaktónu k tomuto už zníženému tlaku priniesol ďalších ~11&nbsp;mm Hg. Interakcia bola navyše významná aj pri reníne ako spojitej premennej a zachovala sa bez ohľadu na prítomnosť hypertenzie či počet antihypertenzív.</p>
 
-<p>Zaujímavý mechanistický detail: pokles tlaku nesprevádzalo zvýšenie exkrécie sodíka v moči. Autori to vysvetľujú skôr zvýšením objemu moču než natriurézou – čomu zodpovedá aj použitá dávka spironolaktónu pod 20 mg denne, ktorá nie je natriuretická.</p>
+<p>Zaujímavý mechanistický detail: pokles tlaku nesprevádzalo zvýšenie exkrécie sodíka v moči. Autori to vysvetľujú skôr zvýšením objemu moču než natriurézou – čomu zodpovedá aj použitá dávka spironolaktónu pod 20&nbsp;mg denne, ktorá nie je natriuretická.</p>
 
 <h2>Čo treba čítať opatrnejšie: echokardiografia a cievna tuhosť</h2>
 
 <p>Tu je potrebné formulovať presne, lebo rozdiel je ľahké prehliadnuť. Laterálne E/e′ sa pri nízkom reníne zlepšilo o 1,6 jednotky – ale <strong>rovnako pri samotnom dapagliflozíne aj pri kombinácii</strong>; rozdiel medzi nimi bol presne nulový (0,0; 95 % IS −1,3 až 1,3). Interakcia liečba × renín bola významná (P = 0,013) preto, že pri vyšších tertilách sa nezlepšilo nič – nie preto, že by kombinácia prekonala monoterapiu.</p>
 
-<p>Pri rýchlosti pulzovej vlny bol rozdiel v prospech kombinácie malý, ale prítomný (−0,3 m/s; 95 % IS −0,6 až −0,1 pri T1), s interakciou na hranici významnosti (P = 0,063). Podobne sa pri nízkom reníne viac zmenšoval priemer ľavej predsiene (P = 0,027).</p>
+<p>Pri rýchlosti pulzovej vlny bol rozdiel v prospech kombinácie malý, ale prítomný (−0,3&nbsp;m/s; 95 % IS −0,6 až −0,1 pri T1), s interakciou na hranici významnosti (P = 0,063). Podobne sa pri nízkom reníne viac zmenšoval priemer ľavej predsiene (P = 0,027).</p>
 
 <p>Správne zhrnutie teda znie: <strong>fenotyp nízkeho renínu odpovedá lepšie na liečbu ako celok</strong>, pričom jednoznačný prírastok samotného spironolaktónu nad dapagliflozín je doložený pre krvný tlak, nie pre diastolické ukazovatele.</p>
 
@@ -142,8 +142,8 @@ $articles[] = [
 <p>Bezpečnostné ukazovatele renín takisto nemodifikoval, a to je nález, ktorý má pre nefrológa najväčší praktický dosah:</p>
 
 <ul>
-  <li><strong>eGFR</strong> (kombinácia vs. dapagliflozín): −7,3 ml/min/1,73 m² pri T1, −5,2 pri T2, −6,4 pri T3; P pre trend 0,72.</li>
-  <li><strong>Sérové kálium</strong> (kombinácia vs. dapagliflozín): +0,4 mmol/l pri T1, +0,3 pri T2, +0,3 pri T3; P pre trend 0,74.</li>
+  <li><strong>eGFR</strong> (kombinácia vs. dapagliflozín): −7,3&nbsp;ml/min/1,73&nbsp;m² pri T1, −5,2 pri T2, −6,4 pri T3; P pre trend 0,72.</li>
+  <li><strong>Sérové kálium</strong> (kombinácia vs. dapagliflozín): +0,4&nbsp;mmol/l pri T1, +0,3 pri T2, +0,3 pri T3; P pre trend 0,74.</li>
 </ul>
 
 <p>Inými slovami: <strong>prínos sa koncentruje do podskupiny s nízkym renínom, riziko sa rozprestiera rovnomerne.</strong> Práve táto asymetria je dôvod, prečo by mal renín vôbec niekoho zaujímať. Najväčší absolútny pokles eGFR nastal zhodou okolností v skupine T1, pravdepodobne preto, že tam bol najvyšší východiskový filtrát aj najväčší pokles tlaku – krátkodobé zmeny eGFR sú prevažne hemodynamické.</p>
@@ -152,11 +152,11 @@ $articles[] = [
 
 <p>Bazálny aldosterón ani ARR významne nemodifikovali účinok žiadnej sekvencie na krvný tlak, NT-proBNP, echokardiografické ukazovatele, rýchlosť pulzovej vlny ani sérové kálium (všetky P pre trend &gt; 0,10; pre systolický tlak 0,062, pre diastolický 0,085). ARR sa správal podobne ako renín, čo je očakávané, keďže renín je jeho dominantným určovateľom pri absencii gradientu aldosterónu.</p>
 
-<p>Autori na to ponúkajú biologicky vierohodné vysvetlenie. Starnutie posúva vnútrobunkový redoxný stav, zvyšuje tvorbu reaktívnych foriem kyslíka a inhibuje 11β-hydroxysteroiddehydrogenázu typu 2; mineralokortikoidový receptor je potom vystavený kortizolu ako agonistovi a jeho expresia stúpa. V populácii s mediánom veku 76 rokov tak môže byť receptor aktivovaný aj pri normálnych hladinách aldosterónu – a koncentrácia samotného hormónu prestáva byť informatívna.</p>
+<p>Autori na to ponúkajú biologicky vierohodné vysvetlenie. Starnutie posúva vnútrobunkový redoxný stav, zvyšuje tvorbu reaktívnych foriem kyslíka a inhibuje 11β-hydroxysteroiddehydrogenázu typu 2; mineralokortikoidový receptor je potom vystavený kortizolu ako agonistovi a jeho expresia stúpa. V populácii s mediánom veku 76&nbsp;rokov tak môže byť receptor aktivovaný aj pri normálnych hladinách aldosterónu – a koncentrácia samotného hormónu prestáva byť informatívna.</p>
 
 <h2>Zasadenie do existujúcich dôkazov</h2>
 
-<p>Nález nie je izolovaný. V štúdii PATHWAY-2 pri rezistentnej hypertenzii bol spironolaktón najúčinnejším liekom a pokles systolického tlaku bol výrazne väčší na dolnom konci rozdelenia renínu; medián bazálneho renínu bol tam 34 mU/l, teda blízko hodnote v SOGALDI-PEF. V štúdii HOMAGE u osôb s rizikom vzniku srdcového zlyhávania znížil spironolaktón systolický tlak celkovo asi o 10 mm Hg, pričom pri nízkom reníne presahoval pokles 15 mm Hg. Priame porovnanie absolútnych hodnôt renínu medzi štúdiami však nie je možné: HOMAGE používal platformu Olink, PATHWAY-2 aj SOGALDI-PEF priamu koncentráciu renínu.</p>
+<p>Nález nie je izolovaný. V štúdii PATHWAY-2 pri rezistentnej hypertenzii bol spironolaktón najúčinnejším liekom a pokles systolického tlaku bol výrazne väčší na dolnom konci rozdelenia renínu; medián bazálneho renínu bol tam 34&nbsp;mU/l, teda blízko hodnote v SOGALDI-PEF. V štúdii HOMAGE u osôb s rizikom vzniku srdcového zlyhávania znížil spironolaktón systolický tlak celkovo asi o 10&nbsp;mm Hg, pričom pri nízkom reníne presahoval pokles 15&nbsp;mm Hg. Priame porovnanie absolútnych hodnôt renínu medzi štúdiami však nie je možné: HOMAGE používal platformu Olink, PATHWAY-2 aj SOGALDI-PEF priamu koncentráciu renínu.</p>
 
 <p>Spoločný záver naprieč týmito populáciami znie, že <strong>sodíková retencia je prierezovým patofyziologickým činiteľom</strong> – od rezistentnej hypertenzie cez rizikové stavy až po manifestné HFpEF – a že renín ju zachytáva lepšie než aldosterón.</p>
 
@@ -165,7 +165,7 @@ $articles[] = [
 <ol>
   <li><strong>Výber pacienta.</strong> U pacienta s HFpEF, pretrvávajúcou hypertenziou a klinickými známkami objemového preťaženia, ktorý už užíva inhibítor SGLT2, je pridanie MRA hemodynamicky najvýnosnejšie práve vtedy, keď je renín nízky. Ak renín k dispozícii nie je, klinický obraz z tabuľky vyššie – vyšší tlak, periférny edém, vyšší-normálny sérový sodík – ukazuje rovnakým smerom.</li>
   <li><strong>Načasovanie odberu.</strong> Renín má zmysel merať <em>pred</em> nasadením MRA. Po nasadení ho blokáda receptora zvýši zhruba 2,5-násobne a hodnota už nehovorí o fenotype pacienta, ale o účinku lieku.</li>
-  <li><strong>Monitorovanie sa neuvoľňuje.</strong> Nízky renín nepredpovedá menšie riziko hyperkaliémie ani menší pokles eGFR – vzostup kália o ~0,4 mmol/l a pokles eGFR o ~5–7 ml/min/1,73 m² platia naprieč tertilami. Kontrola kália a kreatinínu o 1–2 týždne po nasadení a po každej zmene dávky zostáva povinná.</li>
+  <li><strong>Monitorovanie sa neuvoľňuje.</strong> Nízky renín nepredpovedá menšie riziko hyperkaliémie ani menší pokles eGFR – vzostup kália o ~0,4&nbsp;mmol/l a pokles eGFR o ~5–7&nbsp;ml/min/1,73&nbsp;m² platia naprieč tertilami. Kontrola kália a kreatinínu o 1–2&nbsp;týždne po nasadení a po každej zmene dávky zostáva povinná.</li>
   <li><strong>Očakávanie úbytku filtrátu.</strong> Iniciálny pokles eGFR po pridaní MRA k inhibítoru SGLT2 je u pacienta s nízkym renínom spravidla väčší, pretože má vyšší východiskový filtrát a väčší pokles tlaku. Ide prevažne o hemodynamickú zmenu, nie o štrukturálne poškodenie – rozlíšenie od skutočného zhoršenia je ale klinickým úsudkom, nie automatizmom.</li>
   <li><strong>Fenotypizácia namiesto plošnosti.</strong> Nezávislosť renínovej a aldosterónovej osi hovorí, že kardiorenálny fenotyp nie je jednorozmerný. „Vysoký aldosterón“ v tejto kohorte označoval pacienta s horšou obličkovou funkciou a poruchou hospodárenia so sodíkom, nie pacienta s väčším prínosom z MRA.</li>
 </ol>
@@ -177,8 +177,8 @@ $articles[] = [
   <li><strong>Odbery prebehli bez vysadenia liečby ovplyvňujúcej RAAS</strong> – inhibítorov ACE a sartanov užívalo 60–72 % pacientov, diuretiká dve tretiny, betablokátory 70 %. To sťažuje fyziologickú interpretáciu, zároveň však robí nález priamo prenositeľným do bežnej ambulancie.</li>
   <li><strong>Chýbajú tvrdé ukazovatele.</strong> Štúdia nebola navrhnutá na hodnotenie hospitalizácií ani mortality; o prognostickom význame renínu nehovorí nič.</li>
   <li><strong>Rameno so samotným spironolaktónom bolo v priebehu štúdie zrušené</strong>, jeho výsledky stoja na 39–41 pozorovaniach a treba ich čítať ako orientačné. Pri laterálnom E/e′ dokonca vyšli v opačnom smere, čo pri takejto veľkosti vzorky nemožno interpretovať.</li>
-  <li><strong>Hraničná prenositeľnosť medzných hodnôt.</strong> Hranica 21 mU/l platí pre použitú súpravu (priama chemiluminiscenčná imunoanalýza) a pre túto populáciu. Laboratóriá sa v metódach aj jednotkách líšia a výsledky nie sú bez prepočtu zameniteľné.</li>
-  <li><strong>Populácia bola staršia</strong> (medián 76 rokov) a s vysokým podielom fibrilácie predsiení, čo obmedzuje zovšeobecnenie na mladších pacientov s HFpEF.</li>
+  <li><strong>Hraničná prenositeľnosť medzných hodnôt.</strong> Hranica 21&nbsp;mU/l platí pre použitú súpravu (priama chemiluminiscenčná imunoanalýza) a pre túto populáciu. Laboratóriá sa v metódach aj jednotkách líšia a výsledky nie sú bez prepočtu zameniteľné.</li>
+  <li><strong>Populácia bola staršia</strong> (medián 76&nbsp;rokov) a s vysokým podielom fibrilácie predsiení, čo obmedzuje zovšeobecnenie na mladších pacientov s HFpEF.</li>
   <li><strong>Financovanie.</strong> Štúdiu podporila spoločnosť AstraZeneca (grant ESR-20-20771) a portugalská FCT; išlo o štúdiu iniciovanú a vedenú skúšajúcimi.</li>
 </ul>
 
@@ -204,7 +204,7 @@ $articles[] = [
 
 <p>Všetky číselné údaje v texte pochádzajú z plného znenia primárnej publikácie (zdroj 1) vrátane tabuliek 1–3; registračné údaje štúdie boli overené priamo v API ClinicalTrials.gov (108 randomizovaných, dokončenie november 2024) a parametre dizajnu v protokolovej publikácii (zdroj 3). Bibliografické údaje všetkých citácií – úplné autorské zoznamy, ročníky, čísla a strany – boli overené cez PubMed, Crossref a Europe PMC k 17. októbru 2026.</p>
 
-<p>Vlastným prínosom tohto spracovania je: doplnenie dizajnových skutočností, ktoré bývajú vynechávané (zrušenie ramena so samotným spironolaktónom, skrátenie vymývacieho obdobia, nenatriuretická dávka spironolaktónu okolo 19 mg denne); oddelenie nálezu pre krvný tlak od nálezu pre laterálne E/e′, kde kombinácia nad dapagliflozín nepridala nič (rozdiel 0,0) a interakcia vznikla rozdielom medzi tertilami, nie medzi liečbami; zdôraznenie asymetrie medzi prínosom a rizikom (renín modifikuje tlak, nie kálium a eGFR), ktorá je vlastným dôvodom klinickej použiteľnosti; a praktické odporúčanie merať renín pred nasadením MRA. V primárnej publikácii je v odseku o prediktoroch nízkeho renínu preklep „T1; ≥ 21 mU/L“; z definície tertíl v celom zvyšku práce ide o hodnotu ≤ 21 mU/l, a tak je uvedená aj tu.</p>
+<p>Vlastným prínosom tohto spracovania je: doplnenie dizajnových skutočností, ktoré bývajú vynechávané (zrušenie ramena so samotným spironolaktónom, skrátenie vymývacieho obdobia, nenatriuretická dávka spironolaktónu okolo 19&nbsp;mg denne); oddelenie nálezu pre krvný tlak od nálezu pre laterálne E/e′, kde kombinácia nad dapagliflozín nepridala nič (rozdiel 0,0) a interakcia vznikla rozdielom medzi tertilami, nie medzi liečbami; zdôraznenie asymetrie medzi prínosom a rizikom (renín modifikuje tlak, nie kálium a eGFR), ktorá je vlastným dôvodom klinickej použiteľnosti; a praktické odporúčanie merať renín pred nasadením MRA. V primárnej publikácii je v odseku o prediktoroch nízkeho renínu preklep „T1; ≥ 21&nbsp;mU/L“; z definície tertíl v celom zvyšku práce ide o hodnotu ≤ 21&nbsp;mU/l, a tak je uvedená aj tu.</p>
 
 <h3>Súvisiace články</h3>
 

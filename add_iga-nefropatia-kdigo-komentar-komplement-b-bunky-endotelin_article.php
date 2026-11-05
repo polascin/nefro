@@ -1,9 +1,9 @@
 <?php
 /**
  * add_iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie: Rovin et al., KDIGO commentary (Kidney International, 2026)
- * + styri registracne studie faz 3 (ALIGN, APPLAUSE-IgAN, VISIONARY, ORIGIN 3).
+ * + styri registracne štúdie faz 3 (ALIGN, APPLAUSE-IgAN, VISIONARY, ORIGIN 3).
  */
 
 // Ochrana – len admin alebo CLI
@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Endotelínový systém: atrasentan vedľa sparsentanu</h2>
 
-<p><strong>Atrasentan</strong> je selektívny antagonista endotelínového receptora typu A. Urýchlené schválenie získal pre dospelých s primárnou IgA nefropatiou s rizikom rýchlej progresie, pričom sa ako kritérium používal <strong>pomer bielkovina/kreatinín v moči (uPCR) najmenej 1,5 g/g</strong>.</p>
+<p><strong>Atrasentan</strong> je selektívny antagonista endotelínového receptora typu A. Urýchlené schválenie získal pre dospelých s primárnou IgA nefropatiou s rizikom rýchlej progresie, pričom sa ako kritérium používal <strong>pomer bielkovina/kreatinín v moči (uPCR) najmenej 1,5&nbsp;g/g</strong>.</p>
 
 <h3>ALIGN (fáza 3)</h3>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <h3>APPLAUSE-IgAN (fáza 3)</h3>
 
-<p><strong>Iptakopan</strong> je perorálny inhibítor faktora B, ktorý blokuje alternatívnu dráhu. Do hlavnej populácie bolo zaradených 443 pacientov; interim analýza hodnotila prvých 250 (125 v každej skupine). Primárnym ukazovateľom bola zmena uPCR za 24 hodín v <strong>9. mesiaci</strong> – nie v 36. týždni, ako sa niekedy nesprávne uvádza.</p>
+<p><strong>Iptakopan</strong> je perorálny inhibítor faktora B, ktorý blokuje alternatívnu dráhu. Do hlavnej populácie bolo zaradených 443 pacientov; interim analýza hodnotila prvých 250 (125 v každej skupine). Primárnym ukazovateľom bola zmena uPCR za 24&nbsp;hodín v <strong>9. mesiaci</strong> – nie v 36. týždni, ako sa niekedy nesprávne uvádza.</p>
 
 <p>V 9. mesiaci bol upravený geometrický priemer uPCR pri iptakopane <strong>o 38,3 % nižší</strong> než pri placebe (95 % IS 26,0 až 48,6; obojstranné <em>P</em> &lt; 0,001). Výsledok bol podporený konzistentnými sekundárnymi analýzami.</p>
 
@@ -92,7 +92,7 @@ $articles[] = [
 
 <p><strong>Sibeprenlimab</strong> je humanizovaná monoklonová protilátka IgG2, ktorá selektívne viaže a inhibuje APRIL. Urýchlené schválenie získal pre dospelých s primárnou IgA nefropatiou s rizikom progresie, <strong>bez kritéria uPCR</strong>.</p>
 
-<p>Randomizovaných bolo 510 pacientov (259 sibeprenlimab, 251 placebo); prespecifikovaná interim analýza zahrnula prvých 320 (152 a 168). Primárnym ukazovateľom bola zmena uPCR za 24 hodín v <strong>9. mesiaci</strong>:</p>
+<p>Randomizovaných bolo 510 pacientov (259 sibeprenlimab, 251 placebo); prespecifikovaná interim analýza zahrnula prvých 320 (152 a 168). Primárnym ukazovateľom bola zmena uPCR za 24&nbsp;hodín v <strong>9. mesiaci</strong>:</p>
 
 <ul>
   <li>sibeprenlimab <strong>−50,2 %</strong>,</li>
@@ -100,13 +100,13 @@ $articles[] = [
   <li>upravený geometrický priemer uPCR bol pri sibeprenlimabe <strong>o 51,2 % nižší</strong> než pri placebe (96,5 % IS 42,9 až 58,2; <em>P</em> &lt; 0,001).</li>
 </ul>
 
-<p>Farmakodynamicky boli v 48. týždni hladiny <strong>APRIL znížené o 95,8 %</strong> a hladiny patogénnej <strong>Gd-IgA1 o 67,1 %</strong> oproti východisku. Bezpečnostný profil sa javil podobný ako pri placebe: nebolo hlásené žiadne úmrtie a výskyt závažných nežiaducich udalostí počas liečby bol <strong>3,5 % pri sibeprenlimabe oproti 4,4 % pri placebe</strong>. Kľúčovým sekundárnym ukazovateľom, ktorý sa vyhodnotí po ukončení štúdie, je ročný sklon eGFR za 24 mesiacov.</p>
+<p>Farmakodynamicky boli v 48. týždni hladiny <strong>APRIL znížené o 95,8 %</strong> a hladiny patogénnej <strong>Gd-IgA1 o 67,1 %</strong> oproti východisku. Bezpečnostný profil sa javil podobný ako pri placebe: nebolo hlásené žiadne úmrtie a výskyt závažných nežiaducich udalostí počas liečby bol <strong>3,5 % pri sibeprenlimabe oproti 4,4 % pri placebe</strong>. Kľúčovým sekundárnym ukazovateľom, ktorý sa vyhodnotí po ukončení štúdie, je ročný sklon eGFR za 24&nbsp;mesiacov.</p>
 
 <h3>Atacicept – ORIGIN 3 (fáza 3)</h3>
 
-<p><strong>Atacicept</strong> je fúzny proteín TACI-Fc, ktorý inhibuje <strong>APRIL aj BAFF</strong>. V štúdii sa podával subkutánne v dávke 150 mg raz týždenne, pacientmi doma.</p>
+<p><strong>Atacicept</strong> je fúzny proteín TACI-Fc, ktorý inhibuje <strong>APRIL aj BAFF</strong>. V štúdii sa podával subkutánne v dávke 150&nbsp;mg raz týždenne, pacientmi doma.</p>
 
-<p>Prespecifikovaná interim analýza zahrnula 203 pacientov (106 atacicept, 97 placebo). Primárnym ukazovateľom bola percentuálna zmena uPCR za 24 hodín v <strong>36. týždni</strong>:</p>
+<p>Prespecifikovaná interim analýza zahrnula 203 pacientov (106 atacicept, 97 placebo). Primárnym ukazovateľom bola percentuálna zmena uPCR za 24&nbsp;hodín v <strong>36. týždni</strong>:</p>
 
 <ul>
   <li>atacicept <strong>−45,7 %</strong>,</li>

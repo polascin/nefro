@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Odborny clanok: Amanita muscaria v produktoch typu "gummies" - toxikologia
+ * Odborný článok: Amanita muscaria v produktoch typu "gummies" - toxikologia
  * a jej skutocny nefrologicky rozmer.
  */
 
@@ -59,11 +59,11 @@ $articles[] = [
 
 <h3>Obsah účinných látok kolíše o rády</h3>
 
-<p>Tsujikawa a spol. namerali v klobúkoch muchotrávky červenej kyselinu ibotenovú v rozsahu pod 10 až 2 845 ppm a muscimol 46 až 1 052 ppm, pričom v hlúbiku boli hodnoty podstatne nižšie. Takýto rozptyl znamená, že „jedna huba“ ani „jeden cukrík“ nie sú použiteľnou jednotkou dávky.</p>
+<p>Tsujikawa a spol. namerali v klobúkoch muchotrávky červenej kyselinu ibotenovú v rozsahu pod 10 až 2&nbsp;845 ppm a muscimol 46 až 1&nbsp;052 ppm, pričom v hlúbiku boli hodnoty podstatne nižšie. Takýto rozptyl znamená, že „jedna huba“ ani „jeden cukrík“ nie sú použiteľnou jednotkou dávky.</p>
 
 <h2>Klinický obraz: dva protichodné toxidrómy naraz</h2>
 
-<p>Nástup príznakov sa konzistentne uvádza <strong>do 30 minút až 2 hodín</strong> po požití. Dominujú prejavy centrálneho nervového systému: dezorientácia, únava, zrakové a sluchové halucinácie, delírium. FDA uvádza, že v ťažkých prípadoch môže dôjsť ku kóme, kŕčom, útlmu dýchania a úmrtiu.</p>
+<p>Nástup príznakov sa konzistentne uvádza <strong>do 30&nbsp;minút až 2&nbsp;hodín</strong> po požití. Dominujú prejavy centrálneho nervového systému: dezorientácia, únava, zrakové a sluchové halucinácie, delírium. FDA uvádza, že v ťažkých prípadoch môže dôjsť ku kóme, kŕčom, útlmu dýchania a úmrtiu.</p>
 
 <p>Charakteristickým znakom je <strong>striedanie útlmu a excitácie</strong> podľa toho, ktorá zložka práve prevláda. Obraz, ktorý sa v literatúre označuje ako panterínovo-muskarínový syndróm, svojimi hlavnými znakmi napodobňuje <strong>anticholinergný</strong> toxidróm – návaly, horúčka, rozšírené zrenice, vracanie, hnačka a halucinácie. Zároveň však boli u týchto otráv opísané aj cholinergné prejavy. Pre klinika z toho vyplýva zásadné upozornenie: <strong>pri tejto otrave neexistuje jednotný toxidróm</strong> a pokus zaradiť pacienta do jednej kategórie môže viesť k nesprávnemu manažmentu.</p>
 
@@ -76,7 +76,7 @@ $articles[] = [
 </thead>
 <tbody>
 <tr><th scope="row">Zloženie súboru</th><td>23× <em>A. muscaria</em>, 10× <em>A. pantherina</em>, 1× <em>A. aprica</em></td></tr>
-<tr><th scope="row">Symptomatickí pacienti</th><td>25; u všetkých okrem jedného príznaky do 6 hodín</td></tr>
+<tr><th scope="row">Symptomatickí pacienti</th><td>25; u všetkých okrem jedného príznaky do 6&nbsp;hodín</td></tr>
 <tr><th scope="row">Intubácia</th><td>5 pacientov</td></tr>
 <tr><th scope="row">Akútne poškodenie obličiek</th><td><strong>0 prípadov</strong></td></tr>
 <tr><th scope="row">Kŕče, hypotenzia, hepatotoxicita</th><td><strong>0 prípadov</strong></td></tr>
@@ -92,7 +92,7 @@ $articles[] = [
 <p>Práve v tomto bode sa opakovane objavuje nadhodnotenie rizika. Dostupné údaje ukazujú toto:</p>
 
 <ul>
-<li><strong>Najväčší publikovaný klinický súbor</strong> (34 prípadov za 14 rokov, Oregonské toxikologické centrum) <strong>nezaznamenal ani jedno akútne poškodenie obličiek</strong>.</li>
+<li><strong>Najväčší publikovaný klinický súbor</strong> (34 prípadov za 14&nbsp;rokov, Oregonské toxikologické centrum) <strong>nezaznamenal ani jedno akútne poškodenie obličiek</strong>.</li>
 <li><strong>Vedecké memorandum FDA</strong>, ktoré posúdilo 604 jedinečných publikácií, <strong>neuvádza obličkové poškodenie vôbec</strong> – ani medzi hlásenými účinkami, ani medzi kazuistikami. Citovať FDA ako zdroj tvrdenia o renálnej insuficiencii po <em>A. muscaria</em> je preto nepodložené.</li>
 <li>V databáze PubMed <strong>nie je indexovaná ani jedna práca</strong> na dopyt „Amanita muscaria“ a „rhabdomyolysis“.</li>
 <li>Jediný dohľadateľný doklad o súbežnom renálnom zlyhaní a rabdomyolýze je <strong>kongresový abstrakt</strong> (poster, CHEST 2020): 56-ročný muž po cielenom požití huby s hyperaktivitou prechádzajúcou do agresivity, útlmom dýchania, myoklonickými zášklbmi, renálnym zlyhaním a rabdomyolýzou. Ide o jednu kazuistiku vo forme neindexovaného abstraktu, teda o najnižšiu úroveň dôkazu.</li>
@@ -112,18 +112,18 @@ $articles[] = [
 <tr><th scope="col">Huba / toxín</th><th scope="col">Latencia</th><th scope="col">Cieľový orgán</th><th scope="col">Poznámka</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row"><em>A. muscaria</em>, <em>A. pantherina</em><br>(muscimol, kyselina ibotenová)</th><td>30 min – 2 h</td><td>CNS</td><td>obličky typicky nepostihnuté; AKI len ako komplikácia kritického stavu</td></tr>
-<tr><th scope="row"><em>A. smithiana</em>, <em>A. proxima</em>, <em>A. boudieri</em>, <em>A. gracilior</em>, <em>A. echinocephala</em></th><td>10 – 12 h<br>(nauzea, vracanie)</td><td>obličky + mierna hepatitída</td><td>ťažké, ale <strong>reverzibilné</strong> AKI; biopsia: akútna intersticiálna nefritída a tubulárna nekróza</td></tr>
-<tr><th scope="row"><em>Cortinarius orellanus</em> / <em>C. rubellus</em><br>(orelanín)</th><td>1 – 2 týždne</td><td>obličky</td><td>ťažká intersticiálna nefritída, tubulárne poškodenie a fibróza; bez antidota, často <strong>ireverzibilné</strong></td></tr>
+<tr><th scope="row"><em>A. muscaria</em>, <em>A. pantherina</em><br>(muscimol, kyselina ibotenová)</th><td>30&nbsp;min – 2&nbsp;h</td><td>CNS</td><td>obličky typicky nepostihnuté; AKI len ako komplikácia kritického stavu</td></tr>
+<tr><th scope="row"><em>A. smithiana</em>, <em>A. proxima</em>, <em>A. boudieri</em>, <em>A. gracilior</em>, <em>A. echinocephala</em></th><td>10 – 12&nbsp;h<br>(nauzea, vracanie)</td><td>obličky + mierna hepatitída</td><td>ťažké, ale <strong>reverzibilné</strong> AKI; biopsia: akútna intersticiálna nefritída a tubulárna nekróza</td></tr>
+<tr><th scope="row"><em>Cortinarius orellanus</em> / <em>C. rubellus</em><br>(orelanín)</th><td>1 – 2&nbsp;týždne</td><td>obličky</td><td>ťažká intersticiálna nefritída, tubulárne poškodenie a fibróza; bez antidota, často <strong>ireverzibilné</strong></td></tr>
 <tr><th scope="row"><em>Tricholoma equestre</em></th><td>oneskorená</td><td>priečne pruhované svaly</td><td>rabdomyolýza so sekundárnym AKI</td></tr>
-<tr><th scope="row"><em>A. phalloides</em> (amatoxíny)</th><td>6 – 12 h</td><td>pečeň</td><td>najčastejšia príčina fatálnych otráv hubami; obličky sekundárne</td></tr>
+<tr><th scope="row"><em>A. phalloides</em> (amatoxíny)</th><td>6 – 12&nbsp;h</td><td>pečeň</td><td>najčastejšia príčina fatálnych otráv hubami; obličky sekundárne</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Skupina nefrotoxických bielych muchotrávok si zaslúži osobitnú pozornosť, pretože je toxikologicky mladá. Kirchmair a spol. v roku 2012 opísali nemeckého a dvoch portugalských pacientov po požití celkom bielych muchotrávok s prsteňom: nauzea a vracanie 10 až 12 hodín po požití, ťažké akútne renálne zlyhanie a mierna hepatitída, biopsia s obrazom akútnej intersticiálnej nefritídy a tubulárnej nekrózy. Dvaja pacienti potrebovali dočasnú hemodialýzu a <strong>všetci plne obnovili funkciu obličiek</strong>. Autori následne testovali 20 druhov muchotrávok a toxín <em>A. smithiana</em> preukázali v druhoch <em>A. boudieri</em>, <em>A. gracilior</em> a <em>A. echinocephala</em>. Posledný menovaný je jediná nefrotoxická muchotrávka rastúca severne od Álp – teda druh relevantný aj pre stredoeurópsku prax.</p>
+<p>Skupina nefrotoxických bielych muchotrávok si zaslúži osobitnú pozornosť, pretože je toxikologicky mladá. Kirchmair a spol. v roku 2012 opísali nemeckého a dvoch portugalských pacientov po požití celkom bielych muchotrávok s prsteňom: nauzea a vracanie 10 až 12&nbsp;hodín po požití, ťažké akútne renálne zlyhanie a mierna hepatitída, biopsia s obrazom akútnej intersticiálnej nefritídy a tubulárnej nekrózy. Dvaja pacienti potrebovali dočasnú hemodialýzu a <strong>všetci plne obnovili funkciu obličiek</strong>. Autori následne testovali 20 druhov muchotrávok a toxín <em>A. smithiana</em> preukázali v druhoch <em>A. boudieri</em>, <em>A. gracilior</em> a <em>A. echinocephala</em>. Posledný menovaný je jediná nefrotoxická muchotrávka rastúca severne od Álp – teda druh relevantný aj pre stredoeurópsku prax.</p>
 
-<p>Naopak pri orelanínovom syndróme je latencia 1 až 2 týždne a pacient v medziobdobí buď nemá príznaky, alebo len mierne gastrointestinálne ťažkosti. Ak sa na anamnézu húb nespýtame cielene, spojitosť nám unikne.</p>
+<p>Naopak pri orelanínovom syndróme je latencia 1 až 2&nbsp;týždne a pacient v medziobdobí buď nemá príznaky, alebo len mierne gastrointestinálne ťažkosti. Ak sa na anamnézu húb nespýtame cielene, spojitosť nám unikne.</p>
 
 <h3>Aplikácie na určovanie húb nie sú bezpečnostná poistka</h3>
 
@@ -204,8 +204,8 @@ $articles[] = [
 <p>Ak po požití húb vznikne akútne poškodenie obličiek, má to viesť k aktívnemu prehodnoteniu pôvodnej domnienky:</p>
 
 <ul>
-<li>latencia 10 – 12 hodín s nauzeou a vracaním nasledovaná AKI a miernou hepatitídou → nefrotoxické biele muchotrávky,</li>
-<li>latencia 1 – 2 týždne → orelanínový syndróm (<em>Cortinarius</em>); prognóza je horšia a poškodenie môže byť trvalé,</li>
+<li>latencia 10 – 12&nbsp;hodín s nauzeou a vracaním nasledovaná AKI a miernou hepatitídou → nefrotoxické biele muchotrávky,</li>
+<li>latencia 1 – 2&nbsp;týždne → orelanínový syndróm (<em>Cortinarius</em>); prognóza je horšia a poškodenie môže byť trvalé,</li>
 <li>dominantná rabdomyolýza s oneskoreným nástupom → zvážiť <em>Tricholoma equestre</em>,</li>
 <li>oneskorená hepatopatia → amatoxíny.</li>
 </ul>

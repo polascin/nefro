@@ -7,7 +7,7 @@ declare(strict_types=1);
  * Kontroluje bez zápisu do aplikačných tabuliek:
  *   - dostupnosť databázy a vek najstaršej čakajúcej položky vo frontoch
  *     (newsletter, odberatelia, právne oznámenia) — zaseknutý worker = FAIL;
- *   - zlyhané položky za posledných 24 h (WARN);
+ *   - zlyhané položky za posledných 24 h (WARN);
  *   - vek logu týždenného retenčného cronu (private/archive_cleanup_cron.log);
  *   - produkčný marker deploy_info.php (DEPLOY_COMMIT, vek nasadenia);
  *   - párovanie perexov: perex v add_*_article.php (zdroj pravdy v gite) sa
@@ -49,7 +49,7 @@ const OPS_HEALTH_USER_AGENT = 'nefro-ops-health/1.0';
  * Zjednotí PHP a MySQL reláciu na Europe/Bratislava (rovnaký postup ako
  * db_config.php). next_attempt_at je DATETIME zapisovaný workerom v čase
  * aplikácie; bez pásma relácie by retry_overdue a vek TIMESTAMP stĺpcov
- * pri UTC CLI boli posunuté o 1 až 2 h (nález Behu 134).
+ * pri UTC CLI boli posunuté o 1 až 2 h (nález Behu 134).
  * SQLite v izolovaných testoch sa neupravuje.
  */
 function opsHealthApplySessionTimezone(PDO $pdo): void
@@ -124,11 +124,11 @@ function opsHealthEvaluateQueue(array $stats, int $maxPendingAgeSeconds): array
     }
     if ($stats['retry_overdue'] > 0 && $status !== 'FAIL') {
         $status = 'WARN';
-        $messages[] = sprintf('%s: %d položiek čaká na opakovanie dlhšie než 1 h.', $stats['table'], $stats['retry_overdue']);
+        $messages[] = sprintf('%s: %d položiek čaká na opakovanie dlhšie než 1 h.', $stats['table'], $stats['retry_overdue']);
     }
     if ($stats['failed_24h'] > 0 && $status === 'PASS') {
         $status = 'WARN';
-        $messages[] = sprintf('%s: %d zlyhaní za 24 h.', $stats['table'], $stats['failed_24h']);
+        $messages[] = sprintf('%s: %d zlyhaní za 24 h.', $stats['table'], $stats['failed_24h']);
     }
     return ['status' => $status, 'messages' => $messages];
 }

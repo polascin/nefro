@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Medzi helminty patria hlístovce (nematódy), pásomnice (cestódy) a motolice (trematódy). Ich spôsob prenosu, lokalizácia v organizme aj citlivosť na liečbu sa zásadne líšia. Označenie „črevné parazity“ je širšie, pretože zahŕňa aj prvoky, ktoré helmintmi nie sú.</p>
 
-<p>Od helmintóz treba odlíšiť myiázu, teda napadnutie tkanív larvami múch. Larvy druhu <em>Cochliomyia hominivorax</em>, ktoré v obrazovom prehľade uvádza aj východiskový zdroj tohto článku, nie sú črevné helminty: ide o larválne štádium muchy bzučivky, pôvodcu tkanivovej myiázy. Na rozdiel od lariev, ktoré sa živia odumretým tkanivom, požierajú živé tkanivo, merajú 6,5 až 17 mm a spôsobujú rýchlo progredujúce, bolestivé a zapáchajúce rany. Liečba spočíva v <strong>odstránení lariev a ošetrení rany</strong>, prípadne v antibiotiku na prevenciu sekundárnej stafylokokovej či streptokokovej infekcie – nie v režime určenom na črevné helmintózy. [1]</p>
+<p>Od helmintóz treba odlíšiť myiázu, teda napadnutie tkanív larvami múch. Larvy druhu <em>Cochliomyia hominivorax</em>, ktoré v obrazovom prehľade uvádza aj východiskový zdroj tohto článku, nie sú črevné helminty: ide o larválne štádium muchy bzučivky, pôvodcu tkanivovej myiázy. Na rozdiel od lariev, ktoré sa živia odumretým tkanivom, požierajú živé tkanivo, merajú 6,5 až 17&nbsp;mm a spôsobujú rýchlo progredujúce, bolestivé a zapáchajúce rany. Liečba spočíva v <strong>odstránení lariev a ošetrení rany</strong>, prípadne v antibiotiku na prevenciu sekundárnej stafylokokovej či streptokokovej infekcie – nie v režime určenom na črevné helmintózy. [1]</p>
 
 <p>Zaradenie tejto témy do obrazového prehľadu parazitov preto nemožno chápať ako taxonomické zaradenie medzi črevné červy. Rozlíšenie má priamy praktický dôsledok: pri myiáze by podanie antihelmintika len oddialilo jediný účinný zákrok.</p>
 
@@ -72,7 +72,7 @@ $articles[] = [
     <tr>
       <th scope="row">Infekcie machovcami (<em>Ancylostoma duodenale</em>, <em>Necator americanus</em>)</th>
       <td>Odhadom 576 až 740 miliónov infikovaných a popredná príčina sideropenickej anémie v rozvojových krajinách. Krv sa stráca priamo z mukóznych kapilár.</td>
-      <td>Infekcia pretrváva roky (<em>A. duodenale</em> 1 až 3 roky, <em>N. americanus</em> 3 až 10 rokov). Anémiu u pacienta s expozíciou nemožno automaticky pripísať chronickej chorobe obličiek.</td>
+      <td>Infekcia pretrváva roky (<em>A. duodenale</em> 1 až 3&nbsp;roky, <em>N. americanus</em> 3 až 10&nbsp;rokov). Anémiu u pacienta s expozíciou nemožno automaticky pripísať chronickej chorobe obličiek.</td>
     </tr>
     <tr>
       <th scope="row">Trichurióza (<em>Trichuris trichiura</em>)</th>
@@ -160,11 +160,11 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Nekomplikovaná akútna alebo chronická strongyloidóza – prvá voľba</th>
-      <td><strong>Ivermektín 200 µg/kg perorálne raz denne počas 1 až 2 dní</strong></td>
+      <td><strong>Ivermektín 200 µg/kg perorálne raz denne počas 1 až 2&nbsp;dní</strong></td>
     </tr>
     <tr>
       <th scope="row">Nekomplikovaná infekcia – alternatíva</th>
-      <td><strong>Albendazol 400 mg perorálne dvakrát denne počas 7 dní</strong></td>
+      <td><strong>Albendazol 400&nbsp;mg perorálne dvakrát denne počas 7&nbsp;dní</strong></td>
     </tr>
     <tr>
       <th scope="row">Hyperinfekčný syndróm alebo diseminovaná infekcia</th>
@@ -172,7 +172,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Kontrola po liečbe</th>
-      <td>Pri pôvodne pozitívnom náleze a pretrvávajúcich príznakoch kontrolné vyšetrenie stolice o 2 až 4 týždne po liečbe</td>
+      <td>Pri pôvodne pozitívnom náleze a pretrvávajúcich príznakoch kontrolné vyšetrenie stolice o 2 až 4&nbsp;týždne po liečbe</td>
     </tr>
   </tbody>
 </table>
@@ -180,7 +180,7 @@ $articles[] = [
 
 <p>Uvedené dávkovanie zodpovedá aktuálnemu klinickému odporúčaniu CDC. [2] Závažný priebeh vyžaduje hospitalizáciu a spoluprácu infektológa, intenzivistu a nefrológa. Ileus alebo malabsorpcia môžu narušiť vstrebávanie a tým aj účinnosť perorálneho podania; neštandardné spôsoby podania opisované pri kritických stavoch nemožno považovať za rutinnú ambulantnú alternatívu.</p>
 
-<p>Pred ivermektínom treba zhodnotiť riziko súbežnej infekcie <em>Loa loa</em> podľa geografickej anamnézy – CDC uvádza potvrdenú alebo suspektnú loázu medzi kontraindikáciami spolu s hmotnosťou pod 15 kg a graviditou či dojčením. Pri albendazole sa uvádza precitlivenosť na benzimidazoly, vyhnutie sa podaniu v prvom trimestri gravidity a opatrnosť počas dojčenia. [2]</p>
+<p>Pred ivermektínom treba zhodnotiť riziko súbežnej infekcie <em>Loa loa</em> podľa geografickej anamnézy – CDC uvádza potvrdenú alebo suspektnú loázu medzi kontraindikáciami spolu s hmotnosťou pod 15&nbsp;kg a graviditou či dojčením. Pri albendazole sa uvádza precitlivenosť na benzimidazoly, vyhnutie sa podaniu v prvom trimestri gravidity a opatrnosť počas dojčenia. [2]</p>
 
 <h2>Nefrologické súvislosti a bezpečnosť liečby</h2>
 

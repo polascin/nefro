@@ -61,15 +61,15 @@ $articles[] = [
 
 <h2>Alkohol a nikotín: sľubné, ale zatiaľ skoré dáta</h2>
 
-<p>Najkonkrétnejšie klinické dáta sa zatiaľ týkajú alkoholu. Randomizovaná klinická štúdia publikovaná v <em>JAMA Psychiatry</em> v roku 2025 ukázala, že nízkodávkovaný semaglutid u dospelých s poruchou užívania alkoholu znížil množstvo alkoholu skonzumovaného v laboratórnom modeli sebapodávania. Počas 9 týždňov liečby sa zlepšili niektoré, nie však všetky ukazovatele pitia, a významne klesol týždenný craving po alkohole.</p>
+<p>Najkonkrétnejšie klinické dáta sa zatiaľ týkajú alkoholu. Randomizovaná klinická štúdia publikovaná v <em>JAMA Psychiatry</em> v roku 2025 ukázala, že nízkodávkovaný semaglutid u dospelých s poruchou užívania alkoholu znížil množstvo alkoholu skonzumovaného v laboratórnom modeli sebapodávania. Počas 9&nbsp;týždňov liečby sa zlepšili niektoré, nie však všetky ukazovatele pitia, a významne klesol týždenný craving po alkohole.</p>
 
-<p>Silnejší klinický signál priniesla randomizovaná štúdia v <em>The Lancet</em> z roku 2026. Zahŕňala pacientov s poruchou užívania alkoholu a obezitou, ktorí dostávali semaglutid alebo placebo počas 26 týždňov. Semaglutid viedol k väčšiemu poklesu dní s ťažkým pitím, celkovej mesačnej konzumácie alkoholu, sebahodnoteného cravingu a niektorých biomarkerov súvisiacich s alkoholovou expozíciou.</p>
+<p>Silnejší klinický signál priniesla randomizovaná štúdia v <em>The Lancet</em> z roku 2026. Zahŕňala pacientov s poruchou užívania alkoholu a obezitou, ktorí dostávali semaglutid alebo placebo počas 26&nbsp;týždňov. Semaglutid viedol k väčšiemu poklesu dní s ťažkým pitím, celkovej mesačnej konzumácie alkoholu, sebahodnoteného cravingu a niektorých biomarkerov súvisiacich s alkoholovou expozíciou.</p>
 
 <p>Pri nikotíne sú údaje zatiaľ menej jednoznačné. Fáza 2a randomizovanej štúdie publikovanej v <em>JAMA Network Open</em> v roku 2026 u dospelých denných fajčiarov nepreukázala jasný pokles počtu vyfajčených cigariet za deň v primárnych testoch, ale ukázala signál zníženia nikotínového cravingu a hmotnosti. To je dôležitý rozdiel: liek nemusí hneď zmeniť celé správanie, ale môže oslabiť jeho vnútornú naliehavosť.</p>
 
 <h2>Veľké observačné dáta: užitočné, nie kauzálne</h2>
 
-<p>Ďalší diel skladačky priniesla veľká kohortová štúdia v <em>BMJ</em> z roku 2026, ktorá analyzovala údaje viac než 600 000 amerických veteránov s diabetes mellitus 2. typu. V dizajne emulácie cieľových štúdií bolo začatie liečby agonistom GLP-1 receptora v porovnaní so začatím liečby inhibítorom SGLT2 spojené s nižším rizikom nových porúch užívania látok. U pacientov s už existujúcou poruchou užívania látok bolo používanie GLP-1 liečby spojené aj s nižším rizikom niektorých nepriaznivých klinických udalostí.</p>
+<p>Ďalší diel skladačky priniesla veľká kohortová štúdia v <em>BMJ</em> z roku 2026, ktorá analyzovala údaje viac než 600&nbsp;000 amerických veteránov s diabetes mellitus 2. typu. V dizajne emulácie cieľových štúdií bolo začatie liečby agonistom GLP-1 receptora v porovnaní so začatím liečby inhibítorom SGLT2 spojené s nižším rizikom nových porúch užívania látok. U pacientov s už existujúcou poruchou užívania látok bolo používanie GLP-1 liečby spojené aj s nižším rizikom niektorých nepriaznivých klinických udalostí.</p>
 
 <p>Takéto dáta sú užitočné, ale treba ich čítať správne. Observačná štúdia ani pri kvalitnom dizajne nedokazuje kauzalitu. Môže v nej pretrvávať reziduálne skreslenie, rozdiely v správaní pacientov, dostupnosti starostlivosti alebo v závažnosti základného ochorenia. Je to dôvod na ďalší výskum, nie dôkaz, že GLP-1 lieky sú hotovou liečbou závislostí.</p>
 

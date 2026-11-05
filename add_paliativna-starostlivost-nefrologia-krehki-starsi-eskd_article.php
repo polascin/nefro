@@ -61,15 +61,15 @@ $articles[] = [
 
 <p>Najčastejším nedorozumením je predstava, že konzervatívny nefrologický postup znamená „nerobiť nič“. Ide pritom o aktívne vedenú starostlivosť: manažment symptómov, korekcia anémie a acidózy, kontrola objemu, liečba svrbenia a bolesti, psychosociálna a duchovná podpora, plánovanie záveru života.</p>
 
-<p>Dôkazy sú konkrétnejšie, než sa vo všeobecnosti predpokladá. Holandská kohorta Woutera Verberneho a spolupracovníkov porovnala 107 konzervatívne vedených pacientov s 204 pacientmi na náhrade funkcie obličiek vo veku 70 rokov a viac:</p>
+<p>Dôkazy sú konkrétnejšie, než sa vo všeobecnosti predpokladá. Holandská kohorta Woutera Verberneho a spolupracovníkov porovnala 107 konzervatívne vedených pacientov s 204 pacientmi na náhrade funkcie obličiek vo veku 70&nbsp;rokov a viac:</p>
 
 <ul>
   <li>V celom súbore bol medián prežívania 3,1 roka pri náhrade funkcie oproti 1,5 roka pri konzervatívnom postupe.</li>
-  <li><strong>Vo veku 80 rokov a viac sa rozdiel prestal potvrdzovať</strong> – 2,1 oproti 1,4 roka (p = 0,08).</li>
+  <li><strong>Vo veku 80&nbsp;rokov a viac sa rozdiel prestal potvrdzovať</strong> – 2,1 oproti 1,4 roka (p = 0,08).</li>
   <li>Pri vysokej komorbidite (Daviesovo skóre 3 a viac) bol rozdiel síce významný, ale malý – 1,8 oproti 1,0 roka.</li>
 </ul>
 
-<p>Staršia britská práca Rachel Carsonovej a spolupracovníkov našla u pacientov nad 70 rokov výraznejší rozdiel v prežívaní (medián 37,8 oproti 13,9 mesiaca), zároveň však ukázala niečo podstatnejšie: konzervatívne vedení pacienti mali <strong>podobný počet dní strávených mimo nemocnice</strong> a významne vyššiu pravdepodobnosť, že zomrú doma alebo v hospici (pomer šancí 4,15).</p>
+<p>Staršia britská práca Rachel Carsonovej a spolupracovníkov našla u pacientov nad 70&nbsp;rokov výraznejší rozdiel v prežívaní (medián 37,8 oproti 13,9 mesiaca), zároveň však ukázala niečo podstatnejšie: konzervatívne vedení pacienti mali <strong>podobný počet dní strávených mimo nemocnice</strong> a významne vyššiu pravdepodobnosť, že zomrú doma alebo v hospici (pomer šancí 4,15).</p>
 
 <p>Voľba teda spravidla nie je medzi životom a smrťou, ale medzi <strong>dlhším časom stráveným čiastočne v nemocnici a kratším časom stráveným prevažne doma</strong>. Takto formulovaná otázka je pre pacienta zodpovedateľná – na rozdiel od otázky, či „chce dialýzu“.</p>
 
@@ -146,7 +146,7 @@ $articles[] = [
   <li><strong>Rachel C. Carson, Maciej Juszczak, Andrew Davenport, Aine Burns.</strong> <em>Is maximum conservative management an equivalent treatment option to dialysis for elderly patients with significant comorbid disease?</em> Clinical Journal of the American Society of Nephrology. 2009;4(10):1611–1619. doi: 10.2215/CJN.00510109. <a href="https://pubmed.ncbi.nlm.nih.gov/19808244/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo aj obsah prehľadu – naliehavosť integrácie paliatívnych zásad, nedostatočné praktické zavedenie napriek podpore v odporúčaniach, všetkých šesť pokrytých oblastí a záver o použiteľnosti nástrojov s nízkym prahom bez špecializovaného výcviku – boli overené v zázname PubMed a Europe PMC. Plný text prehľadu je za platobnou bariérou vydavateľa a nebol sprístupnený; konkrétne algoritmy ani odporúčacie body z plnej verzie tu preto nie sú citované. Číselné údaje o prežívaní pri konzervatívnom postupe (3,1 oproti 1,5 roka; 2,1 oproti 1,4 roka pri veku ≥ 80 rokov; 1,8 oproti 1,0 roka pri Daviesovom skóre ≥ 3; 37,8 oproti 13,9 mesiaca; pomer šancí 4,15 pre úmrtie doma alebo v hospici) pochádzajú z dvoch samostatne overených štúdií a v prehľade sa v tejto podobe neuvádzajú. Prekvapujúca otázka, praktické postupy pri individualizácii dialýzy, zoznam liekov na depreskripciu, plán pri ukončení dialýzy a údaje o podiele ukončenia dialýzy na úmrtiach a o dĺžke prežívania po ňom sú <strong>vlastným odborným spracovaním</strong> opretým o etablované poznatky.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo aj obsah prehľadu – naliehavosť integrácie paliatívnych zásad, nedostatočné praktické zavedenie napriek podpore v odporúčaniach, všetkých šesť pokrytých oblastí a záver o použiteľnosti nástrojov s nízkym prahom bez špecializovaného výcviku – boli overené v zázname PubMed a Europe PMC. Plný text prehľadu je za platobnou bariérou vydavateľa a nebol sprístupnený; konkrétne algoritmy ani odporúčacie body z plnej verzie tu preto nie sú citované. Číselné údaje o prežívaní pri konzervatívnom postupe (3,1 oproti 1,5 roka; 2,1 oproti 1,4 roka pri veku ≥ 80&nbsp;rokov; 1,8 oproti 1,0 roka pri Daviesovom skóre ≥ 3; 37,8 oproti 13,9 mesiaca; pomer šancí 4,15 pre úmrtie doma alebo v hospici) pochádzajú z dvoch samostatne overených štúdií a v prehľade sa v tejto podobe neuvádzajú. Prekvapujúca otázka, praktické postupy pri individualizácii dialýzy, zoznam liekov na depreskripciu, plán pri ukončení dialýzy a údaje o podiele ukončenia dialýzy na úmrtiach a o dĺžke prežívania po ňom sú <strong>vlastným odborným spracovaním</strong> opretým o etablované poznatky.</em></p>
 HTML,
 ];
 

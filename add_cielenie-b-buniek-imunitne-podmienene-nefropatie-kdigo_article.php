@@ -1,7 +1,7 @@
 <?php
 /**
  * add_cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie: Floege et al., KDIGO Controversies Conference
  * (Kidney International, 2026).
  */
@@ -84,7 +84,7 @@ $articles[] = [
 
 <h3>Membranózna nefropatia</h3>
 
-<p>Pri membranóznej nefropatii sa protilátky <strong>anti-CD20 stali liečbou prvej línie</strong> pre väčšinu pacientov, ktorí potrebujú imunosupresiu. <strong>Väčšina pacientov dosiahne aspoň parciálnu remisiu do 18 mesiacov.</strong></p>
+<p>Pri membranóznej nefropatii sa protilátky <strong>anti-CD20 stali liečbou prvej línie</strong> pre väčšinu pacientov, ktorí potrebujú imunosupresiu. <strong>Väčšina pacientov dosiahne aspoň parciálnu remisiu do 18&nbsp;mesiacov.</strong></p>
 
 <p>Dokument zároveň upozorňuje na diferenciáciu podľa cieľových autoantigénov (najmä PLA2R a THSD7A) a na možnosť, že pri rôznom bunkovom zdroji protilátok bude účinok odlišný. Rozvíjajú sa aj ďalšie prístupy – intenzívnejšia deplécia CD20 alebo cielenie plazmatických populácií.</p>
 

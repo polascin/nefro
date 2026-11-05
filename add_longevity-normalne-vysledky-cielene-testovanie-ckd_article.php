@@ -34,7 +34,7 @@ $articles[] = [
   <figcaption>Ilustračná poloschematická vizualizácia rozporu medzi laboratórnym obrazom a skutočným stavom obličiek: plochý tyrkysový lúč predstavuje výsledok, ktorý sa zmestil do referenčného intervalu, zatiaľ čo jantárové žiarenie vo vnútri parenchýmu symbolizuje prebiehajúce, klinicky nemé poškodenie. Ide o koncepčnú scénu, nie o zobrazenie tkaniva konkrétneho pacienta ani o výstup zobrazovacej metódy.</figcaption>
 </figure>
 
-<p>Dopyt po „longevity“ starostlivosti rastie rýchlejšie než jej dôkazový základ. Spoločnosť Future Market Insights odhadla globálny trh s infraštruktúrou reťazcov longevity ambulancií na 2,6 miliardy USD v roku 2026 s projekciou 6,9 miliardy USD o desaťročie neskôr – ide o komerčný trhový odhad, nie o recenzovaný údaj, a treba ho čítať ako indikátor dopytu, nie ako dôkaz účinnosti.<sup>1</sup> Za týmto dopytom stojí reálna klinická skúsenosť pacientov: po štandardnom odbere a krátkej prehliadke dostanú odpoveď, že laboratórne a vitálne parametre sú v norme, pričom spánok, nálada, hmotnosť, libido a výkonnosť sa nemenia.</p>
+<p>Dopyt po „longevity“ starostlivosti rastie rýchlejšie než jej dôkazový základ. Spoločnosť Future Market Insights odhadla globálny trh s infraštruktúrou reťazcov longevity ambulancií na 2,6 miliardy USD v roku 2026&nbsp;s projekciou 6,9 miliardy USD o desaťročie neskôr – ide o komerčný trhový odhad, nie o recenzovaný údaj, a treba ho čítať ako indikátor dopytu, nie ako dôkaz účinnosti.<sup>1</sup> Za týmto dopytom stojí reálna klinická skúsenosť pacientov: po štandardnom odbere a krátkej prehliadke dostanú odpoveď, že laboratórne a vitálne parametre sú v norme, pričom spánok, nálada, hmotnosť, libido a výkonnosť sa nemenia.</p>
 
 <p>Pre nefrológiu má táto debata nečakane presný význam, ktorý sa v populárnom podaní stráca. Chronická choroba obličiek (CKD) je prototypom ochorenia, ktoré roky neprodukuje symptómy a súčasne sa <strong>systematicky nedovyšetruje</strong>. Kritika nadmerného testovania, ktorú longevity segment oprávnene vyvoláva, preto v nefrológii nesmie viesť k rezignácii na dve lacné, dostupné a usmerneniami jednoznačne odporúčané vyšetrenia – odhadovanú glomerulárnu filtráciu (eGFR) a pomer albumínu ku kreatinínu v moči (UACR).<sup>3,4</sup></p>
 
@@ -68,8 +68,8 @@ $articles[] = [
         <td>eGFR z kreatinínu aj cystatínu C (eGFRcr-cys)<sup>3</sup></td>
       </tr>
       <tr>
-        <th scope="row">eGFR ≥ 90 ml/min/1,73 m²</th>
-        <td>Albuminúriu kategórie A2 alebo A3, teda štádium G1 – G2 s vysokým kardiorenálnym rizikom</td>
+        <th scope="row">eGFR ≥ 90&nbsp;ml/min/1,73&nbsp;m²</th>
+        <td>Albuminúriu kategórie A2 alebo A3, teda štádium G1 – G2&nbsp;s vysokým kardiorenálnym rizikom</td>
         <td>UACR z prvej rannej vzorky moču, pri pozitivite potvrdenie opakovaním<sup>3,6</sup></td>
       </tr>
       <tr>
@@ -93,7 +93,7 @@ $articles[] = [
 
 <h2>Nefrologická výnimka: tu sa netestuje priveľa, ale primálo</h2>
 
-<p>Analýza 28 295 982 dospelých s diabetom alebo hypertenziou z národnej laboratórnej databázy v USA (2013 – 2019) ukázala, že <strong>80,3 % z nich nedostalo hodnotenie obličiek v súlade s usmerneniami</strong>. Zatiaľ čo eGFR malo stanovené 89,6 %, UACR iba <strong>21,0 %</strong>. Aspoň raz bolo kompletne vyšetrených 28,7 % pacientov s diabetom, 10,5 % pacientov s hypertenziou a 41,4 % pacientov s oboma diagnózami; ročná miera testovania sa medzi jednotlivými štátmi pohybovala od 5 % do 30 % a na celonárodnej úrovni stúpla v rokoch 2013 až 2018 len z 10,7 % na 15,2 %.<sup>4</sup></p>
+<p>Analýza 28&nbsp;295&nbsp;982 dospelých s diabetom alebo hypertenziou z národnej laboratórnej databázy v USA (2013 – 2019) ukázala, že <strong>80,3 % z nich nedostalo hodnotenie obličiek v súlade s usmerneniami</strong>. Zatiaľ čo eGFR malo stanovené 89,6 %, UACR iba <strong>21,0 %</strong>. Aspoň raz bolo kompletne vyšetrených 28,7 % pacientov s diabetom, 10,5 % pacientov s hypertenziou a 41,4 % pacientov s oboma diagnózami; ročná miera testovania sa medzi jednotlivými štátmi pohybovala od 5 % do 30 % a na celonárodnej úrovni stúpla v rokoch 2013 až 2018 len z 10,7 % na 15,2 %.<sup>4</sup></p>
 
 <p>Autori v úvode práce pripomínajú odhad, že CKD má približne 37 miliónov Američanov a takmer 90 % z nich o svojom ochorení nevie.<sup>4</sup> Záverečná správa z konferencie KDIGO Controversies k včasnej identifikácii CKD stavia na rovnakej logike: ochorenie je dlho asymptomatické, k dispozícii sú lacné testy aj liečba meniaca prognózu, a práve preto je oneskorený záchyt zlyhaním systému, nie biologickou nevyhnutnosťou.<sup>5</sup></p>
 
@@ -127,7 +127,7 @@ $articles[] = [
 
 <h3>„Hormóny mladosti“</h3>
 
-<p>Zdrojový prehľad uvádza medzi rozširovanými vyšetreniami aj dehydroepiandrosterón (DHEA) a pregnenolón.<sup>1</sup> Cochrane prehľad randomizovaných placebom kontrolovaných štúdií u osôb nad 50 rokov bez demencie uzatvoril, že <strong>dostupné dôkazy nepodporujú priaznivý vplyv suplementácie DHEA na kognitívne funkcie</strong>; v jednej zo štúdií bola dokonca pozorovaná horšia výkonnosť v teste vizuálnej pamäti oproti placebu.<sup>14</sup> Metaanalýza randomizovaných štúdií o vplyve DHEA na kostnú denzitu naznačila čiastočné zvýšenie denzity bedra a trochanteru u žien, nie však u mužov, pričom samotní autori označili klinickú významnosť za nepreukázanú a vyzvali na ďalšie štúdie; smerovanie uvádzaných štandardizovaných rozdielov je navyše v publikácii prezentované nekonzistentne, čo sťažuje priamu interpretáciu veľkosti účinku.<sup>15</sup> Pre pregnenolón porovnateľný dôkazový základ pri indikácii „spomalenie starnutia“ neexistuje.</p>
+<p>Zdrojový prehľad uvádza medzi rozširovanými vyšetreniami aj dehydroepiandrosterón (DHEA) a pregnenolón.<sup>1</sup> Cochrane prehľad randomizovaných placebom kontrolovaných štúdií u osôb nad 50&nbsp;rokov bez demencie uzatvoril, že <strong>dostupné dôkazy nepodporujú priaznivý vplyv suplementácie DHEA na kognitívne funkcie</strong>; v jednej zo štúdií bola dokonca pozorovaná horšia výkonnosť v teste vizuálnej pamäti oproti placebu.<sup>14</sup> Metaanalýza randomizovaných štúdií o vplyve DHEA na kostnú denzitu naznačila čiastočné zvýšenie denzity bedra a trochanteru u žien, nie však u mužov, pričom samotní autori označili klinickú významnosť za nepreukázanú a vyzvali na ďalšie štúdie; smerovanie uvádzaných štandardizovaných rozdielov je navyše v publikácii prezentované nekonzistentne, čo sťažuje priamu interpretáciu veľkosti účinku.<sup>15</sup> Pre pregnenolón porovnateľný dôkazový základ pri indikácii „spomalenie starnutia“ neexistuje.</p>
 
 <p>Je namieste formulovať to presne: absencia dôkazu o prínose nie je dôkazom neúčinnosti. Pri intervencii s nejasnou indikáciou, nedefinovaným ukazovateľom úspechu a vysokou cenou však dôkazné bremeno nesie ten, kto ju ponúka.</p>
 

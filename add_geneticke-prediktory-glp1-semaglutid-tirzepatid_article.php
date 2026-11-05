@@ -35,7 +35,7 @@ $articles[] = [
 
 <h2>Čo autori skúmali</h2>
 
-<p>Výskumníci oslovili zákazníkov 23andMe, ktorí predtým uviedli, že užívali liek na predpis na zníženie hmotnosti. Dotazník spustený v auguste 2024 zisťoval použitý prípravok, dávku, dĺžku liečby, hmotnosť pred liečbou a počas nej, nežiaduce účinky a dôvody začatia alebo ukončenia liečby. Do augusta 2025 odpovedalo 27 885 účastníkov, ktorí uviedli semaglutid alebo tirzepatid vrátane ich individuálne pripravovaných, neschválených verzií. Autori následne vykonali celogenómovú asociačnú štúdiu (GWAS) odpovede na liečbu.</p>
+<p>Výskumníci oslovili zákazníkov 23andMe, ktorí predtým uviedli, že užívali liek na predpis na zníženie hmotnosti. Dotazník spustený v auguste 2024 zisťoval použitý prípravok, dávku, dĺžku liečby, hmotnosť pred liečbou a počas nej, nežiaduce účinky a dôvody začatia alebo ukončenia liečby. Do augusta 2025 odpovedalo 27&nbsp;885 účastníkov, ktorí uviedli semaglutid alebo tirzepatid vrátane ich individuálne pripravovaných, neschválených verzií. Autori následne vykonali celogenómovú asociačnú štúdiu (GWAS) odpovede na liečbu.</p>
 
 <p>Semaglutid je agonista receptora pre glukagónu podobný peptid 1 (GLP-1). Tirzepatid je duálny agonista receptorov pre GLP-1 a glukózodependentný inzulínotropný polypeptid (GIP). Označenie všetkých skúmaných prípravkov ako „GLP-1 liekov“ je preto praktická skratka, nie úplne presná farmakologická klasifikácia.</p>
 
@@ -51,7 +51,7 @@ $articles[] = [
   <tbody>
     <tr>
       <td>Počet respondentov</td>
-      <td>27 885</td>
+      <td>27&nbsp;885</td>
       <td>Celý dotazníkový súbor, nie veľkosť hlavnej GWAS účinnosti</td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Medián veku</td>
-      <td>52 rokov</td>
+      <td>52&nbsp;rokov</td>
       <td>Nešlo o náhodnú vzorku všeobecnej populácie</td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Východiskový index telesnej hmotnosti (BMI)</td>
-      <td>medián 35,1 kg/m²</td>
+      <td>medián 35,1&nbsp;kg/m²</td>
       <td>Prevažovali osoby s obezitou</td>
     </tr>
     <tr>
@@ -81,14 +81,14 @@ $articles[] = [
     </tr>
     <tr>
       <td>Sebahlásený úbytok</td>
-      <td>medián 11,3 kg; 11,7 % hmotnosti</td>
+      <td>medián 11,3&nbsp;kg; 11,7 % hmotnosti</td>
       <td>Hodnoty neboli u väčšiny účastníkov objektívne zmerané</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Genotypizácia vychádzala zo vzoriek slín a z imputovaných genetických údajov. Po vylúčení účastníkov s neúplnými údajmi, po kontrole kvality a odstránení blízko príbuzných zahŕňala hlavná GWAS percentuálnej zmeny BMI 15 237 účastníkov európskeho genetického pôvodu. Číslo 27 885 preto nemožno bez spresnenia uvádzať ako veľkosť každej genetickej analýzy.</p>
+<p>Genotypizácia vychádzala zo vzoriek slín a z imputovaných genetických údajov. Po vylúčení účastníkov s neúplnými údajmi, po kontrole kvality a odstránení blízko príbuzných zahŕňala hlavná GWAS percentuálnej zmeny BMI 15&nbsp;237 účastníkov európskeho genetického pôvodu. Číslo 27&nbsp;885 preto nemožno bez spresnenia uvádzať ako veľkosť každej genetickej analýzy.</p>
 
 <h2>Sebahlásenie a zdravotná dokumentácia sa zhodovali iba čiastočne</h2>
 
@@ -100,11 +100,11 @@ $articles[] = [
 
 <h2>Variant GLP1R a úbytok hmotnosti</h2>
 
-<p>Najsilnejším signálom účinnosti bol variant <strong>rs10305420</strong> v géne <em>GLP1R</em>. Alela T mení siedmu aminokyselinu signálneho peptidu receptora z prolínu na leucín (p.Pro7Leu). Každá kópia alely T bola spojená s približne o 0,641 percentuálneho bodu väčším znížením BMI, čo autori prepočítali na priemerne o 0,76 kg väčší úbytok hmotnosti na alelu (95 % interval spoľahlivosti približne 0,34–1,27 kg; <em>P</em> = 2,9 × 10<sup>−10</sup>).</p>
+<p>Najsilnejším signálom účinnosti bol variant <strong>rs10305420</strong> v géne <em>GLP1R</em>. Alela T mení siedmu aminokyselinu signálneho peptidu receptora z prolínu na leucín (p.Pro7Leu). Každá kópia alely T bola spojená s približne o 0,641 percentuálneho bodu väčším znížením BMI, čo autori prepočítali na priemerne o 0,76&nbsp;kg väčší úbytok hmotnosti na alelu (95 % interval spoľahlivosti približne 0,34–1,27&nbsp;kg; <em>P</em> = 2,9 × 10<sup>−10</sup>).</p>
 
 <p>Štatistická istota asociácie je vysoká, klinická veľkosť účinku však zostáva malá v porovnaní s celkovou variabilitou odpovede. Navyše ani jemné mapovanie nedokázalo kauzálny variant jednoznačne určiť. V 99 % vierohodnostnom súbore bolo 42 variantov; rs10305420 bol jediný kódujúci variant a dosiahol najvyššiu pravdepodobnosť príčinnosti, 35 %. Je preto pravdepodobným, nie dokázaným kauzálnym variantom.</p>
 
-<p>Asociácia sa potvrdila v kohorte All of Us s elektronickými zdravotnými záznamami 4 855 ľudí (<em>P</em> = 0,001; účinok −0,47 percentuálneho bodu). V UK Biobank sa nepotvrdila, pričom autori uvádzajú nízku štatistickú silu a použitie starších agonistov receptora GLP-1. V jednotlivých neeurópskych skupinách variant nedosiahol vopred zvolenú hladinu <em>P</em> &lt; 0,001, hoci smer odhadu bol konzistentný. Prenositeľnosť na rozmanité populácie preto zostáva nedostatočne overená.</p>
+<p>Asociácia sa potvrdila v kohorte All of Us s elektronickými zdravotnými záznamami 4&nbsp;855 ľudí (<em>P</em> = 0,001; účinok −0,47 percentuálneho bodu). V UK Biobank sa nepotvrdila, pričom autori uvádzajú nízku štatistickú silu a použitie starších agonistov receptora GLP-1. V jednotlivých neeurópskych skupinách variant nedosiahol vopred zvolenú hladinu <em>P</em> &lt; 0,001, hoci smer odhadu bol konzistentný. Prenositeľnosť na rozmanité populácie preto zostáva nedostatočne overená.</p>
 
 <h2>GLP1R, GIPR a gastrointestinálne nežiaduce účinky</h2>
 
@@ -149,7 +149,7 @@ $articles[] = [
   <li><strong>Nerandomizovaná liečba:</strong> z rozdielu medzi semaglutidom a tirzepatidom nemožno odvodiť kauzálne porovnanie účinnosti alebo znášanlivosti.</li>
   <li><strong>Heterogénne prípravky:</strong> analýza zahŕňala aj individuálne pripravovaný semaglutid a tirzepatid, ktorých zloženie a skutočnú dávku štúdia nemohla overiť.</li>
   <li><strong>Obmedzená populačná prenositeľnosť:</strong> 82,4 % účastníkov tvorili ženy, 78,3 % malo európsky genetický pôvod a hlavná objavová GWAS sa uskutočnila v európskej skupine.</li>
-  <li><strong>Malý genetický účinok:</strong> približne 0,76 kg na alelu je populačný priemer, nie presný individuálny odhad. Variant sám osebe nevytvára klinicky jasné skupiny pacientov s dobrou a slabou odpoveďou.</li>
+  <li><strong>Malý genetický účinok:</strong> približne 0,76&nbsp;kg na alelu je populačný priemer, nie presný individuálny odhad. Variant sám osebe nevytvára klinicky jasné skupiny pacientov s dobrou a slabou odpoveďou.</li>
   <li><strong>Neúplná externá validácia:</strong> hlavný signál sa potvrdil v All of Us, nie však v UK Biobank; modely nežiaducich účinkov nemali nezávislú prospektívnu validáciu.</li>
   <li><strong>Firemný konflikt záujmov:</strong> všetci autori boli súčasnými alebo bývalými zamestnancami 23andMe a firma súčasne ponúka komerčnú službu založenú na výsledkoch. To nálezy automaticky nezneplatňuje, ale zvyšuje význam nezávislej replikácie a transparentnej validácie.</li>
   <li><strong>Chýbajúce renálne výsledky:</strong> štúdia neodpovedá na otázku, či genotyp modifikuje účinok liečby na progresiu CKD alebo bezpečnosť u pacientov s pokročilým ochorením obličiek.</li>
@@ -170,7 +170,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Štúdia 23andMe poskytuje veľký súbor genetických údajov o sebahlásenej odpovedi na semaglutid a tirzepatid. Variant rs10305420 v <em>GLP1R</em> bol spojený s priemerne o 0,76 kg väčším úbytkom hmotnosti na alelu a varianty v oblastiach <em>GLP1R</em> a <em>GIPR</em> s nauzeou či vracaním. Nálezy sú biologicky presvedčivé, no ich individuálna predikčná hodnota je obmedzená.</p>
+<p>Štúdia 23andMe poskytuje veľký súbor genetických údajov o sebahlásenej odpovedi na semaglutid a tirzepatid. Variant rs10305420 v <em>GLP1R</em> bol spojený s priemerne o 0,76&nbsp;kg väčším úbytkom hmotnosti na alelu a varianty v oblastiach <em>GLP1R</em> a <em>GIPR</em> s nauzeou či vracaním. Nálezy sú biologicky presvedčivé, no ich individuálna predikčná hodnota je obmedzená.</p>
 
 <p>Pre súčasnú nefrologickú prax je správnym záverom opatrnosť. Genotyp zatiaľ neurčuje voľbu lieku ani dávku a podľa tejto štúdie neumožňuje predpovedať renálny prínos. Praktický význam zostáva v dôslednom sledovaní skutočnej odpovede, gastrointestinálnej znášanlivosti, hydratácie a funkcie obličiek. Farmakogenomika inkretínovej liečby je sľubná výskumná oblasť, ale ešte nie štandard klinickej starostlivosti.</p>
 

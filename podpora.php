@@ -66,7 +66,7 @@ $upholdAccount = 'lubomir@polascin.net';
 // Viamo — platba na telefónne číslo (okamžitá platba medzi SK bankami).
 $viamo = [
     'phone_raw' => '+421917370474',
-    'phone_pretty' => '+421 917 370 474',
+    'phone_pretty' => '+421 917 370 474',
 ];
 
 // payme.sk — hostovaná platobná stránka (QR + Viamo + karta) na TEN ISTÝ účet.

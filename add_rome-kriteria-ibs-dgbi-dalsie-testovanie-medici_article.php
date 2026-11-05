@@ -202,7 +202,7 @@ $articles[] = [
       <tr>
         <th scope="row">Vek skríningu kolorektálneho karcinómu bez predchádzajúceho vyšetrenia</th>
         <td>Kolonoskopia alebo iný validovaný skríning podľa aktuálnej miestnej praxe</td>
-        <td>Rutinná kolonoskopia u mladších bez alarmov. ACG 2021 ju neodporúča pod 45 rokov; v slovenskom organizovanom skríningu je hranica zvyčajne 50 rokov</td>
+        <td>Rutinná kolonoskopia u mladších bez alarmov. ACG 2021 ju neodporúča pod 45&nbsp;rokov; v slovenskom organizovanom skríningu je hranica zvyčajne 50&nbsp;rokov</td>
       </tr>
       <tr>
         <th scope="row">Normálne laboratórium, žiadne nové alarmy, len silnejšie symptómy</th>

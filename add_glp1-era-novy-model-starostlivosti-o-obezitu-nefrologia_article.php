@@ -59,7 +59,7 @@ $articles[] = [
 
 <h2>Prečo „krátkodobý fix“ nestačí</h2>
 
-<p>Článok ďalej zdôrazňuje, že bez zmeny životného štýlu je dlhodobý úspech obmedzený. Údaje o prerušení liečby podľa panelistov ukazujú, že pacienti často znovu priberú väčšinu stratenej hmotnosti približne do 18 mesiacov od ukončenia.</p>
+<p>Článok ďalej zdôrazňuje, že bez zmeny životného štýlu je dlhodobý úspech obmedzený. Údaje o prerušení liečby podľa panelistov ukazujú, že pacienti často znovu priberú väčšinu stratenej hmotnosti približne do 18&nbsp;mesiacov od ukončenia.</p>
 
 <p>To zodpovedá názoru, že GLP-1 RA sa nemajú vnímať len ako dočasná kúra. Ak sa obezita správa ako chronický stav s relapsom pri prerušení liečby, potom aj starostlivosť musí byť navrhnutá ako chronická. Musí teda existovať plán pokračovania, podpornej fázy a priebežného merania výsledkov, nie iba „štart“ terapie.</p>
 
@@ -67,9 +67,9 @@ $articles[] = [
 
 <p>Panelisti tvrdia, že tradičné ekonomické hodnotenia často pracujú s príliš zastaranými klinickými predpokladmi. V článku sa spomína britský model NICE, ktorý pre podporu terapie počítal s vysokým počtom stretnutí v primárnej starostlivosti.</p>
 
-<p>Ich argument je jednoduchý: ak možno starostlivosť riadiť prostredníctvom digitálnych platforiem a virtuálnych konzultácií, dá sa bezpečne zvládnuť väčší objem pacientov s nižšími nákladmi. A nejde len o náklady na zdravotníctvo. V texte sa uvádza, že štruktúrovaná liečba GLP-1 viedla k zníženiu dní pracovnej neschopnosti približne o 50 % do 6 mesiacov.</p>
+<p>Ich argument je jednoduchý: ak možno starostlivosť riadiť prostredníctvom digitálnych platforiem a virtuálnych konzultácií, dá sa bezpečne zvládnuť väčší objem pacientov s nižšími nákladmi. A nejde len o náklady na zdravotníctvo. V texte sa uvádza, že štruktúrovaná liečba GLP-1 viedla k zníženiu dní pracovnej neschopnosti približne o 50 % do 6&nbsp;mesiacov.</p>
 
-<p>Zároveň sa očakáva tlak trhu na znižovanie cien v horizonte 5 až 10 rokov, a to aj vďaka rastúcej konkurencii, viacerým formuláciám a postupnému príchodu generík. Kai Eberhardt (PhD) opisuje budúcnosť tak, že lieky na obezitu by sa mohli stať „bazálnym preventívnym“ nástrojom kardiometabolického zdravia podobne, ako spoločnosť dnes vníma statíny.</p>
+<p>Zároveň sa očakáva tlak trhu na znižovanie cien v horizonte 5 až 10&nbsp;rokov, a to aj vďaka rastúcej konkurencii, viacerým formuláciám a postupnému príchodu generík. Kai Eberhardt (PhD) opisuje budúcnosť tak, že lieky na obezitu by sa mohli stať „bazálnym preventívnym“ nástrojom kardiometabolického zdravia podobne, ako spoločnosť dnes vníma statíny.</p>
 
 <h2>Čo by mal „nový model starostlivosti“ znamenať pre nefrológov</h2>
 

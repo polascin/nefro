@@ -39,7 +39,7 @@ $articles[] = [
 
 <p>Chronická choroba obličiek nie je len ochorenie glomerulovej filtrácie. U mnohých pacientov ide o systémový stav, ktorý zasahuje svalovú silu, výživu, psychickú odolnosť, sociálne fungovanie a schopnosť zvládať bežné denné aktivity. Preto sa v nefrológii čoraz častejšie hovorí o <em>frailty</em>, teda krehkosť alebo zraniteľnosť pacienta.</p>
 
-<p>Článok publikovaný v <em>Journal of Nephrology</em> sa venuje longitudinálnemu sledovaniu viacrozmernej frailty u pacientov s chronickou chorobou obličiek. Autori skúmali, ako sa počas 12 mesiacov menia jednotlivé zložky frailty u pacientov s CKD, ktorí ešte neboli liečení dialýzou, a aký význam majú nutričný stav, fyzická aktivita a sila stisku ruky.</p>
+<p>Článok publikovaný v <em>Journal of Nephrology</em> sa venuje longitudinálnemu sledovaniu viacrozmernej frailty u pacientov s chronickou chorobou obličiek. Autori skúmali, ako sa počas 12&nbsp;mesiacov menia jednotlivé zložky frailty u pacientov s CKD, ktorí ešte neboli liečení dialýzou, a aký význam majú nutričný stav, fyzická aktivita a sila stisku ruky.</p>
 
 <p>Pre klinickú prax z toho vyplýva jednoduchý záver: eGFR a albuminúria sú nevyhnutné, ale nestačia. Pacient s rovnakou eGFR môže mať úplne inú funkčnú rezervu, inú toleranciu liečby a iné riziko hospitalizácie podľa toho, či je aktívny, dobre živený, sebestačný a má sociálnu oporu.</p>
 
@@ -63,7 +63,7 @@ $articles[] = [
 
 <p>Išlo o longitudinálnu kohortovú štúdiu u pacientov s chronickou chorobou obličiek, ktorí neboli liečení dialýzou.</p>
 
-<p>Do štúdie bolo zaradených 120 pacientov s CKD vo veku nad 20 rokov. Pacienti pochádzali z nefrologickej ambulancie zdravotníckeho centra na južnom Taiwane v období od novembra 2022 do mája 2024.</p>
+<p>Do štúdie bolo zaradených 120 pacientov s CKD vo veku nad 20&nbsp;rokov. Pacienti pochádzali z nefrologickej ambulancie zdravotníckeho centra na južnom Taiwane v období od novembra 2022 do mája 2024.</p>
 
 <p>Cieľom bolo sledovať 12-mesačné trajektórie viacrozmernej frailty a hodnotiť súvislosť medzi zmenami frailty a tromi klinicky ovplyvniteľnými faktormi: nutričným stavom, fyzickou aktivitou a silou stisku ruky.</p>
 

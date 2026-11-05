@@ -65,9 +65,9 @@ $articles[] = [
 
 <h3>Definícia intradialyzačnej hypotenzie</h3>
 
-<p>Hypotenzia bola definovaná súčasným splnením dvoch kritérií: systolický krvný tlak pod 90 mm Hg <strong>a</strong> pokles systolického tlaku najmenej o 20 mm Hg oproti prvej hodnote zaznamenanej počas procedúry.</p>
+<p>Hypotenzia bola definovaná súčasným splnením dvoch kritérií: systolický krvný tlak pod 90&nbsp;mm Hg <strong>a</strong> pokles systolického tlaku najmenej o 20&nbsp;mm Hg oproti prvej hodnote zaznamenanej počas procedúry.</p>
 
-<p>Definícia nevyžadovala prítomnosť príznakov ani terapeutický zásah. Nie je preto správne označovať všetky zaznamenané príhody za <em>symptomatickú</em> intradialyzačnú hypotenziu. (V metodickej časti elektronickej verzie primárnej publikácie sa nachádza formulácia „pokles o menej než 20 mm Hg“, ktorá odporuje abstraktu aj klinickej logike; ide takmer určite o typografickú chybu – abstrakt uvádza konzistentne pokles <strong>najmenej</strong> o 20 mm Hg.)</p>
+<p>Definícia nevyžadovala prítomnosť príznakov ani terapeutický zásah. Nie je preto správne označovať všetky zaznamenané príhody za <em>symptomatickú</em> intradialyzačnú hypotenziu. (V metodickej časti elektronickej verzie primárnej publikácie sa nachádza formulácia „pokles o menej než 20&nbsp;mm Hg“, ktorá odporuje abstraktu aj klinickej logike; ide takmer určite o typografickú chybu – abstrakt uvádza konzistentne pokles <strong>najmenej</strong> o 20&nbsp;mm Hg.)</p>
 
 <h3>Výskyt hypotenzie</h3>
 
@@ -93,7 +93,7 @@ $articles[] = [
 
 <p>Pokles RBV pod dynamický prah bol <strong>v rovnakom čase</strong> spojený s viac než dvojnásobnou šancou na hypotenziu (OR 2,37; p &lt; 0,001).</p>
 
-<p>Tento výsledok treba dôsledne odlíšiť od predikcie budúcej hypotenzie. V modeli hodnotiacom výskyt hypotenzie počas nasledujúcich 10 až 60 minút bolo prekročenie prahu spojené s <strong>miernejším</strong> zvýšením šance. Nie je teda presné tvrdiť, že pokles pod prah viac než zdvojnásobil riziko hypotenzie v nasledujúcich 10 až 60 minútach – hodnota 2,37 sa vzťahovala na súčasnú asociáciu.</p>
+<p>Tento výsledok treba dôsledne odlíšiť od predikcie budúcej hypotenzie. V modeli hodnotiacom výskyt hypotenzie počas nasledujúcich 10 až 60&nbsp;minút bolo prekročenie prahu spojené s <strong>miernejším</strong> zvýšením šance. Nie je teda presné tvrdiť, že pokles pod prah viac než zdvojnásobil riziko hypotenzie v nasledujúcich 10 až 60 minútach – hodnota 2,37 sa vzťahovala na súčasnú asociáciu.</p>
 
 <h2>Predikcia hypotenzie a význam individuálnych rozdielov</h2>
 
@@ -124,7 +124,7 @@ $articles[] = [
 
 <h2>Hydratácia a suchá hmotnosť</h2>
 
-<p>V nízkorizikovom klastri sa predpísaná suchá hmotnosť približne zhodovala s bioimpedančným odhadom. Vo vysokorizikových klastroch bola predpísaná suchá hmotnosť v priemere približne o 0,9 kg <strong>nižšia</strong> než hodnota odvodená pomocou monitora telesného zloženia.</p>
+<p>V nízkorizikovom klastri sa predpísaná suchá hmotnosť približne zhodovala s bioimpedančným odhadom. Vo vysokorizikových klastroch bola predpísaná suchá hmotnosť v priemere približne o 0,9&nbsp;kg <strong>nižšia</strong> než hodnota odvodená pomocou monitora telesného zloženia.</p>
 
 <p>To môže znamenať, že niektorí pacienti boli vedení k nižšej cieľovej hmotnosti, než zodpovedalo bioimpedančnému odhadu normohydratácie – výraznejší pokles RBV tak mohol súvisieť s pokusom odstrániť viac tekutiny, než bolo hemodynamicky tolerovateľné. Bioimpedančne stanovená normohydratácia však nie je absolútnym referenčným štandardom a treba ju posudzovať spolu s klinickým vyšetrením, krvným tlakom, reziduálnou diurézou, echokardiografickým nálezom a toleranciou ultrafiltrácie.</p>
 
@@ -188,7 +188,7 @@ $articles[] = [
   <li><strong>ClinicalTrials.gov, U.S. National Library of Medicine.</strong> <em>Prediction of Risk of Hypotension in Hemodialysis (IMHOTEP), NCT03350308.</em> Zadávateľ CHU Clermont-Ferrand. <a href="https://clinicaltrials.gov/study/NCT03350308" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 56 pacientov a 459 dialyzačných procedúr, definícia hypotenzie ako systolický tlak pod 90 mm Hg so súčasným poklesom najmenej o 20 mm Hg, výskyt hypotenzie pri 29,7 % procedúr, OR 1,05 na každý percentuálny bod poklesu RBV, OR 2,37 pri prekročení dynamického prahu, AUC 0,77 pri validácii podľa procedúr a 0,62 pri validácii podľa pacientov, AUC 0,85 pre zmiešaný model a 0,86 pre XGBoost po doplnení ďalších premenných – boli overené proti štruktúrovanému abstraktu v zázname PubMed. Príslušnosť dvoch spoluautorov k spoločnosti Fresenius Medical Care bola overená v afiliáciách. Hodnoty uvádzané s tromi desatinnými miestami (OR 1,053 s intervalom 1,037 – 1,069), rozdelenie klastrov (33,2 / 18,8 / 30,9 %), OR 2,58 pre vysokorizikové klastre, OR 1,68 pre predikciu na 10 až 60 minút, senzitivity a špecificity, rozdiel suchej hmotnosti 0,9 kg a priemerné parametre procedúr pochádzajú z plného textu a <strong>neboli nezávisle overené</strong>. Bibliografia bola overená cez Crossref a PubMed; v citácii konsenzu KDIGO boli <strong>opravené mená troch autorov</strong> – na deviatom až jedenástom mieste sú Daniel E. Weiner, Michael Cheung a Michel Jadoul, nie Matthew R. Weir, James B. Wetmore a Caroline M. Wilkie (tí sú medzi ďalšími z 55 účastníkov). Rozbor rozdielu medzi validáciou podľa procedúr a podľa pacientov, upozornenie na odlíšenie súčasnej asociácie od predikcie a poznámka o výmene akútneho problému za chronický sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 56 pacientov a 459 dialyzačných procedúr, definícia hypotenzie ako systolický tlak pod 90&nbsp;mm Hg so súčasným poklesom najmenej o 20&nbsp;mm Hg, výskyt hypotenzie pri 29,7 % procedúr, OR 1,05 na každý percentuálny bod poklesu RBV, OR 2,37 pri prekročení dynamického prahu, AUC 0,77 pri validácii podľa procedúr a 0,62 pri validácii podľa pacientov, AUC 0,85 pre zmiešaný model a 0,86 pre XGBoost po doplnení ďalších premenných – boli overené proti štruktúrovanému abstraktu v zázname PubMed. Príslušnosť dvoch spoluautorov k spoločnosti Fresenius Medical Care bola overená v afiliáciách. Hodnoty uvádzané s tromi desatinnými miestami (OR 1,053&nbsp;s intervalom 1,037 – 1,069), rozdelenie klastrov (33,2 / 18,8 / 30,9 %), OR 2,58 pre vysokorizikové klastre, OR 1,68 pre predikciu na 10 až 60&nbsp;minút, senzitivity a špecificity, rozdiel suchej hmotnosti 0,9&nbsp;kg a priemerné parametre procedúr pochádzajú z plného textu a <strong>neboli nezávisle overené</strong>. Bibliografia bola overená cez Crossref a PubMed; v citácii konsenzu KDIGO boli <strong>opravené mená troch autorov</strong> – na deviatom až jedenástom mieste sú Daniel E. Weiner, Michael Cheung a Michel Jadoul, nie Matthew R. Weir, James B. Wetmore a Caroline M. Wilkie (tí sú medzi ďalšími z 55 účastníkov). Rozbor rozdielu medzi validáciou podľa procedúr a podľa pacientov, upozornenie na odlíšenie súčasnej asociácie od predikcie a poznámka o výmene akútneho problému za chronický sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

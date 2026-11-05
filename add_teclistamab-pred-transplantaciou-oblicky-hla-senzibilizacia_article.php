@@ -44,9 +44,9 @@ $articles[] = [
 
 <h2>Čo bolo opísané v kazuistike</h2>
 
-<p>Autori opísali 37-ročného dialyzovaného pacienta po dvoch predchádzajúcich transplantáciách, ktorý bol pre mimoriadne širokú HLA senzibilizáciu na čakacej listine viac ako 12 rokov. Pravdepodobnosť imunologicky vhodnej ponuky orgánu bola podľa opisu prípadu prakticky nulová – čo je opak hodnoty cPRA 0 %.</p>
+<p>Autori opísali 37-ročného dialyzovaného pacienta po dvoch predchádzajúcich transplantáciách, ktorý bol pre mimoriadne širokú HLA senzibilizáciu na čakacej listine viac ako 12&nbsp;rokov. Pravdepodobnosť imunologicky vhodnej ponuky orgánu bola podľa opisu prípadu prakticky nulová – čo je opak hodnoty cPRA 0 %.</p>
 
-<p>Počas 31 týždňov liečby teclistamabom poklesli hladiny vybraných anti-HLA protilátok natoľko, že transplantačný tím mohol prehodnotiť zoznam neprijateľných antigénov a rozšíriť okruh potenciálne prijateľných darcov. Následne sa našiel vhodný orgán a transplantácia sa uskutočnila. V čase krátkodobého hodnotenia mal pacient funkčný štep a nepotreboval dialýzu.</p>
+<p>Počas 31&nbsp;týždňov liečby teclistamabom poklesli hladiny vybraných anti-HLA protilátok natoľko, že transplantačný tím mohol prehodnotiť zoznam neprijateľných antigénov a rozšíriť okruh potenciálne prijateľných darcov. Následne sa našiel vhodný orgán a transplantácia sa uskutočnila. V čase krátkodobého hodnotenia mal pacient funkčný štep a nepotreboval dialýzu.</p>
 
 <p>Priebeh ukazuje, že zásah do bunkového zdroja protilátok môže u starostlivo vybraného pacienta zmeniť praktickú transplantovateľnosť. Neurčuje však pravdepodobnosť úspechu u ďalších pacientov ani dlhodobé riziko protilátkami sprostredkovanej rejekcie.</p>
 

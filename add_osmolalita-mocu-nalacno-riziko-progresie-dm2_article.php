@@ -43,9 +43,9 @@ $articles[] = [
 
 <h2>Dve prospektívne kohorty</h2>
 
-<p>Analýza zahŕňala dve geograficky a populačne odlišné kohorty pacientov s diabetom 2. typu. V singapurskej kohorte SMART2D bolo 1 711 účastníkov, ktorých autori sledovali priemerne 6,6 ± 1,6 roka. Francúzska kohorta SURDIAGENE zahŕňala 1 097 účastníkov s priemerným sledovaním 7,4 ± 3,7 roka. Spolu teda išlo o 2 808 ľudí a dlhodobé pozorovanie v dvoch odlišných zdravotníckych a populačných prostrediach.</p>
+<p>Analýza zahŕňala dve geograficky a populačne odlišné kohorty pacientov s diabetom 2. typu. V singapurskej kohorte SMART2D bolo 1&nbsp;711 účastníkov, ktorých autori sledovali priemerne 6,6 ± 1,6 roka. Francúzska kohorta SURDIAGENE zahŕňala 1&nbsp;097 účastníkov s priemerným sledovaním 7,4 ± 3,7 roka. Spolu teda išlo o 2&nbsp;808 ľudí a dlhodobé pozorovanie v dvoch odlišných zdravotníckych a populačných prostrediach.</p>
 
-<p>Osmolalita moču nalačno sa stanovila na začiatku sledovania. Primárnym výsledkom bol kompozit zlyhania obličiek v konečnom štádiu (ESKD, podľa terminológie zdroja) alebo zdvojnásobenia koncentrácie sérového kreatinínu. Sekundárnym výsledkom bol rýchly pokles funkcie obličiek (RKFD), definovaný ako ročný pokles eGFR najmenej o 5 ml/min/1,73 m².</p>
+<p>Osmolalita moču nalačno sa stanovila na začiatku sledovania. Primárnym výsledkom bol kompozit zlyhania obličiek v konečnom štádiu (ESKD, podľa terminológie zdroja) alebo zdvojnásobenia koncentrácie sérového kreatinínu. Sekundárnym výsledkom bol rýchly pokles funkcie obličiek (RKFD), definovaný ako ročný pokles eGFR najmenej o 5&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Kompozitný výsledok spájal dve klinicky závažné udalosti, ale súhrnný počet neukazuje, aký podiel tvorila každá z jeho zložiek. RKFD bol odlišný, kategoricky hodnotený ukazovateľ založený na rýchlosti poklesu eGFR. Primárny a sekundárny výsledok preto opisujú príbuzné, nie však totožné stránky progresie ochorenia obličiek.</p>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <h2>Silné stránky a limity</h2>
 
-<p>Medzi silné stránky patria prospektívne sledovanie, spolu 2 808 účastníkov, 321 primárnych obličkových udalostí a hodnotenie v dvoch populačne odlišných kohortách. Dlhé priemerné sledovanie a multivariačná úprava podporujú prognostickú relevantnosť nálezu. Druhá kohorta zároveň umožnila posúdiť, či sa smer vzťahu objaví aj v inom prostredí.</p>
+<p>Medzi silné stránky patria prospektívne sledovanie, spolu 2&nbsp;808 účastníkov, 321 primárnych obličkových udalostí a hodnotenie v dvoch populačne odlišných kohortách. Dlhé priemerné sledovanie a multivariačná úprava podporujú prognostickú relevantnosť nálezu. Druhá kohorta zároveň umožnila posúdiť, či sa smer vzťahu objaví aj v inom prostredí.</p>
 
 <ul>
   <li class="pdf-avoid-break"><strong>Observačný dizajn:</strong> štúdia preukazuje asociáciu, nie kauzalitu. Nemožno vylúčiť reziduálne a nemerané skresľujúce faktory ani obrátenú kauzalitu.</li>

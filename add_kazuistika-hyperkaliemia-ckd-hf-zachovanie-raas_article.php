@@ -30,7 +30,7 @@ $articles[] = [
 
 <h2>Kazuistika na začiatok: 45-ročná žena s CKD 3b a HFrEF (NYHA II)</h2>
 
-<p>Aktivita začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40 ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?“</p>
+<p>Aktivita začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40&nbsp;ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?“</p>
 
 <p>Podstatou kazuistiky je, že obava z hyperkaliémie vedie k nedostatočnej liečbe. Aktivita zdôrazňuje, že inhibítory RAAS sú základom znižovania kardiorenálneho rizika, no hyperkaliémia často bráni ich optimálnemu nasadeniu či udržaniu.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 

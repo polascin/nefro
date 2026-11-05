@@ -49,7 +49,7 @@ $articles[] = [
 
 <h2>Rámec: neopioidná liečba má prednosť</h2>
 
-<p>Najcitovanejším rámcovým dokumentom sú <strong>odporúčania CDC pre predpisovanie opioidov pri bolesti (2022)</strong>, publikované v <em>MMWR Recommendations and Reports</em>. Aktualizujú dokument z roku 2016 a pokrývajú akútnu (trvanie pod 1 mesiac), subakútnu (1 až 3 mesiace) aj chronickú (nad 3 mesiace) bolesť u ambulantných pacientov od 18 rokov. <strong>Nevzťahujú sa</strong> na bolesť pri kosáčikovej anémii, na onkologickú bolesť ani na paliatívnu a terminálnu starostlivosť.</p>
+<p>Najcitovanejším rámcovým dokumentom sú <strong>odporúčania CDC pre predpisovanie opioidov pri bolesti (2022)</strong>, publikované v <em>MMWR Recommendations and Reports</em>. Aktualizujú dokument z roku 2016 a pokrývajú akútnu (trvanie pod 1 mesiac), subakútnu (1 až 3&nbsp;mesiace) aj chronickú (nad 3&nbsp;mesiace) bolesť u ambulantných pacientov od 18&nbsp;rokov. <strong>Nevzťahujú sa</strong> na bolesť pri kosáčikovej anémii, na onkologickú bolesť ani na paliatívnu a terminálnu starostlivosť.</p>
 
 <p>Dokument je postavený na metodike GRADE a rieši štyri okruhy: či vôbec začať opioid, výber opioidu a dávky, dĺžku úvodného predpisu a kontroly, a posúdenie rizika a riešenie potenciálnych škôd.</p>
 
@@ -94,9 +94,9 @@ $articles[] = [
 
 <p>Duloxetín (inhibítor spätného vychytávania serotonínu a noradrenalínu) je pri chronickej bolesti dolného chrbta aj pri diabetickej neuropatii rozumnou neopioidnou voľbou – <strong>ale má jasné renálne obmedzenie</strong>.</p>
 
-<p>Podľa preskripčných informácií sa duloxetín <strong>neodporúča pri terminálnom zlyhaní obličiek a pri závažnom renálnom poškodení (odhadovaný klírens kreatinínu pod 30 ml/min)</strong>. Dôvod je farmakokinetický a presvedčivý: po jednorazovej dávke 60 mg boli u pacientov s terminálnym zlyhaním obličiek na chronickej intermitentnej hemodialýze hodnoty C<sub>max</sub> a AUC približne <strong>dvojnásobné</strong> oproti osobám s normálnou funkciou obličiek. Expozícia hlavných cirkulujúcich metabolitov (4-hydroxyduloxetín-glukuronid a 5-hydroxy-6-metoxyduloxetín-sulfát), ktoré sa vylučujú prevažne močom, bola <strong>približne 7- až 9-násobne vyššia</strong> – a pri opakovanom podávaní by sa ešte zvyšovala.</p>
+<p>Podľa preskripčných informácií sa duloxetín <strong>neodporúča pri terminálnom zlyhaní obličiek a pri závažnom renálnom poškodení (odhadovaný klírens kreatinínu pod 30&nbsp;ml/min)</strong>. Dôvod je farmakokinetický a presvedčivý: po jednorazovej dávke 60&nbsp;mg boli u pacientov s terminálnym zlyhaním obličiek na chronickej intermitentnej hemodialýze hodnoty C<sub>max</sub> a AUC približne <strong>dvojnásobné</strong> oproti osobám s normálnou funkciou obličiek. Expozícia hlavných cirkulujúcich metabolitov (4-hydroxyduloxetín-glukuronid a 5-hydroxy-6-metoxyduloxetín-sulfát), ktoré sa vylučujú prevažne močom, bola <strong>približne 7- až 9-násobne vyššia</strong> – a pri opakovanom podávaní by sa ešte zvyšovala.</p>
 
-<p>Naopak pri <strong>miernom až stredne ťažkom renálnom poškodení (klírens kreatinínu 30 až 80 ml/min)</strong> sa zdanlivý klírens duloxetínu významne nemení a úprava dávky nie je potrebná.</p>
+<p>Naopak pri <strong>miernom až stredne ťažkom renálnom poškodení (klírens kreatinínu 30 až 80&nbsp;ml/min)</strong> sa zdanlivý klírens duloxetínu významne nemení a úprava dávky nie je potrebná.</p>
 
 <p>Prakticky: duloxetín je použiteľný pri CKD G3, ale <strong>pri CKD G4 a G5 a u dialyzovaných pacientov nie je vhodnou voľbou</strong>. Overte v aktuálnom SPC konkrétneho prípravku – formulácie sa medzi krajinami líšia.</p>
 
@@ -137,13 +137,13 @@ $articles[] = [
 
 <ol>
   <li><strong>Určite typ bolesti.</strong> Nociceptívna, neuropatická alebo zmiešaná – liečba sa volí podľa dominantného mechanizmu, nie podľa toho, čo „naposledy zabralo“.</li>
-  <li><strong>Zistite trvanie</strong> a odlíšte akútnu od chronickej bolesti (nad 3 mesiace); liečebná stratégia sa líši zásadne.</li>
+  <li><strong>Zistite trvanie</strong> a odlíšte akútnu od chronickej bolesti (nad 3&nbsp;mesiace); liečebná stratégia sa líši zásadne.</li>
   <li><strong>Spustite nefarmakologickú liečbu hneď</strong>, nie až po zlyhaní liekov.</li>
   <li><strong>Pred každým predpisom skontrolujte eGFR a celú medikáciu</strong> – konkrétne diuretikum, blokádu RAAS, inhibítor SGLT2 a všetky lieky tlmiace centrálny nervový systém.</li>
   <li><strong>Vyberte liek s ohľadom na renálnu funkciu:</strong>
     <ul>
       <li>NSAID – len krátkodobo, ak vôbec, s monitorovaním a s pravidlom chorého dňa,</li>
-      <li>duloxetín – použiteľný pri miernom až stredne ťažkom poškodení, nie pri klírense pod 30 ml/min,</li>
+      <li>duloxetín – použiteľný pri miernom až stredne ťažkom poškodení, nie pri klírense pod 30&nbsp;ml/min,</li>
       <li>gabapentinoidy – nízka štartovacia dávka, pomalá titrácia, sledovanie útlmu a pádov,</li>
       <li>opioidy – pozor na renálne eliminované aktívne metabolity; vyhýbať sa kumulácii.</li>
     </ul>

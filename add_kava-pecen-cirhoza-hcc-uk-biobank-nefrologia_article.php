@@ -35,11 +35,11 @@ $articles[] = [
 
 <h2>Dizajn</h2>
 
-<p>Analyzovaných bolo <strong>354 957 účastníkov</strong> UK Biobank bez cirhózy a bez hepatocelulárneho karcinómu na začiatku sledovania. Príjem kávy, jej typ (s kofeínom alebo bez neho) a prísady (cukor alebo sladidlá) sa zisťovali dotazníkom. Výskyt cirhózy, hepatocelulárneho karcinómu a úmrtia z pečeňovej príčiny sa zisťoval z prepojených registrov. V podskupine <strong>28 961</strong> účastníkov sa magnetickou rezonanciou hodnotil obsah tuku v pečeni, obsah železa a fibrozápalový marker (na železo korigovaný čas T1); u <strong>44 633</strong> účastníkov sa robil proteomický profil metódou Olink. Modely boli upravené na demografické, behaviorálne, metabolické a genetické premenné.</p>
+<p>Analyzovaných bolo <strong>354&nbsp;957 účastníkov</strong> UK Biobank bez cirhózy a bez hepatocelulárneho karcinómu na začiatku sledovania. Príjem kávy, jej typ (s kofeínom alebo bez neho) a prísady (cukor alebo sladidlá) sa zisťovali dotazníkom. Výskyt cirhózy, hepatocelulárneho karcinómu a úmrtia z pečeňovej príčiny sa zisťoval z prepojených registrov. V podskupine <strong>28&nbsp;961</strong> účastníkov sa magnetickou rezonanciou hodnotil obsah tuku v pečeni, obsah železa a fibrozápalový marker (na železo korigovaný čas T1); u <strong>44&nbsp;633</strong> účastníkov sa robil proteomický profil metódou Olink. Modely boli upravené na demografické, behaviorálne, metabolické a genetické premenné.</p>
 
 <h2>Výsledky</h2>
 
-<p>Počas mediánu sledovania <strong>13 rokov</strong> sa pozoroval odstupňovaný vzťah medzi príjmom kávy a pečeňovými ukazovateľmi. Pre skupinu s príjmom <strong>≥ 5 šálok denne</strong> oproti referenčnej skupine:</p>
+<p>Počas mediánu sledovania <strong>13&nbsp;rokov</strong> sa pozoroval odstupňovaný vzťah medzi príjmom kávy a pečeňovými ukazovateľmi. Pre skupinu s príjmom <strong>≥ 5 šálok denne</strong> oproti referenčnej skupine:</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Riziko pečeňových ukazovateľov pri príjme aspoň piatich šálok kávy denne" tabindex="0">
   <table>

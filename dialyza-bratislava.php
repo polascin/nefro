@@ -35,12 +35,12 @@ $registryLinks = [
 $patientContacts = [
     [
         'label'   => 'Dialyzačná sála',
-        'display' => '0947 900 202',
+        'display' => '0947 900 202',
         'tel'     => '+421947900202',
     ],
     [
         'label'   => 'Nefrologická ambulancia',
-        'display' => '0940 609 480',
+        'display' => '0940 609 480',
         'tel'     => '+421940609480',
     ],
 ];
@@ -173,7 +173,7 @@ $businessContacts = [
       ],
       [
           'q' => 'Ako sa objednať na nefrologické vyšetrenie?',
-          'a' => 'Zavolajte na nefrologickú ambulanciu 0940 609 480 alebo napíšte na medimpax@impax.sk.',
+          'a' => 'Zavolajte na nefrologickú ambulanciu 0940 609 480 alebo napíšte na medimpax@impax.sk.',
       ],
       [
           'q' => 'Potrebujem odporúčanie, aby ste ma prijali?',
@@ -435,9 +435,9 @@ $businessContacts = [
                     </p>
                     <dl class="donate-bank">
                         <dt>Dialysis room</dt>
-                        <dd><a href="tel:+421947900202">+421 947 900 202</a></dd>
+                        <dd><a href="tel:+421947900202">+421 947 900 202</a></dd>
                         <dt>Nephrology clinic</dt>
-                        <dd><a href="tel:+421940609480">+421 940 609 480</a></dd>
+                        <dd><a href="tel:+421940609480">+421 940 609 480</a></dd>
                         <dt>E-mail</dt>
                         <dd><a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></dd>
                         <dt>Website</dt>
@@ -491,7 +491,7 @@ $businessContacts = [
                     <div class="feature-card">
                         <h3>Ako objednať</h3>
                         <ul class="service-card__list">
-                            <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940 609 480</a></li>
+                            <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940 609 480</a></li>
                             <li>E-mail: <a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></li>
                             <li>Priložte prosím aktuálne laboratórne výsledky a stručný súhrn anamnézy</li>
                             <li>Pacient má právo na slobodný výber poskytovateľa</li>

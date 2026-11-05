@@ -74,8 +74,8 @@ $articles[] = [
 <p>Pre dospelých sa uvádzajú tieto prahové hodnoty:</p>
 
 <ul>
-  <li><strong>nadváha:</strong> BMI 25 až 29,9 kg/m²,</li>
-  <li><strong>obezita:</strong> BMI ≥ 30 kg/m².</li>
+  <li><strong>nadváha:</strong> BMI 25 až 29,9&nbsp;kg/m²,</li>
+  <li><strong>obezita:</strong> BMI ≥ 30&nbsp;kg/m².</li>
 </ul>
 
 <p>Obezita sa ďalej delí na triedy:</p>
@@ -86,7 +86,7 @@ $articles[] = [
   <li>trieda III: BMI ≥ 40.</li>
 </ul>
 
-<p>Pre <strong>ázijskú populáciu</strong> sa pri skríningu rizika používajú nižšie prahy (WHO): nadváha BMI > 23,0 a obezita BMI > 27,5 kg/m², pretože kardiometabolické riziko sa začína už pri nižších hodnotách než u belošskej populácie.</p>
+<p>Pre <strong>ázijskú populáciu</strong> sa pri skríningu rizika používajú nižšie prahy (WHO): nadváha BMI > 23,0 a obezita BMI > 27,5&nbsp;kg/m², pretože kardiometabolické riziko sa začína už pri nižších hodnotách než u belošskej populácie.</p>
 
 <h3>Centrálna adipozita: prečo môže byť dôležitejšia</h3>
 
@@ -95,8 +95,8 @@ $articles[] = [
 <p>Pri všeobecnom hodnotení abdominálnej adipozity sa uvádza obvod pása:</p>
 
 <ul>
-  <li>ženy: > 88 cm,</li>
-  <li>muži: > 102 cm.</li>
+  <li>ženy: > 88&nbsp;cm,</li>
+  <li>muži: > 102&nbsp;cm.</li>
 </ul>
 
 <p>Okrem obvodu pása sa v praxi často používajú:</p>
@@ -108,17 +108,17 @@ $articles[] = [
   <li>prípadne <strong>bioimpedančná analýza (BIA)</strong> a <strong>DXA</strong>, ktoré však hodnotia skôr zloženie tela než výhradne viscerálny tuk.</li>
 </ul>
 
-<p>Niektoré odborné spoločnosti odporúčajú rutinné meranie BMI aj obvodu pása. Pri BMI ≥ 35 kg/m² však môže byť obvod pása menej rozlišujúci, keďže väčšina pacientov už má abdominálnu adipozitu.</p>
+<p>Niektoré odborné spoločnosti odporúčajú rutinné meranie BMI aj obvodu pása. Pri BMI ≥ 35&nbsp;kg/m² však môže byť obvod pása menej rozlišujúci, keďže väčšina pacientov už má abdominálnu adipozitu.</p>
 
 <h3>Kedy odporúčať chudnutie</h3>
 
-<p>V modelovom prípade pacienta s BMI 26 kg/m², CKD 4. štádia, obštrukčným spánkovým apnoe a osteoartrózou článok rieši otázku, či treba robiť ďalšie merania adipozity (napríklad DXA). Odpoveď je, že <strong>nie</strong> – pri nadváhe v prítomnosti komorbidít asociovaných s adipozitou sa chudnutie odporúča aj bez ďalších špecifických doplnkových testov.</p>
+<p>V modelovom prípade pacienta s BMI 26&nbsp;kg/m², CKD 4. štádia, obštrukčným spánkovým apnoe a osteoartrózou článok rieši otázku, či treba robiť ďalšie merania adipozity (napríklad DXA). Odpoveď je, že <strong>nie</strong> – pri nadváhe v prítomnosti komorbidít asociovaných s adipozitou sa chudnutie odporúča aj bez ďalších špecifických doplnkových testov.</p>
 
 <p>Prakticky: u pacientov s CKD je dôležitejšia <strong>prítomnosť komorbidít</strong> a celkový zdravotný cieľ než „zložité“ meranie adipozity, ktoré by len zvýšilo záťaž pacienta.</p>
 
 <h2>Behaviorálny intervenčný program: čo má byť jadrom liečby</h2>
 
-<p>Odporúčané behaviorálne intervencie pre osoby s nadváhou alebo obezitou majú trvať <strong>minimálne 6 mesiacov</strong> a majú byť komplexné. Vychádza sa aj z dát programu, ktorý kombinuje:</p>
+<p>Odporúčané behaviorálne intervencie pre osoby s nadváhou alebo obezitou majú trvať <strong>minimálne 6&nbsp;mesiacov</strong> a majú byť komplexné. Vychádza sa aj z dát programu, ktorý kombinuje:</p>
 
 <ul>
   <li>úpravu stravy,</li>
@@ -148,12 +148,12 @@ $articles[] = [
 <p>Článok uvádza praktické zložky programu (strava, vedomé jedenie, pitný režim, pohyb, redukcia stresu, spánok, monitorovanie). Typické nastavenia zahŕňajú napríklad:</p>
 
 <ul>
-  <li><strong>kalorický deficit</strong> približne 500 až 750 kcal/deň,</li>
-  <li><strong>bielkoviny</strong> okolo 0,8 g/kg ideálnej telesnej hmotnosti/deň,</li>
-  <li><strong>vláknina</strong> okolo 24 g/deň,</li>
+  <li><strong>kalorický deficit</strong> približne 500 až 750&nbsp;kcal/deň,</li>
+  <li><strong>bielkoviny</strong> okolo 0,8&nbsp;g/kg ideálnej telesnej hmotnosti/deň,</li>
+  <li><strong>vláknina</strong> okolo 24&nbsp;g/deň,</li>
   <li>vedomé jedenie (mindful eating) – pravidelné jedlá, pomalé jedenie, vyhýbanie sa neplánovanému maškrteniu,</li>
   <li>pitný režim založený najmä na vode a vyhýbanie sa sladeným aj umelo sladeným nápojom,</li>
-  <li>pohyb s cieľom 30 až 60 minút pri intenzite približne 65 až 85 % maximálnej tepovej frekvencie aspoň 5 dní v týždni,</li>
+  <li>pohyb s cieľom 30 až 60&nbsp;minút pri intenzite približne 65 až 85 % maximálnej tepovej frekvencie aspoň 5&nbsp;dní v týždni,</li>
   <li>monitorovanie BMI a obvodu pása a sledovanie kvality života.</li>
 </ul>
 
@@ -169,7 +169,7 @@ $articles[] = [
   <li>nízkosacharidová strava s vysokým obsahom bielkovín sa u pacientov s CKD neodporúča.</li>
 </ul>
 
-<p>Text v tejto časti spomína aj diétne rámce pri CKD podľa KDIGO (v kontexte odporúčania 0,8 g bielkovín/kg ideálnej telesnej hmotnosti/deň pre pacientov bez dialýzy) a potrebu starostlivo kontrolovaných nízkobielkovinových stratégií pod vedením registrovaného dietológa.</p>
+<p>Text v tejto časti spomína aj diétne rámce pri CKD podľa KDIGO (v kontexte odporúčania 0,8&nbsp;g bielkovín/kg ideálnej telesnej hmotnosti/deň pre pacientov bez dialýzy) a potrebu starostlivo kontrolovaných nízkobielkovinových stratégií pod vedením registrovaného dietológa.</p>
 
 <p>Text uvádza ešte dve obavy:</p>
 
@@ -227,12 +227,12 @@ $articles[] = [
 
 <h3>Prežívanie: transplantácia verzus dialýza</h3>
 
-<p>Praktický záver z dostupných dát: prežívanie pacienta s BMI približne 45 kg/m² sa maximalizuje transplantáciou, nie dialýzou.</p>
+<p>Praktický záver z dostupných dát: prežívanie pacienta s BMI približne 45&nbsp;kg/m² sa maximalizuje transplantáciou, nie dialýzou.</p>
 
 <p>Článok uvádza, že:</p>
 
 <ul>
-  <li>pri BMI ≤ 40 kg/m² je zníženie mortality pri transplantácii oproti pacientom zaradeným na čakaciu listinu bez transplantácie <strong>viac než 60 %</strong>,</li>
+  <li>pri BMI ≤ 40&nbsp;kg/m² je zníženie mortality pri transplantácii oproti pacientom zaradeným na čakaciu listinu bez transplantácie <strong>viac než 60 %</strong>,</li>
   <li>pri obezite triedy III je prínos stále prítomný, ale menší,</li>
   <li>prežívanie štepu (allograftu) sa pre samotnú obezitu nezdá byť lepšie, no prežívanie pacienta môže byť vďaka transplantácii lepšie.</li>
 </ul>
@@ -243,7 +243,7 @@ $articles[] = [
 
 <ul>
   <li>chudnutie síce môže zlepšiť šance, ale nie je „garanciou“,</li>
-  <li>pri BMI ≥ 40 kg/m² je opísané vyššie riziko oneskoreného funkčného nástupu štepu, akútnej rejekcie, komplikácií rany, ako aj dlhších operačných časov a hospitalizácií,</li>
+  <li>pri BMI ≥ 40&nbsp;kg/m² je opísané vyššie riziko oneskoreného funkčného nástupu štepu, akútnej rejekcie, komplikácií rany, ako aj dlhších operačných časov a hospitalizácií,</li>
   <li>KDIGO 2020 podľa textu odporúča, aby obezita sama osebe nebola dôvodom na vylúčenie z transplantácie.</li>
 </ul>
 

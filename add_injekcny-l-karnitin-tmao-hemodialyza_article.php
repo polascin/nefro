@@ -82,17 +82,17 @@ $articles[] = [
     <tr><th scope="col">Parameter</th><th scope="col">Údaj</th></tr>
   </thead>
   <tbody>
-    <tr><td>i.v. levokarnitín (HD)</td><td>10–20 mg/kg i.v. po každej HD procedúre (typicky 3× týždenne)</td></tr>
-    <tr><td>Bežná klinická dávka</td><td>1 g i.v. po každej HD, resp. 20 mg/kg 3× týždenne</td></tr>
-    <tr><td>Perorálne podanie</td><td>500–1000 mg/deň (dávka pre ESRD nie je pevne stanovená)</td></tr>
-    <tr><td>Podmienka úhrady (US/ESRD)</td><td>minimálne 3 mesiace na dialýze + definovaná indikácia</td></tr>
+    <tr><td>i.v. levokarnitín (HD)</td><td>10–20&nbsp;mg/kg i.v. po každej HD procedúre (typicky 3× týždenne)</td></tr>
+    <tr><td>Bežná klinická dávka</td><td>1&nbsp;g i.v. po každej HD, resp. 20&nbsp;mg/kg 3× týždenne</td></tr>
+    <tr><td>Perorálne podanie</td><td>500–1000&nbsp;mg/deň (dávka pre ESRD nie je pevne stanovená)</td></tr>
+    <tr><td>Podmienka úhrady (US/ESRD)</td><td>minimálne 3&nbsp;mesiace na dialýze + definovaná indikácia</td></tr>
   </tbody>
 </table>
 </div>
 
 <p>Zdroje dávkovania: <a href="https://kidneyfoundation.cachefly.net/professionals/KDOQI/guidelines_nutrition/nut_appx10a.html" target="_blank" rel="noopener noreferrer">KDOQI, Appendix X</a>, <a href="https://www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo.aspx?proposed=N&amp;ncaid=44" target="_blank" rel="noopener noreferrer">CMS NCD pre ESRD</a> a <a href="https://www.mdpi.com/2077-0383/14/14/5052" target="_blank" rel="noopener noreferrer">Kljajić a kol. (JCM 2025)</a>.</p>
 
-<p><strong>Bezpečnostná poznámka:</strong> vysokodávkový perorálny karnitín (3 g/deň) v jednej malej štúdii paradoxne zvýšil triacylglyceroly a agregáciu trombocytov – argument proti prístupu „čím viac, tým lepšie“.</p>
+<p><strong>Bezpečnostná poznámka:</strong> vysokodávkový perorálny karnitín (3&nbsp;g/deň) v jednej malej štúdii paradoxne zvýšil triacylglyceroly a agregáciu trombocytov – argument proti prístupu „čím viac, tým lepšie“.</p>
 
 <h2>Záver</h2>
 

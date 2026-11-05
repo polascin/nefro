@@ -248,7 +248,7 @@ $articles[] = [
 
 <h3>Najväčšie „ale“: draslík (hyperkaliémia)</h3>
 
-<p>Najdôležitejším rizikom nsMRA je zvýšenie hladiny draslíka v krvi. Preto treba sledovať hladinu draslíka (kália) a podľa výsledkov liečbu upraviť alebo dočasne prerušiť. V štúdiách sa používali pevné hranice: napríklad pri draslíku nad približne 5,5 mmol/l sa liek zvyčajne zadrží a po poklese sa znovu nasadí. Presný postup sa riadi odporúčaniami a miestnymi zvyklosťami.</p>
+<p>Najdôležitejším rizikom nsMRA je zvýšenie hladiny draslíka v krvi. Preto treba sledovať hladinu draslíka (kália) a podľa výsledkov liečbu upraviť alebo dočasne prerušiť. V štúdiách sa používali pevné hranice: napríklad pri draslíku nad približne 5,5&nbsp;mmol/l sa liek zvyčajne zadrží a po poklese sa znovu nasadí. Presný postup sa riadi odporúčaniami a miestnymi zvyklosťami.</p>
 
 <p>Čo to znamená v každodennom živote:</p>
 

@@ -38,28 +38,28 @@ $articles[] = [
 
 <h2>Výsledky u pacientov s diabetom 2. typu</h2>
 
-<p>V štúdii <strong>TRANSCEND-T2D-1</strong> bolo sledovaných 537 pacientov s nedostatočne kontrolovaným diabetom 2. typu. Vstupná hodnota HbA1c bola v rozmedzí 7,0 až 9,5 %. Účastníci mali BMI aspoň 23 kg/m² a boli randomizovaní na retatrutid v dávkach 4 mg, 9 mg alebo 12 mg, prípadne na placebo.</p>
+<p>V štúdii <strong>TRANSCEND-T2D-1</strong> bolo sledovaných 537 pacientov s nedostatočne kontrolovaným diabetom 2. typu. Vstupná hodnota HbA1c bola v rozmedzí 7,0 až 9,5 %. Účastníci mali BMI aspoň 23&nbsp;kg/m² a boli randomizovaní na retatrutid v dávkach 4&nbsp;mg, 9&nbsp;mg alebo 12&nbsp;mg, prípadne na placebo.</p>
 
 <p>Po 40 týždňoch sa HbA1c znížil:</p>
 
 <ul>
-  <li>o <strong>1,69 %</strong> pri dávke 4 mg,</li>
-  <li>o <strong>1,86 %</strong> pri dávke 9 mg,</li>
-  <li>o <strong>1,94 %</strong> pri dávke 12 mg,</li>
+  <li>o <strong>1,69 %</strong> pri dávke 4&nbsp;mg,</li>
+  <li>o <strong>1,86 %</strong> pri dávke 9&nbsp;mg,</li>
+  <li>o <strong>1,94 %</strong> pri dávke 12&nbsp;mg,</li>
   <li>oproti <strong>0,81 %</strong> pri placebe.</li>
 </ul>
 
-<p>Okrem lepšej glykemickej kontroly došlo aj k výraznému poklesu telesnej hmotnosti. Pri najvyššej dávke 12 mg bol priemerný úbytok hmotnosti <strong>15,3 %</strong>, zatiaľ čo pri placebe len <strong>2,6 %</strong>. V absolútnom vyjadrení to pri najvyššej dávke zodpovedalo približne 16,6 kg (asi 36,6 libry).</p>
+<p>Okrem lepšej glykemickej kontroly došlo aj k výraznému poklesu telesnej hmotnosti. Pri najvyššej dávke 12&nbsp;mg bol priemerný úbytok hmotnosti <strong>15,3 %</strong>, zatiaľ čo pri placebe len <strong>2,6 %</strong>. V absolútnom vyjadrení to pri najvyššej dávke zodpovedalo približne 16,6&nbsp;kg (asi 36,6 libry).</p>
 
 <p>Vedúci výskumník štúdie Harpreet Singh Bajaj označil tento rozsah redukcie hmotnosti u ľudí s diabetom 2. typu za mimoriadny, keďže pacienti s diabetom zvyčajne chudnú menej ako ľudia bez diabetu.</p>
 
 <h2>Výsledky u ľudí s obezitou bez diabetu</h2>
 
-<p>Ďalšie údaje pochádzajú zo štúdie <strong>TRIUMPH-1</strong>, ktorá zahŕňala 2 339 dospelých s obezitou. Účastníci boli rozdelení do skupín s retatrutidom v dávkach 4 mg, 9 mg a 12 mg alebo s placebom.</p>
+<p>Ďalšie údaje pochádzajú zo štúdie <strong>TRIUMPH-1</strong>, ktorá zahŕňala 2&nbsp;339 dospelých s obezitou. Účastníci boli rozdelení do skupín s retatrutidom v dávkach 4&nbsp;mg, 9&nbsp;mg a 12&nbsp;mg alebo s placebom.</p>
 
-<p>Po 80 týždňoch dosiahli pacienti užívajúci najvyššiu dávku 12 mg priemerný pokles hmotnosti <strong>28,3 %</strong> (približne 31,8 kg, asi 70 libier). Pri dávke 9 mg bol priemerný úbytok približne 26 % telesnej hmotnosti.</p>
+<p>Po 80 týždňoch dosiahli pacienti užívajúci najvyššiu dávku 12&nbsp;mg priemerný pokles hmotnosti <strong>28,3 %</strong> (približne 31,8&nbsp;kg, asi 70 libier). Pri dávke 9&nbsp;mg bol priemerný úbytok približne 26 % telesnej hmotnosti.</p>
 
-<p>V predĺžení štúdie na 104 týždňov sa úbytok hmotnosti pohyboval od <strong>19,2 %</strong> pri dávke 4 mg až po <strong>30,3 %</strong> pri dávke 12 mg (približne 38,6 kg, asi 85 libier). Viac ako štvrtina účastníkov stratila aspoň 35 % telesnej hmotnosti.</p>
+<p>V predĺžení štúdie na 104&nbsp;týždňov sa úbytok hmotnosti pohyboval od <strong>19,2 %</strong> pri dávke 4&nbsp;mg až po <strong>30,3 %</strong> pri dávke 12&nbsp;mg (približne 38,6&nbsp;kg, asi 85 libier). Viac ako štvrtina účastníkov stratila aspoň 35 % telesnej hmotnosti.</p>
 
 <p>Takéto hodnoty sú pri farmakoterapii obezity neobvykle vysoké. Neznamená to však automaticky, že maximálne chudnutie je vhodným cieľom pre každého pacienta.</p>
 
@@ -78,8 +78,8 @@ $articles[] = [
 <ul>
   <li>triglyceridov až o <strong>41,0 %</strong>,</li>
   <li>non-HDL cholesterolu až o <strong>24,2 %</strong>,</li>
-  <li>systolického tlaku až o <strong>12,3 mm Hg</strong>,</li>
-  <li>obvodu pása až o <strong>24,1 cm</strong>.</li>
+  <li>systolického tlaku až o <strong>12,3&nbsp;mm Hg</strong>,</li>
+  <li>obvodu pása až o <strong>24,1&nbsp;cm</strong>.</li>
 </ul>
 
 <p>V štúdii TRANSCEND-T2D-1 sa zaznamenalo zníženie:</p>
@@ -87,8 +87,8 @@ $articles[] = [
 <ul>
   <li>triglyceridov až o <strong>39,6 %</strong>,</li>
   <li>non-HDL cholesterolu až o <strong>19,8 %</strong>,</li>
-  <li>systolického tlaku až o <strong>6,4 mm Hg</strong>,</li>
-  <li>obvodu pása až o <strong>12,4 cm</strong>.</li>
+  <li>systolického tlaku až o <strong>6,4&nbsp;mm Hg</strong>,</li>
+  <li>obvodu pása až o <strong>12,4&nbsp;cm</strong>.</li>
 </ul>
 
 <p>Tieto údaje sú klinicky zaujímavé, pretože obezita, diabetes 2. typu, dyslipidémia, hypertenzia a viscerálna adipozita sa často vzájomne posilňujú.</p>
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>Novým bezpečnostným signálom boli <strong>infekcie močových ciest</strong>. V štúdii TRIUMPH-1 sa vyskytli u 7,5 až 8,8 % pacientov liečených retatrutidom oproti 5,3 % pri placebe. V štúdii TRANSCEND-T2D-1 bol výskyt 0,7 až 2,9 % oproti 0 % pri placebe. Podľa výskumníkov zatiaľ nie je jasné, či ide o náhodný nález, dôsledok hydratácie, zmien diurézy alebo iný mechanizmus.</p>
 
-<p>Prerušenie liečby pre nežiaduce účinky bolo dávkovo závislé. V štúdii TRIUMPH-1 liečbu ukončilo 4,1 % pacientov pri dávke 4 mg, 6,9 % pri dávke 9 mg a 11,3 % pri dávke 12 mg, oproti 4,9 % pri placebe.</p>
+<p>Prerušenie liečby pre nežiaduce účinky bolo dávkovo závislé. V štúdii TRIUMPH-1 liečbu ukončilo 4,1 % pacientov pri dávke 4&nbsp;mg, 6,9 % pri dávke 9&nbsp;mg a 11,3 % pri dávke 12&nbsp;mg, oproti 4,9 % pri placebe.</p>
 
 <h2>Nie je všetko iba o maximálnom chudnutí</h2>
 

@@ -19,7 +19,7 @@ $articles[] = [
     'is_top' => 0,
     'excerpt' => 'Francúzska kohortová štúdia spája periférne artériové ochorenie s vyššou jednoročnou mortalitou po transplantácii obličky. Výsledok podporuje individuálne cievne a funkčné hodnotenie.',
     'content' => <<<'HTML'
-<p>Pri posudzovaní staršieho kandidáta na transplantáciu obličky nestačí poznať jeho vek. Rozhoduje celková záťaž ochoreniami, funkčná rezerva, technická uskutočniteľnosť výkonu a riziko komplikácií. Nová francúzska retrospektívna kohortová štúdia ukázala, že periférne artériové ochorenie dolných končatín bolo u transplantovaných pacientov vo veku najmenej 65 rokov spojené s vyšším hazardom úmrtia počas prvého roka po transplantácii. Chronologická veková skupina sa v upravenom modeli nepreukázala ako nezávislý prediktor, hoci pri veku nad 75 rokov bol odhad blízko hranice štatistickej významnosti. [1]</p>
+<p>Pri posudzovaní staršieho kandidáta na transplantáciu obličky nestačí poznať jeho vek. Rozhoduje celková záťaž ochoreniami, funkčná rezerva, technická uskutočniteľnosť výkonu a riziko komplikácií. Nová francúzska retrospektívna kohortová štúdia ukázala, že periférne artériové ochorenie dolných končatín bolo u transplantovaných pacientov vo veku najmenej 65&nbsp;rokov spojené s vyšším hazardom úmrtia počas prvého roka po transplantácii. Chronologická veková skupina sa v upravenom modeli nepreukázala ako nezávislý prediktor, hoci pri veku nad 75&nbsp;rokov bol odhad blízko hranice štatistickej významnosti. [1]</p>
 
 <p>Výsledok podporuje podrobnejšie cievne a funkčné hodnotenie. Neznamená, že vek nemá prognostický význam, ani že periférne artériové ochorenie samo osebe vylučuje transplantáciu.</p>
 
@@ -33,11 +33,11 @@ $articles[] = [
 
 <h2>Koho výskumníci sledovali</h2>
 
-<p>Autori prepojili francúzsky register REIN s celoštátnou databázou zdravotnej starostlivosti SNDS. Do analýzy zahrnuli 749 pacientov vo veku najmenej 65 rokov, ktorí v rokoch 2017 alebo 2018 začali liečbu nahrádzajúcu funkciu obličiek a do konca roka 2020 podstúpili prvú transplantáciu obličky. Pacientov po kombinovanej transplantácii orgánov nezaradili. Muži tvorili 67,4 % súboru. [1]</p>
+<p>Autori prepojili francúzsky register REIN s celoštátnou databázou zdravotnej starostlivosti SNDS. Do analýzy zahrnuli 749 pacientov vo veku najmenej 65&nbsp;rokov, ktorí v rokoch 2017 alebo 2018 začali liečbu nahrádzajúcu funkciu obličiek a do konca roka 2020 podstúpili prvú transplantáciu obličky. Pacientov po kombinovanej transplantácii orgánov nezaradili. Muži tvorili 67,4 % súboru. [1]</p>
 
 <p>Transplantácia bola prvou metódou liečby nahrádzajúcej funkciu obličiek u 191 pacientov, teda u 25,5 % súboru. Obličku od žijúceho darcu dostalo 104 pacientov (13,9 %). Periférne artériové ochorenie dolných končatín bolo pri začatí liečby nahrádzajúcej funkciu obličiek zaznamenané u 74 pacientov (9,9 %); údaj chýbal u 14 pacientov. [1]</p>
 
-<p>Primárnou analyzovanou udalosťou bolo úmrtie z akejkoľvek príčiny počas prvého roka po transplantácii. Autori hodnotili aj dĺžku úvodnej hospitalizácie, opätovnú hospitalizáciu do 30 dní po prepustení a kumulatívny počet dní hospitalizácie počas prvého potransplantačného roka. Do údajov o predtransplantačnej ceste zahrnuli kardiovaskulárne vyšetrenia, odborné konzultácie a hospitalizácie počas dvoch rokov pred registráciou na čakaciu listinu až po zaradenie na aktívnu čakaciu listinu. [1]</p>
+<p>Primárnou analyzovanou udalosťou bolo úmrtie z akejkoľvek príčiny počas prvého roka po transplantácii. Autori hodnotili aj dĺžku úvodnej hospitalizácie, opätovnú hospitalizáciu do 30&nbsp;dní po prepustení a kumulatívny počet dní hospitalizácie počas prvého potransplantačného roka. Do údajov o predtransplantačnej ceste zahrnuli kardiovaskulárne vyšetrenia, odborné konzultácie a hospitalizácie počas dvoch rokov pred registráciou na čakaciu listinu až po zaradenie na aktívnu čakaciu listinu. [1]</p>
 
 <h2>Periférne artériové ochorenie bolo spojené s vyššou mortalitou</h2>
 
@@ -51,8 +51,8 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Premenná</th><th scope="col">Upravený HR</th><th scope="col">95 % interval spoľahlivosti</th><th scope="col">p</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Vek od 70 do 74 rokov oproti 65 až 69 rokom</th><td>1,43</td><td>0,76 až 2,70</td><td>0,26</td></tr>
-    <tr><th scope="row">Vek nad 75 rokov oproti 65 až 69 rokom</th><td>1,80</td><td>0,96 až 3,27</td><td>0,06</td></tr>
+    <tr><th scope="row">Vek od 70 do 74&nbsp;rokov oproti 65 až 69 rokom</th><td>1,43</td><td>0,76 až 2,70</td><td>0,26</td></tr>
+    <tr><th scope="row">Vek nad 75&nbsp;rokov oproti 65 až 69 rokom</th><td>1,80</td><td>0,96 až 3,27</td><td>0,06</td></tr>
     <tr><th scope="row">Periférne artériové ochorenie dolných končatín</th><td>1,97</td><td>1,02 až 3,82</td><td>0,04</td></tr>
     <tr><th scope="row">Chronické srdcové zlyhávanie</th><td>2,21</td><td>1,15 až 4,25</td><td>0,02</td></tr>
     <tr><th scope="row">Najmenej dve cievnochirurgické konzultácie</th><td>1,95</td><td>1,07 až 3,56</td><td>0,03</td></tr>
@@ -66,11 +66,11 @@ $articles[] = [
 
 <h2>Vek sa prejavil skôr v hospitalizačnej záťaži</h2>
 
-<p>Úvodná hospitalizácia trvala menej ako 10 dní u 197 pacientov, od 10 do 21 dní u 424 pacientov a viac ako 21 dní u 128 pacientov. S dlhým úvodným pobytom bol nezávisle spojený vek od 70 do 74 rokov oproti veku od 65 do 69 rokov (OR 2,15; 95 % interval spoľahlivosti 1,3 až 3,5), chronická respiračná insuficiencia a arytmia. Pri veku nad 75 rokov sa takáto asociácia s úvodnou hospitalizáciou nepreukázala. [1]</p>
+<p>Úvodná hospitalizácia trvala menej ako 10&nbsp;dní u 197 pacientov, od 10 do 21&nbsp;dní u 424 pacientov a viac ako 21&nbsp;dní u 128 pacientov. S dlhým úvodným pobytom bol nezávisle spojený vek od 70 do 74&nbsp;rokov oproti veku od 65 do 69&nbsp;rokov (OR 2,15; 95 % interval spoľahlivosti 1,3 až 3,5), chronická respiračná insuficiencia a arytmia. Pri veku nad 75&nbsp;rokov sa takáto asociácia s úvodnou hospitalizáciou nepreukázala. [1]</p>
 
-<p>Po prepustení bolo do 30 dní opätovne hospitalizovaných 411 zo 730 pacientov, ktorí prežili úvodnú hospitalizáciu, teda 56 %. Skúmaná definícia zahŕňala každú novú hospitalizáciu bez ohľadu na dôvod. Vyšší pomer šancí skorej opätovnej hospitalizácie bol spojený so ženským pohlavím (OR 1,50; 95 % interval spoľahlivosti 1,05 až 2,12) a úvodným pobytom dlhším ako 21 dní (OR 1,70; 95 % interval spoľahlivosti 1,06 až 2,70). Veková skupina nebola nezávislým prediktorom tejto udalosti. [1]</p>
+<p>Po prepustení bolo do 30&nbsp;dní opätovne hospitalizovaných 411 zo 730 pacientov, ktorí prežili úvodnú hospitalizáciu, teda 56 %. Skúmaná definícia zahŕňala každú novú hospitalizáciu bez ohľadu na dôvod. Vyšší pomer šancí skorej opätovnej hospitalizácie bol spojený so ženským pohlavím (OR 1,50; 95 % interval spoľahlivosti 1,05 až 2,12) a úvodným pobytom dlhším ako 21&nbsp;dní (OR 1,70; 95 % interval spoľahlivosti 1,06 až 2,70). Veková skupina nebola nezávislým prediktorom tejto udalosti. [1]</p>
 
-<p>V analýze 681 pacientov bol vek nad 75 rokov spojený s viac ako 30 dňami následnej hospitalizácie počas prvého roka po transplantácii, pričom úvodný pobyt sa do súčtu nezapočítaval (OR 2,08; 95 % interval spoľahlivosti 1,2 až 3,5). Podobnú asociáciu mala arytmia. Preemptívna transplantácia a transplantácia od žijúceho darcu boli v tomto modeli spojené s nižším pomerom šancí predĺženej kumulatívnej hospitalizácie. [1]</p>
+<p>V analýze 681 pacientov bol vek nad 75&nbsp;rokov spojený s viac ako 30 dňami následnej hospitalizácie počas prvého roka po transplantácii, pričom úvodný pobyt sa do súčtu nezapočítaval (OR 2,08; 95 % interval spoľahlivosti 1,2 až 3,5). Podobnú asociáciu mala arytmia. Preemptívna transplantácia a transplantácia od žijúceho darcu boli v tomto modeli spojené s nižším pomerom šancí predĺženej kumulatívnej hospitalizácie. [1]</p>
 
 <h2>Nezávislá asociácia nie je dôkaz príčinnej súvislosti</h2>
 
@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Do kohorty vstúpili iba pacienti, ktorí prešli výberom na transplantáciu a následne transplantáciu podstúpili. Najstarší príjemcovia mohli byť zdravotne starostlivejšie vybraní než mladší. Takáto selekcia oslabuje pozorovanú súvislosť medzi chronologickým vekom a mortalitou.</p>
 
-<p>Odhad pre vek nad 75 rokov nebol neutrálny: HR bol 1,80, 95 % interval spoľahlivosti 0,96 až 3,27 a p = 0,06. Štúdia teda neposkytla dostatočne presný dôkaz nezávislej asociácie, ale ani dôkaz neprítomnosti vekového účinku. Podporuje užší záver, že samotný vek nedostatočne vystihuje individuálne riziko v už vybranej skupine starších príjemcov.</p>
+<p>Odhad pre vek nad 75&nbsp;rokov nebol neutrálny: HR bol 1,80, 95 % interval spoľahlivosti 0,96 až 3,27 a p = 0,06. Štúdia teda neposkytla dostatočne presný dôkaz nezávislej asociácie, ale ani dôkaz neprítomnosti vekového účinku. Podporuje užší záver, že samotný vek nedostatočne vystihuje individuálne riziko v už vybranej skupine starších príjemcov.</p>
 
 <h2>Vyššie riziko po transplantácii neznamená neprítomnosť jej prínosu</h2>
 

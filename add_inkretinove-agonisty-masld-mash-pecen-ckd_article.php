@@ -2,7 +2,7 @@
 
 /**
  * add_inkretinove-agonisty-masld-mash-pecen-ckd_article.php
- * Odborne revidovane spracovanie clanku Via practica 2/2026 o semaglutide,
+ * Odborne revidované spracovanie článku Via practica 2/2026 o semaglutide,
  * tirzepatide a retatrutide pri MASLD/MASH.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -86,7 +86,7 @@ $articles[] = [
 
 <h2>ESSENCE: semaglutid má dôkaz z fázy 3</h2>
 
-<p>ESSENCE je prebiehajúca multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3. Zaradila 1 197 pacientov s biopsiou potvrdenou MASH a fibrózou F2 alebo F3 v pomere 2 : 1 na semaglutid alebo placebo. Semaglutid sa podával <strong>subkutánne v dávke 2,4 mg raz týždenne</strong>. Celkové plánované trvanie liečby je 240 týždňov.</p>
+<p>ESSENCE je prebiehajúca multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3. Zaradila 1&nbsp;197 pacientov s biopsiou potvrdenou MASH a fibrózou F2 alebo F3 v pomere 2 : 1 na semaglutid alebo placebo. Semaglutid sa podával <strong>subkutánne v dávke 2,4&nbsp;mg raz týždenne</strong>. Celkové plánované trvanie liečby je 240&nbsp;týždňov.</p>
 
 <p>Publikovaná plánovaná priebežná analýza hodnotila prvých 800 pacientov po 72 týždňoch:</p>
 
@@ -137,7 +137,7 @@ $articles[] = [
 
 <h2>SYNERGY-NASH: tirzepatid má priamy histologický dôkaz z fázy 2</h2>
 
-<p>Tirzepatid nemožno pri MASH opisovať iba na základe štúdií diabetu a obezity. Randomizovaná, dvojito zaslepená štúdia fázy 2 SYNERGY-NASH zaradila 190 pacientov s biopsiou potvrdenou MASH a fibrózou F2 alebo F3. Účastníci dostávali 5, 10 alebo 15 mg tirzepatidu, alebo placebo, <strong>subkutánne raz týždenne počas 52 týždňov</strong>.</p>
+<p>Tirzepatid nemožno pri MASH opisovať iba na základe štúdií diabetu a obezity. Randomizovaná, dvojito zaslepená štúdia fázy 2 SYNERGY-NASH zaradila 190 pacientov s biopsiou potvrdenou MASH a fibrózou F2 alebo F3. Účastníci dostávali 5, 10 alebo 15&nbsp;mg tirzepatidu, alebo placebo, <strong>subkutánne raz týždenne počas 52&nbsp;týždňov</strong>.</p>
 
 <div class="table-responsive" role="region" aria-label="Histologické výsledky štúdie SYNERGY-NASH po 52 týždňoch" tabindex="0">
   <table>
@@ -145,9 +145,9 @@ $articles[] = [
       <tr>
         <th scope="col">Ukazovateľ</th>
         <th scope="col">Placebo</th>
-        <th scope="col">Tirzepatid 5 mg</th>
-        <th scope="col">Tirzepatid 10 mg</th>
-        <th scope="col">Tirzepatid 15 mg</th>
+        <th scope="col">Tirzepatid 5&nbsp;mg</th>
+        <th scope="col">Tirzepatid 10&nbsp;mg</th>
+        <th scope="col">Tirzepatid 15&nbsp;mg</th>
       </tr>
     </thead>
     <tbody>
@@ -175,15 +175,15 @@ $articles[] = [
 
 <h2>Retatrutid: výrazný pokles tuku v pečeni, ale bez histológie MASH</h2>
 
-<p>Retatrutid sa hodnotil v obrazovej podštúdii fázy 2a u 98 účastníkov štúdie obezity, ktorí mali MASLD a najmenej 10 % tuku v pečeni. Dostávali placebo alebo retatrutid 1, 4, 8 či 12 mg <strong>subkutánne raz týždenne</strong>. Primárnym cieľom bola relatívna zmena tuku v pečeni meraného magnetickou rezonanciou po 24 týždňoch.</p>
+<p>Retatrutid sa hodnotil v obrazovej podštúdii fázy 2a u 98 účastníkov štúdie obezity, ktorí mali MASLD a najmenej 10 % tuku v pečeni. Dostávali placebo alebo retatrutid 1, 4, 8 či 12&nbsp;mg <strong>subkutánne raz týždenne</strong>. Primárnym cieľom bola relatívna zmena tuku v pečeni meraného magnetickou rezonanciou po 24 týždňoch.</p>
 
-<p>Priemerná relatívna zmena pečeňového tuku bola −42,9 %, −57,0 %, −81,4 % a −82,4 % pri dávkach 1, 4, 8 a 12 mg oproti +0,3 % pri placebe; všetky porovnania s placebom mali p &lt; 0,001. Obsah pečeňového tuku pod 5 % dosiahlo 27 %, 52 %, 79 % a 86 % účastníkov oproti 0 % pri placebe.</p>
+<p>Priemerná relatívna zmena pečeňového tuku bola −42,9 %, −57,0 %, −81,4 % a −82,4 % pri dávkach 1, 4, 8 a 12&nbsp;mg oproti +0,3 % pri placebe; všetky porovnania s placebom mali p &lt; 0,001. Obsah pečeňového tuku pod 5 % dosiahlo 27 %, 52 %, 79 % a 86 % účastníkov oproti 0 % pri placebe.</p>
 
 <p>Ide o silný obrazový signál, ale nie o biopsiou potvrdený ústup MASH ani zlepšenie fibrózy. Podštúdia bola malá, porovnania neboli upravené na mnohonásobné testovanie a počet dostupných MRI po 48 týždňoch bol ešte menší. Retatrutid preto nemožno zaradiť vedľa semaglutidu a tirzepatidu ako rovnocenne histologicky overenú liečbu MASH. Zostáva experimentálnym liečivom.</p>
 
 <h2>Spôsob podávania: v pôvodnej tabuľke je klinicky významná chyba</h2>
 
-<p>V tabuľke východiskového článku sa pri tirzepatide aj retatrutide opakovane uvádza perorálne podávanie. V citovaných klinických skúšaniach sa však obe liečivá podávali <strong>subkutánne raz týždenne</strong>. Rovnakou cestou sa v ESSENCE podával semaglutid 2,4 mg. Pri tirzepatide rozpor potvrdzuje aj citovaná štúdia SURPASS-5, ktorej názov výslovne uvádza subkutánne podanie.</p>
+<p>V tabuľke východiskového článku sa pri tirzepatide aj retatrutide opakovane uvádza perorálne podávanie. V citovaných klinických skúšaniach sa však obe liečivá podávali <strong>subkutánne raz týždenne</strong>. Rovnakou cestou sa v ESSENCE podával semaglutid 2,4&nbsp;mg. Pri tirzepatide rozpor potvrdzuje aj citovaná štúdia SURPASS-5, ktorej názov výslovne uvádza subkutánne podanie.</p>
 
 <p>Táto oprava nie je iba redakčná: cesta podania patrí k základným údajom o lieku. Dávky experimentálnych ramien zároveň nemožno meniť na návod na liečbu mimo schválenej indikácie a aktuálneho súhrnu charakteristických vlastností lieku.</p>
 
@@ -215,7 +215,7 @@ $articles[] = [
 
 <h3>Renálne obmedzenia sú špecifické pre prípravok a indikáciu</h3>
 
-<p>Súhrn charakteristických vlastností Kayshildu nevyžaduje úpravu dávky pri miernej alebo stredne ťažkej poruche funkcie obličiek. Skúsenosti pri ťažkej poruche sú však obmedzené a Kayshild sa <strong>neodporúča pri eGFR &lt; 30 ml/min/1,73 m² vrátane terminálneho zlyhania obličiek</strong>. Tieto populačné hranice sú dôležité pri prenose výsledkov ESSENCE do nefrologickej praxe.</p>
+<p>Súhrn charakteristických vlastností Kayshildu nevyžaduje úpravu dávky pri miernej alebo stredne ťažkej poruche funkcie obličiek. Skúsenosti pri ťažkej poruche sú však obmedzené a Kayshild sa <strong>neodporúča pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m² vrátane terminálneho zlyhania obličiek</strong>. Tieto populačné hranice sú dôležité pri prenose výsledkov ESSENCE do nefrologickej praxe.</p>
 
 <p>Pri Mounjare sú regulačné údaje odlišné: úprava dávky sa nevyžaduje ani pri terminálnom zlyhaní obličiek, skúsenosti pri ťažkej CKD a ESRD sú však obmedzené a odporúča sa opatrnosť. To nemení skutočnosť, že Mounjaro nemá v EÚ osobitnú indikáciu pre MASH. Registračné údaje jednej značky alebo indikácie sa nesmú bez kontroly prenášať na inú.</p>
 
@@ -233,7 +233,7 @@ $articles[] = [
 
 <h3>Pečeňový a obličkový dôkaz treba posudzovať oddelene</h3>
 
-<p>Štúdia FLOW preukázala pri semaglutide 1 mg raz týždenne u 3 533 pacientov s diabetom 2. typu a CKD zníženie rizika zloženého renálneho ukazovateľa o 24 % oproti placebu (HR 0,76; 95 % IS 0,66–0,88). Je to samostatný dôkaz zo špecifickej populácie a s inou dávkou než v ESSENCE. Nemožno z neho odvodiť, že histologické zlepšenie MASH sprostredkovalo renálny prínos, ani ho automaticky preniesť na tirzepatid alebo retatrutid.</p>
+<p>Štúdia FLOW preukázala pri semaglutide 1&nbsp;mg raz týždenne u 3&nbsp;533 pacientov s diabetom 2. typu a CKD zníženie rizika zloženého renálneho ukazovateľa o 24 % oproti placebu (HR 0,76; 95 % IS 0,66–0,88). Je to samostatný dôkaz zo špecifickej populácie a s inou dávkou než v ESSENCE. Nemožno z neho odvodiť, že histologické zlepšenie MASH sprostredkovalo renálny prínos, ani ho automaticky preniesť na tirzepatid alebo retatrutid.</p>
 
 <h2>Praktický rámec rozhodovania</h2>
 
@@ -251,7 +251,7 @@ $articles[] = [
 <h3>Dostatočne podložené</h3>
 
 <ul>
-  <li>Semaglutid 2,4 mg zlepšil oba primárne histologické ukazovatele v priebežnej analýze ESSENCE.</li>
+  <li>Semaglutid 2,4&nbsp;mg zlepšil oba primárne histologické ukazovatele v priebežnej analýze ESSENCE.</li>
   <li>Tirzepatid zlepšil ústup MASH bez zhoršenia fibrózy v štúdii fázy 2 SYNERGY-NASH.</li>
   <li>Retatrutid výrazne znížil obsah tuku v pečeni meraný MRI v malej podštúdii fázy 2a.</li>
   <li>Všetky tri liečivá sa v uvedených štúdiách podávali subkutánne raz týždenne.</li>

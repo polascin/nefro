@@ -37,9 +37,9 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Autori využili databázu Chang Gung Research Database, ktorá združuje elektronické zdravotné záznamy zo siedmich nemocníc na Taiwane. Zaradili dospelých pacientov so zlyhaním obličiek, ktorí začali PD v rokoch 2005 až 2022, boli ňou liečení najmenej 90 dní a mali diagnostikované srdcové zlyhávanie. Sledovanie sa skončilo 30. júna 2023.</p>
+<p>Autori využili databázu Chang Gung Research Database, ktorá združuje elektronické zdravotné záznamy zo siedmich nemocníc na Taiwane. Zaradili dospelých pacientov so zlyhaním obličiek, ktorí začali PD v rokoch 2005 až 2022, boli ňou liečení najmenej 90&nbsp;dní a mali diagnostikované srdcové zlyhávanie. Sledovanie sa skončilo 30. júna 2023.</p>
 
-<p>Analyzovaných bolo <strong>1 800 pacientov</strong>: 1 102 bolo podľa hlavnej definície zaradených medzi používateľov ikodextrínu a 698 medzi nepoužívateľov. Za používateľa sa považoval pacient, ktorý dostával ikodextrín aspoň počas 50 % celkového trvania PD. Toto rozdelenie neznamenalo jednoduché porovnanie „vždy“ oproti „nikdy“: 792 používateľov začalo ikodextrín až po začatí PD a 321 pacientov zaradených medzi nepoužívateľov ho dostávalo kratšie než počas polovice trvania PD.</p>
+<p>Analyzovaných bolo <strong>1&nbsp;800 pacientov</strong>: 1&nbsp;102 bolo podľa hlavnej definície zaradených medzi používateľov ikodextrínu a 698 medzi nepoužívateľov. Za používateľa sa považoval pacient, ktorý dostával ikodextrín aspoň počas 50 % celkového trvania PD. Toto rozdelenie neznamenalo jednoduché porovnanie „vždy“ oproti „nikdy“: 792 používateľov začalo ikodextrín až po začatí PD a 321 pacientov zaradených medzi nepoužívateľov ho dostávalo kratšie než počas polovice trvania PD.</p>
 
 <p>V hlavnej analýze autori modelovali expozíciu ako časovo premennú. Obdobia pred začatím liečby, počas nej a po jej prípadnom ukončení sa priraďovali k aktuálnemu expozičnému stavu. Modely upravili o viaceré demografické, klinické, laboratórne a liekové premenné. Robustnosť nálezov skúmali aj emuláciou cieľovej štúdie v 72 štvrťročných kohortách a alternatívnou analýzou, ktorá rozdelila sledovanie na trojmesačné intervaly.</p>
 
@@ -125,7 +125,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V taiwanskej kohorte 1 800 pacientov na peritoneálnej dialýze so srdcovým zlyhávaním bolo používanie ikodextrínu konzistentne spojené s nižšou celkovou a kardiovaskulárnou mortalitou, nižším výskytom náhlej smrti a menším počtom MACE. Veľmi nízke hodnoty HR pre mortalitu sú klinicky nápadné, ale pre observačný dizajn ich nemožno považovať za veľkosť liečebného účinku.</p>
+<p>V taiwanskej kohorte 1&nbsp;800 pacientov na peritoneálnej dialýze so srdcovým zlyhávaním bolo používanie ikodextrínu konzistentne spojené s nižšou celkovou a kardiovaskulárnou mortalitou, nižším výskytom náhlej smrti a menším počtom MACE. Veľmi nízke hodnoty HR pre mortalitu sú klinicky nápadné, ale pre observačný dizajn ich nemožno považovať za veľkosť liečebného účinku.</p>
 
 <p>Štúdia posilňuje biologický a klinický podklad na používanie ikodextrínu pri vhodne zvolených pacientoch. Definitívne posúdenie jeho vplyvu na prežívanie si však vyžaduje prospektívne, ideálne randomizované štúdie s priamym hodnotením objemového stavu a vopred definovanými kardiovaskulárnymi výsledkami.</p>
 

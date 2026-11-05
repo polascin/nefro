@@ -39,14 +39,14 @@ $articles[] = [
 
 <h2>ADVOR: lepšia skorá dekongescia bez preukázanej prognostickej výhody</h2>
 
-<p>V randomizovanej, dvojito zaslepenej štúdii ADVOR bolo 519 hospitalizovaných pacientov s akútne dekompenzovaným srdcovým zlyhávaním, klinickými známkami objemového preťaženia a zvýšenou koncentráciou natriuretických peptidov zaradených na intravenózny acetazolamid 500 mg raz denne alebo placebo. Obe ramená dostávali štandardizovaný intravenózny slučkový diuretický režim.</p>
+<p>V randomizovanej, dvojito zaslepenej štúdii ADVOR bolo 519 hospitalizovaných pacientov s akútne dekompenzovaným srdcovým zlyhávaním, klinickými známkami objemového preťaženia a zvýšenou koncentráciou natriuretických peptidov zaradených na intravenózny acetazolamid 500&nbsp;mg raz denne alebo placebo. Obe ramená dostávali štandardizovaný intravenózny slučkový diuretický režim.</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky štúdie ADVOR" tabindex="0">
 <table>
   <thead><tr><th scope="col">Výsledok</th><th scope="col">Acetazolamid</th><th scope="col">Placebo</th><th scope="col">Odhad účinku</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Úspešná dekongescia do 3 dní</th><td>42,2 %</td><td>30,5 %</td><td>RR 1,46; 95 % IS 1,17–1,82</td></tr>
-    <tr><th scope="row">Úmrtie alebo rehospitalizácia pre srdcové zlyhávanie do 3 mesiacov</th><td>29,7 %</td><td>27,8 %</td><td>HR 1,07; 95 % IS 0,78–1,48</td></tr>
+    <tr><th scope="row">Úspešná dekongescia do 3&nbsp;dní</th><td>42,2 %</td><td>30,5 %</td><td>RR 1,46; 95 % IS 1,17–1,82</td></tr>
+    <tr><th scope="row">Úmrtie alebo rehospitalizácia pre srdcové zlyhávanie do 3&nbsp;mesiacov</th><td>29,7 %</td><td>27,8 %</td><td>HR 1,07; 95 % IS 0,78–1,48</td></tr>
   </tbody>
 </table>
 </div>
@@ -57,13 +57,13 @@ $articles[] = [
 
 <h2>Renálna analýza ADVOR: kreatinín stúpal častejšie, prognóza nie</h2>
 
-<p>Vopred špecifikovaná analýza ADVOR definovala zhoršenie funkcie obličiek ako vzostup kreatinínu najmenej o 0,3 mg/dl počas liečby. Vyskytlo sa pri acetazolamide častejšie než pri placebe, 40,5 % oproti 18,9 % (p &lt; 0,001). Po troch mesiacoch sa koncentrácia kreatinínu medzi ramenami nelíšila (p = 0,565) a tento prechodný vzostup nebol spojený s vyšším výskytom hospitalizácie pre srdcové zlyhávanie alebo mortality. Úspešná dekongescia pri prepustení bola naopak spojená s lepšími výsledkami bez ohľadu na vznik tejto laboratórnej udalosti.</p>
+<p>Vopred špecifikovaná analýza ADVOR definovala zhoršenie funkcie obličiek ako vzostup kreatinínu najmenej o 0,3&nbsp;mg/dl počas liečby. Vyskytlo sa pri acetazolamide častejšie než pri placebe, 40,5 % oproti 18,9 % (p &lt; 0,001). Po troch mesiacoch sa koncentrácia kreatinínu medzi ramenami nelíšila (p = 0,565) a tento prechodný vzostup nebol spojený s vyšším výskytom hospitalizácie pre srdcové zlyhávanie alebo mortality. Úspešná dekongescia pri prepustení bola naopak spojená s lepšími výsledkami bez ohľadu na vznik tejto laboratórnej udalosti.</p>
 
 <p>Nejde o dôkaz, že vzostup kreatinínu je vždy benígny. Štúdia hodnotila konkrétnu populáciu, časové okno a definíciu udalosti. V praxi treba rozlišovať hemokoncentráciu a hemodynamickú zmenu filtrácie pri úspešnej dekongescii od hypovolémie, hypotenzie, pokračujúcej oligúrie, liekovej toxicity, obštrukcie alebo skutočného poškodenia parenchýmu.</p>
 
 <h2>CLOROTIC: sekvenčná blokáda zvyšuje účinok aj renálne riziko</h2>
 
-<p>V štúdii CLOROTIC bolo 230 pacientov s akútnym srdcovým zlyhávaním randomizovaných na perorálny hydrochlorotiazid alebo placebo pridané k intravenóznemu furosemidu. Po 72 hodinách bol pokles telesnej hmotnosti väčší pri hydrochlorotiazide: 2,3 kg oproti 1,5 kg; upravený odhad rozdielu bol 1,14 kg (95 % IS 0,42–1,84; p = 0,002). Dvadsaťštyrihodinová diuréza bola vyššia, ale rozdiel v pacientom hodnotenej dýchavici nebol štatisticky významný.</p>
+<p>V štúdii CLOROTIC bolo 230 pacientov s akútnym srdcovým zlyhávaním randomizovaných na perorálny hydrochlorotiazid alebo placebo pridané k intravenóznemu furosemidu. Po 72 hodinách bol pokles telesnej hmotnosti väčší pri hydrochlorotiazide: 2,3&nbsp;kg oproti 1,5&nbsp;kg; upravený odhad rozdielu bol 1,14&nbsp;kg (95 % IS 0,42–1,84; p = 0,002). Dvadsaťštyrihodinová diuréza bola vyššia, ale rozdiel v pacientom hodnotenej dýchavici nebol štatisticky významný.</p>
 
 <p>Cenou za intenzívnejšiu odpoveď bol častejší výskyt zhoršenia funkcie obličiek, 46,5 % oproti 17,2 % (p &lt; 0,001). Štúdia nepreukázala rozdiel v mortalite ani rehospitalizáciách. Fyziologickým podkladom je sekvenčná blokáda nefrónu: inhibícia distálnej reabsorpcie obmedzí kompenzačné spätné vstrebávanie sodíka po podaní slučkového diuretika.</p>
 
@@ -71,15 +71,15 @@ $articles[] = [
 
 <h2>Torasemid verzus furosemid: farmakokinetika nie je prognóza</h2>
 
-<p>Pragmatická randomizovaná štúdia TRANSFORM-HF zaradila 2 859 pacientov prepustených po hospitalizácii pre srdcové zlyhávanie. Úmrtie z akejkoľvek príčiny nastalo u 26,1 % pacientov v stratégii s torasemidom a u 26,2 % v stratégii s furosemidom (HR 1,02; 95 % IS 0,89–1,18). Kombinácia úmrtia alebo hospitalizácie počas 12 mesiacov sa tiež významne nelíšila (HR 0,92; 95 % IS 0,83–1,02).</p>
+<p>Pragmatická randomizovaná štúdia TRANSFORM-HF zaradila 2&nbsp;859 pacientov prepustených po hospitalizácii pre srdcové zlyhávanie. Úmrtie z akejkoľvek príčiny nastalo u 26,1 % pacientov v stratégii s torasemidom a u 26,2 % v stratégii s furosemidom (HR 1,02; 95 % IS 0,89–1,18). Kombinácia úmrtia alebo hospitalizácie počas 12&nbsp;mesiacov sa tiež významne nelíšila (HR 0,92; 95 % IS 0,83–1,02).</p>
 
 <p>Predvídateľnejšia biologická dostupnosť torasemidu tak sama osebe neviedla k mortalitnej výhode. Výber medzi liekmi môže naďalej závisieť od individuálnej odpovede, absorpcie, adherencie, dávkovacieho režimu a dostupnosti, nie však od očakávanej prognostickej superiority.</p>
 
-<p>Veľká observačná analýza 328 640 párovaných poistencov Medicare následne zaznamenala pri torasemide mierne nižší výskyt kombinovaného ukazovateľa mortality a príhod súvisiacich so srdcovým zlyhávaním (HR 0,97; 95 % IS 0,95–0,99), ale vyšší výskyt akútneho poškodenia obličiek (HR 1,12; 95 % IS 1,10–1,15). Ani dôsledné párovanie nedokáže vylúčiť reziduálne skreslenie indikáciou. Údaje preto treba brať ako bezpečnostný signál, nie dôkazom kauzality ani dôvodom na plošnú zámenu lieku.</p>
+<p>Veľká observačná analýza 328&nbsp;640 párovaných poistencov Medicare následne zaznamenala pri torasemide mierne nižší výskyt kombinovaného ukazovateľa mortality a príhod súvisiacich so srdcovým zlyhávaním (HR 0,97; 95 % IS 0,95–0,99), ale vyšší výskyt akútneho poškodenia obličiek (HR 1,12; 95 % IS 1,10–1,15). Ani dôsledné párovanie nedokáže vylúčiť reziduálne skreslenie indikáciou. Údaje preto treba brať ako bezpečnostný signál, nie dôkazom kauzality ani dôvodom na plošnú zámenu lieku.</p>
 
 <h2>Chlórtalidón a hydrochlorotiazid: bez preukázanej nefroprotekčnej superiority</h2>
 
-<p>V sekundárnej analýze pragmatickej štúdie Diuretic Comparison Project sa primárny renálny kombinovaný ukazovateľ vyskytol u 369 z 6 118 pacientov liečených chlórtalidónom (6,0 %) a u 396 zo 6 147 pacientov liečených hydrochlorotiazidom (6,4 %); HR 0,94 (95 % IS 0,81–1,08; p = 0,37). Chlórtalidón teda nepreukázal prevahu v prevencii renálnych výsledkov. V hlavnej analýze štúdie bola hypokaliémia častejšia pri chlórtalidóne, 6,0 % oproti 4,4 %.</p>
+<p>V sekundárnej analýze pragmatickej štúdie Diuretic Comparison Project sa primárny renálny kombinovaný ukazovateľ vyskytol u 369 z 6&nbsp;118 pacientov liečených chlórtalidónom (6,0 %) a u 396 zo 6&nbsp;147 pacientov liečených hydrochlorotiazidom (6,4 %); HR 0,94 (95 % IS 0,81–1,08; p = 0,37). Chlórtalidón teda nepreukázal prevahu v prevencii renálnych výsledkov. V hlavnej analýze štúdie bola hypokaliémia častejšia pri chlórtalidóne, 6,0 % oproti 4,4 %.</p>
 
 <p>Záver neznamená, že lieky majú za všetkých okolností rovnaký antihypertenzný účinok ani že chlórtalidón nemá miesto v liečbe hypertenzie. Pri výbere treba zohľadniť trvanie účinku, krvný tlak, funkciu obličiek, elektrolyty, toleranciu a súbežnú liečbu; rovnaký počet miligramov nepredstavuje ekvivalentnú dávku.</p>
 

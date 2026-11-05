@@ -46,7 +46,7 @@ Mnohí pacienti popri nej pracujú, cestujú a žijú aktívne.</p>
 
 <h2>Bežný týždeň na dialýze</h2>
 <p>Pri <strong>hemodialýze</strong> chodíte do strediska spravidla <strong>trikrát týždenne</strong>,
-jedno sedenie trvá približne 4–5 hodín. Pri <strong>peritoneálnej dialýze</strong> prebieha liečba
+jedno sedenie trvá približne 4–5&nbsp;hodín. Pri <strong>peritoneálnej dialýze</strong> prebieha liečba
 doma, buď ručnými výmenami počas dňa, alebo automaticky v noci. Časom sa z toho stane rutina,
 ktorú si zladíte s prácou aj rodinou.</p>
 

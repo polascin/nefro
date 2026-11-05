@@ -52,7 +52,7 @@ $curation = [
     // ── Nefroprotektíva ───────────────────────────────────────────────────────
     'dapagliflozin' => [
         'indications'    => 'Chronická choroba obličiek (spomalenie progresie, aj bez diabetu), srdcové zlyhanie, diabetes 2. typu.',
-        'renal_dosing'   => "Pri CKD a srdcovom zlyhaní možno začať pri eGFR ≥ 25 ml/min/1,73 m² a pokračovať aj pri ďalšom poklese až do dialýzy (podľa indikácie). Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť (sick-day pravidlá).",
+        'renal_dosing'   => "Pri CKD a srdcovom zlyhaní možno začať pri eGFR ≥ 25 ml/min/1,73 m² a pokračovať aj pri ďalšom poklese až do dialýzy (podľa indikácie). Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť (sick-day pravidlá).",
         'nephrotoxicity' => 'Nie je nefrotoxický — naopak nefroprotektívny. Po začatí možný mierny reverzibilný pokles eGFR (hemodynamický „dip“).',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~91 %) a veľký distribučný objem; HD ho neodstráni. Pri dialýze bez renálneho/glykemického prínosu (neindikovaný na zníženie glykémie).',
         'warnings'       => 'Euglykemická diabetická ketoacidóza (vysadiť pri akútnom ochorení a pred operáciou), genitálne mykotické infekcie, volumová deplécia; zriedkavo Fournierova gangréna.',
@@ -60,19 +60,19 @@ $curation = [
     ],
     'empagliflozin' => [
         'indications'    => 'Chronická choroba obličiek, srdcové zlyhanie, diabetes 2. typu.',
-        'renal_dosing'   => "Pri CKD možno začať a pokračovať do eGFR ~ 20 ml/min/1,73 m² (EMPA-KIDNEY). Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť.",
+        'renal_dosing'   => "Pri CKD možno začať a pokračovať do eGFR ~ 20 ml/min/1,73 m² (EMPA-KIDNEY). Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť.",
         'nephrotoxicity' => 'Nie je nefrotoxický (nefroprotektívny); po začatí možný reverzibilný „dip“ eGFR.',
-        'dialyzability'  => 'Minimálne dialyzovateľný — väzba na bielkoviny ~86 %, distribučný objem ~74 l; pri HD bez klinického prínosu.',
+        'dialyzability'  => 'Minimálne dialyzovateľný — väzba na bielkoviny ~86 %, distribučný objem ~74 l; pri HD bez klinického prínosu.',
         'warnings'       => 'Euglykemická ketoacidóza, genitálne infekcie, volumová deplécia.',
         'monitoring'     => 'eGFR a objemový stav pred liečbou a počas nej.',
     ],
     'finerenon' => [
         'indications'    => 'Chronická choroba obličiek pri diabete 2. typu (spomalenie progresie, zníženie KV rizika).',
-        'renal_dosing'   => "Nezačínať pri K⁺ > 5,0 mmol/l. Iniciácia podľa eGFR (10 alebo 20 mg/d), pri eGFR < 25 sa začatie neodporúča; pokračovanie a titrácia podľa kália a eGFR. Vyhnúť sa silným inhibítorom CYP3A4.",
+        'renal_dosing'   => "Nezačínať pri K⁺ > 5,0 mmol/l. Iniciácia podľa eGFR (10 alebo 20 mg/d), pri eGFR < 25 sa začatie neodporúča; pokračovanie a titrácia podľa kália a eGFR. Vyhnúť sa silným inhibítorom CYP3A4.",
         'nephrotoxicity' => 'Nie je nefrotoxický (nefroprotektívny).',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~92 %); HD ho neodstráni.',
         'warnings'       => 'Hyperkaliémia (najmä so súbehom ACEi/ARB, ďalších kálium-šetriacich liekov); kontraindikácia pri Addisonovej chorobe.',
-        'monitoring'     => 'Kálium o ~ 4 týždne po začatí/zmene dávky, potom pravidelne; eGFR.',
+        'monitoring'     => 'Kálium o ~ 4 týždne po začatí/zmene dávky, potom pravidelne; eGFR.',
     ],
     'losartan' => [
         'indications'    => 'Proteinurická/diabetická CKD, hypertenzia, srdcové zlyhanie, nefroprotekcia.',
@@ -80,15 +80,15 @@ $curation = [
         'nephrotoxicity' => 'Hemodynamické zhoršenie funkcie pri hypovolémii, súbehu s NSAID/diuretikom alebo kontrastom.',
         'dialyzability'  => 'Nedialyzovateľný — losartan aj aktívny metabolit E-3174 sú > 98 % viazané na bielkoviny; HD ani PD ich neodstránia.',
         'warnings'       => 'Hyperkaliémia; kontraindikovaný v gravidite; vysadiť pri akútnej hypovolémii/pred kontrastom podľa rizika.',
-        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
+        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
     ],
     'valsartan' => [
         'indications'    => 'Proteinurická/diabetická CKD, hypertenzia, srdcové zlyhanie.',
         'renal_dosing'   => "Začať nižšou dávkou a titrovať. Vzostup kreatinínu do ~ 30 % je akceptovateľný; väčší vzostup/hyperkaliémia → prehodnotiť.",
         'nephrotoxicity' => 'Hemodynamické zhoršenie pri hypovolémii/súbehu s NSAID/kontrastom.',
-        'dialyzability'  => 'Nedialyzovateľný — väzba na bielkoviny ~95 %, malý distribučný objem (~17 l); HD ho neodstráni.',
+        'dialyzability'  => 'Nedialyzovateľný — väzba na bielkoviny ~95 %, malý distribučný objem (~17 l); HD ho neodstráni.',
         'warnings'       => 'Hyperkaliémia; kontraindikovaný v gravidite.',
-        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
+        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
     ],
     'ramipril' => [
         'indications'    => 'Proteinurická/diabetická CKD, hypertenzia, srdcové zlyhanie, nefroprotekcia.',
@@ -96,15 +96,15 @@ $curation = [
         'nephrotoxicity' => 'Hemodynamické zhoršenie pri hypovolémii, NSAID, kontraste; pozor pri obojstrannej stenóze renálnych artérií.',
         'dialyzability'  => 'Čiastočne dialyzovateľný — aktívny ramiprilát je stredne viazaný (~56 %) a renálne eliminovaný; HD znižuje jeho hladiny. Zvážiť dávku po HD.',
         'warnings'       => 'Hyperkaliémia, suchý kašeľ, angioedém; kontraindikovaný v gravidite. Pri dialýze cez high-flux/AN69 membrány riziko anafylaktoidných reakcií.',
-        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
+        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
     ],
     'spironolakton' => [
         'indications'    => 'Rezistentná hypertenzia, srdcové zlyhanie, edémy, primárny hyperaldosteronizmus.',
-        'renal_dosing'   => "Riziko hyperkaliémie rastie s poklesom eGFR. Vyhnúť sa pri eGFR < 30 a pri K⁺ > 5,0 mmol/l; pri eGFR 30–45 opatrne, nízka dávka a častá kontrola kália.",
+        'renal_dosing'   => "Riziko hyperkaliémie rastie s poklesom eGFR. Vyhnúť sa pri eGFR < 30 a pri K⁺ > 5,0 mmol/l; pri eGFR 30–45 opatrne, nízka dávka a častá kontrola kália.",
         'nephrotoxicity' => 'Nie priamo nefrotoxický; aktívne metabolity sa kumulujú pri zlyhaní obličiek.',
         'dialyzability'  => 'Nedialyzovateľný — spironolaktón aj aktívne metabolity (kanrenón) sú > 90 % viazané na bielkoviny; metabolity sa pri zlyhaní obličiek kumulujú.',
         'warnings'       => 'Hyperkaliémia (najmä so súbehom ACEi/ARB), gynekomastia.',
-        'monitoring'     => 'Kálium a kreatinín 3–7 dní po začatí/zmene, potom pravidelne.',
+        'monitoring'     => 'Kálium a kreatinín 3–7 dní po začatí/zmene, potom pravidelne.',
     ],
     'semaglutid' => [
         'indications'    => 'Diabetes 2. typu, obezita; KV/renálne benefity (FLOW pri CKD a DM2).',
@@ -142,7 +142,7 @@ $curation = [
     // ── Úprava dávky podľa obličiek ───────────────────────────────────────────
     'metformin' => [
         'indications'    => 'Diabetes 2. typu (liek prvej voľby).',
-        'renal_dosing'   => "Kontraindikovaný pri eGFR < 30. Pri eGFR 30–44 nezačínať; ak už užíva, prehodnotiť a zvážiť zníženie dávky (napr. max ~ 1000 mg/d) a zvýšenú opatrnosť. Vysadiť pri akútnom ochorení, dehydratácii a pred podaním jódovej kontrastnej látky (sick-day pravidlá).",
+        'renal_dosing'   => "Kontraindikovaný pri eGFR < 30. Pri eGFR 30–44 nezačínať; ak už užíva, prehodnotiť a zvážiť zníženie dávky (napr. max ~ 1000 mg/d) a zvýšenú opatrnosť. Vysadiť pri akútnom ochorení, dehydratácii a pred podaním jódovej kontrastnej látky (sick-day pravidlá).",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický; pri kumulácii riziko laktátovej acidózy.',
         'dialyzability'  => 'Dobre dialyzovateľný — nízka MW (129 Da), prakticky bez väzby na bielkoviny; hemodialýza je liečbou ťažkej laktátovej acidózy/predávkovania (odstraňuje metformín aj laktát).',
         'warnings'       => 'Laktátová acidóza (zriedkavá, ale závažná) — riziko pri zlyhaní obličiek, hypoxii, sepse.',
@@ -150,7 +150,7 @@ $curation = [
     ],
     'alopurinol' => [
         'indications'    => 'Chronická dna, hyperurikémia; prevencia uráthovej nefropatie/nefrolitiázy.',
-        'renal_dosing'   => "Aktívny metabolit oxypurinol sa pri zníženej funkcii obličiek kumuluje. Začať nízkou dávkou (napr. 50–100 mg/d) a pomaly titrovať podľa cieľového urátu; opatrne pri eGFR < 30.",
+        'renal_dosing'   => "Aktívny metabolit oxypurinol sa pri zníženej funkcii obličiek kumuluje. Začať nízkou dávkou (napr. 50–100 mg/d) a pomaly titrovať podľa cieľového urátu; opatrne pri eGFR < 30.",
         'nephrotoxicity' => 'Nie priamo; alopurinolová hypersenzitivita môže zahŕňať intersticiálnu nefritídu.',
         'dialyzability'  => 'Oxypurinol je dialyzovateľný (nízka väzba na bielkoviny, malá molekula) — pri intermitentnej HD dávkovať po procedúre.',
         'warnings'       => 'Závažné kožné reakcie (SJS/TEN, DRESS) — vyššie riziko pri CKD a nosičstve HLA-B*58:01; zvážiť skríning v rizikových populáciách. Interakcia s azatioprínom/merkaptopurínom (inhibícia xantínoxidázy).',
@@ -169,7 +169,7 @@ $curation = [
         'indications'    => 'Závažné gramnegatívne infekcie (zvyčajne kombinovaná liečba).',
         'renal_dosing'   => "Výrazne nefrotoxický — dávkovať podľa funkcie obličiek a hladín; pri zníženom eGFR predĺžiť interval. Preferovať režim raz denne a terapeutické monitorovanie hladín; minimalizovať dĺžku liečby.",
         'nephrotoxicity' => 'Akútna tubulárna nekróza (často neoligurická, zvyčajne reverzibilná); riziko rastie s kumulatívnou dávkou, dĺžkou liečby, hypovolémiou a súbehom ďalších nefrotoxínov.',
-        'dialyzability'  => 'Dialyzovateľný — malá molekula, minimálna väzba na bielkoviny, malý distribučný objem (~0,25 l/kg); HD odstráni ~50 % za procedúru. Dávkovať podľa hladín a doplniť po HD.',
+        'dialyzability'  => 'Dialyzovateľný — malá molekula, minimálna väzba na bielkoviny, malý distribučný objem (~0,25 l/kg); HD odstráni ~50 % za procedúru. Dávkovať podľa hladín a doplniť po HD.',
         'warnings'       => 'Nefro- a ototoxicita (vestibulárna/kochleárna, môže byť ireverzibilná); vyhnúť sa súbehu s inými nefrotoxínmi.',
         'monitoring'     => 'Hladiny (trough/peak), kreatinín/eGFR denne–obdeň, sluch/rovnováha.',
     ],
@@ -294,7 +294,7 @@ $curation = [
         'indications'    => 'Dnavý záchvat a profylaxia, familiárna stredomorská horúčka (FMF), perikarditída.',
         'renal_dosing'   => "Pri zníženej funkcii obličiek znížiť dávku a predĺžiť interval; pri ťažkej CKD/dialýze sa kumuluje — opatrnosť, vyhnúť sa kumulatívnej profylaxii. Nebezpečné interakcie s inhibítormi CYP3A4/P-gp (makrolidy, azoly, cyklosporín, statíny).",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický.',
-        'dialyzability'  => 'Nedialyzovateľný — veľký distribučný objem (~5–8 l/kg) napriek nízkej väzbe na bielkoviny; HD pri toxicite neúčinná.',
+        'dialyzability'  => 'Nedialyzovateľný — veľký distribučný objem (~5–8 l/kg) napriek nízkej väzbe na bielkoviny; HD pri toxicite neúčinná.',
         'warnings'       => 'Úzke terapeutické okno — pri CKD a liekových interakciách riziko ťažkej toxicity (myelosupresia, neuromyopatia, multiorgánové zlyhanie).',
         'monitoring'     => 'Krvný obraz, svalové príznaky (CK), liekové interakcie.',
     ],
@@ -309,9 +309,9 @@ $curation = [
     // ── Nefroprotektíva (3. vlna) ─────────────────────────────────────────────
     'kanagliflozin' => [
         'indications'    => 'Diabetes 2. typu; diabetická choroba obličiek (CREDENCE — spomalenie progresie); zníženie KV rizika.',
-        'renal_dosing'   => "Pri diabetickej CKD možno začať pri eGFR ≥ 30 ml/min/1,73 m² (v CREDENCE 100 mg/d) a pokračovať aj pri ďalšom poklese až do dialýzy. Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť (sick-day pravidlá).",
+        'renal_dosing'   => "Pri diabetickej CKD možno začať pri eGFR ≥ 30 ml/min/1,73 m² (v CREDENCE 100 mg/d) a pokračovať aj pri ďalšom poklese až do dialýzy. Glykemický účinok klesá pri eGFR < 45. Pri akútnom ochorení/dehydratácii prechodne vysadiť (sick-day pravidlá).",
         'nephrotoxicity' => 'Nefroprotektívny; po začatí možný reverzibilný „dip“ eGFR. Vyššie riziko volumovej deplécie pri súbehu s diuretikom.',
-        'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~99 %), veľký distribučný objem (~119 l); pri dialýze bez glykemického/renálneho prínosu.',
+        'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~99 %), veľký distribučný objem (~119 l); pri dialýze bez glykemického/renálneho prínosu.',
         'warnings'       => 'Euglykemická ketoacidóza, genitálne mykotické infekcie, volumová deplécia; zvýšené riziko amputácií dolných končatín a fraktúr (CANVAS); Fournierova gangréna.',
         'monitoring'     => 'eGFR, objemový stav, stav dolných končatín; ketolátky pri podozrení na DKA.',
     ],
@@ -321,15 +321,15 @@ $curation = [
         'nephrotoxicity' => 'Hemodynamické zhoršenie funkcie pri hypovolémii, súbehu s NSAID/diuretikom alebo kontrastom; pozor pri obojstrannej stenóze renálnych artérií.',
         'dialyzability'  => 'Dialyzovateľný — aktívny enaláprilát je stredne viazaný (~50–60 %) a renálne eliminovaný; HD znižuje hladiny → zvážiť dávku po HD. Pri high-flux/AN69 membránach riziko anafylaktoidných reakcií.',
         'warnings'       => 'Hyperkaliémia, suchý kašeľ, angioedém; kontraindikovaný v gravidite.',
-        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
+        'monitoring'     => 'Kreatinín a kálium 1–2 týždne po začatí a po titrácii.',
     ],
     'eplerenon' => [
         'indications'    => 'Srdcové zlyhanie po infarkte myokardu, hypertenzia; selektívnejší MRA ako spironolaktón (menej gynekomastie).',
-        'renal_dosing'   => "Riziko hyperkaliémie rastie s poklesom eGFR. Kontraindikovaný pri eGFR < 30 (pri hypertenznej indikácii < 50) a pri K⁺ > 5,0 mmol/l. Vyhnúť sa silným inhibítorom CYP3A4.",
+        'renal_dosing'   => "Riziko hyperkaliémie rastie s poklesom eGFR. Kontraindikovaný pri eGFR < 30 (pri hypertenznej indikácii < 50) a pri K⁺ > 5,0 mmol/l. Vyhnúť sa silným inhibítorom CYP3A4.",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický.',
         'dialyzability'  => 'Nedialyzovateľný — HD ho neodstraňuje v klinicky významnom rozsahu; pri ťažkej CKD kontraindikovaný pre riziko hyperkaliémie.',
         'warnings'       => 'Hyperkaliémia (najmä so súbehom ACEi/ARB); menej hormonálnych vedľajších účinkov ako spironolaktón.',
-        'monitoring'     => 'Kálium a kreatinín 3–7 dní po začatí/zmene, potom pravidelne.',
+        'monitoring'     => 'Kálium a kreatinín 3–7 dní po začatí/zmene, potom pravidelne.',
     ],
     // ── Diuretiká (3. vlna) ───────────────────────────────────────────────────
     'indapamid' => [
@@ -359,15 +359,15 @@ $curation = [
     // ── Úprava dávky podľa obličiek (3. vlna) ─────────────────────────────────
     'dabigatran' => [
         'indications'    => 'Prevencia NCMP pri nevalvulárnej fibrilácii predsiení, liečba a prevencia venózneho tromboembolizmu.',
-        'renal_dosing'   => "Silne renálne eliminovaný (~80 %) — dávkovať podľa CrCl. Pri CrCl 30–50 zvážiť redukciu (110 mg 2×/d podľa rizika); pri CrCl < 30 kontraindikovaný (EMA). Pred plánovanými výkonmi vysadiť s ohľadom na CrCl.",
+        'renal_dosing'   => "Silne renálne eliminovaný (~80 %) — dávkovať podľa CrCl. Pri CrCl 30–50 zvážiť redukciu (110 mg 2×/d podľa rizika); pri CrCl < 30 kontraindikovaný (EMA). Pred plánovanými výkonmi vysadiť s ohľadom na CrCl.",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický; pri akútnom poklese eGFR riziko akumulácie a krvácania. Opísaná antikoagulanciami asociovaná nefropatia (glomerulárne krvácanie) aj pri DOAC.',
-        'dialyzability'  => 'Dialyzovateľný — nízka väzba na bielkoviny (~35 %), distribučný objem ~60 l; HD odstráni ~50–60 % za 4 h a možno ju použiť pri ťažkom krvácaní/predávkovaní (ak nie je dostupné antidotum idarucizumab).',
+        'dialyzability'  => 'Dialyzovateľný — nízka väzba na bielkoviny (~35 %), distribučný objem ~60 l; HD odstráni ~50–60 % za 4 h a možno ju použiť pri ťažkom krvácaní/predávkovaní (ak nie je dostupné antidotum idarucizumab).',
         'warnings'       => 'Krvácanie (zvýšené pri kumulácii v CKD); špecifické antidotum idarucizumab. Dyspepsia.',
         'monitoring'     => 'Funkcia obličiek (CrCl) minimálne 1×/rok, častejšie pri CKD/akútnom ochorení; známky krvácania.',
     ],
     'apixaban' => [
         'indications'    => 'Prevencia NCMP pri nevalvulárnej fibrilácii predsiení, liečba a prevencia venózneho tromboembolizmu.',
-        'renal_dosing'   => "Menej závislý od obličiek (~27 % renálne) — často preferovaný DOAC pri CKD. Pri fibrilácii predsiení redukcia na 2,5 mg 2×/d pri splnení ≥ 2 z: vek ≥ 80 r., hmotnosť ≤ 60 kg, kreatinín ≥ 133 µmol/l. Pri ťažkej CKD/dialýze obmedzené dáta.",
+        'renal_dosing'   => "Menej závislý od obličiek (~27 % renálne) — často preferovaný DOAC pri CKD. Pri fibrilácii predsiení redukcia na 2,5 mg 2×/d pri splnení ≥ 2 z: vek ≥ 80 r., hmotnosť ≤ 60 kg, kreatinín ≥ 133 µmol/l. Pri ťažkej CKD/dialýze obmedzené dáta.",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický.',
         'dialyzability'  => 'Minimálne dialyzovateľný — vysoká väzba na bielkoviny (~87 %); HD odstráni len ~7 %. Antidotum andexanet alfa. Pri CKD bezpečnejší profil ako dabigatran.',
         'warnings'       => 'Krvácanie; antidotum andexanet alfa.',
@@ -375,9 +375,9 @@ $curation = [
     ],
     'digoxin' => [
         'indications'    => 'Kontrola komorovej frekvencie pri fibrilácii predsiení, srdcové zlyhanie so zníženou ejekčnou frakciou.',
-        'renal_dosing'   => "Renálne eliminovaný a s úzkym terapeutickým oknom — pri zníženej funkcii obličiek znížiť dávku a predĺžiť interval; dávkovať podľa hladín (cieľ často 0,5–0,9 ng/ml pri SZ). Pri ESRD výrazne redukovať.",
+        'renal_dosing'   => "Renálne eliminovaný a s úzkym terapeutickým oknom — pri zníženej funkcii obličiek znížiť dávku a predĺžiť interval; dávkovať podľa hladín (cieľ často 0,5–0,9 ng/ml pri SZ). Pri ESRD výrazne redukovať.",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
-        'dialyzability'  => 'Nedialyzovateľný — obrovský distribučný objem (~5–7 l/kg) napriek nízkej väzbe na bielkoviny (~25 %); HD ani PD ho neodstránia. Pri život ohrozujúcej toxicite digoxín-špecifické Fab protilátky (DigiFab).',
+        'dialyzability'  => 'Nedialyzovateľný — obrovský distribučný objem (~5–7 l/kg) napriek nízkej väzbe na bielkoviny (~25 %); HD ani PD ho neodstránia. Pri život ohrozujúcej toxicite digoxín-špecifické Fab protilátky (DigiFab).',
         'warnings'       => 'Toxicita potencovaná hypokaliémiou, hypomagneziémiou a hyperkalciémiou (časté pri CKD/diuretikách); arytmie, GI a vizuálne príznaky. Interakcie (amiodarón, verapamil).',
         'monitoring'     => 'Hladina digoxínu, kálium, horčík, funkcia obličiek; EKG.',
     ],
@@ -392,7 +392,7 @@ $curation = [
     // ── Nefrotoxické lieky (3. vlna) ──────────────────────────────────────────
     'litium' => [
         'indications'    => 'Bipolárna afektívna porucha (profylaxia a liečba mánie).',
-        'renal_dosing'   => "Úzke terapeutické okno; takmer výhradne renálne eliminované. Dávkovať podľa hladín (cieľ 0,6–0,8 mmol/l); pri zníženej funkcii obličiek a dehydratácii riziko intoxikácie. Vyhnúť sa súbehu s NSAID, ACEi/ARB a tiazidmi (znižujú klírens lítia).",
+        'renal_dosing'   => "Úzke terapeutické okno; takmer výhradne renálne eliminované. Dávkovať podľa hladín (cieľ 0,6–0,8 mmol/l); pri zníženej funkcii obličiek a dehydratácii riziko intoxikácie. Vyhnúť sa súbehu s NSAID, ACEi/ARB a tiazidmi (znižujú klírens lítia).",
         'nephrotoxicity' => 'Nefrogénny diabetes insipidus (polyúria), chronická tubulointersticiálna nefropatia s pomalou progresiou CKD, akútna intoxikácia pri dehydratácii; zriedkavo hyperkalciémia (lítiom indukovaná hyperparatyreóza).',
         'dialyzability'  => 'Vysoko dialyzovateľný — malý ión bez väzby na bielkoviny; hemodialýza je liečbou ťažkej intoxikácie (EXTRIP). Po HD častý rebound z redistribúcie → kontrolovať hladiny a opakovať.',
         'warnings'       => 'Intoxikácia (tremor, ataxia, zmätenosť, kŕče, arytmie) — potencovaná dehydratáciou a liekmi znižujúcimi klírens. Hypotyreóza.',
@@ -402,7 +402,7 @@ $curation = [
         'indications'    => 'Závažné gramnegatívne infekcie (vrátane multirezistentných), niektoré mykobaktériové infekcie.',
         'renal_dosing'   => "Výrazne nefrotoxický — dávkovať podľa funkcie obličiek a hladín; pri zníženom eGFR predĺžiť interval. Preferovať režim raz denne a terapeutické monitorovanie; minimalizovať dĺžku liečby.",
         'nephrotoxicity' => 'Akútna tubulárna nekróza (zvyčajne neoligurická, reverzibilná); riziko rastie s kumulatívnou dávkou, dĺžkou liečby, hypovolémiou a súbehom nefrotoxínov.',
-        'dialyzability'  => 'Dialyzovateľný — nízka väzba na bielkoviny, malý distribučný objem (~0,25 l/kg); HD odstráni ~50 % za procedúru. Dávkovať podľa hladín a doplniť po HD.',
+        'dialyzability'  => 'Dialyzovateľný — nízka väzba na bielkoviny, malý distribučný objem (~0,25 l/kg); HD odstráni ~50 % za procedúru. Dávkovať podľa hladín a doplniť po HD.',
         'warnings'       => 'Nefro- a ototoxicita (môže byť ireverzibilná); vyhnúť sa súbehu s inými nefrotoxínmi.',
         'monitoring'     => 'Hladiny (trough/peak), kreatinín/eGFR denne–obdeň, sluch/rovnováha.',
     ],
@@ -443,7 +443,7 @@ $curation = [
     // ── Viazače draslíka, ESA, železo a CKD-MBD (4. vlna) ──────────────────────
     'patiromer' => [
         'indications'    => 'Chronická hyperkaliémia pri CKD a srdcovom zlyhaní (umožňuje pokračovať v RAAS inhibícii).',
-        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Začať 8,4 g 1×/d, titrovať podľa kália à ~ 1 týždeň. Užívať s odstupom ≥ 3 h od iných perorálnych liekov (viaže ich vstrebávanie). Nevhodný na akútnu/život ohrozujúcu hyperkaliémiu (pomalý nástup).",
+        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Začať 8,4 g 1×/d, titrovať podľa kália à ~ 1 týždeň. Užívať s odstupom ≥ 3 h od iných perorálnych liekov (viaže ich vstrebávanie). Nevhodný na akútnu/život ohrozujúcu hyperkaliémiu (pomalý nástup).",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
         'dialyzability'  => 'Neaplikovateľné — nevstrebáva sa, viaže draslík v lúmene čreva (výmenou za kalcium); v krvi necirkuluje.',
         'warnings'       => 'Hypokaliémia a hypomagneziémia (sledovať horčík), GI ťažkosti (zápcha); môže viazať súbežné lieky — dodržať časový odstup.',
@@ -451,7 +451,7 @@ $curation = [
     ],
     'szc' => [
         'indications'    => 'Chronická hyperkaliémia (vrátane CKD a pri RAAS inhibícii).',
-        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Korekčná fáza 10 g 3×/d do 48 h, potom udržiavacia ~ 5 g/d (titrovať podľa kália). Obsahuje sodík — pozor pri objemovom preťažení a hypertenzii. Odstup od iných perorálnych liekov.",
+        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Korekčná fáza 10 g 3×/d do 48 h, potom udržiavacia ~ 5 g/d (titrovať podľa kália). Obsahuje sodík — pozor pri objemovom preťažení a hypertenzii. Odstup od iných perorálnych liekov.",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
         'dialyzability'  => 'Neaplikovateľné — anorganický katexový sorbent, nevstrebáva sa a pôsobí v čreve.',
         'warnings'       => 'Edémy a hypertenzia (nálož sodíka), hypokaliémia; GI ťažkosti. U dialyzovaných sa dávkuje len v dňoch bez dialýzy (podľa SPC).',
@@ -459,7 +459,7 @@ $curation = [
     ],
     'epoetin' => [
         'indications'    => 'Anémia pri chronickej chorobe obličiek (dialyzovaní aj nedialyzovaní).',
-        'renal_dosing'   => "Dávka podľa hemoglobínu a telesnej hmotnosti (i.v./s.c.), titrovať podľa odpovede; cieľ Hb ~ 100–115 g/l (neprestreľovať > 115–120). Bez úpravy podľa eGFR, ale pred začatím a počas liečby zabezpečiť dostatok železa.",
+        'renal_dosing'   => "Dávka podľa hemoglobínu a telesnej hmotnosti (i.v./s.c.), titrovať podľa odpovede; cieľ Hb ~ 100–115 g/l (neprestreľovať > 115–120). Bez úpravy podľa eGFR, ale pred začatím a počas liečby zabezpečiť dostatok železa.",
         'nephrotoxicity' => 'Nie je nefrotoxický; nadmerná korekcia Hb a hypertenzia zvyšujú KV riziko.',
         'dialyzability'  => 'Nedialyzovateľný — veľký glykoproteín (~30 kDa); podáva sa i.v./s.c., u HD pacientov často počas dialýzy (do návratovej linky).',
         'warnings'       => 'Hypertenzia, trombembolické príhody; zriedkavo čistá aplázia červenej rady (anti-EPO protilátky). Cieľový Hb neprestreľovať (zvýšená mortalita a KV riziko).',
@@ -467,7 +467,7 @@ $curation = [
     ],
     'darbepoetin' => [
         'indications'    => 'Anémia pri chronickej chorobe obličiek; dlhšie dávkovacie intervaly ako epoetín.',
-        'renal_dosing'   => "Dlhší polčas → menej časté dávkovanie (1×/1–2 týždne, i.v./s.c.). Cieľ Hb ako pri epoetíne; titrovať podľa odpovede. Pred začatím doplniť deficit železa.",
+        'renal_dosing'   => "Dlhší polčas → menej časté dávkovanie (1×/1–2 týždne, i.v./s.c.). Cieľ Hb ako pri epoetíne; titrovať podľa odpovede. Pred začatím doplniť deficit železa.",
         'nephrotoxicity' => 'Nie je nefrotoxický; nadmerná korekcia Hb a hypertenzia zvyšujú KV riziko.',
         'dialyzability'  => 'Nedialyzovateľný — veľký glykoproteín (~37 kDa, hyperglykozylovaný); HD ho neodstráni.',
         'warnings'       => 'Hypertenzia, trombembolické príhody, zriedkavo aplázia červenej rady; neprestreľovať cieľový Hb (KV riziko, mortalita).',
@@ -500,7 +500,7 @@ $curation = [
     // ── Renálne dávkovanie a nefrotoxíny (5. vlna) ────────────────────────────
     'enoxaparin' => [
         'indications'    => 'Profylaxia a liečba venózneho tromboembolizmu, akútny koronárny syndróm; antikoagulácia dialyzačného okruhu.',
-        'renal_dosing'   => "Renálne eliminovaný — pri CrCl < 30 ml/min sa kumuluje (riziko krvácania). Liečebná dávka pri CrCl 15–30: redukcia na 1 mg/kg 1×/d (namiesto 2×/d), profylaxia 20 mg 1×/d. Pri ťažkej CKD zvážiť nefrakcionovaný heparín (lepšie riaditeľný) alebo monitorovať anti-Xa.",
+        'renal_dosing'   => "Renálne eliminovaný — pri CrCl < 30 ml/min sa kumuluje (riziko krvácania). Liečebná dávka pri CrCl 15–30: redukcia na 1 mg/kg 1×/d (namiesto 2×/d), profylaxia 20 mg 1×/d. Pri ťažkej CKD zvážiť nefrakcionovaný heparín (lepšie riaditeľný) alebo monitorovať anti-Xa.",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
         'dialyzability'  => 'Slabo dialyzovateľný — pri zlyhaní obličiek sa kumuluje a antikoagulačný účinok pretrváva; HD ho účinne neodstráni. Protamín neutralizuje účinok len čiastočne (~ 60 %).',
         'warnings'       => 'Krvácanie (zvýšené pri kumulácii v CKD), heparínom indukovaná trombocytopénia (HIT), hyperkaliémia (supresia aldosterónu pri dlhšom podaní).',
@@ -532,7 +532,7 @@ $curation = [
     ],
     'nitrofurantoin' => [
         'indications'    => 'Nekomplikované infekcie dolných močových ciest (cystitída), profylaxia rekurentných UTI.',
-        'renal_dosing'   => "Kontraindikovaný pri CrCl < 45 ml/min (podľa niektorých zdrojov < 30) — pri zníženej funkcii sa nedosahuje účinná koncentrácia v moči a rastie systémová toxicita. Vhodný len pri zachovanej funkcii obličiek.",
+        'renal_dosing'   => "Kontraindikovaný pri CrCl < 45 ml/min (podľa niektorých zdrojov < 30) — pri zníženej funkcii sa nedosahuje účinná koncentrácia v moči a rastie systémová toxicita. Vhodný len pri zachovanej funkcii obličiek.",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický, no pri zlyhaní obličiek je neúčinný a toxický (kumulácia).',
         'dialyzability'  => 'Pri ESRD neúčinný a kontraindikovaný — do moču sa nevylúči dostatočne; HD ho síce odstráni, ale liek je u dialyzovaných nevhodný.',
         'warnings'       => 'Pri CKD neúčinný a toxický; akútna a chronická pľúcna toxicita (fibróza), periférna neuropatia (riziko rastie pri CKD), hepatotoxicita, hemolýza pri deficite G6PD.',
@@ -548,9 +548,9 @@ $curation = [
     ],
     'sitagliptin' => [
         'indications'    => 'Diabetes 2. typu (DPP-4 inhibítor).',
-        'renal_dosing'   => "Prevažne renálne eliminovaný — redukovať dávku: 100 mg/d pri eGFR ≥ 45; 50 mg/d pri eGFR 30–45; 25 mg/d pri eGFR < 30 a u dialyzovaných.",
+        'renal_dosing'   => "Prevažne renálne eliminovaný — redukovať dávku: 100 mg/d pri eGFR ≥ 45; 50 mg/d pri eGFR 30–45; 25 mg/d pri eGFR < 30 a u dialyzovaných.",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
-        'dialyzability'  => 'Mierne dialyzovateľný (~ 13 % počas 3–4 h HD) — dávka 25 mg/d, podanie nezávisí od času dialýzy.',
+        'dialyzability'  => 'Mierne dialyzovateľný (~ 13 % počas 3–4 h HD) — dávka 25 mg/d, podanie nezávisí od času dialýzy.',
         'warnings'       => 'Pankreatitída, bolesti kĺbov, zriedkavo bulózny pemfigoid.',
         'monitoring'     => 'Funkcia obličiek (na úpravu dávky), glykémia.',
     ],
@@ -564,7 +564,7 @@ $curation = [
     ],
     'rivaroxaban' => [
         'indications'    => 'Prevencia NCMP pri nevalvulárnej fibrilácii predsiení, liečba a prevencia venózneho tromboembolizmu.',
-        'renal_dosing'   => "Čiastočne renálne eliminovaný (~ 1/3) — pri fibrilácii predsiení a CrCl 15–50 redukcia na 15 mg/d; pri CrCl < 15 sa neodporúča. Pri liečbe VTE opatrnosť pri CrCl < 30. Tablety 15/20 mg užívať s jedlom.",
+        'renal_dosing'   => "Čiastočne renálne eliminovaný (~ 1/3) — pri fibrilácii predsiení a CrCl 15–50 redukcia na 15 mg/d; pri CrCl < 15 sa neodporúča. Pri liečbe VTE opatrnosť pri CrCl < 30. Tablety 15/20 mg užívať s jedlom.",
         'nephrotoxicity' => 'Nie priamo nefrotoxický; opísaná antikoagulanciami asociovaná nefropatia (glomerulárne krvácanie).',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 92–95 %); HD ho neodstráni. Antidotum andexanet alfa (alt. PCC).',
         'warnings'       => 'Krvácanie (zvýšené pri CKD); antidotum andexanet alfa.',
@@ -572,7 +572,7 @@ $curation = [
     ],
     'rosuvastatin' => [
         'indications'    => 'Dyslipidémia, kardiovaskulárna prevencia (vrátane pacientov s CKD).',
-        'renal_dosing'   => "Pri ťažkej CKD (eGFR < 30) začať 5 mg a NEPREKROČIŤ 10 mg/d (zvýšená expozícia, riziko myopatie). Pri miernej–stredne ťažkej CKD bez špecifickej úpravy; pri dialýze opatrne.",
+        'renal_dosing'   => "Pri ťažkej CKD (eGFR < 30) začať 5 mg a NEPREKROČIŤ 10 mg/d (zvýšená expozícia, riziko myopatie). Pri miernej–stredne ťažkej CKD bez špecifickej úpravy; pri dialýze opatrne.",
         'nephrotoxicity' => 'Nie priamo nefrotoxický; dávkovo závislá (tubulárna, zvyčajne benígna) proteinúria a zriedkavo myoglobinúrické AKI pri rabdomyolýze.',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 90 %); HD ho neodstráni.',
         'warnings'       => 'Myopatia/rabdomyolýza (riziko rastie pri CKD, vyšších dávkach a interakciách — napr. cyklosporín, gemfibrozil), hepatopatia; pri CKD preferovať nižšiu dávku.',
@@ -597,7 +597,7 @@ $curation = [
     ],
     'rituximab' => [
         'indications'    => 'Membranózna nefropatia, ANCA-asociovaná vaskulitída, refraktérna lupusová nefritída, vybrané MCD/FSGS; desenzibilizácia a protilátkami sprostredkovaná rejekcia pri transplantácii.',
-        'renal_dosing'   => "Bez úpravy podľa eGFR (eliminácia nezávisí od obličiek). Dávkovanie podľa protokolu (napr. 375 mg/m² týždenne alebo 1 g × 2).",
+        'renal_dosing'   => "Bez úpravy podľa eGFR (eliminácia nezávisí od obličiek). Dávkovanie podľa protokolu (napr. 375 mg/m² týždenne alebo 1 g × 2).",
         'nephrotoxicity' => 'Nie je nefrotoxický.',
         'dialyzability'  => 'Nedialyzovateľný — veľká monoklonálna protilátka (~ 145 kDa); HD ju neodstráni.',
         'warnings'       => 'Infúzne reakcie, reaktivácia hepatitídy B (skríning HBV pred liečbou!), neskoré neutropénie, infekcie/PML (zriedkavo), hypogamaglobulinémia pri opakovaní.',
@@ -617,14 +617,14 @@ $curation = [
         'nephrotoxicity' => 'Nie je nefrotoxický; nadmerná akvaréza môže viesť k hypovolémii a prerenálnemu AKI; pri rýchlej korekcii hyponatriémie riziko ODS.',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 99 %); u dialyzovaných stráca zmysel (akvaretický účinok vyžaduje reziduálnu diurézu).',
         'warnings'       => 'Hepatotoxicita (idiosynkratická — POVINNÉ monitorovanie pečeňových testov!), smäd a polyúria, dehydratácia/hypernatriémia, rýchla korekcia hyponatriémie (ODS).',
-        'monitoring'     => 'Pečeňové testy (ALT/AST/bilirubín) mesačne prvých 18 mesiacov, potom pravidelne; nátrium, objemový stav, funkcia obličiek.',
+        'monitoring'     => 'Pečeňové testy (ALT/AST/bilirubín) mesačne prvých 18 mesiacov, potom pravidelne; nátrium, objemový stav, funkcia obličiek.',
     ],
     'sakubitril-valsartan' => [
         'indications'    => 'Srdcové zlyhanie so zníženou ejekčnou frakciou (HFrEF); kardio-renálny syndróm.',
-        'renal_dosing'   => "Pri CKD opatrná titrácia; pri eGFR < 30 začať nižšou dávkou. Vzostup kreatinínu a hyperkaliémia podobne ako pri RAAS blokáde. NEKOMBINOVAŤ s ACEi (odstup ≥ 36 h — riziko angioedému).",
+        'renal_dosing'   => "Pri CKD opatrná titrácia; pri eGFR < 30 začať nižšou dávkou. Vzostup kreatinínu a hyperkaliémia podobne ako pri RAAS blokáde. NEKOMBINOVAŤ s ACEi (odstup ≥ 36 h — riziko angioedému).",
         'nephrotoxicity' => 'Hemodynamické zhoršenie pri hypovolémii (ako ARB); celkovo skôr kardio-renálne protektívny.',
         'dialyzability'  => 'Nedialyzovateľný — obe zložky vysoko viazané na bielkoviny; HD ich neodstráni.',
-        'warnings'       => 'Hypotenzia, hyperkaliémia, angioedém (kontraindikovaný so súbehom/odstupom < 36 h od ACEi a pri anamnéze angioedému), zhoršenie funkcie obličiek; kontraindikovaný v gravidite.',
+        'warnings'       => 'Hypotenzia, hyperkaliémia, angioedém (kontraindikovaný so súbehom/odstupom < 36 h od ACEi a pri anamnéze angioedému), zhoršenie funkcie obličiek; kontraindikovaný v gravidite.',
         'monitoring'     => 'Kreatinín, kálium a tlak po začatí a titrácii.',
     ],
     'febuxostat' => [
@@ -637,7 +637,7 @@ $curation = [
     ],
     'bumetanid' => [
         'indications'    => 'Edémy a objemové preťaženie pri CKD/srdcovom/hepatálnom zlyhaní; alternatíva furosemidu so stálejšou biodostupnosťou.',
-        'renal_dosing'   => "Pri CKD často potrebné vyššie dávky (znížená tubulárna sekrécia); ~ 1 mg bumetanidu ≈ 40 mg furosemidu. Lepšia a predvídateľnejšia perorálna biodostupnosť ako furosemid. Neúčinný pri anúrii.",
+        'renal_dosing'   => "Pri CKD často potrebné vyššie dávky (znížená tubulárna sekrécia); ~ 1 mg bumetanidu ≈ 40 mg furosemidu. Lepšia a predvídateľnejšia perorálna biodostupnosť ako furosemid. Neúčinný pri anúrii.",
         'nephrotoxicity' => 'Nadmerná diuréza → prerenálne AKI; ototoxicita (nižšia ako furosemid).',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 95 %); HD ho neodstráni.',
         'warnings'       => 'Hypokaliémia, hyponatriémia, hypomagneziémia, hypovolémia, hyperurikémia; svalové kŕče.',
@@ -661,7 +661,7 @@ $curation = [
     ],
     // ── Antimikrobiká, acidobáza, diuretická rezistencia, analgézia (7. vlna) ──
     'natriumbikarbonat' => [
-        'indications'    => 'Metabolická acidóza pri CKD (KDIGO: udržať sérový bikarbonát ≥ 22 mmol/l — spomalenie progresie), alkalizácia moču, ťažká akútna acidóza.',
+        'indications'    => 'Metabolická acidóza pri CKD (KDIGO: udržať sérový bikarbonát ≥ 22 mmol/l — spomalenie progresie), alkalizácia moču, ťažká akútna acidóza.',
         'renal_dosing'   => "Dávka podľa sérového bikarbonátu a klinického stavu (perorálne pri chronickej CKD acidóze, i.v. pri ťažkej akútnej). Sledovať nálož sodíka (objemové preťaženie, hypertenzia).",
         'nephrotoxicity' => 'Nie je nefrotoxický; korekcia acidózy môže spomaliť progresiu CKD.',
         'dialyzability'  => 'Neaplikovateľné v zmysle odstránenia — bikarbonát je fyziologický pufor; pri hemodialýze sa acidobáza upravuje bikarbonátovým dialyzátom.',
@@ -678,7 +678,7 @@ $curation = [
     ],
     'metolazon' => [
         'indications'    => 'Diuretická rezistencia — prídavok k slučkovému diuretiku (sekvenčná nefrónová blokáda) pri refraktérnych edémoch a CKD.',
-        'renal_dosing'   => "Tiazidu podobné, ale účinné aj pri nízkom eGFR (na rozdiel od klasických tiazidov) — preto obľúbené pri pokročilej CKD v kombinácii so slučkovým diuretikom. Podať ~ 30 min pred slučkovým diuretikom; riziko prudkej diurézy a elektrolytových porúch.",
+        'renal_dosing'   => "Tiazidu podobné, ale účinné aj pri nízkom eGFR (na rozdiel od klasických tiazidov) — preto obľúbené pri pokročilej CKD v kombinácii so slučkovým diuretikom. Podať ~ 30 min pred slučkovým diuretikom; riziko prudkej diurézy a elektrolytových porúch.",
         'nephrotoxicity' => 'Pri agresívnej kombinovanej diuréze riziko hypovolémie a prerenálneho AKI.',
         'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny; HD ho neodstráni.',
         'warnings'       => 'Ťažká hypokaliémia, hyponatriémia a hypovolémia pri kombinácii so slučkovým diuretikom — nutná tesná kontrola; hyperurikémia.',
@@ -751,7 +751,7 @@ $curation = [
     // ── DOAC, antivirotiká/antimykotiká, glomerulopatie, indukcia (8. vlna) ────
     'edoxaban' => [
         'indications'    => 'Prevencia NCMP pri nevalvulárnej fibrilácii predsiení, liečba a prevencia venózneho tromboembolizmu.',
-        'renal_dosing'   => "Čiastočne renálne eliminovaný (~ 50 %) — pri CrCl 15–50 redukcia na 30 mg/d; pri CrCl < 15 sa neodporúča. POZOR: pri vysokom CrCl (> 95 ml/min) je pri fibrilácii predsiení znížená účinnosť (nepoužívať).",
+        'renal_dosing'   => "Čiastočne renálne eliminovaný (~ 50 %) — pri CrCl 15–50 redukcia na 30 mg/d; pri CrCl < 15 sa neodporúča. POZOR: pri vysokom CrCl (> 95 ml/min) je pri fibrilácii predsiení znížená účinnosť (nepoužívať).",
         'nephrotoxicity' => 'Nie priamo nefrotoxický; opísaná antikoagulanciami asociovaná nefropatia.',
         'dialyzability'  => 'Minimálne dialyzovateľný — stredná väzba na bielkoviny (~ 55 %); HD ho významne neodstráni. Antidotum andexanet alfa (alt. PCC; idarucizumab NEúčinkuje na anti-Xa).',
         'warnings'       => 'Krvácanie; znížená účinnosť pri CrCl > 95 (pri FP nepoužívať); antidotum andexanet alfa.',
@@ -807,7 +807,7 @@ $curation = [
     ],
     'metylprednizolon' => [
         'indications'    => 'Vysokodávková i.v. pulzná liečba — akútna rejekcia štepu, ťažké glomerulonefritídy a vaskulitídy (indukcia remisie).',
-        'renal_dosing'   => "Bez úpravy podľa eGFR. Pulzná liečba (napr. 250–1000 mg/d i.v. počas 3 dní) podľa indikácie, potom prechod na perorálny kortikosteroid.",
+        'renal_dosing'   => "Bez úpravy podľa eGFR. Pulzná liečba (napr. 250–1000 mg/d i.v. počas 3 dní) podľa indikácie, potom prechod na perorálny kortikosteroid.",
         'nephrotoxicity' => 'Nie je priamo nefrotoxický.',
         'dialyzability'  => 'Čiastočne dialyzovateľný (stredná väzba na bielkoviny), no pulzné dávkovanie netreba upravovať pri HD.',
         'warnings'       => 'Hyperglykémia, hypertenzia, retencia tekutín, infekcie, psychické zmeny; pri rýchlom podaní vysokých dávok arytmie; dlhodobé kortikosteroidové komplikácie.',
@@ -818,7 +818,7 @@ $curation = [
         'renal_dosing'   => "Bez úpravy podľa eGFR (i.v., dávka podľa hmotnosti a protokolu). Pri aHUS rýchlo blokuje terminálnu komplementovú dráhu (C5).",
         'nephrotoxicity' => 'Nie je nefrotoxický — terapeutický pri komplementom sprostredkovanej TMA.',
         'dialyzability'  => 'Nedialyzovateľný — veľká monoklonálna protilátka; HD ju neodstráni. Pozn.: plazmaferéza eculizumab odstraňuje (zvážiť redávkovanie po výmene plazmy).',
-        'warnings'       => 'Riziko meningokokovej sepsy — POVINNÁ vakcinácia proti meningokokom ≥ 2 týždne pred liečbou (± antibiotická profylaxia); aj iné opuzdrené baktérie.',
+        'warnings'       => 'Riziko meningokokovej sepsy — POVINNÁ vakcinácia proti meningokokom ≥ 2 týždne pred liečbou (± antibiotická profylaxia); aj iné opuzdrené baktérie.',
         'monitoring'     => 'Hemolýza (LDH), funkcia obličiek, trombocyty; sledovanie infekcií a očkovacieho statusu.',
     ],
     'sparsentan' => [

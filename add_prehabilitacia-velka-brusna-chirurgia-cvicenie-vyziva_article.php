@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Odborny clanok: prehabilitacia pred velkou brusnou chirurgiou - cvicenie,
- * vyziva, dokazy a nefrologicke suvislosti.
+ * Odborný článok: prehabilitacia pred velkou brusnou chirurgiou - cvičenie,
+ * výživa, dôkazy a nefrologicke suvislosti.
  *
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Medzinárodná randomizovaná štúdia PREHAB (Charlotte Johanna Laura Molenaar a spol., <em>JAMA Surgery</em> 2023) zaradila dospelých s nemetastázujúcim kolorektálnym karcinómom vo fakultných nemocniciach s už zavedeným programom ERAS. Štvortýždňový dohliadaný multimodálny program zahŕňal vysokointenzívne cvičenie trikrát týždenne, nutričnú intervenciu, psychologickú podporu a v indikovaných prípadoch odvykanie od fajčenia. Obe ramená dostali štandardnú perioperačnú starostlivosť.</p>
 
-<p>V populácii podľa pôvodného zámeru liečby bolo <strong>251 účastníkov</strong> (medián veku 69 rokov, medzikvartilové rozpätie 60 – 76; 138 mužov, teda 55 %). U 206 (82 %) bol nádor lokalizovaný v hrubom čreve a 234 (93 %) podstúpilo laparoskopický alebo roboticky asistovaný výkon.</p>
+<p>V populácii podľa pôvodného zámeru liečby bolo <strong>251 účastníkov</strong> (medián veku 69&nbsp;rokov, medzikvartilové rozpätie 60 – 76; 138 mužov, teda 55 %). U 206 (82 %) bol nádor lokalizovaný v hrubom čreve a 234 (93 %) podstúpilo laparoskopický alebo roboticky asistovaný výkon.</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky randomizovanej štúdie PREHAB" tabindex="0">
 <table>
@@ -57,7 +57,7 @@ $articles[] = [
 <tbody>
 <tr><th scope="row">Závažné komplikácie (CCI &gt; 20)</th><td>21/123 (17,1 %)</td><td>38/128 (29,7 %)</td><td>OR 0,47 (95 % IS 0,26 – 0,87); p = 0,02</td></tr>
 <tr><th scope="row">Medicínske komplikácie</th><td>19/123 (15,4 %)</td><td>35/128 (27,3 %)</td><td>OR 0,48 (95 % IS 0,26 – 0,89); p = 0,02</td></tr>
-<tr><th scope="row">6-minútová chôdza 4 týždne po operácii</th><td colspan="2">rozdiel oproti východiskovému stavu</td><td>+15,6 m (95 % IS −1,4 až 32,6); <strong>p = 0,07</strong></td></tr>
+<tr><th scope="row">6-minútová chôdza 4&nbsp;týždne po operácii</th><td colspan="2">rozdiel oproti východiskovému stavu</td><td>+15,6&nbsp;m (95 % IS −1,4 až 32,6); <strong>p = 0,07</strong></td></tr>
 </tbody>
 </table>
 </div>
@@ -68,7 +68,7 @@ $articles[] = [
 
 <h2>Sieťová metaanalýza: ťažisko nesie cvičenie a výživa</h2>
 
-<p>Najrozsiahlejší dôkazový prehľad v tejto oblasti pochádza od Daniela I. McIsaaca a spol. (<em>BMJ</em> 2025): systematický prehľad so sieťovou a komponentovou sieťovou metaanalýzou, <strong>186 randomizovaných štúdií a 15 684 účastníkov</strong>.</p>
+<p>Najrozsiahlejší dôkazový prehľad v tejto oblasti pochádza od Daniela I. McIsaaca a spol. (<em>BMJ</em> 2025): systematický prehľad so sieťovou a komponentovou sieťovou metaanalýzou, <strong>186 randomizovaných štúdií a 15&nbsp;684 účastníkov</strong>.</p>
 
 <p>Pri znížení komplikácií oproti bežnej starostlivosti vyšli najlepšie:</p>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>Toto poradie je dôvodom na opatrnosť pri rozšírenom tvrdení, že multimodálny program je účinnejší než jednotlivé zložky. V tejto analýze mal najsilnejší bodový odhad pre komplikácie práve <strong>samotný tréning</strong>, nie kombinácia. Komponentová metaanalýza to potvrdzuje z druhej strany: <em>cvičenie a výživa</em> boli jednotlivé zložky s najvyššou pravdepodobnosťou zlepšenia všetkých kritických ukazovateľov.</p>
 
-<p>Pri dĺžke hospitalizácie skrátila pobyt kombinácia cvičenia a psychosociálnej zložky o 2,44 dňa (95 % IS −3,85 až −1,04), kombinácia cvičenia a výživy o 1,22 dňa (95 % IS −2,54 až 0,10), samotné cvičenie o 0,93 dňa (95 % IS −1,27 až −0,58) a samotná nutričná intervencia o 0,99 dňa (95 % IS −1,49 až −0,48). Kvalitu života súvisiacu so zdravím a fyzické zotavenie najviac zlepšila kombinácia cvičenia, výživy a psychosociálnej zložky: rozdiel 3,48 bodu na fyzickej zložke dotazníka SF-36 (95 % IS 0,82 – 6,14) a 43,43 m v teste šesťminútovej chôdze (95 % IS 5,96 – 80,91).</p>
+<p>Pri dĺžke hospitalizácie skrátila pobyt kombinácia cvičenia a psychosociálnej zložky o 2,44 dňa (95 % IS −3,85 až −1,04), kombinácia cvičenia a výživy o 1,22 dňa (95 % IS −2,54 až 0,10), samotné cvičenie o 0,93 dňa (95 % IS −1,27 až −0,58) a samotná nutričná intervencia o 0,99 dňa (95 % IS −1,49 až −0,48). Kvalitu života súvisiacu so zdravím a fyzické zotavenie najviac zlepšila kombinácia cvičenia, výživy a psychosociálnej zložky: rozdiel 3,48 bodu na fyzickej zložke dotazníka SF-36 (95 % IS 0,82 – 6,14) a 43,43&nbsp;m v teste šesťminútovej chôdze (95 % IS 5,96 – 80,91).</p>
 
 <p>Istota dôkazov je kľúčový údaj, ktorý sa v prevzatých zhrnutiach spravidla stráca. Pre takmer všetky uvedené porovnania bola podľa prístupu CINeMA hodnotená ako <strong>nízka až veľmi nízka</strong> pre riziko systematickej chyby na úrovni jednotlivých štúdií a pre nepresnosť. Jedinou výnimkou s miernou istotou bol odhad skrátenia hospitalizácie pri kombinácii cvičenia a výživy. Dôležité však je, že výsledky pre cvičebnú a nutričnú prehabilitáciu zostali robustné aj po vylúčení štúdií s vysokým rizikom systematickej chyby.</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Keďže randomizované štúdie v tejto oblasti bývajú malé a selektívne, osobitnú hodnotu má kohortová štúdia Charissy R. Sabajo a spol. (<em>JAMA Surgery</em> 2026) z <strong>18 holandských nemocníc</strong>, ktoré v rokoch 2020 – 2023 zaviedli jednotný multimodálny program u neselektovaných pacientov pred resekciou kolorektálneho karcinómu. Porovnanie s historickými kontrolami z tých istých centier prebehlo s použitím skóre náchylnosti (vek, pohlavie, index telesnej hmotnosti, klasifikácia ASA, typ výkonu a operačný prístup).</p>
 
-<p>Zahrnutých bolo <strong>2 384 pacientov</strong> (priemerný vek 70 rokov, smerodajná odchýlka 11; 1 254 mužov, teda 53 %), po 1 192 v každej skupine.</p>
+<p>Zahrnutých bolo <strong>2&nbsp;384 pacientov</strong> (priemerný vek 70&nbsp;rokov, smerodajná odchýlka 11; 1&nbsp;254 mužov, teda 53 %), po 1&nbsp;192 v každej skupine.</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky holandskej celonárodnej implementácie multimodálnej prehabilitácie" tabindex="0">
 <table>
@@ -96,10 +96,10 @@ $articles[] = [
 <tr><th scope="col">Ukazovateľ</th><th scope="col">Prehabilitácia</th><th scope="col">Historická kontrola</th><th scope="col">Efekt</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">Celkové komplikácie</th><td>356/1 181 (30,1 %)</td><td>446/1 181 (37,8 %)</td><td>OR 0,71 (95 % IS 0,60 – 0,84)</td></tr>
-<tr><th scope="row">Medicínske komplikácie</th><td>182/1 181 (15,4 %)</td><td>290/1 181 (24,6 %)</td><td>OR 0,56 (95 % IS 0,46 – 0,69)</td></tr>
-<tr><th scope="row">Chirurgické komplikácie</th><td>253/1 181 (21,4 %)</td><td>294/1 181 (24,9 %)</td><td>OR 0,82 (95 % IS 0,68 – 1,00)</td></tr>
-<tr><th scope="row">Dĺžka hospitalizácie (medián)</th><td>4 dni (3 – 6)</td><td>5 dní (4 – 8)</td><td>p &lt; 0,001</td></tr>
+<tr><th scope="row">Celkové komplikácie</th><td>356/1&nbsp;181 (30,1 %)</td><td>446/1&nbsp;181 (37,8 %)</td><td>OR 0,71 (95 % IS 0,60 – 0,84)</td></tr>
+<tr><th scope="row">Medicínske komplikácie</th><td>182/1&nbsp;181 (15,4 %)</td><td>290/1&nbsp;181 (24,6 %)</td><td>OR 0,56 (95 % IS 0,46 – 0,69)</td></tr>
+<tr><th scope="row">Chirurgické komplikácie</th><td>253/1&nbsp;181 (21,4 %)</td><td>294/1&nbsp;181 (24,9 %)</td><td>OR 0,82 (95 % IS 0,68 – 1,00)</td></tr>
+<tr><th scope="row">Dĺžka hospitalizácie (medián)</th><td>4&nbsp;dni (3 – 6)</td><td>5&nbsp;dní (4 – 8)</td><td>p &lt; 0,001</td></tr>
 </tbody>
 </table>
 </div>
@@ -120,13 +120,13 @@ $articles[] = [
 
 <h3>Perioperačné poškodenie obličiek nie je prechodná epizóda</h3>
 
-<p>Retrospektívna kohorta 3 751 pacientov po veľkej brušnej operácii (Toshiyuki Mizota a spol., <em>Journal of Critical Care</em>) ukázala, že <strong>84 % prípadov pooperačného akútneho poškodenia obličiek bolo prechodných</strong>, teda kreatinín sa vrátil do pásma bez poškodenia do siedmich dní. Napriek tomu mali aj títo pacienti oproti pacientom bez poškodenia obličiek vyššiu jednoročnú úmrtnosť (upravený pomer rizík 2,01; 95 % IS 1,34 – 2,93; p = 0,001) a vyššie riziko progresie chronickej choroby obličiek v priebehu roka (upravený pomer šancí 3,87; 95 % IS 2,12 – 7,08; p &lt; 0,001). Pri pretrvávajúcom poškodení boli hodnoty podstatne vyššie: pomer rizík 6,20 (95 % IS 3,00 – 11,43) a pomer šancí 23,70 (95 % IS 9,64 – 58,22).</p>
+<p>Retrospektívna kohorta 3&nbsp;751 pacientov po veľkej brušnej operácii (Toshiyuki Mizota a spol., <em>Journal of Critical Care</em>) ukázala, že <strong>84 % prípadov pooperačného akútneho poškodenia obličiek bolo prechodných</strong>, teda kreatinín sa vrátil do pásma bez poškodenia do siedmich dní. Napriek tomu mali aj títo pacienti oproti pacientom bez poškodenia obličiek vyššiu jednoročnú úmrtnosť (upravený pomer rizík 2,01; 95 % IS 1,34 – 2,93; p = 0,001) a vyššie riziko progresie chronickej choroby obličiek v priebehu roka (upravený pomer šancí 3,87; 95 % IS 2,12 – 7,08; p &lt; 0,001). Pri pretrvávajúcom poškodení boli hodnoty podstatne vyššie: pomer rizík 6,20 (95 % IS 3,00 – 11,43) a pomer šancí 23,70 (95 % IS 9,64 – 58,22).</p>
 
 <p>Praktický dôsledok: „kreatinín sa upravil“ nie je pri predoperačnej a pooperačnej rozvahe neutrálny nález a pacient po epizóde perioperačného poškodenia obličiek patrí do nefrologického sledovania, nie len do chirurgickej ambulantnej kontroly.</p>
 
 <h3>Príprava kandidáta na transplantáciu obličky</h3>
 
-<p>Prehľad Danielle L. Kirkman (<em>Current Opinion in Organ Transplantation</em> 2025) popisuje situáciu, ktorá sa nefrológa týka priamo. Pacienti s fenotypom telesnej krehkosti majú horšie výsledky transplantácie obličky, a preto bývajú menej často zaradení na čakaciu listinu. Keďže krehkosť je častejšia u starších ako 65 rokov s pokročilou a terminálnou chorobou obličiek, čiastočne tak prispieva k nerovnému prístupu k transplantácii.</p>
+<p>Prehľad Danielle L. Kirkman (<em>Current Opinion in Organ Transplantation</em> 2025) popisuje situáciu, ktorá sa nefrológa týka priamo. Pacienti s fenotypom telesnej krehkosti majú horšie výsledky transplantácie obličky, a preto bývajú menej často zaradení na čakaciu listinu. Keďže krehkosť je častejšia u starších ako 65&nbsp;rokov s pokročilou a terminálnou chorobou obličiek, čiastočne tak prispieva k nerovnému prístupu k transplantácii.</p>
 
 <p>Doterajšie malé štúdie prehabilitácie u kandidátov na transplantáciu obličky preukázali uskutočniteľnosť a bezpečnosť a účinok na funkčné náhradné ukazovatele krehkosti. Jedna malá pilotná práca uvádza <strong>50 % skrátenie pooperačnej hospitalizácie</strong> – údaj, ktorý je povzbudivý, ale pochádza z pilotného súboru a sám osebe nie je podkladom pre odporúčanie. Autorka zdôrazňuje, že cvičebná intervencia má byť podporená nutričnou intervenciou zameranou na zvýšenie energetického príjmu a že kľúčom k prijatiu programu je koučing zmeny správania a individuálne zvážená psychologická podpora. Americká aj Európska transplantologická spoločnosť sa zhodujú, že prehabilitácia je hodnotná perioperačná intervencia; na odporúčania založené na dôkazoch sú však potrebné robustné multicentrické randomizované štúdie.</p>
 
@@ -138,7 +138,7 @@ $articles[] = [
   <li>včas posúdiť renálne riziko vrátane trendu kreatinínu a albuminúrie, nie jedinej hodnoty,</li>
   <li>cielene zvážiť lieky ovplyvňujúce renálnu perfúziu a ich perioperačné vysadenie alebo ponechanie,</li>
   <li>optimalizovať objemový stav podľa perioperačného protokolu, bez automatického nadmerného tekutinového zaťaženia,</li>
-  <li>nutričné ciele vrátane príjmu bielkovín zosúladiť so štádiom CKD; odporúčanie KDIGO 2024 (3.3.1.1, stupeň 2C) uvádza príjem bielkovín 0,8 g/kg telesnej hmotnosti denne u dospelých s CKD G3 – G5, zatiaľ čo predoperačná nutričná príprava smeruje k vyššiemu energetickému a bielkovinovému príjmu – tento rozpor treba vyriešiť individuálne a s nefrológom, nie mlčky,</li>
+  <li>nutričné ciele vrátane príjmu bielkovín zosúladiť so štádiom CKD; odporúčanie KDIGO 2024 (3.3.1.1, stupeň 2C) uvádza príjem bielkovín 0,8&nbsp;g/kg telesnej hmotnosti denne u dospelých s CKD G3 – G5, zatiaľ čo predoperačná nutričná príprava smeruje k vyššiemu energetickému a bielkovinovému príjmu – tento rozpor treba vyriešiť individuálne a s nefrológom, nie mlčky,</li>
   <li>pri krehkom pacientovi nespájať nutričnú a cvičebnú zložku automaticky, ale overiť, že zvýšený príjem bielkovín je pri jeho renálnej funkcii a acidobázickom stave únosný.</li>
 </ul>
 

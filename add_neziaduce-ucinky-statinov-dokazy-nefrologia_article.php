@@ -1,8 +1,8 @@
 <?php
 /**
  * add_neziaduce-ucinky-statinov-dokazy-nefrologia_article.php
- * Odborny clanok o neziaducich ucinkoch statinov a ich interpretacii
- * v nefrologickej praxi, spracovany z clanku Medscape a primarnych studii.
+ * Odborný článok o neziaducich ucinkoch statinov a ich interpretacii
+ * v nefrologickej praxi, spracovany z článku Medscape a primarnych štúdií.
  */
 
 // Ochrana – len admin alebo CLI
@@ -37,9 +37,9 @@ $articles[] = [
 
 <p>Dvojito zaslepené randomizované štúdie porovnávajú statín s placebom a obmedzujú vplyv očakávaní pacienta aj hodnotiteľa. Sú preto vhodnejšie na posudzovanie častých nešpecifických ťažkostí než otvorené pozorovanie. Ani veľké štúdie však nemusia spoľahlivo zachytiť veľmi zriedkavú toxicitu, dlhodobé následky alebo riziko v slabo zastúpených skupinách.</p>
 
-<h2>Metaanalýza 154 664 účastníkov: čo sa skutočne zvýšilo</h2>
+<h2>Metaanalýza 154&nbsp;664 účastníkov: čo sa skutočne zvýšilo</h2>
 
-<p>Metaanalýza Cholesterol Treatment Trialists’ Collaboration z roku 2026 analyzovala individuálne údaje z 19 dvojito zaslepených štúdií statínu oproti placebu. Zahŕňali 123 940 účastníkov s mediánom sledovania 4,5 roka. Ďalšie štyri štúdie s 30 724 účastníkmi porovnávali intenzívnejší a menej intenzívny režim. Autori vyhľadali 66 kategórií nežiaducich udalostí uvedených v súhrnoch charakteristických vlastností atorvastatínu, fluvastatínu, pravastatínu, rosuvastatínu a simvastatínu. Výsledky korigovali na viacnásobné testovanie pomocou kontroly miery falošných objavov na úrovni 5 %. [2]</p>
+<p>Metaanalýza Cholesterol Treatment Trialists’ Collaboration z roku 2026 analyzovala individuálne údaje z 19 dvojito zaslepených štúdií statínu oproti placebu. Zahŕňali 123&nbsp;940 účastníkov s mediánom sledovania 4,5 roka. Ďalšie štyri štúdie s 30&nbsp;724 účastníkmi porovnávali intenzívnejší a menej intenzívny režim. Autori vyhľadali 66 kategórií nežiaducich udalostí uvedených v súhrnoch charakteristických vlastností atorvastatínu, fluvastatínu, pravastatínu, rosuvastatínu a simvastatínu. Výsledky korigovali na viacnásobné testovanie pomocou kontroly miery falošných objavov na úrovni 5 %. [2]</p>
 
 <p>Okrem už skôr analyzovaných svalových a glykemických účinkov zostali po tejto korekcii štatisticky významné štyri kategórie: zvýšenie aminotransferáz, iné odchýlky pečeňových testov, zmeny zloženia moču a edémy. Pri ďalších 62 kategóriách vrátane kognitívnych porúch, depresie, porúch spánku, periférnej neuropatie a akútneho poškodenia obličiek sa významný nadbytok nepotvrdil. [2]</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <p>Samostatná metaanalýza individuálnych údajov z 19 dvojito zaslepených štúdií zaznamenala svalovú bolesť alebo slabosť u 27,1 % účastníkov pridelených k statínu a u 26,6 % účastníkov pridelených k placebu počas váženého priemerného mediánu sledovania 4,3 roka. Pomer mier bol 1,03 (95 % interval spoľahlivosti 1,01 až 1,06). [3]</p>
 
-<p>V prvom roku bol relatívny nadbytok výraznejší: približne 11 dodatočných hlásení svalovej bolesti alebo slabosti na 1 000 osoborokov. Autori odhadli, že iba približne jedno z 15 hlásení počas prvého roka bolo pripísateľné statínu. Po prvom roku sa pri všetkých režimoch spolu významný nadbytok nepotvrdil, hoci pri intenzívnejších režimoch zostala neistota. [3]</p>
+<p>V prvom roku bol relatívny nadbytok výraznejší: približne 11 dodatočných hlásení svalovej bolesti alebo slabosti na 1&nbsp;000 osoborokov. Autori odhadli, že iba približne jedno z 15 hlásení počas prvého roka bolo pripísateľné statínu. Po prvom roku sa pri všetkých režimoch spolu významný nadbytok nepotvrdil, hoci pri intenzívnejších režimoch zostala neistota. [3]</p>
 
 <p>Väčšina svalových ťažkostí zaznamenaných počas statínovej liečby teda nebola spôsobená farmakologickým účinkom statínu. Tento populačný údaj však neurčuje príčinu ťažkostí u konkrétneho pacienta. Normálna koncentrácia kreatínkinázy nevylučuje myalgiu a pri podozrení treba posúdiť časový priebeh, fyzickú záťaž, hypotyreózu, poruchy elektrolytov, súbežné ochorenia a liekové interakcie.</p>
 
@@ -77,17 +77,17 @@ $articles[] = [
 
 <h2>Nocebo efekt neznamená, že príznaky nie sú reálne</h2>
 
-<p>V štúdii SAMSON dostalo 60 pacientov, ktorí predtým statín prerušili pre nežiaduce príznaky, v náhodnom poradí štyri mesačné obdobia s atorvastatínom 20 mg, štyri s placebom a štyri bez tabliet. Priemerné skóre príznakov bolo 8,0 bez tabliet, 16,3 pri atorvastatíne a 15,4 pri placebe. Medzi atorvastatínom a placebom nebol štatisticky významný rozdiel. Takzvaný nocebo pomer dosiahol 0,90, teda 90 % symptomatickej záťaže navyše pozorovanej pri statíne oproti obdobiu bez tabliet sa objavilo aj pri placebe. [5]</p>
+<p>V štúdii SAMSON dostalo 60 pacientov, ktorí predtým statín prerušili pre nežiaduce príznaky, v náhodnom poradí štyri mesačné obdobia s atorvastatínom 20&nbsp;mg, štyri s placebom a štyri bez tabliet. Priemerné skóre príznakov bolo 8,0 bez tabliet, 16,3 pri atorvastatíne a 15,4 pri placebe. Medzi atorvastatínom a placebom nebol štatisticky významný rozdiel. Takzvaný nocebo pomer dosiahol 0,90, teda 90 % symptomatickej záťaže navyše pozorovanej pri statíne oproti obdobiu bez tabliet sa objavilo aj pri placebe. [5]</p>
 
 <p>Neznamená to, že 90 % pacientov si ťažkosti vymýšľa. Príznaky boli reálne, ale ich načasovanie a intenzita v tejto malej výberovej štúdii nerozlišovali farmakologický účinok od účinku očakávania spojeného s užitím tablety. Šesť mesiacov po skončení štúdie statín opäť užívala polovica randomizovaných účastníkov. [5]</p>
 
-<p>StatinWISE, séria 200 dvojito zaslepených N-of-1 skúšaní s atorvastatínom 20 mg a placebom, takisto nezistila priemerný rozdiel v intenzite svalových príznakov. Do primárnej analýzy však vstúpilo 151 účastníkov a štúdia skúmala iba jednu dávku jedného statínu. Nevylučuje preto farmakologické ťažkosti u malej časti pacientov ani riziko pri iných režimoch. [6]</p>
+<p>StatinWISE, séria 200 dvojito zaslepených N-of-1 skúšaní s atorvastatínom 20&nbsp;mg a placebom, takisto nezistila priemerný rozdiel v intenzite svalových príznakov. Do primárnej analýzy však vstúpilo 151 účastníkov a štúdia skúmala iba jednu dávku jedného statínu. Nevylučuje preto farmakologické ťažkosti u malej časti pacientov ani riziko pri iných režimoch. [6]</p>
 
 <h2>Diabetes mellitus: malé posuny môžu prekročiť diagnostickú hranicu</h2>
 
 <p>Metaanalýza individuálnych údajov z roku 2024 potvrdila dávkovo závislé zvýšenie počtu nových diagnóz diabetu. Pri nízkej alebo strednej intenzite bola ročná incidencia 1,3 % pri statíne a 1,2 % pri placebe, s pomerom mier 1,10 (95 % interval spoľahlivosti 1,04 až 1,16). Pri vysokointenzívnej liečbe bola ročná incidencia 4,8 % oproti 3,5 % a pomer mier 1,36 (1,25 až 1,48). [4]</p>
 
-<p>Absolútne incidencie z týchto dvoch súborov nemožno priamo porovnávať. Autori zistili, že ich výrazne ovplyvnila frekvencia merania HbA1c, ktorá bola vyššia v skúšaniach vysokointenzívnej liečby. Priemerná glykémia u účastníkov bez diabetu vzrástla o 0,04 mmol/l. HbA1c sa zvýšil o 0,06 percentuálneho bodu pri nízkej alebo strednej intenzite a o 0,08 percentuálneho bodu pri vysokej intenzite. Približne 62 % nových diagnóz vzniklo u ľudí, ktorí boli už na začiatku v najvyššej štvrtine rozdelenia glykémie. [4]</p>
+<p>Absolútne incidencie z týchto dvoch súborov nemožno priamo porovnávať. Autori zistili, že ich výrazne ovplyvnila frekvencia merania HbA1c, ktorá bola vyššia v skúšaniach vysokointenzívnej liečby. Priemerná glykémia u účastníkov bez diabetu vzrástla o 0,04&nbsp;mmol/l. HbA1c sa zvýšil o 0,06 percentuálneho bodu pri nízkej alebo strednej intenzite a o 0,08 percentuálneho bodu pri vysokej intenzite. Približne 62 % nových diagnóz vzniklo u ľudí, ktorí boli už na začiatku v najvyššej štvrtine rozdelenia glykémie. [4]</p>
 
 <p>Statín teda často posunie pacienta s hodnotami blízko diagnostickej hranice cez túto hranicu. Nová diagnóza diabetu nie je automatickým dôvodom na vysadenie správne indikovanej liečby. Vyžaduje metabolickú starostlivosť a nové zhodnotenie pomeru prínosu a rizika.</p>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <h2>Čo sa mení v nefrologickej praxi</h2>
 
-<p>KDIGO 2024 odporúča statín alebo kombináciu statínu s ezetimibom dospelým vo veku najmenej 50 rokov s odhadovanou glomerulovou filtráciou nižšou ako 60 ml/min/1,73 m², ktorí nie sú liečení chronickou dialýzou a nemajú transplantovanú obličku. Pri zachovalejšej filtrácii v rovnakej vekovej skupine odporúča statín. U mladších dospelých sa rozhoduje podľa známeho koronárneho ochorenia, diabetu, prekonanej ischemickej cievnej mozgovej príhody alebo vysokého odhadovaného koronárneho rizika. [7]</p>
+<p>KDIGO 2024 odporúča statín alebo kombináciu statínu s ezetimibom dospelým vo veku najmenej 50&nbsp;rokov s odhadovanou glomerulovou filtráciou nižšou ako 60&nbsp;ml/min/1,73&nbsp;m², ktorí nie sú liečení chronickou dialýzou a nemajú transplantovanú obličku. Pri zachovalejšej filtrácii v rovnakej vekovej skupine odporúča statín. U mladších dospelých sa rozhoduje podľa známeho koronárneho ochorenia, diabetu, prekonanej ischemickej cievnej mozgovej príhody alebo vysokého odhadovaného koronárneho rizika. [7]</p>
 
 <p>Pre dialýzu a transplantáciu platí odlišný dôkazový rámec. KDIGO neodporúča statín ani kombináciu statínu s ezetimibom rutinne začínať u dospelých s dialyzačne závislou chronickou chorobou obličiek, ale navrhuje pokračovať, ak ich pacient užíval pri začatí dialýzy. Dospelým príjemcom transplantovanej obličky statín navrhuje. [7] Bezpečnostná metaanalýza z roku 2026 zahŕňala aj štúdie ALERT, 4D a AURORA, nebola však navrhnutá ako samostatná analýza bezpečnosti pre každú nefrologickú podskupinu. [2]</p>
 

@@ -75,7 +75,7 @@ $articles[] = [
 
 <p>Na Slovensku to upravuje vyhláška Ministerstva zdravotníctva. Očkovanie proti pneumokokovým invazívnym infekciám sa odporúča dispenzarizovaným osobám (teda tým, ktorých lekár pravidelne sleduje) <strong>bez ohľadu na vek</strong>, ak majú závažné chronické ochorenie — a obličkové ochorenia sú v nej výslovne uvedené, konkrétne nefrotický syndróm a zlyhanie obličiek.</p>
 
-<p>To „bez ohľadu na vek“ je dôležité. Ak máte 35 rokov a chodíte na dialýzu, patríte do rizikovej skupiny rovnako ako sedemdesiatročný človek. Nemusíte čakať na žiadnu vekovú hranicu.</p>
+<p>To „bez ohľadu na vek“ je dôležité. Ak máte 35&nbsp;rokov a chodíte na dialýzu, patríte do rizikovej skupiny rovnako ako sedemdesiatročný človek. Nemusíte čakať na žiadnu vekovú hranicu.</p>
 
 <p>Očkovanie sa odporúča najmä ak:</p>
 

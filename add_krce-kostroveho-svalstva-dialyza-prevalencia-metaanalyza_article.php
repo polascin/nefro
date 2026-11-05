@@ -2,7 +2,7 @@
 
 /**
  * add_krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza_article.php
- * Prevalencia krcov kostroveho svalstva u dialyzovanych pacientov - metaanalyza.
+ * Prevalencia krcov kostroveho svalstva u dialyzovanych pacientov - metaanalýza.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -36,7 +36,7 @@ $articles[] = [
 
 <p>Seda Babroudi, Marcelle Tuttle a Eduardo K. Lacson jr. prehľadali štyri databázy do 30. septembra 2025. Zaradili observačné a nerandomizované experimentálne štúdie u <strong>nehospitalizovaných</strong> dialyzovaných pacientov publikované v angličtine; vylúčili kazuistiky, randomizované štúdie, systematické prehľady a metaanalýzy. Riziko skreslenia hodnotili Newcastle-Ottawskou škálou a prevalencie zlučovali metaanalýzou s náhodnými efektmi.</p>
 
-<p>Do syntézy vstúpilo <strong>94 štúdií s 32 223 pacientmi z 36 krajín na piatich kontinentoch</strong>. Väčšina štúdií (54, teda 57 %) sa týkala hemodialýzy a 16 štúdií uvádzalo prevalenciu špecificky pre intradialytické kŕče.</p>
+<p>Do syntézy vstúpilo <strong>94 štúdií s 32&nbsp;223 pacientmi z 36 krajín na piatich kontinentoch</strong>. Väčšina štúdií (54, teda 57 %) sa týkala hemodialýzy a 16 štúdií uvádzalo prevalenciu špecificky pre intradialytické kŕče.</p>
 
 <p>Výsledky:</p>
 
@@ -140,7 +140,7 @@ $articles[] = [
   <li><strong>U.S. Food and Drug Administration.</strong> <em>FDA Drug Safety Communication: New risk management plan and patient Medication Guide for Qualaquin (quinine sulfate).</em> 8. júla 2010. <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-new-risk-management-plan-and-patient-medication-guide-qualaquin-quinine" target="_blank" rel="noopener noreferrer">FDA</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje metaanalýzy – 94 štúdií, 32 223 pacientov, 36 krajín na piatich kontinentoch, 54 štúdií (57 %) v hemodialýze, 16 štúdií s intradialytickými kŕčmi, celková prevalencia 55 % (95 % IS 50–59 %, 95 % PI 20–86 %), intradialytická prevalencia 33 % (95 % IS 22–47 %, 95 % PI 4–87 %), podskupinové rozdiely podľa modality, incidencie a dĺžky obdobia spomínania, ako aj 50 štúdií (53 %) so stredným rizikom skreslenia – boli overené proti doslovnému zneniu abstraktu v zázname PubMed. Plný text práce je za platobnou bariérou vydavateľa a nebol sprístupnený. Časť o mechanizmoch vzniku kŕčov, praktický postup a bezpečnostná poznámka o chiníne <strong>nepochádzajú z tejto metaanalýzy</strong> – ide o vlastné odborné spracovanie opreté o etablované poznatky a o citované varovanie liekovej agentúry.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje metaanalýzy – 94 štúdií, 32&nbsp;223 pacientov, 36 krajín na piatich kontinentoch, 54 štúdií (57 %) v hemodialýze, 16 štúdií s intradialytickými kŕčmi, celková prevalencia 55 % (95 % IS 50–59 %, 95 % PI 20–86 %), intradialytická prevalencia 33 % (95 % IS 22–47 %, 95 % PI 4–87 %), podskupinové rozdiely podľa modality, incidencie a dĺžky obdobia spomínania, ako aj 50 štúdií (53 %) so stredným rizikom skreslenia – boli overené proti doslovnému zneniu abstraktu v zázname PubMed. Plný text práce je za platobnou bariérou vydavateľa a nebol sprístupnený. Časť o mechanizmoch vzniku kŕčov, praktický postup a bezpečnostná poznámka o chiníne <strong>nepochádzajú z tejto metaanalýzy</strong> – ide o vlastné odborné spracovanie opreté o etablované poznatky a o citované varovanie liekovej agentúry.</em></p>
 HTML,
 ];
 

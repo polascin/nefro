@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: myosteatoza pri hemodialyze - CT ukazovatele kvality svalstva.
+ * Odborný článok: myosteatoza pri hemodialyze - CT ukazovatele kvality svalstva.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -127,7 +127,7 @@ $articles[] = [
   <tbody>
     <tr><td>Priemerná denzita kostrového svalstva</td><td>34,4 ± 9,0 HU</td><td>–</td></tr>
     <tr><td>Podiel svalstva s normálnou denzitou</td><td>58,2 ± 17,0 %</td><td>r = 0,987</td></tr>
-    <tr><td>Index nízkodenzitného svalstva</td><td>14,3 ± 5,7 cm²/m²</td><td>r = 0,853</td></tr>
+    <tr><td>Index nízkodenzitného svalstva</td><td>14,3 ± 5,7&nbsp;cm²/m²</td><td>r = 0,853</td></tr>
     <tr><td>Podiel medzisvalového tuku</td><td>7,2 % (medzikvartilové rozpätie 3,9 až 12,8 %)</td><td>r = 0,843 po logaritmickej transformácii</td></tr>
   </tbody>
 </table>
@@ -428,9 +428,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

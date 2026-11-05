@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: polyneuropatia pri CKD, liecba, HTEMS a renalne davkovanie.
+ * Odborný článok: polyneuropatia pri CKD, liečba, HTEMS a renalne dávkovanie.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -122,19 +122,19 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Klassen a kol., 2008</th>
-      <td>40 hemodialyzovaných pacientov so symptomatickou polyneuropatiou, z toho 25 s diabetickou a 15 s uremickou formou; obe dolné končatiny 60 minút počas dialýzy, trikrát týždenne; 12 pacientov sledovaných 4 týždne a 28 pacientov 12 týždňov</td>
+      <td>40 hemodialyzovaných pacientov so symptomatickou polyneuropatiou, z toho 25&nbsp;s diabetickou a 15&nbsp;s uremickou formou; obe dolné končatiny 60&nbsp;minút počas dialýzy, trikrát týždenne; 12 pacientov sledovaných 4&nbsp;týždne a 28 pacientov 12&nbsp;týždňov</td>
       <td>zlepšenie piatich hodnotených neuropatických symptómov a porúch spánku; odpoveď definovanú zlepšením aspoň jedného symptómu o najmenej 3 body dosiahlo 73 % pacientov; väčší účinok po troch mesiacoch než po jednom mesiaci</td>
       <td>prospektívna, ale nerandomizovaná pilotná štúdia bez kontrolnej a sham skupiny, s prevažne subjektívnymi výsledkami</td>
     </tr>
     <tr>
       <th scope="row">Strempska a kol., 2013</th>
-      <td>28 hemodialyzovaných pacientov s manifestnou uremickou polyneuropatiou napriek predchádzajúcej farmakoterapii; 60 minút počas dialýzy, trikrát týždenne, 12 týždňov</td>
-      <td>64 % uviedlo lepšiu celkovú pohodu, 61 % vyššiu fyzickú kapacitu a 57 % menší pocit studených nôh; u 19 pacientov s kompletným elektrofyziologickým vyšetrením sa motorická rýchlosť vedenia n. ulnaris zvýšila z 48,53 ± 6,14 na 51,50 ± 5,51 m/s, P = 0,03</td>
+      <td>28 hemodialyzovaných pacientov s manifestnou uremickou polyneuropatiou napriek predchádzajúcej farmakoterapii; 60&nbsp;minút počas dialýzy, trikrát týždenne, 12&nbsp;týždňov</td>
+      <td>64 % uviedlo lepšiu celkovú pohodu, 61 % vyššiu fyzickú kapacitu a 57 % menší pocit studených nôh; u 19 pacientov s kompletným elektrofyziologickým vyšetrením sa motorická rýchlosť vedenia n. ulnaris zvýšila z 48,53 ± 6,14 na 51,50 ± 5,51&nbsp;m/s, P = 0,03</td>
       <td>bez randomizácie a kontrolnej skupiny; elektrofyziologický výsledok bol dostupný iba u 19 pacientov a významná zmena sa nepreukázala vo všetkých hodnotených nervoch a parametroch</td>
     </tr>
     <tr>
       <th scope="row">Klassen a kol., 2013</th>
-      <td>25 hemodialyzovaných pacientov s periférnou neuropatiou; rovnaký intradialytický režim počas 12 týždňov</td>
+      <td>25 hemodialyzovaných pacientov s periférnou neuropatiou; rovnaký intradialytický režim počas 12&nbsp;týždňov</td>
       <td>zlepšenie súhrnného skóre bolesti a niektorých domén SF-36, bez významnej zmeny skóre úzkosti a depresie</td>
       <td>malá nekontrolovaná štúdia s viacerými sledovanými výsledkami</td>
     </tr>
@@ -176,16 +176,16 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">≥ 80 ml/min</th><td>900 až 3 600 mg/deň</td><td rowspan="3">celková denná dávka sa v citovanom SPC podáva rozdelená do troch dávok</td></tr>
-    <tr><th scope="row">50 až 79 ml/min</th><td>600 až 1 800 mg/deň</td></tr>
-    <tr><th scope="row">30 až 49 ml/min</th><td>300 až 900 mg/deň</td></tr>
-    <tr><th scope="row">15 až 29 ml/min</th><td>150 až 600 mg/deň</td><td>150 mg/deň sa realizuje ako 300 mg každý druhý deň</td></tr>
-    <tr><th scope="row">&lt; 15 ml/min</th><td>150 až 300 mg/deň</td><td>dávka sa znižuje úmerne klírensu; aj tu sa 150 mg/deň realizuje ako 300 mg každý druhý deň</td></tr>
+    <tr><th scope="row">≥ 80&nbsp;ml/min</th><td>900 až 3&nbsp;600&nbsp;mg/deň</td><td rowspan="3">celková denná dávka sa v citovanom SPC podáva rozdelená do troch dávok</td></tr>
+    <tr><th scope="row">50 až 79&nbsp;ml/min</th><td>600 až 1&nbsp;800&nbsp;mg/deň</td></tr>
+    <tr><th scope="row">30 až 49&nbsp;ml/min</th><td>300 až 900&nbsp;mg/deň</td></tr>
+    <tr><th scope="row">15 až 29&nbsp;ml/min</th><td>150 až 600&nbsp;mg/deň</td><td>150&nbsp;mg/deň sa realizuje ako 300&nbsp;mg každý druhý deň</td></tr>
+    <tr><th scope="row">&lt; 15&nbsp;ml/min</th><td>150 až 300&nbsp;mg/deň</td><td>dávka sa znižuje úmerne klírensu; aj tu sa 150&nbsp;mg/deň realizuje ako 300&nbsp;mg každý druhý deň</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>U anurického hemodialyzovaného pacienta, ktorý gabapentín predtým neužíval, citované SPC uvádza nasycovaciu dávku 300 až 400 mg a potom 200 až 300 mg po každých štyroch hodinách hemodialýzy; v nedialyzačné dni sa gabapentín nepodáva. Pri zachovanej reziduálnej funkcii sa udržiavacia dávka určuje podľa tabuľky a po každom štvorhodinovom dialyzačnom výkone sa pridáva 200 až 300 mg. Ide o schému konkrétneho SPC, nie o univerzálnu štartovaciu dávku pre každého krehkého pacienta s neuropatickou bolesťou.</p>
+<p>U anurického hemodialyzovaného pacienta, ktorý gabapentín predtým neužíval, citované SPC uvádza nasycovaciu dávku 300 až 400&nbsp;mg a potom 200 až 300&nbsp;mg po každých štyroch hodinách hemodialýzy; v nedialyzačné dni sa gabapentín nepodáva. Pri zachovanej reziduálnej funkcii sa udržiavacia dávka určuje podľa tabuľky a po každom štvorhodinovom dialyzačnom výkone sa pridáva 200 až 300&nbsp;mg. Ide o schému konkrétneho SPC, nie o univerzálnu štartovaciu dávku pre každého krehkého pacienta s neuropatickou bolesťou.</p>
 
 <h3>Pregabalín podľa aktuálnej informácie EMA</h3>
 
@@ -200,11 +200,11 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">≥ 60 ml/min</th><td>150 mg/deň</td><td>600 mg/deň</td><td>v dvoch alebo troch dávkach</td></tr>
-    <tr><th scope="row">≥ 30 až &lt; 60 ml/min</th><td>75 mg/deň</td><td>300 mg/deň</td><td>v dvoch alebo troch dávkach</td></tr>
-    <tr><th scope="row">≥ 15 až &lt; 30 ml/min</th><td>25 až 50 mg/deň</td><td>150 mg/deň</td><td>raz denne alebo v dvoch dávkach</td></tr>
-    <tr><th scope="row">&lt; 15 ml/min</th><td>25 mg/deň</td><td>75 mg/deň</td><td>raz denne</td></tr>
-    <tr><th scope="row">Po štvorhodinovej hemodialýze</th><td colspan="2">jednorazová doplnková dávka 25 až 100 mg</td><td>navyše k dennej dávke určenej podľa reziduálnej funkcie obličiek</td></tr>
+    <tr><th scope="row">≥ 60&nbsp;ml/min</th><td>150&nbsp;mg/deň</td><td>600&nbsp;mg/deň</td><td>v dvoch alebo troch dávkach</td></tr>
+    <tr><th scope="row">≥ 30 až &lt; 60&nbsp;ml/min</th><td>75&nbsp;mg/deň</td><td>300&nbsp;mg/deň</td><td>v dvoch alebo troch dávkach</td></tr>
+    <tr><th scope="row">≥ 15 až &lt; 30&nbsp;ml/min</th><td>25 až 50&nbsp;mg/deň</td><td>150&nbsp;mg/deň</td><td>raz denne alebo v dvoch dávkach</td></tr>
+    <tr><th scope="row">&lt; 15&nbsp;ml/min</th><td>25&nbsp;mg/deň</td><td>75&nbsp;mg/deň</td><td>raz denne</td></tr>
+    <tr><th scope="row">Po štvorhodinovej hemodialýze</th><td colspan="2">jednorazová doplnková dávka 25 až 100&nbsp;mg</td><td>navyše k dennej dávke určenej podľa reziduálnej funkcie obličiek</td></tr>
   </tbody>
 </table>
 </div>
@@ -284,7 +284,7 @@ $articles[] = [
   <li><strong>England JD, Gronseth GS, Franklin G, a spol.</strong> <em>Practice Parameter: evaluation of distal symmetric polyneuropathy: role of laboratory and genetic testing.</em> Neurology. 2009;72(2):185–192. doi: 10.1212/01.wnl.0000336370.51010.a1. <a href="https://www.aan.com/Guidelines/home/GetGuidelineContent/322" target="_blank" rel="noopener noreferrer">Súhrn AAN</a>; <a href="https://doi.org/10.1212/01.wnl.0000336370.51010.a1" target="_blank" rel="noopener noreferrer">publikácia</a>.</li>
   <li><strong>Kidney Disease: Improving Global Outcomes Transplant Candidate Work Group.</strong> <em>KDIGO Clinical Practice Guideline on the Evaluation and Management of Candidates for Kidney Transplantation.</em> Transplantation. 2020;104(4S):S11–S103. <a href="https://kdigo.org/wp-content/uploads/2018/08/KDIGO-Txp-Candidate-GL-FINAL.pdf" target="_blank" rel="noopener noreferrer">Odporúčanie KDIGO</a>.</li>
   <li><strong>Raouf M, Atkinson TJ, Crumb MW, Fudin J.</strong> <em>Rational dosing of gabapentin and pregabalin in chronic kidney disease.</em> J Pain Res. 2017;10:275–278. doi: 10.2147/JPR.S130942. <a href="https://pubmed.ncbi.nlm.nih.gov/28184168/" target="_blank" rel="noopener noreferrer">PubMed</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5291335/" target="_blank" rel="noopener noreferrer">plný text</a>.</li>
-  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Gabapentin Vipharm 100 mg, 300 mg a 400 mg tvrdé kapsuly: Súhrn charakteristických vlastností lieku.</em> Zmena 2026/00635-Z1B. <a href="https://www.sukl.sk/hlavna-stranka-1/slovenska-verzia/pomocne-stranky/save-dokument?dok_id=888597&amp;dok_sec=01219589987550411397bc5369fad73d&amp;page_id=637" target="_blank" rel="noopener noreferrer">Aktuálne SPC</a>.</li>
+  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Gabapentin Vipharm 100&nbsp;mg, 300&nbsp;mg a 400&nbsp;mg tvrdé kapsuly: Súhrn charakteristických vlastností lieku.</em> Zmena 2026/00635-Z1B. <a href="https://www.sukl.sk/hlavna-stranka-1/slovenska-verzia/pomocne-stranky/save-dokument?dok_id=888597&amp;dok_sec=01219589987550411397bc5369fad73d&amp;page_id=637" target="_blank" rel="noopener noreferrer">Aktuálne SPC</a>.</li>
   <li><strong>European Medicines Agency.</strong> <em>Lyrica: EPAR Product Information.</em> Revízia 72, aktualizované 25. marca 2026. <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/lyrica" target="_blank" rel="noopener noreferrer">EMA</a>; <a href="https://www.ema.europa.eu/en/documents/product-information/lyrica-epar-product-information_en.pdf" target="_blank" rel="noopener noreferrer">informácia o lieku</a>.</li>
   <li><strong>Pop-Busui R, Roberts L, Pennathur S, Kretzler M, Brosius FC, Feldman EL.</strong> <em>The management of diabetic neuropathy in CKD.</em> Am J Kidney Dis. 2010;55(2):365–385. doi: 10.1053/j.ajkd.2009.10.050. <a href="https://pubmed.ncbi.nlm.nih.gov/20042258/" target="_blank" rel="noopener noreferrer">PubMed</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4007054/" target="_blank" rel="noopener noreferrer">plný text</a>.</li>
   <li><strong>Klassen A, Di Iorio B, Guastaferro P, Bahner U, Heidland A, De Santo N.</strong> <em>High-tone external muscle stimulation in end-stage renal disease: effects on symptomatic diabetic and uremic peripheral neuropathy.</em> J Ren Nutr. 2008;18(1):46–51. doi: 10.1053/j.jrn.2007.10.010. <a href="https://pubmed.ncbi.nlm.nih.gov/18089443/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
@@ -322,9 +322,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

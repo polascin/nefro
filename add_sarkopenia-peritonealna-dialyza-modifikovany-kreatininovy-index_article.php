@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: sarkopenia pri peritonealnej dialyze a modifikovany kreatininovy index.
+ * Odborný článok: sarkopenia pri peritonealnej dialyze a modifikovany kreatininovy index.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -101,7 +101,7 @@ $articles[] = [
 
 <p>Prvá štúdia porovnala index vypočítaný počas peritoneálnej dialýzy s konvenčným indexom po prechode na hemodialýzu u 138 pacientov a výsledok validovala na 605 incidentných pacientoch na peritoneálnej dialýze.</p>
 
-<p>Index vypočítaný počas peritoneálnej dialýzy významne koreloval so svalovou hmotou stanovenou kinetikou kreatinínu (r = 0,684) aj bioimpedančnou spektroskopiou (r = 0,641). Nekoreloval s výskytom dusíka bielkovín, s prevodnením ani s tukovým tkanivom, čo svedčí o primeranej špecificite pre svalové tkanivo. Kvartil indexu súvisel s rizikom úmrtia zo všetkých príčin počas 12 mesiacov, nie však s prechodom na chronickú hemodialýzu.</p>
+<p>Index vypočítaný počas peritoneálnej dialýzy významne koreloval so svalovou hmotou stanovenou kinetikou kreatinínu (r = 0,684) aj bioimpedančnou spektroskopiou (r = 0,641). Nekoreloval s výskytom dusíka bielkovín, s prevodnením ani s tukovým tkanivom, čo svedčí o primeranej špecificite pre svalové tkanivo. Kvartil indexu súvisel s rizikom úmrtia zo všetkých príčin počas 12&nbsp;mesiacov, nie však s prechodom na chronickú hemodialýzu.</p>
 
 <p>Záver bol priaznivý: ako <strong>jednorazový</strong> ukazovateľ svalovej hmoty a krátkodobý prognostický marker je index pri peritoneálnej dialýze použiteľný.</p>
 
@@ -475,9 +475,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

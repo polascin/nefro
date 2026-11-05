@@ -84,13 +84,13 @@ $articles[] = [
 
 <p>Vylučovacími kritériami boli kontaminácia hemokultúry, už zavedená chronická náhrada funkcie obličiek, meticilín-rezistentný <em>S. aureus</em> a odvolanie súhlasu s použitím klinických údajov. Pri opakovaných epizódach sa analyzovala len prvá. Kohorta sa napokon zúžila na pacientov, ktorí dostali cefazolín alebo flukloxacilín ako liečbu prvej voľby, a <strong>vylúčili sa pacienti, u ktorých AKI vzniklo ešte pred indexovou hemokultúrou</strong>. Z pôvodných 2114 identifikovaných pacientov tak zostalo 1408.</p>
 
-<p>Zloženie kohorty: 1324 pacientov (94,0 %) dostalo flukloxacilín a 84 (6,0 %) cefazolín. Medián veku bol 67 rokov (medzikvartilové rozpätie 55 – 76), muži tvorili 62,6 %. Medián trvania antibiotickej liečby bol 13 dní (medzikvartilové rozpätie 7 – 17).</p>
+<p>Zloženie kohorty: 1324 pacientov (94,0 %) dostalo flukloxacilín a 84 (6,0 %) cefazolín. Medián veku bol 67&nbsp;rokov (medzikvartilové rozpätie 55 – 76), muži tvorili 62,6 %. Medián trvania antibiotickej liečby bol 13&nbsp;dní (medzikvartilové rozpätie 7 – 17).</p>
 
 <h3>Ako sa určovalo AKI</h3>
 
-<p>AKI sa klasifikovalo podľa kritérií KDIGO zo všetkých meraní sérového kreatinínu po indexovej hemokultúre počas hospitalizácie. <strong>Kritérium diurézy sa nepoužilo</strong> – objem moču sa v týchto centrách rutinne nemeral. Zotavenie funkcie obličiek bolo definované ako návrat kreatinínu pod 1,5-násobok východiskovej hodnoty a súčasne najviac 26,5 µmol/l nad ňu do 30 dní od vzniku AKI.</p>
+<p>AKI sa klasifikovalo podľa kritérií KDIGO zo všetkých meraní sérového kreatinínu po indexovej hemokultúre počas hospitalizácie. <strong>Kritérium diurézy sa nepoužilo</strong> – objem moču sa v týchto centrách rutinne nemeral. Zotavenie funkcie obličiek bolo definované ako návrat kreatinínu pod 1,5-násobok východiskovej hodnoty a súčasne najviac 26,5 µmol/l nad ňu do 30&nbsp;dní od vzniku AKI.</p>
 
-<p>Východisková koncentrácia kreatinínu sa určovala hierarchicky: najprv z mediánu ambulantných hodnôt 100 až 90 dní pred prijatím (156 pacientov), potom z mediánu hodnôt 365 až 7 dní pred prijatím (796 pacientov). Ak nebola k dispozícii žiadna hodnota spred hospitalizácie, východisková koncentrácia sa <strong>odhadla podľa veku a pohlavia</strong> (456 pacientov, teda takmer tretina kohorty). Distribúcia meraných a odhadnutých východiskových hodnôt sa medzi liečebnými skupinami nelíšila (P = 0,911).</p>
+<p>Východisková koncentrácia kreatinínu sa určovala hierarchicky: najprv z mediánu ambulantných hodnôt 100 až 90&nbsp;dní pred prijatím (156 pacientov), potom z mediánu hodnôt 365 až 7&nbsp;dní pred prijatím (796 pacientov). Ak nebola k dispozícii žiadna hodnota spred hospitalizácie, východisková koncentrácia sa <strong>odhadla podľa veku a pohlavia</strong> (456 pacientov, teda takmer tretina kohorty). Distribúcia meraných a odhadnutých východiskových hodnôt sa medzi liečebnými skupinami nelíšila (P = 0,911).</p>
 
 <h2>Výskyt akútneho poškodenia obličiek</h2>
 
@@ -136,7 +136,7 @@ $articles[] = [
       <td>2 (2,4 %)</td>
     </tr>
     <tr>
-      <th scope="row">AKI vzniknuté do 7 dní</th>
+      <th scope="row">AKI vzniknuté do 7&nbsp;dní</th>
       <td>388 (80,3 %)</td>
       <td>375 (80,5 %)</td>
       <td>13 (76,5 %)</td>
@@ -164,7 +164,7 @@ $articles[] = [
 
 <p>Medián času od indexovej hemokultúry do vzniku AKI bol v oboch liečebných skupinách 1,3 dňa (medzikvartilové rozpätie 0,4 – 4,7 dňa pri cefazolíne a 0,4 – 5,0 dňa pri flukloxacilíne). Až 80,3 % všetkých epizód AKI vzniklo počas prvých siedmich dní. U 48 pacientov s AKI (9,9 % všetkých prípadov) pripadol vrchol kreatinínu priamo na deň odberu indexovej hemokultúry.</p>
 
-<p>Rozdelenie načasovania (bez AKI, skoré AKI do 7 dní, neskoré AKI po 7 dňoch) sa medzi liečebnými skupinami významne líšilo (P = 0,019). Skoré AKI vzniklo u 15,5 % pacientov na cefazolíne a u 28,3 % pacientov na flukloxacilíne, neskoré u 4,8 % a 6,9 %.</p>
+<p>Rozdelenie načasovania (bez AKI, skoré AKI do 7&nbsp;dní, neskoré AKI po 7 dňoch) sa medzi liečebnými skupinami významne líšilo (P = 0,019). Skoré AKI vzniklo u 15,5 % pacientov na cefazolíne a u 28,3 % pacientov na flukloxacilíne, neskoré u 4,8 % a 6,9 %.</p>
 
 <p>V multinomiálnej regresii bol flukloxacilín spojený s vyššou šancou na skoré AKI (pomer šancí 2,51; 95 % interval spoľahlivosti 1,28 – 4,93; P = 0,007). Pri neskorom AKI bol bodový odhad podobný, interval spoľahlivosti však zahŕňal jednotku a asociácia nebola štatisticky významná (pomer šancí 2,08; 95 % interval spoľahlivosti 0,63 – 6,86; P = 0,23). Neskorých prípadov bolo iba 95, z toho v cefazolínovej skupine štyri – analýza teda nemá silu rozdiel spoľahlivo potvrdiť ani vylúčiť.</p>
 
@@ -180,7 +180,7 @@ $articles[] = [
 
 <p>Medzi pacientmi, u ktorých AKI vzniklo, sa rozdelenie štádií medzi flukloxacilínom a cefazolínom významne nelíšilo (P = 0,599). Hlavný rozdiel sa teda týkal pravdepodobnosti vzniku AKI, nie jeho závažnosti po vzniku. Presnosť tohto porovnania však obmedzuje veľmi malý počet pacientov s AKI v cefazolínovej skupine – iba 17 osôb. Neprítomnosť štatisticky významného rozdielu preto nie je dôkazom rovnakej závažnosti.</p>
 
-<p>Pravdepodobnosť zotavenia funkcie obličiek do 30 dní klesala so závažnosťou AKI, zatiaľ čo úmrtnosť pred zotavením rástla:</p>
+<p>Pravdepodobnosť zotavenia funkcie obličiek do 30&nbsp;dní klesala so závažnosťou AKI, zatiaľ čo úmrtnosť pred zotavením rástla:</p>
 
 <div class="table-responsive" role="region" aria-label="Zotavenie funkcie obličiek a úmrtnosť pred zotavením podľa štádia AKI" tabindex="0">
 <table>
@@ -188,7 +188,7 @@ $articles[] = [
     <tr>
       <th scope="col">Štádium AKI</th>
       <th scope="col">Počet pacientov</th>
-      <th scope="col">Zotavenie do 30 dní</th>
+      <th scope="col">Zotavenie do 30&nbsp;dní</th>
       <th scope="col">Úmrtie pred zotavením</th>
     </tr>
   </thead>
@@ -215,13 +215,13 @@ $articles[] = [
 </table>
 </div>
 
-<p>Približne polovica pacientov s AKI 3. štádia teda do 30 dní nedosiahla zotavenie definované v štúdii. Údaje potvrdzujú klinický význam aj miernejších foriem AKI: nejde iba o prechodnú laboratórnu odchýlku. AKI pri závažnej infekcii môže predĺžiť hospitalizáciu, obmedziť antibiotickú liečbu a zvýšiť riziko chronickej choroby obličiek, ďalšej epizódy AKI aj úmrtia.</p>
+<p>Približne polovica pacientov s AKI 3. štádia teda do 30&nbsp;dní nedosiahla zotavenie definované v štúdii. Údaje potvrdzujú klinický význam aj miernejších foriem AKI: nejde iba o prechodnú laboratórnu odchýlku. AKI pri závažnej infekcii môže predĺžiť hospitalizáciu, obmedziť antibiotickú liečbu a zvýšiť riziko chronickej choroby obličiek, ďalšej epizódy AKI aj úmrtia.</p>
 
-<p>Sledovanie zotavenia bolo obmedzené na 30 dní od vzniku AKI alebo po posledné meranie kreatinínu – podľa toho, čo nastalo skôr. Z publikovaných údajov preto nemožno posúdiť dlhodobejší vývoj funkcie obličiek ani podiel pacientov s pretrvávajúcou dysfunkciou po tomto období.</p>
+<p>Sledovanie zotavenia bolo obmedzené na 30&nbsp;dní od vzniku AKI alebo po posledné meranie kreatinínu – podľa toho, čo nastalo skôr. Z publikovaných údajov preto nemožno posúdiť dlhodobejší vývoj funkcie obličiek ani podiel pacientov s pretrvávajúcou dysfunkciou po tomto období.</p>
 
 <h2>Nižšia dávka flukloxacilínu nebola spojená s nižším výskytom AKI</h2>
 
-<p>Z 1324 pacientov liečených flukloxacilínom začínalo 718 (55,7 %) na vysokej dávke 12 g denne a 572 (44,3 %) na nižšej dávke 6 až 8 g denne; ďalších 34 pacientov (2,6 %) malo iný režim a do analýzy dávky sa nezahrnuli.</p>
+<p>Z 1324 pacientov liečených flukloxacilínom začínalo 718 (55,7 %) na vysokej dávke 12&nbsp;g denne a 572 (44,3 %) na nižšej dávke 6 až 8&nbsp;g denne; ďalších 34 pacientov (2,6 %) malo iný režim a do analýzy dávky sa nezahrnuli.</p>
 
 <p>Rozdiely medzi dávkovými skupinami boli malé a nesystematické:</p>
 
@@ -230,7 +230,7 @@ $articles[] = [
   <li>medián času do vzniku AKI 1,3 dňa verzus 1,5 dňa;</li>
   <li>skoré AKI u 28,7 % (206/718) verzus 28,0 % (160/572);</li>
   <li>po multivariabilnej úprave (s doplnkovým zohľadnením endokarditídy) upravený pomer šancí 0,85 v neprospech <em>nižšej</em> dávky, 95 % interval spoľahlivosti 0,62 – 1,17;</li>
-  <li>krivky Kaplana a Meiera pre zložený ukazovateľ AKI alebo úmrtie do 30 dní boli takmer identické (log-rank P = 0,71).</li>
+  <li>krivky Kaplana a Meiera pre zložený ukazovateľ AKI alebo úmrtie do 30&nbsp;dní boli takmer identické (log-rank P = 0,71).</li>
 </ul>
 
 <p>Zníženie dávky preto podľa autorov samo osebe pravdepodobne neodstraňuje renálne riziko spojené s flukloxacilínom.</p>
@@ -251,7 +251,7 @@ $articles[] = [
 
 <h3>Sodíková záťaž – často preceňovaný rozdiel</h3>
 
-<p>Vysoké intravenózne dávky protistafylokokových penicilínov sa niekedy uvádzajú ako zdroj významnej sodíkovej záťaže. Presnejší pohľad je striedmejší: 1 g flukloxacilínu sodného obsahuje približne 2,26 mmol (52 mg) sodíka, 1 g cefazolínu sodného približne 2,1 mmol (48 mg). <strong>Na gram liečiva sú teda takmer rovnaké</strong> a rozdiel v dennej záťaži vzniká iba z rozdielnej dennej dávky – pri 12 g flukloxacilínu ide o približne 27 mmol (asi 620 mg) sodíka denne (vlastný prepočet z údajov v súhrne charakteristických vlastností lieku). Klinicky to môže byť dôležité pri srdcovom zlyhávaní, pokročilej chorobe obličiek alebo objemovom preťažení, štúdia však sodíkovú záťaž nehodnotila a nepreukázala, že by ňou bol rozdiel vo výskyte AKI sprostredkovaný.</p>
+<p>Vysoké intravenózne dávky protistafylokokových penicilínov sa niekedy uvádzajú ako zdroj významnej sodíkovej záťaže. Presnejší pohľad je striedmejší: 1&nbsp;g flukloxacilínu sodného obsahuje približne 2,26&nbsp;mmol (52&nbsp;mg) sodíka, 1&nbsp;g cefazolínu sodného približne 2,1&nbsp;mmol (48&nbsp;mg). <strong>Na gram liečiva sú teda takmer rovnaké</strong> a rozdiel v dennej záťaži vzniká iba z rozdielnej dennej dávky – pri 12&nbsp;g flukloxacilínu ide o približne 27&nbsp;mmol (asi 620&nbsp;mg) sodíka denne (vlastný prepočet z údajov v súhrne charakteristických vlastností lieku). Klinicky to môže byť dôležité pri srdcovom zlyhávaní, pokročilej chorobe obličiek alebo objemovom preťažení, štúdia však sodíkovú záťaž nehodnotila a nepreukázala, že by ňou bol rozdiel vo výskyte AKI sprostredkovaný.</p>
 
 <h2>Prečo môže mať cefazolín priaznivejší renálny profil</h2>
 
@@ -303,7 +303,7 @@ $articles[] = [
   <li>obmedziť alebo vysadiť ďalšie nefrotoxické lieky, ak je to možné;</li>
   <li>prispôsobiť dávkovanie funkcii obličiek a charakteru infekcie, s vedomím, že samotné zníženie dávky riziko AKI podľa tejto kohorty neodstraňuje;</li>
   <li>pri vzostupe kreatinínu znovu posúdiť infekciu, kontrolu zdroja, hemodynamiku, močový nález a všetky súbežné lieky a zvážiť aj tubulointersticiálnu nefritídu;</li>
-  <li>po epizóde AKI zabezpečiť kontrolu funkcie obličiek aj po prepustení – najmä pri 2. a 3. štádiu, kde sa do 30 dní nezotavila tretina až polovica pacientov.</li>
+  <li>po epizóde AKI zabezpečiť kontrolu funkcie obličiek aj po prepustení – najmä pri 2. a 3. štádiu, kde sa do 30&nbsp;dní nezotavila tretina až polovica pacientov.</li>
 </ol>
 
 <p>Keďže väčšina prípadov vznikla počas prvého týždňa, monitorovanie musí byť intenzívne už od začiatku liečby, nie až pri jej predpokladanom kumulatívnom účinku.</p>
@@ -327,7 +327,7 @@ $articles[] = [
   <li>konkrétny morfologický mechanizmus poškodenia (chýbali biopsie aj etiologická klasifikácia);</li>
   <li>že expozícia flukloxacilínu nesúvisí s nefrotoxicitou – hodnotila sa iba úvodná predpísaná dávka, nie skutočná expozícia;</li>
   <li>rovnakú klinickú účinnosť oboch antibiotík pri všetkých zdrojoch infekcie – to nebolo jej cieľom;</li>
-  <li>dlhodobý vývoj funkcie obličiek nad rámec 30 dní od vzniku AKI.</li>
+  <li>dlhodobý vývoj funkcie obličiek nad rámec 30&nbsp;dní od vzniku AKI.</li>
 </ul>
 
 <p>Naopak, tvrdenie, že randomizované porovnanie renálnej bezpečnosti cefazolínu a protistafylokokových penicilínov neexistuje, už neplatí – poskytli ho skúšania SNAP a CloCeBa.</p>
@@ -360,8 +360,8 @@ $articles[] = [
   <li><small><em>Perazella MA, Rosner MH. Drug-Induced Acute Kidney Injury. Clinical Journal of the American Society of Nephrology. 2022;17(8):1220–1233. doi: 10.2215/CJN.11290821. PMID 35273009. <a href="https://pubmed.ncbi.nlm.nih.gov/35273009/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></li>
   <li><small><em>Chong YP, Park SJ, Kim ES, a spol. Prevalence of blaZ gene types and the cefazolin inoculum effect among methicillin-susceptible Staphylococcus aureus blood isolates and their association with multilocus sequence types and clinical outcome. European Journal of Clinical Microbiology &amp; Infectious Diseases. 2015;34(2):349–355. doi: 10.1007/s10096-014-2241-5. PMID 25213722. <a href="https://pubmed.ncbi.nlm.nih.gov/25213722/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></li>
   <li><small><em>Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney International Supplements. 2012;2(1):1–138. <a href="https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-AKI-Guideline-English.pdf" target="_blank" rel="noopener noreferrer">plný text</a>.</em></small></li>
-  <li><small><em>Súhrn charakteristických vlastností lieku Flucloxacillin 1g powder for solution for injection/infusion vials. Electronic Medicines Compendium, revízia z 30. októbra 2023 — údaj o obsahu sodíka (2,26 mmol, teda 52 mg na injekčnú liekovku). <a href="https://www.medicines.org.uk/emc/product/8745/smpc" target="_blank" rel="noopener noreferrer">emc</a>.</em></small></li>
-  <li><small><em>Informácia o lieku Cefazolin for Injection, USP. DailyMed, U.S. National Library of Medicine — údaj o obsahu sodíka (približne 2,1 mmol, teda 48 mg na gram cefazolínu sodného). <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8f40f72-3cf0-43dc-a797-fb98dd8af228" target="_blank" rel="noopener noreferrer">DailyMed</a>.</em></small></li>
+  <li><small><em>Súhrn charakteristických vlastností lieku Flucloxacillin 1g powder for solution for injection/infusion vials. Electronic Medicines Compendium, revízia z 30. októbra 2023 — údaj o obsahu sodíka (2,26&nbsp;mmol, teda 52&nbsp;mg na injekčnú liekovku). <a href="https://www.medicines.org.uk/emc/product/8745/smpc" target="_blank" rel="noopener noreferrer">emc</a>.</em></small></li>
+  <li><small><em>Informácia o lieku Cefazolin for Injection, USP. DailyMed, U.S. National Library of Medicine — údaj o obsahu sodíka (približne 2,1&nbsp;mmol, teda 48&nbsp;mg na gram cefazolínu sodného). <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8f40f72-3cf0-43dc-a797-fb98dd8af228" target="_blank" rel="noopener noreferrer">DailyMed</a>.</em></small></li>
 </ol>
 HTML,
 ];

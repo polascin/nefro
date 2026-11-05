@@ -1,7 +1,7 @@
 <?php
 /**
  * add_12-knih-lekar-choroba-pacient-narativna-medicina_article.php
- * Idempotentny UPSERT odborneho clanku o literature a narativnej medicine.
+ * Idempotentný UPSERT odborného článku o literature a narativnej medicine.
  */
 
 // Ochrana - len admin alebo CLI
@@ -14,7 +14,7 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/article_publisher.php';
 
-// Data clanku
+// Data článku
 
 $articles = [];
 
@@ -199,9 +199,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo "Migracia clanku: " . $articles[0]['title'] . "\n";
+    echo "Migrácia článku: " . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

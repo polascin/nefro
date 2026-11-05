@@ -21,7 +21,7 @@ $articles[] = [
     'content' => <<<'HTML'
 <p>Glukokortikoidy pomáhajú rýchlo potlačiť aktivitu systémového lupus erythematosus (SLE), ich dlhodobé podávanie však prináša kumulatívnu záťaž. Cieľom liečby preto nie je iba dosiahnuť nízku udržiavaciu dávku, ale u vhodne vybraných pacientov zvážiť aj úplné vysadenie. Rozhodnutie musí rešpektovať aktivitu ochorenia, predchádzajúce orgánové postihnutie, trvanie odpovede a účinnosť ostatnej liečby.</p>
 
-<p>Odporúčania EULAR pre SLE smerujú k dávke najviac 5 mg prednizónového ekvivalentu denne a k vysadeniu, keď je to možné. KDIGO 2024 pri lupusovej nefritíde pripúšťa vysadenie po najmenej 12 mesiacoch kompletnej klinickej renálnej odpovede, ak glukokortikoidy nie sú potrebné pre extrarenálne prejavy. Ani jedno odporúčanie nepredstavuje automatický harmonogram pre každého pacienta. [3,4]</p>
+<p>Odporúčania EULAR pre SLE smerujú k dávke najviac 5&nbsp;mg prednizónového ekvivalentu denne a k vysadeniu, keď je to možné. KDIGO 2024 pri lupusovej nefritíde pripúšťa vysadenie po najmenej 12 mesiacoch kompletnej klinickej renálnej odpovede, ak glukokortikoidy nie sú potrebné pre extrarenálne prejavy. Ani jedno odporúčanie nepredstavuje automatický harmonogram pre každého pacienta. [3,4]</p>
 
 <figure>
   <picture>
@@ -37,11 +37,11 @@ $articles[] = [
 
 <p>Pacient môže byť bez glukokortikoidov, ale naďalej potrebovať hydroxychlorochín a udržiavaciu imunosupresívnu liečbu. V aténskej kohorte pacientov s lupusovou nefritídou <strong>všetci pri vysadení glukokortikoidov naďalej dostávali imunosupresívnu liečbu</strong>. Úspešné vysadenie preto neznamenalo ukončenie liečby nefritídy. [2]</p>
 
-<p>Aj odporúčania rozlišujú časovanie jednotlivých liekov. KDIGO pripúšťa vysadenie glukokortikoidov po najmenej 12 mesiacoch kompletnej klinickej renálnej odpovede, ale pri proliferatívnej lupusovej nefritíde odporúča celkové trvanie úvodnej a udržiavacej imunosupresie najmenej 36 mesiacov. Klinická odpoveď navyše nemusí znamenať neprítomnosť histologickej aktivity. [3]</p>
+<p>Aj odporúčania rozlišujú časovanie jednotlivých liekov. KDIGO pripúšťa vysadenie glukokortikoidov po najmenej 12 mesiacoch kompletnej klinickej renálnej odpovede, ale pri proliferatívnej lupusovej nefritíde odporúča celkové trvanie úvodnej a udržiavacej imunosupresie najmenej 36&nbsp;mesiacov. Klinická odpoveď navyše nemusí znamenať neprítomnosť histologickej aktivity. [3]</p>
 
 <h2>Čo priniesla kohorta pacientov s lupusovou nefritídou</h2>
 
-<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacientov sledovali spolupracujúce reumatologické a nefrologické pracoviská nemocnice Laiko v Aténach. Medián sledovania bol 121 mesiacov. [2]</p>
+<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacientov sledovali spolupracujúce reumatologické a nefrologické pracoviská nemocnice Laiko v Aténach. Medián sledovania bol 121&nbsp;mesiacov. [2]</p>
 
 <p>Proliferatívnu nefritídu vrátane zmiešaných foriem malo 97 pacientov a čistú membranóznu formu 39 pacientov. Zo súboru boli vylúčení pacienti so zlyhaním obličiek vyžadujúcim liečbu nahrádzajúcu funkciu obličiek pri diagnóze alebo krátko po nej. Výsledky preto nemožno bez výhrad preniesť na najťažšie renálne prezentácie.</p>
 
@@ -50,16 +50,16 @@ $articles[] = [
   <thead><tr><th scope="col">Sledovaný údaj</th><th scope="col">Výsledok</th></tr></thead>
   <tbody>
     <tr><th scope="row">Počet zaradených pacientov</th><td>136</td></tr>
-    <tr><th scope="row">Medián sledovania</th><td>121 mesiacov</td></tr>
+    <tr><th scope="row">Medián sledovania</th><td>121&nbsp;mesiacov</td></tr>
     <tr><th scope="row">Dosiahnuté vysadenie glukokortikoidov</th><td>117 pacientov (86 %)</td></tr>
-    <tr><th scope="row">Medián času od diagnózy po vysadenie</th><td>29 mesiacov</td></tr>
+    <tr><th scope="row">Medián času od diagnózy po vysadenie</th><td>29&nbsp;mesiacov</td></tr>
     <tr><th scope="row">Akýkoľvek relaps po vysadení</th><td>29 zo 117 pacientov (24,8 %)</td></tr>
     <tr><th scope="row">Renálny relaps po vysadení</th><td>22 zo 117 pacientov (18,8 %)</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Podiel 18,8 % nie je jednoročným rizikom ani odhadom pre každého budúceho pacienta. Renálne relapsy sa objavili s mediánom 25 mesiacov po vysadení. Sledovanie sa preto nemôže skončiť po niekoľkých stabilných kontrolách. [2]</p>
+<p>Podiel 18,8 % nie je jednoročným rizikom ani odhadom pre každého budúceho pacienta. Renálne relapsy sa objavili s mediánom 25&nbsp;mesiacov po vysadení. Sledovanie sa preto nemôže skončiť po niekoľkých stabilných kontrolách. [2]</p>
 
 <h2>Rozhodovala renálna odpoveď aj aktivita mimo obličiek</h2>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <p>Kombinácia renálnej a celkovej kontroly je klinicky dôležitá. Priaznivý vývoj proteinúrie nevylučuje extrarenálnu aktivitu. Ústup kĺbových či kožných prejavov zase nepotvrdzuje remisiu nefritídy.</p>
 
-<p>V čase vysadenia bola v kohorte mediánová proteinúria 0,2 g/deň a mediánová odhadovaná glomerulová filtrácia 105 ml/min/1,73 m². Ide o opis vybranej skupiny, nie o univerzálne prahové hodnoty. [2]</p>
+<p>V čase vysadenia bola v kohorte mediánová proteinúria 0,2&nbsp;g/deň a mediánová odhadovaná glomerulová filtrácia 105&nbsp;ml/min/1,73&nbsp;m². Ide o opis vybranej skupiny, nie o univerzálne prahové hodnoty. [2]</p>
 
 <p>Pri čistej membranóznej forme sa glukokortikoidy vysadili skôr než pri proliferatívnej nefritíde, mediánovo po 25 oproti 31 mesiacom. Celkový podiel pacientov, u ktorých sa vysadenie napokon podarilo, bol však podobný. Histologická trieda V preto sama osebe neznamená nízke riziko ani neoprávňuje glukokortikoidy vysadiť pri pretrvávajúcej aktivite.</p>
 
@@ -89,9 +89,9 @@ $articles[] = [
 
 <h2>Pomalšie znižovanie nebolo v tejto kohorte ochranné</h2>
 
-<p>Autori nezistili, že vyššia úvodná dávka nad 40 mg/deň prednizónového ekvivalentu alebo pomalšie znižovanie chránili pred renálnym relapsom po vysadení. Tento výsledok nemožno interpretovať ako dôkaz bezpečnosti náhleho vysadenia. Štúdia nebola randomizovaným porovnaním rýchleho a pomalého režimu a pacienti s ťažšie kontrolovateľným ochorením prirodzene dostávali glukokortikoidy dlhšie. [2]</p>
+<p>Autori nezistili, že vyššia úvodná dávka nad 40&nbsp;mg/deň prednizónového ekvivalentu alebo pomalšie znižovanie chránili pred renálnym relapsom po vysadení. Tento výsledok nemožno interpretovať ako dôkaz bezpečnosti náhleho vysadenia. Štúdia nebola randomizovaným porovnaním rýchleho a pomalého režimu a pacienti s ťažšie kontrolovateľným ochorením prirodzene dostávali glukokortikoidy dlhšie. [2]</p>
 
-<p>Randomizovaná štúdia CORTICOLUP pri klinicky pokojnom SLE zistila viac vzplanutí po vysadení stabilnej dávky 5 mg prednizónu než pri jej pokračovaní. KDIGO však upozorňuje, že vysadenie mohlo byť po dlhoročnej liečbe príliš náhle a časť príznakov mohla súvisieť s glukokortikoidovým abstinenčným syndrómom. Výsledok sa navyše netýkal výlučne pacientov s lupusovou nefritídou. [3]</p>
+<p>Randomizovaná štúdia CORTICOLUP pri klinicky pokojnom SLE zistila viac vzplanutí po vysadení stabilnej dávky 5&nbsp;mg prednizónu než pri jej pokračovaní. KDIGO však upozorňuje, že vysadenie mohlo byť po dlhoročnej liečbe príliš náhle a časť príznakov mohla súvisieť s glukokortikoidovým abstinenčným syndrómom. Výsledok sa navyše netýkal výlučne pacientov s lupusovou nefritídou. [3]</p>
 
 <p>Riziko relapsu lupusu a riziko adrenálnej insuficiencie sú dva odlišné klinické problémy. Aj pacient s kontrolovaným ochorením môže potrebovať pomalšie znižovanie pre útlm osi hypotalamus, hypofýza a nadobličky. Aténska štúdia neposkytuje endokrinologický protokol vysadzovania.</p>
 

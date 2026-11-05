@@ -42,7 +42,7 @@ $articles[] = [
 
 <p>Tavneos sa používa u dospelých so závažnou, aktívnou GPA alebo MPA a je súčasťou <strong>kombinovanej liečby</strong>, ktorá zahŕňa aj iné imunosupresíva (v praxi typicky <strong>rituximab alebo cyklofosfamid</strong>) a <strong>redukciu kortikosteroidnej záťaže</strong>.</p>
 
-<p>V štúdii ADVOCATE bolo hodnotených <strong>331 pacientov</strong> s GPA/MPA, ktorým sa počas <strong>52 týždňov</strong> podával <strong>avacopan</strong> alebo placebo, pričom obe ramená dostávali popri štandardnej liečbe aj <strong>kortikosteroidy počas 20 týždňov</strong>. Na základe týchto dát sa avacopan hodnotil ako prinajmenšom porovnateľne účinný ako 20-týždňové podávanie vysokých dávok kortikosteroidov pri dosahovaní remisie, s lepšími výsledkami pri udržaní dlhodobej remisie.</p>
+<p>V štúdii ADVOCATE bolo hodnotených <strong>331 pacientov</strong> s GPA/MPA, ktorým sa počas <strong>52&nbsp;týždňov</strong> podával <strong>avacopan</strong> alebo placebo, pričom obe ramená dostávali popri štandardnej liečbe aj <strong>kortikosteroidy počas 20&nbsp;týždňov</strong>. Na základe týchto dát sa avacopan hodnotil ako prinajmenšom porovnateľne účinný ako 20-týždňové podávanie vysokých dávok kortikosteroidov pri dosahovaní remisie, s lepšími výsledkami pri udržaní dlhodobej remisie.</p>
 
 <p>EMA však po opätovnom preskúmaní dát konštatovala, že štúdia bola realizovaná <strong>v rozpore s princípmi správnej klinickej praxe</strong> a že údaje dodané v čase posudzovania žiadosti boli <strong>„nesprávne a zavádzajúce“</strong>. Preto sa tieto výsledky už nedajú považovať za spoľahlivý dôkaz účinnosti.</p>
 

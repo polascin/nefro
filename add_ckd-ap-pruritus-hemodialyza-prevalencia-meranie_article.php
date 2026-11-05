@@ -118,12 +118,12 @@ $articles[] = [
       <td>47,2 %</td>
     </tr>
     <tr>
-      <th scope="row">Krátkodobý (≤ 24 h)</th>
+      <th scope="row">Krátkodobý (≤ 24&nbsp;h)</th>
       <td>78</td>
       <td>36,8 %</td>
     </tr>
     <tr>
-      <th scope="row">Dlhodobejší (&gt; 24 h)</th>
+      <th scope="row">Dlhodobejší (&gt; 24&nbsp;h)</th>
       <td>34</td>
       <td>16,0 %</td>
     </tr>

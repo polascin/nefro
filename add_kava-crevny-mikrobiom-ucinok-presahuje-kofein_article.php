@@ -39,13 +39,13 @@ $articles[] = [
 
 <h2>Káva nepôsobí iba cez kofeín</h2>
 
-<p>Nutkanie na stolicu po káve sa tradične vysvetľuje gastrokolickým reflexom a stimuláciou motoriky hrubého čreva. Klinické údaje po brušných operáciách podporujú aj úlohu nekofeínových zložiek. Metaanalýza trinástich štúdií s 1 246 pacientmi ukázala skorší návrat črevnej funkcie a nižší výskyt pooperačného ileu po káve; výsledky sa významne nelíšili medzi kofeínovou a bezkofeínovou kávou. Istota dôkazov bola nízka až stredná a tento postup patrí do pooperačného protokolu, nie do samostatnej liečby pacienta.</p>
+<p>Nutkanie na stolicu po káve sa tradične vysvetľuje gastrokolickým reflexom a stimuláciou motoriky hrubého čreva. Klinické údaje po brušných operáciách podporujú aj úlohu nekofeínových zložiek. Metaanalýza trinástich štúdií s 1&nbsp;246 pacientmi ukázala skorší návrat črevnej funkcie a nižší výskyt pooperačného ileu po káve; výsledky sa významne nelíšili medzi kofeínovou a bezkofeínovou kávou. Istota dôkazov bola nízka až stredná a tento postup patrí do pooperačného protokolu, nie do samostatnej liečby pacienta.</p>
 
 <p>Káva je chemicky zložitá zmes. Okrem kofeínu obsahuje chlorogénové kyseliny a ďalšie fenolové zlúčeniny, trigonelín a produkty praženia vrátane melanoidínov. Časť týchto látok sa nevstrebe v tenkom čreve, dostáva sa do hrubého čreva a stáva sa substrátom pre mikrobiálny metabolizmus. Preto sa biologický účinok kávy nemusí zhodovať s účinkom izolovaného kofeínu.</p>
 
 <h2>Výrazná asociácia s jednou baktériou</h2>
 
-<p>Multikohortová štúdia publikovaná v roku 2024 v časopise <em>Nature Microbiology</em> analyzovala podrobné stravovacie a metagenomické údaje od 22 867 účastníkov zo Spojených štátov a Spojeného kráľovstva a výsledky porovnala s verejnými údajmi z desiatok tisíc ďalších vzoriek. Spomedzi sledovaných potravín mala káva mimoriadne reprodukovateľnú súvislosť s črevným mikrobiálnym profilom.</p>
+<p>Multikohortová štúdia publikovaná v roku 2024 v časopise <em>Nature Microbiology</em> analyzovala podrobné stravovacie a metagenomické údaje od 22&nbsp;867 účastníkov zo Spojených štátov a Spojeného kráľovstva a výsledky porovnala s verejnými údajmi z desiatok tisíc ďalších vzoriek. Spomedzi sledovaných potravín mala káva mimoriadne reprodukovateľnú súvislosť s črevným mikrobiálnym profilom.</p>
 
 <p>Najsilnejšia asociácia sa týkala baktérie <em>Lawsonibacter asaccharolyticus</em>. U konzumentov kávy bola častejšia a relatívne hojnejšia než u ľudí, ktorí kávu nepili. Súvislosť sa pozorovala aj pri bezkofeínovej káve. V laboratórnej kultúre navyše kofeínová aj bezkofeínová káva podporovali rast tejto baktérie.</p>
 
@@ -59,7 +59,7 @@ $articles[] = [
 
 <h2>Štúdia osi mikrobiota – črevo – mozog</h2>
 
-<p>Štúdia publikovaná v roku 2026 v <em>Nature Communications</em> skúmala 62 zdravých dospelých vo veku 30 až 50 rokov. Polovicu tvorili ľudia, ktorí kávu nepili, a polovicu pravidelní konzumenti troch až piatich šálok denne. U pravidelných konzumentov nasledovalo dvojtýždňové vysadenie kávy a následné trojtýždňové opätovné zavedenie kofeínovej alebo bezkofeínovej instantnej kávy.</p>
+<p>Štúdia publikovaná v roku 2026 v <em>Nature Communications</em> skúmala 62 zdravých dospelých vo veku 30 až 50&nbsp;rokov. Polovicu tvorili ľudia, ktorí kávu nepili, a polovicu pravidelní konzumenti troch až piatich šálok denne. U pravidelných konzumentov nasledovalo dvojtýždňové vysadenie kávy a následné trojtýždňové opätovné zavedenie kofeínovej alebo bezkofeínovej instantnej kávy.</p>
 
 <p>Medzi konzumentmi a nekonzumentmi sa líšilo zloženie mikrobioty, najmä zastúpenie zástupcov rodov <em>Cryptobacterium</em> a <em>Eggerthella</em>. Rozdiely sa našli aj vo fekálnych metabolitoch vrátane kyseliny indol-3-propiónovej, indol-3-karboxaldehydu a kyseliny γ-aminomaslovej (GABA). Časť metabolických zmien sa po vysadení kávy menila a po jej opätovnom zavedení sa objavila znovu; niektoré skoré zmeny nezáviseli od prítomnosti kofeínu.</p>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <h2>Čo vieme o refluxe, obstipácii a IBD</h2>
 
-<p>Účinok kávy na gastrointestinálne príznaky je individuálny. Metaanalýza štyridsiatich štúdií so 122 074 účastníkmi z roku 2026 našla u konzumentov kávy malú asociáciu s častejším gastroezofágovým refluxom (OR 1,18), ale s vysokou heterogenitou a neistým klinickým významom. Súvislosť s Barrettovým pažerákom sa nepotvrdila. Výsledok nepodporuje univerzálny zákaz kávy; podporuje skúšobné obmedzenie u pacienta, ktorý opakovane pozoruje časovú súvislosť so symptómami.</p>
+<p>Účinok kávy na gastrointestinálne príznaky je individuálny. Metaanalýza štyridsiatich štúdií so 122&nbsp;074 účastníkmi z roku 2026 našla u konzumentov kávy malú asociáciu s častejším gastroezofágovým refluxom (OR 1,18), ale s vysokou heterogenitou a neistým klinickým významom. Súvislosť s Barrettovým pažerákom sa nepotvrdila. Výsledok nepodporuje univerzálny zákaz kávy; podporuje skúšobné obmedzenie u pacienta, ktorý opakovane pozoruje časovú súvislosť so symptómami.</p>
 
 <p>Údaje o obstipácii sú rozporné. Jedna prierezová analýza NHANES z roku 2025 nenašla celkovú súvislosť medzi príjmom kofeínu a obstipáciou definovanou frekvenciou ani konzistenciou stolice. Iná analýza toho istého populačného zdroja opísala nelineárny vzťah, pri ktorom bola vyššia expozícia nad určitým bodom spojená s miernym nárastom rizika. Prierezový dizajn, údaje zo stravovacieho dotazníka a rozdielne modelovanie neumožňujú odporúčať kofeín na liečbu ani prevenciu obstipácie.</p>
 

@@ -62,7 +62,7 @@ $articles[] = [
 
 <h2>PTSD a lieková adherencia: asociácia, nie jednoduchá príčina</h2>
 
-<p>Lauren Taggart Wasson a spoluautori v metaanalýze 16 observačných štúdií so 4 483 účastníkmi skúmali súvislosť medzi PTSD a nedostatočnou adherenciou k liekom pri chronických somatických ochoreniach. Súhrnný pomer šancí bol 1,22 (95 % interval spoľahlivosti od 1,06 do 1,41). Medzi štúdiami bola významná heterogenita (Q = 59,4; p &lt; 0,001). [3]</p>
+<p>Lauren Taggart Wasson a spoluautori v metaanalýze 16 observačných štúdií so 4&nbsp;483 účastníkmi skúmali súvislosť medzi PTSD a nedostatočnou adherenciou k liekom pri chronických somatických ochoreniach. Súhrnný pomer šancí bol 1,22 (95 % interval spoľahlivosti od 1,06 do 1,41). Medzi štúdiami bola významná heterogenita (Q = 59,4; p &lt; 0,001). [3]</p>
 
 <p>Výsledok znamená vyššie šance nedostatočnej adherencie u ľudí s PTSD. <strong>Neznamená zvýšenie absolútneho rizika o 22 percentuálnych bodov</strong> a nepreukazuje, že PTSD bola príčinou vynechávania liekov.</p>
 
@@ -84,7 +84,7 @@ $articles[] = [
 
 <p>Kvalitatívna štúdia s 30 pacientmi liečenými hemodialýzou identifikovala ako častú bariéru nedostatočnú alebo nespoľahlivú dopravu. Pacienti zároveň uvádzali význam vysvetlenia rizík, vzťahov s ostatnými pacientmi a podporujúceho prístupu tímu. Malý účelovo vybraný súbor neumožňuje určiť prevalenciu jednotlivých bariér, prináša však informáciu o tom, ako problém vnímali samotní pacienti. [4]</p>
 
-<p>Vo veľkej americkej observačnej analýze 44 586 241 plánovaných hemodialyzačných liečeb u 182 536 pacientov bolo vynechanie liečby spojené s dopravou, počasím, sviatkami, psychiatrickým ochorením, bolesťou a gastrointestinálnymi ťažkosťami. Po vynechanej liečbe boli vyššie šance hospitalizácie, návštevy urgentného príjmu aj prijatia na jednotku intenzívnej starostlivosti. [5]</p>
+<p>Vo veľkej americkej observačnej analýze 44&nbsp;586&nbsp;241 plánovaných hemodialyzačných liečeb u 182&nbsp;536 pacientov bolo vynechanie liečby spojené s dopravou, počasím, sviatkami, psychiatrickým ochorením, bolesťou a gastrointestinálnymi ťažkosťami. Po vynechanej liečbe boli vyššie šance hospitalizácie, návštevy urgentného príjmu aj prijatia na jednotku intenzívnej starostlivosti. [5]</p>
 
 <p>Táto analýza bola observačná. Autori nemohli úplne vylúčiť, že niektorí pacienti vynechali dialýzu pre už sa zhoršujúci zdravotný stav, ktorý zároveň viedol k hospitalizácii. Výsledky však ukazujú, prečo treba súčasne riešiť riziko z vynechanej liečby aj bariéru, ktorá k nej prispela.</p>
 

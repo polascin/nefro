@@ -258,7 +258,7 @@ if ($requestMethod === 'POST') {
 
             <?php if (empty($deletionRequest)): ?>
                 <div id="deletion-invalid" class="alert alert-error" role="alert" tabindex="-1">
-                    <p>Potvrdzovací odkaz je neplatný alebo expiroval (platnosť je 24 hodín).</p>
+                    <p>Potvrdzovací odkaz je neplatný alebo expiroval (platnosť je 24 hodín).</p>
                 </div>
                 <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                     document.addEventListener('DOMContentLoaded', function() {
@@ -277,7 +277,7 @@ if ($requestMethod === 'POST') {
                         <strong><?= htmlspecialchars((string) ($deletionRequest['email'] ?? '')) ?></strong>
                         vrátane profilu, avatarov a uložených výsledkov kalkulačiek. Minimalizovaný
                         bezpečnostný audit vykonania žiadosti bez používateľského mena môžeme uchovať
-                        najviac 90 dní podľa Zásad ochrany osobných údajov.
+                        najviac 90 dní podľa Zásad ochrany osobných údajov.
                     </p>
                 </div>
                 <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">

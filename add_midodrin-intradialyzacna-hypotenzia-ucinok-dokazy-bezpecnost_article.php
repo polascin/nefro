@@ -49,7 +49,7 @@ $articles[] = [
 
 <h2>Farmakokinetika významná pri hemodialýze</h2>
 
-<p>Po perorálnom podaní sa midodrín vstrebáva a premieňa na aktívny desglymidodrín. Podľa registračnej dokumentácie sa vrcholová plazmatická koncentrácia aktívneho metabolitu dosahuje približne za jednu hodinu a jeho polčas je okolo troch hodín. Počas 24 hodín sa približne 40 až 60 % dávky vylúči vo forme aktívneho metabolitu. [5]</p>
+<p>Po perorálnom podaní sa midodrín vstrebáva a premieňa na aktívny desglymidodrín. Podľa registračnej dokumentácie sa vrcholová plazmatická koncentrácia aktívneho metabolitu dosahuje približne za jednu hodinu a jeho polčas je okolo troch hodín. Počas 24&nbsp;hodín sa približne 40 až 60 % dávky vylúči vo forme aktívneho metabolitu. [5]</p>
 
 <p>Desglymidodrín sa teda významne eliminuje obličkami. Pri závažnej poruche ich funkcie môže byť expozícia predĺžená, zatiaľ čo hemodialýza umožňuje jeho odstránenie – dokumentácia výslovne uvádza, že aktívny metabolit je dialyzovateľný a jeho polčas je približne tri hodiny. [5] Dialyzovateľnosť preto nevylučuje riziko zvýšenej expozície mimo dialyzačného výkonu.</p>
 
@@ -74,7 +74,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Schválená indikácia:</strong> liečba ani prevencia IDH v registračnej dokumentácii spravidla uvedená nie je. Schválenou indikáciou je ťažká ortostatická hypotenzia pri dysfunkcii autonómneho nervového systému, keď boli vylúčené korigovateľné príčiny. [5]</li>
-  <li><strong>Kontraindikácie:</strong> európske aj slovenské znenia dokumentácie uvádzajú medzi kontraindikáciami <strong>akútne ochorenie obličiek</strong> a <strong>závažnú renálnu insuficienciu</strong>. Britská dokumentácia ju kvantifikuje ako klírens kreatinínu pod 30 ml/min a zároveň vyžaduje veľkú opatrnosť pri klírense medzi 30 a 90 ml/min. [5, 6]</li>
+  <li><strong>Kontraindikácie:</strong> európske aj slovenské znenia dokumentácie uvádzajú medzi kontraindikáciami <strong>akútne ochorenie obličiek</strong> a <strong>závažnú renálnu insuficienciu</strong>. Britská dokumentácia ju kvantifikuje ako klírens kreatinínu pod 30&nbsp;ml/min a zároveň vyžaduje veľkú opatrnosť pri klírense medzi 30 a 90&nbsp;ml/min. [5, 6]</li>
 </ol>
 
 <p>To je podstatný rozdiel oproti bežnej predstave o použití „off label“. U pacienta na udržiavacej hemodialýze nejde len o podanie mimo schválenej indikácie, ale o podanie napriek výslovne uvedenej kontraindikácii. Lokálny dialyzačný protokol tento rozdiel neodstraňuje a nenahrádza individuálne odôvodnené a zdokumentované lekárske rozhodnutie.</p>
@@ -85,7 +85,7 @@ $articles[] = [
 
 <h3>Menšie štúdie podporujú krátkodobý tlakový účinok</h3>
 
-<p>Systematický prehľad Sumy Prakashovej, Amita X. Garga, A. Paula Heidenheima a Andrewa A. Housea z roku 2004 zhrnul malé štúdie midodrínu pri dialýzou vyvolanej hypotenzii. Z 37 získaných plných textov splnilo kritériá deväť štúdií, k nim pribudla jedna nepublikovaná práca. Dávkovacie režimy sa pohybovali od 2,5 do 10 mg podaných 15 až 30 minút pred dialýzou. [1]</p>
+<p>Systematický prehľad Sumy Prakashovej, Amita X. Garga, A. Paula Heidenheima a Andrewa A. Housea z roku 2004 zhrnul malé štúdie midodrínu pri dialýzou vyvolanej hypotenzii. Z 37 získaných plných textov splnilo kritériá deväť štúdií, k nim pribudla jedna nepublikovaná práca. Dávkovacie režimy sa pohybovali od 2,5 do 10&nbsp;mg podaných 15 až 30&nbsp;minút pred dialýzou. [1]</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky systematického prehľadu midodrínu pri dialýzou vyvolanej hypotenzii" tabindex="0">
 <table>
@@ -98,19 +98,19 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Systolický tlak po dialýze</th>
-      <td>Vyšší o 12,4 mmHg (95 % IS 7,5 až 17,7)</td>
+      <td>Vyšší o 12,4&nbsp;mmHg (95 % IS 7,5 až 17,7)</td>
     </tr>
     <tr>
       <th scope="row">Diastolický tlak po dialýze</th>
-      <td>Vyšší o 7,3 mmHg (95 % IS 3,7 až 10,9)</td>
+      <td>Vyšší o 7,3&nbsp;mmHg (95 % IS 3,7 až 10,9)</td>
     </tr>
     <tr>
       <th scope="row">Najnižší systolický tlak počas výkonu</th>
-      <td>Vyšší o 13,3 mmHg (95 % IS 8,6 až 18,0)</td>
+      <td>Vyšší o 13,3&nbsp;mmHg (95 % IS 8,6 až 18,0)</td>
     </tr>
     <tr>
       <th scope="row">Najnižší diastolický tlak počas výkonu</th>
-      <td>Vyšší o 5,9 mmHg (95 % IS 2,7 až 9,1)</td>
+      <td>Vyšší o 5,9&nbsp;mmHg (95 % IS 2,7 až 9,1)</td>
     </tr>
     <tr>
       <th scope="row">Zlepšenie príznakov</th>
@@ -130,7 +130,7 @@ $articles[] = [
 
 <h3>Observačné údaje: hemodynamický prínos sa v reálnej praxi nepotvrdil</h3>
 
-<p>Práca Brunelliho a spoluautorov z roku 2018 porovnala 1 046 pacientov s predpisom midodrínu a 2 037 párovaných kontrol v dialyzačných centrách v USA v období júl 2015 až september 2016. Používanie midodrínu sa spájalo s vyšším pomerom incidencie úmrtia (upravený pomer 1,37; 95 % IS 1,15 až 1,62), hospitalizácií z akejkoľvek príčiny (1,31; 1,19 až 1,43) a kardiovaskulárnych hospitalizácií (1,41; 1,17 až 1,71). [2]</p>
+<p>Práca Brunelliho a spoluautorov z roku 2018 porovnala 1&nbsp;046 pacientov s predpisom midodrínu a 2&nbsp;037 párovaných kontrol v dialyzačných centrách v USA v období júl 2015 až september 2016. Používanie midodrínu sa spájalo s vyšším pomerom incidencie úmrtia (upravený pomer 1,37; 95 % IS 1,15 až 1,62), hospitalizácií z akejkoľvek príčiny (1,31; 1,19 až 1,43) a kardiovaskulárnych hospitalizácií (1,41; 1,17 až 1,71). [2]</p>
 
 <p>Dôležitejší než samotné čísla je však hemodynamický nález, ktorý sa pri citovaní tejto práce často vynecháva. Počas sledovania mali pacienti užívajúci midodrín skôr <strong>nižší</strong> predialyzačný systolický tlak, <strong>nižšiu</strong> najnižšiu hodnotu systolického tlaku, <strong>väčší</strong> pokles tlaku počas dialýzy a <strong>vyšší</strong> podiel výkonov komplikovaných IDH. [2]</p>
 
@@ -138,7 +138,7 @@ $articles[] = [
 
 <h3>Kórejská kohorta: signál je dávkovo závislý</h3>
 
-<p>Retrospektívna štúdia Jeona a spoluautorov publikovaná v roku 2025 analyzovala 71 540 pacientov na udržiavacej hemodialýze z kórejského programu hodnotenia kvality dialýzy a z údajov zdravotného poistenia. Midodrín malo predpísaný približne 9,6 % pacientov. Po párovaní podľa propensity skóre v pomere 1 : 3 sa porovnávalo 6 887 pacientov s predpisom a 20 305 pacientov bez predpisu; medián sledovania presahoval štyri roky. [3]</p>
+<p>Retrospektívna štúdia Jeona a spoluautorov publikovaná v roku 2025 analyzovala 71&nbsp;540 pacientov na udržiavacej hemodialýze z kórejského programu hodnotenia kvality dialýzy a z údajov zdravotného poistenia. Midodrín malo predpísaný približne 9,6 % pacientov. Po párovaní podľa propensity skóre v pomere 1 : 3 sa porovnávalo 6&nbsp;887 pacientov s predpisom a 20&nbsp;305 pacientov bez predpisu; medián sledovania presahoval štyri roky. [3]</p>
 
 <p>Odhadované päťročné prežívanie bolo 58,0 % v skupine s midodrínom a 62,6 % v skupine bez neho (p &lt; 0,001). Upravený pomer rizík celkovej mortality dosiahol 1,17 (95 % IS 1,13 až 1,22). Rozdiel v kombinovanom kardiovaskulárnom ukazovateli nebol štatisticky významný (upravený pomer rizík 0,99; 95 % IS 0,92 až 1,06). [3]</p>
 
@@ -160,12 +160,12 @@ $articles[] = [
       <td>1,00</td>
     </tr>
     <tr>
-      <th scope="row">Nižšia expozícia (menej než 30 tabliet za 6 mesiacov)</th>
+      <th scope="row">Nižšia expozícia (menej než 30 tabliet za 6&nbsp;mesiacov)</th>
       <td>63,2 %</td>
       <td>0,99 (95 % IS 0,93 až 1,05) – <strong>bez signifikantného rozdielu</strong></td>
     </tr>
     <tr>
-      <th scope="row">Vyššia expozícia (30 a viac tabliet za 6 mesiacov)</th>
+      <th scope="row">Vyššia expozícia (30 a viac tabliet za 6&nbsp;mesiacov)</th>
       <td>55,3 %</td>
       <td>1,27 (95 % IS 1,21 až 1,33)</td>
     </tr>
@@ -186,7 +186,7 @@ $articles[] = [
 
 <p>Interpretáciu obmedzuje predovšetkým <strong>skreslenie indikáciou</strong>, respektíve skreslenie závažnosťou: pacienti dostávajúci midodrín majú spravidla závažnejšiu hypotenziu, výraznejšiu autonómnu dysfunkciu alebo horší celkový zdravotný stav. Ani párovanie podľa propensity skóre nedokáže odstrániť rozdiely v charakteristikách, ktoré neboli spoľahlivo zaznamenané.</p>
 
-<p>V kórejskej štúdii boli tieto limity pomenované otvorene. Súbor údajov neobsahoval klinické údaje o IDH a pre IDH neexistuje kód MKCH-10, takže frekvenciu ani závažnosť hypotenzných epizód nebolo možné zachytiť. Autori preto použili náhradný ukazovateľ – predpis najmenej 500 ml fyziologického roztoku za šesť mesiacov – a súvislosť s mortalitou pretrvávala v oboch podskupinách. Nebolo tiež možné zistiť, či sa u sledovaných pacientov primerane uplatňovali ostatné opatrenia na prevenciu IDH. [3]</p>
+<p>V kórejskej štúdii boli tieto limity pomenované otvorene. Súbor údajov neobsahoval klinické údaje o IDH a pre IDH neexistuje kód MKCH-10, takže frekvenciu ani závažnosť hypotenzných epizód nebolo možné zachytiť. Autori preto použili náhradný ukazovateľ – predpis najmenej 500&nbsp;ml fyziologického roztoku za šesť mesiacov – a súvislosť s mortalitou pretrvávala v oboch podskupinách. Nebolo tiež možné zistiť, či sa u sledovaných pacientov primerane uplatňovali ostatné opatrenia na prevenciu IDH. [3]</p>
 
 <p>Ďalším kontextom je výrazná variabilita používania. V kórejskej kohorte dostávalo midodrín približne 10 % pacientov, v americkom prieskume z roku 2005 ho na proaktívne riešenie IDH používalo okolo 30 % oslovených pracovísk, zatiaľ čo americká práca z roku 2018 uvádza len 0,3 % pacientov. Americký regulačný úrad v roku 2010 dokonca navrhol zrušiť registráciu midodrínu pre nedostatočné poregistračné údaje o účinnosti; návrh bol po nesúhlase odbornej verejnosti stiahnutý. [3]</p>
 
@@ -210,7 +210,7 @@ $articles[] = [
 
 <p>Antihypertenzíva sa nemajú automaticky vynechávať pred každou dialýzou. Rozhodnutie má vychádzať z konkrétneho lieku, jeho indikácie, farmakokinetiky a priebehu krvného tlaku. V kórejskej kohorte mala približne polovica pacientov užívajúcich midodrín súčasne predpísané antihypertenzívum a práve táto kombinácia vykazovala najvyšší trend kardiovaskulárneho rizika. [3]</p>
 
-<p>V publikovanej praxi sa pri IDH opisujú perorálne dávky približne <strong>2,5 až 10 mg podané 15 až 30 minút pred výkonom</strong>. Ide o opis používaných režimov v zahrnutých štúdiách, nie o univerzálne dávkovacie odporúčanie. Začiatočná dávka, prípadná titrácia a načasovanie musia rešpektovať individuálne riziká a dokumentáciu konkrétneho prípravku. [1]</p>
+<p>V publikovanej praxi sa pri IDH opisujú perorálne dávky približne <strong>2,5 až 10&nbsp;mg podané 15 až 30&nbsp;minút pred výkonom</strong>. Ide o opis používaných režimov v zahrnutých štúdiách, nie o univerzálne dávkovacie odporúčanie. Začiatočná dávka, prípadná titrácia a načasovanie musia rešpektovať individuálne riziká a dokumentáciu konkrétneho prípravku. [1]</p>
 
 <p>Rutinné pridávanie druhej dávky počas dialýzy nemá dostatočne pevný dôkazový základ. Pred jej zvažovaním treba posúdiť príčinu hypotenzie, predchádzajúcu dávku, pulz, aktuálny tlak a zostávajúci čas výkonu. Pri pohľade na dávkovo závislý mortalitný signál je eskalácia frekvencie dávok práve tým postupom, ktorý si vyžaduje najväčšiu zdržanlivosť.</p>
 
@@ -220,7 +220,7 @@ $articles[] = [
 
 <h3>Hypertenzia v ľahu</h3>
 
-<p>Najvýznamnejším rizikom je výrazné zvýšenie krvného tlaku v ľahu. Americká lieková informácia naň upozorňuje osobitným zvýrazneným varovaním. Hypertenzia sa môže objaviť aj v sede. Registračná dokumentácia odporúča pravidelné meranie tlaku, poučenie pacienta, aby bezodkladne hlásil palpitácie, bolesť na hrudníku, bolesť hlavy alebo rozmazané videnie, a <strong>ukončenie liečby pri tlaku nad 180/100 mmHg</strong> alebo pri jeho výraznom kolísaní. [5]</p>
+<p>Najvýznamnejším rizikom je výrazné zvýšenie krvného tlaku v ľahu. Americká lieková informácia naň upozorňuje osobitným zvýrazneným varovaním. Hypertenzia sa môže objaviť aj v sede. Registračná dokumentácia odporúča pravidelné meranie tlaku, poučenie pacienta, aby bezodkladne hlásil palpitácie, bolesť na hrudníku, bolesť hlavy alebo rozmazané videnie, a <strong>ukončenie liečby pri tlaku nad 180/100&nbsp;mmHg</strong> alebo pri jeho výraznom kolísaní. [5]</p>
 
 <p>Pri ortostatickej hypotenzii sa dávky plánujú na denný čas, keď pacient potrebuje byť vo vzpriamenej polohe; večerné podávanie sa obmedzuje podľa príslušného SPC. Tieto zásady však nemožno mechanicky preniesť na dialyzovaného pacienta v polohovateľnom kresle.</p>
 
@@ -240,7 +240,7 @@ $articles[] = [
 
 <h3>Kontraindikácie treba viazať na konkrétny prípravok</h3>
 
-<p>Zoznamy kontraindikácií sa medzi dokumentáciami líšia. Slovenské a európske znenia uvádzajú precitlivenosť na liečivo, závažné obliterujúce a spastické cievne ochorenia, akútne ochorenie obličiek, závažné poškodenie obličiek a hyperpláziu prostaty so zvýšenou tvorbou reziduálneho moču. [6] Britská dokumentácia dopĺňa akútnu nefritídu a kvantifikuje renálnu hranicu klírensom kreatinínu pod 30 ml/min. [5] Americká dokumentácia uvádza aj závažné organické ochorenie srdca, retenciu moču, feochromocytóm a tyreotoxikózu.</p>
+<p>Zoznamy kontraindikácií sa medzi dokumentáciami líšia. Slovenské a európske znenia uvádzajú precitlivenosť na liečivo, závažné obliterujúce a spastické cievne ochorenia, akútne ochorenie obličiek, závažné poškodenie obličiek a hyperpláziu prostaty so zvýšenou tvorbou reziduálneho moču. [6] Britská dokumentácia dopĺňa akútnu nefritídu a kvantifikuje renálnu hranicu klírensom kreatinínu pod 30&nbsp;ml/min. [5] Americká dokumentácia uvádza aj závažné organické ochorenie srdca, retenciu moču, feochromocytóm a tyreotoxikózu.</p>
 
 <p>Glaukóm s uzavretým uhlom preto nemožno bez uvedenia konkrétneho SPC prezentovať ako univerzálnu kontraindikáciu všetkých prípravkov s midodrínom. Pred použitím je potrebné overiť aktuálne platné znenie SPC konkrétneho prípravku dostupného na pracovisku.</p>
 
@@ -311,9 +311,9 @@ $articles[] = [
 
 <p><em>4. Kanbay M, Ertuglu LA, Afsar B, Ozdogan E, Siriopol D, Covic A, Basile C, Ortiz A. An update review of intradialytic hypotension: concept, risk factors, clinical implications and management. Clinical Kidney Journal. 2020;13(6):981–993. <a href="https://doi.org/10.1093/ckj/sfaa078" target="_blank" rel="noopener noreferrer">DOI: 10.1093/ckj/sfaa078</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/33391741/" target="_blank" rel="noopener noreferrer">PubMed, PMID 33391741</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7769545/" target="_blank" rel="noopener noreferrer">voľne dostupný plný text</a>.</em></p>
 
-<p><em>5. Summary of Product Characteristics: Midodrine 5 mg Tablets, časti 4.1, 4.3, 4.4 a 5.2. Electronic Medicines Compendium, Spojené kráľovstvo. <a href="https://www.medicines.org.uk/emc/product/12496/smpc" target="_blank" rel="noopener noreferrer">Znenie SmPC na emc</a>. Nejde o slovenské SPC; slúži ako kvantifikované európske znenie renálnych kontraindikácií a farmakokinetiky.</em></p>
+<p><em>5. Summary of Product Characteristics: Midodrine 5&nbsp;mg Tablets, časti 4.1, 4.3, 4.4 a 5.2. Electronic Medicines Compendium, Spojené kráľovstvo. <a href="https://www.medicines.org.uk/emc/product/12496/smpc" target="_blank" rel="noopener noreferrer">Znenie SmPC na emc</a>. Nejde o slovenské SPC; slúži ako kvantifikované európske znenie renálnych kontraindikácií a farmakokinetiky.</em></p>
 
-<p><em>6. Súhrn charakteristických vlastností lieku GUTRON 2,5 mg tablety (midodríniumchlorid), časti 4.1 až 4.4. Údaje o kontraindikáciách boli overené v znení dostupnom na slovenských liekových databázach (<a href="https://www.adc.sk/databazy/produkty/spc/gutron-2-5-mg-678924.html" target="_blank" rel="noopener noreferrer">ADC.sk</a>). Pred použitím je potrebné overiť aktuálne platné znenie SPC konkrétneho prípravku.</em></p>
+<p><em>6. Súhrn charakteristických vlastností lieku GUTRON 2,5&nbsp;mg tablety (midodríniumchlorid), časti 4.1 až 4.4. Údaje o kontraindikáciách boli overené v znení dostupnom na slovenských liekových databázach (<a href="https://www.adc.sk/databazy/produkty/spc/gutron-2-5-mg-678924.html" target="_blank" rel="noopener noreferrer">ADC.sk</a>). Pred použitím je potrebné overiť aktuálne platné znenie SPC konkrétneho prípravku.</em></p>
 
 <p><em>Bibliografické údaje zdrojov č. 1 až 4 boli overené cez PubMed, vrátane plných textov zdrojov č. 3 a 4 v PubMed Central.</em></p>
 HTML,

@@ -2,7 +2,7 @@
 
 /**
  * add_primarna-alebo-latkou-vyvolana-psychoza-diagnostika_article.php
- * Primarna vs latkou vyvolana psychoza - diferencialna diagnostika a akutna liecba.
+ * Primarna vs latkou vyvolana psychoza - diferencialna diagnostika a akútna liečba.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -58,7 +58,7 @@ $articles[] = [
 
 <p>Často sa uvádza, že pretrvávanie psychózy dlhšie ako približne jeden mesiac po ukončení užívania látky svedčí pre primárnu psychotickú poruchu. Ide o užitočné diagnostické vodidlo, <strong>nie o biologicky absolútnu hranicu</strong>.</p>
 
-<p>Pretrvávanie príznakov približne mesiac po skončení akútnej intoxikácie alebo abstinencie má viesť k dôkladnému prehodnoteniu diagnózy. Nemožno však mechanicky tvrdiť, že psychóza trvajúca 29 dní je látková a psychóza trvajúca 31 dní primárna. Priebeh ovplyvňujú vlastnosti a dávka látky, opakované alebo kombinované užívanie, neistota o skutočnej abstinencii, individuálna zraniteľnosť, predchádzajúce epizódy a súčasné neurologické alebo metabolické ochorenie. Definitívna diagnóza môže vyžadovať dlhodobejšie sledovanie.</p>
+<p>Pretrvávanie príznakov približne mesiac po skončení akútnej intoxikácie alebo abstinencie má viesť k dôkladnému prehodnoteniu diagnózy. Nemožno však mechanicky tvrdiť, že psychóza trvajúca 29&nbsp;dní je látková a psychóza trvajúca 31&nbsp;dní primárna. Priebeh ovplyvňujú vlastnosti a dávka látky, opakované alebo kombinované užívanie, neistota o skutočnej abstinencii, individuálna zraniteľnosť, predchádzajúce epizódy a súčasné neurologické alebo metabolické ochorenie. Definitívna diagnóza môže vyžadovať dlhodobejšie sledovanie.</p>
 
 <h2>Ktoré príznaky pomáhajú a ktoré zavádzajú</h2>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h2>Ako často látková psychóza prejde do schizofrénie</h2>
 
-<p>K tejto otázke existujú prekvapivo dobré údaje. Systematický prehľad a metaanalýza Benjamina Murrieho a spolupracovníkov zahrnula 50 štúdií so 79 odhadmi prechodu u 40 783 osôb. Látkou vyvolaná psychóza prešla do schizofrénie u <strong>25 % (95 % IS 18–35 %)</strong>. Rozdiely podľa látky sú však podstatné:</p>
+<p>K tejto otázke existujú prekvapivo dobré údaje. Systematický prehľad a metaanalýza Benjamina Murrieho a spolupracovníkov zahrnula 50 štúdií so 79 odhadmi prechodu u 40&nbsp;783 osôb. Látkou vyvolaná psychóza prešla do schizofrénie u <strong>25 % (95 % IS 18–35 %)</strong>. Rozdiely podľa látky sú však podstatné:</p>
 
 <div class="table-responsive" role="region" aria-label="Ako často látková psychóza prejde do schizofrénie" tabindex="0">
 <table>
@@ -199,7 +199,7 @@ $articles[] = [
   <li><strong>Maja Skikic, Jose Alberto Arriola.</strong> <em>First Episode Psychosis Medical Workup: Evidence-Informed Recommendations and Introduction to a Clinically Guided Approach.</em> Child and Adolescent Psychiatric Clinics of North America. 2020;29(1):15–28. doi: 10.1016/j.chc.2019.08.010. <a href="https://pubmed.ncbi.nlm.nih.gov/31708044/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a autorstvo všetkých citovaných prác boli overené v Europe PMC. Číselné údaje o prechode do schizofrénie – 50 štúdií, 79 odhadov, 40 783 osôb, celkovo 25 % (95 % IS 18 – 35 %), kanabis 34 % (25 – 46 %), halucinogény 26 % (14 – 43 %), amfetamíny 22 % (14 – 34 %), opioidy 12 %, alkohol 10 %, sedatíva 9 % a 36 % pri iných krátkych psychózach – boli overené proti zneniu abstraktu metaanalýzy. Zdrojový článok Medscape uvádza niektoré tvrdenia kategorickejšie, než dovoľujú dôkazy; v tomto spracovaní sú <strong>zámerne zmiernené</strong> – týka sa to najmä hranice jedného mesiaca ako rozhodujúceho kritéria, výpovednej hodnoty zrakových a hmatových halucinácií, paušálneho uprednostňovania antipsychotík prvej generácie, tvrdenia o odlišnom účinku antipsychotík na halucinácie a bludy a metafory „zapnutia spiaceho génu“. Nefrologická časť, zoznam varovných znakov a praktické postupy sú <strong>vlastným odborným spracovaním</strong>. Článok má informačný charakter; akútna psychóza vyžaduje individuálne psychiatrické a somatické posúdenie a pri ohrození pacienta alebo okolia ide o urgentný stav.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a autorstvo všetkých citovaných prác boli overené v Europe PMC. Číselné údaje o prechode do schizofrénie – 50 štúdií, 79 odhadov, 40&nbsp;783 osôb, celkovo 25 % (95 % IS 18 – 35 %), kanabis 34 % (25 – 46 %), halucinogény 26 % (14 – 43 %), amfetamíny 22 % (14 – 34 %), opioidy 12 %, alkohol 10 %, sedatíva 9 % a 36 % pri iných krátkych psychózach – boli overené proti zneniu abstraktu metaanalýzy. Zdrojový článok Medscape uvádza niektoré tvrdenia kategorickejšie, než dovoľujú dôkazy; v tomto spracovaní sú <strong>zámerne zmiernené</strong> – týka sa to najmä hranice jedného mesiaca ako rozhodujúceho kritéria, výpovednej hodnoty zrakových a hmatových halucinácií, paušálneho uprednostňovania antipsychotík prvej generácie, tvrdenia o odlišnom účinku antipsychotík na halucinácie a bludy a metafory „zapnutia spiaceho génu“. Nefrologická časť, zoznam varovných znakov a praktické postupy sú <strong>vlastným odborným spracovaním</strong>. Článok má informačný charakter; akútna psychóza vyžaduje individuálne psychiatrické a somatické posúdenie a pri ohrození pacienta alebo okolia ide o urgentný stav.</em></p>
 HTML,
 ];
 

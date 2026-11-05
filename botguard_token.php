@@ -16,7 +16,7 @@ declare(strict_types=1);
  * priestor (nemieša sa s ľudskou prevádzkou z tej istej IP) a žiadny ban.
  *
  * Spustenie (na serveri alebo lokálne — kľúč musí byť ten istý):
- *   php botguard_token.php --tool=ebook-builder              # platnosť 24 h
+ *   php botguard_token.php --tool=ebook-builder              # platnosť 24 h
  *   php botguard_token.php --tool=ebook-builder --ttl=7d     # maximum
  *   php botguard_token.php --tool=ebook-builder --curl       # hotový príklad
  *   php botguard_token.php --verify=nefro1.ebook-builder...  # kontrola tokenu

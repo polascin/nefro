@@ -298,13 +298,13 @@ $schemaWebApp = [
 
                     <article class="feature-card calculator-card">
                         <h3>eGFR podľa EKFC (full age spectrum)</h3>
-                        <p>Rovnica European Kidney Function Consortium (Pottel 2021/2023) z kreatinínu, cystatínu C alebo kombinovane. Reškálovanie na hodnotu Q namiesto rasového koeficientu, jediná rovnica pre vek 2 – 120 rokov bez skoku pri prechode z pediatrie, presnejšia v hornom pásme filtrácie než CKD-EPI 2021. S rozpisom výpočtu krok po kroku a porovnaním s CKD-EPI.</p>
+                        <p>Rovnica European Kidney Function Consortium (Pottel 2021/2023) z kreatinínu, cystatínu C alebo kombinovane. Reškálovanie na hodnotu Q namiesto rasového koeficientu, jediná rovnica pre vek 2 – 120 rokov bez skoku pri prechode z pediatrie, presnejšia v hornom pásme filtrácie než CKD-EPI 2021. S rozpisom výpočtu krok po kroku a porovnaním s CKD-EPI.</p>
                         <a href="calculator_ekfc.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">
                         <h3>24-h klírens kreatinínu (meraný)</h3>
-                        <p>Meraný klírens kreatinínu zo zberu moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²). Vhodný pri atypickej svalovej hmote či neistom eGFR.</p>
+                        <p>Meraný klírens kreatinínu zo zberu moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²). Vhodný pri atypickej svalovej hmote či neistom eGFR.</p>
                         <a href="calculator_crcl_24h.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
@@ -340,7 +340,7 @@ $schemaWebApp = [
 
                     <article class="feature-card calculator-card">
                         <h3>KFRE: Kidney Failure Risk Equation</h3>
-                        <p>Predikcia rizika potreby dialýzy alebo transplantácie obličky na 2 a 5 rokov (Tangri 4-parametrová).</p>
+                        <p>Predikcia rizika potreby dialýzy alebo transplantácie obličky na 2 a 5 rokov (Tangri 4-parametrová).</p>
                         <a href="calculator_kfre.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 

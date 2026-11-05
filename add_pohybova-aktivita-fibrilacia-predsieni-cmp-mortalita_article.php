@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: pohybova aktivita pri fibrilacii predsieni.
+ * Odborný článok: pohybova aktivita pri fibrilacii predsieni.
  */
 
 // Ochrana - len admin alebo CLI
@@ -25,7 +25,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" rel="noopener noreferrer" target="_blank"><img src="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" alt="Srdce s nepravidelným rytmom; zlatý prúd pohybu ho posilňuje, k zrazenine však vedie samostatné modré vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pohyb znižuje riziko, no zrazeniny nerieši – antikoagulácia zostáva samostatnou a nenahraditeľnou vetvou.</figcaption></figure>
 
-<p class="article-dek"><em>Analýza 87 340 účastníkov štúdií HUNT a Tromsø spája aj nízku úroveň pohybovej aktivity s nižším rizikom cievnej mozgovej príhody a úmrtia. Podobná asociácia sa pozorovala u ľudí s fibriláciou predsiení aj bez nej. Výsledok je klinicky povzbudivý, ale observačná štúdia nedokazuje kauzalitu a pohybová aktivita nenahrádza antikoagulačnú liečbu indikovanú podľa tromboembolického rizika.</em></p>
+<p class="article-dek"><em>Analýza 87&nbsp;340 účastníkov štúdií HUNT a Tromsø spája aj nízku úroveň pohybovej aktivity s nižším rizikom cievnej mozgovej príhody a úmrtia. Podobná asociácia sa pozorovala u ľudí s fibriláciou predsiení aj bez nej. Výsledok je klinicky povzbudivý, ale observačná štúdia nedokazuje kauzalitu a pohybová aktivita nenahrádza antikoagulačnú liečbu indikovanú podľa tromboembolického rizika.</em></p>
 
 <h2>Prečo je táto otázka dôležitá</h2>
 
@@ -37,15 +37,15 @@ $articles[] = [
 
 <h2>Čo skúmala nórska analýza</h2>
 
-<p>Johansen a spolupracovníci spojili údaje zo štúdií HUNT a Tromsø, dvoch veľkých populačných kohort v Nórsku. Do analýzy zaradili <strong>87 340 dospelých</strong>; priemerný vek bol 50,9 roka a 47,4 % tvorili muži. Fibrilácia predsiení bola evidovaná u 6 539 účastníkov.</p>
+<p>Johansen a spolupracovníci spojili údaje zo štúdií HUNT a Tromsø, dvoch veľkých populačných kohort v Nórsku. Do analýzy zaradili <strong>87&nbsp;340 dospelých</strong>; priemerný vek bol 50,9 roka a 47,4 % tvorili muži. Fibrilácia predsiení bola evidovaná u 6&nbsp;539 účastníkov.</p>
 
 <p>Údaje o fibrilácii predsiení, cievnych mozgových príhodách a úmrtiach pochádzali z národných zdravotných registrov. Ak sa fibrilácia predsiení objavila až počas sledovania, účastník bol od času diagnózy zaradený do skupiny s arytmiou. Takýto časovo aktualizovaný prístup je presnejší než posudzovanie fibrilácie predsiení iba pri vstupe do štúdie.</p>
 
 <p>Počas mediánu sledovania 13,5 roka sa zaznamenalo:</p>
 
 <ul>
-  <li><strong>3 415 cievnych mozgových príhod</strong>,</li>
-  <li><strong>7 833 úmrtí zo všetkých príčin</strong>.</li>
+  <li><strong>3&nbsp;415 cievnych mozgových príhod</strong>,</li>
+  <li><strong>7&nbsp;833 úmrtí zo všetkých príčin</strong>.</li>
 </ul>
 
 <p>Približne 87 % cievnych mozgových príhod bolo ischemických a 13 % predstavovali intracerebrálne krvácania. Autori použili multivariabilne upravené flexibilné parametrické modely prežívania.</p>
@@ -171,7 +171,7 @@ $articles[] = [
 
 <h2>Chronická choroba obličiek mení praktické rozhodovanie</h2>
 
-<p>Chronická choroba obličiek je spojená s vyšším výskytom fibrilácie predsiení, cievnej mozgovej príhody, krvácania aj mortality. Pohyb môže zlepšovať krvný tlak, svalovú silu, fyzickú kapacitu, inzulínovú senzitivitu a kvalitu života. KDIGO odporúča dospelým s CKD podľa tolerancie aspoň 150 minút stredne intenzívnej aktivity týždenne a obmedzovanie sedavého správania.</p>
+<p>Chronická choroba obličiek je spojená s vyšším výskytom fibrilácie predsiení, cievnej mozgovej príhody, krvácania aj mortality. Pohyb môže zlepšovať krvný tlak, svalovú silu, fyzickú kapacitu, inzulínovú senzitivitu a kvalitu života. KDIGO odporúča dospelým s CKD podľa tolerancie aspoň 150&nbsp;minút stredne intenzívnej aktivity týždenne a obmedzovanie sedavého správania.</p>
 
 <p>Nórska štúdia však nebola navrhnutá na samostatné hodnotenie jednotlivých kategórií CKD ani dialyzovaných pacientov. Jej odhady preto nemožno automaticky preniesť na človeka s pokročilým zlyhaním obličiek, výraznou anémiou, intradialyzačnou hypotenziou alebo vysokou krehkosťou.</p>
 
@@ -246,9 +246,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

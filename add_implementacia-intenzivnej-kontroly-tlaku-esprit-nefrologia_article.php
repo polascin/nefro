@@ -36,7 +36,7 @@ $articles[] = [
     'content'      => <<<'NEFRO_HTML'
 <figure><a href="img/implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia.webp" alt="Tlakomerová manžeta, ktorej krivka klesá po malých svetelných schodoch až k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prísnejší cieľ sa nedosahuje jedným zásahom, ale postupnosťou krokov, ktoré musia vydržať v čase.</figcaption></figure>
 
-<p class="article-dek"><em>Post hoc analýza štúdie ESPRIT ukazuje, že systolický cieľ pod 120 mm Hg je dosiahnuteľný aj v primárnej starostlivosti – ak sa implementuje štruktúrovane a protokolovo. Podstatou nie je otázka „aké lieky“, ale „ako je nastavený proces“.</em></p>
+<p class="article-dek"><em>Post hoc analýza štúdie ESPRIT ukazuje, že systolický cieľ pod 120&nbsp;mm Hg je dosiahnuteľný aj v primárnej starostlivosti – ak sa implementuje štruktúrovane a protokolovo. Podstatou nie je otázka „aké lieky“, ale „ako je nastavený proces“.</em></p>
 
 <h2>1. Prečo je téma intenzívnej kontroly tlaku dnes taká aktuálna</h2>
 <p>Intenzívna kontrola krvného tlaku (TK) sa v posledných rokoch posúva z roviny „akademickej hypotézy“ do roviny praktickej implementácie. Mnohé medzinárodné aj národné odporúčania pracujú s TK ako s jedným z kľúčových modifikovateľných rizikových faktorov, a preto sa očakávania posúvajú k nižším cieľom.</p>
@@ -44,16 +44,16 @@ $articles[] = [
 <p>Pre klinika z toho vyplýva, že nejde iba o „cieľový tlak“, ale najmä o to, <strong>ako</strong> sa k nemu pacient dostane, ako rýchlo sa titruje liečba, ako sa sleduje tolerancia a či sa merania robia konzistentne.</p>
 
 <h2>2. Čo prináša zdrojový materiál: ESPRIT a post hoc analýza</h2>
-<p>Zdrojový text je komentár k výsledkom post hoc analýzy štúdie ESPRIT (Effects of Intensive Systolic Blood Pressure Lowering Treatment in Reducing Risk of Vascular Events). Zdôrazňuje sa v ňom, že ESPRIT bola jedinou štúdiou dostatočne dimenzovanou na to, aby <strong>cieľ intenzívneho ramena reálne smeroval k priemernému systolickému TK pod 120 mm Hg</strong>.</p>
+<p>Zdrojový text je komentár k výsledkom post hoc analýzy štúdie ESPRIT (Effects of Intensive Systolic Blood Pressure Lowering Treatment in Reducing Risk of Vascular Events). Zdôrazňuje sa v ňom, že ESPRIT bola jedinou štúdiou dostatočne dimenzovanou na to, aby <strong>cieľ intenzívneho ramena reálne smeroval k priemernému systolickému TK pod 120&nbsp;mm Hg</strong>.</p>
 <p>Pre implementáciu je dôležité:</p>
 <ul>
-  <li>intenzívne rameno bolo definované cieľom <strong>pod 120 mm Hg</strong> (štandardné rameno pod 140 mm Hg),</li>
+  <li>intenzívne rameno bolo definované cieľom <strong>pod 120&nbsp;mm Hg</strong> (štandardné rameno pod 140&nbsp;mm Hg),</li>
   <li>analýza sa zamerala na pacientov s hypertenziou a vysokým kardiovaskulárnym rizikom,</li>
   <li>dôraz sa kládol aj na <strong>dĺžku trvania hypertenzie</strong> a na stav kontroly TK na začiatku.</li>
 </ul>
 
 <h3>2.1. Uskutočniteľnosť v praxi</h3>
-<p>V intenzívnom ramene (cieľ pod 120 mm Hg) dosiahlo podľa zdroja takúto kontrolu <strong>62,5 % pacientov</strong>. Zároveň to nebolo spojené s „extrémnou“ eskaláciou liečby:</p>
+<p>V intenzívnom ramene (cieľ pod 120&nbsp;mm Hg) dosiahlo podľa zdroja takúto kontrolu <strong>62,5 % pacientov</strong>. Zároveň to nebolo spojené s „extrémnou“ eskaláciou liečby:</p>
 <ul>
   <li>približne <strong>o 1,3 antihypertenzíva viac</strong> oproti štandardnému ramenu,</li>
   <li>a približne <strong>o 1,5 návštevy v ambulancii viac</strong> v horizonte jedného roka.</li>
@@ -140,7 +140,7 @@ $articles[] = [
 <p>Aj tu zdroj formuluje skôr princíp: riziko možno optimalizovať, ak je monitorovanie kvalitné a klinické rozhodovanie sa neponecháva na náhodu.</p>
 
 <h2>8. Zhrnutie: najdôležitejšie posolstvo</h2>
-<p>Článok stojí na myšlienke, že intenzívna kontrola systolického TK (cieľ pod 120 mm Hg) je uskutočniteľná aj v prostredí primárnej starostlivosti, ak sa implementuje štruktúrovane. Kľúčom nie je iba cieľová hodnota, ale:</p>
+<p>Článok stojí na myšlienke, že intenzívna kontrola systolického TK (cieľ pod 120&nbsp;mm Hg) je uskutočniteľná aj v prostredí primárnej starostlivosti, ak sa implementuje štruktúrovane. Kľúčom nie je iba cieľová hodnota, ale:</p>
 <ul>
   <li>protokolová titrácia,</li>
   <li>konzistentné monitorovanie,</li>

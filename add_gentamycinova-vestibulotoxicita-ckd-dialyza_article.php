@@ -60,7 +60,7 @@ $articles[] = [
 
 <h3>Terapeutické monitorovanie musí rešpektovať dávkovací režim</h3>
 
-<p>Cieľové koncentrácie nemožno prenášať medzi rozdielnymi režimami. Nasledujúce hodnoty sú prevzaté z citovaného SmPC Gentamicin B. Braun; <strong>1 µg/ml zodpovedá 1 mg/l</strong>.</p>
+<p>Cieľové koncentrácie nemožno prenášať medzi rozdielnymi režimami. Nasledujúce hodnoty sú prevzaté z citovaného SmPC Gentamicin B. Braun; <strong>1 µg/ml zodpovedá 1&nbsp;mg/l</strong>.</p>
 
 <div class="table-responsive" role="region" aria-label="Koncentrácie gentamycínu podľa dávkovacieho režimu v citovanom SmPC" tabindex="0">
 <table>
@@ -74,32 +74,32 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Dvakrát denne</th>
-      <td>Minimálna koncentrácia pred ďalšou dávkou ≤ 2 mg/l</td>
+      <td>Minimálna koncentrácia pred ďalšou dávkou ≤ 2&nbsp;mg/l</td>
       <td>Odber musí byť správne načasovaný tesne pred nasledujúcou dávkou.</td>
     </tr>
     <tr>
       <th scope="row">Raz denne</th>
-      <td>Minimálna koncentrácia pred ďalšou dávkou ≤ 1 mg/l</td>
+      <td>Minimálna koncentrácia pred ďalšou dávkou ≤ 1&nbsp;mg/l</td>
       <td>SmPC neodporúča režim raz denne pri závažnom zlyhávaní obličiek.</td>
     </tr>
     <tr>
       <th scope="row">Konvenčné viacnásobné denné dávkovanie</th>
-      <td>Maximálna koncentrácia po podaní nemá prekročiť 10–12 mg/l</td>
-      <td>Táto hranica neplatí pre režim raz denne; pri ňom SmPC uvádza terapeutické maximálne koncentrácie 20–30 mg/l.</td>
+      <td>Maximálna koncentrácia po podaní nemá prekročiť 10–12&nbsp;mg/l</td>
+      <td>Táto hranica neplatí pre režim raz denne; pri ňom SmPC uvádza terapeutické maximálne koncentrácie 20–30&nbsp;mg/l.</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>U pacienta so závažnou poruchou funkcie obličiek alebo na dialýze sa dávka, interval, čas odberu aj interpretácia koncentrácie musia individualizovať podľa indikácie, dialyzačnej modality a príslušného protokolu terapeutického monitorovania. SmPC zároveň odporúča monitorovať renálnu, sluchovú aj vestibulárnu funkciu, vyhýbať sa predĺženej liečbe a, ak je to možné, obmedziť jej trvanie na 7 až 10 dní. <a href="#odborny-zdroj-3">[3]</a></p>
+<p>U pacienta so závažnou poruchou funkcie obličiek alebo na dialýze sa dávka, interval, čas odberu aj interpretácia koncentrácie musia individualizovať podľa indikácie, dialyzačnej modality a príslušného protokolu terapeutického monitorovania. SmPC zároveň odporúča monitorovať renálnu, sluchovú aj vestibulárnu funkciu, vyhýbať sa predĺženej liečbe a, ak je to možné, obmedziť jej trvanie na 7 až 10&nbsp;dní. <a href="#odborny-zdroj-3">[3]</a></p>
 
 <p>Uvedené koncentrácie nie sú absolútnou hranicou bezpečnosti. Gentamycínová vestibulotoxicita bola opísaná aj pri odporúčaných dávkach a sérových koncentráciách. Pri opakovanej liečbe a u rizikových pacientov zostáva terapeutické monitorovanie nevyhnutné, ani ono však nedokáže spoľahlivo predpovedať individuálnu vestibulárnu náchylnosť. <a href="#odborny-zdroj-5">[5]</a></p>
 
 <h2>Samotná minimálna koncentrácia nevystihuje kumulatívnu expozíciu</h2>
 
-<p>V historickej retrospektívnej štúdii 23 pacientov na dlhodobej hemodialýze liečených gentamycínom vznikli u siedmich známky vestibulárnej dysfunkcie. Skupiny s toxicitou a bez toxicity sa významne líšili vekom, celkovou dávkou v mg/kg a dĺžkou liečby, nie však priemernými maximálnymi a minimálnymi koncentráciami. Regresná analýza naznačila výrazný nárast rizika pri kumulatívnej dávke približne <strong>17,5 mg/kg</strong>. <a href="#odborny-zdroj-4">[4]</a></p>
+<p>V historickej retrospektívnej štúdii 23 pacientov na dlhodobej hemodialýze liečených gentamycínom vznikli u siedmich známky vestibulárnej dysfunkcie. Skupiny s toxicitou a bez toxicity sa významne líšili vekom, celkovou dávkou v mg/kg a dĺžkou liečby, nie však priemernými maximálnymi a minimálnymi koncentráciami. Regresná analýza naznačila výrazný nárast rizika pri kumulatívnej dávke približne <strong>17,5&nbsp;mg/kg</strong>. <a href="#odborny-zdroj-4">[4]</a></p>
 
-<p>Hodnota 17,5 mg/kg <strong>nie je univerzálny toxický prah</strong>. Ide o výsledok malej kohorty z roku 1978 pri vtedajšom dávkovaní a nemožno ho mechanicky preniesť na každého pacienta. Štúdia však ukazuje, že minimálnu koncentráciu treba posudzovať spolu s trvaním liečby a celkovou kumulatívnou dávkou.</p>
+<p>Hodnota 17,5&nbsp;mg/kg <strong>nie je univerzálny toxický prah</strong>. Ide o výsledok malej kohorty z roku 1978 pri vtedajšom dávkovaní a nemožno ho mechanicky preniesť na každého pacienta. Štúdia však ukazuje, že minimálnu koncentráciu treba posudzovať spolu s trvaním liečby a celkovou kumulatívnou dávkou.</p>
 
 <h2>Ako rýchlo môže toxicita vzniknúť</h2>
 
@@ -162,7 +162,7 @@ $articles[] = [
 <div class="pdf-keep-together">
   <h2>N-acetylcysteín: kochleárna prevencia nie je liečbou vestibulárnej straty</h2>
 
-  <p>N-acetylcysteín (NAC) je antioxidant a prekurzor glutatiónu. Feldman a spoluautori náhodne zaradili 53 hemodialyzovaných pacientov, ktorí dostávali gentamycín pre infekciu spojenú s dialyzačným katétrom, do skupiny so samotným gentamycínom alebo do skupiny s gentamycínom a NAC <strong>600 mg perorálne dvakrát denne</strong>. Protokol dokončilo 40 pacientov a priemerná dĺžka liečby bola takmer 15 dní. V skupine s NAC bola audiometricky definovaná ototoxicita menej častá. Štúdia však hodnotila sluch pomocou čistotónovej audiometrie, nie vestibulárnu funkciu. <a href="#odborny-zdroj-9">[9]</a></p>
+  <p>N-acetylcysteín (NAC) je antioxidant a prekurzor glutatiónu. Feldman a spoluautori náhodne zaradili 53 hemodialyzovaných pacientov, ktorí dostávali gentamycín pre infekciu spojenú s dialyzačným katétrom, do skupiny so samotným gentamycínom alebo do skupiny s gentamycínom a NAC <strong>600&nbsp;mg perorálne dvakrát denne</strong>. Protokol dokončilo 40 pacientov a priemerná dĺžka liečby bola takmer 15&nbsp;dní. V skupine s NAC bola audiometricky definovaná ototoxicita menej častá. Štúdia však hodnotila sluch pomocou čistotónovej audiometrie, nie vestibulárnu funkciu. <a href="#odborny-zdroj-9">[9]</a></p>
 </div>
 
 <p>ISPD v odporúčaniach z roku 2022 navrhuje (stupeň <strong>2B</strong>) zvážiť doplnkové perorálne podávanie NAC na prevenciu aminoglykozidovej ototoxicity u pacientov s peritoneálnou dialýzou, ktorí aminoglykozid potrebujú. Podkladom sú malé randomizované štúdie hodnotiace sluchové prahy; ani jedna nehodnotila vestibulárnu funkciu. Toto odporúčanie nemožno zovšeobecniť na prevenciu gentamycínovej vestibulotoxicity ani na liečbu už vzniknutej vestibulárnej straty. <a href="#odborny-zdroj-10">[10]</a></p>
@@ -175,11 +175,11 @@ $articles[] = [
 
 <p>Jedným zo základných cvičení je <strong>VOR × 1</strong>: pacient fixuje pohľad na nepohyblivý cieľ a súčasne vykonáva horizontálne alebo vertikálne pohyby hlavy. Fyzioterapeut musí zvoliť náročnosť, rýchlosť a rozsah podľa objektívneho nálezu, príznakov a rizika pádu.</p>
 
-<p>Pri obojstrannej vestibulárnej hypofunkcii odporúčanie uvádza ako orientačný domáci režim cvičení stabilizácie pohľadu <strong>3- až 5-krát denne, spolu 20 až 40 minút denne približne 5 až 7 týždňov</strong>. Dôkazy o presnom dávkovaní sú slabšie než dôkazy o účinnosti samotnej rehabilitácie, preto program nemožno predpisovať mechanicky. <a href="#odborny-zdroj-11">[11]</a></p>
+<p>Pri obojstrannej vestibulárnej hypofunkcii odporúčanie uvádza ako orientačný domáci režim cvičení stabilizácie pohľadu <strong>3- až 5-krát denne, spolu 20 až 40&nbsp;minút denne približne 5 až 7&nbsp;týždňov</strong>. Dôkazy o presnom dávkovaní sú slabšie než dôkazy o účinnosti samotnej rehabilitácie, preto program nemožno predpisovať mechanicky. <a href="#odborny-zdroj-11">[11]</a></p>
 
 <h3>Tréning rovnováhy a chôdze</h3>
 
-<p>Statický a dynamický tréning rovnováhy sa pri obojstrannej hypofunkcii odporúča minimálne 6 až 9 týždňov, pričom toto trvanie vychádza z expertného názoru. Program môže zahŕňať zúženie opornej bázy, státie na rôznych povrchoch, pohyb hlavy pri chôdzi, zmeny smeru, schody a úlohy s dvojitou motorickou alebo kognitívnou záťažou. Cvičenia so zatvorenými očami alebo vo výrazne zníženej viditeľnosti sa pri ťažkej strate majú vykonávať iba pod dohľadom alebo so spoľahlivým zabezpečením proti pádu. <a href="#odborny-zdroj-11">[11]</a></p>
+<p>Statický a dynamický tréning rovnováhy sa pri obojstrannej hypofunkcii odporúča minimálne 6 až 9&nbsp;týždňov, pričom toto trvanie vychádza z expertného názoru. Program môže zahŕňať zúženie opornej bázy, státie na rôznych povrchoch, pohyb hlavy pri chôdzi, zmeny smeru, schody a úlohy s dvojitou motorickou alebo kognitívnou záťažou. Cvičenia so zatvorenými očami alebo vo výrazne zníženej viditeľnosti sa pri ťažkej strate majú vykonávať iba pod dohľadom alebo so spoľahlivým zabezpečením proti pádu. <a href="#odborny-zdroj-11">[11]</a></p>
 
 <p>Izolované vôľové sakády ani plynulé sledovacie pohyby očí bez pohybu hlavy sa neodporúčajú ako samostatná liečba poruchy stabilizácie pohľadu. Cvičenia zamerané na stabilizáciu pohľadu majú zahŕňať pohyb hlavy, aby zapájali vestibulo-okulárny reflex. <a href="#odborny-zdroj-11">[11]</a></p>
 
@@ -232,7 +232,7 @@ $articles[] = [
 
 <p id="odborny-zdroj-2"><small><em><strong>2. Diagnostický konsenzus:</strong> Strupp M, Kim JS, Murofushi T, et al. Bilateral vestibulopathy: Diagnostic criteria. Consensus document of the Classification Committee of the Bárány Society. <em>J Vestib Res.</em> 2017;27(4):177–189. doi: <a href="https://doi.org/10.3233/VES-170619" target="_blank" rel="noopener noreferrer">10.3233/VES-170619</a>. PMID 29081426, PMCID PMC9249284. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9249284/" target="_blank" rel="noopener noreferrer">Plný text</a>. Erratum: <em>J Vestib Res.</em> 2023;33(1):87, doi: <a href="https://doi.org/10.3233/VES-229002" target="_blank" rel="noopener noreferrer">10.3233/VES-229002</a>, PMID 36336950.</em></small></p>
 
-<p id="odborny-zdroj-3"><small><em><strong>3. Liekové informácie:</strong> Gentamicin B. Braun 1 mg/ml a 3 mg/ml infúzny roztok. Súhrn charakteristických vlastností lieku, revízia 05/2024. <a href="https://www.sukl.sk/gentamicin-b.-braun-3-mg-ml-infuzny-roztok-80181" target="_blank" rel="noopener noreferrer">ŠÚKL</a>. Paralelne overené v britskom <a href="https://www.medicines.org.uk/emc/product/15154/smpc" target="_blank" rel="noopener noreferrer">SmPC</a>. Prístup 24. augusta 2026.</em></small></p>
+<p id="odborny-zdroj-3"><small><em><strong>3. Liekové informácie:</strong> Gentamicin B. Braun 1&nbsp;mg/ml a 3&nbsp;mg/ml infúzny roztok. Súhrn charakteristických vlastností lieku, revízia 05/2024. <a href="https://www.sukl.sk/gentamicin-b.-braun-3-mg-ml-infuzny-roztok-80181" target="_blank" rel="noopener noreferrer">ŠÚKL</a>. Paralelne overené v britskom <a href="https://www.medicines.org.uk/emc/product/15154/smpc" target="_blank" rel="noopener noreferrer">SmPC</a>. Prístup 24. augusta 2026.</em></small></p>
 
 <p id="odborny-zdroj-4"><small><em><strong>4. Hemodialyzačná kohorta:</strong> Gailiunas P Jr, Dominguez-Moreno M, Lazarus M, et al. Vestibular toxicity of gentamicin. Incidence in patients receiving long-term hemodialysis therapy. <em>Arch Intern Med.</em> 1978;138(11):1621–1624. doi: <a href="https://doi.org/10.1001/archinte.138.11.1621" target="_blank" rel="noopener noreferrer">10.1001/archinte.138.11.1621</a>. PMID 309753. <a href="https://pubmed.ncbi.nlm.nih.gov/309753/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
@@ -252,7 +252,7 @@ $articles[] = [
 
 <p><small><em><strong>Doplňujúci komentár k NAC:</strong> Tepel M. N-Acetylcysteine in the prevention of ototoxicity. <em>Kidney Int.</em> 2007;72(3):231–232. doi: <a href="https://doi.org/10.1038/sj.ki.5002299" target="_blank" rel="noopener noreferrer">10.1038/sj.ki.5002299</a>. PMID 17653228. <a href="https://pubmed.ncbi.nlm.nih.gov/17653228/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, diagnostické prahy, liekové informácie a znenie odporúčaní boli overené 24. augusta 2026. Hodnota 17,5 mg/kg pochádza z malej historickej hemodialyzačnej kohorty a nie je univerzálnym toxickým prahom. Cieľová sérová koncentrácia nevylučuje vestibulotoxicitu. Údaje o NAC sa týkajú najmä prevencie audiometricky hodnotenej kochleárnej ototoxicity, nie obnovy už stratenej vestibulárnej funkcie.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, diagnostické prahy, liekové informácie a znenie odporúčaní boli overené 24. augusta 2026. Hodnota 17,5&nbsp;mg/kg pochádza z malej historickej hemodialyzačnej kohorty a nie je univerzálnym toxickým prahom. Cieľová sérová koncentrácia nevylučuje vestibulotoxicitu. Údaje o NAC sa týkajú najmä prevencie audiometricky hodnotenej kochleárnej ototoxicity, nie obnovy už stratenej vestibulárnej funkcie.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne klinické rozhodovanie. Dávkovanie a terapeutické monitorovanie gentamycínu, ako aj rozhodnutie o prerušení alebo zmene antibiotickej liečby, musia vychádzať z miesta a závažnosti infekcie, mikrobiologického nálezu a citlivosti, funkcie obličiek, dialyzačného režimu, farmakokinetiky a platných lokálnych odporúčaní pre antibiotickú liečbu.</em></small></p>
 HTML,

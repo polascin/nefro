@@ -44,9 +44,9 @@ $articles[] = [
 
 <h2>Ako bola kohorta zostavená</h2>
 
-<p>Autori použili databázu Korean National Health Insurance Service. Zaradili pacientov, ktorí začali hemodialýzu v roku 2013 a AVF alebo AVG im vytvorili ešte pred jej začatím. Celkovo analyzovali 24 713 osôb: 20 894 s AVF a 3 819 s AVG.</p>
+<p>Autori použili databázu Korean National Health Insurance Service. Zaradili pacientov, ktorí začali hemodialýzu v roku 2013 a AVF alebo AVG im vytvorili ešte pred jej začatím. Celkovo analyzovali 24&nbsp;713 osôb: 20&nbsp;894&nbsp;s AVF a 3&nbsp;819&nbsp;s AVG.</p>
 
-<p>Interval od vytvorenia prístupu po začatie hemodialýzy rozdelili do šiestich kategórií: menej než 1 mesiac, 1 až menej než 3 mesiace, 3 až menej než 6 mesiacov, 6 až menej než 9 mesiacov, 9 až menej než 12 mesiacov a 12 až 24 mesiacov. Referenčnou kategóriou bolo 6 až menej než 9 mesiacov.</p>
+<p>Interval od vytvorenia prístupu po začatie hemodialýzy rozdelili do šiestich kategórií: menej než 1 mesiac, 1 až menej než 3&nbsp;mesiace, 3 až menej než 6&nbsp;mesiacov, 6 až menej než 9&nbsp;mesiacov, 9 až menej než 12&nbsp;mesiacov a 12 až 24&nbsp;mesiacov. Referenčnou kategóriou bolo 6 až menej než 9&nbsp;mesiacov.</p>
 
 <p>Hodnotili použitie katétra pri začatí hemodialýzy, stratu primárnej a sekundárnej priechodnosti prístupu a celkovú mortalitu. Výsledky analyzovali oddelene pre AVF a AVG.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
   <thead>
     <tr>
       <th scope="col">Prístup a interval</th>
-      <th scope="col">Výsledok oproti referencii 6 až &lt;9 mesiacov</th>
+      <th scope="col">Výsledok oproti referencii 6 až &lt;9&nbsp;mesiacov</th>
       <th scope="col">Interpretácia</th>
     </tr>
   </thead>
@@ -66,7 +66,7 @@ $articles[] = [
       <td>Najvýraznejšie nepriaznivé asociácie pri AVF</td>
     </tr>
     <tr>
-      <td>AVF, 1 až &lt;3 mesiace</td>
+      <td>AVF, 1 až &lt;3&nbsp;mesiace</td>
       <td>Použitie katétra: OR 1,85; strata primárnej priechodnosti: HR 1,16; sekundárnej priechodnosti: HR 1,12; mortalita: HR 1,25</td>
       <td>Aj tento kratší predstih bol spojený s menej priaznivými výsledkami</td>
     </tr>
@@ -76,7 +76,7 @@ $articles[] = [
       <td>Väčšina nepriaznivých asociácií pri AVG sa sústreďovala sem</td>
     </tr>
     <tr>
-      <td>AVG, 1 až &lt;3 mesiace</td>
+      <td>AVG, 1 až &lt;3&nbsp;mesiace</td>
       <td>Vyššia strata primárnej priechodnosti; abstrakt neuvádza číselný odhad</td>
       <td>Ostatné výsledky nevykazovali rovnaký nepriaznivý vzorec ako interval &lt;1 mesiac</td>
     </tr>
@@ -104,7 +104,7 @@ $articles[] = [
 
 <p>Európske odporúčanie pre dospelých uvádza, že klinicky vhodnú AVF možno kanylovať od štyroch týždňov po vytvorení, neodporúča kanyláciu pred dvoma týždňami a medzi druhým a štvrtým týždňom ju pripúšťa najmä vtedy, ak sa tým predíde katétru. Pri štandardnom AVG odporúča spravidla počkať aspoň dva týždne; AVG určený na skorú kanyláciu možno použiť po primeranom zahojení rany.</p>
 
-<p>Novú AVF treba klinicky skontrolovať a pri pochybnosti doplniť ultrazvuk. Európske odporúčanie zdôrazňuje kontrolu maturácie približne o 4–6 týždňov, aby sa oneskorenie alebo zlyhanie rozpoznalo včas.</p>
+<p>Novú AVF treba klinicky skontrolovať a pri pochybnosti doplniť ultrazvuk. Európske odporúčanie zdôrazňuje kontrolu maturácie približne o 4–6&nbsp;týždňov, aby sa oneskorenie alebo zlyhanie rozpoznalo včas.</p>
 
 <h2>Od kalendára k ESKD Life-Plan</h2>
 

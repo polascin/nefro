@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: zazitkove vzdelavanie lekarov (hranie ulohy pacienta) a kompenzacia diabetu 2. typu (CREATION).
+ * Odborný článok: zazitkove vzdelavanie lekarov (hranie ulohy pacienta) a kompenzacia diabetu 2. typu (CREATION).
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -54,8 +54,8 @@ $articles[] = [
     <tr><th scope="row">Pracoviská</th><td>205 centier v Číne</td></tr>
     <tr><th scope="row">Randomizačná jednotka</th><td>lekár (centrum), nie jednotlivý pacient</td></tr>
     <tr><th scope="row">Fáza 1 – lekári</th><td>205 lekárov zaradených od 13. februára do 29. apríla 2023</td></tr>
-    <tr><th scope="row">Fáza 2 – pacienti</th><td>2 017 pacientov zaradených od 28. februára do 19. septembra 2023</td></tr>
-    <tr><th scope="row">Sledovanie</th><td>12 mesiacov; ukončené 25. októbra 2024</td></tr>
+    <tr><th scope="row">Fáza 2 – pacienti</th><td>2&nbsp;017 pacientov zaradených od 28. februára do 19. septembra 2023</td></tr>
+    <tr><th scope="row">Sledovanie</th><td>12&nbsp;mesiacov; ukončené 25. októbra 2024</td></tr>
     <tr><th scope="row">Primárny ukazovateľ</th><td>podiel pacientov s HbA1c pod 7,0 % po 6 mesiacoch</td></tr>
     <tr><th scope="row">Registrácia</th><td>ClinicalTrials.gov NCT05715307</td></tr>
     <tr><th scope="row">Zadávateľ</th><td>Shanghai Jiao Tong University School of Medicine</td></tr>
@@ -63,16 +63,16 @@ $articles[] = [
 </table>
 </div>
 
-<p>Lekári boli randomizovaní do dvoch ramien: 103 do intenzívneho zážitkového školenia a 102 do štandardného školenia. Následne zaradili pacientov: 1 009 do intervenčného a 1 008 do kontrolného ramena.</p>
+<p>Lekári boli randomizovaní do dvoch ramien: 103 do intenzívneho zážitkového školenia a 102 do štandardného školenia. Následne zaradili pacientov: 1&nbsp;009 do intervenčného a 1&nbsp;008 do kontrolného ramena.</p>
 
-<p>Priemerný vek lekárov bol 36,2 roka (smerodajná odchýlka 5,1) a ženy tvorili 75,6 % (155 z 205). Pacienti mali priemerný vek 53,0 roka (7,0), muži tvorili 64,7 % (1 304 z 2 017) a ženy 35,3 % (713).</p>
+<p>Priemerný vek lekárov bol 36,2 roka (smerodajná odchýlka 5,1) a ženy tvorili 75,6 % (155 z 205). Pacienti mali priemerný vek 53,0 roka (7,0), muži tvorili 64,7 % (1&nbsp;304 z 2&nbsp;017) a ženy 35,3 % (713).</p>
 
-<p>Podľa registračného záznamu boli zaraďovaní pacienti vo veku 40 až 65 rokov s BMI nad 24,0 a najviac 35,0 kg/m², so skríningovým HbA1c od 7,5 do 10,0 %, s glykémiou nalačno od 8,0 do 13,3 mmol/l, s trvaním diabetu do 10 rokov a s nedostatočnou kontrolou pri jednom alebo dvoch neinzulínových antidiabetikách užívaných najmenej dva mesiace.</p>
+<p>Podľa registračného záznamu boli zaraďovaní pacienti vo veku 40 až 65&nbsp;rokov s BMI nad 24,0 a najviac 35,0&nbsp;kg/m², so skríningovým HbA1c od 7,5 do 10,0 %, s glykémiou nalačno od 8,0 do 13,3&nbsp;mmol/l, s trvaním diabetu do 10&nbsp;rokov a s nedostatočnou kontrolou pri jednom alebo dvoch neinzulínových antidiabetikách užívaných najmenej dva mesiace.</p>
 
 <div class="pdf-avoid-break">
 <h3>Nefrologicky podstatné vylučovacie kritérium</h3>
 
-<p><strong>Podľa registračného záznamu boli zo štúdie vylúčení pacienti s eGFR pod 60 ml/min/1,73 m²</strong>, teda všetci s chronickou chorobou obličiek v štádiu G3a a vyššom. Vylúčení boli aj pacienti so závažným srdcovým ochorením vrátane srdcového zlyhávania triedy NYHA III a IV a s akútnymi diabetickými komplikáciami v predchádzajúcich troch mesiacoch.</p>
+<p><strong>Podľa registračného záznamu boli zo štúdie vylúčení pacienti s eGFR pod 60&nbsp;ml/min/1,73&nbsp;m²</strong>, teda všetci s chronickou chorobou obličiek v štádiu G3a a vyššom. Vylúčení boli aj pacienti so závažným srdcovým ochorením vrátane srdcového zlyhávania triedy NYHA III a IV a s akútnymi diabetickými komplikáciami v predchádzajúcich troch mesiacoch.</p>
 
 <p>Ide o zásadné obmedzenie pre nefrologickú interpretáciu: <em>program nebol testovaný práve u tých pacientov, u ktorých je manažment diabetu najzložitejší a rozhodovanie najviac zaťažené rizikom hypoglykémie, úpravou dávok a liekovými interakciami.</em></p>
 </div>
@@ -107,13 +107,13 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">6 mesiacov</th>
+      <th scope="row">6&nbsp;mesiacov</th>
       <td>58,0 % (476 z 820)</td>
       <td>42,9 % (351 z 818)</td>
       <td>16,6 p. b. (7,2 až 25,7); P &lt; 0,001</td>
     </tr>
     <tr>
-      <th scope="row">12 mesiacov</th>
+      <th scope="row">12&nbsp;mesiacov</th>
       <td>60,9 % (502 z 824)</td>
       <td>44,6 % (371 z 832)</td>
       <td>17,0 p. b. (7,0 až 26,8); P &lt; 0,001</td>
@@ -138,22 +138,22 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">BMI</th><td>−0,3 kg/m² (−0,5 až −0,1)</td><td>Malý účinok na úrovni jednotlivca</td></tr>
-    <tr><th scope="row">Obvod pása</th><td>−1,4 cm (−2,1 až −0,8)</td><td>Malý, štatisticky významný rozdiel</td></tr>
-    <tr><th scope="row">Glykémia nalačno</th><td>−6,3 mg/dl, teda asi −0,35 mmol/l (−10,7 až −1,9 mg/dl)</td><td>Skromný metabolický účinok</td></tr>
-    <tr><th scope="row">Systolický krvný tlak</th><td>−1,5 mm Hg (−2,9 až −0,1)</td><td>Malý rozdiel s neistým individuálnym významom</td></tr>
+    <tr><th scope="row">BMI</th><td>−0,3&nbsp;kg/m² (−0,5 až −0,1)</td><td>Malý účinok na úrovni jednotlivca</td></tr>
+    <tr><th scope="row">Obvod pása</th><td>−1,4&nbsp;cm (−2,1 až −0,8)</td><td>Malý, štatisticky významný rozdiel</td></tr>
+    <tr><th scope="row">Glykémia nalačno</th><td>−6,3&nbsp;mg/dl, teda asi −0,35&nbsp;mmol/l (−10,7 až −1,9&nbsp;mg/dl)</td><td>Skromný metabolický účinok</td></tr>
+    <tr><th scope="row">Systolický krvný tlak</th><td>−1,5&nbsp;mm Hg (−2,9 až −0,1)</td><td>Malý rozdiel s neistým individuálnym významom</td></tr>
   </tbody>
 </table>
 </div>
 
 <p>V intervenčnom ramene sa zaznamenali aj priaznivejšie zmeny niektorých údajov o stravovaní, konzumácii alkoholu a dĺžke spánku. Lekári dosiahli väčšie zlepšenie vedomostí a malé zníženie vlastného BMI.</p>
 
-<p>Závažné nežiaduce udalosti sa vyskytli u 2,6 % pacientov v intervenčnej skupine (26 z 1 009) a u 2,4 % v kontrolnej skupine (24 z 1 008).</p>
+<p>Závažné nežiaduce udalosti sa vyskytli u 2,6 % pacientov v intervenčnej skupine (26 z 1&nbsp;009) a u 2,4 % v kontrolnej skupine (24 z 1&nbsp;008).</p>
 
 <div class="pdf-avoid-break">
 <h3>Rozpor medzi veľkým rozdielom v HbA1c a malými zmenami ostatných ukazovateľov</h3>
 
-<p>Za povšimnutie stojí nepomer: podiel pacientov v cieli sa zvýšil o 17 percentuálnych bodov, ale glykémia nalačno klesla iba o 0,35 mmol/l, BMI o 0,3 kg/m² a systolický tlak o 1,5 mm Hg.</p>
+<p>Za povšimnutie stojí nepomer: podiel pacientov v cieli sa zvýšil o 17 percentuálnych bodov, ale glykémia nalačno klesla iba o 0,35&nbsp;mmol/l, BMI o 0,3&nbsp;kg/m² a systolický tlak o 1,5&nbsp;mm Hg.</p>
 
 <p>Takýto vzorec sa dá vysvetliť viacerými spôsobmi. Binárny ukazovateľ „pod 7,0 %“ je citlivý na malý posun celej distribúcie okolo prahovej hodnoty – ak leží veľká časť pacientov tesne nad hranicou, aj mierne zlepšenie HbA1c prekloní mnohých pod ňu. Zmena môže tiež pochádzať prevažne z postprandiálnej glykémie, ktorú lačná hodnota nezachytáva, alebo z intenzifikácie farmakoterapie, ktorá HbA1c ovplyvní viac než hmotnosť či tlak.</p>
 
@@ -190,7 +190,7 @@ $articles[] = [
 
 <h3>Chýbajúce merania HbA1c</h3>
 
-<p>Primárny výsledok bol uvedený ako 476 z 820 a 351 z 818, hoci randomizované ramená zahŕňali 1 009 a 1 008 pacientov. Do týchto podielov teda nebolo zahrnutých približne 19 % zaradených pacientov.</p>
+<p>Primárny výsledok bol uvedený ako 476 z 820 a 351 z 818, hoci randomizované ramená zahŕňali 1&nbsp;009 a 1&nbsp;008 pacientov. Do týchto podielov teda nebolo zahrnutých približne 19 % zaradených pacientov.</p>
 
 <p>V 12. mesiaci boli menovatele dokonca vyššie (824 a 832) než v 6. mesiaci. Časť pacientov teda mala k dispozícii 12-mesačné, ale nie 6-mesačné meranie. Autori označili primárnu analýzu za analýzu podľa princípu <em>intention-to-treat</em>, no na úplné posúdenie rizika skreslenia treba poznať spôsob imputácie chýbajúcich údajov a výsledky citlivostných analýz.</p>
 
@@ -208,7 +208,7 @@ $articles[] = [
 
 <h3>Obmedzená prenositeľnosť</h3>
 
-<p>Štúdia prebiehala v čínskej sieti centier metabolického manažmentu s jednotnou digitálnou platformou, u relatívne mladých lekárov (priemerný vek 36 rokov) a u vybranej skupiny pacientov stredného veku s nadhmotnosťou a diabetom trvajúcim menej než 10 rokov. Organizácia zdravotníctva, dostupnosť liekov, vzdelávacia kultúra aj typický pacient sa na Slovensku líšia.</p>
+<p>Štúdia prebiehala v čínskej sieti centier metabolického manažmentu s jednotnou digitálnou platformou, u relatívne mladých lekárov (priemerný vek 36&nbsp;rokov) a u vybranej skupiny pacientov stredného veku s nadhmotnosťou a diabetom trvajúcim menej než 10&nbsp;rokov. Organizácia zdravotníctva, dostupnosť liekov, vzdelávacia kultúra aj typický pacient sa na Slovensku líšia.</p>
 
 <div class="pdf-avoid-break">
 <h2>Hĺbková vecná kontrola hlavných tvrdení</h2>
@@ -225,13 +225,13 @@ $articles[] = [
   <tbody>
     <tr><td>Hranie úlohy pacienta zlepšilo glykemickú kontrolu</td><td><strong>Čiastočne potvrdené</strong></td><td>Účinný bol komplexný týždňový program obsahujúci hranie rolí; samostatný účinok tejto zložky nebol izolovaný</td></tr>
     <tr><td>Program zvýšil podiel pacientov s HbA1c pod 7 %</td><td><strong>Potvrdené</strong></td><td>Upravený rozdiel 16,6 p. b. po 6 mesiacoch a 17,0 p. b. po 12 mesiacoch, oba s P &lt; 0,001</td></tr>
-    <tr><td>Zlepšili sa aj hmotnosť, tlak a glykémia nalačno</td><td><strong>Potvrdené, ale rozdiely sú malé</strong></td><td>BMI −0,3 kg/m², obvod pása −1,4 cm, systolický tlak −1,5 mm Hg, glykémia nalačno asi −0,35 mmol/l</td></tr>
+    <tr><td>Zlepšili sa aj hmotnosť, tlak a glykémia nalačno</td><td><strong>Potvrdené, ale rozdiely sú malé</strong></td><td>BMI −0,3&nbsp;kg/m², obvod pása −1,4&nbsp;cm, systolický tlak −1,5&nbsp;mm Hg, glykémia nalačno asi −0,35&nbsp;mmol/l</td></tr>
     <tr><td>Lekári po školení „lepšie manažovali diabetes“</td><td><strong>Pravdepodobné, ale príliš všeobecné</strong></td><td>Dokázalo sa najmä zlepšenie glykemického výsledku; kvalita manažmentu zahŕňa aj bezpečnosť, individualizáciu a kardiorenálnu ochranu</td></tr>
     <tr><td>Program zlepšil celkové zdravie pacientov</td><td><strong>Nepreukázané v plnom rozsahu</strong></td><td>Zlepšili sa vybrané náhradné a behaviorálne ukazovatele, nie klinické komplikácie ani mortalita</td></tr>
     <tr><td>Intervencia bola bezpečná</td><td><strong>Bez zjavného bezpečnostného signálu</strong></td><td>2,6 % oproti 2,4 % závažných udalostí; štúdia nebola primárne dimenzovaná na hodnotenie bezpečnosti liečebných zmien</td></tr>
     <tr><td>Program prekonáva rozdiel medzi odporúčaniami a praxou</td><td><strong>Podporené, nie definitívne dokázané</strong></td><td>Implementačná medzera zahŕňa viac než glykemický cieľ, napríklad kardiorenálnu ochranu a dostupnosť liečby</td></tr>
     <tr><td>Výsledky sú prenosné do slovenskej praxe</td><td><strong>Neisté</strong></td><td>Obmedzujú ju rozdiely v organizácii zdravotníctva, kultúre, vzdelávaní a dostupnosti liekov</td></tr>
-    <tr><td>Program môže chrániť obličky</td><td><strong>Nepreukázané</strong></td><td>Štúdia nehodnotila obličkové ukazovatele a pacientov s eGFR pod 60 ml/min/1,73 m² vôbec nezaradila</td></tr>
+    <tr><td>Program môže chrániť obličky</td><td><strong>Nepreukázané</strong></td><td>Štúdia nehodnotila obličkové ukazovatele a pacientov s eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² vôbec nezaradila</td></tr>
   </tbody>
 </table>
 </div>
@@ -252,7 +252,7 @@ $articles[] = [
   <li>obličková alebo celková mortalita.</li>
 </ul>
 
-<p>Pacienti s eGFR pod 60 ml/min/1,73 m² navyše boli zo štúdie vylúčení. Program teda nebol overený u populácie, ktorá nefrológa zaujíma najviac.</p>
+<p>Pacienti s eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² navyše boli zo štúdie vylúčení. Program teda nebol overený u populácie, ktorá nefrológa zaujíma najviac.</p>
 
 <p>Kvalitný manažment diabetu u pacienta s chronickou chorobou obličiek nemožno redukovať na HbA1c. Musí zahŕňať pravidelné vyšetrovanie eGFR a albuminúrie, kontrolu krvného tlaku a správne použitie inhibítorov systému renín-angiotenzín, inhibítorov SGLT2, agonistov receptora GLP-1 a pri vhodnej indikácii nesteroidného antagonistu mineralokortikoidového receptora.</p>
 
@@ -307,7 +307,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Role-Play as Patients Helps Docs Manage Diabetes Better.</em> Medscape, 2026. Sekundárny spravodajský zdroj použitý ako východisko, nie ako hlavný dôkaz; individuálny autor nie je v sprístupnenej verzii uvedený. <a href="https://www.medscape.com/viewarticle/role-play-patients-helps-docs-manage-diabetes-better-2026a1000rn5" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o dizajne, dátumoch zaraďovania, počtoch lekárov a pacientov, o primárnom aj sekundárnych ukazovateľoch vrátane intervalov spoľahlivosti a o závažných nežiaducich udalostiach boli overené priamo proti abstraktu publikácie v JAMA Network Open (PubMed, PMID 42560674). Zaraďovacie a vylučovacie kritériá vrátane hranice eGFR 60 ml/min/1,73 m², vekového rozpätia 40 až 65 rokov a rozpätia BMI pochádzajú z registračného záznamu NCT05715307. Trvanie diabetu, východiskový BMI a východiskový HbA1c jednotlivých ramien publikovaný abstrakt neuvádza, preto sa v texte uvádzajú iba kritériá zaradenia, nie priemerné hodnoty súboru. Orientačný prepočet počtu potrebného na liečbu je vlastný výpočet z upraveného rozdielu, nie prevzatá hodnota. Autorstvo bolo overené cez PubMed; mená neboli dopĺňané odhadom.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o dizajne, dátumoch zaraďovania, počtoch lekárov a pacientov, o primárnom aj sekundárnych ukazovateľoch vrátane intervalov spoľahlivosti a o závažných nežiaducich udalostiach boli overené priamo proti abstraktu publikácie v JAMA Network Open (PubMed, PMID 42560674). Zaraďovacie a vylučovacie kritériá vrátane hranice eGFR 60&nbsp;ml/min/1,73&nbsp;m², vekového rozpätia 40 až 65&nbsp;rokov a rozpätia BMI pochádzajú z registračného záznamu NCT05715307. Trvanie diabetu, východiskový BMI a východiskový HbA1c jednotlivých ramien publikovaný abstrakt neuvádza, preto sa v texte uvádzajú iba kritériá zaradenia, nie priemerné hodnoty súboru. Orientačný prepočet počtu potrebného na liečbu je vlastný výpočet z upraveného rozdielu, nie prevzatá hodnota. Autorstvo bolo overené cez PubMed; mená neboli dopĺňané odhadom.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Cieľová hodnota HbA1c sa má stanoviť individuálne podľa veku, komorbidít, rizika hypoglykémie, funkcie obličiek a preferencií pacienta. Pri chronickej chorobe obličiek treba postupovať podľa platných odporúčaní KDIGO a ADA a HbA1c interpretovať s vedomím jeho obmedzenej výpovednej hodnoty pri anémii, liečbe stimulátormi erytropoézy a pri dialýze.</em></p>
 </div>
@@ -331,9 +331,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

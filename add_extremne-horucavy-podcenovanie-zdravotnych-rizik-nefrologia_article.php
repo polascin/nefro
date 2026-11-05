@@ -41,9 +41,9 @@ $articles[] = [
 
 <h2>Prečo je riziko „podceňované“</h2>
 
-<p>Horúčavy sa v záznamoch zriedka uvádzajú ako priama príčina ochorenia či úmrtia. Ich dosah sa preto odhaduje nepriamo, štatistickými modelmi. Inštitút Roberta Kocha napríklad odhadol, že v Nemecku možno v roku 2025 pripísať horúčavám približne 2 500 úmrtí; ide o modelovaný odhad.</p>
+<p>Horúčavy sa v záznamoch zriedka uvádzajú ako priama príčina ochorenia či úmrtia. Ich dosah sa preto odhaduje nepriamo, štatistickými modelmi. Inštitút Roberta Kocha napríklad odhadol, že v Nemecku možno v roku 2025 pripísať horúčavám približne 2&nbsp;500 úmrtí; ide o modelovaný odhad.</p>
 
-<p>Okrem úmrtnosti sa v prácach objavujú aj ukazovatele chorobnosti. Po jednom dni s teplotami nad 30 °C sa uvádza nárast hlásení práceneschopnosti o 3,5 %, po piatich po sebe nasledujúcich dňoch bol nárast vyšší a po siedmich dňoch dosiahol 10,8 %.</p>
+<p>Okrem úmrtnosti sa v prácach objavujú aj ukazovatele chorobnosti. Po jednom dni s teplotami nad 30&nbsp;°C sa uvádza nárast hlásení práceneschopnosti o 3,5 %, po piatich po sebe nasledujúcich dňoch bol nárast vyšší a po siedmich dňoch dosiahol 10,8 %.</p>
 
 <h2>Mechanizmy: prečo horúčavy poškodzujú orgány</h2>
 

@@ -26,7 +26,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/skryty-hyperkortizolizmus-diabetes-catalyst-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/skryty-hyperkortizolizmus-diabetes-catalyst-nefrologia.webp" alt="Nadobličková žľaza žiariaca intenzívnym zlatým svetlom nad obličkou, ktorá zostáva v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie snímka konkrétneho pacienta. Pri ťažko kontrolovateľnom diabete 2. typu môže byť zdroj problému mimo pankreasu, a nájde sa len vtedy, keď sa naň cielene posvieti.</figcaption></figure>
 
-<p class="article-dek"><em>Štúdia CATALYST upozornila, že pri ťažko kontrolovateľnom diabete 2. typu môže byť porucha regulácie kortizolu častejšia, než sa predpokladalo. Jej najcitovanejší výsledok – 23,8 % pacientov s nesupresným kortizolom po 1 mg dexametazónu – však nemožno zameniť za 23,8 % prevalenciu potvrdeného Cushingovho syndrómu. Pre nefrológa je podstatné vedieť, koho cielene vyšetriť, ako interpretovať pozitívny test pri CKD a prečo liečba mifepristónom vyžaduje intenzívne sledovanie draslíka, tlaku, objemového stavu a glykémie.</em></p>
+<p class="article-dek"><em>Štúdia CATALYST upozornila, že pri ťažko kontrolovateľnom diabete 2. typu môže byť porucha regulácie kortizolu častejšia, než sa predpokladalo. Jej najcitovanejší výsledok – 23,8 % pacientov s nesupresným kortizolom po 1&nbsp;mg dexametazónu – však nemožno zameniť za 23,8 % prevalenciu potvrdeného Cushingovho syndrómu. Pre nefrológa je podstatné vedieť, koho cielene vyšetriť, ako interpretovať pozitívny test pri CKD a prečo liečba mifepristónom vyžaduje intenzívne sledovanie draslíka, tlaku, objemového stavu a glykémie.</em></p>
 
 <p>Diabetes 2. typu, obezita a hypertenzia sú bežné ochorenia. Samy osebe preto nepredstavujú dostatočný dôvod na plošný skríning Cushingovho syndrómu. Podozrenie rastie pri nezvyčajnej kombinácii alebo progresii nálezov: pri neprimerane ťažkej hyperglykémii napriek viacliekovej liečbe, pri ťažko kontrolovateľnej hypertenzii, nevysvetlenej hypokaliémii, proximálnej svalovej slabosti, širokých fialových striách, ľahkej tvorbe modrín, osteoporotických zlomeninách alebo pri adrenálnom incidentalóme.</p>
 
@@ -37,7 +37,7 @@ $articles[] = [
 <p>CATALYST bola americká multicentrická štúdia fázy 4 financovaná spoločnosťou Corcept Therapeutics, výrobcom mifepristónu Korlym. Mala dve časti:</p>
 
 <ol>
-  <li><strong>Prevalenčná fáza:</strong> prospektívne vyšetrenie pacientov s nedostatočne kontrolovaným diabetom 2. typu pomocou nočného supresného testu s 1 mg dexametazónu (DST).</li>
+  <li><strong>Prevalenčná fáza:</strong> prospektívne vyšetrenie pacientov s nedostatočne kontrolovaným diabetom 2. typu pomocou nočného supresného testu s 1&nbsp;mg dexametazónu (DST).</li>
   <li><strong>Liečebná fáza:</strong> 24-týždňové randomizované, dvojito zaslepené porovnanie mifepristónu s placebom u časti pacientov s pozitívnym DST.</li>
 </ol>
 
@@ -54,7 +54,7 @@ $articles[] = [
 
 <h2>Výsledok 23,8 %: pozitívny DST, nie 252 potvrdených Cushingových syndrómov</h2>
 
-<p>Do prevalenčnej analýzy vstúpilo 1 057 pacientov s dostatočnou koncentráciou dexametazónu. Kortizol po DST zostal nad 1,8 µg/dl (50 nmol/l) u 252 pacientov, teda u <strong>23,8 %</strong> (95 % interval spoľahlivosti 21,3 až 26,5 %). U pacientov užívajúcich najmenej tri antihypertenzíva bola nesupresia prítomná u <strong>36,6 %</strong>.</p>
+<p>Do prevalenčnej analýzy vstúpilo 1&nbsp;057 pacientov s dostatočnou koncentráciou dexametazónu. Kortizol po DST zostal nad 1,8 µg/dl (50&nbsp;nmol/l) u 252 pacientov, teda u <strong>23,8 %</strong> (95 % interval spoľahlivosti 21,3 až 26,5 %). U pacientov užívajúcich najmenej tri antihypertenzíva bola nesupresia prítomná u <strong>36,6 %</strong>.</p>
 
 <p>Tieto čísla treba čítať presne:</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <h3>Nezávislá meta-analýza dáva číslu potrebný kontext</h3>
 
-<p>Systematický prehľad z roku 2026 zahrnul 39 štúdií so 14 995 vyšetrenými osobami. Medzi 6 638 pacientmi s diabetom malo abnormálny DST 14,3 %; po štatistickej korekcii heterogenity autori uviedli odhad 23,3 %. <strong>Potvrdený Cushingov syndróm</strong> však malo 2,1 % (95 % interval spoľahlivosti 1,3 až 3,3 %) a autori uviedli, že k potvrdeniu syndrómu viedol približne jeden zo siedmich abnormálnych DST.</p>
+<p>Systematický prehľad z roku 2026 zahrnul 39 štúdií so 14&nbsp;995 vyšetrenými osobami. Medzi 6&nbsp;638 pacientmi s diabetom malo abnormálny DST 14,3 %; po štatistickej korekcii heterogenity autori uviedli odhad 23,3 %. <strong>Potvrdený Cushingov syndróm</strong> však malo 2,1 % (95 % interval spoľahlivosti 1,3 až 3,3 %) a autori uviedli, že k potvrdeniu syndrómu viedol približne jeden zo siedmich abnormálnych DST.</p>
 
 <p>Rozdiel medzi nesupresným DST a potvrdenou diagnózou nie je slovná maličkosť. Určuje, či pacient potrebuje ďalšie endokrinologické testovanie, etiologické vyšetrenie a špecifickú liečbu.</p>
 
@@ -84,19 +84,19 @@ $articles[] = [
   <li>ťažko kontrolovateľnej hypertenzii, najmä pri hypokaliémii alebo adrenálnom incidentalóme,</li>
   <li>nezvyčajnej osteoporóze alebo vertebrálnych zlomeninách,</li>
   <li>proximálnej myopatii, širokých fialových striách, tvárovej plétore alebo ľahkej tvorbe modrín,</li>
-  <li>adrenálnom incidentalóme, pri ktorom sa podľa európskeho usmernenia vykonáva 1 mg DST.</li>
+  <li>adrenálnom incidentalóme, pri ktorom sa podľa európskeho usmernenia vykonáva 1&nbsp;mg DST.</li>
 </ul>
 
 <p>Samotná centrálna obezita, hypertenzia alebo vyšší HbA<sub>1c</sub> majú nízku špecificitu. Najprv treba preveriť adherenciu, techniku podávania inzulínu, sekundárne liekové príčiny, spánkové apnoe, alkohol, depresiu, infekciu a ďalšie časté dôvody zlej kompenzácie.</p>
 
-<h2>Ako správne vykonať a interpretovať 1 mg DST</h2>
+<h2>Ako správne vykonať a interpretovať 1&nbsp;mg DST</h2>
 
 <ol>
   <li><strong>Pred testom skontrolovať rušivé faktory.</strong> Treba cielene hľadať glukokortikoidy všetkými cestami podania, estrogény zvyšujúce kortizol viažuci globulín, akútne ochorenie, nadmerný alkohol, závažnú depresiu, neliečené spánkové apnoe, nočné zmeny a lieky meniace metabolizmus dexametazónu, napríklad niektoré induktory alebo inhibítory CYP3A.</li>
-  <li><strong>Dexametazón podať približne o 23:00.</strong> Pacient užije 1 mg perorálne.</li>
+  <li><strong>Dexametazón podať približne o 23:00.</strong> Pacient užije 1&nbsp;mg perorálne.</li>
   <li><strong>Krv odobrať približne o 8:00 nasledujúce ráno.</strong> Tvrdenie, že čas odberu je ľubovoľný, nie je správne.</li>
-  <li><strong>Hodnotiť kortizol v kontexte metódy.</strong> Hodnota nad 1,8 µg/dl (50 nmol/l) znamená nedostatočnú supresiu a pozitívny skríning.</li>
-  <li><strong>Pri pozitívnom výsledku overiť expozíciu dexametazónu.</strong> Súčasná koncentrácia dexametazónu pomáha odhaliť nepožitie, nedostatočné vstrebávanie alebo zrýchlený metabolizmus. CATALYST používala hranicu ≥140 ng/dl; nejde však o univerzálnu hodnotu pre všetky laboratóriá a metódy.</li>
+  <li><strong>Hodnotiť kortizol v kontexte metódy.</strong> Hodnota nad 1,8 µg/dl (50&nbsp;nmol/l) znamená nedostatočnú supresiu a pozitívny skríning.</li>
+  <li><strong>Pri pozitívnom výsledku overiť expozíciu dexametazónu.</strong> Súčasná koncentrácia dexametazónu pomáha odhaliť nepožitie, nedostatočné vstrebávanie alebo zrýchlený metabolizmus. CATALYST používala hranicu ≥140&nbsp;ng/dl; nejde však o univerzálnu hodnotu pre všetky laboratóriá a metódy.</li>
 </ol>
 
 <p>Po jednom abnormálnom teste má nasledovať endokrinologické posúdenie a spravidla ďalšie biochemické potvrdenie alebo opakovanie testu podľa fenotypu. Endocrine Society odporúča pri abnormálnom prvom výsledku druhý validovaný test; pri nezhodných výsledkoch ďalšie hodnotenie. Až po potvrdení endogénneho hyperkortizolizmu sa určuje jeho príčina.</p>
@@ -115,12 +115,12 @@ $articles[] = [
   <li><strong>24-hodinový voľný kortizol v moči môže byť pri zníženej GFR falošne nízky.</strong> S poklesom funkcie obličiek klesá jeho vylučovanie, preto normálny výsledok hyperkortizolizmus spoľahlivo nevylučuje.</li>
   <li><strong>Mierny alebo autonómny adrenálny hyperkortizolizmus môže mať normálny močový aj neskorý slinný kortizol.</strong> Výber druhého testu preto patrí endokrinológovi a závisí od podozrivého fenotypu.</li>
   <li><strong>Pokročilá CKD môže meniť cirkadiánny profil a farmakokinetiku.</strong> Výsledok musí byť posúdený spolu s klinickým obrazom, použitým testom a laboratórnou metódou.</li>
-  <li><strong>CATALYST neposkytuje údaje pre dialýzu.</strong> Prevalenčná fáza vylúčila dialyzovaných pacientov a terminálne zlyhanie obličiek; liečebná fáza navyše vylúčila odhadovanú glomerulovú filtráciu (eGFR) &lt;30 ml/min/1,73 m².</li>
+  <li><strong>CATALYST neposkytuje údaje pre dialýzu.</strong> Prevalenčná fáza vylúčila dialyzovaných pacientov a terminálne zlyhanie obličiek; liečebná fáza navyše vylúčila odhadovanú glomerulovú filtráciu (eGFR) &lt;30&nbsp;ml/min/1,73&nbsp;m².</li>
 </ul>
 
 <h2>Liečebná fáza: výrazné zlepšenie HbA1c, ale za cenu vysokej toxicity a prerušení</h2>
 
-<p>Do randomizovanej fázy vstúpilo 136 pacientov s pozitívnym DST: 91 dostávalo mifepristón a 45 placebo. Mifepristón sa začínal dávkou 300 mg denne, s možnosťou titrácie na 600 a 900 mg podľa tolerancie a odpovede. Liečba trvala 24 týždňov.</p>
+<p>Do randomizovanej fázy vstúpilo 136 pacientov s pozitívnym DST: 91 dostávalo mifepristón a 45 placebo. Mifepristón sa začínal dávkou 300&nbsp;mg denne, s možnosťou titrácie na 600 a 900&nbsp;mg podľa tolerancie a odpovede. Liečba trvala 24&nbsp;týždňov.</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky randomizovanej liečebnej fázy CATALYST" tabindex="0">
   <table>
@@ -141,27 +141,27 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Zmena hmotnosti</th>
-        <td>−4,40 kg</td>
-        <td>+0,72 kg</td>
-        <td>−5,12 kg (95 % IS −8,20 až −2,03)</td>
+        <td>−4,40&nbsp;kg</td>
+        <td>+0,72&nbsp;kg</td>
+        <td>−5,12&nbsp;kg (95 % IS −8,20 až −2,03)</td>
       </tr>
       <tr>
-        <th scope="row">Dokončenie 24 týždňov liečby</th>
+        <th scope="row">Dokončenie 24&nbsp;týždňov liečby</th>
         <td>53,8 %</td>
         <td>82,2 %</td>
         <td>46 % verzus 18 % liečbu nedokončilo</td>
       </tr>
       <tr>
         <th scope="row">Zmena systolického tlaku</th>
-        <td>+8,0 mm Hg</td>
-        <td>−2,1 mm Hg</td>
-        <td>+10,1 mm Hg (95 % IS 3,62 až 16,59)</td>
+        <td>+8,0&nbsp;mm Hg</td>
+        <td>−2,1&nbsp;mm Hg</td>
+        <td>+10,1&nbsp;mm Hg (95 % IS 3,62 až 16,59)</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p>Počas prvých 12 týždňov sa rýchlo pôsobiaci inzulín znížil alebo vysadil u 30 % pacientov na mifepristóne oproti 11 % pri placebe; pri bazálnom inzulíne to bolo 49 % oproti 13 %. Tieto sekundárne výsledky neboli upravené na mnohonásobné porovnávania a treba ich chápať ako podporné.</p>
+<p>Počas prvých 12&nbsp;týždňov sa rýchlo pôsobiaci inzulín znížil alebo vysadil u 30 % pacientov na mifepristóne oproti 11 % pri placebe; pri bazálnom inzulíne to bolo 49 % oproti 13 %. Tieto sekundárne výsledky neboli upravené na mnohonásobné porovnávania a treba ich chápať ako podporné.</p>
 
 <p>Primárna analýza HbA<sub>1c</sub> použila model s predpokladom, že chýbajúce údaje vznikli náhodne, a zahrnula dostupné merania aj po ukončení skúšanej liečby. Citlivostné analýzy počas liečby a u pacientov, ktorí štúdiu dokončili, ukázali podobný smer účinku. Vysoký počet predčasných ukončení však zostáva zásadným limitom prenositeľnosti výsledku do bežnej praxe.</p>
 
@@ -192,9 +192,9 @@ $articles[] = [
 
 <h2>Renálne pozorovania z desiatich kazuistík nie sú dôkazom nefroprotekcie</h2>
 
-<p>Kazuistický súbor Christophera P. Lucciho a Grete McCoyovej opísal desať pacientov z jedného pracoviska liečených mifepristónom. Dvaja mali diabetes 1. typu a jeden pacient dostal liečbu napriek kortizolu po DST pod diagnostickou hranicou. Dĺžka liečby sa pohybovala od menej než troch do 72 mesiacov a súbežná liečba sa menila.</p>
+<p>Kazuistický súbor Christophera P. Lucciho a Grete McCoyovej opísal desať pacientov z jedného pracoviska liečených mifepristónom. Dvaja mali diabetes 1. typu a jeden pacient dostal liečbu napriek kortizolu po DST pod diagnostickou hranicou. Dĺžka liečby sa pohybovala od menej než troch do 72&nbsp;mesiacov a súbežná liečba sa menila.</p>
 
-<p>U siedmich pacientov eGFR stúpla v priemere o 17,4 ml/min/1,73 m², u troch klesla; u jedného pacienta sa objavila nová výrazná proteinúria. Autori správne uviedli, že pre variabilitu UACR a nekontrolovaný dizajn nemožno robiť záver o zlepšení funkcie obličiek.</p>
+<p>U siedmich pacientov eGFR stúpla v priemere o 17,4&nbsp;ml/min/1,73&nbsp;m², u troch klesla; u jedného pacienta sa objavila nová výrazná proteinúria. Autori správne uviedli, že pre variabilitu UACR a nekontrolovaný dizajn nemožno robiť záver o zlepšení funkcie obličiek.</p>
 
 <p>Tento súbor je užitočný na tvorbu hypotéz a opis praktických komplikácií, nie na dokazovanie renálneho účinku. Zmenu kreatinínu mohli ovplyvniť hemodynamika, hmotnosť, svalová hmota, objemový stav, zmena glykémie aj súbežné inhibítory SGLT2, blokátory renín-angiotenzínového systému alebo finerenón.</p>
 
@@ -215,8 +215,8 @@ $articles[] = [
   <li>CATALYST použila v prevalenčnej fáze jediný DST a širšiu študijnú definíciu než tradičný algoritmus potvrdenia Cushingovho syndrómu.</li>
   <li>Populácia bola selektovaná v špecializovaných diabetologických centrách a výsledok nemožno preniesť na bežnú populáciu s diabetom.</li>
   <li>Štúdiu financoval výrobca lieku; analýzu vykonali štatistici zamestnaní sponzorom a viacerí autori mali finančné vzťahy so spoločnosťou.</li>
-  <li>Liečebná fáza bola malá, trvala 24 týždňov a mala vysokú mieru predčasného ukončenia.</li>
-  <li>Pacienti s eGFR pod 30 ml/min/1,73 m² neboli do liečebnej fázy zaradení a dialyzovaní pacienti neboli v prevalenčnej fáze.</li>
+  <li>Liečebná fáza bola malá, trvala 24&nbsp;týždňov a mala vysokú mieru predčasného ukončenia.</li>
+  <li>Pacienti s eGFR pod 30&nbsp;ml/min/1,73&nbsp;m² neboli do liečebnej fázy zaradení a dialyzovaní pacienti neboli v prevalenčnej fáze.</li>
   <li>Štúdia nehodnotila dlhodobé kardiovaskulárne, renálne ani mortalitné výsledky.</li>
 </ul>
 
@@ -232,7 +232,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>CATALYST priniesla dôležitý dôkaz, že v úzko vybranej skupine pacientov s nedostatočne kontrolovaným diabetom 2. typu je nesupresný 1 mg DST častý a že blokáda glukokortikoidného receptora môže výrazne znížiť HbA<sub>1c</sub>. Nepriniesla však dôkaz, že takmer štvrtina týchto pacientov má potvrdený Cushingov syndróm, ani že mifepristón chráni obličky.</p>
+<p>CATALYST priniesla dôležitý dôkaz, že v úzko vybranej skupine pacientov s nedostatočne kontrolovaným diabetom 2. typu je nesupresný 1&nbsp;mg DST častý a že blokáda glukokortikoidného receptora môže výrazne znížiť HbA<sub>1c</sub>. Nepriniesla však dôkaz, že takmer štvrtina týchto pacientov má potvrdený Cushingov syndróm, ani že mifepristón chráni obličky.</p>
 
 <p>Najrozumnejším dôsledkom nie je plošné testovanie ani empirická liečba. Je ním vyššia klinická pozornosť, správne vykonaný DST u vhodne vybraného pacienta, endokrinologické potvrdenie diagnózy a rešpektovanie náročného bezpečnostného profilu liečby.</p>
 

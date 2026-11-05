@@ -35,11 +35,11 @@ $articles[] = [
 
 <p>Klasickým podkladom je združená inceptná kohorta 898 pacientov s biopticky potvrdenou membranóznou nefropatiou, v ktorej malo aspoň jednu žilovú tromboembolickú príhodu <strong>65 osôb (7,2 %)</strong>, väčšinou do dvoch rokov od prvého klinického vyšetrenia. Riziko bolo nepriamo úmerné koncentrácii albumínu.</p>
 
-<p>Na tento nález nadviazal rozhodovací Markovov model, ktorý postavil zabránené tromboembolické príhody proti závažným krvácaniam. Pomer prínosu a rizika stúpal s hĺbkou hypoalbuminémie: od približne <strong>4,5 : 1</strong> pri albumíne pod 3 g/dl po <strong>13,1 : 1</strong> pri albumíne pod 2 g/dl u pacientov s nízkym rizikom krvácania. Odporúčania KDIGO 2021 pre glomerulové ochorenia z tejto logiky vychádzajú a profylaktickú antikoaguláciu viažu na hĺbku hypoalbuminémie spolu s individuálnym rizikom krvácania.</p>
+<p>Na tento nález nadviazal rozhodovací Markovov model, ktorý postavil zabránené tromboembolické príhody proti závažným krvácaniam. Pomer prínosu a rizika stúpal s hĺbkou hypoalbuminémie: od približne <strong>4,5 : 1</strong> pri albumíne pod 3&nbsp;g/dl po <strong>13,1 : 1</strong> pri albumíne pod 2&nbsp;g/dl u pacientov s nízkym rizikom krvácania. Odporúčania KDIGO 2021 pre glomerulové ochorenia z tejto logiky vychádzajú a profylaktickú antikoaguláciu viažu na hĺbku hypoalbuminémie spolu s individuálnym rizikom krvácania.</p>
 
 <h2>Čo priniesla nová kohorta</h2>
 
-<p>Zaradených bolo <strong>67 osôb</strong> s membranóznou nefropatiou a sérovým albumínom pod 2,5 g/dl (25 g/l). Ide teda presne o pásmo, kde má profylaxia podľa modelu najvyšší očakávaný prínos.</p>
+<p>Zaradených bolo <strong>67 osôb</strong> s membranóznou nefropatiou a sérovým albumínom pod 2,5&nbsp;g/dl (25&nbsp;g/l). Ide teda presne o pásmo, kde má profylaxia podľa modelu najvyšší očakávaný prínos.</p>
 
 <div class="table-responsive" role="region" aria-label="Charakteristika kohorty a výskyt trombotických príhod podľa tromboprofylaxie" tabindex="0">
 <table>
@@ -52,15 +52,15 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Medián sérového kreatinínu</th>
-      <td>1,2 mg/dl (medzikvartilové rozpätie 0,9–1,6)</td>
+      <td>1,2&nbsp;mg/dl (medzikvartilové rozpätie 0,9–1,6)</td>
     </tr>
     <tr>
       <th scope="row">Medián pomeru bielkovín ku kreatinínu v moči</th>
-      <td>11,9 g/g (8,5–16,5)</td>
+      <td>11,9&nbsp;g/g (8,5–16,5)</td>
     </tr>
     <tr>
       <th scope="row">Medián najnižšieho sérového albumínu</th>
-      <td>1,9 g/dl (1,6–2,2)</td>
+      <td>1,9&nbsp;g/dl (1,6–2,2)</td>
     </tr>
     <tr>
       <th scope="row">Bez tromboprofylaxie</th>

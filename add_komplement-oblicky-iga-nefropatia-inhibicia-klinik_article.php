@@ -125,7 +125,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Očkovanie je povinné</strong> pred väčšinou anti-komplementových liekov: meningokok (séroskupiny A, C, W, Y a B), pneumokok a <em>Haemophilus influenzae</em> typu b (Hib).</li>
-  <li>Ideálne aspoň <strong>2 týždne pred začiatkom</strong>; ak to nie je možné, zvážiť antibiotickú profylaxiu do vytvorenia imunity (a podľa lokálnych odporúčaní aj počas liečby).</li>
+  <li>Ideálne aspoň <strong>2&nbsp;týždne pred začiatkom</strong>; ak to nie je možné, zvážiť antibiotickú profylaxiu do vytvorenia imunity (a podľa lokálnych odporúčaní aj počas liečby).</li>
   <li><strong>Očkovanie riziko nevylúči.</strong> McNamara a kol. (MMWR 2017) zdokumentovali 16 prípadov invazívnej meningokokovej infekcie u príjemcov ekulizumabu v USA (2008–2016); 14 malo aspoň jednu dávku meningokokovej vakcíny pred ochorením – často išlo o neskupinové (nongroupable) kmene. Preto je nevyhnutná edukácia pacienta, včasné vyhľadanie starostlivosti a rýchla liečba pri podozrení.</li>
   <li>V didaktických textoch sa často uvádza odhad rádovo okolo <strong>0,5 % ročne</strong> aj u očkovaných pacientov na ekulizumabe; rozsiahla farmakovigilancia (Socié a kol., 2019) hlásila približne <strong>0,25 prípadu na 100 pacientorokov</strong>. Rádová veľkosť rizika ostáva klinicky relevantná.</li>
 </ul>
@@ -178,11 +178,11 @@ $articles[] = [
 
 <h2>Iptakopan – inhibícia faktora B (APPLAUSE-IgAN)</h2>
 
-<p>Iptakopan je perorálny selektívny inhibítor faktora B. Vo fáze III <strong>APPLAUSE-IgAN</strong> (NCT04578834) u dospelých s biopsiou potvrdenou IgA nefropatiou a proteinúriou ≥ 1 g/g napriek podpornej liečbe:</p>
+<p>Iptakopan je perorálny selektívny inhibítor faktora B. Vo fáze III <strong>APPLAUSE-IgAN</strong> (NCT04578834) u dospelých s biopsiou potvrdenou IgA nefropatiou a proteinúriou ≥ 1&nbsp;g/g napriek podpornej liečbe:</p>
 
 <ul>
-  <li><strong>Deväťmesačná interim analýza</strong> (NEJM 2024/2025; prvých 250 pacientov): upravený geometrický priemer 24-hodinového UPCR bol o <strong>38,3 %</strong> nižší pri iptakopane oproti placebu (95 % IS 26,0–48,6; p &lt; 0,001). Na tomto výsledku – <strong>redukcii proteinúrie</strong> – FDA udelila <strong>urýchlené schválenie 7.–8. augusta 2024</strong> (Fabhalta) na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou v riziku progresie. V tom čase <strong>ešte nebol preukázaný</strong> účinok na pokles eGFR; ten bol naplánovaný na 24 mesiacov. (Nesprávne je tvrdiť, že schválenie vychádzalo zo spomalenia poklesu funkcie už v 9-mesačnom interim.)</li>
-  <li><strong>Konečná 24-mesačná analýza</strong> (NEJM 2026): anualizovaný sklon eGFR −3,10 oproti −6,12 ml/min/1,73 m²/rok (rozdiel 3,02; upravené p &lt; 0,001); kombinovaný renálny ukazovateľ 21,4 % oproti 33,5 % (HR 0,57). Závažné infekcie boli častejšie (6,7 % oproti 2,1 %).</li>
+  <li><strong>Deväťmesačná interim analýza</strong> (NEJM 2024/2025; prvých 250 pacientov): upravený geometrický priemer 24-hodinového UPCR bol o <strong>38,3 %</strong> nižší pri iptakopane oproti placebu (95 % IS 26,0–48,6; p &lt; 0,001). Na tomto výsledku – <strong>redukcii proteinúrie</strong> – FDA udelila <strong>urýchlené schválenie 7.–8. augusta 2024</strong> (Fabhalta) na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou v riziku progresie. V tom čase <strong>ešte nebol preukázaný</strong> účinok na pokles eGFR; ten bol naplánovaný na 24&nbsp;mesiacov. (Nesprávne je tvrdiť, že schválenie vychádzalo zo spomalenia poklesu funkcie už v 9-mesačnom interim.)</li>
+  <li><strong>Konečná 24-mesačná analýza</strong> (NEJM 2026): anualizovaný sklon eGFR −3,10 oproti −6,12&nbsp;ml/min/1,73&nbsp;m²/rok (rozdiel 3,02; upravené p &lt; 0,001); kombinovaný renálny ukazovateľ 21,4 % oproti 33,5 % (HR 0,57). Závažné infekcie boli častejšie (6,7 % oproti 2,1 %).</li>
 </ul>
 
 <p>Detailné čísla sú v samostatnom článku o <a href="article.php?slug=iptakopan-iga-nefropatia-applause-igan-24-mesiacov">APPLAUSE-IgAN</a>.</p>
@@ -240,7 +240,7 @@ $articles[] = [
 <ol>
   <li><strong>Je ochorenie komplementom mediované?</strong> – diagnóza, biopsia, relevantné biomarkery.</li>
   <li><strong>Je aktívna infekcia?</strong> – pred nasadením riešiť alebo aspoň stabilizovať.</li>
-  <li><strong>Je pacient očkovaný v správnom čase?</strong> – meningokok (A, C, W, Y a B), pneumokok, Hib; ideálne ≥ 2 týždne pred začiatkom, inak antibiotická profylaxia podľa protokolu.</li>
+  <li><strong>Je pacient očkovaný v správnom čase?</strong> – meningokok (A, C, W, Y a B), pneumokok, Hib; ideálne ≥ 2&nbsp;týždne pred začiatkom, inak antibiotická profylaxia podľa protokolu.</li>
   <li><strong>Aký je plán monitorovania?</strong> – proteinúria, eGFR, klinická aktivita; pri C5 inhibícii podľa dostupnosti CH50/AH50 alebo hladiny lieku.</li>
   <li><strong>Má ešte zmysel inhibovať?</strong> – posúdiť, či už neprevažuje ireverzibilné poškodenie.</li>
   <li><strong>Nezamieňať proteinúriu za tvrdý ukazovateľ</strong> – urýchlené schválenie iptakopanu vychádzalo z 9-mesačnej proteinúrie; prínos na eGFR vyžadoval 24-mesačné dáta.</li>

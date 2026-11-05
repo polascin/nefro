@@ -75,29 +75,29 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Nízka</th>
-      <td>&lt;30 mg/dl</td>
-      <td>&lt;75 nmol/l</td>
+      <td>&lt;30&nbsp;mg/dl</td>
+      <td>&lt;75&nbsp;nmol/l</td>
       <td>Významné riziko pripísateľné Lp(a) je menej pravdepodobné</td>
     </tr>
     <tr>
       <th scope="row">Hraničná, „sivá zóna“</th>
-      <td>30–50 mg/dl</td>
-      <td>75–125 nmol/l</td>
+      <td>30–50&nbsp;mg/dl</td>
+      <td>75–125&nbsp;nmol/l</td>
       <td>Význam závisí od celkového rizika a ďalších rizikových faktorov</td>
     </tr>
     <tr>
       <th scope="row">Vysoká</th>
-      <td>≥50 mg/dl</td>
-      <td>≥125 nmol/l</td>
+      <td>≥50&nbsp;mg/dl</td>
+      <td>≥125&nbsp;nmol/l</td>
       <td>Faktor zvyšujúci riziko, ktorý môže zmeniť intenzitu prevencie</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Tabuľka uvádza pragmatické pásma konsenzu EAS a stanoviska NLA, nie matematické ekvivalenty. Dokumenty používajú mierne odlišné molárne prahy: aktualizácia ESC/EAS 2025 označuje za klinicky významný modifikátor rizika hodnotu &gt;50 mg/dl alebo ≥105 nmol/l, kým ACC/AHA 2026 používa ≥50 mg/dl alebo ≥125 nmol/l. Tento rozdiel je ďalším dôvodom, prečo výsledok neprepočítavať svojpomocne.</p>
+<p>Tabuľka uvádza pragmatické pásma konsenzu EAS a stanoviska NLA, nie matematické ekvivalenty. Dokumenty používajú mierne odlišné molárne prahy: aktualizácia ESC/EAS 2025 označuje za klinicky významný modifikátor rizika hodnotu &gt;50&nbsp;mg/dl alebo ≥105&nbsp;nmol/l, kým ACC/AHA 2026 používa ≥50&nbsp;mg/dl alebo ≥125&nbsp;nmol/l. Tento rozdiel je ďalším dôvodom, prečo výsledok neprepočítavať svojpomocne.</p>
 
-<p>Podľa ACC/AHA 2026 je Lp(a) ≥125 nmol/l alebo ≥50 mg/dl spojený približne s 1,4-násobným odhadovaným rizikom ASCVD a hodnota ≥250 nmol/l alebo ≥100 mg/dl približne s dvojnásobným rizikom. Ide o priemerný relatívny odhad; individuálne absolútne riziko naďalej určujú vek, už prítomné ASCVD, LDL cholesterol, krvný tlak, fajčenie, diabetes, funkcia obličiek a ďalšie okolnosti.</p>
+<p>Podľa ACC/AHA 2026 je Lp(a) ≥125&nbsp;nmol/l alebo ≥50&nbsp;mg/dl spojený približne s 1,4-násobným odhadovaným rizikom ASCVD a hodnota ≥250&nbsp;nmol/l alebo ≥100&nbsp;mg/dl približne s dvojnásobným rizikom. Ide o priemerný relatívny odhad; individuálne absolútne riziko naďalej určujú vek, už prítomné ASCVD, LDL cholesterol, krvný tlak, fajčenie, diabetes, funkcia obličiek a ďalšie okolnosti.</p>
 
 <h2>Kedy jednorazové meranie nestačí</h2>
 

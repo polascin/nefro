@@ -38,7 +38,7 @@ $articles[] = [
 
 <p>Nejde o dôkaz, že konkrétne aditívum priamo spôsobuje konkrétne ochorenie. Ide o observačné dáta. Napriek tomu sú výsledky dôležité, pretože sa týkajú látok, ktorým je vystavená veľká časť populácie.</p>
 
-<p>Podľa databázy Open Food Facts malo v roku 2024 viac ako 139 000 potravinových a nápojových produktov aspoň jedno farbivo zo skupiny E100 až E199. Viac ako 700 000 produktov obsahovalo aspoň jeden konzervant zo skupiny E200 až E399. Expozícia teda nie je okrajová.</p>
+<p>Podľa databázy Open Food Facts malo v roku 2024 viac ako 139&nbsp;000 potravinových a nápojových produktov aspoň jedno farbivo zo skupiny E100 až E199. Viac ako 700&nbsp;000 produktov obsahovalo aspoň jeden konzervant zo skupiny E200 až E399. Expozícia teda nie je okrajová.</p>
 
 <h2>Čo skúmali francúzski vedci</h2>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Farbivá a riziko diabetu 2. typu</h2>
 
-<p>Jedna zo štúdií hodnotila súvislosť medzi príjmom potravinových farbív a vznikom diabetu 2. typu u 108 723 účastníkov sledovaných v rokoch 2009 až 2023.</p>
+<p>Jedna zo štúdií hodnotila súvislosť medzi príjmom potravinových farbív a vznikom diabetu 2. typu u 108&nbsp;723 účastníkov sledovaných v rokoch 2009 až 2023.</p>
 
 <p>Účastníci s najvyšším príjmom farbív mali o 38 % vyššie riziko diabetu 2. typu než osoby s najnižšou expozíciou.</p>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Farbivá a riziko rakoviny</h2>
 
-<p>Druhá štúdia sledovala 105 260 dospelých v rokoch 2009 až 2023 a hodnotila vzťah medzi potravinovými farbivami a výskytom nádorových ochorení. Počas sledovania bolo zaznamenaných 4226 nových prípadov rakoviny, z toho 1208 prípadov karcinómu prsníka, 508 karcinómov prostaty a 352 kolorektálnych karcinómov.</p>
+<p>Druhá štúdia sledovala 105&nbsp;260 dospelých v rokoch 2009 až 2023 a hodnotila vzťah medzi potravinovými farbivami a výskytom nádorových ochorení. Počas sledovania bolo zaznamenaných 4226 nových prípadov rakoviny, z toho 1208 prípadov karcinómu prsníka, 508 karcinómov prostaty a 352 kolorektálnych karcinómov.</p>
 
 <p>Vysoký príjem farbív bol spojený:</p>
 
@@ -93,7 +93,7 @@ $articles[] = [
 
 <h2>Konzervanty, hypertenzia a kardiovaskulárne ochorenia</h2>
 
-<p>Tretia štúdia sa zamerala na konzervanty. Zahŕňala 112 395 účastníkov sledovaných v rokoch 2009 až 2024.</p>
+<p>Tretia štúdia sa zamerala na konzervanty. Zahŕňala 112&nbsp;395 účastníkov sledovaných v rokoch 2009 až 2024.</p>
 
 <p>Najvyšší príjem konzervantov bol spojený s vyšším rizikom hypertenzie:</p>
 

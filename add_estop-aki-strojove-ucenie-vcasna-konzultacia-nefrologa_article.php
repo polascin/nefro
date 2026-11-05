@@ -2,7 +2,7 @@
 
 /**
  * add_estop-aki-strojove-ucenie-vcasna-konzultacia-nefrologa_article.php
- * ESTOP-AKI - strojove ucenie predpovedalo riziko AKI, vcasna konzultacia vysledky nezlepsila.
+ * ESTOP-AKI - strojove ucenie predpovedalo riziko AKI, vcasna konzultacia výsledky nezlepsila.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -30,7 +30,7 @@ $articles[] = [
 
 <p class="article-dek"><em>Modely strojového učenia dokážu upozorniť na hroziace akútne poškodenie obličiek hodiny až dni pred vzostupom kreatinínu. Randomizovaná štúdia ESTOP-AKI však ukázala, že samotné upozornenie spolu so včasnou konzultáciou nefrológa výsledky nezlepšilo. Najzaujímavejšie nie je to, že štúdia vyšla negatívne, ale kde presne sa reťazec pretrhol.</em></p>
 
-<p>Predikcia akútneho poškodenia obličiek (AKI) patrí k najúspešnejším aplikáciám strojového učenia v nemocničnej medicíne. Model tej istej pracovnej skupiny bol v roku 2020 validovaný na takmer pol milióne hospitalizácií v troch zdravotníckych systémoch a dosahoval plochu pod krivkou ROC <strong>0,85 až 0,86</strong> pre predpoveď AKI druhého alebo vyššieho štádia v nasledujúcich 48 hodinách. Nástup dokázal signalizovať približne <strong>27 až 39 hodín</strong> pred zdvojnásobením sérového kreatinínu.</p>
+<p>Predikcia akútneho poškodenia obličiek (AKI) patrí k najúspešnejším aplikáciám strojového učenia v nemocničnej medicíne. Model tej istej pracovnej skupiny bol v roku 2020 validovaný na takmer pol milióne hospitalizácií v troch zdravotníckych systémoch a dosahoval plochu pod krivkou ROC <strong>0,85 až 0,86</strong> pre predpoveď AKI druhého alebo vyššieho štádia v nasledujúcich 48 hodinách. Nástup dokázal signalizovať približne <strong>27 až 39&nbsp;hodín</strong> pred zdvojnásobením sérového kreatinínu.</p>
 
 <p>To je na prediktívny model v klinickej medicíne veľmi dobrý výkon. Otvorená zostávala druhá otázka: či sa dá takto získaný čas premeniť na lepší výsledok pre pacienta.</p>
 
@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Výsledky</h2>
 
-<p>Primárnym ukazovateľom bola maximálna zmena sérového kreatinínu počas siedmich dní. Rozdiel bol malý a nevýznamný: vzostup o <strong>0,04 mg/dl</strong> pri včasnej konzultácii oproti poklesu o <strong>0,03 mg/dl</strong> pri štandardnej starostlivosti (P = 0,30).</p>
+<p>Primárnym ukazovateľom bola maximálna zmena sérového kreatinínu počas siedmich dní. Rozdiel bol malý a nevýznamný: vzostup o <strong>0,04&nbsp;mg/dl</strong> pri včasnej konzultácii oproti poklesu o <strong>0,03&nbsp;mg/dl</strong> pri štandardnej starostlivosti (P = 0,30).</p>
 
 <p>Výber populácie pritom fungoval: AKI ktoréhokoľvek štádia vzniklo počas siedmich dní u <strong>70 pacientov, teda u 38,9 %</strong> celej kohorty. Model teda skutočne vybral vysokorizikový súbor.</p>
 
@@ -62,8 +62,8 @@ $articles[] = [
   <tbody>
     <tr><td>AKI 1. alebo vyššieho štádia</td><td>42 %</td><td>36 %</td><td>0,47</td></tr>
     <tr><td>AKI 2. alebo vyššieho štádia</td><td>19 %</td><td>13 %</td><td>0,28</td></tr>
-    <tr><td>Mortalita do 90 dní</td><td>14,8 %</td><td>18,7 %</td><td>0,62</td></tr>
-    <tr><td>Rehospitalizácia do 90 dní</td><td>34,1 %</td><td>44,4 %</td><td>0,21</td></tr>
+    <tr><td>Mortalita do 90&nbsp;dní</td><td>14,8 %</td><td>18,7 %</td><td>0,62</td></tr>
+    <tr><td>Rehospitalizácia do 90&nbsp;dní</td><td>34,1 %</td><td>44,4 %</td><td>0,21</td></tr>
   </tbody>
 </table>
 </div>
@@ -175,7 +175,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Early AKI Prevention Tool Flags Risk, but Compliance Low.</em> 2026. <a href="https://www.medscape.com/viewarticle/early-acute-kidney-injury-prevention-tool-flags-risk-2026a1000qao" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo oboch prác Churpeka a spolupracovníkov boli overené v Europe PMC. Proti zneniu abstraktu štúdie ESTOP-AKI boli overené tieto údaje: 180 randomizovaných pacientov, medián veku 62,5 roka, 56,7 % mužov, rozdelenie 89 a 91 pacientov, zmena kreatinínu 0,04 oproti −0,03 mg/dl (P = 0,30), AKI 1.+ štádia 42 % oproti 36 % (P = 0,47), AKI 2.+ štádia 19 % oproti 13 % (P = 0,28), adherencia 41 % oproti 68 %, mortalita do 90 dní 14,8 % oproti 18,7 % (P = 0,62) a rehospitalizácie 34,1 % oproti 44,4 % (P = 0,21). Údaj o 70 pacientoch (38,9 %) s AKI je dopočítaný z uvedených podielov a zodpovedá im. Údaje o validačnej štúdii z roku 2020 (495 971 hospitalizácií, plocha pod krivkou ROC 0,85 – 0,86 pre AKI 2.+ štádia, predstih 27 – 39 hodín) boli overené samostatne. <strong>Neuvádzam</strong> obdobie náboru, presné počty konzultácií a odporúčaní ani etnické zloženie súboru – tieto údaje sa v abstrakte nenachádzajú a nebolo možné ich overiť; jednocentrický charakter štúdie vyplýva z afiliácií autorov a z veľkosti súboru, nie z overeného znenia. Výklad rozdielu medzi predikciou a modifikovateľnosťou rizika, poznámka o tom, že odporúčania neboli randomizované, a praktické zásady prevencie AKI sú <strong>vlastným odborným spracovaním</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo oboch prác Churpeka a spolupracovníkov boli overené v Europe PMC. Proti zneniu abstraktu štúdie ESTOP-AKI boli overené tieto údaje: 180 randomizovaných pacientov, medián veku 62,5 roka, 56,7 % mužov, rozdelenie 89 a 91 pacientov, zmena kreatinínu 0,04 oproti −0,03&nbsp;mg/dl (P = 0,30), AKI 1.+ štádia 42 % oproti 36 % (P = 0,47), AKI 2.+ štádia 19 % oproti 13 % (P = 0,28), adherencia 41 % oproti 68 %, mortalita do 90&nbsp;dní 14,8 % oproti 18,7 % (P = 0,62) a rehospitalizácie 34,1 % oproti 44,4 % (P = 0,21). Údaj o 70 pacientoch (38,9 %) s AKI je dopočítaný z uvedených podielov a zodpovedá im. Údaje o validačnej štúdii z roku 2020 (495&nbsp;971 hospitalizácií, plocha pod krivkou ROC 0,85 – 0,86 pre AKI 2.+ štádia, predstih 27 – 39&nbsp;hodín) boli overené samostatne. <strong>Neuvádzam</strong> obdobie náboru, presné počty konzultácií a odporúčaní ani etnické zloženie súboru – tieto údaje sa v abstrakte nenachádzajú a nebolo možné ich overiť; jednocentrický charakter štúdie vyplýva z afiliácií autorov a z veľkosti súboru, nie z overeného znenia. Výklad rozdielu medzi predikciou a modifikovateľnosťou rizika, poznámka o tom, že odporúčania neboli randomizované, a praktické zásady prevencie AKI sú <strong>vlastným odborným spracovaním</strong>.</em></p>
 HTML,
 ];
 

@@ -84,7 +84,7 @@ $articles[] = [
 
 <p>Obava, že UI pridá ďalšiu vrstvu upozornení a kontrolných obrazoviek, má tvrdý empirický základ. V literatúre o počítačovom zadávaní ordinácií sa opakovane uvádza, že <strong>približne 90–96 % upozornení lekári prekročia</strong> – pri takej miere prestáva byť upozornenie informáciou a stáva sa šumom.</p>
 
-<p>Jednou zo skúmaných ciest je predpovedať, či klinik dané upozornenie prijme, a podľa toho odstupňovať jeho rušivosť. Práca z taiwanskej univerzitnej nemocnice vyvinula a validovala modely strojového učenia na 6 453 ordináciách, ktoré v systéme rozhodovacej podpory spustili upozornenie; neurónová sieť dosiahla plochu pod ROC krivkou 0,94 a presnosť 0,85, čím prekonala náhodný les, naivný Bayes, gradientný boosting aj metódu podporných vektorov.</p>
+<p>Jednou zo skúmaných ciest je predpovedať, či klinik dané upozornenie prijme, a podľa toho odstupňovať jeho rušivosť. Práca z taiwanskej univerzitnej nemocnice vyvinula a validovala modely strojového učenia na 6&nbsp;453 ordináciách, ktoré v systéme rozhodovacej podpory spustili upozornenie; neurónová sieť dosiahla plochu pod ROC krivkou 0,94 a presnosť 0,85, čím prekonala náhodný les, naivný Bayes, gradientný boosting aj metódu podporných vektorov.</p>
 
 <p>Dôležitá výhrada, ktorú predlohy tohto typu zvyknú stratiť: išlo o <strong>vývoj a validáciu modelu na historických dátach, nie o preukázanie, že nasadenie takého modelu skutočne zníži únavu z upozornení alebo zlepší bezpečnosť</strong>. Ide o vierohodnú cestu, nie o doložený klinický prínos.</p>
 

@@ -44,14 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($urineVolume === null) {
             $errors[] = "Objem moču musí byť kladné číslo (mL).";
         } elseif ($urineVolume < 100.0 || $urineVolume > 15000.0) {
-            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
+            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
         }
 
         $collectionHours = calculatorParsePositiveFloat($form["collection_hours"]);
         if ($collectionHours === null) {
             $errors[] = "Čas zberu musí byť kladné číslo (hodiny).";
         } elseif ($collectionHours < 1.0 || $collectionHours > 48.0) {
-            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
+            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
         }
 
         // Klasický klírens voľnej vody — osmolality (obe alebo žiadna)
@@ -86,13 +86,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors[] = "Pre elektrolytový klírens zadajte plazmatický Na, močový Na aj močový K.";
             } else {
                 if ($pNa < 110.0 || $pNa > 175.0) {
-                    $errors[] = "Plazmatický sodík mimo rozsahu (110 až 175 mmol/l).";
+                    $errors[] = "Plazmatický sodík mimo rozsahu (110 až 175 mmol/l).";
                 }
                 if ($uNa < 1.0 || $uNa > 300.0) {
-                    $errors[] = "Močový sodík mimo rozsahu (1 až 300 mmol/l).";
+                    $errors[] = "Močový sodík mimo rozsahu (1 až 300 mmol/l).";
                 }
                 if ($uK < 1.0 || $uK > 150.0) {
-                    $errors[] = "Močový draslík mimo rozsahu (1 až 150 mmol/l).";
+                    $errors[] = "Močový draslík mimo rozsahu (1 až 150 mmol/l).";
                 }
             }
         }

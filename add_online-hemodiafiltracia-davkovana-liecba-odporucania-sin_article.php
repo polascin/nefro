@@ -64,13 +64,13 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">CONVINCE (2023)</th>
-      <td>1 360 pacientov, cieľ ≥ 23 l konvekcie na sedenie</td>
+      <td>1&nbsp;360 pacientov, cieľ ≥ 23&nbsp;l konvekcie na sedenie</td>
       <td>HR 0,77 (95 % IS 0,65–0,93)</td>
-      <td>Úmrtnosť 17,3 % oproti 21,9 % pri mediáne sledovania 30 mesiacov. Priemerný dosiahnutý konvektívny objem 25,3 l na sedenie.</td>
+      <td>Úmrtnosť 17,3 % oproti 21,9 % pri mediáne sledovania 30&nbsp;mesiacov. Priemerný dosiahnutý konvektívny objem 25,3&nbsp;l na sedenie.</td>
     </tr>
     <tr>
       <th scope="row">Metaanalýza individuálnych údajov (2024)</th>
-      <td>5 štúdií, 4 153 pacientov</td>
+      <td>5 štúdií, 4&nbsp;153 pacientov</td>
       <td>HR 0,84 (95 % IS 0,74–0,95)</td>
       <td>Úmrtnosť 23,3 % oproti 27,0 %. <strong>Stupňovitý vzťah medzi konvektívnym objemom a rizikom úmrtia</strong>; v podskupinách sa nepreukázala heterogenita účinku.</td>
     </tr>
@@ -90,7 +90,7 @@ $articles[] = [
 
 <p>Kľúčovým zistením metaanalýzy individuálnych údajov nie je samotný pomer rizík, ale <strong>tvar vzťahu</strong>: s rastúcim konvektívnym objemom riziko úmrtia klesá plynulo. Zároveň sa nenašiel rozdiel účinku podľa veku, pohlavia, diabetu, trvania dialýzy ani ďalších vopred určených charakteristík.</p>
 
-<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: v skúšaní sa nepreukázala heterogenita účinku medzi podskupinami – to však nie je dôkaz, že nevhodná podskupina neexistuje. CONVINCE totiž zaraďovala <strong>iba pacientov, ktorí boli považovaní za kandidátov na konvektívny objem ≥ 23 l na sedenie</strong>. Tí, u ktorých sa taká dávka dodať nedá, teda v skúšaní vôbec neboli a jeho výsledky o nich nič nehovoria. Rozhodujúce preto zostáva, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
+<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: v skúšaní sa nepreukázala heterogenita účinku medzi podskupinami – to však nie je dôkaz, že nevhodná podskupina neexistuje. CONVINCE totiž zaraďovala <strong>iba pacientov, ktorí boli považovaní za kandidátov na konvektívny objem ≥ 23&nbsp;l na sedenie</strong>. Tí, u ktorých sa taká dávka dodať nedá, teda v skúšaní vôbec neboli a jeho výsledky o nich nič nehovoria. Rozhodujúce preto zostáva, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
 
 <h2>Čo obmedzuje dosiahnutý konvektívny objem</h2>
 
@@ -135,7 +135,7 @@ $articles[] = [
     <tr>
       <th scope="row">Vysokoobjemová postdilučná HDF znižuje celkovú úmrtnosť, HR 0,84 (0,74–0,95)</th>
       <td>Potvrdené</td>
-      <td>Údaj z metaanalýzy individuálnych údajov piatich štúdií so 4 153 pacientmi; stredná istota dôkazu.</td>
+      <td>Údaj z metaanalýzy individuálnych údajov piatich štúdií so 4&nbsp;153 pacientmi; stredná istota dôkazu.</td>
     </tr>
     <tr>
       <th scope="row">Znižuje kardiovaskulárnu úmrtnosť, HR 0,78 (0,64–0,96)</th>

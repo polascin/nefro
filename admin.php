@@ -581,7 +581,7 @@ $pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
                         <button type="submit" class="btn-admin-action">Filtrovať</button>
                         <button type="submit" name="audit_date_preset" value="today" class="btn-admin-action <?= ($auditDatePreset === 'today') ? 'btn-admin-action--active' : '' ?>">Dnes</button>
-                        <button type="submit" name="audit_date_preset" value="last7" class="btn-admin-action <?= ($auditDatePreset === 'last7') ? 'btn-admin-action--active' : '' ?>">Posledných 7 dní</button>
+                        <button type="submit" name="audit_date_preset" value="last7" class="btn-admin-action <?= ($auditDatePreset === 'last7') ? 'btn-admin-action--active' : '' ?>">Posledných 7 dní</button>
                         <button type="submit" name="audit_date_preset" value="month" class="btn-admin-action <?= ($auditDatePreset === 'month') ? 'btn-admin-action--active' : '' ?>">Tento mesiac</button>
                         <a href="admin.php" class="btn-admin-action">Zrušiť filter</a>
                     </div>

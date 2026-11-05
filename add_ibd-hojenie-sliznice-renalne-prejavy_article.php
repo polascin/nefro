@@ -68,7 +68,7 @@ $articles[] = [
 
 <p>Zápalové ochorenia čriev sú systémové. Mimočrevné prejavy postihujú najčastejšie kĺby, kožu a oči, zriedkavejšie pečeň, pľúca alebo pankreas, a významne znižujú kvalitu života. Niektoré z nich – periférna artritída, aftózne ulcerácie, episkleritída, erythema nodosum – sú viazané na aktivitu črevného zápalu a ustupujú po jeho zvládnutí. Iné, napríklad uveitída alebo ankylozujúca spondylitída, prebiehajú nezávisle.</p>
 
-<p>Najcitovanejším zdrojom o renálnom postihnutí v biologickej ére je retrospektívna kohorta z Istanbulu, ktorá počas 16 rokov sledovala 1 874 dospelých pacientov s IBD (1 055 s ulceróznou kolitídou, 819 s Crohnovou chorobou).</p>
+<p>Najcitovanejším zdrojom o renálnom postihnutí v biologickej ére je retrospektívna kohorta z Istanbulu, ktorá počas 16&nbsp;rokov sledovala 1&nbsp;874 dospelých pacientov s IBD (1&nbsp;055&nbsp;s ulceróznou kolitídou, 819&nbsp;s Crohnovou chorobou).</p>
 
 <div class="table-responsive" role="region" aria-label="Výskyt renálnych prejavov podľa typu zápalového ochorenia čriev" tabindex="0">
 <table>
@@ -76,9 +76,9 @@ $articles[] = [
     <tr><th scope="col">Skupina</th><th scope="col">Počet pacientov</th><th scope="col">Renálne prejavy</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Celá kohorta</th><td>1 874</td><td>105 (5,6 %)</td></tr>
+    <tr><th scope="row">Celá kohorta</th><td>1&nbsp;874</td><td>105 (5,6 %)</td></tr>
     <tr><th scope="row">Crohnova choroba</th><td>819</td><td>55 (6,7 %)</td></tr>
-    <tr><th scope="row">Ulcerózna kolitída</th><td>1 055</td><td>50 (4,7 %)</td></tr>
+    <tr><th scope="row">Ulcerózna kolitída</th><td>1&nbsp;055</td><td>50 (4,7 %)</td></tr>
   </tbody>
 </table>
 </div>

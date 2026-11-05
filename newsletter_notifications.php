@@ -6,16 +6,16 @@ require_once __DIR__ . '/newsletter_consent_audit.php';
 require_once __DIR__ . '/email_verification.php';
 require_once __DIR__ . '/site_changelog.php';
 
-const NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL = 2592000; // 30 dní
-const NEWSLETTER_UNSUBSCRIBE_MAX_TTL     = 2592000; // 30 dní
+const NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL = 2592000; // 30 dní
+const NEWSLETTER_UNSUBSCRIBE_MAX_TTL     = 2592000; // 30 dní
 const NEWSLETTER_RETRY_BASE_SECONDS      = 60;
-const NEWSLETTER_RETRY_MAX_SECONDS       = 86400; // 24 hodín
+const NEWSLETTER_RETRY_MAX_SECONDS       = 86400; // 24 hodín
 
 if (!function_exists('newsletterRetryDelay')) {
     function newsletterRetryDelay(int $attempt): int
     {
         $attempt = max(1, $attempt);
-        // Exponenciálny backoff: 60 * 2^(attempt-1) s vrcholom 24 h
+        // Exponenciálny backoff: 60 * 2^(attempt-1) s vrcholom 24 h
         $delay = NEWSLETTER_RETRY_BASE_SECONDS * (int) pow(2, min($attempt - 1, 10));
         $delay = min($delay, NEWSLETTER_RETRY_MAX_SECONDS);
         // Jitter ±20 % proti thundering herd

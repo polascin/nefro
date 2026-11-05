@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $sex = in_array($form["sex"], ["female", "male"], true)
@@ -349,7 +349,7 @@ if (isLoggedIn()) {
 
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
-                        <p class="helper-text"><strong>Poznámka:</strong> KFRE sa odporúča najmä pre pacientov s CKD v kategóriách G3–G5 (eGFR &lt;60 ml/min/1,73 m²).</p>
+                        <p class="helper-text"><strong>Poznámka:</strong> KFRE sa odporúča najmä pre pacientov s CKD v kategóriách G3–G5 (eGFR &lt;60 ml/min/1,73 m²).</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
@@ -445,7 +445,7 @@ if (isLoggedIn()) {
                                 <div class="risk-label">5-ročné riziko</div>
                                 <div class="risk-value">
                                     <?= htmlspecialchars(number_format((float)$calculated["risk_5yr"], 1, ",", " ")) ?> %
-                                    <span class="calc-result-badge <?= htmlspecialchars($kfRiskCls) ?> fs-075 ml-8">
+                                    <span class="calc-result-badge <?= htmlspecialchars($kfRiskCls) ?> fs-075 ml-8">
                                         <?= match($kfRiskCls) {
                                             'risk-low'       => 'Nízke',
                                             'risk-moderate'  => 'Stredné',

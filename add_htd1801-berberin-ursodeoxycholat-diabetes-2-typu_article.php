@@ -40,16 +40,16 @@ $articles[] = [
 
 <h2>Ako bola navrhnutá štúdia SYMPHONY-2</h2>
 
-<p>SYMPHONY-2 bola multicentrická, randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3, ktorá prebehla v 64 centrách v Číne. Zaradila účastníkov s diabetom 2. typu, u ktorých glykemická kontrola zostávala nedostatočná napriek stabilnej dávke metformínu užívanej najmenej osem týždňov. Podmienkou zaradenia bola hodnota HbA1c od 7,0 do 10,5 % a glykémia nalačno najviac 250,5 mg/dl, teda 13,9 mmol/l.</p>
+<p>SYMPHONY-2 bola multicentrická, randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3, ktorá prebehla v 64 centrách v Číne. Zaradila účastníkov s diabetom 2. typu, u ktorých glykemická kontrola zostávala nedostatočná napriek stabilnej dávke metformínu užívanej najmenej osem týždňov. Podmienkou zaradenia bola hodnota HbA1c od 7,0 do 10,5 % a glykémia nalačno najviac 250,5&nbsp;mg/dl, teda 13,9&nbsp;mmol/l.</p>
 
 <p>Publikácia uvádza randomizáciu v pomere 2 : 1:</p>
 
 <ul>
-  <li><strong>365 účastníkov</strong> dostávalo HTD1801 v dávke 1 000 mg perorálne dvakrát denne spolu s doterajšou liečbou metformínom,</li>
+  <li><strong>365 účastníkov</strong> dostávalo HTD1801 v dávke 1&nbsp;000&nbsp;mg perorálne dvakrát denne spolu s doterajšou liečbou metformínom,</li>
   <li><strong>184 účastníkov</strong> dostávalo placebo spolu s metformínom.</li>
 </ul>
 
-<p>Primárnym koncovým ukazovateľom bola zmena HbA1c od východiskovej hodnoty do 24. týždňa. Register štúdie uvádza, že po dvojito zaslepenej fáze nasledovala 28-týždňová otvorená predĺžená fáza, v ktorej všetci účastníci dostávali HTD1801. Bez súbežnej kontrolnej skupiny však majú tieto dlhšie údaje nižšiu výpovednú hodnotu než randomizované porovnanie počas prvých 24 týždňov.</p>
+<p>Primárnym koncovým ukazovateľom bola zmena HbA1c od východiskovej hodnoty do 24. týždňa. Register štúdie uvádza, že po dvojito zaslepenej fáze nasledovala 28-týždňová otvorená predĺžená fáza, v ktorej všetci účastníci dostávali HTD1801. Bez súbežnej kontrolnej skupiny však majú tieto dlhšie údaje nižšiu výpovednú hodnotu než randomizované porovnanie počas prvých 24&nbsp;týždňov.</p>
 
 <h2>Výsledok pre HbA1c</h2>
 
@@ -88,27 +88,27 @@ $articles[] = [
 
 <p>Hnačka bola najčastejšou nežiaducou udalosťou. Vyskytla sa u <strong>23,8 %</strong> účastníkov liečených HTD1801 a u <strong>1,1 %</strong> účastníkov v skupine s placebom. Tri prípady v skupine HTD1801 boli hodnotené ako ťažké; ostatné boli mierne alebo stredne ťažké. Označenie „ťažký stupeň“ vyjadruje intenzitu udalosti a nemožno ho automaticky zamieňať s regulačným pojmom závažná nežiaduca udalosť.</p>
 
-<p>Ťažká hypoglykémia sa nevyskytla v žiadnej skupine. Tento údaj však neznamená, že sa nevyskytla žiadna hypoglykémia, ani nepreukazuje bezpečnosť vo všetkých skupinách pacientov. Dvojito zaslepené porovnanie trvalo 24 týždňov a nebolo dostatočne veľké ani dlhé na spoľahlivé zachytenie veľmi zriedkavých alebo neskorých nežiaducich účinkov.</p>
+<p>Ťažká hypoglykémia sa nevyskytla v žiadnej skupine. Tento údaj však neznamená, že sa nevyskytla žiadna hypoglykémia, ani nepreukazuje bezpečnosť vo všetkých skupinách pacientov. Dvojito zaslepené porovnanie trvalo 24&nbsp;týždňov a nebolo dostatočne veľké ani dlhé na spoľahlivé zachytenie veľmi zriedkavých alebo neskorých nežiaducich účinkov.</p>
 
-<p>Z nefrologického hľadiska je hnačka relevantná aj nepriamo. Pretrvávajúce gastrointestinálne straty môžu viesť k hypovolémii a prechodnému zhoršeniu funkcie obličiek, najmä u pacientov užívajúcich diuretiká, blokátory systému renín-angiotenzín alebo inhibítory SGLT2. V štúdiách programu SYMPHONY bola vstupným kritériom eGFR vyššia než 60 ml/min/1,73 m<sup>2</sup>. Účinnosť a bezpečnosť u pacientov s nižšou eGFR preto tieto štúdie nestanovili.</p>
+<p>Z nefrologického hľadiska je hnačka relevantná aj nepriamo. Pretrvávajúce gastrointestinálne straty môžu viesť k hypovolémii a prechodnému zhoršeniu funkcie obličiek, najmä u pacientov užívajúcich diuretiká, blokátory systému renín-angiotenzín alebo inhibítory SGLT2. V štúdiách programu SYMPHONY bola vstupným kritériom eGFR vyššia než 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Účinnosť a bezpečnosť u pacientov s nižšou eGFR preto tieto štúdie nestanovili.</p>
 
 <h2>Čo štúdia nepreukázala</h2>
 
 <ul>
   <li><strong>Ochranu obličiek:</strong> primárny ukazovateľ nezahŕňal albuminúriu, pokles odhadovanej glomerulovej filtrácie (eGFR), zlyhanie obličiek ani potrebu náhrady funkcie obličiek.</li>
   <li><strong>Kardiovaskulárny prínos:</strong> štúdia nebola navrhnutá na hodnotenie infarktu myokardu, cievnej mozgovej príhody, hospitalizácie pre srdcové zlyhávanie ani kardiovaskulárnej mortality.</li>
-  <li><strong>Dlhodobú prognózu:</strong> zmena HbA1c počas 24 týždňov je náhradný laboratórny ukazovateľ, nie klinický výsledok.</li>
+  <li><strong>Dlhodobú prognózu:</strong> zmena HbA1c počas 24&nbsp;týždňov je náhradný laboratórny ukazovateľ, nie klinický výsledok.</li>
   <li><strong>Nadradenosť nad štandardnou liečbou:</strong> porovnávacím ramenom bolo placebo pridané k metformínu, nie iný účinný liek.</li>
   <li><strong>Rovnaký účinok mimo skúmanej populácie:</strong> všetky centrá boli v Číne a prenositeľnosť výsledkov na iné populácie treba ešte overiť.</li>
 </ul>
 
 <p>V protokole SYMPHONY-2 boli medzi sekundárnymi ukazovateľmi glykémia nalačno, postprandiálna glykémia, inzulínová rezistencia a LDL cholesterol. Zmena laboratórneho ukazovateľa však sama osebe nepreukazuje zlepšenie klinickej prognózy. Najmä pokles lipidového alebo pečeňového laboratórneho ukazovateľa nemožno bez príslušnej výsledkovej štúdie vydávať za dôkaz prevencie aterosklerotických príhod, progresie steatohepatitídy alebo chronickej choroby obličiek.</p>
 
-<p>Združená analýza štúdií SYMPHONY-1 a SYMPHONY-2 prezentovaná v konferenčnom abstrakte ASN opísala zmeny eGFR v podskupinách s mierne zníženou eGFR a s hyperfiltráciou. Išlo však o krátkodobú analýzu programu, ktorého primárnym ukazovateľom bol HbA1c a ktorý zaraďoval iba účastníkov s eGFR nad 60 ml/min/1,73 m<sup>2</sup>. Tento laboratórny signál odôvodňuje ďalší výskum, nie je však dôkazom spomalenia progresie CKD.</p>
+<p>Združená analýza štúdií SYMPHONY-1 a SYMPHONY-2 prezentovaná v konferenčnom abstrakte ASN opísala zmeny eGFR v podskupinách s mierne zníženou eGFR a s hyperfiltráciou. Išlo však o krátkodobú analýzu programu, ktorého primárnym ukazovateľom bol HbA1c a ktorý zaraďoval iba účastníkov s eGFR nad 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Tento laboratórny signál odôvodňuje ďalší výskum, nie je však dôkazom spomalenia progresie CKD.</p>
 
 <h2>Renálna otázka sa skúma osobitne</h2>
 
-<p>V júli 2026 sa začala samostatná randomizovaná štúdia fázy 2 s registračným číslom NCT07496177 u pacientov s diabetom 2. typu a chronickou chorobou obličiek. Plánuje zaradiť 75 účastníkov a počas 12 týždňov porovnať HTD1801 s placebom. Primárnym ukazovateľom je relatívna zmena pomeru albumínu ku kreatinínu v moči (UACR); medzi sekundárne ukazovatele patria viaceré hodnotenia eGFR.</p>
+<p>V júli 2026 sa začala samostatná randomizovaná štúdia fázy 2&nbsp;s registračným číslom NCT07496177 u pacientov s diabetom 2. typu a chronickou chorobou obličiek. Plánuje zaradiť 75 účastníkov a počas 12&nbsp;týždňov porovnať HTD1801&nbsp;s placebom. Primárnym ukazovateľom je relatívna zmena pomeru albumínu ku kreatinínu v moči (UACR); medzi sekundárne ukazovatele patria viaceré hodnotenia eGFR.</p>
 
 <p>Táto štúdia môže objasniť krátkodobý vplyv na albuminúriu a hemodynamické či metabolické ukazovatele obličiek. Ani prípadný priaznivý výsledok 12-týždňovej mechanistickej štúdie by však sám osebe nepreukázal spomalenie progresie CKD alebo zníženie rizika zlyhania obličiek. Na to by bola potrebná dlhšia štúdia s klinicky významnými obličkovými výsledkami.</p>
 
@@ -121,7 +121,7 @@ $articles[] = [
 <h2>Obmedzenia dôkazov</h2>
 
 <ul>
-  <li>Najpresvedčivejšie porovnanie trvalo 24 týždňov a hodnotilo HbA1c, nie klinické príhody.</li>
+  <li>Najpresvedčivejšie porovnanie trvalo 24&nbsp;týždňov a hodnotilo HbA1c, nie klinické príhody.</li>
   <li>Štúdia používala placebo, takže neposkytuje priame porovnanie s etablovanou antidiabetickou alebo kardiorenálnou liečbou.</li>
   <li>Výsledky pochádzajú výlučne z centier v Číne.</li>
   <li>Štúdiu financovala spoločnosť Shenzhen HighTide Biopharmaceutical a viacerí spoluautori boli zamestnancami sponzora alebo s ním mali iné deklarované väzby. To výsledok nezneplatňuje, ale zvyšuje význam nezávislej replikácie a dôsledného hodnotenia úplných údajov.</li>
@@ -130,9 +130,9 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>SYMPHONY-2 priniesla kvalitný dôkaz, že HTD1801 pridaný k metformínu počas 24 týždňov znižuje HbA1c viac než placebo. Upravený rozdiel medzi skupinami v zmene HbA1c bol −0,5 percentuálneho bodu v prospech HTD1801. Hnačka sa však v skupine HTD1801 vyskytovala podstatne častejšie.</p>
+<p>SYMPHONY-2 priniesla kvalitný dôkaz, že HTD1801 pridaný k metformínu počas 24&nbsp;týždňov znižuje HbA1c viac než placebo. Upravený rozdiel medzi skupinami v zmene HbA1c bol −0,5 percentuálneho bodu v prospech HTD1801. Hnačka sa však v skupine HTD1801 vyskytovala podstatne častejšie.</p>
 
-<p>Pre nefrologickú prax je rovnako dôležité to, čo štúdia neukázala. Nehodnotila renálne ani kardiovaskulárne klinické výsledky a neporovnávala HTD1801 s liekmi, ktoré takýto prognostický prínos už preukázali. HTD1801 je preto vhodné opisovať ako skúšaný liek s preukázaným krátkodobým glykemickým účinkom v štúdii SYMPHONY-2, nie ako etablovanú kardiorenálnu liečbu.</p>
+<p>Pre nefrologickú prax je rovnako dôležité to, čo štúdia neukázala. Nehodnotila renálne ani kardiovaskulárne klinické výsledky a neporovnávala HTD1801&nbsp;s liekmi, ktoré takýto prognostický prínos už preukázali. HTD1801 je preto vhodné opisovať ako skúšaný liek s preukázaným krátkodobým glykemickým účinkom v štúdii SYMPHONY-2, nie ako etablovanú kardiorenálnu liečbu.</p>
 
 <h2>Súvisiace články</h2>
 

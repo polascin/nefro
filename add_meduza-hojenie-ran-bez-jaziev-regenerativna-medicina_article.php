@@ -108,7 +108,7 @@ $articles[] = [
 
 <h2>Mikrorany v jednej bunke</h2>
 
-<p>Autori pozorovali aj takzvané mikrorany – drobné defekty, ktoré prechádzali dokonca vnútrom jednej bunky. Takéto mikropoškodenia sa uzatvárali približne za <strong>3 až 5 minút</strong>.</p>
+<p>Autori pozorovali aj takzvané mikrorany – drobné defekty, ktoré prechádzali dokonca vnútrom jednej bunky. Takéto mikropoškodenia sa uzatvárali približne za <strong>3 až 5&nbsp;minút</strong>.</p>
 
 <p>Aj v tomto prípade sa objavili lamelipódiá a aktínové štruktúry. Bunky pritom dokázali rozlišovať medzi vlastnými výbežkami a výbežkami susedných buniek. Lamelipódiá pochádzajúce z tej istej bunky sa vedeli spojiť, zatiaľ čo výbežky zo susedných buniek zostávali oddelené a obnovovali bunkové hranice.</p>
 

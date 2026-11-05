@@ -69,7 +69,7 @@ $articles[] = [
 
 <h3>2) Membranózna nefropatia (MN)</h3>
 
-<p>Pri membranóznej nefropatii sa anti-CD20 protilátky posunuli do <strong>prvej línie liečby</strong>. Správa zdôrazňuje, že <strong>samotná anti-CD20 monoterapia</strong> v mnohých prípadoch umožní aspoň <strong>čiastočnú remisiu do približne 18 mesiacov</strong>.</p>
+<p>Pri membranóznej nefropatii sa anti-CD20 protilátky posunuli do <strong>prvej línie liečby</strong>. Správa zdôrazňuje, že <strong>samotná anti-CD20 monoterapia</strong> v mnohých prípadoch umožní aspoň <strong>čiastočnú remisiu do približne 18&nbsp;mesiacov</strong>.</p>
 
 <p>Konferencia zároveň diskutuje o rozdieloch medzi jednotlivými anti-CD20 molekulami. Obinutuzumab, opísaný ako účinnejší anti-CD20 protilátkový režim než rituximab, sa využíva najmä pri refraktérnych prípadoch, pričom zostáva otvorené, či má jasnú výhodu z hľadiska rýchlosti, úplnosti a trvania odpovede.</p>
 

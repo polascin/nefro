@@ -123,7 +123,7 @@ include 'legal_head.php';
                 <h3>5. Uloženie a odvolanie súhlasu</h3>
                 <p>
                     Váš súhlas sa ukladá primárne do <code>localStorage</code> a zálohou do
-                    cookie <code>nps_cookie_consent</code> s platnosťou <strong>365 dní</strong>
+                    cookie <code>nps_cookie_consent</code> s platnosťou <strong>365 dní</strong>
                     (<code>SameSite=Lax; Secure</code>). Pri opakovanej návšteve sa banner
                     nezobrazuje, kým je súhlas platný. Súhlas môžete kedykoľvek zmeniť alebo
                     odvolať tlačidlom vyššie alebo odkazom „Nastavenia cookies“ v päte stránky;

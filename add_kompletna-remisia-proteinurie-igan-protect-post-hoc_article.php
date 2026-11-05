@@ -2,7 +2,7 @@
 
 /**
  * add_kompletna-remisia-proteinurie-igan-protect-post-hoc_article.php
- * Post hoc analyza studie PROTECT - kompletna remisia proteinurie pri IgAN
+ * Post hoc analyza štúdie PROTECT - kompletna remisia proteinurie pri IgAN
  * (Heerspink a spol., CJASN 2026;21(4):578-592, doi 10.2215/CJN.0000000961).
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -29,15 +29,15 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/kompletna-remisia-proteinurie-igan-protect-post-hoc.webp" rel="noopener noreferrer" target="_blank"><img src="img/kompletna-remisia-proteinurie-igan-protect-post-hoc.webp" alt="Glomerulus, z ktorého sa únik zlatých častíc úplne zastavil, a takmer vodorovná čiara svetla mieriaca do diaľky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Úplné zastavenie úniku bielkoviny nie je len laboratórny údaj – súvisí s pomalším poklesom filtrácie.</figcaption></figure>
 
-<p class="article-dek"><em>Rozdiel je pôsobivý: −0,7 oproti −4,2 ml/min/1,73 m² za rok. Skupiny však nevznikli randomizáciou, ale podľa toho, ako pacient na liečbu odpovedal – a odpoveď je zároveň prognostickým znakom. Treba preto rozlišovať, čo z rozdielu možno pripísať liečbe a čo len lepšej prognóze.</em></p>
+<p class="article-dek"><em>Rozdiel je pôsobivý: −0,7 oproti −4,2&nbsp;ml/min/1,73&nbsp;m² za rok. Skupiny však nevznikli randomizáciou, ale podľa toho, ako pacient na liečbu odpovedal – a odpoveď je zároveň prognostickým znakom. Treba preto rozlišovať, čo z rozdielu možno pripísať liečbe a čo len lepšej prognóze.</em></p>
 
-<p>Proteinúria patrí medzi najvýznamnejšie prognostické ukazovatele progresie IgA nefropatie. Nová <em>post hoc</em> analýza štúdie PROTECT ukázala, že pacienti, ktorí počas liečby dosiahli proteinúriu nižšiu ako 0,3 g/deň, mali podstatne pomalší pokles odhadovanej glomerulovej filtrácie (eGFR) a menej kombinovaných obličkových príhod než pacienti bez takejto odpovede.</p>
+<p>Proteinúria patrí medzi najvýznamnejšie prognostické ukazovatele progresie IgA nefropatie. Nová <em>post hoc</em> analýza štúdie PROTECT ukázala, že pacienti, ktorí počas liečby dosiahli proteinúriu nižšiu ako 0,3&nbsp;g/deň, mali podstatne pomalší pokles odhadovanej glomerulovej filtrácie (eGFR) a menej kombinovaných obličkových príhod než pacienti bez takejto odpovede.</p>
 
 <p>Výsledky podporujú súčasný liečebný cieľ – čo najvýraznejšie a dlhodobé zníženie proteinúrie. Pre metodologické obmedzenia však z tejto analýzy nemožno vyvodiť, že samotné dosiahnutie remisie bolo <strong>príčinou</strong> priaznivejšieho výsledku.</p>
 
 <h2>Štúdia PROTECT</h2>
 
-<p>PROTECT (NCT03762850) bola medzinárodná, randomizovaná, dvojito zaslepená štúdia fázy III s aktívnou kontrolou. Zahŕňala 404 dospelých pacientov s biopsiou potvrdenou primárnou IgA nefropatiou, 24-hodinovou proteinúriou najmenej 1,0 g/deň a eGFR najmenej 30 ml/min/1,73 m², ktorí mali pretrvávajúcu proteinúriu napriek stabilnej maximálnej tolerovanej dávke inhibítora ACE alebo blokátora receptora AT1. Randomizovaní boli na <strong>sparsentan</strong> alebo <strong>irbesartan</strong> v maximálnej schválenej dávke.</p>
+<p>PROTECT (NCT03762850) bola medzinárodná, randomizovaná, dvojito zaslepená štúdia fázy III s aktívnou kontrolou. Zahŕňala 404 dospelých pacientov s biopsiou potvrdenou primárnou IgA nefropatiou, 24-hodinovou proteinúriou najmenej 1,0&nbsp;g/deň a eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m², ktorí mali pretrvávajúcu proteinúriu napriek stabilnej maximálnej tolerovanej dávke inhibítora ACE alebo blokátora receptora AT1. Randomizovaní boli na <strong>sparsentan</strong> alebo <strong>irbesartan</strong> v maximálnej schválenej dávke.</p>
 
 <p>Sparsentan je nesteroidová molekula, ktorá súčasne antagonizuje receptor typu A pre endotelín a receptor AT1 pre angiotenzín II – <strong>duálny antagonista endotelínového a angiotenzínového receptora (DEARA)</strong>. Na rozdiel od kombinácie dvoch samostatných liekov ide o jednu molekulu s dvojitým mechanizmom účinku.</p>
 
@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Ako bola definovaná kompletná remisia</h2>
 
-<p>Kompletná remisia proteinúrie bola definovaná ako 24-hodinové vylučovanie bielkovín močom nižšie ako 0,3 g/deň <strong>aspoň pri jednej návšteve</strong>. Autori hodnotili dve skupiny:</p>
+<p>Kompletná remisia proteinúrie bola definovaná ako 24-hodinové vylučovanie bielkovín močom nižšie ako 0,3&nbsp;g/deň <strong>aspoň pri jednej návšteve</strong>. Autori hodnotili dve skupiny:</p>
 
 <ul>
   <li><strong>CR36:</strong> kompletná remisia dosiahnutá najneskôr do 36. týždňa,</li>
@@ -92,8 +92,8 @@ $articles[] = [
       </tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Absolútna zmena eGFR do 110. týždňa</th><td>−4,0 ml/min/1,73 m²</td><td>−8,6 ml/min/1,73 m²</td></tr>
-      <tr><th scope="row">Celkový sklon eGFR (1. deň – 110. týždeň)</th><td>−0,7 ml/min/1,73 m²/rok</td><td>−4,2 ml/min/1,73 m²/rok</td></tr>
+      <tr><th scope="row">Absolútna zmena eGFR do 110. týždňa</th><td>−4,0&nbsp;ml/min/1,73&nbsp;m²</td><td>−8,6&nbsp;ml/min/1,73&nbsp;m²</td></tr>
+      <tr><th scope="row">Celkový sklon eGFR (1. deň – 110. týždeň)</th><td>−0,7&nbsp;ml/min/1,73&nbsp;m²/rok</td><td>−4,2&nbsp;ml/min/1,73&nbsp;m²/rok</td></tr>
       <tr><th scope="row">Chronický sklon eGFR (6. týždeň – 110. týždeň)</th><td>−0,4 (−1,4 až 0,6)</td><td>−4,2 (−4,7 až −3,7)</td></tr>
     </tbody>
   </table>
@@ -103,7 +103,7 @@ $articles[] = [
 
 <h2>Vzťah medzi úrovňou proteinúrie a poklesom eGFR</h2>
 
-<p>Analýza neporovnávala len pacientov s kompletnou remisiou a bez nej. Pacienti boli rozdelení podľa dosiahnutej proteinúrie do kategórií pod 0,3 g/deň, 0,3 až menej ako 0,5 g/deň, 0,5 až menej ako 1,0 g/deň a najmenej 1,0 g/deň – a s rastúcou reziduálnou proteinúriou sa <strong>progresívne zrýchľoval</strong> aj pokles eGFR.</p>
+<p>Analýza neporovnávala len pacientov s kompletnou remisiou a bez nej. Pacienti boli rozdelení podľa dosiahnutej proteinúrie do kategórií pod 0,3&nbsp;g/deň, 0,3 až menej ako 0,5&nbsp;g/deň, 0,5 až menej ako 1,0&nbsp;g/deň a najmenej 1,0&nbsp;g/deň – a s rastúcou reziduálnou proteinúriou sa <strong>progresívne zrýchľoval</strong> aj pokles eGFR.</p>
 
 <p>Nešlo teda o ostro ohraničený prahový jav. Výsledky skôr naznačujú kontinuálny vzťah, v ktorom je každé ďalšie zníženie proteinúrie spojené s pomalšou stratou funkcie obličiek. To je klinicky užitočnejšia predstava než binárne „remisia áno/nie“.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 
 <h2>Krvný tlak a bezpečnosť</h2>
 
-<p>Pacienti s kompletnou remisiou dosiahli väčší úvodný pokles systolického aj diastolického krvného tlaku; rozdiel oproti pacientom bez remisie sa následne pohyboval okolo <strong>4 mm Hg</strong>. Lepšia kontrola krvného tlaku preto mohla nezávisle prispieť k pomalšiemu poklesu eGFR – proteinúria a krvný tlak sa tu nedajú oddeliť.</p>
+<p>Pacienti s kompletnou remisiou dosiahli väčší úvodný pokles systolického aj diastolického krvného tlaku; rozdiel oproti pacientom bez remisie sa následne pohyboval okolo <strong>4&nbsp;mm Hg</strong>. Lepšia kontrola krvného tlaku preto mohla nezávisle prispieť k pomalšiemu poklesu eGFR – proteinúria a krvný tlak sa tu nedajú oddeliť.</p>
 
 <div class="table-responsive" role="region" aria-label="Bezpečnostné údaje podľa dosiahnutia remisie" tabindex="0">
   <table>
@@ -141,7 +141,7 @@ $articles[] = [
 
 <h2>Prečo výsledky nepreukazujú kauzalitu</h2>
 
-<p>Analýza bola <em>post hoc</em> a skupiny neboli randomizované podľa dosiahnutia remisie. Pacienti, ktorí remisiu dosiahli, mali už na začiatku <strong>priaznivejší rizikový profil</strong>: nižšiu východiskovú proteinúriu, vyššiu vstupnú eGFR, nižší vek a o 1 až 2 mm Hg nižší krvný tlak.</p>
+<p>Analýza bola <em>post hoc</em> a skupiny neboli randomizované podľa dosiahnutia remisie. Pacienti, ktorí remisiu dosiahli, mali už na začiatku <strong>priaznivejší rizikový profil</strong>: nižšiu východiskovú proteinúriu, vyššiu vstupnú eGFR, nižší vek a o 1 až 2&nbsp;mm Hg nižší krvný tlak.</p>
 
 <p>Remisia bola navyše definovaná podľa výsledku, ktorý vznikol až počas liečby. Pacient musel zostať v štúdii dostatočne dlho a pokračovať v liečbe, aby mohol byť zaradený medzi tých s remisiou. Takéto rozdelenie prináša riziko reziduálneho skreslenia, spätnej kauzality a skreslenia súvisiaceho s časom potrebným na dosiahnutie remisie (<em>immortal time bias</em>).</p>
 
@@ -149,23 +149,23 @@ $articles[] = [
 
 <h3>Remisia nemusela byť trvalá</h3>
 
-<p>Z 85 pacientov s CR110 sa proteinúria neskôr aspoň pri jednej návšteve zvýšila nad 0,75 g/deň u <strong>30 pacientov (35 %)</strong>, s mediánom času do tohto vzostupu 24,2 týždňa. Jednorazové dosiahnutie hodnoty pod 0,3 g/deň teda nemožno stotožňovať s dlhodobou stabilnou remisiou – a viac než tretina „remitentov“ ju nedokázala udržať ani pol roka.</p>
+<p>Z 85 pacientov s CR110 sa proteinúria neskôr aspoň pri jednej návšteve zvýšila nad 0,75&nbsp;g/deň u <strong>30 pacientov (35 %)</strong>, s mediánom času do tohto vzostupu 24,2 týždňa. Jednorazové dosiahnutie hodnoty pod 0,3&nbsp;g/deň teda nemožno stotožňovať s dlhodobou stabilnou remisiou – a viac než tretina „remitentov“ ju nedokázala udržať ani pol roka.</p>
 
 <h2>Klinický význam</h2>
 
-<p>Výsledky podporujú proteinúriu ako praktický ukazovateľ liečebnej odpovede a dlhodobého obličkového rizika pri IgA nefropatii. Sú v súlade s odporúčaniami KDIGO, podľa ktorých sa má proteinúria udržiavať pod 0,5 g/deň a podľa možnosti pod 0,3 g/deň.</p>
+<p>Výsledky podporujú proteinúriu ako praktický ukazovateľ liečebnej odpovede a dlhodobého obličkového rizika pri IgA nefropatii. Sú v súlade s odporúčaniami KDIGO, podľa ktorých sa má proteinúria udržiavať pod 0,5&nbsp;g/deň a podľa možnosti pod 0,3&nbsp;g/deň.</p>
 
-<p>Z analýzy však <strong>nemožno odvodiť, že každý farmakologický zásah, ktorý krátkodobo zníži proteinúriu pod 0,3 g/deň, automaticky prinesie rovnakú ochranu funkcie obličiek</strong>. Pri hodnotení liečby treba zohľadniť trvanie antiproteinurického účinku, vývoj eGFR, krvný tlak, bezpečnosť, znášanlivosť a celkový klinický profil pacienta.</p>
+<p>Z analýzy však <strong>nemožno odvodiť, že každý farmakologický zásah, ktorý krátkodobo zníži proteinúriu pod 0,3&nbsp;g/deň, automaticky prinesie rovnakú ochranu funkcie obličiek</strong>. Pri hodnotení liečby treba zohľadniť trvanie antiproteinurického účinku, vývoj eGFR, krvný tlak, bezpečnosť, znášanlivosť a celkový klinický profil pacienta.</p>
 
 <p>Sparsentan dosahoval kompletnú remisiu častejšie než maximálna dávka irbesartanu. Predložená analýza však predovšetkým ukazuje, že <strong>veľmi nízka dosiahnutá proteinúria je priaznivým prognostickým markerom</strong>. Nie je samostatným randomizovaným dôkazom, že rozdiel medzi pacientmi s remisiou a bez nej bol spôsobený výlučne sparsentanom.</p>
 
 <h2>Praktický dôsledok pre ambulanciu</h2>
 
-<p>Ak by sme z tejto analýzy mali vyvodiť jediné pravidlo, znelo by takto: <strong>proteinúria je pri IgA nefropatii ukazovateľ, ktorý sa oplatí sledovať opakovane, nie raz</strong>. Jedna hodnota pod 0,3 g/deň je dobrá správa, ale u tretiny pacientov nevydrží. Rozhodujúca je hodnota udržaná v čase – a práve tú treba dokumentovať pred rozhodnutím o zmene alebo ukončení liečby.</p>
+<p>Ak by sme z tejto analýzy mali vyvodiť jediné pravidlo, znelo by takto: <strong>proteinúria je pri IgA nefropatii ukazovateľ, ktorý sa oplatí sledovať opakovane, nie raz</strong>. Jedna hodnota pod 0,3&nbsp;g/deň je dobrá správa, ale u tretiny pacientov nevydrží. Rozhodujúca je hodnota udržaná v čase – a práve tú treba dokumentovať pred rozhodnutím o zmene alebo ukončení liečby.</p>
 
 <h2>Záver</h2>
 
-<p>Dosiahnutie proteinúrie pod 0,3 g/deň bolo v štúdii PROTECT spojené s výrazne pomalším poklesom eGFR (−0,7 oproti −4,2 ml/min/1,73 m² za rok) a menším počtom kombinovaných obličkových príhod (1 % oproti 14 %). Kompletnú remisiu dosahovali podstatne častejšie pacienti liečení sparsentanom než irbesartanom.</p>
+<p>Dosiahnutie proteinúrie pod 0,3&nbsp;g/deň bolo v štúdii PROTECT spojené s výrazne pomalším poklesom eGFR (−0,7 oproti −4,2&nbsp;ml/min/1,73&nbsp;m² za rok) a menším počtom kombinovaných obličkových príhod (1 % oproti 14 %). Kompletnú remisiu dosahovali podstatne častejšie pacienti liečení sparsentanom než irbesartanom.</p>
 
 <p>Výsledky podporujú intenzívnu, bezpečnú a dlhodobú kontrolu proteinúrie ako jeden z hlavných liečebných cieľov pri IgA nefropatii. Pre <em>post hoc</em> charakter analýzy, vstupné rozdiely medzi skupinami a definovanie remisie až počas sledovania však ide o <strong>silnú prognostickú asociáciu, nie o dôkaz priameho príčinného účinku remisie</strong>.</p>
 
@@ -190,7 +190,7 @@ $articles[] = [
   <li><strong>Kidney Disease: Improving Global Outcomes, KDIGO IgA Nephropathy Guideline Work Group.</strong> <em>Clinical Practice Guideline for the Management of IgA Nephropathy and IgA Vasculitis.</em> <a href="https://kdigo.org/guidelines/iga-nephropathy/" target="_blank" rel="noopener noreferrer">KDIGO</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje – 404 randomizovaných a liečených pacientov, CR36 u 43 (11 %; 35 sparsentan / 8 irbesartan) a CR110 u 85 (21 %; 62 / 23), zmena UPCR −73 % (−77 až −68) oproti −3 % (−11 až +6), absolútna zmena eGFR −4,0 oproti −8,6 ml/min/1,73 m², celkový sklon −0,7 oproti −4,2 a chronický sklon −0,4 (−1,4 až 0,6) oproti −4,2 (−4,7 až −3,7) ml/min/1,73 m²/rok, kombinovaný ukazovateľ u 1 % oproti 14 %, rozdiel krvného tlaku okolo 4 mm Hg, vzostup proteinúrie nad 0,75 g/deň u 30 z 85 pacientov (35 %, medián 24,2 týždňa), nežiaduce udalosti 93 % oproti 89 %, hypotenzné udalosti 16 % oproti 10 %, ukončenie liečby pre nežiaduce účinky 4 % oproti 11 % a na želanie pacienta 2 % oproti 8 % – boli overené proti plnému textu publikácie v PMC a proti abstraktu v zázname PubMed. <strong>Opravy oproti pôvodnému spracovaniu:</strong> modelovaná zmena proteinúrie v 110. týždni je <strong>−73 % a −3 %</strong>, nie 76 % a 5 %; ukončenie liečby pre nežiaduce účinky bolo 4 % oproti 11 %, nie 4,6 % v oboch skupinách. Doplnené bolo financovanie spoločnosťou <strong>Travere Therapeutics</strong> (výrobcom sparsentanu), ktorú podklad neuvádzal a ktorej štyria zamestnanci sú spoluautormi práce, ako aj medián času do relapsu proteinúrie. Registračné číslo štúdie je NCT03762850. Metodologické komentáre – vrátane upozornenia na immortal time bias a na to, že nižší podiel ukončení liečby v skupine s remisiou je dôsledkom, nie príčinou – sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje – 404 randomizovaných a liečených pacientov, CR36 u 43 (11 %; 35 sparsentan / 8 irbesartan) a CR110 u 85 (21 %; 62 / 23), zmena UPCR −73 % (−77 až −68) oproti −3 % (−11 až +6), absolútna zmena eGFR −4,0 oproti −8,6&nbsp;ml/min/1,73&nbsp;m², celkový sklon −0,7 oproti −4,2 a chronický sklon −0,4 (−1,4 až 0,6) oproti −4,2 (−4,7 až −3,7) ml/min/1,73&nbsp;m²/rok, kombinovaný ukazovateľ u 1 % oproti 14 %, rozdiel krvného tlaku okolo 4&nbsp;mm Hg, vzostup proteinúrie nad 0,75&nbsp;g/deň u 30 z 85 pacientov (35 %, medián 24,2 týždňa), nežiaduce udalosti 93 % oproti 89 %, hypotenzné udalosti 16 % oproti 10 %, ukončenie liečby pre nežiaduce účinky 4 % oproti 11 % a na želanie pacienta 2 % oproti 8 % – boli overené proti plnému textu publikácie v PMC a proti abstraktu v zázname PubMed. <strong>Opravy oproti pôvodnému spracovaniu:</strong> modelovaná zmena proteinúrie v 110. týždni je <strong>−73 % a −3 %</strong>, nie 76 % a 5 %; ukončenie liečby pre nežiaduce účinky bolo 4 % oproti 11 %, nie 4,6 % v oboch skupinách. Doplnené bolo financovanie spoločnosťou <strong>Travere Therapeutics</strong> (výrobcom sparsentanu), ktorú podklad neuvádzal a ktorej štyria zamestnanci sú spoluautormi práce, ako aj medián času do relapsu proteinúrie. Registračné číslo štúdie je NCT03762850. Metodologické komentáre – vrátane upozornenia na immortal time bias a na to, že nižší podiel ukončení liečby v skupine s remisiou je dôsledkom, nie príčinou – sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

@@ -46,7 +46,7 @@ $articles[] = [
 
 <h2>Ako častý je tento problém</h2>
 
-<p>Metaanalýza publikovaná v roku 2025 zahrnula 25 štúdií so 49 476 účastníkmi zo 16 krajín. Subjektívnu citlivosť na glutén alebo pšenicu uvádzalo súhrnne 10,3 % populácie (95 % interval spoľahlivosti 7,0 až 14,0 %). Ide však o <strong>vlastné hlásenie príznakov</strong>, nie o prevalenciu objektívne potvrdenej NCWS.</p>
+<p>Metaanalýza publikovaná v roku 2025 zahrnula 25 štúdií so 49&nbsp;476 účastníkmi zo 16 krajín. Subjektívnu citlivosť na glutén alebo pšenicu uvádzalo súhrnne 10,3 % populácie (95 % interval spoľahlivosti 7,0 až 14,0 %). Ide však o <strong>vlastné hlásenie príznakov</strong>, nie o prevalenciu objektívne potvrdenej NCWS.</p>
 
 <p>Rozdiel je klinicky podstatný. V systematickom prehľade dvojito zaslepených, placebom kontrolovaných provokácií malo medzi 231 osobami s kvalitatívne vyhodnotiteľným výsledkom iba 16 % príznaky špecifické pre glutén. Až 40 % reagovalo rovnako alebo výraznejšie na placebo. Staršie štúdie pritom používali rozdielne dávky gluténu, trvanie skúšky aj zloženie placeba, preto čísla nemožno považovať za univerzálnu diagnostickú pravdepodobnosť.</p>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <p>Prvou voľbou u väčšiny dospelých je stanovenie <strong>IgA protilátok proti tkanivovej transglutamináze 2 (anti-TG2)</strong> spolu s celkovou koncentráciou IgA. Pri deficite IgA sa používajú validované testy triedy IgG, najmä IgG anti-TG2 alebo IgG proti deamidovaným gliadínovým peptidom.</p>
 
-<p>Duodenálna histológia zostáva referenčnou diagnostickou metódou. Európske odporúčanie ESsCD 2025 však podmienečne pripúšťa nebioptický postup u vybraných dospelých mladších ako 45 rokov, ak koncentrácia IgA anti-TG2 dosahuje najmenej desaťnásobok hornej hranice normy a výsledok sa potvrdí z druhej vzorky. Rozhodnutie patrí do sekundárnej gastroenterologickej starostlivosti, nevzťahuje sa na pacientov s varovnými príznakmi a pacient musí až do potvrdenia diagnózy pokračovať v konzumácii gluténu.</p>
+<p>Duodenálna histológia zostáva referenčnou diagnostickou metódou. Európske odporúčanie ESsCD 2025 však podmienečne pripúšťa nebioptický postup u vybraných dospelých mladších ako 45&nbsp;rokov, ak koncentrácia IgA anti-TG2 dosahuje najmenej desaťnásobok hornej hranice normy a výsledok sa potvrdí z druhej vzorky. Rozhodnutie patrí do sekundárnej gastroenterologickej starostlivosti, nevzťahuje sa na pacientov s varovnými príznakmi a pacient musí až do potvrdenia diagnózy pokračovať v konzumácii gluténu.</p>
 
 <p>Pri nižších titroch alebo nejasnom náleze sa diagnóza spravidla potvrdzuje gastroskopiou s viacerými biopsiami z bulbu aj distálnejšieho duodéna. Samotné zlepšenie po diéte celiakiu nepotvrdzuje ani nevylučuje.</p>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Negatívna sérológia po dlhšej bezgluténovej diéte nemá dostatočnú výpovednú hodnotu. HLA-DQ2/DQ8 genotypizácia nie je vhodným prvým skríningovým testom, ale v tejto situácii môže pomôcť: negatívny výsledok robí celiakiu prakticky vylúčenou, pozitívny ju pre nízku špecificitu nepotvrdzuje.</p>
 
-<p>Ak je diagnostické potvrdenie potrebné, ESsCD 2025 odporúča u dospelých po spoločnom rozhodnutí zvážiť najmenej <strong>3 g gluténu denne počas 6 týždňov</strong>; vyššia dávka alebo dlhšie trvanie zvyšujú diagnostickú presnosť, ak ich pacient toleruje. Preferovaným cieľom je duodenálna histológia. Režim treba individualizovať a viesť gastroenterológom.</p>
+<p>Ak je diagnostické potvrdenie potrebné, ESsCD 2025 odporúča u dospelých po spoločnom rozhodnutí zvážiť najmenej <strong>3&nbsp;g gluténu denne počas 6&nbsp;týždňov</strong>; vyššia dávka alebo dlhšie trvanie zvyšujú diagnostickú presnosť, ak ich pacient toleruje. Preferovaným cieľom je duodenálna histológia. Režim treba individualizovať a viesť gastroenterológom.</p>
 
 <h3>4. Vylúčiť alergiu na pšenicu</h3>
 
@@ -148,7 +148,7 @@ $articles[] = [
 
 <p>Na rozdiel od potvrdenej celiakie nie je pri NCWS dokázaná potreba absolútnej celoživotnej eliminácie stopových množstiev gluténu. Cieľom je <strong>najmenej reštriktívna strava, ktorá reprodukovateľne kontroluje príznaky a zostáva nutrične primeraná</strong>. Potrebu aj rozsah obmedzenia treba pravidelne prehodnocovať kontrolovanou reintrodukciou.</p>
 
-<p>Ak obraz pripomína syndróm dráždivého čreva alebo sa podozrenie sústreďuje na fruktány, môže pomôcť riadený nízko-FODMAP postup. Plná reštrikčná fáza má byť časovo obmedzená, spravidla na 2 až 6 týždňov. Pri zlepšení nasleduje systematické opätovné zavádzanie jednotlivých skupín FODMAP a dlhodobá personalizácia, ideálne pod vedením nutričného terapeuta.</p>
+<p>Ak obraz pripomína syndróm dráždivého čreva alebo sa podozrenie sústreďuje na fruktány, môže pomôcť riadený nízko-FODMAP postup. Plná reštrikčná fáza má byť časovo obmedzená, spravidla na 2 až 6&nbsp;týždňov. Pri zlepšení nasleduje systematické opätovné zavádzanie jednotlivých skupín FODMAP a dlhodobá personalizácia, ideálne pod vedením nutričného terapeuta.</p>
 
 <p>Neodborne zostavená bezgluténová diéta môže znížiť príjem vlákniny, folátu, tiamínu, železa a ďalších mikronutrientov. Priemyselné bezgluténové výrobky môžu mať viac cukru, tuku, sodíka alebo fosfátových aditív a menej vlákniny. Označenie „bez gluténu“ preto nie je synonymom výživovej kvality.</p>
 
@@ -206,7 +206,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Zdroje</h2>
 
-<p><em><strong>Poznámka k interpretácii:</strong> Článok bol vecne overený podľa európskeho odporúčania ESsCD 2025, odborných alergologických odporúčaní, primárnych provokačných štúdií a aktuálnych nefrologických odporúčaní. Východiskový článok Medscape je sekundárny klinický prehľad a jeho chybný údaj „46 týždňov“ bol nahradený aktuálnym režimom gluténovej provokácie pre dospelých. Diagnostika aj diétna intervencia sa musia prispôsobiť veku, závažnosti príznakov, nutričnému stavu a miestnym odborným postupom.</em></p>
+<p><em><strong>Poznámka k interpretácii:</strong> Článok bol vecne overený podľa európskeho odporúčania ESsCD 2025, odborných alergologických odporúčaní, primárnych provokačných štúdií a aktuálnych nefrologických odporúčaní. Východiskový článok Medscape je sekundárny klinický prehľad a jeho chybný údaj „46&nbsp;týždňov“ bol nahradený aktuálnym režimom gluténovej provokácie pre dospelých. Diagnostika aj diétna intervencia sa musia prispôsobiť veku, závažnosti príznakov, nutričnému stavu a miestnym odborným postupom.</em></p>
 
 <ol>
   <li><strong>Medscape Professional Network; Univadis Italy.</strong> <em>Wheat Sensitivity: Is Gluten the Only Trigger?</em> Medscape. 2026. Individuálny autor nebol vo verejne dostupnom zobrazení spoľahlivo uvedený. <a href="https://www.medscape.com/viewarticle/wheat-sensitivity-gluten-only-trigger-2026a1000rnd" target="_blank" rel="noopener noreferrer">Východiskový odborný článok</a>.</li>

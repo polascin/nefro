@@ -44,7 +44,7 @@ $articles[] = [
 
 <h2>Ako bola štúdia usporiadaná</h2>
 
-<p>Do randomizovanej kontrolovanej štúdie bolo zaradených 80 pacientov na udržiavacej hemodialýze. Pomocou tabuľky náhodných čísel ich rozdelili na intervenčnú a kontrolnú skupinu po 40 osobách. Intervencia trvala 12 týždňov.</p>
+<p>Do randomizovanej kontrolovanej štúdie bolo zaradených 80 pacientov na udržiavacej hemodialýze. Pomocou tabuľky náhodných čísel ich rozdelili na intervenčnú a kontrolnú skupinu po 40 osobách. Intervencia trvala 12&nbsp;týždňov.</p>
 
 <p>Kontrolná skupina dostávala rutinnú hemodialyzačnú liečbu a bežnú edukáciu o riadení objemu tekutín v dialyzačnom stredisku. Intervenčná skupina navyše používala denník „semafor“, ktorý kombinoval sebamonitorovanie so spätnou väzbou a odbornou edukáciou.</p>
 
@@ -141,7 +141,7 @@ $articles[] = [
 <h2>Limity štúdie</h2>
 
 <ul>
-  <li>iba 80 pacientov a 12 týždňov sledovania,</li>
+  <li>iba 80 pacientov a 12&nbsp;týždňov sledovania,</li>
   <li>intervenciu nebolo možné zaslepiť a nie je jasné, či boli zaslepení hodnotitelia,</li>
   <li>abstrakt neopisuje utajenie randomizačného poradia, úplný obsah denníka ani jeho farebné prahy,</li>
   <li>časť výsledkov vychádzala zo skóre vedomostí, postojov, návykov a dodržiavania odporúčaní,</li>
@@ -152,7 +152,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V malej randomizovanej štúdii zlepšil denník „semafor“ počas 12 týždňov vedomosti, postoje, praktické návyky a mieru dodržiavania odporúčaní. Intervenčná skupina mala aj priaznivejšie IDWG, UFR, kontrolu krvného tlaku a menej intradialytickej hypotenzie a kŕčov, hoci abstrakt pri týchto ukazovateľoch neuvádza veľkosť účinku.</p>
+<p>V malej randomizovanej štúdii zlepšil denník „semafor“ počas 12&nbsp;týždňov vedomosti, postoje, praktické návyky a mieru dodržiavania odporúčaní. Intervenčná skupina mala aj priaznivejšie IDWG, UFR, kontrolu krvného tlaku a menej intradialytickej hypotenzie a kŕčov, hoci abstrakt pri týchto ukazovateľoch neuvádza veľkosť účinku.</p>
 
 <p>Ide o sľubný edukačný doplnok, nie o hotový univerzálny protokol. Pred širším prijatím potrebuje presnejší opis intervencie, replikáciu vo väčších a dlhších štúdiách a hodnotenie objektívneho objemového stavu aj klinicky významných výsledkov.</p>
 

@@ -43,7 +43,7 @@ $articles[] = [
 
 <h2>Čo ukázal Fitbit pred a po začatí liečby</h2>
 
-<p>Sajana Maharjan a spolupracovníci identifikovali v programe All of Us 1 950 dospelých s obezitou, ktorým bol predpísaný agonista GLP-1 (semaglutid, tirzepatid, liraglutid alebo dulaglutid). Tirzepatid je duálny agonista receptorov GIP a GLP-1; v tejto práci ho autori zaradili do spoločnej skupiny s agonistami GLP-1. Do analýzy vstúpilo <strong>753 osôb (38,6 %)</strong>, ktoré mali použiteľný záznam Fitbit pred začatím aj po začatí liečby. Kohorta bola prevažne ženská (78,6 %), priemerný vek 52,7 ± 12,9 roka. Medzi časté komorbidity patrili muskuloskeletálna bolesť (81,9 %), hypertenzia (67,3 %) a diabetes 2. typu (48,1 %).</p>
+<p>Sajana Maharjan a spolupracovníci identifikovali v programe All of Us 1&nbsp;950 dospelých s obezitou, ktorým bol predpísaný agonista GLP-1 (semaglutid, tirzepatid, liraglutid alebo dulaglutid). Tirzepatid je duálny agonista receptorov GIP a GLP-1; v tejto práci ho autori zaradili do spoločnej skupiny s agonistami GLP-1. Do analýzy vstúpilo <strong>753 osôb (38,6 %)</strong>, ktoré mali použiteľný záznam Fitbit pred začatím aj po začatí liečby. Kohorta bola prevažne ženská (78,6 %), priemerný vek 52,7 ± 12,9 roka. Medzi časté komorbidity patrili muskuloskeletálna bolesť (81,9 %), hypertenzia (67,3 %) a diabetes 2. typu (48,1 %).</p>
 
 <p>Ide o konferenčný abstrakt (poster SAT-714, 13. júna 2026), nie o recenzovanú plnú prácu. Výsledky sú preto predbežné. Dizajn je retrospektívny pred-po bez kontrolnej skupiny bez lieku: <strong>nedokazuje, že liek aktivitu znížil</strong>. Ukazuje, že v tejto kohorte aktivita po začatí liečby klesla, hoci by sa intuitívne čakalo, že po úbytku hmotnosti stúpne.</p>
 
@@ -60,9 +60,9 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Denné kroky (n = 753)</th>
-        <td>5 047 ± 3 073</td>
-        <td>4 487 ± 3 133</td>
-        <td>−560 ± 2 203; p &lt; 0,001</td>
+        <td>5&nbsp;047 ± 3&nbsp;073</td>
+        <td>4&nbsp;487 ± 3&nbsp;133</td>
+        <td>−560 ± 2&nbsp;203; p &lt; 0,001</td>
       </tr>
       <tr>
         <th scope="row">MVPA, min/deň (n = 570)</th>
@@ -74,13 +74,13 @@ $articles[] = [
   </table>
 </div>
 
-<p>MVPA označuje stredne až intenzívnu fyzickú aktivitu (<em>moderate-to-vigorous physical activity</em>). Dôležitý metodický detail: denné kroky sa hodnotili u všetkých 753 účastníkov, minúty MVPA len u 570. Tlačová správa Endocrine Society čísla MVPA zaokrúhlila na 28 a 22 minút denne; presné hodnoty sú vyššie. Štandardné odchýlky sú veľké: individuálna zmena sa môže pohybovať oboma smermi.</p>
+<p>MVPA označuje stredne až intenzívnu fyzickú aktivitu (<em>moderate-to-vigorous physical activity</em>). Dôležitý metodický detail: denné kroky sa hodnotili u všetkých 753 účastníkov, minúty MVPA len u 570. Tlačová správa Endocrine Society čísla MVPA zaokrúhlila na 28 a 22&nbsp;minút denne; presné hodnoty sú vyššie. Štandardné odchýlky sú veľké: individuálna zmena sa môže pohybovať oboma smermi.</p>
 
-<p>Pokles bol väčší u mužov ako u žien: kroky −986 ± 2 244 oproti −445 ± 2 180 (p = 0,006), MVPA −15,3 ± 34,5 oproti −2,9 ± 21,2 min/deň (p &lt; 0,001). Účastníci s muskuloskeletálnou bolesťou mali výraznejší pokles krokov než bez nej (−679 ± 1 911 oproti −22 ± 3 165; p = 0,002). Zmena aktivity sa významne nelíšila podľa vekovej skupiny (ANOVA p = 0,670 pre kroky, p = 0,819 pre MVPA), stavu ťažkej obezity (p = 0,126), anamnézy cievnej mozgovej príhody (p = 0,601) ani srdcového zlyhávania (p = 0,925).</p>
+<p>Pokles bol väčší u mužov ako u žien: kroky −986 ± 2&nbsp;244 oproti −445 ± 2&nbsp;180 (p = 0,006), MVPA −15,3 ± 34,5 oproti −2,9 ± 21,2&nbsp;min/deň (p &lt; 0,001). Účastníci s muskuloskeletálnou bolesťou mali výraznejší pokles krokov než bez nej (−679 ± 1&nbsp;911 oproti −22 ± 3&nbsp;165; p = 0,002). Zmena aktivity sa významne nelíšila podľa vekovej skupiny (ANOVA p = 0,670 pre kroky, p = 0,819 pre MVPA), stavu ťažkej obezity (p = 0,126), anamnézy cievnej mozgovej príhody (p = 0,601) ani srdcového zlyhávania (p = 0,925).</p>
 
 <p>Autori v rozhovore pre Medscape upozornili na kľúčové obmedzenie: <strong>nevedeli posúdiť, či sa zmena aktivity líšila podľa veľkosti úbytku hmotnosti</strong>, ani či sa pohyb v priebehu liečby neskôr zlepšil. To bráni tvrdeniu, že „čím viac kto schudol, tým menej sa hýbal“ – a rovnako bráni tvrdeniu, že pokles je len prechodný.</p>
 
-<p>Východiskových približne 5 000 krokov denne je ďaleko pod verejnozdravotným pásmom, o ktorom píšeme v článku <a href="article.php?slug=kolko-krokov-denne-staci-davkovo-odpovedova-analyza-nefrologia">Koľko krokov denne naozaj stačí?</a>. Ďalší pokles o približne 560 krokov preto nie je kozmetický. Treba však dodať, že ide o nositeľov Fitbit v programe All of Us, teda o selektovanú, pravdepodobne zdatnejšiu podskupinu. Prenos na typického nefrologického pacienta je analogický, nie priamy.</p>
+<p>Východiskových približne 5&nbsp;000 krokov denne je ďaleko pod verejnozdravotným pásmom, o ktorom píšeme v článku <a href="article.php?slug=kolko-krokov-denne-staci-davkovo-odpovedova-analyza-nefrologia">Koľko krokov denne naozaj stačí?</a>. Ďalší pokles o približne 560 krokov preto nie je kozmetický. Treba však dodať, že ide o nositeľov Fitbit v programe All of Us, teda o selektovanú, pravdepodobne zdatnejšiu podskupinu. Prenos na typického nefrologického pacienta je analogický, nie priamy.</p>
 
 <h2>Prierezový pohľad: koľko sa ľudia na agonistoch GLP-1 skutočne hýbu</h2>
 
@@ -97,33 +97,33 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Celková aktivita</th>
-        <td>204 ± 76 min/deň</td>
+        <td>204 ± 76&nbsp;min/deň</td>
       </tr>
       <tr>
         <th scope="row">Z toho MVPA</th>
-        <td>24 ± 21 min/deň</td>
+        <td>24 ± 21&nbsp;min/deň</td>
       </tr>
       <tr>
-        <th scope="row">Nesplnenie ≥ 150 min MVPA/týždeň</th>
+        <th scope="row">Nesplnenie ≥ 150&nbsp;min MVPA/týždeň</th>
         <td>57,7 %</td>
       </tr>
       <tr>
         <th scope="row">Denné kroky</th>
-        <td>5 944 ± 2 699</td>
+        <td>5&nbsp;944 ± 2&nbsp;699</td>
       </tr>
       <tr>
         <th scope="row">Sedavý čas</th>
-        <td>947 ± 189 min/deň (približne 15,8 h)</td>
+        <td>947 ± 189&nbsp;min/deň (približne 15,8&nbsp;h)</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p>Viac ako polovica teda nesplnila minimum 150 minút stredne až intenzívnej aktivity týždenne, ktoré uvádzajú odporúčania pre obezitu, diabetes aj KDIGO 2024 pri chronickej chorobe obličiek. Nižšia aktivita bola spojená s vekom ≥ 65 rokov, ženským pohlavím, nižším príjmom domácnosti a diabetom 2. typu. Injekčný semaglutid bol v tejto prierezovej analýze spojený s vyšším celkovým denným časom aktivity než iné agonisty GLP-1; v spravodajskom spracovaní Medscape sa uvádza rozdiel 22,3 min/deň. Otvorený abstrakt práce asociáciu potvrdzuje, presné číslo v ňom však nie je. Ani pri overenom čísle by nešlo o dôkaz, že semaglutid aktivitu kauzálne zvyšuje – ide o asociáciu v malom, selektovanom súbore.</p>
+<p>Viac ako polovica teda nesplnila minimum 150&nbsp;minút stredne až intenzívnej aktivity týždenne, ktoré uvádzajú odporúčania pre obezitu, diabetes aj KDIGO 2024 pri chronickej chorobe obličiek. Nižšia aktivita bola spojená s vekom ≥ 65&nbsp;rokov, ženským pohlavím, nižším príjmom domácnosti a diabetom 2. typu. Injekčný semaglutid bol v tejto prierezovej analýze spojený s vyšším celkovým denným časom aktivity než iné agonisty GLP-1; v spravodajskom spracovaní Medscape sa uvádza rozdiel 22,3&nbsp;min/deň. Otvorený abstrakt práce asociáciu potvrdzuje, presné číslo v ňom však nie je. Ani pri overenom čísle by nešlo o dôkaz, že semaglutid aktivitu kauzálne zvyšuje – ide o asociáciu v malom, selektovanom súbore.</p>
 
-<p>Autorka Kacey Chae zdôraznila, že vzorka je relatívne malá a zahŕňa len ľudí s dostupným náramkom. Sedavý čas okolo 16 hodín denne je klinicky nápadný, ale bez priameho porovnania s rovnako meranou kontrolnou skupinou v tej istej práci ho nemožno pretaviť na tvrdenie o „podstatne vyššej sedavosti než v celej populácii All of Us“. Na to by bola potrebná plná publikácia s tými porovnaniami.</p>
+<p>Autorka Kacey Chae zdôraznila, že vzorka je relatívne malá a zahŕňa len ľudí s dostupným náramkom. Sedavý čas okolo 16&nbsp;hodín denne je klinicky nápadný, ale bez priameho porovnania s rovnako meranou kontrolnou skupinou v tej istej práci ho nemožno pretaviť na tvrdenie o „podstatne vyššej sedavosti než v celej populácii All of Us“. Na to by bola potrebná plná publikácia s tými porovnaniami.</p>
 
-<p>Rozdiel v denných krokoch medzi oboma prácami (približne 5 944 oproti 4 487 po začatí liečby) nie je spor. Ide o iný dizajn, iný výber a iný časový rez. Spoločné posolstvo je skromnejšie: <strong>ľudia na agonistoch GLP-1 sa v týchto dátach nehýbu „sami od seba“ na úrovni odporúčaní</strong>.</p>
+<p>Rozdiel v denných krokoch medzi oboma prácami (približne 5&nbsp;944 oproti 4&nbsp;487 po začatí liečby) nie je spor. Ide o iný dizajn, iný výber a iný časový rez. Spoločné posolstvo je skromnejšie: <strong>ľudia na agonistoch GLP-1 sa v týchto dátach nehýbu „sami od seba“ na úrovni odporúčaní</strong>.</p>
 
 <h2>Prečo by aktivita mohla klesať – zatiaľ len hypotézy</h2>
 
@@ -139,7 +139,7 @@ $articles[] = [
 
 <h2>Anhedónia pri vysokej dávke tirzepatidu: tri kazuistiky, nie dôkaz</h2>
 
-<p>Ako doplnok, z ktorého možno nanajvýš vyvodiť hypotézy, Medscape citovalo sériu troch kazuistík. Spencer Nadolsky, Summer Kessel, Zachary A. Krumm a Grant M. Tinsley opísali tri ženy s obezitou na tirzepatide 15 mg týždenne, ktoré hlásili zníženú motiváciu, emočnú „plochosť“ alebo stratu záujmu o cvičenie a predtým príjemné činnosti napriek úspešnému chudnutiu. Príznaky sa objavili po dlhšej liečbe v blízkosti maximálnej dávky. Po znížení na 10 mg týždenne alebo menej sa stav u dvoch zlepšil samotnou redukciou dávky; tretia potrebovala aj bupropión. Opätovné zvýšenie dávky u jednej pacientky príznaky vrátilo bez ďalšieho prínosu na hmotnosť.</p>
+<p>Ako doplnok, z ktorého možno nanajvýš vyvodiť hypotézy, Medscape citovalo sériu troch kazuistík. Spencer Nadolsky, Summer Kessel, Zachary A. Krumm a Grant M. Tinsley opísali tri ženy s obezitou na tirzepatide 15&nbsp;mg týždenne, ktoré hlásili zníženú motiváciu, emočnú „plochosť“ alebo stratu záujmu o cvičenie a predtým príjemné činnosti napriek úspešnému chudnutiu. Príznaky sa objavili po dlhšej liečbe v blízkosti maximálnej dávky. Po znížení na 10&nbsp;mg týždenne alebo menej sa stav u dvoch zlepšil samotnou redukciou dávky; tretia potrebovala aj bupropión. Opätovné zvýšenie dávky u jednej pacientky príznaky vrátilo bez ďalšieho prínosu na hmotnosť.</p>
 
 <p><strong>Tri kazuistiky nedokazujú, že agonisty GLP-1 spôsobujú anhedóniu</strong>, ani to, že zníženie dávky je overená stratégia. Sú dôvodom pýtať sa na motiváciu a radosť z pohybu, najmä pri vysokých dávkach. Nemajú sa čítať ako dôvod liek vysadiť ani ako návod na off-label kombináciu s bupropiónom. Súvislosť s témou „food noise“ a zásahom do okruhov odmeny je biologicky mysliteľná, ale klinicky zatiaľ neuzavretá.</p>
 
@@ -147,27 +147,27 @@ $articles[] = [
 
 <p>Perspektíva v <em>JAMA</em> (Lieberman, Aslan, Heymsfield) opisuje cvičenie v ére agonistov GLP-1 ako praktický problém, nie ako slogan. Medscape ho označilo za editorial; v PubMed ide o Perspective. Autori zdôrazňujú, že cvičenie pri týchto liekoch nie je len o ďalších kilogramoch. Má zmysel pre zachovanie chudej hmoty, zvládanie plató chudnutia, obmedzenie opätovného nárastu hmotnosti po prerušení liečby a pre oxidačný metabolizmus tuku. To sú argumenty z perspektívy, nie nové primárne dáta.</p>
 
-<p>Ako konkrétny randomizovaný dôkaz Medscape aj perspektíva odkazujú na štúdiu S-LITE (Lundgren a kol., <em>N Engl J Med</em> 2021). Čísla treba čítať presne, nie tak, ako ich skracuje spravodajský text. Najprv 195 dospelých s obezitou bez diabetu schudlo počas 8-týždňovej nízkoenergetickej diéty v priemere 13,1 kg. Až potom boli randomizovaní na rok do štyroch stratégií. Rozdiely nižšie sú <strong>oproti placebu pri udržiavaní</strong>, nie absolútny úbytok od prvého dňa lieku:</p>
+<p>Ako konkrétny randomizovaný dôkaz Medscape aj perspektíva odkazujú na štúdiu S-LITE (Lundgren a kol., <em>N Engl J Med</em> 2021). Čísla treba čítať presne, nie tak, ako ich skracuje spravodajský text. Najprv 195 dospelých s obezitou bez diabetu schudlo počas 8-týždňovej nízkoenergetickej diéty v priemere 13,1&nbsp;kg. Až potom boli randomizovaní na rok do štyroch stratégií. Rozdiely nižšie sú <strong>oproti placebu pri udržiavaní</strong>, nie absolútny úbytok od prvého dňa lieku:</p>
 
 <ul>
-  <li>program stredne až intenzívnej aktivity: −4,1 kg (95 % IS −7,8 až −0,4; p = 0,03),</li>
-  <li>liraglutid 3,0 mg denne: −6,8 kg (95 % IS −10,4 až −3,1; p &lt; 0,001),</li>
-  <li>kombinácia: −9,5 kg (95 % IS −13,1 až −5,9; p &lt; 0,001).</li>
+  <li>program stredne až intenzívnej aktivity: −4,1&nbsp;kg (95 % IS −7,8 až −0,4; p = 0,03),</li>
+  <li>liraglutid 3,0&nbsp;mg denne: −6,8&nbsp;kg (95 % IS −10,4 až −3,1; p &lt; 0,001),</li>
+  <li>kombinácia: −9,5&nbsp;kg (95 % IS −13,1 až −5,9; p &lt; 0,001).</li>
 </ul>
 
-<p>Kombinácia bola lepšia ako samotné cvičenie (−5,4 kg; p = 0,004), ale <strong>oproti samotnému liraglutidu rozdiel −2,7 kg nebol štatisticky významný</strong> (95 % IS −6,3 až 0,8; p = 0,13). Kombinácia približne zdvojnásobila pokles percenta tuku v porovnaní s každou monoterapiou a len ona bola spojená so zlepšením glykovaného hemoglobínu, inzulinovej citlivosti a kardiorespiračnej zdatnosti. Ide o liraglutid po veľmi prísnej diéte, nie o semaglutid 2,4 mg ani tirzepatid v bežnej ambulancii. Prenos je analogický: cvičenie pridáva kvalitu úbytku hmotnosti, nie magický násobiteľ každého inkretínu.</p>
+<p>Kombinácia bola lepšia ako samotné cvičenie (−5,4&nbsp;kg; p = 0,004), ale <strong>oproti samotnému liraglutidu rozdiel −2,7&nbsp;kg nebol štatisticky významný</strong> (95 % IS −6,3 až 0,8; p = 0,13). Kombinácia približne zdvojnásobila pokles percenta tuku v porovnaní s každou monoterapiou a len ona bola spojená so zlepšením glykovaného hemoglobínu, inzulinovej citlivosti a kardiorespiračnej zdatnosti. Ide o liraglutid po veľmi prísnej diéte, nie o semaglutid 2,4&nbsp;mg ani tirzepatid v bežnej ambulancii. Prenos je analogický: cvičenie pridáva kvalitu úbytku hmotnosti, nie magický násobiteľ každého inkretínu.</p>
 
 <h2>Čo z toho plynie v nefrológii</h2>
 
-<p>Agonisty GLP-1 majú v presne definovaných populáciách preukázaný kardiorenálny prínos. V štúdii FLOW semaglutid 1,0 mg týždenne u pacientov s diabetom 2. typu a chronickou chorobou obličiek znížil primárny kompozit závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin (HR 0,76). V predšpecifikovanej renálnej analýze SELECT semaglutid 2,4 mg u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu znížil obličkový kompozit (HR 0,78). Tieto tvrdé endpointy <strong>neslobodno zamieňať</strong> s Fitbit kohortou. All of Us meria kroky, nie pokles eGFR, albuminúriu ani zlyhanie obličiek. Z poklesu 560 krokov denne preto nevyplýva, že by sa strácal renálny prínos lieku – a rovnako z neho nevyplýva, že by pohyb pri týchto liekoch bol zbytočný.</p>
+<p>Agonisty GLP-1 majú v presne definovaných populáciách preukázaný kardiorenálny prínos. V štúdii FLOW semaglutid 1,0&nbsp;mg týždenne u pacientov s diabetom 2. typu a chronickou chorobou obličiek znížil primárny kompozit závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin (HR 0,76). V predšpecifikovanej renálnej analýze SELECT semaglutid 2,4&nbsp;mg u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu znížil obličkový kompozit (HR 0,78). Tieto tvrdé endpointy <strong>neslobodno zamieňať</strong> s Fitbit kohortou. All of Us meria kroky, nie pokles eGFR, albuminúriu ani zlyhanie obličiek. Z poklesu 560 krokov denne preto nevyplýva, že by sa strácal renálny prínos lieku – a rovnako z neho nevyplýva, že by pohyb pri týchto liekoch bol zbytočný.</p>
 
-<p>Práve naopak. Pacient s chronickou chorobou obličiek, diabetom a obezitou už na vstupe často spĺňa rizikový fenotyp: nízka východisková aktivita, sarkopénia, krehkosť, muskuloskeletálna bolesť, anémia, objemové preťaženie. Meta-analýza observačných štúdií odhadla priemerný denný počet krokov pri chronickej chorobe obličiek na približne 4 640 – teda v pásme, v ktorom Maharjan a kol. videli ďalší pokles. Ak sa k farmakologickému úbytku hmotnosti pridá ešte menej chôdze a menej MVPA, rastie riziko, že schudne nielen tuk, ale aj funkčná svalová rezerva.</p>
+<p>Práve naopak. Pacient s chronickou chorobou obličiek, diabetom a obezitou už na vstupe často spĺňa rizikový fenotyp: nízka východisková aktivita, sarkopénia, krehkosť, muskuloskeletálna bolesť, anémia, objemové preťaženie. Meta-analýza observačných štúdií odhadla priemerný denný počet krokov pri chronickej chorobe obličiek na približne 4&nbsp;640 – teda v pásme, v ktorom Maharjan a kol. videli ďalší pokles. Ak sa k farmakologickému úbytku hmotnosti pridá ešte menej chôdze a menej MVPA, rastie riziko, že schudne nielen tuk, ale aj funkčná svalová rezerva.</p>
 
-<p>KDIGO 2024 odporúča dospelým s chronickou chorobou obličiek aspoň 150 minút stredne intenzívnej aktivity týždenne, alebo úroveň zlučiteľnú s kardiovaskulárnou a fyzickou toleranciou, a vyhýbať sa dlhému sedavému správaniu. All of Us tento cieľ u väčšiny ľudí na agonistoch GLP-1 nenapĺňa. V nefrologickej ambulancii to znamená:</p>
+<p>KDIGO 2024 odporúča dospelým s chronickou chorobou obličiek aspoň 150&nbsp;minút stredne intenzívnej aktivity týždenne, alebo úroveň zlučiteľnú s kardiovaskulárnou a fyzickou toleranciou, a vyhýbať sa dlhému sedavému správaniu. All of Us tento cieľ u väčšiny ľudí na agonistoch GLP-1 nenapĺňa. V nefrologickej ambulancii to znamená:</p>
 
 <ul>
   <li><strong>Nepovažovať pohyb za automatický vedľajší produkt chudnutia.</strong> Pýtať sa na kroky, dychovú rezervu, bolesť kĺbov a chuť cvičiť už pri predpise, nielen pri kontrole hmotnosti.</li>
-  <li><strong>Merať východisko.</strong> Niekoľko dní náramku alebo telefónu povie viac ako odhad. Cieľ má byť prírastok od reálneho čísla, nie skok na slogan 10 000 krokov.</li>
+  <li><strong>Merať východisko.</strong> Niekoľko dní náramku alebo telefónu povie viac ako odhad. Cieľ má byť prírastok od reálneho čísla, nie skok na slogan 10&nbsp;000 krokov.</li>
   <li><strong>Kombinovať chôdzu so silovým cvičením.</strong> Pri rýchlom úbytku hmotnosti ide aj o zachovanie svalstva a kostí, nielen o ďalšie kilogramy. Pri dialýze, steroidnej myopatii a vysokom riziku pádu treba plán individualizovať.</li>
   <li><strong>Odlišovať bariéry.</strong> Nauzea po titrácii, muskuloskeletálna bolesť, krehkosť, anémia, hypervolémia a depresívna nálada vyžadujú iný postup. U mužov v analýze Maharjan a kol. bol pokles väčší – v ambulancii to stojí za cielenú otázku, nie za iný liek.</li>
   <li><strong>Nenahrádzať nefroprotekciu cvičením ani cvičenie injekciou.</strong> Blokáda RAAS, inhibítor SGLT2, kontrola tlaku, glykémie a objemu ostávajú piliermi. Agonista GLP-1 ich pri vhodnej indikácii dopĺňa.</li>
@@ -176,7 +176,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Záver</h2>
 
-<p>Dve práce z All of Us – pred-po kohorta s Fitbit a prierezová analýza 298 dospelých – ukazujú konzistentný obraz: ľudia na agonistoch GLP-1 sa po chudnutí nezačnú spontánne viac hýbať a často nespĺňajú ani základné odporúčania MVPA. Kauzalitu z toho vyvodiť nemožno. Mechanizmy ostávajú hypotézami. Kazuistiky anhedónie pri 15 mg tirzepatidu sú signál, nie dôkaz.</p>
+<p>Dve práce z All of Us – pred-po kohorta s Fitbit a prierezová analýza 298 dospelých – ukazujú konzistentný obraz: ľudia na agonistoch GLP-1 sa po chudnutí nezačnú spontánne viac hýbať a často nespĺňajú ani základné odporúčania MVPA. Kauzalitu z toho vyvodiť nemožno. Mechanizmy ostávajú hypotézami. Kazuistiky anhedónie pri 15&nbsp;mg tirzepatidu sú signál, nie dôkaz.</p>
 
 <p><strong>V nefro-kardiometabolickej praxi stačí jedna zmena v poradí: najprv liek a plán pohybu, nie liek a predpoklad, že kroky prídu samy.</strong> Kardiorenálny prínos semaglutidu z FLOW a SELECT ostáva. Životný štýl ním nie je vyriešený.</p>
 </div>
@@ -208,7 +208,7 @@ $articles[] = [
   <li><strong>Perkovic V, Tuttle KR, Rossing P, et al.</strong> <em>Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes (FLOW).</em> N Engl J Med. 2024;391:109–121. doi: 10.1056/NEJMoa2403347. PMID 38785209. <a href="https://pubmed.ncbi.nlm.nih.gov/38785209/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Colhoun HM, Lingvay I, Brown PM, et al.</strong> <em>Long-term kidney outcomes of semaglutide in obesity and cardiovascular disease in the SELECT trial.</em> Nat Med. 2024;30:2058–2066. doi: 10.1038/s41591-024-03015-5. PMID 38796653. <a href="https://pubmed.ncbi.nlm.nih.gov/38796653/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Kidney Disease: Improving Global Outcomes CKD Work Group.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(4S):S117–S314. Odporúčanie k pohybovej aktivite. <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">KDIGO</a>.</li>
-  <li><strong>Zhang F, Ren Y, Wang H, Bai Y, Huang L.</strong> <em>Daily Step Counts in Patients With Chronic Kidney Disease: A Systematic Review and Meta-Analysis of Observational Studies.</em> Front Med (Lausanne). 2022;9:842645. doi: 10.3389/fmed.2022.842645. Priemerný odhad približne 4 640 krokov denne. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8891233/" target="_blank" rel="noopener noreferrer">PMC</a>.</li>
+  <li><strong>Zhang F, Ren Y, Wang H, Bai Y, Huang L.</strong> <em>Daily Step Counts in Patients With Chronic Kidney Disease: A Systematic Review and Meta-Analysis of Observational Studies.</em> Front Med (Lausanne). 2022;9:842645. doi: 10.3389/fmed.2022.842645. Priemerný odhad približne 4&nbsp;640 krokov denne. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8891233/" target="_blank" rel="noopener noreferrer">PMC</a>.</li>
 </ol>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok je slovenským spracovaním spravodajského textu Medscape a overením citovaných primárnych zdrojov. Konferenčný abstrakt a prierezová kohorta nedokazujú kauzalitu. Konkrétny plán pohybu treba prispôsobiť kardiovaskulárnej tolerancii, krehkosti, riziku pádu, anémii, objemovému stavu a štádiu chronickej choroby obličiek.</em></p>

@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mProtein = mgusParseNonNeg($form["m_protein"]);
         if ($mProtein === null || $mProtein > 100.0) {
-            $errors[] = "Sérový M-proteín musí byť 0 až 100 g/L.";
+            $errors[] = "Sérový M-proteín musí byť 0 až 100 g/L.";
         }
 
         $isotype = $form["isotype"] === "non_igg" ? "non_igg" : "igg";
@@ -153,7 +153,7 @@ if (isLoggedIn()) {
   $pageTitle = "MGUS: riziková stratifikácia (Mayo) a κ/λ pomer | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_mgus.php";
   $seoDescription =
-      "Mayo riziková stratifikácia MGUS (Rajkumar 2005), tri faktory: M-proteín ≥ 15 g/L, non-IgG izotyp, abnormálny κ/λ pomer voľných ľahkých reťazcov: predikujú 20-ročné riziko progresie (5/21/37/58 %). S poznámkou k MGRS a renálnemu rozpätiu FLC.";
+      "Mayo riziková stratifikácia MGUS (Rajkumar 2005), tri faktory: M-proteín ≥ 15 g/L, non-IgG izotyp, abnormálny κ/λ pomer voľných ľahkých reťazcov: predikujú 20-ročné riziko progresie (5/21/37/58 %). S poznámkou k MGRS a renálnemu rozpätiu FLC.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -206,7 +206,7 @@ if (isLoggedIn()) {
                 <div class="info-box">
                     <strong>Čo počíta:</strong> Mayo model hodnotí riziko <em>hematologickej</em>
                     progresie monoklonálnej gamapatie nejasného významu (MGUS) na mnohopočetný
-                    myelóm alebo príbuznú malignitu podľa troch faktorov: M-proteín ≥ 15 g/L,
+                    myelóm alebo príbuznú malignitu podľa troch faktorov: M-proteín ≥ 15 g/L,
                     iný izotyp než IgG a abnormálny pomer voľných ľahkých reťazcov (κ/λ mimo
                     <strong>0,26 až 1,65</strong>).
                 </div>
@@ -226,7 +226,7 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{pomer} = \frac{\text{voľné } \kappa}{\text{voľné } \lambda} \]</div>
                         <div class="calc-formula-vars">
-                            (1) M-proteín ≥ 15 g/L &bull;
+                            (1) M-proteín ≥ 15 g/L &bull;
                             (2) izotyp ≠ IgG &bull;
                             (3) κ/λ &lt; 0,26 alebo &gt; 1,65
                         </div>
@@ -322,12 +322,12 @@ if (isLoggedIn()) {
                             λ <?= htmlspecialchars(number_format((float)$calculated["lambda"], 1, ",", " ")) ?> mg/L)
                         </p>
                         <p class="calc-result-detail"><strong>Rizikové faktory:</strong>
-                            M-proteín ≥ 15 g/L: <?= $calculated["f_mprotein"] ? "áno" : "nie" ?>
+                            M-proteín ≥ 15 g/L: <?= $calculated["f_mprotein"] ? "áno" : "nie" ?>
                             &ensp;&bull;&ensp; izotyp ≠ IgG: <?= $calculated["f_nonigg"] ? "áno" : "nie" ?>
                             &ensp;&bull;&ensp; abnormálny κ/λ: <?= $calculated["f_flc"] ? "áno" : "nie" ?>
                         </p>
                         <?php if ((float)$calculated["m_protein"] >= 30.0): ?>
-                            <p class="calc-result-detail"><strong>Upozornenie:</strong> M-proteín ≥ 30 g/L prekračuje definíciu MGUS; zváž smoldering myelóm / mnohopočetný myelóm (potrebné CRAB kritériá, kostná dreň, zobrazenie).</p>
+                            <p class="calc-result-detail"><strong>Upozornenie:</strong> M-proteín ≥ 30 g/L prekračuje definíciu MGUS; zváž smoldering myelóm / mnohopočetný myelóm (potrebné CRAB kritériá, kostná dreň, zobrazenie).</p>
                         <?php endif; ?>
                         <p class="calc-result-detail">Model odhaduje <strong>hematologickú</strong> progresiu, nie renálne riziko. Pri obličkovom postihnutí postupuj podľa <a href="calculator_mgrs.php">algoritmu MGRS</a> (biopsia, hematológ) bez ohľadu na skóre.</p>
                         <div class="form-actions no-print">

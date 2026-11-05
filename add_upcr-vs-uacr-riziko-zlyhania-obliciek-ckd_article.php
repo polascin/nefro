@@ -66,9 +66,9 @@ $articles[] = [
 
 <p>Modely založené na UPCR aj na UACR mali porovnateľnú <strong>diskriminačnú schopnosť</strong> (Harrellov C-index bol približne rovnaký) a celkovo <strong>dobrú kalibráciu</strong>.</p>
 
-<h3>4. Dôležitá výnimka: pri eGFR pod 15 ml/min/1,73 m² bola asociácia UPCR slabšia</h3>
+<h3>4. Dôležitá výnimka: pri eGFR pod 15&nbsp;ml/min/1,73&nbsp;m² bola asociácia UPCR slabšia</h3>
 
-<p>V skupine s <strong>eGFR pod 15 ml/min/1,73 m²</strong> bola asociácia UPCR s KFRT <strong>slabšia</strong> než asociácia UACR. Autori to vysvetľujú <strong>nižším podielom albumínu na celkovej proteinúrii</strong> pri pokročilejšom zlyhávaní obličiek. Zároveň sa uvádza, že odhady boli neisté u pacientov s veľmi nízkou východiskovou hodnotou UACR (napríklad pod 30 mg/g kreatinínu).</p>
+<p>V skupine s <strong>eGFR pod 15&nbsp;ml/min/1,73&nbsp;m²</strong> bola asociácia UPCR s KFRT <strong>slabšia</strong> než asociácia UACR. Autori to vysvetľujú <strong>nižším podielom albumínu na celkovej proteinúrii</strong> pri pokročilejšom zlyhávaní obličiek. Zároveň sa uvádza, že odhady boli neisté u pacientov s veľmi nízkou východiskovou hodnotou UACR (napríklad pod 30&nbsp;mg/g kreatinínu).</p>
 
 <h2>Ako to preniesť do nefrologickej praxe</h2>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>U pacientov s preddialyzačnou CKD sa <strong>30 % pokles UPCR</strong> spája s nižším rizikom KFRT a modely založené na UPCR aj na UACR majú celkovo podobnú prognostickú výkonnosť. Najväčší rozdiel sa javí pri <strong>eGFR pod 15 ml/min/1,73 m²</strong>, kde UPCR stráca časť „albumínového“ signálu, a preto je v pokročilých štádiách rozumnejšie opierať sa viac o <strong>UACR</strong>.</p>
+<p>U pacientov s preddialyzačnou CKD sa <strong>30 % pokles UPCR</strong> spája s nižším rizikom KFRT a modely založené na UPCR aj na UACR majú celkovo podobnú prognostickú výkonnosť. Najväčší rozdiel sa javí pri <strong>eGFR pod 15&nbsp;ml/min/1,73&nbsp;m²</strong>, kde UPCR stráca časť „albumínového“ signálu, a preto je v pokročilých štádiách rozumnejšie opierať sa viac o <strong>UACR</strong>.</p>
 
 <hr>
 

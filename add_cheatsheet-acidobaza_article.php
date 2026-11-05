@@ -39,10 +39,10 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>pH</td><td>7,35 – 7,45</td></tr>
-    <tr><td>pCO<sub>2</sub></td><td>35 – 45 mmHg (4,7 – 6,0 kPa)</td></tr>
-    <tr><td>HCO<sub>3</sub><sup>−</sup> (aktuálny)</td><td>22 – 26 mmol/l</td></tr>
-    <tr><td>Base excess (BE)</td><td>−2 až +2 mmol/l</td></tr>
-    <tr><td>Aniónové okno (AG)</td><td>8 – 12 mmol/l (bez K<sup>+</sup>)</td></tr>
+    <tr><td>pCO<sub>2</sub></td><td>35 – 45&nbsp;mmHg (4,7 – 6,0&nbsp;kPa)</td></tr>
+    <tr><td>HCO<sub>3</sub><sup>−</sup> (aktuálny)</td><td>22 – 26&nbsp;mmol/l</td></tr>
+    <tr><td>Base excess (BE)</td><td>−2 až +2&nbsp;mmol/l</td></tr>
+    <tr><td>Aniónové okno (AG)</td><td>8 – 12&nbsp;mmol/l (bez K<sup>+</sup>)</td></tr>
   </tbody>
 </table>
 </div>
@@ -72,18 +72,18 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Metabolická acidóza</td><td>pCO<sub>2</sub> = 1,5 × HCO<sub>3</sub><sup>−</sup> + 8 ± 2 (Winterov vzorec)</td></tr>
-    <tr><td>Metabolická alkalóza</td><td>pCO<sub>2</sub> stúpa ~0,7 mmHg na každý 1 mmol/l ↑ HCO<sub>3</sub><sup>−</sup></td></tr>
-    <tr><td>Respiračná acidóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 1 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná acidóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 3,5 – 4 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná alkalóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 2 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná alkalóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 4 – 5 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
+    <tr><td>Metabolická alkalóza</td><td>pCO<sub>2</sub> stúpa ~0,7&nbsp;mmHg na každý 1&nbsp;mmol/l ↑ HCO<sub>3</sub><sup>−</sup></td></tr>
+    <tr><td>Respiračná acidóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 1 na každých 10&nbsp;mmHg ↑ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná acidóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 3,5 – 4 na každých 10&nbsp;mmHg ↑ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná alkalóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 2 na každých 10&nbsp;mmHg ↓ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná alkalóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 4 – 5 na každých 10&nbsp;mmHg ↓ pCO<sub>2</sub></td></tr>
   </tbody>
 </table>
 </div>
 
 <h2>Krok 3 – Aniónové okno (AG)</h2>
-<p><strong>AG = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong>, norma 8 – 12 mmol/l.</p>
-<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5 mmol/l na každých 10 g/l (1 g/dl), o ktoré je albumín pod 40 g/l (4 g/dl). Pri hypoalbuminémii môže zvýšené AG zostať zamaskované – vždy koriguj.</p>
+<p><strong>AG = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong>, norma 8 – 12&nbsp;mmol/l.</p>
+<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5&nbsp;mmol/l na každých 10&nbsp;g/l (1&nbsp;g/dl), o ktoré je albumín pod 40&nbsp;g/l (4&nbsp;g/dl). Pri hypoalbuminémii môže zvýšené AG zostať zamaskované – vždy koriguj.</p>
 
 <h3>Metabolická acidóza so zvýšeným AG (HAGMA) – mnemotechnika GOLD MARK</h3>
 <ul>
@@ -127,8 +127,8 @@ $articles[] = [
     <tr><th scope="col">U-Cl</th><th scope="col">Typ</th><th scope="col">Príčiny</th></tr>
   </thead>
   <tbody>
-    <tr><td>&lt; 20 mmol/l</td><td>Citlivá na chlorid (volumová deplécia)</td><td>Vracanie, NG odsávanie, diuretiká (s odstupom), posthyperkapnia</td></tr>
-    <tr><td>&gt; 20 mmol/l</td><td>Rezistentná na chlorid</td><td>Hyperaldosteronizmus, Cushing, ťažká hypokaliémia, Bartter/Gitelman, aktuálne diuretiká</td></tr>
+    <tr><td>&lt; 20&nbsp;mmol/l</td><td>Citlivá na chlorid (volumová deplécia)</td><td>Vracanie, NG odsávanie, diuretiká (s odstupom), posthyperkapnia</td></tr>
+    <tr><td>&gt; 20&nbsp;mmol/l</td><td>Rezistentná na chlorid</td><td>Hyperaldosteronizmus, Cushing, ťažká hypokaliémia, Bartter/Gitelman, aktuálne diuretiká</td></tr>
   </tbody>
 </table>
 </div>

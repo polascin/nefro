@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-05 17:10',
+                'category' => 'portal',
+                'title' => 'Jazyková a typografická korektúra textov portálu',
+                'description' => 'Doplnená chýbajúca diakritika v popiskoch profilu a registrácie, opravené čechizmy v textoch, nezlomiteľné medzery medzi číslom a jednotkou (mg, ml, %, mmHg, hodiny) v kalkulačkách, správach aj článkoch a odstránené koncové medzery v kóde. Žiadna funkčná zmena.',
+                'url' => '',
+            ],
+            [
                 'date' => '2026-11-03 08:15',
                 'category' => 'calculators',
                 'title' => 'Popísané prepínače jednotiek v kalkulačkách',
@@ -380,7 +387,7 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-10-08 16:40',
                 'category' => 'calculators',
                 'title' => 'Presnejšie zaradenie albuminúrie, CKM a PREVENT',
-                'description' => 'Kategória A sa určuje podľa prahov v zadanej jednotke: 3 mg/mmol je A2 a 30 mg/mmol je A3, bez prepočtu na mg/g. Potvrdená A2 alebo A3 bez eGFR sa zaradí do štádia CKM 2. PREVENT prijme eGFR 15 ml/min/1,73 m² a po načítaní z histórie zachová UACR, takže riziko neprejde ticho na základný model. Nový výpočet po načítaní histórie už nepoužije staré údaje.',
+                'description' => 'Kategória A sa určuje podľa prahov v zadanej jednotke: 3 mg/mmol je A2 a 30 mg/mmol je A3, bez prepočtu na mg/g. Potvrdená A2 alebo A3 bez eGFR sa zaradí do štádia CKM 2. PREVENT prijme eGFR 15 ml/min/1,73 m² a po načítaní z histórie zachová UACR, takže riziko neprejde ticho na základný model. Nový výpočet po načítaní histórie už nepoužije staré údaje.',
                 'url' => 'calculators.php',
             ],
             [
@@ -436,21 +443,21 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-10-04 09:30',
                 'category' => 'content',
                 'title' => 'SK Nefro Báza 1 Kompendium — zhustené vydanie',
-                'description' => 'Do katalógu publikácií pribudlo kompendium: 387 odborných článkov spracovaných do abstraktu a štyroch až siedmich kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 261 stranách namiesto 1 745, s číslovaním zhodným s plným vydaním. Rovnakých päť formátov — PDF, EPUB, Kindle, DOCX a ODT.',
+                'description' => 'Do katalógu publikácií pribudlo kompendium: 387 odborných článkov spracovaných do abstraktu a štyroch až siedmich kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 261 stranách namiesto 1 745, s číslovaním zhodným s plným vydaním. Rovnakých päť formátov — PDF, EPUB, Kindle, DOCX a ODT.',
                 'url' => 'publikacia.php?slug=sk-nefro-baza-1-kompendium',
             ],
             [
                 'date' => '2026-10-03 20:00',
                 'category' => 'content',
                 'title' => 'Anglické vydanie e-knihy SK Nefro Báza 1',
-                'description' => 'Do katalógu publikácií pribudol anglický preklad — 387 odborných článkov na 1 782 stranách, rovnako v PDF, EPUB, Kindle, DOCX a ODT. Oproti slovenskému vydaniu neobsahuje 18 popularizačných textov pre pacientov. Pri každom článku je odkaz na jeho slovenskú online verziu.',
+                'description' => 'Do katalógu publikácií pribudol anglický preklad — 387 odborných článkov na 1 782 stranách, rovnako v PDF, EPUB, Kindle, DOCX a ODT. Oproti slovenskému vydaniu neobsahuje 18 popularizačných textov pre pacientov. Pri každom článku je odkaz na jeho slovenskú online verziu.',
                 'url' => 'publikacia.php?slug=sk-nefro-baza-1-en',
             ],
             [
                 'date' => '2026-10-03 13:53',
                 'category' => 'content',
                 'title' => 'Publikácie na predaj — e-kniha SK Nefro Báza 1',
-                'description' => 'Pribudla sekcia Publikácie s prvým zväzkom SK Nefro Báza 1 — 387 odborných článkov z portálu na 1 745 stranách, v jednom súbore na čítanie offline aj do tlače. Na výber je PDF, EPUB, Kindle (AZW3), DOCX a ODT; jeden formát 7 €, všetky 12 €. Platí sa prevodom alebo kartou a peňaženkou. Články na portáli zostávajú voľne dostupné bez platobnej steny.',
+                'description' => 'Pribudla sekcia Publikácie s prvým zväzkom SK Nefro Báza 1 — 387 odborných článkov z portálu na 1 745 stranách, v jednom súbore na čítanie offline aj do tlače. Na výber je PDF, EPUB, Kindle (AZW3), DOCX a ODT; jeden formát 7 €, všetky 12 €. Platí sa prevodom alebo kartou a peňaženkou. Články na portáli zostávajú voľne dostupné bez platobnej steny.',
                 'url' => 'publikacie.php',
             ],
             [
@@ -470,8 +477,8 @@ if (!function_exists('siteChangelogEntries')) {
             [
                 'date' => '2026-09-17 18:11',
                 'category' => 'calculators',
-                'title' => 'eGFR sa dá zadávať aj v ml/s/1,73 m²',
-                'description' => 'Pri každom poli pre eGFR je teraz voľba jednotky — ml/min/1,73 m² alebo ml/s/1,73 m². Prepnutie prepočíta už zadanú hodnotu. Prevodník jednotiek má nový riadok pre eGFR a kalkulačky eGFR ukazujú výsledok v oboch jednotkách.',
+                'title' => 'eGFR sa dá zadávať aj v ml/s/1,73 m²',
+                'description' => 'Pri každom poli pre eGFR je teraz voľba jednotky — ml/min/1,73 m² alebo ml/s/1,73 m². Prepnutie prepočíta už zadanú hodnotu. Prevodník jednotiek má nový riadok pre eGFR a kalkulačky eGFR ukazujú výsledok v oboch jednotkách.',
                 'url' => 'calculators.php',
             ],
             [
@@ -485,7 +492,7 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-09-01 00:00',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka CKD',
-                'description' => 'Komplexný nástroj pre nefrologickú ambulanciu: stagingové zaradenie CKD, prognostické modely a príčina CKD z číselníka MKCH-10 s vlastným textom.',
+                'description' => 'Komplexný nástroj pre nefrologickú ambulanciu: stagingové zaradenie CKD, prognostické modely a príčina CKD z číselníka MKCH-10 s vlastným textom.',
                 'url' => 'calculator_ambulatory.php',
             ],
         ];

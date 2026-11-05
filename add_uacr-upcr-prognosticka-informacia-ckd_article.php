@@ -31,20 +31,20 @@ $articles[] = [
 </figure>
 
 <h2>Čo ukázala analýza CRIC</h2>
-<p>Verma a spoluautori analyzovali 3 742 účastníkov so vstupným UACR a UPCR stanovenými z toho istého 24-hodinového zberu moču. Priemerná odhadovaná glomerulárna filtrácia (eGFR) bola 42,3 ml/min/1,73 m² a medián sledovania 15 rokov. Hodnotili zlyhanie obličiek, progresiu CKD a kardiovaskulárne príhody. Išlo o observačnú prognostickú analýzu, nie o randomizované porovnanie dvoch vyšetrovacích stratégií. [1]</p>
+<p>Verma a spoluautori analyzovali 3&nbsp;742 účastníkov so vstupným UACR a UPCR stanovenými z toho istého 24-hodinového zberu moču. Priemerná odhadovaná glomerulárna filtrácia (eGFR) bola 42,3&nbsp;ml/min/1,73&nbsp;m² a medián sledovania 15&nbsp;rokov. Hodnotili zlyhanie obličiek, progresiu CKD a kardiovaskulárne príhody. Išlo o observačnú prognostickú analýzu, nie o randomizované porovnanie dvoch vyšetrovacích stratégií. [1]</p>
 <p>Ukazovatele silno korelovali (Spearmanov koeficient 0,92). Pri päťročnej predikcii zlyhania obličiek dosahovala plocha pod ROC krivkou 0,894 pre model s UACR a 0,899 pre model s UPCR. Rozdiel bol menší než autormi vopred zvolená hranica klinickej významnosti 0,01. Malé rozdiely sa pozorovali aj pri ostatných výsledkoch a desaťročnom horizonte. [1]</p>
-<p>Rozhodovacie krivky ukázali rozdiely čistého prínosu najviac tri na 1 000 osôb v osobitne sledovaných pásmach rozhodovacích prahov. Tento údaj neplatí bez obmedzenia pre všetky prahy. Vyjadruje modelovaný prínos po zohľadnení falošne pozitívnych rozhodnutí, nie počet skutočne odvrátených zlyhaní obličiek alebo ušetrených výkonov. [1]</p>
+<p>Rozhodovacie krivky ukázali rozdiely čistého prínosu najviac tri na 1&nbsp;000 osôb v osobitne sledovaných pásmach rozhodovacích prahov. Tento údaj neplatí bez obmedzenia pre všetky prahy. Vyjadruje modelovaný prínos po zohľadnení falošne pozitívnych rozhodnutí, nie počet skutočne odvrátených zlyhaní obličiek alebo ušetrených výkonov. [1]</p>
 
 <h2>Podobná predikcia neznamená rovnaký biologický význam</h2>
 <p><strong>UACR vyjadruje albuminúriu, kým UPCR zahŕňa albumín aj ostatné močové bielkoviny.</strong> Albumín je dôležitým ukazovateľom glomerulárneho poškodenia. Pri tubulárnej alebo nadprodukčnej proteinúrii, napríklad pri vylučovaní monoklonálnych ľahkých reťazcov, môže byť podiel nealbumínových bielkovín podstatný. Nízke UACR preto samo osebe nevylučuje významnú nealbumínovú proteinúriu. [2, 3]</p>
 <p>Kreatinín v menovateli zmierňuje vplyv zriedenia moču, neodstraňuje však všetku variabilitu. Výsledok ovplyvňuje aj tvorba a vylučovanie kreatinínu, telesná konštitúcia a okolnosti odberu. Dôležité sú jednotky: mg/g a mg/mmol sa nesmú zamieňať. Rovnako nemožno pri tej istej jednotke považovať hodnotu UPCR za hodnotu UACR. [2]</p>
 
 <h2>Ako výsledok zapadá do širších dôkazov</h2>
-<p>Metaanalýza individuálnych údajov CKD Prognosis Consortium zahŕňajúca 148 994 osôb z 38 kohort zistila silnejšiu asociáciu UACR so zlyhaním obličiek než pri UPCR. Pomer rizík na štandardnú odchýlku logaritmicky transformovaného ukazovateľa bol 2,55 pre UACR a 2,40 pre UPCR. Rozdiely boli výraznejšie v niektorých klinických podskupinách; kardiovaskulárne asociácie boli celkovo podobnejšie. [3]</p>
+<p>Metaanalýza individuálnych údajov CKD Prognosis Consortium zahŕňajúca 148&nbsp;994 osôb z 38 kohort zistila silnejšiu asociáciu UACR so zlyhaním obličiek než pri UPCR. Pomer rizík na štandardnú odchýlku logaritmicky transformovaného ukazovateľa bol 2,55 pre UACR a 2,40 pre UPCR. Rozdiely boli výraznejšie v niektorých klinických podskupinách; kardiovaskulárne asociácie boli celkovo podobnejšie. [3]</p>
 <p>Tieto závery nemusia byť v rozpore s analýzou CRIC. <strong>Sila asociácie jedného biomarkera s výsledkom nie je to isté ako diskriminácia celého klinického modelu.</strong> Model už obsahujúci vek, eGFR a ďalšie premenné môže dosahovať podobnú predikciu pri oboch ukazovateľoch. Rozdielne kohorty, horizonty a štatistické otázky preto treba porovnávať vecne, nie iba podľa titulkov publikácií. Ide o interpretáciu rozdielov medzi štúdiami. [1, 3]</p>
 
 <h2>Čo sa v ambulancii nemení</h2>
-<p>KDIGO 2024 uprednostňuje UACR pri úvodnom vyšetrení albuminúrie a preferuje prvú rannú vzorku stredného prúdu moču. UACR ≥ 30 mg/g (≥ 3 mg/mmol) z náhodnej vzorky sa má potvrdiť následným ranným odberom. Jediný abnormálny nález ešte sám osebe nepreukazuje chronickosť ochorenia. [2]</p>
+<p>KDIGO 2024 uprednostňuje UACR pri úvodnom vyšetrení albuminúrie a preferuje prvú rannú vzorku stredného prúdu moču. UACR ≥ 30&nbsp;mg/g (≥ 3&nbsp;mg/mmol) z náhodnej vzorky sa má potvrdiť následným ranným odberom. Jediný abnormálny nález ešte sám osebe nepreukazuje chronickosť ochorenia. [2]</p>
 <div class="table-responsive" role="region" aria-label="Použitie UACR a UPCR v klinických situáciách" tabindex="0">
 <table>
 <thead><tr><th scope="col">Klinická otázka</th><th scope="col">Praktický postup</th></tr></thead>
@@ -59,7 +59,7 @@ $articles[] = [
 
 <h2>Ako pracovať s už dostupným UPCR</h2>
 <p>Existujúce UPCR netreba považovať za bezcenný údaj. Pri známom CKD poskytuje prognostickú informáciu a umožňuje sledovať celkovú proteinúriu. Ak však rozhodnutie závisí od albuminúrie, je vhodné UACR doplniť. Pri dlhodobom sledovaní treba zaznamenávať, ktorý ukazovateľ sa používa, a zmenu vyšetrenia neinterpretovať ako biologickú zmenu ochorenia. [1, 2]</p>
-<p>Publikované rovnice umožňujú odhadnúť UACR z UPCR, keď priame stanovenie chýba. Sumida a spoluautori ich skúmali v metaanalýze 919 383 osôb. Ide však o <strong>odhad s neistotou na úrovni jednotlivca</strong>, nie o laboratórne zmeraný albumín; vzťah je zvlášť problematický pri nízkej proteinúrii. Odhad musí byť výslovne označený a použitie vo výpočte rizika musí zodpovedať validovanému postupu. Vlastný neoverený prepočet nie je primeranou náhradou. [4]</p>
+<p>Publikované rovnice umožňujú odhadnúť UACR z UPCR, keď priame stanovenie chýba. Sumida a spoluautori ich skúmali v metaanalýze 919&nbsp;383 osôb. Ide však o <strong>odhad s neistotou na úrovni jednotlivca</strong>, nie o laboratórne zmeraný albumín; vzťah je zvlášť problematický pri nízkej proteinúrii. Odhad musí byť výslovne označený a použitie vo výpočte rizika musí zodpovedať validovanému postupu. Vlastný neoverený prepočet nie je primeranou náhradou. [4]</p>
 <p>Analýza CRIC sa týka pacientov s etablovaným CKD. Nedokazuje rovnocennosť pri populačnom skríningu, pri hodnotení odpovede na liečbu ani pri sledovaní pacientov, ktorí už podstupujú udržiavaciu dialýzu. Rozumné je preto používať oba ukazovatele podľa toho, na akú otázku hľadáme odpoveď.</p>
 
 <hr>

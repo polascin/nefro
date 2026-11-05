@@ -46,14 +46,14 @@ obrazu. Medscape „Primary Care Hack“ sa zameriava najmä na praktické čít
 
 <h2>CRP (C-reaktívny proteín): rýchly indikátor, ale málo špecifický</h2>
 <p>CRP je proteín produkovaný pečeňou v reakcii na zápalové cytokíny. Je to <strong>marker akútnej
-fázy</strong>, ktorý stúpa relatívne rýchlo (v priebehu približne <strong>6 až 10 hodín</strong>) pri
+fázy</strong>, ktorý stúpa relatívne rýchlo (v priebehu približne <strong>6 až 10&nbsp;hodín</strong>) pri
 infekcii, zápale alebo aj pri malignite.</p>
 <p>Praktické prahy a interpretácia:</p>
 <ul>
-  <li><strong>&lt; 5 mg/l</strong> je bežná referenčná hodnota u dospelých.</li>
-  <li><strong>CRP &gt; 10 mg/l</strong> (t. j. <strong>&gt; 1,0 mg/dl</strong>) „takmer vždy“ indikuje
+  <li><strong>&lt; 5&nbsp;mg/l</strong> je bežná referenčná hodnota u dospelých.</li>
+  <li><strong>CRP &gt; 10&nbsp;mg/l</strong> (t. j. <strong>&gt; 1,0&nbsp;mg/dl</strong>) „takmer vždy“ indikuje
       prítomnosť akútneho ochorenia, typicky infekcie alebo iného zápalového procesu.</li>
-  <li>CRP má kratší biologický polčas (uvádza sa približne <strong>19 hodín</strong>), takže ak sa
+  <li>CRP má kratší biologický polčas (uvádza sa približne <strong>19&nbsp;hodín</strong>), takže ak sa
       spúšťač vyrieši, hodnoty sa normalizujú <strong>v priebehu dní</strong>.</li>
 </ul>
 <p>Klinicky užitočné je, že CRP sa dá použiť aj na <strong>rýchle posúdenie a monitorovanie odpovede na
@@ -81,10 +81,10 @@ malignite.</p>
       <li><strong>muži: vek ÷ 2</strong></li>
     </ul>
   </li>
-  <li>ESR <strong>&gt; 100 mm/h</strong> má podľa textu vysokú prediktívnu hodnotu: uvádza sa
+  <li>ESR <strong>&gt; 100&nbsp;mm/h</strong> má podľa textu vysokú prediktívnu hodnotu: uvádza sa
       <strong>97 %</strong> pre prítomnosť základného ochorenia.</li>
 </ul>
-<p>Dynamika: ESR typicky stúpa v priebehu <strong>24 až 48 hodín</strong> a normalizuje sa
+<p>Dynamika: ESR typicky stúpa v priebehu <strong>24 až 48&nbsp;hodín</strong> a normalizuje sa
 <strong>pomaly</strong>, často až <strong>v priebehu týždňov</strong>.</p>
 <p>Špecifickosť a „kedy myslieť na významnú príčinu“:</p>
 <ul>

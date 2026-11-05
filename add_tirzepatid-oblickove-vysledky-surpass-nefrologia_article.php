@@ -49,12 +49,12 @@ $articles[] = [
 
 <h2>SURPASS-4: prvý silný renálny signál</h2>
 
-<p>Z nefrologického pohľadu bola dôležitá najmä post hoc analýza štúdie SURPASS-4. V nej bol tirzepatid porovnaný s titrovaným inzulínom glargínom u pacientov s diabetes mellitus 2. typu a vysokým kardiovaskulárnym rizikom. Pri vstupe mali účastníci priemernú eGFR 81,3 ml/min/1,73 m² a medián UACR 15 mg/g, teda nešlo primárne o štúdiu pokročilej CKD.</p>
+<p>Z nefrologického pohľadu bola dôležitá najmä post hoc analýza štúdie SURPASS-4. V nej bol tirzepatid porovnaný s titrovaným inzulínom glargínom u pacientov s diabetes mellitus 2. typu a vysokým kardiovaskulárnym rizikom. Pri vstupe mali účastníci priemernú eGFR 81,3&nbsp;ml/min/1,73&nbsp;m² a medián UACR 15&nbsp;mg/g, teda nešlo primárne o štúdiu pokročilej CKD.</p>
 
 <p>Analýza ukázala tri prakticky dôležité signály:</p>
 
 <ul>
-  <li><strong>pomalší pokles eGFR</strong> – ročný pokles eGFR bol −1,4 ml/min/1,73 m² pri tirzepatide oproti −3,6 ml/min/1,73 m² pri inzulíne glargíne, s rozdielom 2,2 ml/min/1,73 m² za rok,</li>
+  <li><strong>pomalší pokles eGFR</strong> – ročný pokles eGFR bol −1,4&nbsp;ml/min/1,73&nbsp;m² pri tirzepatide oproti −3,6&nbsp;ml/min/1,73&nbsp;m² pri inzulíne glargíne, s rozdielom 2,2&nbsp;ml/min/1,73&nbsp;m² za rok,</li>
   <li><strong>priaznivejší vývoj albuminúrie</strong> – UACR pri inzulíne glargíne stúpol o 36,9 %, zatiaľ čo pri tirzepatide sa nezvýšil; rozdiel medzi skupinami bol približne −31,9 %,</li>
   <li><strong>nižší výskyt zloženého renálneho ukazovateľa</strong> – kompozit zahŕňal ≥40 % pokles eGFR, terminálne zlyhanie obličiek, úmrtie z renálnej príčiny alebo vznik makroalbuminúrie; hazard ratio bolo 0,58 v prospech tirzepatidu.</li>
 </ul>
@@ -67,7 +67,7 @@ $articles[] = [
 
 <p>Po mediáne sledovania 4,0 roka bol primárny zložený renálny ukazovateľ nižší pri tirzepatide než pri dulaglutide: 6,0 % oproti 7,6 %, hazard ratio 0,77. Kompozit zahŕňal perzistujúcu makroalbuminúriu, perzistujúci pokles eGFR o ≥50 %, zlyhanie obličiek alebo úmrtie z renálnej príčiny.</p>
 
-<p>Účinok sa líšil podľa východiskového renálneho rizika. V populácii s nízkym až stredným rizikom CKD bol prínos daný najmä nižším výskytom novej perzistujúcej makroalbuminúrie. V skupine s vysokým rizikom CKD bol dôležitejší pomalší pokles eGFR. Celkovo bol ročný pokles eGFR pri tirzepatide miernejší než pri dulaglutide; rozdiel bol 0,29 ml/min/1,73 m² za rok v celkovej populácii a 0,93 ml/min/1,73 m² za rok vo vysokorizikovej CKD skupine.</p>
+<p>Účinok sa líšil podľa východiskového renálneho rizika. V populácii s nízkym až stredným rizikom CKD bol prínos daný najmä nižším výskytom novej perzistujúcej makroalbuminúrie. V skupine s vysokým rizikom CKD bol dôležitejší pomalší pokles eGFR. Celkovo bol ročný pokles eGFR pri tirzepatide miernejší než pri dulaglutide; rozdiel bol 0,29&nbsp;ml/min/1,73&nbsp;m² za rok v celkovej populácii a 0,93&nbsp;ml/min/1,73&nbsp;m² za rok vo vysokorizikovej CKD skupine.</p>
 
 <p>Pre nefrológa je práve toto zaujímavé: tirzepatid nepriniesol len metabolickú účinnosť, ale v aktívne kontrolovanej štúdii ukázal priaznivý renálny signál oproti etablovanému GLP-1 receptorovému agonistovi. Zároveň treba ostať presný: išlo o predšpecifikovanú exploračnú renálnu analýzu v kardiovaskulárnej výsledkovej štúdii, nie o primárne obličkovú štúdiu typu DAPA-CKD, EMPA-KIDNEY alebo FLOW.</p>
 

@@ -31,13 +31,13 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.webp" rel="noopener noreferrer" target="_blank"><img src="img/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.webp" alt="Jantárová masa tukového tkaniva sa vľavo rozpadá na častice, zatiaľ čo napravo zostáva neporušený zväzok svalových vlákien a v pozadí polopriesvitná sklená oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná poloschematická scéna, nie snímka konkrétneho pacienta ani zobrazenie konkrétneho produktu. Podstatou výsledku štúdie RESET for Remission nie je samotný úbytok hmotnosti, ale to, z ktorého kompartmentu zmizol – a čo zostalo zachované.</figcaption></figure>
 
-<p>Nízkoenergetické diéty dokážu navodiť remisiu diabetu 2. typu (DM2) – to vieme od štúdií DiRECT a DIADEM-I. Čo sa doteraz netestovalo, je ich kombinácia so štruktúrovaným cvičením pod dohľadom, a to u pacientov so <strong>skorým DM2</strong>, teda s diagnózou vo veku do 45 rokov. Táto skupina má agresívnejší priebeh, vyššie celoživotné riziko komplikácií a najviac rokov pred sebou, počas ktorých sa toto riziko realizuje.</p>
+<p>Nízkoenergetické diéty dokážu navodiť remisiu diabetu 2. typu (DM2) – to vieme od štúdií DiRECT a DIADEM-I. Čo sa doteraz netestovalo, je ich kombinácia so štruktúrovaným cvičením pod dohľadom, a to u pacientov so <strong>skorým DM2</strong>, teda s diagnózou vo veku do 45&nbsp;rokov. Táto skupina má agresívnejší priebeh, vyššie celoživotné riziko komplikácií a najviac rokov pred sebou, počas ktorých sa toto riziko realizuje.</p>
 
 <p>Štúdia RESET for Remission, prezentovaná na výročnom kongrese EASD 2026 a súčasne publikovaná v časopise <em>The Lancet Regional Health – Americas</em>, priniesla mieru remisie, ktorá presahuje predchádzajúce práce. Text zhŕňa, čo štúdia ukázala, kde sú jej hranice, a čo z nej – aj z toho, čo v nej nebolo – vyplýva pre nefrológiu.</p>
 
 <h2>Dizajn a populácia</h2>
 
-<p>Išlo o randomizovanú, otvorenú štúdiu účinnosti so zaslepeným hodnotením ukazovateľov (dizajn PROBE), vykonanú v <strong>troch centrách v Anglicku a Kanade</strong>. Randomizácia prebehla v pomere 1:1 s nezávisle generovanou webovou sekvenciou, stratifikovaná podľa krajiny a pohlavia, s premenlivou veľkosťou blokov. Zaradených bolo <strong>96 účastníkov</strong> medzi 24. septembrom 2021 a 6. júnom 2025; záverečné hodnotenie absolvovalo 86 (90 %). Registrácia: ISRCTN15487120.</p>
+<p>Išlo o randomizovanú, otvorenú štúdiu účinnosti so zaslepeným hodnotením ukazovateľov (dizajn PROBE), vykonanú v <strong>troch centrách v Anglicku a Kanade</strong>. Randomizácia prebehla v pomere 1:1&nbsp;s nezávisle generovanou webovou sekvenciou, stratifikovaná podľa krajiny a pohlavia, s premenlivou veľkosťou blokov. Zaradených bolo <strong>96 účastníkov</strong> medzi 24. septembrom 2021 a 6. júnom 2025; záverečné hodnotenie absolvovalo 86 (90 %). Registrácia: ISRCTN15487120.</p>
 
 <div class="table-responsive" role="region" aria-label="Kritériá zaradenia a vylúčenia v štúdii RESET for Remission" tabindex="0">
 <table>
@@ -46,23 +46,23 @@ $articles[] = [
 <tr><th scope="col">Kritérium</th><th scope="col">Hodnota</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">Vek</th><td>18–45 rokov vrátane</td></tr>
-<tr><th scope="row">Trvanie diabetu</th><td>viac než 3 mesiace a menej než 6 rokov od diagnózy</td></tr>
-<tr><th scope="row">Index telesnej hmotnosti</th><td>30–45 kg/m² pri bielom alebo pôvodnom obyvateľstve; 27–45 kg/m² pri ostatných vrátane zmiešaného pôvodu</td></tr>
+<tr><th scope="row">Vek</th><td>18–45&nbsp;rokov vrátane</td></tr>
+<tr><th scope="row">Trvanie diabetu</th><td>viac než 3&nbsp;mesiace a menej než 6&nbsp;rokov od diagnózy</td></tr>
+<tr><th scope="row">Index telesnej hmotnosti</th><td>30–45&nbsp;kg/m² pri bielom alebo pôvodnom obyvateľstve; 27–45&nbsp;kg/m² pri ostatných vrátane zmiešaného pôvodu</td></tr>
 <tr><th scope="row">HbA1c</th><td>6,5–10 % bez liečby znižujúcej glykémiu; 6–10 % pri liečbe</td></tr>
-<tr><th scope="row">Vylúčenie – obličky</th><td><strong>odhadovaná glomerulová filtrácia pod 60 ml/min/1,73 m²</strong></td></tr>
+<tr><th scope="row">Vylúčenie – obličky</th><td><strong>odhadovaná glomerulová filtrácia pod 60&nbsp;ml/min/1,73&nbsp;m²</strong></td></tr>
 <tr><th scope="row">Ďalšie vylúčenia</th><td>liečba inzulínom, aktívna malignita, klinicky manifestné cievne ochorenie, srdcové zlyhávanie</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Vstupná charakteristika: priemerný vek 38 rokov, priemerný index telesnej hmotnosti 35,2 kg/m², 47 % žien, priemerné trvanie diabetu <strong>2,3 roka</strong>, priemerný HbA1c 7,2 %, viac než tri štvrtiny účastníkov užívali lieky znižujúce glykémiu. Súbor bol etnicky zmiešaný – v intervenčnej skupine 18 osôb európskeho, 17 juhoázijského a 15 iného pôvodu.</p>
+<p>Vstupná charakteristika: priemerný vek 38&nbsp;rokov, priemerný index telesnej hmotnosti 35,2&nbsp;kg/m², 47 % žien, priemerné trvanie diabetu <strong>2,3 roka</strong>, priemerný HbA1c 7,2 %, viac než tri štvrtiny účastníkov užívali lieky znižujúce glykémiu. Súbor bol etnicky zmiešaný – v intervenčnej skupine 18 osôb európskeho, 17 juhoázijského a 15 iného pôvodu.</p>
 
 <h2>Intervencia</h2>
 
-<p><strong>Diéta.</strong> V týždňoch 1–12 nízkoenergetický režim <strong>800–900 kcal denne</strong> so zložením 30 % bielkoviny, 50 % sacharidy, 20 % tuky. Prvé dva týždne tvorili úplné náhrady jedál; od tretieho týždňa bol režim pestrejší a dovoľoval jedno bežné jedlo denne pri zachovaní energetického limitu. Odporúčaný bol príjem aspoň dvoch litrov nekalorických tekutín denne a vláknina ako laxatívum podľa potreby. V týždňoch 13–24 nasledovala udržiavacia diéta.</p>
+<p><strong>Diéta.</strong> V týždňoch 1–12 nízkoenergetický režim <strong>800–900&nbsp;kcal denne</strong> so zložením 30 % bielkoviny, 50 % sacharidy, 20 % tuky. Prvé dva týždne tvorili úplné náhrady jedál; od tretieho týždňa bol režim pestrejší a dovoľoval jedno bežné jedlo denne pri zachovaní energetického limitu. Odporúčaný bol príjem aspoň dvoch litrov nekalorických tekutín denne a vláknina ako laxatívum podľa potreby. V týždňoch 13–24 nasledovala udržiavacia diéta.</p>
 
-<p><strong>Cvičenie.</strong> Dvakrát týždenne cvičenie pod dohľadom a raz týždenne samostatné, pričom cvičebná zložka sa pripojila od tretieho týždňa a postupne narástla na hodinu na jednotku s rovnakým podielom aeróbneho a silového tréningu. Aeróbnu časť tvorila najmä chôdza a vysokointenzívny intervalový tréning pri dobrej tolerancii, silovú stroje alebo voľné váhy. V dňoch s cvičením sa pridávala náhrada jedla navyše s obsahom 200–250 kcal. V týždňoch 13–24 pokračovalo samostatné cvičenie.</p>
+<p><strong>Cvičenie.</strong> Dvakrát týždenne cvičenie pod dohľadom a raz týždenne samostatné, pričom cvičebná zložka sa pripojila od tretieho týždňa a postupne narástla na hodinu na jednotku s rovnakým podielom aeróbneho a silového tréningu. Aeróbnu časť tvorila najmä chôdza a vysokointenzívny intervalový tréning pri dobrej tolerancii, silovú stroje alebo voľné váhy. V dňoch s cvičením sa pridávala náhrada jedla navyše s obsahom 200–250&nbsp;kcal. V týždňoch 13–24 pokračovalo samostatné cvičenie.</p>
 
 <p><strong>Lieky.</strong> Všetky lieky znižujúce glykémiu aj krvný tlak boli na začiatku vysadené – antihypertenzíva <em>v neprítomnosti albuminúrie</em>, s možnosťou opätovného nasadenia pri klinickej indikácii. Kontrolná skupina dostávala obvyklú starostlivosť.</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <h3>Primárny ukazovateľ</h3>
 
-<p>Remisia v 24. týždni bola definovaná ako HbA1c pod 6,5 % (48 mmol/mol) bez liekov znižujúcich glykémiu počas predchádzajúcich aspoň 12 týždňov. Analýza zahrnula všetkých randomizovaných, pričom chýbajúci údaj sa počítal ako absencia remisie – teda konzervatívne.</p>
+<p>Remisia v 24. týždni bola definovaná ako HbA1c pod 6,5 % (48&nbsp;mmol/mol) bez liekov znižujúcich glykémiu počas predchádzajúcich aspoň 12&nbsp;týždňov. Analýza zahrnula všetkých randomizovaných, pričom chýbajúci údaj sa počítal ako absencia remisie – teda konzervatívne.</p>
 
 <p>Remisiu dosiahlo <strong>27 z 50 (54 %)</strong> účastníkov v intervenčnej skupine oproti <strong>2 zo 46 (4 %)</strong> v kontrolnej; absolútny rozdiel 50 percentuálnych bodov (95 % IS 33–64), upravený pomer šancí <strong>21,6 (95 % IS 6,2–114,5)</strong>. Výsledok bol konzistentný v podskupinách podľa pohlavia, etnicity aj krajiny.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 <p>Tu je nutné byť opatrný, pretože štúdia nebola nefrologická a pokušenie nadinterpretovať je veľké.</p>
 
 <ol>
-  <li><strong>Populácia bola renálne zdravá podľa návrhu.</strong> Vylučovacím kritériom bola glomerulová filtrácia pod 60 ml/min/1,73 m², takže nikto s CKD štádia 3 a vyššieho zaradený nebol. Výsledky nemožno prenášať na pacientov s pokročilou chorobou obličiek, a už vôbec nie na dialyzovaných, u ktorých by režim 800–900 kcal denne vyžadoval úplne inú úvahu o bielkovinách, kaliu a fosfátoch.</li>
+  <li><strong>Populácia bola renálne zdravá podľa návrhu.</strong> Vylučovacím kritériom bola glomerulová filtrácia pod 60&nbsp;ml/min/1,73&nbsp;m², takže nikto s CKD štádia 3 a vyššieho zaradený nebol. Výsledky nemožno prenášať na pacientov s pokročilou chorobou obličiek, a už vôbec nie na dialyzovaných, u ktorých by režim 800–900&nbsp;kcal denne vyžadoval úplne inú úvahu o bielkovinách, kaliu a fosfátoch.</li>
   <li><strong>Obličkové ukazovatele nie sú v dostupnom abstrakte ani v kongresovej správe uvedené.</strong> Dvadsaťštyri týždňov je príliš krátke obdobie na spoľahlivé posúdenie dlhodobej renálnej prognózy. Sklon eGFR je zástupný ukazovateľ; klinickým výsledkom je napríklad zlyhanie obličiek. Absencia rozdielu by preto neznamenala absenciu renálneho prínosu – a ani naopak.</li>
   <li><strong>Vysadenie antihypertenzív „v neprítomnosti albuminúrie“ je protokolový krok, nie odporúčanie do praxe.</strong> Prebiehal pod intenzívnym dohľadom s možnosťou opätovného nasadenia. Mimo štúdie platí, že albuminúria je indikáciou pre inhibítor ACE alebo sartan nezávisle od hodnoty tlaku a jeho vysadenie pri úbytku hmotnosti nie je samozrejmé.</li>
   <li><strong>Mechanizmus je však renálne relevantný.</strong> Mladý pacient so skorým DM2 je presne ten, u koho sa diabetická choroba obličiek za desaťročia rozvinie. Každý rok strávený v normoglykémii bez liekov znižuje kumulatívnu záťaž hyperglykémiou. To je epidemiologická úvaha, nie doložený výsledok – ale je to úvaha, ktorá dáva skorej intervencii zmysel.</li>
@@ -131,12 +131,12 @@ $articles[] = [
   <li><strong>Malá vzorka.</strong> Deväťdesiatšesť randomizovaných, dve udalosti v kontrolnej skupine – odtiaľ aj veľmi široký interval spoľahlivosti pomeru šancí.</li>
   <li><strong>Vysoká náročnosť intervencie.</strong> Dohľadované cvičenie dvakrát týždenne, koučovanie lekármi a dietológmi, náhrady jedál – organizačne a finančne náročné. Prenos do bežnej ambulantnej praxe je samostatný problém, ktorý štúdia nerieši.</li>
   <li><strong>Otvorený dizajn.</strong> Zaslepené bolo len hodnotenie ukazovateľov; očakávania účastníkov mohli ovplyvniť správanie aj ukazovatele kvality života.</li>
-  <li><strong>Prísna selekcia.</strong> Vek do 45 rokov, trvanie diabetu pod 6 rokov, bez inzulínu, bez cievneho ochorenia, bez CKD štádia 3 – teda najpriaznivejšia možná populácia. Čím dlhšie diabetes trvá, tým je remisia menej pravdepodobná.</li>
+  <li><strong>Prísna selekcia.</strong> Vek do 45&nbsp;rokov, trvanie diabetu pod 6&nbsp;rokov, bez inzulínu, bez cievneho ochorenia, bez CKD štádia 3 – teda najpriaznivejšia možná populácia. Čím dlhšie diabetes trvá, tým je remisia menej pravdepodobná.</li>
 </ul>
 
 <hr>
 
-<p><em>Text je určený zdravotníckym pracovníkom. Nenahrádza odborné posúdenie konkrétneho prípadu. Nízkoenergetický režim 800–900 kcal denne patrí pod lekársky a dietologický dohľad; u pacientov s chronickou chorobou obličiek, s liečbou inzulínom alebo derivátmi sulfonylurey a u tehotných alebo dojčiacich žien je bez úpravy nevhodný. Vysadenie antihypertenzív alebo antidiabetík je rozhodnutím ošetrujúceho lekára.</em></p>
+<p><em>Text je určený zdravotníckym pracovníkom. Nenahrádza odborné posúdenie konkrétneho prípadu. Nízkoenergetický režim 800–900&nbsp;kcal denne patrí pod lekársky a dietologický dohľad; u pacientov s chronickou chorobou obličiek, s liečbou inzulínom alebo derivátmi sulfonylurey a u tehotných alebo dojčiacich žien je bez úpravy nevhodný. Vysadenie antihypertenzív alebo antidiabetík je rozhodnutím ošetrujúceho lekára.</em></p>
 
 <h2>Literatúra</h2>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <p>Údaje o dizajne, populácii a primárnom ukazovateli pochádzajú zo štruktúrovaného abstraktu primárnej publikácie; kritériá zaradenia a vylúčenia vrátane renálneho z publikovaného protokolu (citácia 2); sekundárne a prieskumné ukazovatele z kongresovej správy z EASD 2026 (citácia 3). Bibliografické údaje boli overené cez Crossref, PubMed a Europe PMC k 17. októbru 2026. Plné znenie primárnej publikácie nebolo pri príprave tohto textu prístupné, preto sú sekundárne ukazovatele uvedené v rozsahu, v akom ich uvádza kongresová správa, a obličkové ukazovatele nie sú uvedené vôbec – namiesto toho, aby boli odhadnuté.</p>
 
-<p>Oproti bežným zhrnutiam tejto štúdie sú tu opravené alebo doplnené tieto veci. Práca <strong>nevyšla v časopise <em>The Lancet</em></strong>, ale v <em>The Lancet Regional Health – Americas</em>; zámena je rozšírená a mení váhu, ktorú čitateľ práci pripíše. Doplnená je presná veľkosť účinku vrátane absolútneho rozdielu 50 percentuálnych bodov a upraveného pomeru šancí 21,6 (95 % IS 6,2–114,5), spolu s upozornením, že pri dvoch udalostiach v kontrolnej skupine je spoľahlivejším vyjadrením absolútny rozdiel. Doplnené sú konkrétne kritériá vrátane renálneho (filtrácia pod 60 ml/min/1,73 m²), ktoré sú pre nefrologickú interpretáciu rozhodujúce. Uvedené je <strong>zúženie rozdielu v remisii hypertenzie medzi 12. a 24. týždňom</strong> (63 % oproti 13 % verzus 56 % oproti 27 %), ktoré zhrnutia spravidla vynechávajú, hoci práve ono rozlišuje prechodný účinok od trvalého. A napokon je doplnený rozsah nežiaducich udalostí – 43 z 50 účastníkov intervenčnej skupiny malo aspoň jednu – pretože formulácia „neboli závažné nežiaduce udalosti“ sama osebe vytvára nepravdivý dojem o znášanlivosti režimu.</p>
+<p>Oproti bežným zhrnutiam tejto štúdie sú tu opravené alebo doplnené tieto veci. Práca <strong>nevyšla v časopise <em>The Lancet</em></strong>, ale v <em>The Lancet Regional Health – Americas</em>; zámena je rozšírená a mení váhu, ktorú čitateľ práci pripíše. Doplnená je presná veľkosť účinku vrátane absolútneho rozdielu 50 percentuálnych bodov a upraveného pomeru šancí 21,6 (95 % IS 6,2–114,5), spolu s upozornením, že pri dvoch udalostiach v kontrolnej skupine je spoľahlivejším vyjadrením absolútny rozdiel. Doplnené sú konkrétne kritériá vrátane renálneho (filtrácia pod 60&nbsp;ml/min/1,73&nbsp;m²), ktoré sú pre nefrologickú interpretáciu rozhodujúce. Uvedené je <strong>zúženie rozdielu v remisii hypertenzie medzi 12. a 24. týždňom</strong> (63 % oproti 13 % verzus 56 % oproti 27 %), ktoré zhrnutia spravidla vynechávajú, hoci práve ono rozlišuje prechodný účinok od trvalého. A napokon je doplnený rozsah nežiaducich udalostí – 43 z 50 účastníkov intervenčnej skupiny malo aspoň jednu – pretože formulácia „neboli závažné nežiaduce udalosti“ sama osebe vytvára nepravdivý dojem o znášanlivosti režimu.</p>
 
 <h3>Súvisiace články</h3>
 

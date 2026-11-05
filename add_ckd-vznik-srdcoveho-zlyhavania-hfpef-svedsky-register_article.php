@@ -47,7 +47,7 @@ $articles[] = [
 <ul>
   <li>zaradení boli pacienti s <strong>prvou diagnózou srdcového zlyhávania</strong> v rokoch <strong>2005 až 2021</strong>;</li>
   <li>ku každému pacientovi bola priradená jedna kontrola bez srdcového zlyhávania, párovaná podľa <strong>pohlavia, roku narodenia a okresu</strong>;</li>
-  <li>analyzovaných bolo <strong>51 848 pacientov a 51 848 kontrol</strong>;</li>
+  <li>analyzovaných bolo <strong>51&nbsp;848 pacientov a 51&nbsp;848 kontrol</strong>;</li>
   <li>zastúpenie fenotypov: <strong>20 % HFpEF, 23 % HFmrEF, 57 % HFrEF</strong>.</li>
 </ul>
 
@@ -55,10 +55,10 @@ $articles[] = [
 
 <ol>
   <li>podľa <strong>kódov MKCH-10</strong> – a to <em>u pacientov aj u kontrol</em>;</li>
-  <li>podľa <strong>eGFR pod 60 ml/min/1,73 m²</strong> – ale <em>iba u pacientov so srdcovým zlyhávaním</em>.</li>
+  <li>podľa <strong>eGFR pod 60&nbsp;ml/min/1,73&nbsp;m²</strong> – ale <em>iba u pacientov so srdcovým zlyhávaním</em>.</li>
 </ol>
 
-<p>V analýzach založených na eGFR bola renálna funkcia ďalej členená podľa kategórií KDIGO: G2 (60–89), G3a (45–59), G3b (30–44), G4 (15–29) a G5 (pod 15 ml/min/1,73 m²), pričom G2 slúžila ako referencia.</p>
+<p>V analýzach založených na eGFR bola renálna funkcia ďalej členená podľa kategórií KDIGO: G2 (60–89), G3a (45–59), G3b (30–44), G4 (15–29) a G5 (pod 15&nbsp;ml/min/1,73&nbsp;m²), pričom G2 slúžila ako referencia.</p>
 
 <h2>Hlavné výsledky</h2>
 
@@ -137,8 +137,8 @@ $articles[] = [
 <p>Kategorizácia podľa eGFR sa v praxi často zamieňa za diagnózu. Platí pritom:</p>
 
 <ul>
-  <li><strong>eGFR 60 až 89 ml/min/1,73 m² sama osebe nie je chronickou chorobou obličiek.</strong> Kategória G2 predstavuje CKD len pri súčasnej prítomnosti ďalšieho markera poškodenia – albuminúrie, patologického močového sedimentu, štruktúrnej odchýlky, histologicky preukázaného poškodenia alebo stavu po transplantácii obličky.</li>
-  <li><strong>Ani jednorazová eGFR pod 60 ml/min/1,73 m² diagnózu nepotvrdzuje.</strong> Chronickosť sa preukazuje trvaním odchýlky najmenej tri mesiace, ak nie je chronický charakter zrejmý z iných údajov.</li>
+  <li><strong>eGFR 60 až 89&nbsp;ml/min/1,73&nbsp;m² sama osebe nie je chronickou chorobou obličiek.</strong> Kategória G2 predstavuje CKD len pri súčasnej prítomnosti ďalšieho markera poškodenia – albuminúrie, patologického močového sedimentu, štruktúrnej odchýlky, histologicky preukázaného poškodenia alebo stavu po transplantácii obličky.</li>
+  <li><strong>Ani jednorazová eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² diagnózu nepotvrdzuje.</strong> Chronickosť sa preukazuje trvaním odchýlky najmenej tri mesiace, ak nie je chronický charakter zrejmý z iných údajov.</li>
 </ul>
 
 <p>Označenia „mierna“ alebo „pokročilá“ CKD založené len na jednej hodnote eGFR preto treba čítať opatrne. V registrových analýzach ide o pragmatickú, nie diagnostickú kategorizáciu.</p>
@@ -225,7 +225,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>How Declining Renal Health Shapes Heart Failure.</em> 2026. <a href="https://www.medscape.com/viewarticle/how-declining-renal-health-shapes-heart-failure-2026a1000paq" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a <strong>kompletné autorstvo</strong> primárnej štúdie boli overené v Europe PMC (ESC Heart Failure 2026;13(4):xvag196, PMID 42471242). Proti doslovnému zneniu abstraktu boli overené aj tieto údaje: obdobie 2005 – 2021, párovanie 1 : 1 podľa pohlavia, roku narodenia a okresu, 51 848 pacientov a 51 848 kontrol, zastúpenie fenotypov 20 % HFpEF / 23 % HFmrEF / 57 % HFrEF, obidve definície CKD vrátane toho, že definícia podľa eGFR sa vzťahovala <strong>len na pacientov so srdcovým zlyhávaním</strong>, kategórie KDIGO G2 – G5, pomery šancí 2,46 (HFpEF), 1,30 (HFmrEF) a 1,52 (HFrEF), hodnota <strong>P pre interakciu = 0,001</strong>, údaj o 8 % vyššej pravdepodobnosti HFpEF oproti HFrEF pri definícii podľa eGFR a odstupňovanie podľa kategórií KDIGO. Plný text práce nebol sprístupnený, preto <strong>intervaly spoľahlivosti pre jednotlivé fenotypy, celkový pomer šancí, medián veku ani podiel mužov nie sú v tomto článku uvádzané</strong> – v abstrakte sa nenachádzajú a hodnoty kolujúce v sekundárnom spravodajstve som nemohol overiť. Výklad rozdielu medzi porovnaním voči kontrolám a porovnaním vnútri súboru pacientov, poznámka o diferenciálnom zachytení diagnózy kódmi MKCH-10, terminologická časť o kritériách CKD, patofyziologické vysvetlenia a praktické odporúčania sú <strong>vlastným odborným spracovaním</strong>, nie zisteniami štúdie.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a <strong>kompletné autorstvo</strong> primárnej štúdie boli overené v Europe PMC (ESC Heart Failure 2026;13(4):xvag196, PMID 42471242). Proti doslovnému zneniu abstraktu boli overené aj tieto údaje: obdobie 2005 – 2021, párovanie 1 : 1 podľa pohlavia, roku narodenia a okresu, 51&nbsp;848 pacientov a 51&nbsp;848 kontrol, zastúpenie fenotypov 20 % HFpEF / 23 % HFmrEF / 57 % HFrEF, obidve definície CKD vrátane toho, že definícia podľa eGFR sa vzťahovala <strong>len na pacientov so srdcovým zlyhávaním</strong>, kategórie KDIGO G2 – G5, pomery šancí 2,46 (HFpEF), 1,30 (HFmrEF) a 1,52 (HFrEF), hodnota <strong>P pre interakciu = 0,001</strong>, údaj o 8 % vyššej pravdepodobnosti HFpEF oproti HFrEF pri definícii podľa eGFR a odstupňovanie podľa kategórií KDIGO. Plný text práce nebol sprístupnený, preto <strong>intervaly spoľahlivosti pre jednotlivé fenotypy, celkový pomer šancí, medián veku ani podiel mužov nie sú v tomto článku uvádzané</strong> – v abstrakte sa nenachádzajú a hodnoty kolujúce v sekundárnom spravodajstve som nemohol overiť. Výklad rozdielu medzi porovnaním voči kontrolám a porovnaním vnútri súboru pacientov, poznámka o diferenciálnom zachytení diagnózy kódmi MKCH-10, terminologická časť o kritériách CKD, patofyziologické vysvetlenia a praktické odporúčania sú <strong>vlastným odborným spracovaním</strong>, nie zisteniami štúdie.</em></p>
 HTML,
 ];
 

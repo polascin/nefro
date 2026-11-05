@@ -318,7 +318,7 @@ $modeLabel = $includeSensitive
                 <div>Generované: <?= htmlspecialchars($nowHuman) ?></div>
             </div>
         </div>
-        
+
         <div class="print-layout-tbody">
             <main id="main-notice-content" class="container admin-notice-container" role="main">
         <div class="auth-container auth-container--wide admin-notice-card">
@@ -427,7 +427,7 @@ $modeLabel = $includeSensitive
         </div>
     </main>
     </div> <!-- end print-layout-tbody -->
-    
+
     <div class="print-layout-tfoot">
         <div class="admin-print-footer print-only">
             <span>Nefro - Zoznam používateľov</span>

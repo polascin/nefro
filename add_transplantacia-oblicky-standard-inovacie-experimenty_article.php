@@ -120,7 +120,7 @@ $articles[] = [
 
 <h3>Lokálna inhibícia komplementu</h3>
 
-<p>Randomizovaná dvojito zaslepená pilotná štúdia z roku 2025 podala počas prípravy orgánu 500 jednotiek inhibítora C1 esterázy do renálnej artérie 20 obličiek; 20 kontrolných orgánov dostalo fyziologický roztok. Liečba <strong>neznížila DGF</strong>. Medián eGFR bol vyšší v liečenej skupine po 6 mesiacoch (55 oproti 39 ml/min/1,73 m²) aj po 30 mesiacoch (54 oproti 43 ml/min/1,73 m²).</p>
+<p>Randomizovaná dvojito zaslepená pilotná štúdia z roku 2025 podala počas prípravy orgánu 500 jednotiek inhibítora C1 esterázy do renálnej artérie 20 obličiek; 20 kontrolných orgánov dostalo fyziologický roztok. Liečba <strong>neznížila DGF</strong>. Medián eGFR bol vyšší v liečenej skupine po 6 mesiacoch (55 oproti 39&nbsp;ml/min/1,73&nbsp;m²) aj po 30 mesiacoch (54 oproti 43&nbsp;ml/min/1,73&nbsp;m²).</p>
 
 <p>Ide o zaujímavý signál, ale malé počty, viacnásobné hodnotenia a neprítomnosť účinku na hlavný skorý klinický problém neumožňujú rutinné použitie. Autori navyše uvádzajú patentové a finančné väzby súvisiace s týmto prístupom. Potrebná je väčšia nezávislá potvrdzujúca štúdia.</p>
 

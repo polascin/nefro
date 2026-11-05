@@ -38,7 +38,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Inhibícia RAS</strong> (inhibítor ACE alebo sartan) zostáva základom liečby albuminurickej CKD. Podáva sa v najvyššej schválenej dávke, ktorú pacient znáša. Kombinácia inhibítora ACE so sartanom alebo s priamym inhibítorom renínu sa neodporúča.</li>
-  <li><strong>Inhibítor SGLT2</strong> odporúča KDIGO 2024 pri diabete 2. typu a CKD s eGFR ≥ 20 ml/min/1,73 m², pri CKD s UACR ≥ 200 mg/g a pri srdcovom zlyhávaní bez ohľadu na albuminúriu, teda aj u pacientov bez diabetu.</li>
+  <li><strong>Inhibítor SGLT2</strong> odporúča KDIGO 2024 pri diabete 2. typu a CKD s eGFR ≥ 20&nbsp;ml/min/1,73&nbsp;m², pri CKD s UACR ≥ 200&nbsp;mg/g a pri srdcovom zlyhávaní bez ohľadu na albuminúriu, teda aj u pacientov bez diabetu.</li>
   <li><strong>Finerenón</strong> má výsledkové dôkazy pri CKD s diabetom 2. typu a pretrvávajúcou albuminúriou napriek inhibícii RAS. V Európskej únii je k 3. novembru 2026 schválený na liečbu CKD s albuminúriou spojenej s diabetom 2. typu a symptomatického srdcového zlyhávania s ejekčnou frakciou ľavej komory ≥ 40 %.</li>
   <li><strong>CONFIDENCE</strong> ukázala, že pri súčasnom začatí finerenónu a empagliflozínu klesla albuminúria po 180 dňoch výraznejšie než pri ktoromkoľvek lieku samostatne. Ide o náhradný ukazovateľ, nie o porovnanie so sekvenčným postupom.</li>
   <li><strong>FIND-CKD</strong> priniesla údaje zo štúdie 3. fázy, podľa ktorých finerenón spomaľuje pokles eGFR aj pri CKD bez diabetu. Táto indikácia však zatiaľ nie je schválená ani v EÚ, ani v USA.</li>
@@ -68,25 +68,25 @@ $articles[] = [
       <th scope="row">Inhibítor ACE alebo sartan</th>
       <td>Albuminúria A2 alebo A3 pri diabete (1B); A3 bez diabetu (1B); A2 bez diabetu (2C)</td>
       <td>Titrovať na najvyššiu schválenú dávku, ktorú pacient znáša</td>
-      <td>Krvný tlak, kreatinín a draslík do 2 až 4 týždňov; vzostup kreatinínu do 30 % nie je dôvodom na vysadenie; hyperkaliémiu najprv liečiť</td>
+      <td>Krvný tlak, kreatinín a draslík do 2 až 4&nbsp;týždňov; vzostup kreatinínu do 30 % nie je dôvodom na vysadenie; hyperkaliémiu najprv liečiť</td>
     </tr>
     <tr>
       <th scope="row">Inhibítor SGLT2</th>
-      <td>Diabetes 2. typu a CKD pri eGFR ≥ 20 (1A); CKD pri eGFR ≥ 20 a UACR ≥ 200 mg/g alebo pri srdcovom zlyhávaní (1A); eGFR 20 až 45 a UACR &lt; 200 mg/g (2B)</td>
+      <td>Diabetes 2. typu a CKD pri eGFR ≥ 20 (1A); CKD pri eGFR ≥ 20 a UACR ≥ 200&nbsp;mg/g alebo pri srdcovom zlyhávaní (1A); eGFR 20 až 45 a UACR &lt; 200&nbsp;mg/g (2B)</td>
       <td>Pri eGFR ≥ 20; po začatí pokračovať aj pod touto hranicou</td>
       <td>Počiatočný pokles eGFR nie je dôvodom na ukončenie; posúdiť objemový stav a diuretiká; prechodne vysadiť pri dlhšom hladovaní, operácii alebo závažnom akútnom ochorení</td>
     </tr>
     <tr>
       <th scope="row">Finerenón</th>
-      <td>Diabetes 2. typu, eGFR &gt; 25, normálny draslík a albuminúria &gt; 30 mg/g napriek maximálnej tolerovanej dávke inhibítora RAS (2A)</td>
-      <td>Pri draslíku ≤ 4,8 mmol/l: 10 mg denne pri eGFR 25 až 59, 20 mg denne pri eGFR ≥ 60</td>
-      <td>Draslík po mesiaci, potom každé 4 mesiace; pri draslíku &gt; 5,5 mmol/l liečbu prerušiť; overiť liekové interakcie, najmä so silnými inhibítormi CYP3A4</td>
+      <td>Diabetes 2. typu, eGFR &gt; 25, normálny draslík a albuminúria &gt; 30&nbsp;mg/g napriek maximálnej tolerovanej dávke inhibítora RAS (2A)</td>
+      <td>Pri draslíku ≤ 4,8&nbsp;mmol/l: 10&nbsp;mg denne pri eGFR 25 až 59, 20&nbsp;mg denne pri eGFR ≥ 60</td>
+      <td>Draslík po mesiaci, potom každé 4&nbsp;mesiace; pri draslíku &gt; 5,5&nbsp;mmol/l liečbu prerušiť; overiť liekové interakcie, najmä so silnými inhibítormi CYP3A4</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p><small>eGFR je uvedená v ml/min/1,73 m². V zátvorke je sila odporúčania a kvalita dôkazov podľa KDIGO 2024.</small></p>
+<p><small>eGFR je uvedená v ml/min/1,73&nbsp;m². V zátvorke je sila odporúčania a kvalita dôkazov podľa KDIGO 2024.</small></p>
 
 <h2>Inhibícia RAS zostáva základom pri albuminúrii</h2>
 
@@ -94,41 +94,41 @@ $articles[] = [
 
 <p>Inhibítor RAS sa má podávať v najvyššej schválenej dávke, ktorú pacient znáša, pretože prínos sa v štúdiách preukázal práve pri takých dávkach. Akúkoľvek kombináciu inhibítora ACE, sartanu a priameho inhibítora renínu KDIGO odporúča nepoužívať (1B): zvyšuje riziko hyperkaliémie a akútneho poškodenia obličiek bez preukázaného obličkového prínosu.</p>
 
-<p>Krvný tlak, sérový kreatinín a draslík sa majú skontrolovať do 2 až 4 týždňov od začatia liečby alebo zvýšenia dávky. Vzostup kreatinínu do 30 % v tomto období zvyčajne odráža očakávanú hemodynamickú zmenu a podľa KDIGO nie je dôvodom na ukončenie liečby. Pri väčšom vzostupe treba posúdiť objemový stav, súbežné lieky, napríklad nesteroidové antiflogistiká a diuretiká, a možnú stenózu renálnej artérie. Hyperkaliémiu spojenú s inhibíciou RAS treba podľa možností riešiť opatreniami na zníženie draslíka, nie automaticky znížením dávky alebo vysadením lieku. V liečbe sa pokračuje aj vtedy, keď eGFR klesne pod 30 ml/min/1,73 m².</p>
+<p>Krvný tlak, sérový kreatinín a draslík sa majú skontrolovať do 2 až 4&nbsp;týždňov od začatia liečby alebo zvýšenia dávky. Vzostup kreatinínu do 30 % v tomto období zvyčajne odráža očakávanú hemodynamickú zmenu a podľa KDIGO nie je dôvodom na ukončenie liečby. Pri väčšom vzostupe treba posúdiť objemový stav, súbežné lieky, napríklad nesteroidové antiflogistiká a diuretiká, a možnú stenózu renálnej artérie. Hyperkaliémiu spojenú s inhibíciou RAS treba podľa možností riešiť opatreniami na zníženie draslíka, nie automaticky znížením dávky alebo vysadením lieku. V liečbe sa pokračuje aj vtedy, keď eGFR klesne pod 30&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <h2>Inhibítory SGLT2: ochrana obličiek aj bez diabetu</h2>
 
-<p>KDIGO 2024 odporúča inhibítor SGLT2 všetkým pacientom s diabetom 2. typu a CKD pri eGFR ≥ 20 ml/min/1,73 m² (1A). U dospelých s CKD bez ohľadu na diabetes ho odporúča pri eGFR ≥ 20 ml/min/1,73 m² a UACR ≥ 200 mg/g (≥ 20 mg/mmol), ako aj pri srdcovom zlyhávaní bez ohľadu na albuminúriu (1A). Pri eGFR 20 až 45 ml/min/1,73 m² a UACR pod 200 mg/g ide o slabšie odporúčanie (2B). Odporúčanie sa teda netýka iba diabetickej choroby obličiek.</p>
+<p>KDIGO 2024 odporúča inhibítor SGLT2 všetkým pacientom s diabetom 2. typu a CKD pri eGFR ≥ 20&nbsp;ml/min/1,73&nbsp;m² (1A). U dospelých s CKD bez ohľadu na diabetes ho odporúča pri eGFR ≥ 20&nbsp;ml/min/1,73&nbsp;m² a UACR ≥ 200&nbsp;mg/g (≥ 20&nbsp;mg/mmol), ako aj pri srdcovom zlyhávaní bez ohľadu na albuminúriu (1A). Pri eGFR 20 až 45&nbsp;ml/min/1,73&nbsp;m² a UACR pod 200&nbsp;mg/g ide o slabšie odporúčanie (2B). Odporúčanie sa teda netýka iba diabetickej choroby obličiek.</p>
 
-<p>Prínos u pacientov bez diabetu potvrdili veľké randomizované štúdie. V štúdii <a href="https://doi.org/10.1056/NEJMoa2204233" target="_blank" rel="noopener noreferrer">EMPA-KIDNEY</a> so 6 609 pacientmi, ktorí mali eGFR 20 až menej než 45 ml/min/1,73 m² alebo eGFR 45 až menej než 90 ml/min/1,73 m² s UACR ≥ 200 mg/g, znížil empagliflozín riziko progresie ochorenia obličiek alebo úmrtia z kardiovaskulárnych príčin o 28 % (HR 0,72; 95 % IS 0,64 až 0,82). Výsledky boli konzistentné u pacientov s diabetom aj bez neho.</p>
+<p>Prínos u pacientov bez diabetu potvrdili veľké randomizované štúdie. V štúdii <a href="https://doi.org/10.1056/NEJMoa2204233" target="_blank" rel="noopener noreferrer">EMPA-KIDNEY</a> so 6&nbsp;609 pacientmi, ktorí mali eGFR 20 až menej než 45&nbsp;ml/min/1,73&nbsp;m² alebo eGFR 45 až menej než 90&nbsp;ml/min/1,73&nbsp;m² s UACR ≥ 200&nbsp;mg/g, znížil empagliflozín riziko progresie ochorenia obličiek alebo úmrtia z kardiovaskulárnych príčin o 28 % (HR 0,72; 95 % IS 0,64 až 0,82). Výsledky boli konzistentné u pacientov s diabetom aj bez neho.</p>
 
-<p><a href="https://doi.org/10.1001/jama.2025.20834" target="_blank" rel="noopener noreferrer">Metaanalýza konzorcia SMART-C</a> z januára 2026 zhrnula 10 randomizovaných štúdií so 70 361 účastníkmi s diabetom 2. typu, CKD alebo srdcovým zlyhávaním. Inhibítory SGLT2 znížili riziko progresie CKD (HR 0,62; 95 % IS 0,57 až 0,68), a to bez ohľadu na východiskovú eGFR aj albuminúriu: pri eGFR pod 30 ml/min/1,73 m² bol HR 0,71 a pri UACR ≤ 30 mg/g 0,58. Ročný pokles eGFR spomalili vo všetkých podskupinách podľa eGFR a UACR, a to aj pri samostatnej analýze účastníkov s diabetom a bez neho.</p>
+<p><a href="https://doi.org/10.1001/jama.2025.20834" target="_blank" rel="noopener noreferrer">Metaanalýza konzorcia SMART-C</a> z januára 2026 zhrnula 10 randomizovaných štúdií so 70&nbsp;361 účastníkmi s diabetom 2. typu, CKD alebo srdcovým zlyhávaním. Inhibítory SGLT2 znížili riziko progresie CKD (HR 0,62; 95 % IS 0,57 až 0,68), a to bez ohľadu na východiskovú eGFR aj albuminúriu: pri eGFR pod 30&nbsp;ml/min/1,73&nbsp;m² bol HR 0,71 a pri UACR ≤ 30&nbsp;mg/g 0,58. Ročný pokles eGFR spomalili vo všetkých podskupinách podľa eGFR a UACR, a to aj pri samostatnej analýze účastníkov s diabetom a bez neho.</p>
 
-<p>Relatívny prínos je teda podobný v celom spektre funkcie obličiek. Absolútny prínos však závisí od východiskového rizika, ktoré je pri nízkej albuminúrii menšie. Pri CKD bez diabetu a bez srdcového zlyhávania, s UACR pod 200 mg/g a eGFR nad 45 ml/min/1,73 m², KDIGO 2024 inhibítor SGLT2 výslovne neodporúča; v takej situácii ide o individuálne rozhodnutie.</p>
+<p>Relatívny prínos je teda podobný v celom spektre funkcie obličiek. Absolútny prínos však závisí od východiskového rizika, ktoré je pri nízkej albuminúrii menšie. Pri CKD bez diabetu a bez srdcového zlyhávania, s UACR pod 200&nbsp;mg/g a eGFR nad 45&nbsp;ml/min/1,73&nbsp;m², KDIGO 2024 inhibítor SGLT2 výslovne neodporúča; v takej situácii ide o individuálne rozhodnutie.</p>
 
-<p>Po nasadení inhibítora SGLT2 sa často objaví počiatočný, prevažne reverzibilný pokles eGFR. Podľa KDIGO nie je dôvodom na ukončenie liečby a nevyžaduje častejšie kontroly CKD. Ak sa liečba začala, je rozumné pokračovať v nej aj pri poklese eGFR pod 20 ml/min/1,73 m², pokiaľ ju pacient znáša a nezačala sa náhrada funkcie obličiek. Pri nasadení treba posúdiť objemový stav, krvný tlak a dávku diuretík, pri súbežnej liečbe inzulínom alebo derivátom sulfonylurey aj riziko hypoglykémie. Pacient má vedieť, že pri dlhšom hladovaní, operácii alebo závažnom akútnom ochorení sa liek prechodne vysadzuje pre riziko ketózy; ketoacidóza je zriedkavá a týka sa najmä pacientov s diabetom. Patrí sem aj poučenie o genitálnych mykotických infekciách.</p>
+<p>Po nasadení inhibítora SGLT2 sa často objaví počiatočný, prevažne reverzibilný pokles eGFR. Podľa KDIGO nie je dôvodom na ukončenie liečby a nevyžaduje častejšie kontroly CKD. Ak sa liečba začala, je rozumné pokračovať v nej aj pri poklese eGFR pod 20&nbsp;ml/min/1,73&nbsp;m², pokiaľ ju pacient znáša a nezačala sa náhrada funkcie obličiek. Pri nasadení treba posúdiť objemový stav, krvný tlak a dávku diuretík, pri súbežnej liečbe inzulínom alebo derivátom sulfonylurey aj riziko hypoglykémie. Pacient má vedieť, že pri dlhšom hladovaní, operácii alebo závažnom akútnom ochorení sa liek prechodne vysadzuje pre riziko ketózy; ketoacidóza je zriedkavá a týka sa najmä pacientov s diabetom. Patrí sem aj poučenie o genitálnych mykotických infekciách.</p>
 
 <h2>Finerenón: pevné dôkazy pri diabete 2. typu, nové údaje bez diabetu</h2>
 
-<p>Finerenón znížil výskyt obličkových aj kardiovaskulárnych príhod u pacientov s CKD a diabetom 2. typu v štúdiách 3. fázy <a href="https://doi.org/10.1056/NEJMoa2025845" target="_blank" rel="noopener noreferrer">FIDELIO-DKD</a> a <a href="https://doi.org/10.1056/NEJMoa2110956" target="_blank" rel="noopener noreferrer">FIGARO-DKD</a>. KDIGO 2024 ho navrhuje (2A) dospelým s diabetom 2. typu, eGFR &gt; 25 ml/min/1,73 m², normálnym sérovým draslíkom a albuminúriou &gt; 30 mg/g napriek maximálnej tolerovanej dávke inhibítora RAS. Nesteroidný MRA možno pridať k inhibítoru RAS aj k inhibítoru SGLT2.</p>
+<p>Finerenón znížil výskyt obličkových aj kardiovaskulárnych príhod u pacientov s CKD a diabetom 2. typu v štúdiách 3. fázy <a href="https://doi.org/10.1056/NEJMoa2025845" target="_blank" rel="noopener noreferrer">FIDELIO-DKD</a> a <a href="https://doi.org/10.1056/NEJMoa2110956" target="_blank" rel="noopener noreferrer">FIGARO-DKD</a>. KDIGO 2024 ho navrhuje (2A) dospelým s diabetom 2. typu, eGFR &gt; 25&nbsp;ml/min/1,73&nbsp;m², normálnym sérovým draslíkom a albuminúriou &gt; 30&nbsp;mg/g napriek maximálnej tolerovanej dávke inhibítora RAS. Nesteroidný MRA možno pridať k inhibítoru RAS aj k inhibítoru SGLT2.</p>
 
-<p>Pri začatí rozhoduje draslík. Podľa schémy KDIGO sa finerenón začína pri draslíku ≤ 4,8 mmol/l dávkou 10 mg denne pri eGFR 25 až 59 ml/min/1,73 m² alebo 20 mg denne pri eGFR ≥ 60 ml/min/1,73 m². Draslík sa kontroluje po mesiaci a potom každé 4 mesiace; ak zostáva ≤ 4,8 mmol/l, dávka 10 mg sa zvyšuje na 20 mg. Pri hodnote nad 5,5 mmol/l sa liečba preruší a opätovne ju možno začať, keď draslík klesne na ≤ 5,0 mmol/l. Podľa <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/kerendia" target="_blank" rel="noopener noreferrer">európskych informácií o lieku</a> sa finerenón nezačína pri draslíku nad 5,0 mmol/l; pri hodnotách nad 4,8 až 5,0 mmol/l možno začatie zvážiť s dodatočnou kontrolou draslíka. Dávkovanie, liekové interakcie vrátane kontraindikácie súbežného podávania silných inhibítorov CYP3A4 a ostatné kontraindikácie treba overiť v aktuálnom súhrne charakteristických vlastností lieku.</p>
+<p>Pri začatí rozhoduje draslík. Podľa schémy KDIGO sa finerenón začína pri draslíku ≤ 4,8&nbsp;mmol/l dávkou 10&nbsp;mg denne pri eGFR 25 až 59&nbsp;ml/min/1,73&nbsp;m² alebo 20&nbsp;mg denne pri eGFR ≥ 60&nbsp;ml/min/1,73&nbsp;m². Draslík sa kontroluje po mesiaci a potom každé 4&nbsp;mesiace; ak zostáva ≤ 4,8&nbsp;mmol/l, dávka 10&nbsp;mg sa zvyšuje na 20&nbsp;mg. Pri hodnote nad 5,5&nbsp;mmol/l sa liečba preruší a opätovne ju možno začať, keď draslík klesne na ≤ 5,0&nbsp;mmol/l. Podľa <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/kerendia" target="_blank" rel="noopener noreferrer">európskych informácií o lieku</a> sa finerenón nezačína pri draslíku nad 5,0&nbsp;mmol/l; pri hodnotách nad 4,8 až 5,0&nbsp;mmol/l možno začatie zvážiť s dodatočnou kontrolou draslíka. Dávkovanie, liekové interakcie vrátane kontraindikácie súbežného podávania silných inhibítorov CYP3A4 a ostatné kontraindikácie treba overiť v aktuálnom súhrne charakteristických vlastností lieku.</p>
 
 <h3>CONFIDENCE: súčasné začatie s empagliflozínom</h3>
 
-<p>Randomizovaná štúdia <a href="https://doi.org/10.1056/NEJMoa2410659" target="_blank" rel="noopener noreferrer">CONFIDENCE</a> zaradila dospelých s diabetom 2. typu, eGFR 30 až 90 ml/min/1,73 m² a UACR 100 až 5 000 mg/g, ktorí už užívali inhibítor RAS. Porovnala súčasné začatie finerenónu a empagliflozínu s každým liekom podávaným samostatne. Po 180 dňoch klesol UACR pri kombinácii o 29 % viac než pri samotnom finerenóne a o 32 % viac než pri samotnom empagliflozíne (pomer zmien oproti východiskovej hodnote 0,71 a 0,68; v oboch prípadoch p &lt; 0,001). Symptomatická hypotenzia, akútne poškodenie obličiek a hyperkaliémia vedúca k ukončeniu liečby boli zriedkavé.</p>
+<p>Randomizovaná štúdia <a href="https://doi.org/10.1056/NEJMoa2410659" target="_blank" rel="noopener noreferrer">CONFIDENCE</a> zaradila dospelých s diabetom 2. typu, eGFR 30 až 90&nbsp;ml/min/1,73&nbsp;m² a UACR 100 až 5&nbsp;000&nbsp;mg/g, ktorí už užívali inhibítor RAS. Porovnala súčasné začatie finerenónu a empagliflozínu s každým liekom podávaným samostatne. Po 180 dňoch klesol UACR pri kombinácii o 29 % viac než pri samotnom finerenóne a o 32 % viac než pri samotnom empagliflozíne (pomer zmien oproti východiskovej hodnote 0,71 a 0,68; v oboch prípadoch p &lt; 0,001). Symptomatická hypotenzia, akútne poškodenie obličiek a hyperkaliémia vedúca k ukončeniu liečby boli zriedkavé.</p>
 
-<p>UACR je však náhradný ukazovateľ a 180 dní je krátke obdobie. Štúdia neporovnávala súčasné a postupné zavádzanie liečby a nebola navrhnutá na hodnotenie zlyhania obličiek ani úmrtnosti. Výsledky podporujú aditívny účinok kombinácie na albuminúriu a jej krátkodobú bezpečnosť, nie povinnosť začínať oba lieky naraz. <a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy ADA 2026</a> to vyjadrujú opatrne: súčasné začatie inhibítora SGLT2 a finerenónu „možno zvážiť“ u dospelých s diabetom 2. typu, UACR ≥ 100 mg/g, eGFR 30 až 90 ml/min/1,73 m² a liečbou inhibítorom RAS.</p>
+<p>UACR je však náhradný ukazovateľ a 180&nbsp;dní je krátke obdobie. Štúdia neporovnávala súčasné a postupné zavádzanie liečby a nebola navrhnutá na hodnotenie zlyhania obličiek ani úmrtnosti. Výsledky podporujú aditívny účinok kombinácie na albuminúriu a jej krátkodobú bezpečnosť, nie povinnosť začínať oba lieky naraz. <a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy ADA 2026</a> to vyjadrujú opatrne: súčasné začatie inhibítora SGLT2 a finerenónu „možno zvážiť“ u dospelých s diabetom 2. typu, UACR ≥ 100&nbsp;mg/g, eGFR 30 až 90&nbsp;ml/min/1,73&nbsp;m² a liečbou inhibítorom RAS.</p>
 
 <h3>FIND-CKD: finerenón pri CKD bez diabetu</h3>
 
-<p><a href="https://doi.org/10.1056/NEJMoa2604625" target="_blank" rel="noopener noreferrer">FIND-CKD</a> bola dvojito zaslepená, placebom kontrolovaná štúdia 3. fázy s 1 584 dospelými bez diabetu, ktorí mali eGFR 25 až menej než 90 ml/min/1,73 m², UACR 200 až 3 500 mg/g a užívali inhibítor RAS. Finerenón spomalil priemerný ročný pokles eGFR počas 32 mesiacov: −3,3 oproti −4,0 ml/min/1,73 m² za rok, s rozdielom 0,7 ml/min/1,73 m² za rok (95 % IS 0,3 až 1,1). Hierarchicky testovaný zložený obličkovo-kardiovaskulárny ukazovateľ sa pri finerenóne vyskytoval zriedkavejšie (HR 0,77; 95 % IS 0,60 až 0,99). Intervaly spoľahlivosti pre samostatnú obličkovú zložku (HR 0,78) a kardiovaskulárnu zložku (HR 0,60) však zahŕňali nulový účinok. Hyperkaliémia sa vyskytla u 17,0 % oproti 13,3 % pacientov a k ukončeniu liečby viedla u 1,5 % oproti 0,1 %.</p>
+<p><a href="https://doi.org/10.1056/NEJMoa2604625" target="_blank" rel="noopener noreferrer">FIND-CKD</a> bola dvojito zaslepená, placebom kontrolovaná štúdia 3. fázy s 1&nbsp;584 dospelými bez diabetu, ktorí mali eGFR 25 až menej než 90&nbsp;ml/min/1,73&nbsp;m², UACR 200 až 3&nbsp;500&nbsp;mg/g a užívali inhibítor RAS. Finerenón spomalil priemerný ročný pokles eGFR počas 32&nbsp;mesiacov: −3,3 oproti −4,0&nbsp;ml/min/1,73&nbsp;m² za rok, s rozdielom 0,7&nbsp;ml/min/1,73&nbsp;m² za rok (95 % IS 0,3 až 1,1). Hierarchicky testovaný zložený obličkovo-kardiovaskulárny ukazovateľ sa pri finerenóne vyskytoval zriedkavejšie (HR 0,77; 95 % IS 0,60 až 0,99). Intervaly spoľahlivosti pre samostatnú obličkovú zložku (HR 0,78) a kardiovaskulárnu zložku (HR 0,60) však zahŕňali nulový účinok. Hyperkaliémia sa vyskytla u 17,0 % oproti 13,3 % pacientov a k ukončeniu liečby viedla u 1,5 % oproti 0,1 %.</p>
 
 <p>Inhibítor SGLT2 užívalo na začiatku štúdie len približne 17 % účastníkov. Veľkosť dodatočného prínosu finerenónu u pacienta, ktorý už užíva inhibítor RAS aj inhibítor SGLT2, preto nie je presne známa. Podľa tlačovej správy výrobcu zo 7. októbra 2026 prijal americký úrad FDA na posúdenie žiadosť o rozšírenie indikácie na CKD bez diabetu; k 3. novembru 2026 však táto indikácia nie je schválená v USA ani v EÚ. Výsledok jednej štúdie automaticky nemení schválené indikácie ani klinické odporúčania. Použitie mimo schválenú indikáciu vyžaduje individuálne zdôvodnenie a overenie aktuálneho regulačného aj úhradového stavu.</p>
 
 <h3>Glomerulové ochorenia</h3>
 
-<p>Prespecifikovaná exploračná <a href="https://doi.org/10.1001/jama.2026.9923" target="_blank" rel="noopener noreferrer">analýza štúdie FIND-CKD</a> sa zamerala na 903 účastníkov (57,0 %), u ktorých skúšajúci uviedol glomerulové ochorenie: IgA nefropatiu malo 46,1 %, fokálnu segmentovú glomerulosklerózu 23,8 % a membránovú nefropatiu 10,0 %. Rozdiel v ročnom poklese eGFR v prospech finerenónu bol 0,73 ml/min/1,73 m² za rok (95 % IS 0,22 až 1,24). Albuminúria sa po 12 mesiacoch znížila o 42 % (95 % IS 35 až 48 %) a riziko zlyhania obličiek alebo poklesu eGFR o 40 % a viac bolo nižšie (7,42 oproti 9,60 príhody na 100 pacientorokov; HR 0,74; 95 % IS 0,57 až 0,97).</p>
+<p>Prespecifikovaná exploračná <a href="https://doi.org/10.1001/jama.2026.9923" target="_blank" rel="noopener noreferrer">analýza štúdie FIND-CKD</a> sa zamerala na 903 účastníkov (57,0 %), u ktorých skúšajúci uviedol glomerulové ochorenie: IgA nefropatiu malo 46,1 %, fokálnu segmentovú glomerulosklerózu 23,8 % a membránovú nefropatiu 10,0 %. Rozdiel v ročnom poklese eGFR v prospech finerenónu bol 0,73&nbsp;ml/min/1,73&nbsp;m² za rok (95 % IS 0,22 až 1,24). Albuminúria sa po 12 mesiacoch znížila o 42 % (95 % IS 35 až 48 %) a riziko zlyhania obličiek alebo poklesu eGFR o 40 % a viac bolo nižšie (7,42 oproti 9,60 príhody na 100 pacientorokov; HR 0,74; 95 % IS 0,57 až 0,97).</p>
 
 <p>Diagnózu uvádzal skúšajúci, nebola centrálne overená, a analýza je exploračná. Výsledky preto nie sú definitívnym dôkazom účinnosti pri každej jednotlivej glomerulopatii a nenahrádzajú liečbu zameranú na príčinu ochorenia, napríklad imunosupresívnu alebo cielenú liečbu pri IgA nefropatii.</p>
 
@@ -145,20 +145,20 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">SMART-C, 2026</th>
-      <td>10 štúdií, 70 361 účastníkov s diabetom 2. typu, CKD alebo srdcovým zlyhávaním</td>
+      <td>10 štúdií, 70&nbsp;361 účastníkov s diabetom 2. typu, CKD alebo srdcovým zlyhávaním</td>
       <td>Inhibítory SGLT2: progresia CKD HR 0,62 bez ohľadu na eGFR a UACR</td>
       <td>Rovnaký absolútny prínos pri nízkom riziku; ide o súhrn existujúcich štúdií</td>
     </tr>
     <tr>
       <th scope="row">CONFIDENCE, 2025</th>
-      <td>Diabetes 2. typu, eGFR 30 až 90, UACR 100 až 5 000 mg/g, inhibítor RAS</td>
+      <td>Diabetes 2. typu, eGFR 30 až 90, UACR 100 až 5&nbsp;000&nbsp;mg/g, inhibítor RAS</td>
       <td>Kombinácia: pokles UACR o 29 % väčší než pri finerenóne a o 32 % väčší než pri empagliflozíne po 180 dňoch</td>
       <td>Vplyv na zlyhanie obličiek a úmrtnosť; výhodu súčasného začatia oproti postupnému</td>
     </tr>
     <tr>
       <th scope="row">FIND-CKD, 2026</th>
-      <td>1 584 dospelých bez diabetu, eGFR 25 až &lt; 90, UACR 200 až 3 500 mg/g, inhibítor RAS</td>
-      <td>Pokles eGFR pomalší o 0,7 ml/min/1,73 m² za rok; zložený ukazovateľ HR 0,77</td>
+      <td>1&nbsp;584 dospelých bez diabetu, eGFR 25 až &lt; 90, UACR 200 až 3&nbsp;500&nbsp;mg/g, inhibítor RAS</td>
+      <td>Pokles eGFR pomalší o 0,7&nbsp;ml/min/1,73&nbsp;m² za rok; zložený ukazovateľ HR 0,77</td>
       <td>Prínos pri súčasnej liečbe inhibítorom SGLT2 (užívalo ho asi 17 %); schválenú indikáciu</td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ $articles[] = [
 
 <ul>
   <li>Plné znenie vzdelávacieho programu Medscape, z ktorého článok tematicky vychádza, nebolo verejne dostupné. Všetky odborné tvrdenia a čísla preto pochádzajú z primárnych zdrojov uvedených nižšie.</li>
-  <li>CONFIDENCE hodnotila náhradný ukazovateľ počas 180 dní a neporovnávala súčasné a postupné začatie liečby.</li>
+  <li>CONFIDENCE hodnotila náhradný ukazovateľ počas 180&nbsp;dní a neporovnávala súčasné a postupné začatie liečby.</li>
   <li>Žiadna výsledková štúdia zatiaľ nehodnotila plnú kombináciu inhibítora RAS, inhibítora SGLT2 a finerenónu proti postupnému zavádzaniu.</li>
   <li>V štúdii FIND-CKD užívala inhibítor SGLT2 len menšina účastníkov a analýza glomerulových ochorení je exploračná, s diagnózami uvedenými skúšajúcimi.</li>
   <li>Regulačný stav a úhrada liekov sa menia; údaje o registrácii finerenónu sú overené k 3. novembru 2026.</li>

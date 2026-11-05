@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Odborny clanok: vlaknina a fyzicka aktivita pri CKD - os crevo-oblicka,
- * dokazy pre uremicke toxiny a konsenzus Italian Society of Nephrology.
+ * Odborný článok: vlaknina a fyzicka aktivita pri CKD - os crevo-oblicka,
+ * dôkazy pre uremicke toxiny a konsenzus Italian Society of Nephrology.
  *
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>Koľko vlákniny pacienti s CKD skutočne jedia</h2>
 
-<p>Prehľad pracovnej skupiny okolo Guobina Su z Karolinska Institutet a Nanfang Hospital uvádza pre dospelú populáciu odporúčaný príjem <strong>25 – 35 g vlákniny denne</strong>. Namerané hodnoty pri CKD sú od toho vzdialené o polovicu až tri štvrtiny:</p>
+<p>Prehľad pracovnej skupiny okolo Guobina Su z Karolinska Institutet a Nanfang Hospital uvádza pre dospelú populáciu odporúčaný príjem <strong>25 – 35&nbsp;g vlákniny denne</strong>. Namerané hodnoty pri CKD sú od toho vzdialené o polovicu až tri štvrtiny:</p>
 
 <div class="table-responsive" role="region" aria-label="Zistený denný príjem vlákniny v rôznych populáciách pacientov s CKD" tabindex="0">
 <table>
@@ -51,13 +51,13 @@ $articles[] = [
 <tr><th scope="row">CKD bez dialýzy (Švédsko)</th><td>16,6 (14,5 – 19,1)</td></tr>
 <tr><th scope="row">Hemodialýza (Turecko)</th><td>12,6 ± 4,7</td></tr>
 <tr><th scope="row">Hemodialýza (Brazília)</th><td>13,2 ± 6,6</td></tr>
-<tr><th scope="row">Hemodialýza (Čína)</th><td>&lt; 14 g u 90 % súboru</td></tr>
+<tr><th scope="row">Hemodialýza (Čína)</th><td>&lt; 14&nbsp;g u 90 % súboru</td></tr>
 <tr><th scope="row">Peritoneálna dialýza</th><td>5,0 ± 2,5 až 8,7 ± 6,6</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Najnižšie hodnoty u pacientov na peritoneálnej dialýze sú klinicky najvýrečnejšie: príjem okolo 5 – 9 g denne je rádovo pod akýmkoľvek odporúčaním a zároveň ide o skupinu, kde zápcha komplikuje samotnú metódu.</p>
+<p>Najnižšie hodnoty u pacientov na peritoneálnej dialýze sú klinicky najvýrečnejšie: príjem okolo 5 – 9&nbsp;g denne je rádovo pod akýmkoľvek odporúčaním a zároveň ide o skupinu, kde zápcha komplikuje samotnú metódu.</p>
 
 <h2>Čo vláknina pri CKD dokázateľne robí</h2>
 
@@ -78,13 +78,13 @@ $articles[] = [
 
 <h3>Súvisí s nižším zápalom a nižšou úmrtnosťou – ale len pozorovacie</h3>
 
-<p>Analýza 14 543 účastníkov NHANES III (Vidya M. Raj Krishnamurthy a spol., <em>Kidney International</em>) priniesla najčastejšie citované číslo z tejto oblasti. Na každých <strong>10 g vlákniny denne navyše</strong> klesla pravdepodobnosť zvýšenej hladiny C-reaktívneho proteínu o 11 % u ľudí bez ochorenia obličiek a o <strong>38 % u ľudí s CKD</strong>. Celkový príjem vlákniny nebol významne spojený s úmrtnosťou u ľudí bez ochorenia obličiek, ale bol s ňou nepriamo spojený u ľudí s CKD; rozdiel medzi skupinami bol štatisticky významný.</p>
+<p>Analýza 14&nbsp;543 účastníkov NHANES III (Vidya M. Raj Krishnamurthy a spol., <em>Kidney International</em>) priniesla najčastejšie citované číslo z tejto oblasti. Na každých <strong>10&nbsp;g vlákniny denne navyše</strong> klesla pravdepodobnosť zvýšenej hladiny C-reaktívneho proteínu o 11 % u ľudí bez ochorenia obličiek a o <strong>38 % u ľudí s CKD</strong>. Celkový príjem vlákniny nebol významne spojený s úmrtnosťou u ľudí bez ochorenia obličiek, ale bol s ňou nepriamo spojený u ľudí s CKD; rozdiel medzi skupinami bol štatisticky významný.</p>
 
 <p>Ide o prierezové a observačné dáta s odhadom príjmu z diétnych dotazníkov. Interakcia s CKD je biologicky konzistentná, zvyškové zmätenie však vylúčiť nemožno – vyšší príjem vlákniny je zástupným znakom celkovo zdravšieho životného štýlu. Autori sami uzatvárajú, že na stanovenie účinku sú potrebné intervenčné štúdie.</p>
 
 <h3>Zlepšuje vyprázdňovanie</h3>
 
-<p>Zápcha je pri CKD bežná a jej klinický význam presahuje pohodlie pacienta. V celonárodnej taiwanskej kohorte (Chung-Yen Lu a spol., <em>BMC Nephrology</em>) bola incidencia zlyhania obličiek 22,9 na 1 000 osoborokov u pacientov s novovzniknutou zápchou oproti 12,2 u porovnateľných pacientov bez nej, s upraveným pomerom rizík <strong>1,90 (95 % IS 1,60 – 2,27)</strong>. Riziko stúpalo so závažnosťou zápchy vyjadrenou počtom dní užívania laxatív.</p>
+<p>Zápcha je pri CKD bežná a jej klinický význam presahuje pohodlie pacienta. V celonárodnej taiwanskej kohorte (Chung-Yen Lu a spol., <em>BMC Nephrology</em>) bola incidencia zlyhania obličiek 22,9 na 1&nbsp;000 osoborokov u pacientov s novovzniknutou zápchou oproti 12,2 u porovnateľných pacientov bez nej, s upraveným pomerom rizík <strong>1,90 (95 % IS 1,60 – 2,27)</strong>. Riziko stúpalo so závažnosťou zápchy vyjadrenou počtom dní užívania laxatív.</p>
 
 <p>Tento gradient treba čítať opatrne. Počet dní s laxatívami je ukazovateľom závažnosti zápchy, ale aj celkovej chorobnosti a polypragmázie, takže ide o zmätenie indikáciou v učebnicovej podobe. Štúdia nedokazuje, že liečba zápchy znižuje riziko zlyhania obličiek. Dokazuje, že zápcha pri CKD nie je neutrálny nález a patrí do anamnézy.</p>
 
@@ -102,11 +102,11 @@ $articles[] = [
 
 <ul>
   <li>súvislosť medzi príjmom draslíka v strave a sérovou kálemiou je <strong>slabá, ak vôbec nejaká</strong>; prierezové práce pri pokročilej CKD a pri dialýze nachádzajú slabú alebo žiadnu koreláciu,</li>
-  <li>strava s vysokým obsahom vlákniny môže zvyšovať vylučovanie draslíka stolicou tým, že zväčšuje objem stolice – podanie 7 g psyllia viedlo v jednej práci k <strong>32 % nárastu fekálneho vylučovania draslíka</strong>,</li>
+  <li>strava s vysokým obsahom vlákniny môže zvyšovať vylučovanie draslíka stolicou tým, že zväčšuje objem stolice – podanie 7&nbsp;g psyllia viedlo v jednej práci k <strong>32 % nárastu fekálneho vylučovania draslíka</strong>,</li>
   <li>autori preto uvažujú, že obmedzovaním ovocia a zeleniny možno absorpciu draslíka skôr uľahčujeme, než jej bránime.</li>
 </ul>
 
-<p>Tento posun sleduje aj odporúčanie KDIGO 2024. Praktický bod 3.3.1 radí odporúčať ľuďom s CKD zdravú a pestrú stravu s <strong>vyššou spotrebou rastlinných potravín</strong> oproti živočíšnym a s nižšou spotrebou ultraspracovaných potravín. Praktický bod 3.11.5.2 obmedzuje potraviny s vysokým obsahom biologicky dostupného draslíka cielene – uvádza ako príklad <em>spracované potraviny</em> a vzťahuje sa na pacientov s CKD G3 – G5 s hyperkaliémiou v anamnéze alebo v obdobiach so zvýšeným rizikom. Smerovanie je teda jednoznačné: obmedziť vysoko spracované potraviny, nie ovocie a zeleninu plošne.</p>
+<p>Tento posun sleduje aj odporúčanie KDIGO 2024. Praktický bod 3.3.1 radí odporúčať ľuďom s CKD zdravú a pestrú stravu s <strong>vyššou spotrebou rastlinných potravín</strong> oproti živočíšnym a s nižšou spotrebou ultraspracovaných potravín. Praktický bod 3.11.5.2 obmedzuje potraviny s vysokým obsahom biologicky dostupného draslíka cielene – uvádza ako príklad <em>spracované potraviny</em> a vzťahuje sa na pacientov s CKD G3 – G5&nbsp;s hyperkaliémiou v anamnéze alebo v obdobiach so zvýšeným rizikom. Smerovanie je teda jednoznačné: obmedziť vysoko spracované potraviny, nie ovocie a zeleninu plošne.</p>
 
 <p>Praktický dôsledok pre ambulanciu: pri rozhodovaní o vláknine nestačí jediná hodnota kália. Rozhoduje jej dynamika, súbežná liečba inhibítormi renín-angiotenzínového systému a antagonistami mineralokortikoidových receptorov, acidobázický stav a diuréza. Obmedzenie rastlinnej stravy znižuje kvalitu diéty merateľne, kým jeho prínos pre kálemiu je neistý.</p>
 
@@ -122,8 +122,8 @@ $articles[] = [
 <tr><th scope="col">Parameter</th><th scope="col">Odporúčanie</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">Trvanie programu</th><td>najmenej 12 týždňov, aby bol účinný</td></tr>
-<tr><th scope="row">Objem</th><td>najmenej 150 minút týždenne podľa kardiovaskulárnej tolerancie</td></tr>
+<tr><th scope="row">Trvanie programu</th><td>najmenej 12&nbsp;týždňov, aby bol účinný</td></tr>
+<tr><th scope="row">Objem</th><td>najmenej 150&nbsp;minút týždenne podľa kardiovaskulárnej tolerancie</td></tr>
 <tr><th scope="row">Intenzita</th><td>začať nízkou a postupne zvyšovať; stredná intenzita = 11 – 13 na 15-bodovej Borgovej škále vnímanej námahy, ≥ 14 = vysoká</td></tr>
 <tr><th scope="row">Typ</th><td>aeróbny aj silový tréning; kombinácia oboch prináša najväčší úžitok</td></tr>
 <tr><th scope="row">Pred začatím</th><td>posúdenie spôsobilosti: anamnéza, aktuálna liečba, fyzikálne vyšetrenie, EKG, laboratórne vyšetrenia</td></tr>
@@ -133,18 +133,18 @@ $articles[] = [
 
 <p>K bezpečnosti dokument uvádza, že v publikovaných štúdiách s tréningom u hemodialyzovaných pacientov neboli hlásené srdcové príhody a že intradialyzačné cvičenie strednej intenzity nevyvolalo nežiaduce príhody vrátane hypotenzie. U príjemcov transplantovanej obličky neboli na základe klinickej skúsenosti zistené významné nežiaduce príhody v súvislosti s pravidelným cvičením, dlhšie sledovania však chýbajú.</p>
 
-<p>Kvantitatívnu oporu dáva cochranovský prehľad Susanne Heiwe a Stefana H. Jacobsona, ktorý zahrnul <strong>45 randomizovaných štúdií s 1 863 účastníkmi</strong> s CKD alebo po transplantácii obličky. Pravidelné cvičenie významne zlepšilo alebo znížilo:</p>
+<p>Kvantitatívnu oporu dáva cochranovský prehľad Susanne Heiwe a Stefana H. Jacobsona, ktorý zahrnul <strong>45 randomizovaných štúdií s 1&nbsp;863 účastníkmi</strong> s CKD alebo po transplantácii obličky. Pravidelné cvičenie významne zlepšilo alebo znížilo:</p>
 
 <ul>
   <li>aeróbnu kapacitu (24 štúdií, 847 účastníkov; SMD 0,56; 95 % IS 0,42 – 0,70),</li>
   <li>schopnosť chôdze (7 štúdií, 191 účastníkov; SMD 0,36; 95 % IS 0,06 – 0,65),</li>
-  <li>znížilo pokojový systolický tlak o 6,08 mm Hg (9 štúdií, 347 účastníkov; 95 % IS 2,15 – 10,12) a diastolický o 2,32 mm Hg (11 štúdií, 419 účastníkov; 95 % IS 0,59 – 4,05),</li>
+  <li>znížilo pokojový systolický tlak o 6,08&nbsp;mm Hg (9 štúdií, 347 účastníkov; 95 % IS 2,15 – 10,12) a diastolický o 2,32&nbsp;mm Hg (11 štúdií, 419 účastníkov; 95 % IS 0,59 – 4,05),</li>
   <li>znížilo pokojovú srdcovú frekvenciu a zlepšilo kvalitu života súvisiacu so zdravím.</li>
 </ul>
 
 <p>Kvalita dôkazov je zmiešaná: 17 % štúdií bolo hodnotených ako s nízkym rizikom systematickej chyby, 33 % so stredným a <strong>49 % s vysokým</strong>. Veľkosť účinku navyše závisela od dizajnu intervencie, čo je argument pre štruktúrovaný program, nie pre všeobecnú radu „hýbte sa viac“.</p>
 
-<p>KDIGO 2024 formuluje odporúčanie 3.2.2.1 (stupeň 1D): ľuďom s CKD sa odporúča fyzická aktivita strednej intenzity v kumulatívnom trvaní najmenej 150 minút týždenne alebo na úrovni zlučiteľnej s ich kardiovaskulárnou a fyzickou toleranciou. Praktické body dopĺňajú zohľadnenie veku, etnického pozadia, komorbidít a dostupnosti zdrojov, vyhýbanie sa sedavému správaniu a u pacientov so zvýšeným rizikom pádu poradenstvo o intenzite a type cvičenia. Stupeň 1D znamená silné odporúčanie pri veľmi nízkej istote dôkazov – teda odporúčanie, ktoré stojí skôr na pomere prínosu a rizika než na robustných koncových ukazovateľoch.</p>
+<p>KDIGO 2024 formuluje odporúčanie 3.2.2.1 (stupeň 1D): ľuďom s CKD sa odporúča fyzická aktivita strednej intenzity v kumulatívnom trvaní najmenej 150&nbsp;minút týždenne alebo na úrovni zlučiteľnej s ich kardiovaskulárnou a fyzickou toleranciou. Praktické body dopĺňajú zohľadnenie veku, etnického pozadia, komorbidít a dostupnosti zdrojov, vyhýbanie sa sedavému správaniu a u pacientov so zvýšeným rizikom pádu poradenstvo o intenzite a type cvičenia. Stupeň 1D znamená silné odporúčanie pri veľmi nízkej istote dôkazov – teda odporúčanie, ktoré stojí skôr na pomere prínosu a rizika než na robustných koncových ukazovateľoch.</p>
 
 <h2>Prečo má zmysel kombinovať</h2>
 
@@ -158,7 +158,7 @@ $articles[] = [
 
 <p>Pri navyšovaní vlákniny sa osvedčuje postupnosť: rozdeliť príjem do menších dávok počas dňa, uprednostniť zdroje, ktoré znesú kuchynskú úpravu znižujúcu obsah draslíka, a sledovať kálemiu v dynamike, nie jednorazovo. KDIGO odporúča zapojiť renálneho dietológa alebo akreditovaného poskytovateľa nutričnej starostlivosti; Su a spol. to uvádzajú rovnako.</p>
 
-<p>Pri pohybe je prvým krokom posúdenie spôsobilosti vrátane EKG, nie samotný tréningový plán. Cieľom je 150 minút strednej intenzity týždenne, ale u krehkého pacienta je zmysluplnejším východiskovým cieľom skrátenie času stráveného v sede a akýkoľvek pravidelný pohyb nad východiskovou úrovňou. Program má trvať najmenej 12 týždňov a kombinovať aeróbnu a silovú zložku.</p>
+<p>Pri pohybe je prvým krokom posúdenie spôsobilosti vrátane EKG, nie samotný tréningový plán. Cieľom je 150&nbsp;minút strednej intenzity týždenne, ale u krehkého pacienta je zmysluplnejším východiskovým cieľom skrátenie času stráveného v sede a akýkoľvek pravidelný pohyb nad východiskovou úrovňou. Program má trvať najmenej 12&nbsp;týždňov a kombinovať aeróbnu a silovú zložku.</p>
 
 <p>Pri stanovovaní cieľov je rozumné postupovať v tomto poradí: najprv zápcha, funkčná kapacita a kvalita života; potom metabolické a zápalové ukazovatele; a až nakoniec zmeny, ktoré by mohli súvisieť s uremickými toxínmi. Progresiu CKD medzi očakávané výsledky nezaraďujeme.</p>
 
@@ -166,7 +166,7 @@ $articles[] = [
 
 <p>Väčšina dôkazov o vláknine pri CKD je krátkodobá, s malými súbormi a s náhradnými ukazovateľmi. Metaanalýza Yang a spol. zahŕňa 292 pacientov v desiatich štúdiách, metaanalýza Wu a spol. 203 pacientov v siedmich prácach – to sú čísla, pri ktorých jediná väčšia štúdia môže súhrnný odhad podstatne posunúť. Heterogenita je vysoká aj preto, že „vláknina“ zastrešuje intervencie s odlišnou rozpustnosťou a fermentovateľnosťou.</p>
 
-<p>Dôkazy pre pohyb sú početnejšie, ale takmer polovica randomizovaných štúdií v cochranovskom prehľade mala vysoké riziko systematickej chyby a zaslepenie je pri cvičebných intervenciách prakticky nemožné. Konsenzus Talianskej nefrologickej spoločnosti je expertný dokument, nie metaanalýza; jeho bezpečnostné stanoviská vychádzajú sčasti z klinickej skúsenosti, čo autori priznávajú. Odporúčanie KDIGO pre 150 minút týždenne má stupeň istoty dôkazov D, teda veľmi nízky.</p>
+<p>Dôkazy pre pohyb sú početnejšie, ale takmer polovica randomizovaných štúdií v cochranovskom prehľade mala vysoké riziko systematickej chyby a zaslepenie je pri cvičebných intervenciách prakticky nemožné. Konsenzus Talianskej nefrologickej spoločnosti je expertný dokument, nie metaanalýza; jeho bezpečnostné stanoviská vychádzajú sčasti z klinickej skúsenosti, čo autori priznávajú. Odporúčanie KDIGO pre 150&nbsp;minút týždenne má stupeň istoty dôkazov D, teda veľmi nízky.</p>
 
 <p>Ani jedna z citovaných prác nebola zameraná na tvrdé renálne koncové ukazovatele ako primárny výstup. Prenos do slovenských podmienok navyše limituje odlišná skladba stravy a dostupnosť štruktúrovanej rehabilitácie pre nefrologických pacientov.</p>
 

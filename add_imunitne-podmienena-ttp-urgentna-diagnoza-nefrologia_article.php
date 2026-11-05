@@ -48,7 +48,7 @@ $articles[] = [
 <p>Biopsia obličky spravidla nie je potrebná na stanovenie akútnej TTP a nesmie odďaľovať liečbu. Pri výraznej trombocytopénii predstavuje krvácavé riziko. Histologický nález trombotickej mikroangiopatie sám osebe neurčuje jej príčinu. <a href="#zdroj-11">[11]</a></p>
 
 <h2>ADAMTS13: kľúčový diagnostický test</h2>
-<p>V zodpovedajúcom klinickom kontexte je pre TTP charakteristická <strong>aktivita ADAMTS13 nižšia ako 10 %</strong>, obvykle vyjadrovaná aj ako menej než 10 IU/dl. Vyšetrenie funkčného inhibítora a protilátok proti ADAMTS13 pomáha určiť imunitný mechanizmus. <a href="#zdroj-2">[2]</a></p>
+<p>V zodpovedajúcom klinickom kontexte je pre TTP charakteristická <strong>aktivita ADAMTS13 nižšia ako 10 %</strong>, obvykle vyjadrovaná aj ako menej než 10&nbsp;IU/dl. Vyšetrenie funkčného inhibítora a protilátok proti ADAMTS13 pomáha určiť imunitný mechanizmus. <a href="#zdroj-2">[2]</a></p>
 <p>Vzorku citrátovej plazmy treba odobrať <strong>pred začatím terapeutickej výmeny plazmy a pred podaním plazmy alebo iných krvných prípravkov</strong>. Odber však nesmie zdržať neodkladnú liečbu. Ak bola vzorka odobratá až po liečbe, treba túto okolnosť oznámiť laboratóriu a zohľadniť pri interpretácii. <a href="#zdroj-2">[2]</a></p>
 <ul>
   <li><strong>Aktivita pod 10 %:</strong> pri kompatibilnom klinickom obraze silno podporuje diagnózu TTP.</li>
@@ -85,7 +85,7 @@ $articles[] = [
     <tr><th scope="row">TMA pri hypertenznej emergencii</th><td>Závažná hypertenzia a orgánové poškodenie; hypertenzia môže byť príčinou aj následkom TMA.</td></tr>
     <tr><th scope="row">HELLP syndróm a ďalšie TMA v gravidite</th><td>Dôležité sú gestačný kontext, pečeňové parametre, pôrodnícky nález a ADAMTS13.</td></tr>
     <tr><th scope="row">Sekundárne TMA</th><td>Súvislosť s liekmi, transplantáciou, nádorovým alebo autoimunitným ochorením.</td></tr>
-    <tr><th scope="row">Ťažký deficit vitamínu B12 s obrazom pseudo-TMA</th><td>Neefektívna krvotvorba, neprimerane nízka retikulocytová odpoveď a často veľmi vysoká LDH. <a href="#zdroj-12">[12]</a></td></tr>
+    <tr><th scope="row">Ťažký deficit vitamínu B12&nbsp;s obrazom pseudo-TMA</th><td>Neefektívna krvotvorba, neprimerane nízka retikulocytová odpoveď a často veľmi vysoká LDH. <a href="#zdroj-12">[12]</a></td></tr>
   </tbody>
 </table>
 </div>
@@ -105,13 +105,13 @@ $articles[] = [
 <h3>Kaplacizumab</h3>
 <p>Kaplacizumab sa viaže na doménu A1 von Willebrandovho faktora a blokuje jeho interakciu s trombocytmi. Tým rýchlo obmedzuje tvorbu mikrotrombov. <strong>Neodstraňuje autoprotilátky ani priamo neobnovuje aktivitu ADAMTS13</strong>, preto nenahrádza imunosupresiu. <a href="#zdroj-3">[3]</a> <a href="#zdroj-5">[5]</a></p>
 <p>Randomizovaná štúdia HERCULES so 145 pacientmi preukázala rýchlejšiu úpravu počtu trombocytov a nižší výskyt kombinovaného ukazovateľa úmrtia súvisiaceho s TTP, recidívy TTP alebo veľkej tromboembolickej príhody počas liečby: 12 % pri kaplacizumabe oproti 49 % pri placebe. Obe skupiny dostávali aj TPE a imunosupresiu. <strong>Pokles kombinovaného ukazovateľa nemožno interpretovať ako rovnaké zníženie samotnej úmrtnosti.</strong> Krvácanie, najmä slizničné, bolo častejšie pri kaplacizumabe. <a href="#zdroj-6">[6]</a></p>
-<p>Podľa slovenského súhrnu charakteristických vlastností lieku (SPC) sa u dospelých podáva prvá dávka 10 mg intravenózne pred TPE; následne 10 mg subkutánne denne po výmene a ešte 30 dní po ukončení každodenných výmen. Pri pretrvávajúcom imunologickom ochorení sa optimalizuje imunosupresia a pokračuje v podávaní podľa SPC a rozhodnutia centra. Samotná normalizácia trombocytov preto nestačí na ukončenie liečby. Pri poruche funkcie obličiek sa dávka podľa SPC neupravuje. <a href="#zdroj-5">[5]</a></p>
+<p>Podľa slovenského súhrnu charakteristických vlastností lieku (SPC) sa u dospelých podáva prvá dávka 10&nbsp;mg intravenózne pred TPE; následne 10&nbsp;mg subkutánne denne po výmene a ešte 30&nbsp;dní po ukončení každodenných výmen. Pri pretrvávajúcom imunologickom ochorení sa optimalizuje imunosupresia a pokračuje v podávaní podľa SPC a rozhodnutia centra. Samotná normalizácia trombocytov preto nestačí na ukončenie liečby. Pri poruche funkcie obličiek sa dávka podľa SPC neupravuje. <a href="#zdroj-5">[5]</a></p>
 <ul>
   <li>Po ukončení kaplacizumabu pri pretrvávajúcom závažnom deficite ADAMTS13 hrozí opätovné vzplanutie ochorenia.</li>
   <li>Okrem slizničného krvácania sa môže vyskytnúť aj závažné, život ohrozujúce krvácanie.</li>
   <li>Pri klinicky významnom krvácaní sa liečba prerušuje; ďalší postup určuje skúsené pracovisko.</li>
   <li>Súbežná antikoagulačná, protidoštičková alebo trombolytická liečba vyžaduje individuálne posúdenie rizika a dôsledné sledovanie.</li>
-  <li>Pred plánovaným invazívnym výkonom SPC odporúča prerušenie aspoň na 7 dní; pri urgentnom výkone treba hemostatický postup koordinovať s hematológom.</li>
+  <li>Pred plánovaným invazívnym výkonom SPC odporúča prerušenie aspoň na 7&nbsp;dní; pri urgentnom výkone treba hemostatický postup koordinovať s hematológom.</li>
 </ul>
 <p>Registračná indikácia Cablivi v EÚ zostáva viazaná na kombináciu s výmenou plazmy a imunosupresiou. Registrácia sama osebe nedokladá okamžitú dostupnosť ani úhradu na konkrétnom slovenskom pracovisku; tie treba overiť pri zabezpečovaní liečby. <a href="#zdroj-5">[5]</a></p>
 
@@ -139,7 +139,7 @@ $articles[] = [
 <h2>Remisia neznamená koniec sledovania</h2>
 <p>iTTP je ochorenie s rizikom relapsov a dlhodobých následkov. Aj po normalizácii krvného obrazu môžu pretrvávať únava, poruchy koncentrácie a pamäti, depresívne alebo úzkostné príznaky; treba sledovať aj hypertenziu a kardiovaskulárne riziko. Klinická remisia a úprava aktivity ADAMTS13 nie sú totožné stavy. <a href="#zdroj-1">[1]</a> <a href="#zdroj-9">[9]</a></p>
 <p>Následná starostlivosť zahŕňa hematologické kontroly s meraním ADAMTS13 a krvným obrazom, pri podozrení na relaps aj parametre hemolýzy. Nefrologické sledovanie sa prispôsobuje rozsahu obličkového postihnutia a zahŕňa krvný tlak, funkciu obličiek a proteinúriu. Súčasťou kontroly má byť zhodnotenie psychických a kognitívnych ťažkostí aj poučenie o príznakoch vyžadujúcich okamžité vyšetrenie. <a href="#zdroj-1">[1]</a> <a href="#zdroj-9">[9]</a></p>
-<p>Odporúčania správnej klinickej praxe uvádzajú ako orientačný režim kontroly každý mesiac počas prvých troch mesiacov, potom každé tri mesiace počas prvého roka a pri stabilnom stave každých 6–12 mesiacov. Pri klesajúcej aktivite ADAMTS13 sa kontroly zintenzívňujú; nejde o univerzálny interval vhodný pre každého pacienta. <a href="#zdroj-9">[9]</a></p>
+<p>Odporúčania správnej klinickej praxe uvádzajú ako orientačný režim kontroly každý mesiac počas prvých troch mesiacov, potom každé tri mesiace počas prvého roka a pri stabilnom stave každých 6–12&nbsp;mesiacov. Pri klesajúcej aktivite ADAMTS13 sa kontroly zintenzívňujú; nejde o univerzálny interval vhodný pre každého pacienta. <a href="#zdroj-9">[9]</a></p>
 <p>Pokles ADAMTS13 počas klinickej remisie môže predchádzať relapsu, ale neznamená jeho bezprostredný vznik. U vybraných pacientov s pretrvávajúcou alebo opakovane výrazne zníženou aktivitou sa zvažuje preemptívna liečba rituximabom. Rozhoduje špecializované pracovisko podľa vývoja hodnôt, predchádzajúceho priebehu a individuálnych rizík. Ženy plánujúce graviditu potrebujú predkoncepčnú konzultáciu a spoločný plán hematológa a pôrodníka, podľa potreby aj nefrológa. <a href="#zdroj-3">[3]</a> <a href="#zdroj-9">[9]</a></p>
 
 <h2>Záver pre klinickú prax</h2>

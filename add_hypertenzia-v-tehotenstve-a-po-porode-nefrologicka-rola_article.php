@@ -42,7 +42,7 @@ $articles[] = [
 
 <h2>Liečba tlaku krvi počas tehotenstva</h2>
 
-<p>Otázka, či liečiť miernu chronickú hypertenziu v tehotenstve, bola dlho sporná pre obavu z hypoperfúzie placenty a rastovej reštrikcie plodu. Odpoveď priniesla štúdia <strong>CHAP</strong>, ktorá zaradila 2408 tehotných žien s miernou chronickou hypertenziou v 61 centrách a randomizovala ich pred 23. týždňom do liečby s cieľom pod 140/90 mm Hg oproti liečbe až pri rozvoji ťažkej hypertenzie.</p>
+<p>Otázka, či liečiť miernu chronickú hypertenziu v tehotenstve, bola dlho sporná pre obavu z hypoperfúzie placenty a rastovej reštrikcie plodu. Odpoveď priniesla štúdia <strong>CHAP</strong>, ktorá zaradila 2408 tehotných žien s miernou chronickou hypertenziou v 61 centrách a randomizovala ich pred 23. týždňom do liečby s cieľom pod 140/90&nbsp;mm Hg oproti liečbe až pri rozvoji ťažkej hypertenzie.</p>
 
 <p>Aktívna liečba znížila výskyt zloženého ukazovateľa (preeklampsia so závažnými znakmi, medicínsky indikovaný predčasný pôrod pred 35. týždňom, abrupcia placenty alebo úmrtie plodu či novorodenca) z <strong>37,0 % na 30,2 %</strong>, s upraveným relatívnym rizikom 0,82 (95 % IS 0,74–0,92). Podstatné je, že <strong>nevzrástol podiel novorodencov malých na gestačný vek</strong>, takže obava, ktorá liečbu desaťročia brzdila, sa nepotvrdila.</p>
 
@@ -57,7 +57,7 @@ $articles[] = [
 
 <h2>Ťažká hypertenzia je akútny stav</h2>
 
-<p>Tlak krvi 160/110 mm Hg alebo vyšší predstavuje v tehotenstve aj po pôrode urgentnú situáciu s rizikom cievnej mozgovej príhody. Liečbu treba podať bezodkladne, spravidla do 30 až 60 minút, intravenóznym labetalolom, intravenóznym hydralazínom alebo perorálnym nifedipínom s rýchlym uvoľňovaním.</p>
+<p>Tlak krvi 160/110&nbsp;mm Hg alebo vyšší predstavuje v tehotenstve aj po pôrode urgentnú situáciu s rizikom cievnej mozgovej príhody. Liečbu treba podať bezodkladne, spravidla do 30 až 60&nbsp;minút, intravenóznym labetalolom, intravenóznym hydralazínom alebo perorálnym nifedipínom s rýchlym uvoľňovaním.</p>
 
 <p>U pacientky s preeklampsiou so závažnými znakmi je indikovaný <strong>síran horečnatý</strong> na prevenciu eklampsie. Nefrológ tu musí myslieť na špecifické riziko: <strong>horčík sa vylučuje takmer výlučne obličkami</strong>. Pri zníženej glomerulovej filtrácii alebo akútnom poškodení obličiek sa kumuluje a hrozí útlm dýchania a zástava srdca. Dávkovanie je preto nutné redukovať a sledovať šľachové reflexy, diurézu a podľa možnosti aj koncentráciu horčíka v sére.</p>
 
@@ -90,7 +90,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Pred koncepciou:</strong> upraviť liečbu u ženy s chronickou chorobou obličiek v reprodukčnom veku, vysadiť inhibítory ACE a sartany, naplánovať profylaxiu kyselinou acetylsalicylovou a zhodnotiť východiskovú funkciu obličiek a proteinúriu.</li>
-  <li><strong>Počas tehotenstva:</strong> liečiť aj miernu hypertenziu na cieľ pod 140/90 mm Hg podľa výsledkov štúdie CHAP, používať vhodné liečivá a pri preeklampsii so závažnými znakmi dbať na úpravu dávky síranu horečnatého podľa funkcie obličiek.</li>
+  <li><strong>Počas tehotenstva:</strong> liečiť aj miernu hypertenziu na cieľ pod 140/90&nbsp;mm Hg podľa výsledkov štúdie CHAP, používať vhodné liečivá a pri preeklampsii so závažnými znakmi dbať na úpravu dávky síranu horečnatého podľa funkcie obličiek.</li>
   <li><strong>Bezprostredne po pôrode:</strong> počítať s vrcholom tlaku krvi medzi tretím a šiestym dňom a zabezpečiť kontrolu v tomto období, nie až o šesť týždňov.</li>
   <li><strong>Pri popôrodnej kontrole:</strong> vyšetriť tlak krvi, funkciu obličiek a albuminúriu; pri pretrvávajúcej hypertenzii alebo proteinúrii prevziať pacientku do dlhodobého sledovania.</li>
   <li><strong>Dlhodobo:</strong> zaznamenať preeklampsiu ako trvalý rizikový faktor do dokumentácie a nastaviť pravidelné sledovanie kardiovaskulárneho aj renálneho rizika.</li>

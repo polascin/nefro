@@ -35,7 +35,7 @@ function formatInputKey(string $key): string {
     $map = [
         'sex'                 => 'Pohlavie',
         'age_years'           => 'Vek (roky)',
-        'egfr'                => 'eGFR (ml/min/1,73 m²)',
+        'egfr'                => 'eGFR (ml/min/1,73 m²)',
         'creatinine_value'    => 'Kreatinín',
         'creatinine_unit'     => 'Jednotka kreatinínu',
         'creatinine_mg_dl'    => 'Kreatinín (mg/dL)',
@@ -163,7 +163,7 @@ function formatInputValue(string $key, $value): string {
 // Zostaví čitateľný štítok kľúča výsledkového poľa
 function formatResultKey(string $key): string {
     $map = [
-        'egfr'                   => 'eGFR (ml/min/1,73 m²)',
+        'egfr'                   => 'eGFR (ml/min/1,73 m²)',
         'g_category'             => 'Kategória G',
         'g_description'          => 'Popis kategórie',
         'a_category'             => 'Kategória A (UACR)',
@@ -176,7 +176,7 @@ function formatResultKey(string $key): string {
         'classification'         => 'Klasifikácia',
         'risk_category'          => 'Riziková kategória',
         'interpretation'         => 'Interpretácia',
-        'slope'                  => 'Sklon eGFR (ml/min/1,73 m²/rok)',
+        'slope'                  => 'Sklon eGFR (ml/min/1,73 m²/rok)',
         'aki_stage'              => 'Štádium AKI',
         'risk_2yr'               => '2-ročné riziko zlyhania obličiek (KFRE)',
         'risk_5yr'               => '5-ročné riziko zlyhania obličiek (KFRE)',

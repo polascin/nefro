@@ -69,7 +69,7 @@ $articles[] = [
 
 <h2>Sodík zostáva kľúčový, ale nie je to len o slánke</h2>
 
-<p>Odporúčanie pre príjem sodíka zostáva prísne. Cieľom je dostať sa pod 2300 mg sodíka denne a ideálne smerovať ešte nižšie, približne k 1500 mg denne. Prakticky to znamená, že nestačí prestať dosoľovať jedlo. Veľká časť sodíka prichádza z priemyselne spracovaných potravín, pečiva, syrov, údenín, hotových jedál, instantných výrobkov a reštauračnej stravy.</p>
+<p>Odporúčanie pre príjem sodíka zostáva prísne. Cieľom je dostať sa pod 2300&nbsp;mg sodíka denne a ideálne smerovať ešte nižšie, približne k 1500&nbsp;mg denne. Prakticky to znamená, že nestačí prestať dosoľovať jedlo. Veľká časť sodíka prichádza z priemyselne spracovaných potravín, pečiva, syrov, údenín, hotových jedál, instantných výrobkov a reštauračnej stravy.</p>
 
 <p>DASH diéta a diéty s nižším obsahom sodíka majú preukázateľný účinok na krvný tlak. Pacientovi to však treba podať prakticky: menej soli neznamená nevýrazné jedlo. Pomôcť môžu bylinky, kyslosť, cesnak, cibuľa, korenie, kvalitné základné potraviny a postupná adaptácia chuti.</p>
 
@@ -83,15 +83,15 @@ $articles[] = [
 
 <h2>Hypertenzia 1. stupňa: rozhoduje aj kardiovaskulárne riziko</h2>
 
-<p>Pri hypertenzii 1. stupňa, teda pri systolickom tlaku 130 až 139 mm Hg alebo diastolickom tlaku 80 až 89 mm Hg, už nejde len o samotné číslo. Nové odporúčania viac pracujú s celkovým kardiovaskulárnym rizikom.</p>
+<p>Pri hypertenzii 1. stupňa, teda pri systolickom tlaku 130 až 139&nbsp;mm Hg alebo diastolickom tlaku 80 až 89&nbsp;mm Hg, už nejde len o samotné číslo. Nové odporúčania viac pracujú s celkovým kardiovaskulárnym rizikom.</p>
 
 <p>Ak má pacient známe kardiovaskulárne ochorenie, diabetes alebo 10-ročné kardiovaskulárne riziko podľa kalkulátora PREVENT nad 7,5 %, je dôvod začať farmakologickú liečbu skôr. Ak je riziko nízke, môže byť rozumné najskôr cielene pracovať so životným štýlom a následne tlak prehodnotiť.</p>
 
-<p>Hypertenzia sa teda nelieči izolovane od pacienta. Iný význam má tlak 134/84 mm Hg u mladého nízkorizikového človeka a iný u pacienta s diabetom, albuminúriou alebo už prekonanou kardiovaskulárnou príhodou.</p>
+<p>Hypertenzia sa teda nelieči izolovane od pacienta. Iný význam má tlak 134/84&nbsp;mm Hg u mladého nízkorizikového človeka a iný u pacienta s diabetom, albuminúriou alebo už prekonanou kardiovaskulárnou príhodou.</p>
 
 <h2>Hypertenzia 2. stupňa: skôr kombinácia než maximálna dávka jedného lieku</h2>
 
-<p>Pri hypertenzii 2. stupňa, teda pri tlaku nad 140/90 mm Hg, odporúčania podporujú skoršie použitie kombinovanej liečby. Dôvod je praktický aj farmakologický. Nízke až stredné dávky viacerých liekov často prinesú lepší pokles tlaku s menším počtom nežiaducich účinkov než vytláčanie jedného lieku do maximálnej dávky.</p>
+<p>Pri hypertenzii 2. stupňa, teda pri tlaku nad 140/90&nbsp;mm Hg, odporúčania podporujú skoršie použitie kombinovanej liečby. Dôvod je praktický aj farmakologický. Nízke až stredné dávky viacerých liekov často prinesú lepší pokles tlaku s menším počtom nežiaducich účinkov než vytláčanie jedného lieku do maximálnej dávky.</p>
 
 <p>V článku sa spomína skoršie nasadenie dvojkombinácií a v niektorých prípadoch aj trojkombinácií, napríklad kombinácia blokátora angiotenzínového receptora, blokátora kalciového kanála a tiazidového alebo tiazidu podobného diuretika. Takýto prístup môže zlepšiť adherenciu, najmä ak je dostupný v jednej tablete.</p>
 

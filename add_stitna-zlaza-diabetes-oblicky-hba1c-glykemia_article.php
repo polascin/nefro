@@ -77,8 +77,8 @@ $articles[] = [
   <thead><tr><th scope="col">Ukazovateľ</th><th scope="col">Čo približne zachytáva</th><th scope="col">Dôležité obmedzenia v tomto kontexte</th></tr></thead>
   <tbody>
     <tr><th scope="row">HbA1c</th><td>Dlhodobejšiu glykemickú expozíciu</td><td>Obrat erytrocytov, anémia, liečba stimulujúca erytropoézu, železo, transfúzie, pokročilá CKD a poruchy štítnej žľazy</td></tr>
-    <tr><th scope="row">Fruktozamín</th><td>Glykáciu sérových bielkovín približne za 2 až 3 týždne</td><td>Koncentrácia a obrat bielkovín, hypoalbuminémia, proteinúria a peritoneálna dialýza</td></tr>
-    <tr><th scope="row">Glykovaný albumín</th><td>Glykáciu albumínu približne za 2 až 3 týždne</td><td>Obrat albumínu, albuminúria, hypoalbuminémia a straty bielkovín</td></tr>
+    <tr><th scope="row">Fruktozamín</th><td>Glykáciu sérových bielkovín približne za 2 až 3&nbsp;týždne</td><td>Koncentrácia a obrat bielkovín, hypoalbuminémia, proteinúria a peritoneálna dialýza</td></tr>
+    <tr><th scope="row">Glykovaný albumín</th><td>Glykáciu albumínu približne za 2 až 3&nbsp;týždne</td><td>Obrat albumínu, albuminúria, hypoalbuminémia a straty bielkovín</td></tr>
     <tr><th scope="row">CGM alebo glukomer</th><td>Priame údaje o intersticiálnej alebo kapilárnej glukóze</td><td>Technická presnosť, oneskorenie intersticiálnej glukózy, dostupnosť a správne používanie zariadenia</td></tr>
   </tbody>
 </table>
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Zdrojový rozhovor tieto pojmy miestami zamieňa. Fruktozamín vyjadruje celkové glykované sérové bielkoviny, medzi ktorými prevažuje albumín. Glykovaný albumín hodnotí osobitne glykáciu albumínu, zvyčajne vo vzťahu k jeho celkovému množstvu. Oba ukazovatele odrážajú kratšie obdobie než HbA1c a nie sú priamo závislé od životnosti erytrocytov, ale nie sú nezávislé od metabolizmu bielkovín.</p>
 
-<p>V prospektívnej štúdii 104 účastníkov s diabetom 2. typu, z ktorých 80 malo eGFR pod 60 ml/min/1,73 m² a nebolo liečených dialýzou, korelovali HbA1c, glykovaný albumín aj fruktozamín s priemernou glukózou z CGM podobne. Glykovaný albumín a fruktozamín navyše ovplyvňovali vek, index telesnej hmotnosti, parametre železa a albuminúria; HbA1c bol pri albuminúrii podhodnotený. Štúdia preto nepodporila jednoduchú náhradu HbA1c jedným z týchto markerov. [4]</p>
+<p>V prospektívnej štúdii 104 účastníkov s diabetom 2. typu, z ktorých 80 malo eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² a nebolo liečených dialýzou, korelovali HbA1c, glykovaný albumín aj fruktozamín s priemernou glukózou z CGM podobne. Glykovaný albumín a fruktozamín navyše ovplyvňovali vek, index telesnej hmotnosti, parametre železa a albuminúria; HbA1c bol pri albuminúrii podhodnotený. Štúdia preto nepodporila jednoduchú náhradu HbA1c jedným z týchto markerov. [4]</p>
 
 <p>Pri významnej proteinúrii, nefrotickom syndróme, hypoalbuminémii alebo stratách bielkovín pri peritoneálnej dialýze teda fruktozamín a glykovaný albumín nie sú automaticky spoľahlivejšie. Praktickým riešením býva porovnanie laboratórneho výsledku s priamym sledovaním glukózy.</p>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <h2>Skríning: funkcia štítnej žľazy nie je to isté ako protilátky</h2>
 
-<p>ADA 2026 odporúča u ľudí s diabetom 1. typu vyšetriť autoimunitné ochorenie štítnej žľazy krátko po diagnóze a potom opakovane, ak je to klinicky indikované. U detí a dospievajúcich uvádza TSH pri diagnóze v klinicky stabilnom stave a pri normálnom výsledku opakovanie spravidla každé 1 až 2 roky, skôr pri pozitívnych protilátkach, príznakoch, strume, poruche rastu alebo nevysvetlenej glykemickej variabilite. [6]</p>
+<p>ADA 2026 odporúča u ľudí s diabetom 1. typu vyšetriť autoimunitné ochorenie štítnej žľazy krátko po diagnóze a potom opakovane, ak je to klinicky indikované. U detí a dospievajúcich uvádza TSH pri diagnóze v klinicky stabilnom stave a pri normálnom výsledku opakovanie spravidla každé 1 až 2&nbsp;roky, skôr pri pozitívnych protilátkach, príznakoch, strume, poruche rastu alebo nevysvetlenej glykemickej variabilite. [6]</p>
 
 <p>Treba rozlišovať účel jednotlivých vyšetrení. TSH a podľa situácie voľný tyroxín (fT4) hodnotia funkciu štítnej žľazy. Protilátky proti tyreoperoxidáze (anti-TPO) podporujú určenie autoimunitného pôvodu a odhad rizika budúcej dysfunkcie; ich opakované každoročné stanovovanie po potvrdení pozitivity spravidla neposkytuje rovnakú informáciu ako kontrola TSH. Protilátky proti receptoru TSH pomáhajú pri diagnostike Gravesovej-Basedowovej choroby, nie sú plošným každoročným skríningovým testom.</p>
 

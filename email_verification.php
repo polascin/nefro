@@ -495,13 +495,13 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
         . '<p style="margin:0 0 16px;">Pre aktiváciu účtu overte svoju e-mailovú adresu kliknutím na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($verifyUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($verifyUrl) . '</a></p>'
-        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 24 hodín.</p>';
+        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 24 hodín.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Overiť e-mail', $verifyUrl);
     $plainMessage = EMAIL_GREETING_PREFIX . $displayName . EMAIL_PLAIN_PARAGRAPH_BREAK
         . "ďakujeme za registráciu v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Pre aktiváciu účtu overte svoju e-mailovú adresu otvorením tohto odkazu:\n"
         . $verifyUrl . "\n\n"
-        . "Platnosť odkazu je 24 hodín.\n\n"
+        . "Platnosť odkazu je 24 hodín.\n\n"
         . EMAIL_BRAND_NAME;
 
     $cfg = getEmailEnvConfig();
@@ -524,13 +524,13 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         . '<p style="margin:0 0 16px;">Nové heslo nastavíte kliknutím na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($resetUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($resetUrl) . '</a></p>'
-        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 60 minút.</p>';
+        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 60 minút.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Obnoviť heslo', $resetUrl);
     $plainMessage = EMAIL_GREETING_PREFIX . $displayName . EMAIL_PLAIN_PARAGRAPH_BREAK
         . "prijali sme žiadosť o obnovenie hesla pre váš účet v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Nové heslo nastavíte otvorením tohto odkazu:\n"
         . $resetUrl . "\n\n"
-        . "Platnosť odkazu je 60 minút.\n\n"
+        . "Platnosť odkazu je 60 minút.\n\n"
         . EMAIL_BRAND_NAME;
 
     $cfg = getEmailEnvConfig();
@@ -686,10 +686,10 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         . "prijali sme žiadosť o zrušenie vášho účtu v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Pre dokončenie a trvalé vymazanie účtu kliknite na tento odkaz:\n\n"
         . $confirmUrl . "\n\n"
-        . "Platnosť odkazu je 24 hodín.\n\n"
+        . "Platnosť odkazu je 24 hodín.\n\n"
         . "UPOZORNENIE: Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané "
         . "váš účet, profil, avatary a uložené výsledky kalkulačiek. Minimalizovaný bezpečnostný "
-        . "audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.\n\n"
+        . "audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.\n\n"
         . "Ak ste o zrušenie účtu nežiadali, tento e-mail ignorujte. "
         . "Váš účet zostane zachovaný.\n\n"
         . EMAIL_BRAND_NAME;
@@ -697,8 +697,8 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
         . '<p style="margin:0 0 16px;">Prijali sme žiadosť o zrušenie vášho účtu v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<p style="margin:0 0 16px;">Pre dokončenie a trvalé vymazanie účtu kliknite na tlačidlo nižšie.</p>'
-        . '<p style="margin:0 0 16px;color:#334155;">Odkaz je platný 24 hodín.</p>'
-        . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané váš účet, profil, avatary a uložené výsledky kalkulačiek. Minimalizovaný bezpečnostný audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.</p>';
+        . '<p style="margin:0 0 16px;color:#334155;">Odkaz je platný 24 hodín.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané váš účet, profil, avatary a uložené výsledky kalkulačiek. Minimalizovaný bezpečnostný audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Potvrdiť zrušenie účtu', $confirmUrl);
 
     $cfg = getEmailEnvConfig();

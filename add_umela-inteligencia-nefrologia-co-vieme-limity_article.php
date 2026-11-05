@@ -78,9 +78,9 @@ $articles[] = [
 <p>Konkrétne príklady zo zdroja:</p>
 
 <ul>
-  <li>v retrospektívnej analýze <strong>2 010 pacientov</strong> po cievnych a hrudných výkonoch (vrátane srdcovej chirurgie) na predikciu pooperačného AKI vyšlo, že <strong>extreme gradient boosting</strong> prekonal tradičné modely,</li>
-  <li>v rozsiahlej dátovej práci s <strong>703 782 pacientmi</strong> model predikoval AKI s vysokou schopnosťou zachytiť prípady, ktoré následne vyžadovali dialýzu, pričom upozornenie mohlo prísť <strong>až 48 hodín pred dialýzou</strong>. Zároveň sa uvádza aj problém s vyššou mierou falošne pozitívnych predikcií a otázka prenositeľnosti výsledkov (model bol trénovaný na populácii s prevahou mužov),</li>
-  <li>štúdie klinickej rozhodovacej podpory ukazujú zmiešané výsledky: niektoré pozorovali skrátenie hospitalizácie a mierny pokles mortality, no v randomizovanej štúdii so <strong>6 030 pacientmi</strong> nebol pri AKI preukázaný prínos push notifikácií/alertov v EHR ani pre dĺžku hospitalizácie, ani pre mortalitu.</li>
+  <li>v retrospektívnej analýze <strong>2&nbsp;010 pacientov</strong> po cievnych a hrudných výkonoch (vrátane srdcovej chirurgie) na predikciu pooperačného AKI vyšlo, že <strong>extreme gradient boosting</strong> prekonal tradičné modely,</li>
+  <li>v rozsiahlej dátovej práci s <strong>703&nbsp;782 pacientmi</strong> model predikoval AKI s vysokou schopnosťou zachytiť prípady, ktoré následne vyžadovali dialýzu, pričom upozornenie mohlo prísť <strong>až 48&nbsp;hodín pred dialýzou</strong>. Zároveň sa uvádza aj problém s vyššou mierou falošne pozitívnych predikcií a otázka prenositeľnosti výsledkov (model bol trénovaný na populácii s prevahou mužov),</li>
+  <li>štúdie klinickej rozhodovacej podpory ukazujú zmiešané výsledky: niektoré pozorovali skrátenie hospitalizácie a mierny pokles mortality, no v randomizovanej štúdii so <strong>6&nbsp;030 pacientmi</strong> nebol pri AKI preukázaný prínos push notifikácií/alertov v EHR ani pre dĺžku hospitalizácie, ani pre mortalitu.</li>
 </ul>
 
 <p>Praktický význam: AI môže pomôcť identifikovať nielen samotné AKI, ale aj pacientov s vyšším rizikom, aby sa spustil včasný intervenčný plán. Dôraz sa kladie aj na možnosti <strong>NLP</strong> (spracovanie textu v klinických poznámkach), ktoré dokážu vyťažiť informácie z dokumentácie nad rámec izolovaných laboratórnych hodnôt.</p>
@@ -103,7 +103,7 @@ $articles[] = [
   <li>model založený na logistickej regresii predpovedal progresiu diabetickej nefropatie s približne <strong>71 % presnosťou</strong> s využitím albuminúrie a biomarkerov (vrátane napr. močových L-type fatty acid-binding proteínov a sérového TNF-α),</li>
   <li>prístupy typu random forest sa používajú aj na detekciu retinopatie, neuropatie a nefropatie s uvádzanou presnosťou okolo <strong>0,838</strong>,</li>
   <li>spomína sa aj skríning vysokého rizika <strong>Fabryho choroby</strong> pomocou kombinácie fenotypových signálov a klinických charakteristík,</li>
-  <li>uvádza sa viac modelov pre progresiu CKD vrátane systému s patentovaným prístupom (pulzové dáta) s uvádzanými C-štatistikami v horizontoch 1, 2 a 5 rokov (približne 0,84, 0,81 a 0,79),</li>
+  <li>uvádza sa viac modelov pre progresiu CKD vrátane systému s patentovaným prístupom (pulzové dáta) s uvádzanými C-štatistikami v horizontoch 1, 2 a 5&nbsp;rokov (približne 0,84, 0,81 a 0,79),</li>
   <li>jeden komerčný model spomínaný v texte (KidneyIntelX) využíva plazmatické biomarkery, širokú paletu laboratórnych hodnôt, diagnózy, lieky a vitálne funkcie merané v troch časových bodoch; výkon sa udáva ako <strong>C-štatistika ~0,77</strong> a zdroj opisuje aj integráciu do EHR v rámci konkrétneho systému (Mount Sinai) a následnú ekonomickú analýzu s hypotézou úspory nákladov z menšieho počtu neplánovaných začatí dialýzy („crash starts“) a z pomalšej progresie DKD.</li>
 </ul>
 

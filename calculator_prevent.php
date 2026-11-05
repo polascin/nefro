@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $age = filter_var($form['age_years'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 30, 'max_range' => 79]]);
         if ($age === false) {
-            $errors[] = 'Vek musí byť celé číslo v intervale 30 až 79 rokov (rozsah platnosti PREVENT).';
+            $errors[] = 'Vek musí byť celé číslo v intervale 30 až 79 rokov (rozsah platnosti PREVENT).';
         }
 
         $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : '';
@@ -93,10 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         if ($totalC !== null && $hdlC !== null) {
             if ($cholUnit === 'mmol' && ($totalC < 2.0 || $totalC > 12.0 || $hdlC < 0.3 || $hdlC > 4.0)) {
-                $errors[] = 'Cholesterol mimo realistického rozsahu (TC 2–12, HDL 0,3–4 mmol/l).';
+                $errors[] = 'Cholesterol mimo realistického rozsahu (TC 2–12, HDL 0,3–4 mmol/l).';
             }
             if ($cholUnit === 'mgdl' && ($totalC < 80 || $totalC > 460 || $hdlC < 10 || $hdlC > 155)) {
-                $errors[] = 'Cholesterol mimo realistického rozsahu (TC 80–460, HDL 10–155 mg/dl).';
+                $errors[] = 'Cholesterol mimo realistického rozsahu (TC 80–460, HDL 10–155 mg/dl).';
             }
             if ($hdlC >= $totalC) {
                 $errors[] = 'HDL cholesterol musí byť nižší než celkový cholesterol.';
@@ -105,12 +105,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $sbp = calculatorParsePositiveFloat($form['sbp']);
         if ($sbp === null || $sbp < 90 || $sbp > 180) {
-            $errors[] = 'Systolický TK musí byť v rozsahu 90–180 mm Hg.';
+            $errors[] = 'Systolický TK musí byť v rozsahu 90–180 mm Hg.';
         }
 
         $bmi = calculatorParsePositiveFloat($form['bmi']);
         if ($bmi === null || $bmi < 15 || $bmi > 60) {
-            $errors[] = 'BMI musí byť v rozsahu 15–60 kg/m².';
+            $errors[] = 'BMI musí byť v rozsahu 15–60 kg/m².';
         }
 
         $form['egfr_unit'] = calculatorNormalizeEgfrUnit($form['egfr_unit']);
@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $uacrMgG = $uacrUnit === 'mg_mmol' ? $uacrVal * 8.84 : $uacrVal;
                 if ($uacrMgG < 0.1 || $uacrMgG > 25000) {
-                    $errors[] = 'UACR mimo realistického rozsahu (0,1–25000 mg/g).';
+                    $errors[] = 'UACR mimo realistického rozsahu (0,1–25000 mg/g).';
                 }
             }
         }
@@ -266,14 +266,14 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
         <div class="prevent-outcome__title"><?= htmlspecialchars($title) ?></div>
         <div class="prevent-horizons">
             <div class="prevent-horizon">
-                <span class="prevent-horizon__label">10 rokov</span>
+                <span class="prevent-horizon__label">10 rokov</span>
                 <span class="prevent-horizon__value"><?= $r10 !== null ? htmlspecialchars(number_format((float) $r10, 1, ',', ' ')) . ' %' : '—' ?></span>
                 <div class="risk-gauge" role="meter" aria-valuenow="<?= (float) ($r10 ?? 0) ?>" aria-valuemin="0" aria-valuemax="100">
                     <div class="risk-gauge__fill" data-width="<?= min(100, (float) ($r10 ?? 0)) ?>"></div>
                 </div>
             </div>
             <div class="prevent-horizon">
-                <span class="prevent-horizon__label">30 rokov</span>
+                <span class="prevent-horizon__label">30 rokov</span>
                 <?php if ($show30 && $r30 !== null): ?>
                     <span class="prevent-horizon__value"><?= htmlspecialchars(number_format((float) $r30, 1, ',', ' ')) ?> %</span>
                     <div class="risk-gauge" role="meter" aria-valuenow="<?= (float) $r30 ?>" aria-valuemin="0" aria-valuemax="100">
@@ -333,7 +333,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                         <div class="calc-formula-line">\[ \text{Riziko} = \dfrac{e^{\,lp}}{1 + e^{\,lp}} \times 100\% \]</div>
                         <div class="calc-formula-line">\[ lp = \beta_0 + \textstyle\sum \beta_i x_i \quad(\text{sex-špecifické koeficienty}) \]</div>
                         <div class="calc-formula-vars">
-                            Centrovanie: vek 55, non-HDL-C 3,5 mmol/l, HDL-C 1,3 mmol/l, SBP 130, BMI 25, eGFR 90, HbA1c 5,3 % &bull;
+                            Centrovanie: vek 55, non-HDL-C 3,5 mmol/l, HDL-C 1,3 mmol/l, SBP 130, BMI 25, eGFR 90, HbA1c 5,3 % &bull;
                             spline uzly SBP 110 / BMI 30 / eGFR 60 &bull; voliteľné: ln(UACR), HbA1c, SDI →
                             automaticky rozširujú model (base → plný) &bull;
                             Zdroj: Khan SS et al. <em>Circulation.</em> 2024;149:430–449.
@@ -369,7 +369,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="age_years">Vek (30–79 rokov)</label>
+                                <label for="age_years">Vek (30–79 rokov)</label>
                                 <input type="number" id="age_years" name="age_years" min="30" max="79" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>" placeholder="automaticky z dát. nar. / RČ">
                             </div>
                             <div class="form-group">
@@ -504,7 +504,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                         </div>
 
                         <?php if (!$calculated['show_30yr']): ?>
-                            <p class="helper-text">30-ročné riziko sa nezobrazuje: PREVENT ho odporúča len pre vek do 59 rokov.</p>
+                            <p class="helper-text">30-ročné riziko sa nezobrazuje: PREVENT ho odporúča len pre vek do 59 rokov.</p>
                         <?php endif; ?>
 
                         <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES) ?>">

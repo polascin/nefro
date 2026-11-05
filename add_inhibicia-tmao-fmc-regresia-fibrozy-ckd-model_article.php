@@ -44,7 +44,7 @@ $articles[] = [
 
 <h2>Dvojfázový model etablovanej CKD</h2>
 
-<p>Autori použili myši CD1 a štúdiu rozdelili na dve fázy. V prvej fáze podstúpili zvieratá jednostrannú nefrektómiu alebo simulovaný výkon a počas 12 týždňov dostávali stravu s vysokým obsahom tukov s pridaním 1 % cholínu alebo bez neho. Funkčné, biochemické a histologické merania potvrdili rozvoj CKD pred začatím experimentálnej liečby.</p>
+<p>Autori použili myši CD1 a štúdiu rozdelili na dve fázy. V prvej fáze podstúpili zvieratá jednostrannú nefrektómiu alebo simulovaný výkon a počas 12&nbsp;týždňov dostávali stravu s vysokým obsahom tukov s pridaním 1 % cholínu alebo bez neho. Funkčné, biochemické a histologické merania potvrdili rozvoj CKD pred začatím experimentálnej liečby.</p>
 
 <p>V druhej fáze boli myši po nefrektómii s cholínovou suplementáciou randomizované na pokračovanie pôvodnej diéty s FMC alebo bez FMC počas ďalších ôsmich týždňov. Takéto usporiadanie umožnilo odlíšiť prevenciu vzniku poškodenia od zásahu do už rozvinutého ochorenia.</p>
 
@@ -64,12 +64,12 @@ $articles[] = [
       <td>Model mal pred liečbou preukázané funkčné aj štruktúrne poškodenie</td>
     </tr>
     <tr>
-      <td>Ďalších 8 týždňov bez FMC</td>
+      <td>Ďalších 8&nbsp;týždňov bez FMC</td>
       <td>Pokračujúci vzostup TMAO, progresia funkčného poškodenia a fibrózy</td>
       <td>Neliečená skupina dokumentovala prirodzenú progresiu modelu</td>
     </tr>
     <tr>
-      <td>Ďalších 8 týždňov s FMC</td>
+      <td>Ďalších 8&nbsp;týždňov s FMC</td>
       <td>Takmer úplné potlačenie cirkulujúceho TMAO, o viac než 50 % vyššia meraná GFR oproti neliečenej skupine, pokles fibrózy o 41 % a vzostup meranej GFR o 39 % oproti stavu pred liečebnou fázou</td>
       <td>Ide o regresiu fenotypu v konkrétnom myšom modeli, nie o klinický účinok u ľudí</td>
     </tr>

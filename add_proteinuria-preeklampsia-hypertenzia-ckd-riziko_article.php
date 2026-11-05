@@ -40,7 +40,7 @@ $articles[] = [
 
 <h2>Čo skúmala dánska kohorta</h2>
 
-<p>Výskumníci analyzovali údaje z Danish Medical Birth Register. Do populačnej kohortovej štúdie zaradili 286 078 žien vo veku 15 rokov a viac, ktoré mali graviditu trvajúcu aspoň 20 týždňov v rokoch 1998 až 2018. Medián sledovania bol 6,4 roka.</p>
+<p>Výskumníci analyzovali údaje z Danish Medical Birth Register. Do populačnej kohortovej štúdie zaradili 286&nbsp;078 žien vo veku 15&nbsp;rokov a viac, ktoré mali graviditu trvajúcu aspoň 20&nbsp;týždňov v rokoch 1998 až 2018. Medián sledovania bol 6,4 roka.</p>
 
 <p>Cieľom bolo zistiť, či miera vylučovania bielkovín močom pri preeklampsii súvisí s dlhodobým rizikom troch výsledkov:</p>
 
@@ -50,7 +50,7 @@ $articles[] = [
   <li>kardiovaskulárneho ochorenia.</li>
 </ul>
 
-<p>Ženy s preeklampsiou boli rozdelené podľa najvyššieho zaznamenaného stupňa proteinúrie medzi 20. týždňom gravidity a 6. týždňom po pôrode. Za žiadnu alebo miernu proteinúriu sa považoval pomer albumín/kreatinín v moči pod 30 mg/g alebo negatívny test močovým prúžkom. Za stredne ťažkú alebo ťažkú proteinúriu sa považoval pomer albumín/kreatinín aspoň 30 mg/g alebo pozitívny test močovým prúžkom.</p>
+<p>Ženy s preeklampsiou boli rozdelené podľa najvyššieho zaznamenaného stupňa proteinúrie medzi 20. týždňom gravidity a 6. týždňom po pôrode. Za žiadnu alebo miernu proteinúriu sa považoval pomer albumín/kreatinín v moči pod 30&nbsp;mg/g alebo negatívny test močovým prúžkom. Za stredne ťažkú alebo ťažkú proteinúriu sa považoval pomer albumín/kreatinín aspoň 30&nbsp;mg/g alebo pozitívny test močovým prúžkom.</p>
 
 <h2>Preeklampsia nebola zriedkavá, proteinúria bola častá</h2>
 

@@ -59,9 +59,9 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Štúdia publikovaná v <em>Psychological Medicine</em> zaradila 50 dospelých vo veku 18 až 40 rokov, ktorí mali v minulosti aspoň dve epizódy depresie, ale aktuálne neboli depresívni a najmenej 6 mesiacov boli v remisii. Neužívali antidepresíva ani inú psychotropnú liečbu.</p>
+<p>Štúdia publikovaná v <em>Psychological Medicine</em> zaradila 50 dospelých vo veku 18 až 40&nbsp;rokov, ktorí mali v minulosti aspoň dve epizódy depresie, ale aktuálne neboli depresívni a najmenej 6&nbsp;mesiacov boli v remisii. Neužívali antidepresíva ani inú psychotropnú liečbu.</p>
 
-<p>Účastníci boli randomizovaní na prukaloprid alebo placebo. Prukaloprid sa titroval z 1 mg na 2 mg denne a liečba trvala 7 až 10 dní. Po vylúčení jedného účastníka pre problémy s kvalitou dát zostalo v analýze 49 osôb.</p>
+<p>Účastníci boli randomizovaní na prukaloprid alebo placebo. Prukaloprid sa titroval z 1&nbsp;mg na 2&nbsp;mg denne a liečba trvala 7 až 10&nbsp;dní. Po vylúčení jedného účastníka pre problémy s kvalitou dát zostalo v analýze 49 osôb.</p>
 
 <p>Výskumníci hodnotili viacero typov kognície. Primárne išlo o takzvanú „cold cognition“, teda neemocionálne kognitívne funkcie, napríklad pamäť, pracovnú pamäť, pozornosť, rýchlosť spracovania a exekutívne funkcie. Sekundárne sa hodnotila aj „hot cognition“, teda spracovanie emočne nabitých podnetov.</p>
 
@@ -81,8 +81,8 @@ $articles[] = [
 
 <ul>
   <li>malý počet účastníkov,</li>
-  <li>krátke trvanie liečby 7 až 10 dní,</li>
-  <li>mladšia populácia do 40 rokov,</li>
+  <li>krátke trvanie liečby 7 až 10&nbsp;dní,</li>
+  <li>mladšia populácia do 40&nbsp;rokov,</li>
   <li>prevažne vysoko vzdelaná vzorka,</li>
   <li>absencia požiadavky na klinicky významný kognitívny deficit pri zaradení,</li>
   <li>nejasnosť, či zlepšenie v testoch znamená reálne zlepšenie v práci, štúdiu alebo bežnom živote,</li>
@@ -119,7 +119,7 @@ $articles[] = [
 
 <p>Prukaloprid môže byť pre nefrológa prakticky relevantný z iného dôvodu: chronická zápcha je pri CKD častá. Prispieva k nej obmedzenie tekutín, nízky príjem vlákniny, sedavý režim, viazače fosfátov, železo, opioidy, niektoré antihypertenzíva a samotné uremické prostredie.</p>
 
-<p>Ak sa prukaloprid u pacienta s CKD používa v schválenej indikácii chronickej zápchy, treba myslieť na renálnu elimináciu. Podľa oficiálnych liekových informácií sa prukaloprid významne vylučuje obličkami. Pri miernom až stredne závažnom renálnom poškodení sa zvyčajne nevyžaduje úprava dávky, pri ťažkom renálnom poškodení sa odporúča znížená dávka 1 mg denne a pri terminálnom zlyhaní obličiek vyžadujúcom dialýzu sa použitie neodporúča alebo je kontraindikované podľa konkrétnej registrácie.</p>
+<p>Ak sa prukaloprid u pacienta s CKD používa v schválenej indikácii chronickej zápchy, treba myslieť na renálnu elimináciu. Podľa oficiálnych liekových informácií sa prukaloprid významne vylučuje obličkami. Pri miernom až stredne závažnom renálnom poškodení sa zvyčajne nevyžaduje úprava dávky, pri ťažkom renálnom poškodení sa odporúča znížená dávka 1&nbsp;mg denne a pri terminálnom zlyhaní obličiek vyžadujúcom dialýzu sa použitie neodporúča alebo je kontraindikované podľa konkrétnej registrácie.</p>
 
 <p>U nefrologického pacienta treba zvažovať najmä aktuálnu eGFR, riziko dehydratácie pri hnačke, kombináciu s diuretikami, celkovú krehkosť, polyfarmáciu, elektrolytové poruchy a rozdiel medzi liečbou zápchy a experimentálnym použitím na kogníciu.</p>
 

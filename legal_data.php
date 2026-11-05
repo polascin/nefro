@@ -32,10 +32,10 @@ function legalInfo(): array
     return [
         'entity'                   => 'Nefro-projekt Slovensko',
         'operator'                 => 'MUDr. Ľubomír Polaščín - Nephroctor',
-        'companyId'                => '57 646 856',
+        'companyId'                => '57 646 856',
         'taxId'                    => '1047524401',
         'businessAddress'          => 'Kvetná 944/2I, 900 41 Rovinka, okres Senec, Bratislavský kraj',
-        'phone'                    => '+421 917 370 474',
+        'phone'                    => '+421 917 370 474',
         'registerName'             => 'Živnostenský register Slovenskej republiky',
         'registerNumber'           => 'Okresný úrad Senec',
         'site'                     => 'nefro.polascin.net',
@@ -68,7 +68,7 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Autentifikačné a bezpečnostné údaje',
-            'examples' => 'Hašované heslo (bcrypt), údaje dvojfaktorového overenia, čas posledného prihlásenia, IP adresa, používateľský agent, pokusy o prihlásenie a iné rate-limit záznamy. Po zrušení účtu sa najviac 90 dní uchováva minimalizovaný bezpečnostný audit bez používateľského mena; môže obsahovať pôvodné číselné ID, jednosmerný odtlačok a doménu e-mailu, IP adresu, používateľský agent a súhrnné počty vymazaných záznamov.',
+            'examples' => 'Hašované heslo (bcrypt), údaje dvojfaktorového overenia, čas posledného prihlásenia, IP adresa, používateľský agent, pokusy o prihlásenie a iné rate-limit záznamy. Po zrušení účtu sa najviac 90 dní uchováva minimalizovaný bezpečnostný audit bez používateľského mena; môže obsahovať pôvodné číselné ID, jednosmerný odtlačok a doménu e-mailu, IP adresu, používateľský agent a súhrnné počty vymazaných záznamov.',
         ],
         [
             'category' => 'Avatar',
@@ -331,7 +331,7 @@ function legalStoredItems(): array
             'name'     => 'nps_cookie_consent',
             'category' => 'Nevyhnutné',
             'purpose'  => 'Ukladá vaše voľby súhlasu s cookies (localStorage + záložná cookie).',
-            'duration' => '365 dní',
+            'duration' => '365 dní',
         ],
         [
             'name'     => 'nps_theme, nps_theme_auto',
@@ -355,7 +355,7 @@ function legalStoredItems(): array
             'name'     => '_ga, _ga_0JT5VMQ61K',
             'category' => 'Analytické',
             'purpose'  => 'Google Analytics 4 — rozlíšenie návštevníkov a relácií. Nastavené len so súhlasom.',
-            'duration' => 'Do 2 rokov',
+            'duration' => 'Do 2 rokov',
         ],
     ];
 }
@@ -378,7 +378,7 @@ function legalUpdatesByVersion(): array
         '2.9' => [
             'Portál začal predávať elektronické publikácie (e-knihy). Doplnili sme preto nové účely spracúvania — vybavenie objednávky a dodanie digitálneho obsahu (plnenie zmluvy), vedenie účtovníctva z predaja a preukázanie súhlasu s dodaním pred uplynutím lehoty na odstúpenie od zmluvy (zákonná povinnosť) a vybavenie reklamácií či obranu nárokov.',
             'Opísali sme nové kategórie údajov: objednávkové a fakturačné údaje, doklad o oboch potvrdených súhlasoch vrátane verzie obchodných podmienok, prístupový token k objednávke a evidenciu stiahnutí. Objednávku možno podať bez registrácie.',
-            'Doby uchovávania objednávok sme rozlíšili podľa údaja namiesto jednej paušálnej lehoty: zaplatená objednávka ako účtovný doklad 10 rokov, neuhradená alebo zrušená 90 dní, IP adresa a prehliadač z objednávkového formulára 90 dní, prístup na stiahnutie 2 roky a podrobnosti o stiahnutiach 4 roky (potom zostáva len ich počet). Mazanie a anonymizáciu vykonáva automatický cron.',
+            'Doby uchovávania objednávok sme rozlíšili podľa údaja namiesto jednej paušálnej lehoty: zaplatená objednávka ako účtovný doklad 10 rokov, neuhradená alebo zrušená 90 dní, IP adresa a prehliadač z objednávkového formulára 90 dní, prístup na stiahnutie 2 roky a podrobnosti o stiahnutiach 4 roky (potom zostáva len ich počet). Mazanie a anonymizáciu vykonáva automatický cron.',
             'Do zoznamu príjemcov sme doplnili platobné služby a pri každom príjemcovi uvádzame jeho skutočnú rolu. Stripe Payments Europe (Írsko), PayPal (Europe) v Luxembursku a Tatra banka vystupujú ako samostatní prevádzkovatelia, nie ako naši sprostredkovatelia — určujú vlastné účely a nemáme nad nimi zmluvnú kontrolu. Pri Revolute, Ko-fi, Viame, payme.sk a Upholde im sami neposielame žiadny údaj; zobrazíme len odkaz alebo číslo účtu a spojenie vytvorí váš prehliadač.',
             'Spresnili sme medzinárodné prenosy pri platbách: zmluvní partneri sú v EÚ, prípadné ďalšie prenosy do USA zabezpečujú poskytovatelia vlastnými zárukami, a Ko-fi s Upholdom spadajú pod rozhodnutie o primeranosti pre Spojené kráľovstvo.',
         ],
@@ -392,7 +392,7 @@ function legalUpdatesByVersion(): array
             'Zjednotili sme označenie prevádzkovateľa na „MUDr. Ľubomír Polaščín - Nephroctor“ naprieč všetkými dokumentmi.',
         ],
         '2.6' => [
-            'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
+            'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
         ],
         '2.5' => [
             'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',

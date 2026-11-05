@@ -150,7 +150,7 @@ $articles[] = [
 
 <h2>Dlhodobé sledovanie</h2>
 
-<p>Dojčatá a malé deti majú byť podľa závažnosti kontrolované aspoň každé 3 až 6 mesiacov, stabilné staršie deti a dospelí každých 6 až 12 mesiacov. Interval sa skracuje pri zmenách liečby, raste, tehotenstve, interkurentnom ochorení alebo zhoršení funkcie obličiek.</p>
+<p>Dojčatá a malé deti majú byť podľa závažnosti kontrolované aspoň každé 3 až 6&nbsp;mesiacov, stabilné staršie deti a dospelí každých 6 až 12&nbsp;mesiacov. Interval sa skracuje pri zmenách liečby, raste, tehotenstve, interkurentnom ochorení alebo zhoršení funkcie obličiek.</p>
 
 <p>Pri kontrolách treba cielene hodnotiť:</p>
 
@@ -163,7 +163,7 @@ $articles[] = [
   <li>sluch pri type 4 a EKG pri diagnóze, závažnej hypokaliémii, palpitáciách alebo synkope.</li>
 </ul>
 
-<p>Ultrazvuk obličiek sa odporúča približne každých 12 až 24 mesiacov na sledovanie nefrokalcinózy, kameňov a sekundárnej obštrukcie pri výraznej polyúrii. Frekvencia sa individualizuje podľa nálezu.</p>
+<p>Ultrazvuk obličiek sa odporúča približne každých 12 až 24&nbsp;mesiacov na sledovanie nefrokalcinózy, kameňov a sekundárnej obštrukcie pri výraznej polyúrii. Frekvencia sa individualizuje podľa nálezu.</p>
 
 <h2>Prognóza a riziko chronickej choroby obličiek</h2>
 

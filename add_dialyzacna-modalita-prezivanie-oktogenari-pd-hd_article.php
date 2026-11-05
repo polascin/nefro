@@ -25,7 +25,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/dialyzacna-modalita-prezivanie-oktogenari-pd-hd.webp" rel="noopener noreferrer" target="_blank"><img src="img/dialyzacna-modalita-prezivanie-oktogenari-pd-hd.webp" alt="Dve svetelné cesty, modrá a jantárová, ktoré sa opakovane prepletajú a končia takmer v tom istom bode" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. U najstarších pacientov nerozhoduje ani tak úvodná voľba modality, ako to, čo sa deje počas liečby.</figcaption></figure>
 
-<p>Pacienti vo veku 80 rokov a viac tvoria rýchlo rastúcu časť dialyzovanej populácie, porovnávacích údajov o prežívaní podľa dialyzačnej modality je však v tejto vekovej skupine málo. Populačná kohortová štúdia z Katalánskeho obličkového registra (<em>Registre de Malalts Renals de Catalunya</em>, RMRC), publikovaná v <em>Clinical Kidney Journal</em>, sa preto zamerala práve na nich.</p>
+<p>Pacienti vo veku 80&nbsp;rokov a viac tvoria rýchlo rastúcu časť dialyzovanej populácie, porovnávacích údajov o prežívaní podľa dialyzačnej modality je však v tejto vekovej skupine málo. Populačná kohortová štúdia z Katalánskeho obličkového registra (<em>Registre de Malalts Renals de Catalunya</em>, RMRC), publikovaná v <em>Clinical Kidney Journal</em>, sa preto zamerala práve na nich.</p>
 
 <p>Hlavný výsledok je dvojaký. Po štatistickej úprave <strong>sa päťročné prežívanie nelíšilo</strong> podľa toho, či pacient začal hemodialýzou (HD) alebo peritoneálnou dialýzou (PD). Prechod z peritoneálnej dialýzy na hemodialýzu však bol nezávisle spojený s vyššou mortalitou: pomer hazardu 1,46 (95 % interval spoľahlivosti 1,02 – 2,08; P = 0,038).</p>
 
@@ -41,9 +41,9 @@ $articles[] = [
 
 <h2>Usporiadanie štúdie</h2>
 
-<p>Retrospektívna observačná kohortová štúdia vychádzala z Katalánskeho obličkového registra a zahrnula všetkých pacientov vo veku 80 rokov a viac, ktorí začali dialýzu od 1. januára 2000 do 31. decembra 2022.</p>
+<p>Retrospektívna observačná kohortová štúdia vychádzala z Katalánskeho obličkového registra a zahrnula všetkých pacientov vo veku 80&nbsp;rokov a viac, ktorí začali dialýzu od 1. januára 2000 do 31. decembra 2022.</p>
 
-<p>V Katalánsku začalo v tomto období dialýzu celkovo 24 652 pacientov; 4256 z nich (17,2 %) bolo vo veku 80 rokov a viac. Vylúčení boli pacienti, ktorí už dostávali náhradu funkcie obličiek mimo Katalánska, u ktorých došlo k skorému obnoveniu funkcie obličiek, a tí, ktorí prešli z hemodialýzy na peritoneálnu dialýzu počas prvých 90 dní (n = 9). Posledné kritérium je metodologicky odôvodnené: takéto prípady spravidla zodpovedajú urgentne začatej hemodialýze s plánovaným prechodom na peritoneálnu dialýzu po stabilizácii, nie skutočnej zmene modality.</p>
+<p>V Katalánsku začalo v tomto období dialýzu celkovo 24&nbsp;652 pacientov; 4256 z nich (17,2 %) bolo vo veku 80&nbsp;rokov a viac. Vylúčení boli pacienti, ktorí už dostávali náhradu funkcie obličiek mimo Katalánska, u ktorých došlo k skorému obnoveniu funkcie obličiek, a tí, ktorí prešli z hemodialýzy na peritoneálnu dialýzu počas prvých 90&nbsp;dní (n = 9). Posledné kritérium je metodologicky odôvodnené: takéto prípady spravidla zodpovedajú urgentne začatej hemodialýze s plánovaným prechodom na peritoneálnu dialýzu po stabilizácii, nie skutočnej zmene modality.</p>
 
 <p>Konečná kohorta zahrnula <strong>4205 pacientov</strong>:</p>
 
@@ -169,7 +169,7 @@ $articles[] = [
 
 <h2>Kto a prečo prechádzal na hemodialýzu</h2>
 
-<p>Zo 63 pacientov, ktorí prešli z peritoneálnej dialýzy na hemodialýzu, bol medián času stráveného na peritoneálnej dialýze <strong>461 dní</strong> (medzikvartilové rozpätie 144 – 944). Načasovanie prechodu teda bolo veľmi premenlivé.</p>
+<p>Zo 63 pacientov, ktorí prešli z peritoneálnej dialýzy na hemodialýzu, bol medián času stráveného na peritoneálnej dialýze <strong>461&nbsp;dní</strong> (medzikvartilové rozpätie 144 – 944). Načasovanie prechodu teda bolo veľmi premenlivé.</p>
 
 <p>U 56 pacientov bol známy dôvod prechodu:</p>
 
@@ -242,7 +242,7 @@ $articles[] = [
 
 <h3>Vylúčenie skorých prechodov z hemodialýzy na peritoneálnu dialýzu</h3>
 
-<p>Vylúčenie pacientov, ktorí prešli z hemodialýzy na peritoneálnu dialýzu do 90 dní, je metodologicky odôvodnené, ale samo osebe môže zaviesť výberové skreslenie. Ide spravidla o urgentne začatú dialýzu s odlišnými klinickými charakteristikami.</p>
+<p>Vylúčenie pacientov, ktorí prešli z hemodialýzy na peritoneálnu dialýzu do 90&nbsp;dní, je metodologicky odôvodnené, ale samo osebe môže zaviesť výberové skreslenie. Ide spravidla o urgentne začatú dialýzu s odlišnými klinickými charakteristikami.</p>
 
 <h3>Chýbajúce údaje na úrovni stredísk</h3>
 
@@ -269,7 +269,7 @@ $articles[] = [
 <ul>
   <li>že hemodialýza po prechode mortalitu <em>spôsobuje</em> – kauzálny podiel prechodu a podiel zhoršenia stavu, ktoré k nemu viedlo, nemožno oddeliť;</li>
   <li>že obe modality poskytujú rovnakú kvalitu života alebo symptomatickú záťaž – tieto ukazovatele sa nehodnotili;</li>
-  <li>že jedna modalita je optimálna pre všetkých pacientov vo veku 80 rokov a viac;</li>
+  <li>že jedna modalita je optimálna pre všetkých pacientov vo veku 80&nbsp;rokov a viac;</li>
   <li>že prechod na hemodialýzu treba odkladať aj pri zlyhaní peritoneálnej dialýzy;</li>
   <li>čokoľvek o porovnaní dialýzy s konzervatívnym postupom – register zahŕňa iba pacientov, ktorí dialýzu začali;</li>
   <li>že vek sám osebe je dostatočným dôvodom na výber alebo odmietnutie určitej modality.</li>
@@ -301,7 +301,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V populačnej kohorte 4205 pacientov vo veku 80 rokov a viac z Katalánskeho obličkového registra nebola úvodná voľba hemodialýzy alebo peritoneálnej dialýzy po úprave spojená s rozdielom v prežívaní. Prechod z peritoneálnej dialýzy na hemodialýzu bol spojený s vyššou mortalitou (pomer hazardu 1,46; 95 % interval spoľahlivosti 1,02 – 2,08), pričom najpravdepodobnejším vysvetlením je zhoršenie zdravotného stavu, ktoré k prechodu viedlo; príspevok samotného procesu zmeny však nemožno vylúčiť.</p>
+<p>V populačnej kohorte 4205 pacientov vo veku 80&nbsp;rokov a viac z Katalánskeho obličkového registra nebola úvodná voľba hemodialýzy alebo peritoneálnej dialýzy po úprave spojená s rozdielom v prežívaní. Prechod z peritoneálnej dialýzy na hemodialýzu bol spojený s vyššou mortalitou (pomer hazardu 1,46; 95 % interval spoľahlivosti 1,02 – 2,08), pričom najpravdepodobnejším vysvetlením je zhoršenie zdravotného stavu, ktoré k prechodu viedlo; príspevok samotného procesu zmeny však nemožno vylúčiť.</p>
 
 <p>Silnou stránkou práce je modelovanie modality ako časovo závislej expozície, ktoré bráni skresleniu nesmrteľným časom. Práve vďaka nemu sa ukázalo, že zdanlivo horšie prežívanie pri peritoneálnej dialýze v jednoduchej analýze bolo artefaktom metódy.</p>
 

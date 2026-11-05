@@ -78,15 +78,15 @@ $articles[] = [
 <ul>
   <li>☐ Korektibilné príčiny vyriešené, najmä deficit železa: áno/nie</li>
   <li>☐ Zdieľané rozhodovanie s pacientom: áno/nie</li>
-  <li>☐ Pri CKD G5D zvážiť ESA typicky pri <strong>Hb približne ≤ 9,0 až 10,0 g/dl</strong>: áno/nie</li>
-  <li>☐ Pri udržiavaní držať Hb <strong>pod hornou hranicou ~11,5 g/dl</strong>: ____________</li>
+  <li>☐ Pri CKD G5D zvážiť ESA typicky pri <strong>Hb približne ≤ 9,0 až 10,0&nbsp;g/dl</strong>: áno/nie</li>
+  <li>☐ Pri udržiavaní držať Hb <strong>pod hornou hranicou ~11,5&nbsp;g/dl</strong>: ____________</li>
   <li>☐ Voľba: ESA / HIF-PHI / zatiaľ nie + dôvod: ____________</li>
 </ul>
 
 <h3>6) Monitoring</h3>
 <ul>
   <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong></li>
-  <li>☐ Interval: <strong>1 až 3 mesiace</strong> (G5HD) alebo podľa lokálneho dialyzačného protokolu (G5PD)</li>
+  <li>☐ Interval: <strong>1 až 3&nbsp;mesiace</strong> (G5HD) alebo podľa lokálneho dialyzačného protokolu (G5PD)</li>
   <li>☐ Prehodnotenie pri zmene klinického stavu: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb: áno/nie</li>
   <li>☐ Návrh ďalšej kontroly: [DD.MM.RRRR]</li>
 </ul>
@@ -141,14 +141,14 @@ $articles[] = [
   <li>☐ Zdieľané rozhodovanie s pacientom: áno/nie</li>
   <li>☐ Zohľadnené riziká a benefit vrátane transfúzií: áno/nie</li>
   <li>☐ Iniciácia ESA v CKD bez dialýzy podľa symptómov, trendu Hb a rizík, nielen podľa čísla: ____________</li>
-  <li>☐ Pri udržiavaní držať Hb <strong>pod hornou hranicou ~11,5 g/dl</strong>: ____________</li>
+  <li>☐ Pri udržiavaní držať Hb <strong>pod hornou hranicou ~11,5&nbsp;g/dl</strong>: ____________</li>
 </ul>
 
 <h3>6) Monitoring</h3>
 <ul>
-  <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong> každé <strong>3 mesiace</strong> alebo skôr pri zmene stavu: áno/nie</li>
+  <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong> každé <strong>3&nbsp;mesiace</strong> alebo skôr pri zmene stavu: áno/nie</li>
   <li>☐ Návrh ďalšej kontroly: [DD.MM.RRRR]</li>
-  <li>☐ Ak perorálne železo nefunguje alebo je netolerované do 1 až 3 mesiacov, prehodnotiť IV: áno/nie</li>
+  <li>☐ Ak perorálne železo nefunguje alebo je netolerované do 1 až 3&nbsp;mesiacov, prehodnotiť IV: áno/nie</li>
 </ul>
 
 <h3>7) Dokumentácia pre audit</h3>

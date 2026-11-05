@@ -51,13 +51,13 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <td>Vek 40–75 rokov, CKD v štádiu G3 alebo vyššom, LDL-C 1,8–4,9 mmol/l (70–189 mg/dl)</td>
+      <td>Vek 40–75&nbsp;rokov, CKD v štádiu G3 alebo vyššom, LDL-C 1,8–4,9&nbsp;mmol/l (70–189&nbsp;mg/dl)</td>
       <td>Stredne intenzívny statín alebo kombinácia stredne intenzívneho statínu s ezetimibom na zníženie rizika ASCVD</td>
       <td>I, B-R</td>
     </tr>
     <tr>
       <td>CKD v štádiu G3 alebo vyššom a klinické ASCVD</td>
-      <td>Vysokointenzívny statín s možným pridaním ezetimibu a/alebo monoklonálnej protilátky proti PCSK9; cieľom je pokles LDL-C najmenej o 50 %, LDL-C &lt;1,4 mmol/l (&lt;55 mg/dl) a non-HDL-C &lt;2,2 mmol/l (&lt;85 mg/dl)</td>
+      <td>Vysokointenzívny statín s možným pridaním ezetimibu a/alebo monoklonálnej protilátky proti PCSK9; cieľom je pokles LDL-C najmenej o 50 %, LDL-C &lt;1,4&nbsp;mmol/l (&lt;55&nbsp;mg/dl) a non-HDL-C &lt;2,2&nbsp;mmol/l (&lt;85&nbsp;mg/dl)</td>
       <td>I, B-R</td>
     </tr>
     <tr>
@@ -69,13 +69,13 @@ $articles[] = [
 </table>
 </div>
 
-<p>Prvé odporúčanie sa týka primárnej prevencie vo vymedzenom veku a rozsahu LDL-C. Pacienti s LDL-C ≥4,9 mmol/l (≥190 mg/dl) patria do osobitného algoritmu závažnej hypercholesterolémie. Pri hodnotách mimo uvedeného rozsahu alebo mimo veku 40–75 rokov nemožno CKD odporúčanie mechanicky extrapolovať; rozhoduje celkový klinický kontext a ďalšie príslušné časti usmernenia.</p>
+<p>Prvé odporúčanie sa týka primárnej prevencie vo vymedzenom veku a rozsahu LDL-C. Pacienti s LDL-C ≥4,9&nbsp;mmol/l (≥190&nbsp;mg/dl) patria do osobitného algoritmu závažnej hypercholesterolémie. Pri hodnotách mimo uvedeného rozsahu alebo mimo veku 40–75&nbsp;rokov nemožno CKD odporúčanie mechanicky extrapolovať; rozhoduje celkový klinický kontext a ďalšie príslušné časti usmernenia.</p>
 
 <h2>PREVENT už obličky neignoruje</h2>
 
-<p>Odporúčania nahrádzajú staršie rovnice Pooled Cohort Equations modelom PREVENT-ASCVD. Ten odhaduje desaťročné aj tridsaťročné riziko u dospelých vo veku 30–79 rokov bez známeho kardiovaskulárneho ochorenia; v usmernení sa používa pri LDL-C 1,8–4,9 mmol/l. Na rozdiel od staršieho modelu povinne zahŕňa eGFR; pomer albumínu ku kreatinínu v moči (UACR) možno pridať ako voliteľný parameter spolu s HbA1c a indexom sociálnej deprivácie.</p>
+<p>Odporúčania nahrádzajú staršie rovnice Pooled Cohort Equations modelom PREVENT-ASCVD. Ten odhaduje desaťročné aj tridsaťročné riziko u dospelých vo veku 30–79&nbsp;rokov bez známeho kardiovaskulárneho ochorenia; v usmernení sa používa pri LDL-C 1,8–4,9&nbsp;mmol/l. Na rozdiel od staršieho modelu povinne zahŕňa eGFR; pomer albumínu ku kreatinínu v moči (UACR) možno pridať ako voliteľný parameter spolu s HbA1c a indexom sociálnej deprivácie.</p>
 
-<p>PREVENT preto lepšie prepája kardiovaskulárne, obličkové a metabolické riziko. Ani tento model však nie je určený pre sekundárnu prevenciu, zlyhanie obličiek ani závažné subklinické kardiovaskulárne ochorenie. Pri pacientovi vo veku 40–75 rokov s CKD v štádiu G3 alebo vyššom a LDL-C 1,8–4,9 mmol/l navyše nízky vypočítaný výsledok nemá byť dôvodom na odklad liečby, pretože táto skupina má samostatné odporúčanie triedy I.</p>
+<p>PREVENT preto lepšie prepája kardiovaskulárne, obličkové a metabolické riziko. Ani tento model však nie je určený pre sekundárnu prevenciu, zlyhanie obličiek ani závažné subklinické kardiovaskulárne ochorenie. Pri pacientovi vo veku 40–75&nbsp;rokov s CKD v štádiu G3 alebo vyššom a LDL-C 1,8–4,9&nbsp;mmol/l navyše nízky vypočítaný výsledok nemá byť dôvodom na odklad liečby, pretože táto skupina má samostatné odporúčanie triedy I.</p>
 
 <p>Model bol odvodený a validovaný v populácii Spojených štátov; americký index sociálnej deprivácie založený na poštovom smerovacom čísle nie je priamo prenosný do slovenského prostredia. PREVENT preto môže byť informatívny, ale v európskej praxi nenahrádza odporúčané modely SCORE2 alebo SCORE2-OP ani klinické posúdenie CKD.</p>
 
@@ -83,9 +83,9 @@ $articles[] = [
 
 <h2>Návrat cieľových hodnôt LDL-C</h2>
 
-<p>Americké odporúčania opäť používajú absolútne cieľové hodnoty LDL-C a non-HDL-C. V primárnej prevencii je všeobecným cieľom pri hraničnom alebo strednom riziku LDL-C &lt;2,6 mmol/l (&lt;100 mg/dl) a non-HDL-C &lt;3,4 mmol/l (&lt;130 mg/dl). Pri vysokom desaťročnom riziku PREVENT-ASCVD ≥10 % sú ciele LDL-C &lt;1,8 mmol/l (&lt;70 mg/dl) a non-HDL-C &lt;2,6 mmol/l (&lt;100 mg/dl).</p>
+<p>Americké odporúčania opäť používajú absolútne cieľové hodnoty LDL-C a non-HDL-C. V primárnej prevencii je všeobecným cieľom pri hraničnom alebo strednom riziku LDL-C &lt;2,6&nbsp;mmol/l (&lt;100&nbsp;mg/dl) a non-HDL-C &lt;3,4&nbsp;mmol/l (&lt;130&nbsp;mg/dl). Pri vysokom desaťročnom riziku PREVENT-ASCVD ≥10 % sú ciele LDL-C &lt;1,8&nbsp;mmol/l (&lt;70&nbsp;mg/dl) a non-HDL-C &lt;2,6&nbsp;mmol/l (&lt;100&nbsp;mg/dl).</p>
 
-<p>Pri CKD v štádiu G3 alebo vyššom s klinickým ASCVD platí prísnejší CKD-špecifický cieľ: LDL-C &lt;1,4 mmol/l, non-HDL-C &lt;2,2 mmol/l a súčasne pokles LDL-C najmenej o 50 % oproti východiskovej hodnote. Nejde teda o voľbu medzi cieľom 1,8 a 1,4 mmol/l podľa neurčitej kategórie „veľmi vysokého“ rizika; v tejto konkrétnej kombinácii CKD a ASCVD odporúčanie priamo uvádza cieľ 1,4 mmol/l.</p>
+<p>Pri CKD v štádiu G3 alebo vyššom s klinickým ASCVD platí prísnejší CKD-špecifický cieľ: LDL-C &lt;1,4&nbsp;mmol/l, non-HDL-C &lt;2,2&nbsp;mmol/l a súčasne pokles LDL-C najmenej o 50 % oproti východiskovej hodnote. Nejde teda o voľbu medzi cieľom 1,8 a 1,4&nbsp;mmol/l podľa neurčitej kategórie „veľmi vysokého“ rizika; v tejto konkrétnej kombinácii CKD a ASCVD odporúčanie priamo uvádza cieľ 1,4&nbsp;mmol/l.</p>
 
 <h2>Statín je základ, ale nie vždy postačuje</h2>
 
@@ -93,7 +93,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Ezetimib</strong> má pri CKD oporu aj v štúdii SHARP a umožňuje ďalšie zníženie LDL-C bez zvyšovania dávky statínu.</li>
-  <li><strong>Monoklonálne protilátky proti PCSK9</strong> majú dôkazy o kardiovaskulárnom prínose pri miernej až stredne ťažkej CKD; údaje pri eGFR &lt;20 ml/min/1,73 m<sup>2</sup> sú obmedzené.</li>
+  <li><strong>Monoklonálne protilátky proti PCSK9</strong> majú dôkazy o kardiovaskulárnom prínose pri miernej až stredne ťažkej CKD; údaje pri eGFR &lt;20&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> sú obmedzené.</li>
   <li><strong>Kyselina bempedoová</strong> je možnosťou pri vybraných pacientoch, ale pri ťažkej CKD a dialýze chýbajú dostatočné údaje a treba rešpektovať schválené dávkovanie a bezpečnostný profil.</li>
   <li><strong>Inklisiran</strong> účinne znižuje LDL-C, no odporúčania upozorňujú, že štúdie hodnotiace vplyv na klinické kardiovaskulárne príhody ešte prebiehajú. Jeho účinok na LDL-C preto nemožno automaticky stotožniť s výsledkovými dôkazmi monoklonálnych protilátok proti PCSK9.</li>
 </ul>
@@ -116,11 +116,11 @@ $articles[] = [
 
 <h2>Lipoproteín(a), apoB a koronárne kalciové skóre</h2>
 
-<p>Odporúčania podporujú aspoň jedno meranie lipoproteínu(a), Lp(a), počas dospelosti. Koncentrácia &gt;125 nmol/l je spojená približne s 1,4-násobným a koncentrácia &gt;250 nmol/l najmenej s dvojnásobným rizikom ASCVD. Hodnoty v nmol/l a mg/dl sa pre rozdielnu veľkosť izoforiem apolipoproteínu(a) nemajú prepočítavať jedným pevným faktorom.</p>
+<p>Odporúčania podporujú aspoň jedno meranie lipoproteínu(a), Lp(a), počas dospelosti. Koncentrácia &gt;125&nbsp;nmol/l je spojená približne s 1,4-násobným a koncentrácia &gt;250&nbsp;nmol/l najmenej s dvojnásobným rizikom ASCVD. Hodnoty v nmol/l a mg/dl sa pre rozdielnu veľkosť izoforiem apolipoproteínu(a) nemajú prepočítavať jedným pevným faktorom.</p>
 
 <p>Apolipoproteín B môže spresniť reziduálne aterogénne riziko najmä pri diabete, kardiovaskulárno-obličkovo-metabolickom (CKM) syndróme, hypertriglyceridémii alebo nesúlade medzi LDL-C a non-HDL-C. Ani Lp(a), ani apoB však nenahrádzajú základný lipidový profil a klinické hodnotenie.</p>
 
-<p>Koronárne kalciové skóre (CAC) má význam najmä vtedy, keď je rozhodnutie o začatí alebo intenzite liečby neisté. Nemá slúžiť na zrušenie jednoznačnej indikácie u pacienta vo veku 40–75 rokov s CKD v štádiu G3 alebo vyššom v rozsahu LDL-C uvedenom v odporúčaniach. Pri pokročilej CKD býva kalcifikačná záťaž vysoká a jej patofyziológia komplexná; výsledok preto treba interpretovať spolu s klinickým obrazom, nie izolovane.</p>
+<p>Koronárne kalciové skóre (CAC) má význam najmä vtedy, keď je rozhodnutie o začatí alebo intenzite liečby neisté. Nemá slúžiť na zrušenie jednoznačnej indikácie u pacienta vo veku 40–75&nbsp;rokov s CKD v štádiu G3 alebo vyššom v rozsahu LDL-C uvedenom v odporúčaniach. Pri pokročilej CKD býva kalcifikačná záťaž vysoká a jej patofyziológia komplexná; výsledok preto treba interpretovať spolu s klinickým obrazom, nie izolovane.</p>
 
 <h2>ACC/AHA, KDIGO a ESC/EAS nie sú totožné</h2>
 
@@ -137,7 +137,7 @@ $articles[] = [
     <tr>
       <td>ACC/AHA 2026</td>
       <td>Rizikovo orientované ciele LDL-C a non-HDL-C; osobitné odporúčania pre CKD v štádiu G3 alebo vyššom, ASCVD a hemodialýzu</td>
-      <td>Primárna CKD indikácia je presne vymedzená vekom 40–75 rokov a LDL-C 1,8–4,9 mmol/l</td>
+      <td>Primárna CKD indikácia je presne vymedzená vekom 40–75&nbsp;rokov a LDL-C 1,8–4,9&nbsp;mmol/l</td>
     </tr>
     <tr>
       <td>KDIGO 2013/2024</td>
@@ -145,9 +145,9 @@ $articles[] = [
       <td>Osobitne rieši dialyzačne závislú CKD a transplantáciu obličky</td>
     </tr>
     <tr>
-      <td>ESC/EAS 2019 s aktualizáciou 2025</td>
+      <td>ESC/EAS 2019&nbsp;s aktualizáciou 2025</td>
       <td>CKD v štádiu G3 sa považuje za vysoké a CKD v štádiách G4–G5 za veľmi vysoké kardiovaskulárne riziko</td>
-      <td>Ciele zostali po aktualizácii nezmenené: pri vysokom riziku LDL-C &lt;1,8 mmol/l a pri veľmi vysokom &lt;1,4 mmol/l, spravidla spolu s poklesom najmenej o 50 %</td>
+      <td>Ciele zostali po aktualizácii nezmenené: pri vysokom riziku LDL-C &lt;1,8&nbsp;mmol/l a pri veľmi vysokom &lt;1,4&nbsp;mmol/l, spravidla spolu s poklesom najmenej o 50 %</td>
     </tr>
   </tbody>
 </table>
@@ -167,7 +167,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Odporúčania ACC/AHA 2026 potvrdzujú CKD v štádiu G3 alebo vyššom ako významnú klinickú situáciu pre hypolipidemickú liečbu, no jej presné použitie závisí od veku, LDL-C, prítomnosti ASCVD a dialyzačného statusu. V primárnej prevencii je odporúčanie triedy I vymedzené vekom 40–75 rokov a LDL-C 1,8–4,9 mmol/l. Pri CKD v štádiu G3 alebo vyššom s klinickým ASCVD sa odporúča znížiť LDL-C najmenej o 50 % a dosiahnuť hodnotu &lt;1,4 mmol/l.</p>
+<p>Odporúčania ACC/AHA 2026 potvrdzujú CKD v štádiu G3 alebo vyššom ako významnú klinickú situáciu pre hypolipidemickú liečbu, no jej presné použitie závisí od veku, LDL-C, prítomnosti ASCVD a dialyzačného statusu. V primárnej prevencii je odporúčanie triedy I vymedzené vekom 40–75&nbsp;rokov a LDL-C 1,8–4,9&nbsp;mmol/l. Pri CKD v štádiu G3 alebo vyššom s klinickým ASCVD sa odporúča znížiť LDL-C najmenej o 50 % a dosiahnuť hodnotu &lt;1,4&nbsp;mmol/l.</p>
 
 <p>Dialýza zostáva zásadnou výnimkou: rutinné nové nasadenie statínu po začatí udržiavacej hemodialýzy nemá presvedčivú výsledkovú oporu, zatiaľ čo pokračovanie už zavedenej liečby môže byť rozumné po individualizácii. Transplantácia obličky si vyžaduje osobitný prístup podľa KDIGO a dôslednú kontrolu interakcií.</p>
 

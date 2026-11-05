@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: hranicna porucha osobnosti a telesne zdravie.
+ * Odborný článok: hranicna porucha osobnosti a telesne zdravie.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Dlhodobé kohortové štúdie potvrdzujú, že BPD je spojená s vyššou celkovou mortalitou. Významnú časť tvoria samovraždy, predávkovania, úrazy a iné vonkajšie príčiny, ale zvýšená je aj mortalita na telesné ochorenia.</p>
 
-<p>Doteraz najrozsiahlejšie dáta priniesla populačná kohortová štúdia z Hongkongu publikovaná v marci 2026. Vychádzala z databázy verejného zdravotníctva a zahŕňala <strong>3 092 ľudí s prvýkrát zaznamenanou diagnózou BPD</strong> v rokoch 2006 až 2021 a <strong>902 927 porovnávacích osôb</strong> z primárnej starostlivosti bez evidovanej duševnej poruchy.</p>
+<p>Doteraz najrozsiahlejšie dáta priniesla populačná kohortová štúdia z Hongkongu publikovaná v marci 2026. Vychádzala z databázy verejného zdravotníctva a zahŕňala <strong>3&nbsp;092 ľudí s prvýkrát zaznamenanou diagnózou BPD</strong> v rokoch 2006 až 2021 a <strong>902&nbsp;927 porovnávacích osôb</strong> z primárnej starostlivosti bez evidovanej duševnej poruchy.</p>
 
 <div class="table-responsive" role="region" aria-label="Riziko úmrtia pri hraničnej poruche osobnosti podľa hongkonskej kohorty" tabindex="0">
 <table>
@@ -90,7 +90,7 @@ $articles[] = [
 
 <p>Tieto rozdiely naznačujú, že nejde o jednotný biologický efekt poruchy, ale o interakciu s dĺžkou expozície, rizikovým správaním a spôsobom, akým sa diagnóza v zdravotnom systéme vôbec zaznamená.</p>
 
-<p>Výsledok zároveň neznamená, že každý človek s BPD bude žiť o 13 rokov kratšie. Ide o populačný priemer z konkrétneho zdravotného systému. Ovplyvňuje ho závažnosť poruchy, komorbidity, sociálna situácia, dostupnosť liečby, fajčenie, užívanie psychoaktívnych látok a spôsob identifikácie diagnóz v zdravotných záznamoch. Rôzne publikované odhady skrátenia života sa preto medzi populáciami líšia a žiadny z nich nie je biologickou konštantou.</p>
+<p>Výsledok zároveň neznamená, že každý človek s BPD bude žiť o 13&nbsp;rokov kratšie. Ide o populačný priemer z konkrétneho zdravotného systému. Ovplyvňuje ho závažnosť poruchy, komorbidity, sociálna situácia, dostupnosť liečby, fajčenie, užívanie psychoaktívnych látok a spôsob identifikácie diagnóz v zdravotných záznamoch. Rôzne publikované odhady skrátenia života sa preto medzi populáciami líšia a žiadny z nich nie je biologickou konštantou.</p>
 
 <h2>Kardiovaskulárne riziko</h2>
 
@@ -138,7 +138,7 @@ $articles[] = [
   <li>definície metabolického syndrómu sa medzi štúdiami líšia.</li>
 </ol>
 
-<p>Poučný je príklad komunitnej štúdie 1 295 dospelých v strednom veku, v ktorej sa kardiometabolické riziko meralo prístrojovo a laboratórne, nie dotazníkom. Hraničné osobnostné črty zostali spojené s agregovaným kardiometabolickým rizikom aj po zohľadnení depresívnych symptómov; po doplnení socioekonomických ukazovateľov sa však asociácia oslabila presne na hranicu štatistickej významnosti. Štúdia navyše nehodnotila klinicky diagnostikovanú BPD, ale dimenzionálne osobnostné črty.</p>
+<p>Poučný je príklad komunitnej štúdie 1&nbsp;295 dospelých v strednom veku, v ktorej sa kardiometabolické riziko meralo prístrojovo a laboratórne, nie dotazníkom. Hraničné osobnostné črty zostali spojené s agregovaným kardiometabolickým rizikom aj po zohľadnení depresívnych symptómov; po doplnení socioekonomických ukazovateľov sa však asociácia oslabila presne na hranicu štatistickej významnosti. Štúdia navyše nehodnotila klinicky diagnostikovanú BPD, ale dimenzionálne osobnostné črty.</p>
 
 <p>Takýto výsledok podporuje potrebu metabolického monitorovania. Nepodporuje tvrdenie, že BPD nezávisle spôsobuje metabolický syndróm; skôr ukazuje, ako veľkú časť asociácie môže vysvetľovať sociálne znevýhodnenie.</p>
 
@@ -302,7 +302,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Ľudia s BPD majú skrátenú očakávanú dĺžku života</td><td>Potvrdené</td><td>Veľkosť rozdielu závisí od populácie a metodiky; hongkonská kohorta odhadla 13,01 strateného roka.</td></tr>
-    <tr><td>Skrátenie života je konštantné a presahuje 14 rokov</td><td>Nesprávne</td><td>Ide o populačné priemery z konkrétnych systémov, nie o biologickú konštantu.</td></tr>
+    <tr><td>Skrátenie života je konštantné a presahuje 14&nbsp;rokov</td><td>Nesprávne</td><td>Ide o populačné priemery z konkrétnych systémov, nie o biologickú konštantu.</td></tr>
     <tr><td>Vyššia mortalita je takmer výlučne dôsledkom samovrážd</td><td>Nesprávne</td><td>Vonkajšie príčiny tvorili 40,4 % úmrtí, prirodzené príčiny 37,3 %.</td></tr>
     <tr><td>Riziko telesných ochorení je pri BPD rovnaké u mužov aj u žien</td><td>Nesprávne</td><td>V hongkonskej kohorte zostali asociácie významné najmä u žien.</td></tr>
     <tr><td>BPD je spojená s vyššou kardiovaskulárnou mortalitou</td><td>Pravdepodobné</td><td>Časť dôkazov sa týka celého klastra B, pochádza z malých vzoriek a je observačná.</td></tr>
@@ -373,9 +373,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

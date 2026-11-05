@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $creatinineValue = calculatorParsePositiveFloat(
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($cystatinValue === null) {
             $errors[] = "Cystatín C musí byť kladné číslo (mg/L).";
         } elseif ($cystatinValue < 0.3 || $cystatinValue > 10.0) {
-            $errors[] = "Cystatín C mimo očakávaného rozsahu (0,3 až 10 mg/L).";
+            $errors[] = "Cystatín C mimo očakávaného rozsahu (0,3 až 10 mg/L).";
         }
 
         if (empty($errors)) {
@@ -411,8 +411,8 @@ if (isLoggedIn()) {
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float)$calculated["egfr"], 1, ",", " ")) ?></span>
-                                <span class="calc-result-unit">ml/min/1,73 m²</span>
-                                <span class="calc-result-unit">= <?= htmlspecialchars(number_format((float) $calculated["egfr"] / EGFR_ML_S_PER_ML_MIN, 3, ",", " ")) ?> ml/s/1,73 m²</span>
+                                <span class="calc-result-unit">ml/min/1,73 m²</span>
+                                <span class="calc-result-unit">= <?= htmlspecialchars(number_format((float) $calculated["egfr"] / EGFR_ML_S_PER_ML_MIN, 3, ",", " ")) ?> ml/s/1,73 m²</span>
                             </div>
                             <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
                                 <?= htmlspecialchars($calculated["g_category"]) ?>
@@ -444,7 +444,7 @@ if (isLoggedIn()) {
                     $result    = is_array($row['result_payload']) ? $row['result_payload'] : [];
                     $egfrValue = (float) ($result['egfr'] ?? 0);
                     $category  = (string) ($result['g_category'] ?? '');
-                    echo htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) . ' ml/min/1,73 m²';
+                    echo htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) . ' ml/min/1,73 m²';
                     if ($category !== '') {
                         echo ' (' . htmlspecialchars($category) . ')';
                     }

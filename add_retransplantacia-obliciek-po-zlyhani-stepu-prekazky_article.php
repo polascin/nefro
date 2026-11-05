@@ -121,7 +121,7 @@ $articles[] = [
 
 <h2>Komorbidity a pripravenosť na transplantáciu</h2>
 
-<p>Autorka opisuje onkologické ochorenie diagnostikované šesť rokov pred publikovaním komentára. Chemoterapia podľa jej skúsenosti ohrozila funkciu transplantovanej obličky, štep sa však zotavil a autorka uvádza, že je bez známok malignity. Jej súčasný transplantát funguje už 32 rokov.</p>
+<p>Autorka opisuje onkologické ochorenie diagnostikované šesť rokov pred publikovaním komentára. Chemoterapia podľa jej skúsenosti ohrozila funkciu transplantovanej obličky, štep sa však zotavil a autorka uvádza, že je bez známok malignity. Jej súčasný transplantát funguje už 32&nbsp;rokov.</p>
 
 <p>Príbeh poukazuje na zložitú rovnováhu medzi liečbou malignity, zachovaním štepu a úpravou imunosupresie. Onkologická liečba môže štep ovplyvniť priamou nefrotoxicitou, akútnym poškodením obličiek, infekčnými komplikáciami, dehydratáciou a elektrolytovými poruchami, interakciami s imunosupresívami, potrebou znížiť alebo zmeniť imunosupresiu a s tým spojeným rizikom rejekcie.</p>
 

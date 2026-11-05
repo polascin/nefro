@@ -62,7 +62,7 @@ $articles[] = [
 
 <h3>Nové transkriptomické údaje</h3>
 
-<p>Tím vedený Yazmín Macotelovou prezentoval na kongrese analýzu biopsií omentálneho viscerálneho a abdominálneho podkožného tukového tkaniva od 21 žien a 20 mužov vo veku 18 až 77 rokov, zameranú na expresné profily spojené s inzulínovou rezistenciou.</p>
+<p>Tím vedený Yazmín Macotelovou prezentoval na kongrese analýzu biopsií omentálneho viscerálneho a abdominálneho podkožného tukového tkaniva od 21 žien a 20 mužov vo veku 18 až 77&nbsp;rokov, zameranú na expresné profily spojené s inzulínovou rezistenciou.</p>
 
 <p>U mužov sa vo viscerálnom tuku zvýrazňovali dráhy súvisiace s bunkovým cyklom, senescenciou, zápalom, prestavbou extracelulárnej matrix a cievnymi zmenami; v podkožnom tuku dominovali poruchy funkcie adipocytov a odpovede na bunkový stres. U žien sa vo viscerálnom tuku výraznejšie prejavovala porucha adipocytovej funkcie, bunkový stres a vaskulárne zmeny; v podkožnom tuku imunitné, cievne a stromálne procesy.</p>
 
@@ -155,7 +155,7 @@ $articles[] = [
 <h2>Zdroje</h2>
 
 <ol>
-  <li><strong>Medscape Medical News.</strong> <em>What Adipose Tissue Is Teaching Us About Obesity.</em> Medscape, 2026. Správa z kongresu International Congress on Obesity 2026 s vyjadreniami Yazmín Macotelovej, Marcela Moriho a Armanda R. Tovara. <a href="https://www.medscape.com/viewarticle/what-adipose-tissue-teaching-us-about-obesity-2026a1000q2q" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
+  <li><strong>Medscape Medical News.</strong> <em>What Adipose Tissue Is Teaching Us About Obesity.</em> Medscape, 2026. Správa z kongresu International Congress on Obesity 2026&nbsp;s vyjadreniami Yazmín Macotelovej, Marcela Moriho a Armanda R. Tovara. <a href="https://www.medscape.com/viewarticle/what-adipose-tissue-teaching-us-about-obesity-2026a1000q2q" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
   <li><strong>Kalypso Karastergiou, Steven R. Smith, Andrew S. Greenberg, Susan K. Fried.</strong> <em>Sex differences in human adipose tissues — the biology of pear shape.</em> Biology of Sex Differences. 2012;3:13. doi: 10.1186/2042-6410-3-13. <a href="https://pubmed.ncbi.nlm.nih.gov/22651247/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Thomas Thomou, Marcelo A. Mori, Jonathan M. Dreyfuss, Masahiro Konishi, Masaji Sakaguchi, Christian Wolfrum, Tata Nageswara Rao, Jonathon N. Winnay, Ruben Garcia-Martin, Steven K. Grinspoon, Phillip Gorden, C. Ronald Kahn.</strong> <em>Adipose-derived circulating miRNAs regulate gene expression in other tissues.</em> Nature. 2017;542:450–455. doi: 10.1038/nature21365. <a href="https://pubmed.ncbi.nlm.nih.gov/28199304/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Marcelo A. Mori, Raissa G. Ludwig, Ruben Garcia-Martin, Bruna B. Brandão, C. Ronald Kahn.</strong> <em>Extracellular miRNAs: From Biomarkers to Mediators of Physiology and Disease.</em> Cell Metabolism. 2019;30(4):656–673. doi: 10.1016/j.cmet.2019.07.011. <a href="https://pubmed.ncbi.nlm.nih.gov/31447320/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>

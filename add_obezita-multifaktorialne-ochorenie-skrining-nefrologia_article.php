@@ -78,16 +78,16 @@ $articles[] = [
 
 <p>Súčasťou sú aj skríningové algoritmy pre vybrané komorbidity, prevzaté z existujúcich odporúčaní: STOP-Bang pre obštrukčné spánkové apnoe, kritériá NICE pre osteoartrózu, štandardizované psychiatrické kritériá pre záchvatové prejedanie, rotterdamské kritériá pre syndróm polycystických ovárií a AUDIT-C pre užívanie alkoholu.</p>
 
-<p>Dotazník pacient vyplní doma približne za 25 minút. Výsledkom je zhrnutý report určený na diskusiu so zdravotníckym pracovníkom, nie na samostatné stanovenie diagnózy.</p>
+<p>Dotazník pacient vyplní doma približne za 25&nbsp;minút. Výsledkom je zhrnutý report určený na diskusiu so zdravotníckym pracovníkom, nie na samostatné stanovenie diagnózy.</p>
 
 <h2>Údaje z holandskej verzie nástroja</h2>
 
-<p>Prvotná analýza vychádzala z údajov <strong>62 809 dospelých</strong>, ktorí vyplnili holandskú verziu nástroja (jeho predchodkyňu) a súhlasili s využitím údajov na výskumné účely.</p>
+<p>Prvotná analýza vychádzala z údajov <strong>62&nbsp;809 dospelých</strong>, ktorí vyplnili holandskú verziu nástroja (jeho predchodkyňu) a súhlasili s využitím údajov na výskumné účely.</p>
 
 <ul>
-  <li>medián veku 53 rokov,</li>
+  <li>medián veku 53&nbsp;rokov,</li>
   <li>ženy 76,2 %,</li>
-  <li>medián indexu telesnej hmotnosti (BMI) 33,1 kg/m<sup>2</sup>.</li>
+  <li>medián indexu telesnej hmotnosti (BMI) 33,1&nbsp;kg/m<sup>2</sup>.</li>
 </ul>
 
 <p>Aspoň jeden prispievajúci faktor v <strong>dvoch alebo viacerých</strong> oblastiach uviedlo 91,2 % používateľov, v <strong>troch alebo viacerých</strong> oblastiach 68,3 %. Najčastejšou kombináciou boli faktory životného štýlu, psychologické faktory a faktory súvisiace s liekmi – vyskytla sa u 39,9 % používateľov.</p>

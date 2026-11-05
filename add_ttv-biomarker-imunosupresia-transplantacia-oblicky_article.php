@@ -46,7 +46,7 @@ $articles[] = [
 <ul>
   <li><strong>260 dospelých</strong> stabilných príjemcov transplantátu,</li>
   <li>v <strong>13 akademických centrách</strong> v Európe,</li>
-  <li>približne <strong>4 mesiace po transplantácii</strong>.</li>
+  <li>približne <strong>4&nbsp;mesiace po transplantácii</strong>.</li>
 </ul>
 
 <p>Porovnávali sa dva prístupy:</p>

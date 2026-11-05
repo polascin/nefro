@@ -42,7 +42,7 @@ $articles[] = [
 <ul>
   <li>unesení boli <strong>mladí muži z irackého Kurdistanu</strong>,</li>
   <li>boli zadržiavaní v <strong>preplnených a krutých podmienkach</strong> (silne preplnená cela, mučenie),</li>
-  <li>milícia údajne žiadala <strong>5 000 USD (približne 3 700 GBP) od každej rodiny</strong>,</li>
+  <li>milícia údajne žiadala <strong>5&nbsp;000 USD (približne 3&nbsp;700 GBP) od každej rodiny</strong>,</li>
   <li>ak by peniaze neboli zaplatené včas, rodiny dostali varovanie, že „to bude na úkor obličky“,</li>
   <li>BBC uvádza aj <strong>fotografické dôkazy a svedectvá</strong> naznačujúce, že k násilným zákrokom mohlo dôjsť, no <strong>úplne overiť odobratie orgánov</strong> sa jej nepodarilo,</li>
   <li>podľa BBC je <strong>známe najmenej jedno úmrtie</strong> a nie je jasné, koľko ľudí stále zostáva v zajatí.</li>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: axialna spondyloartritida - diagnostika, zobrazovanie, liecba.
+ * Odborný článok: axialna spondyloartritida - diagnostika, zobrazovanie, liečba.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h3>Revízia ASAS-SPARTAN z roku 2025</h3>
 
-<p>Práve nedostatočná špecificita kritérií z roku 2009 viedla k ich revízii. V medzinárodnej inceptívnej kohorte CLASSIC bolo vyšetrených 1 015 pacientov odoslaných reumatológovi pre nediagnostikovanú bolesť chrbta; diagnózu axSpA napokon dostalo približne 37 % z nich. Referenčným štandardom bola diagnóza skúseného reumatológa.</p>
+<p>Práve nedostatočná špecificita kritérií z roku 2009 viedla k ich revízii. V medzinárodnej inceptívnej kohorte CLASSIC bolo vyšetrených 1&nbsp;015 pacientov odoslaných reumatológovi pre nediagnostikovanú bolesť chrbta; diagnózu axSpA napokon dostalo približne 37 % z nich. Referenčným štandardom bola diagnóza skúseného reumatológa.</p>
 
 <p>Revidované kritériá:</p>
 
@@ -730,9 +730,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

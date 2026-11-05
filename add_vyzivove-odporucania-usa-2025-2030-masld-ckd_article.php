@@ -27,7 +27,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" alt="Tanier bežného jedla pod širokým svetlom, cez ktorý prechádza úzky lúč zvýrazňujúci problémové položky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odporúčanie pre populáciu nie je odporúčaním pre konkrétneho pacienta – pri MASLD a CKD platia iné dôrazy.</figcaption></figure>
 
-<p>Americké <em>Dietary Guidelines for Americans 2025–2030</em> (DGA), zverejnené v januári 2026, prinášajú zrozumiteľné populačné posolstvo: uprednostňovať nutrične hodnotné, málo spracované potraviny a obmedziť sladené nápoje, pridané cukry, nadbytok sodíka a ultraspracované výrobky. Dve časti dokumentu však vyžadujú v klinickej praxi osobitnú opatrnosť: cieľový príjem bielkovín 1,2–1,6 g/kg/deň a všeobecná formulácia „konzumujte menej alkoholu“ bez číselného limitu.</p>
+<p>Americké <em>Dietary Guidelines for Americans 2025–2030</em> (DGA), zverejnené v januári 2026, prinášajú zrozumiteľné populačné posolstvo: uprednostňovať nutrične hodnotné, málo spracované potraviny a obmedziť sladené nápoje, pridané cukry, nadbytok sodíka a ultraspracované výrobky. Dve časti dokumentu však vyžadujú v klinickej praxi osobitnú opatrnosť: cieľový príjem bielkovín 1,2–1,6&nbsp;g/kg/deň a všeobecná formulácia „konzumujte menej alkoholu“ bez číselného limitu.</p>
 
 <p>Pre pacienta s metabolicky asociovanou steatotickou chorobou pečene (MASLD), chronickou chorobou obličiek (CKD), cirhózou, dialyzačnou liečbou, krehkosťou alebo sarkopéniou nemožno tieto vety premeniť na univerzálny jedálny lístok. DGA sú americké populačné odporúčania, nie klinické usmernenie pre konkrétne ochorenie a už vôbec nie náhrada odporúčaní KDIGO, KDOQI alebo EASL.</p>
 
@@ -36,11 +36,11 @@ $articles[] = [
 <p>Priama kontrola oficiálneho desaťstranového dokumentu potvrdzuje, že DGA:</p>
 
 <ul>
-  <li>odporúčajú cieľový príjem bielkovín <strong>1,2–1,6 g/kg telesnej hmotnosti denne</strong>, upravený podľa individuálnej energetickej potreby,</li>
+  <li>odporúčajú cieľový príjem bielkovín <strong>1,2–1,6&nbsp;g/kg telesnej hmotnosti denne</strong>, upravený podľa individuálnej energetickej potreby,</li>
   <li>uvádzajú rôzne živočíšne zdroje vrátane vajec, hydiny, rýb, morských plodov a červeného mäsa, ale aj fazuľu, hrach, šošovicu, ďalšie strukoviny, orechy, semená a sóju,</li>
   <li>odporúčajú zeleninu, ovocie a celozrnné potraviny,</li>
   <li>ponechávajú všeobecný limit nasýtených tukov pod 10 % denného energetického príjmu,</li>
-  <li>odporúčajú osobám od 14 rokov prijímať menej než 2 300 mg sodíka denne,</li>
+  <li>odporúčajú osobám od 14&nbsp;rokov prijímať menej než 2&nbsp;300&nbsp;mg sodíka denne,</li>
   <li>odporúčajú obmedziť alkohol slovami „konzumujte menej alkoholu pre lepšie celkové zdravie“, no pre všeobecnú populáciu už neuvádzajú predchádzajúce denné číselné limity.</li>
 </ul>
 
@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Čo ukázala analýza NHANES z roku 2026</h2>
 
-<p>Nicholas Dunn a spoluautori analyzovali 10 944 dospelých účastníkov amerického prieskumu NHANES 2017–2023. Údaje z 24-hodinového retrospektívneho zisťovania príjmu potravy spojili s výsledkami vibračne kontrolovanej prechodnej elastografie. Jednotlivé zložky stravy hodnotili pomocou komponentov <em>Healthy Eating Index 2020</em> a energeticky upravených štandardizovaných skóre zostavených podľa potravinových skupín relevantných pre DGA 2025–2030.</p>
+<p>Nicholas Dunn a spoluautori analyzovali 10&nbsp;944 dospelých účastníkov amerického prieskumu NHANES 2017–2023. Údaje z 24-hodinového retrospektívneho zisťovania príjmu potravy spojili s výsledkami vibračne kontrolovanej prechodnej elastografie. Jednotlivé zložky stravy hodnotili pomocou komponentov <em>Healthy Eating Index 2020</em> a energeticky upravených štandardizovaných skóre zostavených podľa potravinových skupín relevantných pre DGA 2025–2030.</p>
 
 <p>Vyšší príjem ovocia, zeleniny, listovej zeleniny a strukovín, celozrnných potravín a bielkovín z rýb, morských plodov a rastlinných zdrojov sa spájal s nižšou pravdepodobnosťou steatotickej choroby pečene alebo fibrózy. Vyšší príjem červeného a spracovaného mäsa, celkových bielkovín, sodíka, nasýtených tukov a pridaných cukrov sa spájal s vyššou prevalenciou niektorých pečeňových výsledkov. Skóre súladu s číselnými limitmi alkoholu zo starších DGA bolo takisto asociované s priaznivejšími výsledkami.</p>
 
@@ -82,7 +82,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">DGA určujú cieľ 1,2–1,6 g bielkovín/kg/deň</th>
+      <th scope="row">DGA určujú cieľ 1,2–1,6&nbsp;g bielkovín/kg/deň</th>
       <td>Potvrdené</td>
       <td>Je priamo uvedený v oficiálnom dokumente, nejde však o klinický cieľ pre každé chronické ochorenie.</td>
     </tr>
@@ -117,9 +117,9 @@ $articles[] = [
 
 <h2>Najväčší konflikt pre nefrológa: množstvo bielkovín</h2>
 
-<p>KDIGO 2024 odporúča u dospelých s CKD G3–G5, ktorí nie sú liečení dialýzou, udržiavať príjem približne 0,8 g/kg/deň a u osôb s rizikom progresie sa vyhýbať vysokému príjmu nad 1,3 g/kg/deň. Dolná hranica DGA 1,2 g/kg/deň sa teda približuje pásmu, ktoré už pri progresívnej CKD vyžaduje opatrnosť, a horná hranica 1,6 g/kg/deň ho jasne prekračuje.</p>
+<p>KDIGO 2024 odporúča u dospelých s CKD G3–G5, ktorí nie sú liečení dialýzou, udržiavať príjem približne 0,8&nbsp;g/kg/deň a u osôb s rizikom progresie sa vyhýbať vysokému príjmu nad 1,3&nbsp;g/kg/deň. Dolná hranica DGA 1,2&nbsp;g/kg/deň sa teda približuje pásmu, ktoré už pri progresívnej CKD vyžaduje opatrnosť, a horná hranica 1,6&nbsp;g/kg/deň ho jasne prekračuje.</p>
 
-<p>To neznamená, že každý pacient s ochorením obličiek má dostať nízkobielkovinovú diétu. Pri dialýze sa potreba zvyšuje pre katabolizmus a straty aminokyselín; pri krehkosti, sarkopénii, akútnom ochorení alebo hojení rán môže mať ochrana svalovej hmoty prednosť pred prísnou reštrikciou. Pri cirhóze sa bielkoviny rutinne neobmedzujú a často sa odporúča 1,2–1,5 g/kg/deň. Súbeh pokročilej CKD a cirhózy preto vyžaduje spoločný plán nefrológa, hepatológa a nutričného terapeuta.</p>
+<p>To neznamená, že každý pacient s ochorením obličiek má dostať nízkobielkovinovú diétu. Pri dialýze sa potreba zvyšuje pre katabolizmus a straty aminokyselín; pri krehkosti, sarkopénii, akútnom ochorení alebo hojení rán môže mať ochrana svalovej hmoty prednosť pred prísnou reštrikciou. Pri cirhóze sa bielkoviny rutinne neobmedzujú a často sa odporúča 1,2–1,5&nbsp;g/kg/deň. Súbeh pokročilej CKD a cirhózy preto vyžaduje spoločný plán nefrológa, hepatológa a nutričného terapeuta.</p>
 
 <div class="table-responsive" role="region" aria-label="Orientačné ciele príjmu bielkovín v rôznych klinických situáciách" tabindex="0">
 <table>
@@ -133,13 +133,13 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Všeobecná populácia podľa DGA 2025–2030</th>
-      <td>1,2–1,6 g/kg/deň</td>
+      <td>1,2–1,6&nbsp;g/kg/deň</td>
       <td>Populačný cieľ; pri chronickom ochorení ho treba prispôsobiť.</td>
     </tr>
     <tr>
       <th scope="row">Stabilná CKD G3–G5 bez dialýzy</th>
-      <td>Približne 0,8 g/kg/deň</td>
-      <td>KDIGO 2024; pri riziku progresie sa vyhýbať príjmu &gt;1,3 g/kg/deň.</td>
+      <td>Približne 0,8&nbsp;g/kg/deň</td>
+      <td>KDIGO 2024; pri riziku progresie sa vyhýbať príjmu &gt;1,3&nbsp;g/kg/deň.</td>
     </tr>
     <tr>
       <th scope="row">Krehkosť, sarkopénia alebo podvýživa pri CKD</th>
@@ -148,12 +148,12 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Udržiavacia hemodialýza alebo peritoneálna dialýza</th>
-      <td>Približne 1,0–1,2 g/kg/deň</td>
+      <td>Približne 1,0–1,2&nbsp;g/kg/deň</td>
       <td>KDOQI 2020 pre metabolicky stabilných dospelých; potreba môže stúpnuť pri zápale, peritonitíde alebo ranách.</td>
     </tr>
     <tr>
       <th scope="row">Cirhóza</th>
-      <td>Spravidla 1,2–1,5 g/kg/deň</td>
+      <td>Spravidla 1,2–1,5&nbsp;g/kg/deň</td>
       <td>Cieľom je predchádzať sarkopénii; pri súčasnej CKD treba oba protichodné ciele zosúladiť.</td>
     </tr>
   </tbody>
@@ -168,7 +168,7 @@ $articles[] = [
 
 <p>Pre nefrologického pacienta má zdroj bielkovín aj ďalší význam. Spracované mäso môže prinášať veľa sodíka a ľahko vstrebateľných fosfátových aditív. Rastlinné potraviny obsahujú vlákninu a fosfor s nižšou biologickou dostupnosťou, ale niektoré sú bohaté na draslík. Správnym riešením preto nie je paušálne zakázať strukoviny, ovocie či zeleninu, ale prispôsobiť výber laboratórnym hodnotám, liekom, acidobázickému stavu, zápche a celkovému jedálnemu lístku.</p>
 
-<p>Aj limit sodíka treba preložiť správne: DGA určujú pre všeobecnú populáciu menej než 2 300 mg/deň, kým KDIGO pri CKD odporúča menej než 2 g sodíka denne, čo zodpovedá približne 5 g kuchynskej soli. Výnimkou môžu byť nefropatie so stratami sodíka a iné osobitné klinické situácie.</p>
+<p>Aj limit sodíka treba preložiť správne: DGA určujú pre všeobecnú populáciu menej než 2&nbsp;300&nbsp;mg/deň, kým KDIGO pri CKD odporúča menej než 2&nbsp;g sodíka denne, čo zodpovedá približne 5&nbsp;g kuchynskej soli. Výnimkou môžu byť nefropatie so stratami sodíka a iné osobitné klinické situácie.</p>
 
 <h2>Alkohol: neurčitý populačný slogan nestačí</h2>
 
@@ -190,7 +190,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Americké DGA 2025–2030 majú užitočné jadro: menej ultraspracovaných potravín, sladených nápojov, pridaných cukrov a nadbytočného sodíka, viac nutrične hodnotných potravín. Ich bielkovinový cieľ 1,2–1,6 g/kg/deň však nemožno preniesť na stabilnú nedialyzovanú CKD bez klinickej úpravy a všeobecná výzva „konzumujte menej alkoholu“ nenahrádza konkrétne odporúčanie pri SLD, fibróze alebo cirhóze.</p>
+<p>Americké DGA 2025–2030 majú užitočné jadro: menej ultraspracovaných potravín, sladených nápojov, pridaných cukrov a nadbytočného sodíka, viac nutrične hodnotných potravín. Ich bielkovinový cieľ 1,2–1,6&nbsp;g/kg/deň však nemožno preniesť na stabilnú nedialyzovanú CKD bez klinickej úpravy a všeobecná výzva „konzumujte menej alkoholu“ nenahrádza konkrétne odporúčanie pri SLD, fibróze alebo cirhóze.</p>
 
 <p>Analýza NHANES podporuje význam zdroja bielkovín a kvality celej stravy, ale zostáva prierezovou observačnou štúdiou. Nehodnotila dôsledky zavedenia nových DGA a nedokazuje kauzalitu. Najbezpečnejším klinickým prekladom preto nie je „viac bielkovín pre každého“, ale <strong>správne množstvo zo správnych zdrojov pre konkrétneho pacienta</strong>.</p>
 

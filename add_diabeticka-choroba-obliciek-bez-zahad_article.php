@@ -99,12 +99,12 @@ $articles[] = [
   <figcaption>Čo si všímať vo výsledkoch</figcaption>
 </figure>
 <h2>Čo znamená eGFR</h2>
-<p>eGFR je odhad filtračnej schopnosti obličiek. Udáva sa najčastejšie v ml/min/1,73 m². Čím je eGFR nižšia, tým je filtračná funkcia obličiek slabšia.</p>
+<p>eGFR je odhad filtračnej schopnosti obličiek. Udáva sa najčastejšie v ml/min/1,73&nbsp;m². Čím je eGFR nižšia, tým je filtračná funkcia obličiek slabšia.</p>
 <p>Veľmi zjednodušene:</p>
 <ul>
   <li>eGFR nad 90 môže byť normálna, ak nie sú iné známky poškodenia obličiek,</li>
   <li>eGFR 60 až 89 môže byť ešte relatívne dobrá, ale treba ju hodnotiť spolu s močom a celkovým rizikom,</li>
-  <li>eGFR pod 60, ak trvá aspoň 3 mesiace, už zodpovedá chronickej chorobe obličiek,</li>
+  <li>eGFR pod 60, ak trvá aspoň 3&nbsp;mesiace, už zodpovedá chronickej chorobe obličiek,</li>
   <li>čím nižšia eGFR, tým vyššie riziko komplikácií a tým dôležitejšia je nefrologická starostlivosť.</li>
 </ul>
 <p>Jedna hodnota však na dôležité závery nestačí. Obličkovú funkciu treba hodnotiť v priebehu času a sledovať, či je stav stabilný alebo či sa eGFR postupne znižuje.</p>
@@ -119,9 +119,9 @@ $articles[] = [
 <p>Ak sa albumín v moči zvyšuje, môže to byť skorý príznak poškodenia obličkového filtra. Často sa používa vyšetrenie pomeru albumínu ku kreatinínu v moči, označované ako ACR alebo uACR (UACR). Výhodou je, že sa dá vyšetriť z jednej vzorky moču, najčastejšie z ranného.</p>
 <p>Orientačne sa nález hodnotí takto:</p>
 <ul>
-  <li>normálny alebo mierne zvýšený albumín v moči: ACR pod 3 mg/mmol,</li>
-  <li>stredne zvýšený albumín v moči: ACR 3 až 30 mg/mmol,</li>
-  <li>výrazne zvýšený albumín v moči: ACR nad 30 mg/mmol.</li>
+  <li>normálny alebo mierne zvýšený albumín v moči: ACR pod 3&nbsp;mg/mmol,</li>
+  <li>stredne zvýšený albumín v moči: ACR 3 až 30&nbsp;mg/mmol,</li>
+  <li>výrazne zvýšený albumín v moči: ACR nad 30&nbsp;mg/mmol.</li>
 </ul>
 <p>Tieto hranice sa môžu v laboratórnych výsledkoch uvádzať aj v iných jednotkách, preto je vždy potrebné pozerať sa na referenčné hodnoty konkrétneho laboratória a na interpretáciu lekára.</p>
 <p>Dôležité je aj to, že zvýšený albumín v moči nemusí automaticky znamenať trvalé poškodenie. Prechodne sa môže zvýšiť pri horúčke, infekcii močových ciest, výraznej fyzickej námahe, zle kompenzovanom krvnom tlaku, veľmi vysokej glykémii alebo pri akútnom ochorení. Preto sa nález zvyčajne potvrdzuje opakovaným vyšetrením.</p>
@@ -253,7 +253,7 @@ $articles[] = [
 <p>Nefrológ je lekár – špecialista na obličky. Pacient s diabetom nemusí byť od začiatku automaticky sledovaný nefrológom. Sú však situácie, keď je nefrologické vyšetrenie vhodné alebo potrebné.</p>
 <p>Patrí sem najmä:</p>
 <ul>
-  <li>trvalo znížená eGFR pod 60 ml/min/1,73 m²,</li>
+  <li>trvalo znížená eGFR pod 60&nbsp;ml/min/1,73&nbsp;m²,</li>
   <li>rýchly pokles eGFR,</li>
   <li>výraznejšia alebo narastajúca albuminúria,</li>
   <li>krv v moči alebo netypický močový nález,</li>

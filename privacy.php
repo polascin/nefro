@@ -192,16 +192,16 @@ include 'legal_head.php';
                     <li><strong>Používateľské kontá:</strong> po dobu aktívneho používania; na žiadosť možné okamžité vymazanie.</li>
                     <li><strong>Výsledky kalkulačiek uložené v konte:</strong> po roku sa z nich odstránia pacientské identifikátory (meno, dátum narodenia, rodné číslo, poisťovňa) a výsledok zostáva anonymizovaný, takže sa dá použiť na sledovanie vývoja; po desiatich rokoch sa záznam vymaže úplne. Kedykoľvek ich môžete vymazať sami alebo požiadať o zmazanie konta.</li>
                     <li><strong>Lokálna história kalkulačiek pre neprihlásených:</strong> najviac 50 výsledkov v prehliadači, kým ich používateľ nevymaže, neodvolá preferenčný súhlas alebo nevymaže údaje stránky.</li>
-                    <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
-                    <li><strong>Minimalizovaný audit zrušenia účtu:</strong> maximálne 90 dní; neobsahuje používateľské meno a slúži na bezpečnostnú kontrolu a preukázanie vykonania žiadosti.</li>
+                    <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
+                    <li><strong>Minimalizovaný audit zrušenia účtu:</strong> maximálne 90 dní; neobsahuje používateľské meno a slúži na bezpečnostnú kontrolu a preukázanie vykonania žiadosti.</li>
                     <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
-                    <li><strong>GA4 dáta:</strong> používateľské a udalostné údaje viazané na pseudonymný identifikátor sa v Google Analytics uchovávajú najviac 14 mesiacov.</li>
-                    <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
+                    <li><strong>GA4 dáta:</strong> používateľské a udalostné údaje viazané na pseudonymný identifikátor sa v Google Analytics uchovávajú najviac 14 mesiacov.</li>
+                    <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
                     <li><strong>Doklad o newsletterovom súhlase:</strong> počas aktívneho odberu
-                        a najmenej 4 roky po odvolaní súhlasu. Evidujeme verziu a text súhlasu,
+                        a najmenej 4 roky po odvolaní súhlasu. Evidujeme verziu a text súhlasu,
                         spôsob a čas udalosti a pseudonymizovaný odtlačok e-mailu; po uplynutí
                         lehoty ho automaticky odstráni retenčný cron.</li>
-                    <li><strong>Oznámenie nezákonného obsahu a rozhodnutie:</strong> 5 rokov od
+                    <li><strong>Oznámenie nezákonného obsahu a rozhodnutie:</strong> 5 rokov od
                         poslednej procesnej zmeny; potom ho automaticky odstráni retenčný cron.</li>
                 </ul>
 
@@ -212,21 +212,21 @@ include 'legal_head.php';
                 </p>
                 <ul>
                     <li><strong>Zaplatená objednávka ako účtovný doklad</strong> (e-mail,
-                        fakturačné údaje, suma, variabilný symbol, dátumy): 10 rokov podľa
+                        fakturačné údaje, suma, variabilný symbol, dátumy): 10 rokov podľa
                         § 35 zákona č. 431/2002 Z. z. o účtovníctve.</li>
-                    <li><strong>Neuhradená alebo zrušená objednávka:</strong> 90 dní, potom sa
+                    <li><strong>Neuhradená alebo zrušená objednávka:</strong> 90 dní, potom sa
                         maže celá, lebo účtovný záznam z nej nevznikol.</li>
                     <li><strong>IP adresa a prehliadač z objednávkového formulára:</strong>
-                        90 dní. Potom sa z objednávky odstránia, zvyšok záznamu zostáva.</li>
+                        90 dní. Potom sa z objednávky odstránia, zvyšok záznamu zostáva.</li>
                     <li><strong>Doklad o súhlasoch</strong> (čas potvrdenia podmienok, čas
                         žiadosti o okamžité dodanie a verzia podmienok): spolu so zaplatenou
                         objednávkou, pretože práve on preukazuje, že právo na odstúpenie
                         zaniklo oprávnene.</li>
-                    <li><strong>Prístup na stiahnutie:</strong> 2 roky od potvrdenia platby.
-                        Do 30 dní po uplynutí sa prístupový token znehodnotí a odkaz z e-mailu
+                    <li><strong>Prístup na stiahnutie:</strong> 2 roky od potvrdenia platby.
+                        Do 30 dní po uplynutí sa prístupový token znehodnotí a odkaz z e-mailu
                         prestane fungovať.</li>
                     <li><strong>Podrobnosti o stiahnutiach</strong> (čas a formát posledného
-                        stiahnutia): 4 roky od úhrady. Potom zostáva len počet stiahnutí ako
+                        stiahnutia): 4 roky od úhrady. Potom zostáva len počet stiahnutí ako
                         minimalizovaný doklad o dodaní.</li>
                 </ul>
 
@@ -272,7 +272,7 @@ include 'legal_head.php';
                 <!-- 10. DETI -->
                 <h3>10. Deti</h3>
                 <p>
-                    Služba nie je určená osobám mladším ako 16 rokov; ak vaše miestne právo
+                    Služba nie je určená osobám mladším ako 16 rokov; ak vaše miestne právo
                     vyžaduje vyšší minimálny vek, platí tento vyšší vek. Údaje mladších osôb
                     vedome nezhromažďujeme. Ak sa domnievate, že nám
                     dieťa poskytlo údaje, kontaktujte nás na

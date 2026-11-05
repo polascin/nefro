@@ -35,25 +35,25 @@ $articles[] = [
 
 <p>Ide o systematický prehľad a metaanalýzu registrovanú na platforme OSF a vypracovanú podľa odporúčaní PRISMA a MOOSE. Prehľadávané boli databázy PubMed a Web of Science od ich vzniku do októbra 2025. Zaradené boli longitudinálne pozorovacie štúdie porovnávajúce osoby exponované konope a neexponované, bez predchádzajúcej bipolárnej poruchy, a hodnotiace neskoršie výstupy bipolárneho spektra.</p>
 
-<p>Zaradených bolo <strong>19 štúdií z 11 krajín</strong> s celkovým počtom 6 960 517 účastníkov, z toho 67 992 užívateľov konopy. Priemerný vek na začiatku sledovania bol 23,8 roka. Expozícia bola definovaná rôzne: akékoľvek užívanie, celoživotné užívanie, časté užívanie alebo porucha užívania konopy. Metodickú kvalitu autori hodnotili Newcastleskou a ottawskou škálou so skóre 6 až 9, čo zodpovedá dobrej až vysokej kvalite.</p>
+<p>Zaradených bolo <strong>19 štúdií z 11 krajín</strong> s celkovým počtom 6&nbsp;960&nbsp;517 účastníkov, z toho 67&nbsp;992 užívateľov konopy. Priemerný vek na začiatku sledovania bol 23,8 roka. Expozícia bola definovaná rôzne: akékoľvek užívanie, celoživotné užívanie, časté užívanie alebo porucha užívania konopy. Metodickú kvalitu autori hodnotili Newcastleskou a ottawskou škálou so skóre 6 až 9, čo zodpovedá dobrej až vysokej kvalite.</p>
 
 <h2>Číslo, ktoré sa prebralo nesprávne</h2>
 
 <p>Takmer všetky prevzatia uvádzajú sedem miliónov účastníkov v tesnej blízkosti relatívneho rizika 2,46, čím vzniká dojem, že odhad stojí na populácii tejto veľkosti. Nestojí.</p>
 
-<p>Číslo 6 960 517 je súčet účastníkov <em>všetkých 19 zaradených štúdií</em>. Do samotných metaanalýz vstúpilo 13 z nich a boli rozdelené do dvoch samostatných výpočtov:</p>
+<p>Číslo 6&nbsp;960&nbsp;517 je súčet účastníkov <em>všetkých 19 zaradených štúdií</em>. Do samotných metaanalýz vstúpilo 13 z nich a boli rozdelené do dvoch samostatných výpočtov:</p>
 
 <div class="table-responsive" role="region" aria-label="Zlúčené odhady a ich skutočná dôkazová základňa" tabindex="0">
 <table>
   <thead><tr><th scope="col">Výstup</th><th scope="col">Relatívne riziko</th><th scope="col">95 % interval spoľahlivosti</th><th scope="col">Počet štúdií</th><th scope="col">Počet účastníkov</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Incidentná bipolárna porucha</th><td>2,46</td><td>1,57–3,84</td><td>8</td><td>206 572</td></tr>
-    <tr><th scope="row">Incidentné manické alebo hypomanické príznaky</th><td>2,11</td><td>1,07–4,18</td><td>6</td><td>57 243</td></tr>
+    <tr><th scope="row">Incidentná bipolárna porucha</th><td>2,46</td><td>1,57–3,84</td><td>8</td><td>206&nbsp;572</td></tr>
+    <tr><th scope="row">Incidentné manické alebo hypomanické príznaky</th><td>2,11</td><td>1,07–4,18</td><td>6</td><td>57&nbsp;243</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Skutočná dôkazová základňa pre hlavný výsledok je teda <strong>206 572 účastníkov v ôsmich štúdiách</strong>, nie sedem miliónov. Rozdiel je viac než tridsaťnásobný. Jedna štúdia prispela do oboch analýz.</p>
+<p>Skutočná dôkazová základňa pre hlavný výsledok je teda <strong>206&nbsp;572 účastníkov v ôsmich štúdiách</strong>, nie sedem miliónov. Rozdiel je viac než tridsaťnásobný. Jedna štúdia prispela do oboch analýz.</p>
 
 <p>Dôležitý je aj interval spoľahlivosti pri manických a hypomanických príznakoch: dolná hranica 1,07 je tesne nad hodnotou 1,0. Formulácia „takmer dvojnásobné riziko“ je pri takomto intervale nepresná; zlučiteľný je aj sotva badateľný účinok.</p>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <p>Súvislosť konopy s obličkami je na rozdiel od psychiatrickej časti konkrétna a v nefrologickej praxi priamo použiteľná.</p>
 
-<p><strong>Kanabidiol a inhibítory kalcineurínu.</strong> Toto je najdôležitejší bod pre každého, kto sleduje pacientov po transplantácii obličky. Kanabidiol sa metabolizuje cez CYP3A4 a CYP2C19 a zároveň je silným inhibítorom týchto dráh. V publikovanom prípade z <em>American Journal of Transplantation</em> došlo u účastníka klinického skúšania kanabidiolu pri epilepsii, ktorý súčasne užíval takrolimus, k približne <strong>trojnásobnému vzostupu koncentrácie takrolimu normalizovanej na dávku</strong> pri dávke kanabidiolu 2 000 až 2 900 mg denne. Autori označili tento nález za významný problém pre transplantačnú komunitu v čase postupnej legalizácie konopy a dostupnosti registrovaného kanabidiolového prípravku.</p>
+<p><strong>Kanabidiol a inhibítory kalcineurínu.</strong> Toto je najdôležitejší bod pre každého, kto sleduje pacientov po transplantácii obličky. Kanabidiol sa metabolizuje cez CYP3A4 a CYP2C19 a zároveň je silným inhibítorom týchto dráh. V publikovanom prípade z <em>American Journal of Transplantation</em> došlo u účastníka klinického skúšania kanabidiolu pri epilepsii, ktorý súčasne užíval takrolimus, k približne <strong>trojnásobnému vzostupu koncentrácie takrolimu normalizovanej na dávku</strong> pri dávke kanabidiolu 2&nbsp;000 až 2&nbsp;900&nbsp;mg denne. Autori označili tento nález za významný problém pre transplantačnú komunitu v čase postupnej legalizácie konopy a dostupnosti registrovaného kanabidiolového prípravku.</p>
 
 <p>Dávky použité v tom prípade boli antiepileptické, teda podstatne vyššie než v bežne dostupných voľnopredajných výrobkoch. Smer interakcie je však jednoznačný a pacient po transplantácii, ktorý začne užívať kanabidiol, patrí medzi tých, u ktorých treba koncentráciu takrolimu skontrolovať skôr, a nie až pri najbližšej plánovanej kontrole.</p>
 
@@ -126,7 +126,7 @@ $articles[] = [
 
 <p><small><em>Relatívne riziká, intervaly spoľahlivosti, počty štúdií a účastníkov v jednotlivých metaanalýzach, výsledky podskupinovej analýzy podľa dĺžky sledovania, výsledok metaregresie podľa roku publikovania, poznámka o strate významnosti po vylúčení jednotlivých štúdií a všetky uvádzané obmedzenia boli overené v štruktúrovanom abstrakte primárnej práce v PubMed a v zhrnutí zdrojovej správy. Úplný autorský zoznam všetkých štrnástich autorov, ročník, číslo článku a DOI boli overené v zázname PubMed.</em></small></p>
 
-<p><small><em>Vlastným prínosom tohto spracovania je upozornenie na to, že počet 6 960 517 účastníkov sa vzťahuje na všetkých 19 zaradených štúdií, zatiaľ čo hlavný zlúčený odhad stojí na ôsmich štúdiách s 206 572 účastníkmi, výklad vzorca závislosti asociácie od dĺžky sledovania ako prejavu obrátenej príčinnosti, zaradenie nárastu obsahu tetrahydrokanabinolu v čase medzi obmedzenia definície expozície, prepočet relatívneho rizika na absolútne pri známej prevalencii, a nefrologická časť o interakcii kanabidiolu s takrolimom a o prerenálnom poškodení obličiek. Tieto súvislosti nie sú obsiahnuté v primárnej práci ani vo východiskovej správe.</em></small></p>
+<p><small><em>Vlastným prínosom tohto spracovania je upozornenie na to, že počet 6&nbsp;960&nbsp;517 účastníkov sa vzťahuje na všetkých 19 zaradených štúdií, zatiaľ čo hlavný zlúčený odhad stojí na ôsmich štúdiách s 206&nbsp;572 účastníkmi, výklad vzorca závislosti asociácie od dĺžky sledovania ako prejavu obrátenej príčinnosti, zaradenie nárastu obsahu tetrahydrokanabinolu v čase medzi obmedzenia definície expozície, prepočet relatívneho rizika na absolútne pri známej prevalencii, a nefrologická časť o interakcii kanabidiolu s takrolimom a o prerenálnom poškodení obličiek. Tieto súvislosti nie sú obsiahnuté v primárnej práci ani vo východiskovej správe.</em></small></p>
 
 <h3>Súvisiace články</h3>
 

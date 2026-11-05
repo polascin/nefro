@@ -34,7 +34,7 @@ $articles[] = [
 
 <h2>Terminológia určuje správny postup</h2>
 
-<p>Odporúčanie NICE CG120 sa týka ľudí vo veku 14 rokov a viac s podozrením na psychózu alebo potvrdenou psychózou a so súčasným problémovým užívaním alkoholu, predpísaných, voľnopredajných alebo nelegálnych psychoaktívnych látok. Pojem závažné duševné ochorenie je širší a môže zahŕňať aj bipolárnu poruchu či ťažkú depresiu. Klinické jadro CG120 však tvorí psychotické ochorenie so súčasným užívaním látok.</p>
+<p>Odporúčanie NICE CG120 sa týka ľudí vo veku 14&nbsp;rokov a viac s podozrením na psychózu alebo potvrdenou psychózou a so súčasným problémovým užívaním alkoholu, predpísaných, voľnopredajných alebo nelegálnych psychoaktívnych látok. Pojem závažné duševné ochorenie je širší a môže zahŕňať aj bipolárnu poruchu či ťažkú depresiu. Klinické jadro CG120 však tvorí psychotické ochorenie so súčasným užívaním látok.</p>
 
 <p>Pri hodnotení treba rozlišovať:</p>
 

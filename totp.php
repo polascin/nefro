@@ -207,11 +207,11 @@ function generateTotpSecret(): string
 }
 
 /**
- * Overí TOTP kód. Akceptuje ±1 časové okno (tolerancia ±30 s).
+ * Overí TOTP kód. Akceptuje ±1 časové okno (tolerancia ±30 s).
  *
  * @param string $secret  Base32-kódovaný tajný kľúč
  * @param string $code    6-ciferný kód od používateľa
- * @param int    $window  Počet intervalov (každý 30 s) na každú stranu
+ * @param int    $window  Počet intervalov (každý 30 s) na každú stranu
  */
 function verifyTotpCode(string $secret, string $code, int $window = 1): bool
 {
@@ -238,7 +238,7 @@ function verifyTotpCode(string $secret, string $code, int $window = 1): bool
  *
  * @param string $secret  Base32-kódovaný tajný kľúč
  * @param string $code    6-ciferný kód od používateľa
- * @param int    $window  Počet intervalov (každý 30 s) na každú stranu
+ * @param int    $window  Počet intervalov (každý 30 s) na každú stranu
  * @return int|false  Matched counter alebo false ak kód neplatí
  */
 function verifyTotpCodeGetCounter(string $secret, string $code, int $window = 1): int|false

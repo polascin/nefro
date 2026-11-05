@@ -72,12 +72,12 @@ function publicationDeliveryConsentText(): string
 }
 
 /* ── Retencia údajov objednávok ───────────────────────────────────────────
- * Zámerne rôzne doby pre rôzne polia — jednotných „10 rokov“ by bolo
+ * Zámerne rôzne doby pre rôzne polia — jednotných „10 rokov“ by bolo
  * nadbytočné spracúvanie pre všetko okrem účtovného dokladu.
  * Vynucuje ich `archive_cleanup.php` (cron), nie len text v zásadách.
  * ──────────────────────────────────────────────────────────────────────── */
 
-/** Účtovný doklad: 10 rokov (§ 35 ods. 3 zákona č. 431/2002 Z. z. o účtovníctve). */
+/** Účtovný doklad: 10 rokov (§ 35 ods. 3 zákona č. 431/2002 Z. z. o účtovníctve). */
 const PUBLICATION_RETENTION_ACCOUNTING_DAYS = 3653;
 /** Neuhradené a zrušené objednávky — nevznikol účtovný záznam, netreba ich držať. */
 const PUBLICATION_RETENTION_UNPAID_DAYS = 90;
@@ -110,7 +110,7 @@ function publicationSeller(): array
         'address'       => 'Kvetná 944/2I, 900 41 Rovinka',
         'establishment' => 'Slovenská republika (EÚ)',
         'email'         => 'nefro@polascin.net',
-        'phone'         => '+421 917 370 474',
+        'phone'         => '+421 917 370 474',
         'registerName'  => 'Živnostenský register Slovenskej republiky',
         'registerNumber'=> 'Okresný úrad Senec',
         'supervisoryAuthority'    => 'Inšpektorát Slovenskej obchodnej inšpekcie pre Bratislavský kraj',
@@ -352,7 +352,7 @@ function publications(): array
                 . 'jednotky mmol/l), takže znenie je konzistentné naprieč celým zväzkom.',
             ],
             'highlights'   => [
-                '387 článkov na 1 745 stranách: celý odborný ročník v jednom súbore',
+                '387 článkov na 1 745 stranách: celý odborný ročník v jednom súbore',
                 '393 ilustrácií a schém',
                 '16 tematických kapitol a príloha, v kapitolách chronologicky, s obsahom a vnútornými odkazmi',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
@@ -398,7 +398,7 @@ function publications(): array
                 . 'oddeľovače sú prevedené do anglickej konvencie.',
             ],
             'highlights'   => [
-                '387 článkov na 1 782 stranách, odborný ročník v angličtine',
+                '387 článkov na 1 782 stranách, odborný ročník v angličtine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Anglická terminológia, jednotky a desatinné oddeľovače',
@@ -439,7 +439,7 @@ function publications(): array
                 . 'a jazykové konvencie sú prispôsobené nemčine.',
             ],
             'highlights'   => [
-                '387 článkov na 1 912 stranách, odborný ročník v nemčine',
+                '387 článkov na 1 912 stranách, odborný ročník v nemčine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Nemecká odborná terminológia a jazykové konvencie',
@@ -471,7 +471,7 @@ function publications(): array
             'is_available' => true,
             'excerpt'     => 'Zhustené vydanie prvého zväzku: 387 článkov ako abstrakt a štyri až sedem '
                 . 'kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. '
-                . 'Celý ročník na 261 stranách namiesto 1 745.',
+                . 'Celý ročník na 261 stranách namiesto 1 745.',
             'description'  => [
                 '<strong>Kompendium</strong> je zhustené vydanie prvého zväzku série '
                 . '<em>SK Nefro Báza</em>. Každý z 387 odborných článkov je spracovaný do '
@@ -509,7 +509,7 @@ function publications(): array
             'language_code' => 'en',
             'pages'       => 275,
             'articles'    => 387,
-            // Rozsah textu je väčší než v slovenskom kompendiu (109 029 slov)
+            // Rozsah textu je väčší než v slovenskom kompendiu (109 029 slov)
             // len kvôli angličtine — tá na tú istú informáciu potrebuje viac
             // slov. Článkov aj kapitol je rovnako.
             'words'       => 127308,
@@ -520,7 +520,7 @@ function publications(): array
             'is_available' => true,
             'excerpt'     => 'Anglické vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 275 stranách '
-                . 'namiesto 1 782.',
+                . 'namiesto 1 782.',
             'description'  => [
                 '<strong>Anglické vydanie kompendia</strong> prvého zväzku série '
                 . '<em>SK Nefro Báza</em>. Každý z 387 odborných článkov je spracovaný do '
@@ -620,7 +620,7 @@ function publications(): array
                 . 'a jazykové konvencie sú prispôsobené taliančine.',
             ],
             'highlights'   => [
-                '387 článkov na 1 853 stranách, odborný ročník v taliančine',
+                '387 článkov na 1 853 stranách, odborný ročník v taliančine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Talianska odborná terminológia a jazykové konvencie',
@@ -843,7 +843,7 @@ function publicationFileSize(string $slug, string $formatCode): ?string
 /**
  * Variabilný symbol objednávky: rok + ID doplnené nulami na 10 znakov.
  * Banky VS nad 10 číslic odmietajú, preto ID obmedzujeme na 6 miest —
- * to je 999 999 objednávok v jednom roku, čo s rezervou stačí.
+ * to je 999 999 objednávok v jednom roku, čo s rezervou stačí.
  */
 function publicationOrderVariableSymbol(int $orderId, string $createdAt): string
 {
@@ -920,7 +920,7 @@ function publicationPaymentConfig(): array
         'uphold_account'  => 'lubomir@polascin.net',
         // Viamo — okamžitá platba na telefónne číslo. Zhodné s podpora.php.
         'viamo_phone_raw'    => '+421917370474',
-        'viamo_phone_pretty' => '+421 917 370 474',
+        'viamo_phone_pretty' => '+421 917 370 474',
     ];
 }
 

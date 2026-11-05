@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Čo priniesla nová analýza DOPPS</h2>
 
-<p>Iseri a spolupracovníci analyzovali údaje medzinárodnej prospektívnej kohorty DOPPS z rokov 2009–2022. V štvrťročných landmarkových bodoch zhrnuli hodnoty celkového vápnika z predchádzajúcich 180 dní ako poslednú hodnotu, priemer, lineárny sklon, reziduálnu smerodajnú odchýlku a podiel času pod 8,6 mg/dl alebo nad 10,0 mg/dl. Hospitalizácie a úmrtia následne sledovali počas 90 dní. Do hlavnej analýzy vstúpilo 81 475 pacientov a 431 618 landmarkov; zaznamenali 68 632 hospitalizácií a 12 886 úmrtí. [1]</p>
+<p>Iseri a spolupracovníci analyzovali údaje medzinárodnej prospektívnej kohorty DOPPS z rokov 2009–2022. V štvrťročných landmarkových bodoch zhrnuli hodnoty celkového vápnika z predchádzajúcich 180&nbsp;dní ako poslednú hodnotu, priemer, lineárny sklon, reziduálnu smerodajnú odchýlku a podiel času pod 8,6&nbsp;mg/dl alebo nad 10,0&nbsp;mg/dl. Hospitalizácie a úmrtia následne sledovali počas 90&nbsp;dní. Do hlavnej analýzy vstúpilo 81&nbsp;475 pacientov a 431&nbsp;618 landmarkov; zaznamenali 68&nbsp;632 hospitalizácií a 12&nbsp;886 úmrtí. [1]</p>
 
 <p>Posledná hodnota vápnika nebola spojená s hospitalizáciou, bola však spojená s mortalitou. Nižší 180-dňový priemer súvisel najmä s hospitalizáciou, vyšší priemer s úmrtím. Rastúci sklon aj väčšia reziduálna variabilita boli konzistentne spojené s oboma výsledkami. Dlhší čas pod rozmedzím mal odstupňovaný vzťah k hospitalizácii, kým čas nad rozmedzím silno a dávkovo závislo súvisel s mortalitou. [1]</p>
 
@@ -53,7 +53,7 @@ $articles[] = [
 
 <h3>Čo znamená landmarková analýza</h3>
 
-<p>Landmarkový prístup oddeľuje obdobie merania expozície od následného obdobia sledovania výsledkov. V tejto štúdii bol každý landmark podmienený najmenej štyrmi mesiacmi s dostupným meraním počas predchádzajúcich 180 dní a aspoň jedným meraním v posledných 45 dňoch. Pacient mohol prispieť viacerými landmarkmi, pokiaľ zostával v riziku.</p>
+<p>Landmarkový prístup oddeľuje obdobie merania expozície od následného obdobia sledovania výsledkov. V tejto štúdii bol každý landmark podmienený najmenej štyrmi mesiacmi s dostupným meraním počas predchádzajúcich 180&nbsp;dní a aspoň jedným meraním v posledných 45 dňoch. Pacient mohol prispieť viacerými landmarkmi, pokiaľ zostával v riziku.</p>
 
 <p>Tento dizajn znižuje niektoré problémy časového usporiadania, neodstraňuje však reziduálne skreslenie ani selekciu pacientov, ktorí sa do landmarku dostali a mali dostatok údajov. Mesačné merania nezachytili krátke výkyvy, ionizovaný vápnik nebol dostupný a albumínom korigovaný vápnik sa použil iba v analýzach citlivosti. Deväťdesiatdňový horizont navyše nehodnotí dlhodobé dôsledky. [1]</p>
 
@@ -79,7 +79,7 @@ $articles[] = [
 
 <p>Koncentrácia vápnika v dialyzáte ovplyvňuje prenos medzi krvou a dialyzačným roztokom. Čistú bilanciu však neurčuje iba rozdiel medzi koncentráciou v dialyzáte a celkovou kalciémiou; záleží aj na ionizovanej frakcii, ultrafiltrácii a priebehu procedúry. Vyšší vápnik v dialyzáte môže podporiť hemodynamickú stabilitu, ale zvýšiť vápnikovú záťaž. Nižšia koncentrácia môže záťaž obmedziť, no u citlivého pacienta zhoršiť hypokalciémiu alebo obehovú toleranciu.</p>
 
-<p>KDIGO pri CKD G5D odporúča dialyzát s vápnikom 1,25–1,50 mmol/l (2,5–3,0 mEq/l), pričom predpis má byť individualizovaný. Hodnoty pod 1,25 mmol/l a vysoké koncentrácie 1,75 mmol/l nemožno používať rutinne bez zváženia rizík. [2]</p>
+<p>KDIGO pri CKD G5D odporúča dialyzát s vápnikom 1,25–1,50&nbsp;mmol/l (2,5–3,0 mEq/l), pričom predpis má byť individualizovaný. Hodnoty pod 1,25&nbsp;mmol/l a vysoké koncentrácie 1,75&nbsp;mmol/l nemožno používať rutinne bez zváženia rizík. [2]</p>
 
 <p>Na sledovanie trendu sú vhodné porovnateľne načasované odbery. Predialyzačná a bezprostredná postdialyzačná hodnota nie sú zameniteľné; výsledok ovplyvňuje aj zmena pH, objemu plazmy a koncentrácie bielkovín počas výkonu.</p>
 

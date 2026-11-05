@@ -55,11 +55,11 @@ $articles[] = [
 
 <ul>
   <li><strong>Indikácia pri CKD aj po transplantácii:</strong> pre všetkých pacientov <strong>každoročne</strong>.</li>
-  <li><strong>Po transplantácii:</strong> začať <strong>4 týždne po transplantácii</strong>, pričom sa uvádza <em>„no live vaccine“</em> (t. j. nepoužívať živé vakcíny).</li>
+  <li><strong>Po transplantácii:</strong> začať <strong>4&nbsp;týždne po transplantácii</strong>, pričom sa uvádza <em>„no live vaccine“</em> (t. j. nepoužívať živé vakcíny).</li>
   <li><strong>Po transplantácii podľa veku:</strong>
     <ul>
-      <li><strong>vek &lt; 60 rokov:</strong> štandardná jednorazová očkovacia schéma,</li>
-      <li><strong>vek ≥ 60 rokov:</strong> <em>high-dose</em> (jednorazová schéma).</li>
+      <li><strong>vek &lt; 60&nbsp;rokov:</strong> štandardná jednorazová očkovacia schéma,</li>
+      <li><strong>vek ≥ 60&nbsp;rokov:</strong> <em>high-dose</em> (jednorazová schéma).</li>
     </ul>
   </li>
 </ul>
@@ -67,8 +67,8 @@ $articles[] = [
 <h3>Pneumokok (Pneumococcus)</h3>
 
 <ul>
-  <li><strong>Indikácia pre CKD:</strong> všetci pacienti <strong>vo veku ≥ 19 rokov</strong>.</li>
-  <li><strong>Po transplantácii:</strong> začať <strong>6 mesiacov po transplantácii</strong>.</li>
+  <li><strong>Indikácia pre CKD:</strong> všetci pacienti <strong>vo veku ≥ 19&nbsp;rokov</strong>.</li>
+  <li><strong>Po transplantácii:</strong> začať <strong>6&nbsp;mesiacov po transplantácii</strong>.</li>
   <li><strong>Schéma podľa predchádzajúceho očkovania:</strong>
     <ul>
       <li>ak pacient <strong>ešte nebol očkovaný:</strong> <strong>1× PCV</strong>,</li>
@@ -80,9 +80,9 @@ $articles[] = [
 <h3>RSV (respiračný syncyciálny vírus)</h3>
 
 <ul>
-  <li><strong>CKD:</strong> všetci vo veku <strong>≥ 75 rokov</strong>, pri ktorých ide o <strong>CKD 3+</strong>.</li>
-  <li><strong>Dialýza:</strong> všetci vo veku <strong>≥ 60 rokov</strong>.</li>
-  <li><strong>Po transplantácii:</strong> všetci vo veku <strong>≥ 60 rokov</strong>, začať <strong>6 mesiacov po transplantácii</strong>.</li>
+  <li><strong>CKD:</strong> všetci vo veku <strong>≥ 75&nbsp;rokov</strong>, pri ktorých ide o <strong>CKD 3+</strong>.</li>
+  <li><strong>Dialýza:</strong> všetci vo veku <strong>≥ 60&nbsp;rokov</strong>.</li>
+  <li><strong>Po transplantácii:</strong> všetci vo veku <strong>≥ 60&nbsp;rokov</strong>, začať <strong>6&nbsp;mesiacov po transplantácii</strong>.</li>
   <li><strong>Schéma:</strong> <strong>jedna dávka</strong>, bez preferencie typu vakcíny.</li>
 </ul>
 
@@ -90,7 +90,7 @@ $articles[] = [
 
 <ul>
   <li><strong>CKD:</strong> pre všetkých pacientov <strong>každoročné revakcinácie</strong>.</li>
-  <li><strong>Po transplantácii:</strong> rovnako <strong>každoročná revakcinácia</strong>, pri úvahe sa spomína <strong>interval 6 mesiacov</strong>.</li>
+  <li><strong>Po transplantácii:</strong> rovnako <strong>každoročná revakcinácia</strong>, pri úvahe sa spomína <strong>interval 6&nbsp;mesiacov</strong>.</li>
   <li><strong>Typ:</strong> <strong>jednodávková mRNA vakcína</strong> s <strong>aktuálnym variantom vírusu</strong> (<em>most recent virus variant</em>).</li>
 </ul>
 
@@ -112,14 +112,14 @@ $articles[] = [
 <ul>
   <li><strong>Pri CKD podľa veku (hranice podľa jurisdikcie):</strong>
     <ul>
-      <li><strong>ACIP:</strong> od <strong>≥ 50 rokov</strong>,</li>
-      <li><strong>RKI:</strong> od <strong>60 rokov</strong>,</li>
-      <li><strong>NHS:</strong> od <strong>65 rokov</strong>.</li>
+      <li><strong>ACIP:</strong> od <strong>≥ 50&nbsp;rokov</strong>,</li>
+      <li><strong>RKI:</strong> od <strong>60&nbsp;rokov</strong>,</li>
+      <li><strong>NHS:</strong> od <strong>65&nbsp;rokov</strong>.</li>
     </ul>
   </li>
-  <li><strong>Pri imunokompromitovaných:</strong> pacienti <strong>≥ 19 rokov</strong> s <strong>terapeutickou imunosupresiou</strong>.</li>
-  <li><strong>Po transplantácii:</strong> v prehľade je uvedené, že očkovanie sa týka <strong>všetkých vo veku ≥ 19 rokov</strong> (s výnimkou režimu RKI, kde je hranica <strong>≥ 50 rokov</strong>).</li>
-  <li><strong>Schéma:</strong> <strong>2 dávky rekombinantnej vakcíny</strong> podané <strong>2 až 6 mesiacov</strong> od seba.</li>
+  <li><strong>Pri imunokompromitovaných:</strong> pacienti <strong>≥ 19&nbsp;rokov</strong> s <strong>terapeutickou imunosupresiou</strong>.</li>
+  <li><strong>Po transplantácii:</strong> v prehľade je uvedené, že očkovanie sa týka <strong>všetkých vo veku ≥ 19&nbsp;rokov</strong> (s výnimkou režimu RKI, kde je hranica <strong>≥ 50&nbsp;rokov</strong>).</li>
+  <li><strong>Schéma:</strong> <strong>2 dávky rekombinantnej vakcíny</strong> podané <strong>2 až 6&nbsp;mesiacov</strong> od seba.</li>
 </ul>
 
 <h3>Meningokok</h3>
@@ -140,20 +140,20 @@ $articles[] = [
 <h3>HPV (ľudský papilomavírus)</h3>
 
 <ul>
-  <li><strong>CKD:</strong> v prehľade sa uvádza pre <strong>deti 9–14 rokov</strong>, „catch-up“ až do <strong>26 rokov</strong>.</li>
+  <li><strong>CKD:</strong> v prehľade sa uvádza pre <strong>deti 9–14&nbsp;rokov</strong>, „catch-up“ až do <strong>26&nbsp;rokov</strong>.</li>
   <li><strong>Schéma:</strong> rozšírená očkovacia schéma = <strong>3 injekcie</strong> v mesiacoch <strong>0, 2, 6</strong>.</li>
 </ul>
 
 <h3>Tetanus, diftéria, pertusis (Tdap/Td)</h3>
 
 <ul>
-  <li><strong>Indikácia:</strong> všetci pacienti <strong>každých 5 až 10 rokov</strong> (rovnako uvedené pre CKD aj po transplantácii).</li>
+  <li><strong>Indikácia:</strong> všetci pacienti <strong>každých 5 až 10&nbsp;rokov</strong> (rovnako uvedené pre CKD aj po transplantácii).</li>
   <li><strong>Schéma:</strong> <strong>jednorazová kombinovaná vakcína</strong>.</li>
 </ul>
 
 <h2>Praktické zhrnutie pre nefrologickú ambulanciu</h2>
 
-<p>Pre prax je najcennejšie, že prehľad dáva jasný časový rámec pre dospelých s CKD a pre načasovanie po transplantácii: chrípka po transplantácii od 4 týždňov, pneumokok od 6 mesiacov, RSV od 6 mesiacov, a pri vybraných vakcínach schémy dávok s explicitnými časovými intervalmi.</p>
+<p>Pre prax je najcennejšie, že prehľad dáva jasný časový rámec pre dospelých s CKD a pre načasovanie po transplantácii: chrípka po transplantácii od 4&nbsp;týždňov, pneumokok od 6&nbsp;mesiacov, RSV od 6&nbsp;mesiacov, a pri vybraných vakcínach schémy dávok s explicitnými časovými intervalmi.</p>
 
 <hr>
 
@@ -180,12 +180,12 @@ $articles[] = [
     </tr>
     <tr>
       <td><strong>Pneumokok</strong></td>
-      <td><strong>vek ≥ 19 rokov</strong></td>
+      <td><strong>vek ≥ 19&nbsp;rokov</strong></td>
       <td>podľa predchádzajúceho očkovania: buď <strong>1× PCV</strong> (ak nikdy), alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
     </tr>
     <tr>
       <td><strong>RSV</strong></td>
-      <td><strong>vek ≥ 75 rokov</strong>, pri <strong>CKD 3+</strong></td>
+      <td><strong>vek ≥ 75&nbsp;rokov</strong>, pri <strong>CKD 3+</strong></td>
       <td><strong>1 dávka</strong></td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@ $articles[] = [
     <tr>
       <td><strong>Herpes zoster (pásový opar)</strong></td>
       <td>vekové hranice podľa jurisdikcie v prehľade (ACIP ≥ 50, RKI ≥ 60, NHS ≥ 65)</td>
-      <td><strong>2× rekombinantná vakcína</strong>, <strong>2–6 mesiacov</strong> od seba</td>
+      <td><strong>2× rekombinantná vakcína</strong>, <strong>2–6&nbsp;mesiacov</strong> od seba</td>
     </tr>
     <tr>
       <td><strong>Meningokok</strong></td>
@@ -210,12 +210,12 @@ $articles[] = [
     </tr>
     <tr>
       <td><strong>HPV</strong></td>
-      <td>v prehľade <strong>9–14 rokov</strong> a catch-up do <strong>26 rokov</strong></td>
+      <td>v prehľade <strong>9–14&nbsp;rokov</strong> a catch-up do <strong>26&nbsp;rokov</strong></td>
       <td><strong>3 injekcie</strong> (mesiace <strong>0, 2, 6</strong>)</td>
     </tr>
     <tr>
       <td><strong>Tetanus/diftéria/pertusis (Tdap/Td)</strong></td>
-      <td><strong>všetci</strong>, každých <strong>5–10 rokov</strong></td>
+      <td><strong>všetci</strong>, každých <strong>5–10&nbsp;rokov</strong></td>
       <td><strong>1×</strong> kombinovaná vakcína</td>
     </tr>
   </tbody>
@@ -236,23 +236,23 @@ $articles[] = [
   <tbody>
     <tr>
       <td><strong>Influenza</strong></td>
-      <td><strong>od 4 týždňov</strong></td>
+      <td><strong>od 4&nbsp;týždňov</strong></td>
       <td><strong>každoročne</strong>; <strong>nie živá vakcína</strong>; vek &lt; 60 štandardná, vek ≥ 60 <strong>high-dose</strong></td>
     </tr>
     <tr>
       <td><strong>Pneumokok</strong></td>
-      <td><strong>od 6 mesiacov</strong></td>
+      <td><strong>od 6&nbsp;mesiacov</strong></td>
       <td>podľa histórie: <strong>1× PCV</strong> ak nikdy, alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
     </tr>
     <tr>
       <td><strong>RSV</strong></td>
-      <td><strong>od 6 mesiacov</strong>; vek ≥ 60</td>
+      <td><strong>od 6&nbsp;mesiacov</strong>; vek ≥ 60</td>
       <td><strong>1 dávka</strong> (typ vakcíny v prehľade bez preferencie)</td>
     </tr>
     <tr>
       <td><strong>SARS-CoV-2</strong></td>
       <td>v prehľade ako každoročná revakcinácia</td>
-      <td><strong>1× ročne</strong>, <strong>mRNA</strong>, <em>most recent virus variant</em>; pri úvahe sa spomína interval <strong>~6 mesiacov</strong></td>
+      <td><strong>1× ročne</strong>, <strong>mRNA</strong>, <em>most recent virus variant</em>; pri úvahe sa spomína interval <strong>~6&nbsp;mesiacov</strong></td>
     </tr>
     <tr>
       <td><strong>Hepatitída B</strong></td>
@@ -262,7 +262,7 @@ $articles[] = [
     <tr>
       <td><strong>Herpes zoster</strong></td>
       <td>v prehľade plošne podľa veku</td>
-      <td><strong>všetci ≥ 19 rokov</strong> (okrem výnimky pri RKI v prehľade); <strong>2 dávky</strong> s intervalom <strong>2–6 mesiacov</strong></td>
+      <td><strong>všetci ≥ 19&nbsp;rokov</strong> (okrem výnimky pri RKI v prehľade); <strong>2 dávky</strong> s intervalom <strong>2–6&nbsp;mesiacov</strong></td>
     </tr>
     <tr>
       <td><strong>Meningokok</strong></td>
@@ -272,7 +272,7 @@ $articles[] = [
     <tr>
       <td><strong>Tdap/Td</strong></td>
       <td>bez špecifického odkladu v prehľade</td>
-      <td><strong>1×</strong> každých <strong>5–10 rokov</strong></td>
+      <td><strong>1×</strong> každých <strong>5–10&nbsp;rokov</strong></td>
     </tr>
   </tbody>
 </table>
@@ -284,7 +284,7 @@ $articles[] = [
   <li><strong>Zistiť diagnózu a režim:</strong> CKD (štádium) alebo transplantácia (imunosupresia).</li>
   <li><strong>Vybrať skupinu:</strong> tabuľka pre CKD alebo pre transplantovaných.</li>
   <li><strong>Skontrolovať históriu očkovania</strong> (najmä pneumokok, hepatitída B, zoster).</li>
-  <li><strong>Doplniť, čo chýba</strong> podľa časových odkladov po transplantácii (najmä chrípka 4 týždne, pneumokok/RSV 6 mesiacov).</li>
+  <li><strong>Doplniť, čo chýba</strong> podľa časových odkladov po transplantácii (najmä chrípka 4&nbsp;týždne, pneumokok/RSV 6&nbsp;mesiacov).</li>
 </ol>
 
 <hr>

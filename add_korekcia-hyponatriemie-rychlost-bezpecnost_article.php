@@ -1,10 +1,10 @@
 <?php
 /**
  * add_korekcia-hyponatriemie-rychlost-bezpecnost_article.php
- * Odborny clanok o rychlosti korekcie hyponatriemie: hypotonicka
- * hyponatriemia, urgentna liecba hypertonickym roztokom, bezpecnostne
- * limity verzus cielovy denny vzostup, nadmerna korekcia a dezmopresin,
- * osobitosti pri zlyhani obliciek a kritika observacnych studii.
+ * Odborný článok o rychlosti korekcie hyponatriemie: hypotonicka
+ * hyponatriemia, urgentna liečba hypertonickym roztokom, bezpečnostné
+ * limity verzus cieľový denny vzostup, nadmerna korekcia a dezmopresin,
+ * osobitosti pri zlyhani obličiek a kritika observacnych štúdií.
  * Slovenske spracovanie prehladu Kamel KS a spol. (Clin Kidney J 2026).
  */
 
@@ -41,7 +41,7 @@ $articles[] = [
 
 <h2>Najskôr potvrdiť hypotonickú hyponatriémiu</h2>
 
-<p>Hyponatriémia je koncentrácia sodíka v sére nižšia ako 135 mmol/l. Neznamená automaticky nedostatok sodíka v organizme – často ide predovšetkým o relatívny nadbytok vody vzhľadom na množstvo výmenného sodíka a draslíka.</p>
+<p>Hyponatriémia je koncentrácia sodíka v sére nižšia ako 135&nbsp;mmol/l. Neznamená automaticky nedostatok sodíka v organizme – často ide predovšetkým o relatívny nadbytok vody vzhľadom na množstvo výmenného sodíka a draslíka.</p>
 
 <p>Pred použitím liečebného algoritmu pre hypotonickú hyponatriémiu treba zohľadniť:</p>
 
@@ -57,13 +57,13 @@ $articles[] = [
 
 <p>Kŕče, výrazná porucha vedomia alebo ďalšie prejavy závažnej hyponatriemickej encefalopatie predstavujú urgentný stav. Ak je pravdepodobnou príčinou hypotonická hyponatriémia, podáva sa 3 % roztok chloridu sodného v monitorovanom prostredí.</p>
 
-<p>Prehľad odporúča podať <strong>100 až 150 ml 3 % hypertonického roztoku intravenózne počas 10 až 20 minút, s opakovaním až dva- či trikrát podľa potreby</strong>. [1] Cieľom je zvýšiť natriémiu <strong>približne o 4 až 6 mmol/l v priebehu prvých 1 až 2 hodín</strong> – taký vzostup spravidla stačí na zvrátenie život ohrozujúceho edému mozgu. [1]</p>
+<p>Prehľad odporúča podať <strong>100 až 150&nbsp;ml 3 % hypertonického roztoku intravenózne počas 10 až 20&nbsp;minút, s opakovaním až dva- či trikrát podľa potreby</strong>. [1] Cieľom je zvýšiť natriémiu <strong>približne o 4 až 6&nbsp;mmol/l v priebehu prvých 1 až 2&nbsp;hodín</strong> – taký vzostup spravidla stačí na zvrátenie život ohrozujúceho edému mozgu. [1]</p>
 
 <p><strong>Cieľom urgentnej liečby nie je okamžitá normalizácia natriémie.</strong> Súčasne treba hľadať iné príčiny neurologického stavu. Pretrvávanie poruchy vedomia po primeranom úvodnom vzostupe natriémie nie je samo osebe dôvodom na jej nekontrolované ďalšie zvyšovanie.</p>
 
 <h2>Cieľ korekcie nie je totožný s bezpečnostným limitom</h2>
 
-<p>Za akútnu sa spravidla považuje hyponatriémia s preukázaným trvaním kratším ako 48 hodín. Pri dlhšom alebo neznámom trvaní sa pri plánovaní bezpečnosti postupuje obozretne, ako pri chronickej poruche.</p>
+<p>Za akútnu sa spravidla považuje hyponatriémia s preukázaným trvaním kratším ako 48&nbsp;hodín. Pri dlhšom alebo neznámom trvaní sa pri plánovaní bezpečnosti postupuje obozretne, ako pri chronickej poruche.</p>
 
 <p>Počas chronickej hyponatriémie sa mozgové bunky adaptujú stratou intracelulárnych elektrolytov a organických osmolytov. Táto adaptácia obmedzuje opuch mozgu, zároveň však zvyšuje zraniteľnosť voči osmotickému poškodeniu počas korekcie. [1]</p>
 
@@ -81,13 +81,13 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Priemerné</th>
-      <td>najviac 10 mmol/l za 24 hodín a 18 mmol/l za 48 hodín</td>
-      <td>4 až 8 mmol/l za deň</td>
+      <td>najviac 10&nbsp;mmol/l za 24&nbsp;hodín a 18&nbsp;mmol/l za 48&nbsp;hodín</td>
+      <td>4 až 8&nbsp;mmol/l za deň</td>
     </tr>
     <tr>
       <th scope="row">Vysoké</th>
-      <td>najviac 8 mmol/l za 24 hodín</td>
-      <td>4 až 6 mmol/l za deň</td>
+      <td>najviac 8&nbsp;mmol/l za 24&nbsp;hodín</td>
+      <td>4 až 6&nbsp;mmol/l za deň</td>
     </tr>
   </tbody>
 </table>
@@ -95,14 +95,14 @@ $articles[] = [
 
 <p>Tieto hodnoty predstavujú bezpečnostné hranice, nie métu, ktorú treba dosiahnuť. [1] Vhodná je rezerva pre nepredvídanú vodnú diurézu aj pre neistotu merania.</p>
 
-<p>Pozor na rozšírenú nepresnosť: limit pre druhých 24 hodín nie je ďalších 8 mmol/l „navyše“, ale <strong>kumulatívne najviac 18 mmol/l za 48 hodín</strong>. Rozdiel je klinicky podstatný práve u pacientov, u ktorých sa korekcia v prvý deň priblížila k hornej hranici.</p>
+<p>Pozor na rozšírenú nepresnosť: limit pre druhých 24&nbsp;hodín nie je ďalších 8&nbsp;mmol/l „navyše“, ale <strong>kumulatívne najviac 18&nbsp;mmol/l za 48&nbsp;hodín</strong>. Rozdiel je klinicky podstatný práve u pacientov, u ktorých sa korekcia v prvý deň priblížila k hornej hranici.</p>
 
 <h3>Kto je vo vysokom riziku</h3>
 
 <p>K významným rizikovým okolnostiam patria: [1]</p>
 
 <ul>
-  <li>veľmi nízka východisková natriémia, približne 105 až 110 mmol/l alebo menej,</li>
+  <li>veľmi nízka východisková natriémia, približne 105 až 110&nbsp;mmol/l alebo menej,</li>
   <li>hypokaliémia,</li>
   <li>hypofosfatémia,</li>
   <li>malnutrícia,</li>
@@ -110,7 +110,7 @@ $articles[] = [
   <li>pokročilé ochorenie pečene.</li>
 </ul>
 
-<p>Autori zároveň uvádzajú, že osmotická demyelinizácia je <strong>zriedkavá u pacientov bez týchto rizikových faktorov, najmä ak je východisková natriémia nad 120 mmol/l</strong>. [1] Limity u nich naďalej platia, stratifikácia rizika však nie je formalita a má reálny klinický význam.</p>
+<p>Autori zároveň uvádzajú, že osmotická demyelinizácia je <strong>zriedkavá u pacientov bez týchto rizikových faktorov, najmä ak je východisková natriémia nad 120&nbsp;mmol/l</strong>. [1] Limity u nich naďalej platia, stratifikácia rizika však nie je formalita a má reálny klinický význam.</p>
 
 <p>Aj dopĺňanie draslíka môže zvýšiť natriémiu, pretože draslík je rovnako účinný osmolyt ako sodík. Musí sa preto zarátať do celkového priebehu korekcie, nie sledovať oddelene.</p>
 
@@ -120,7 +120,7 @@ $articles[] = [
 
 <p>Takáto situácia môže vzniknúť po doplnení objemu pri hypovolémii, po vysadení tiazidu, po liečbe nedostatku kortizolu alebo po ústupe nauzey. Výrazný vzostup diurézy preto môže upozorniť na hroziacu nadmernú korekciu <strong>skôr než nasledujúci laboratórny výsledok</strong>.</p>
 
-<p>Počas aktívnej liečby závažnej hyponatriémie treba sledovať neurologický stav, bilanciu tekutín, diurézu a natriémiu. Kontroly sodíka bývajú potrebné každé 2 až 4 hodiny, pri rýchlych zmenách aj častejšie.</p>
+<p>Počas aktívnej liečby závažnej hyponatriémie treba sledovať neurologický stav, bilanciu tekutín, diurézu a natriémiu. Kontroly sodíka bývajú potrebné každé 2 až 4&nbsp;hodiny, pri rýchlych zmenách aj častejšie.</p>
 
 <p>Výpočtové vzorce pomáhajú s plánovaním, nedokážu však predvídať náhlu zmenu vylučovania vody. Nenahrádzajú opakované meranie.</p>
 
@@ -130,7 +130,7 @@ $articles[] = [
 
 <p>Dezmopresín možno podľa prehľadu použiť <strong>reaktívne aj preventívne</strong> na zabránenie nadmernej vodnej diuréze a prekorigovaniu; pri SIAD sa opisuje aj plánované podávanie súbežne s hypertonickým roztokom na dosiahnutie tesnejšej kontroly rýchlosti korekcie. [1] Na doplnenie vody, prípadne na kontrolované opätovné zníženie natriémie, sa používa 5 % roztok glukózy.</p>
 
-<p>Pri opätovnom znižovaní natriémie treba poznať úroveň dôkazov. Prehľad uvádza, že <strong>zníženie natriémie do 12 hodín po príliš rýchlej korekcii zmierňuje demyelinizáciu a mortalitu v experimentálnych podmienkach</strong>; podrobné klinické odporúčanie pre ľudí však neuvádza. [1] Ide teda o patofyziologicky zdôvodnený postup opretý o zvieracie dáta a klinickú skúsenosť, nie o postup overený randomizovanou štúdiou.</p>
+<p>Pri opätovnom znižovaní natriémie treba poznať úroveň dôkazov. Prehľad uvádza, že <strong>zníženie natriémie do 12&nbsp;hodín po príliš rýchlej korekcii zmierňuje demyelinizáciu a mortalitu v experimentálnych podmienkach</strong>; podrobné klinické odporúčanie pre ľudí však neuvádza. [1] Ide teda o patofyziologicky zdôvodnený postup opretý o zvieracie dáta a klinickú skúsenosť, nie o postup overený randomizovanou štúdiou.</p>
 
 <p>Nejde o automatický krok pri každom prekročení plánovaného vzostupu. Rozhoduje rozsah a časovanie korekcie, východisková natriémia a rizikový profil pacienta. Liečba patrí do prostredia s častými kontrolami a skúseným klinickým dohľadom. Ani preventívny dezmopresín nemožno považovať za univerzálny režim pre každú hyponatriémiu.</p>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <p>Konvenčná hemodialýza môže pri výraznom rozdiele medzi koncentráciou sodíka v dialyzáte a v krvi zvýšiť natriémiu príliš rýchlo. Dialyzačný predpis preto vyžaduje individuálnu úpravu – nižšiu koncentráciu sodíka v dialyzáte, skrátenie výkonu, zníženie prietoku krvi alebo dialyzátu.</p>
 
-<p>Pri kontinuálnych metódach možno prísun sodíka regulovať validovaným postupom. Retrospektívna séria štyroch kriticky chorých pacientov so sodíkom pod 125 mmol/l a zlyhaním obličiek opísala protokol s postfiltrovou dilúciou sterilnou vodou a regionálnou citrátovou antikoaguláciou, ktorý podľa autorov umožnil postupnú korekciu (zo 112,7 ± 6,7 na 141,9 ± 2,8 mmol/l) bez osmotickej demyelinizácie. [2] Ide o malú retrospektívnu sériu, ktorá dokladá uskutočniteľnosť princípu, nie jeho účinnosť v porovnaní s inými postupmi.</p>
+<p>Pri kontinuálnych metódach možno prísun sodíka regulovať validovaným postupom. Retrospektívna séria štyroch kriticky chorých pacientov so sodíkom pod 125&nbsp;mmol/l a zlyhaním obličiek opísala protokol s postfiltrovou dilúciou sterilnou vodou a regionálnou citrátovou antikoaguláciou, ktorý podľa autorov umožnil postupnú korekciu (zo 112,7 ± 6,7 na 141,9 ± 2,8&nbsp;mmol/l) bez osmotickej demyelinizácie. [2] Ide o malú retrospektívnu sériu, ktorá dokladá uskutočniteľnosť princípu, nie jeho účinnosť v porovnaní s inými postupmi.</p>
 
 <p>Takéto úpravy vyžadujú výpočet, kontrolu prípravy roztokov a časté merania. <strong>Urémia sa nesmie považovať za spoľahlivú ochranu pred osmotickou demyelinizáciou.</strong></p>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <p>Pri hodnotení štúdií treba rozlišovať kontrolovaný úvodný vzostup pri závažných príznakoch od nadmernej celodennej korekcie chronickej hyponatriémie. Ide o dve odlišné veci, ktoré sa v diskusii často zlučujú.</p>
 
-<p>Observačné práce uvádzajú, že osmotická demyelinizácia je zriedkavá, že jej súvislosť s príliš rýchlou korekciou je nekonzistentná a že pomalšia korekcia – vzostup menej než 6 mmol/l v prvých 24 hodinách – sa spájala s vyššou mortalitou. [1] Autori prehľadu však uvádzajú konkrétne dôvody opatrnosti:</p>
+<p>Observačné práce uvádzajú, že osmotická demyelinizácia je zriedkavá, že jej súvislosť s príliš rýchlou korekciou je nekonzistentná a že pomalšia korekcia – vzostup menej než 6&nbsp;mmol/l v prvých 24 hodinách – sa spájala s vyššou mortalitou. [1] Autori prehľadu však uvádzajú konkrétne dôvody opatrnosti:</p>
 
 <ul>
   <li>zdanlivý prínos pre mortalitu <strong>vymizol po úprave na propenzitné skóre</strong>, čo naznačuje reziduálne skreslenie zavádzajúcimi faktormi,</li>

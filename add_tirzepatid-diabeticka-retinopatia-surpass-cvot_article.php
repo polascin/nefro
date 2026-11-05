@@ -50,9 +50,9 @@ $articles[] = [
 
 <p>Retina substúdia bola súčasťou veľkej štúdie SURPASS-CVOT, do ktorej boli zaradení pacienti s diabetom 2. typu a kardiovaskulárnym ochorením. Keďže išlo o vysokorizikových pacientov, ako porovnávacia liečba bol použitý dulaglutid, nie placebo.</p>
 
-<p>Do retina substúdie bolo zahrnutých 920 pacientov z celkového počtu 13 165 účastníkov štúdie. Zaradení boli pacienti, ktorí mali na začiatku diabetickú retinopatiu alebo makulárny edém aspoň na jednom oku, prípadne boli považovaní za vysokorizikových na základe trvania diabetu 2. typu 15 rokov alebo viac a vstupného HbA1c aspoň 8,0 %.</p>
+<p>Do retina substúdie bolo zahrnutých 920 pacientov z celkového počtu 13&nbsp;165 účastníkov štúdie. Zaradení boli pacienti, ktorí mali na začiatku diabetickú retinopatiu alebo makulárny edém aspoň na jednom oku, prípadne boli považovaní za vysokorizikových na základe trvania diabetu 2. typu 15&nbsp;rokov alebo viac a vstupného HbA1c aspoň 8,0 %.</p>
 
-<p>Z nich 449 pacientov dostávalo tirzepatid v dávke až 15 mg týždenne a 471 pacientov dostávalo dulaglutid v dávke 1,5 mg týždenne. Stav sietnice sa hodnotil štandardizovanými fotografiami očného pozadia na začiatku a následne po 12, 18, 24 a 36 mesiacoch.</p>
+<p>Z nich 449 pacientov dostávalo tirzepatid v dávke až 15&nbsp;mg týždenne a 471 pacientov dostávalo dulaglutid v dávke 1,5&nbsp;mg týždenne. Stav sietnice sa hodnotil štandardizovanými fotografiami očného pozadia na začiatku a následne po 12, 18, 24 a 36 mesiacoch.</p>
 
 <h2>Tirzepatid znížil HbA1c výraznejšie</h2>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <h2>Čo hovoria odborníci</h2>
 
-<p>Vedúci skúšajúci David M. D’Alessio uviedol, že tirzepatid priniesol väčšie zlepšenie glykémie bez zhoršenia stavu sietnice v porovnaní s dulaglutidom počas 36 mesiacov sledovania. Podľa neho tieto údaje poskytujú klinikom určitú mieru uistenia, no zároveň pripomenul, že diabetická retinopatia môže mať závažné následky a pacienti majú naďalej absolvovať pravidelný očný skríning.</p>
+<p>Vedúci skúšajúci David M. D’Alessio uviedol, že tirzepatid priniesol väčšie zlepšenie glykémie bez zhoršenia stavu sietnice v porovnaní s dulaglutidom počas 36&nbsp;mesiacov sledovania. Podľa neho tieto údaje poskytujú klinikom určitú mieru uistenia, no zároveň pripomenul, že diabetická retinopatia môže mať závažné následky a pacienti majú naďalej absolvovať pravidelný očný skríning.</p>
 
 <p>Oftalmológ Lloyd Paul Aiello, ktorý výsledky komentoval, upozornil, že prechodné zhoršenie retinopatie pri rýchlom poklese HbA1c sa častejšie pozorovalo pri diabete 1. typu než pri diabete 2. typu a len zriedkavo má klinicky významné dôsledky. Podľa neho je zlepšenie glykemickej kontroly z dlhodobého hľadiska stále lepšie než jej nezlepšovanie, aj keď sa môže objaviť krátkodobé zhoršenie retinopatie.</p>
 
@@ -126,7 +126,7 @@ $articles[] = [
 
 <p>Retina substúdia SURPASS-CVOT prináša upokojujúce údaje: tirzepatid nebol spojený so zvýšeným rizikom vzniku alebo progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu v porovnaní s dulaglutidom.</p>
 
-<p>Výsledok podporuje bezpečnosť tirzepatidu z hľadiska sledovaných retinálnych ukazovateľov počas 36 mesiacov. Neznižuje však význam pravidelného očného skríningu, najmä u pacientov s dlhším trvaním diabetu, vyšším HbA1c alebo už prítomnou retinopatiou.</p>
+<p>Výsledok podporuje bezpečnosť tirzepatidu z hľadiska sledovaných retinálnych ukazovateľov počas 36&nbsp;mesiacov. Neznižuje však význam pravidelného očného skríningu, najmä u pacientov s dlhším trvaním diabetu, vyšším HbA1c alebo už prítomnou retinopatiou.</p>
 
 <hr>
 

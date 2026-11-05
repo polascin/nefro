@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 // Ochrana pred priamym prístupom k súboru
 if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
-    header("HTTP/1.1 403 Forbidden");
+    header("HTTP/1.1 403 Forbidden");
     exit("Prístup odmietnutý.");
 }
 

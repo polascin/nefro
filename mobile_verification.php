@@ -10,7 +10,7 @@ function generateMobileVerificationCode(): array {
     return [
         'code' => $code,
         'code_hash' => password_hash($code, PASSWORD_DEFAULT),
-        'expires_at' => date('Y-m-d H:i:s', time() + 600), // 10 min
+        'expires_at' => date('Y-m-d H:i:s', time() + 600), // 10 min
     ];
 }
 
@@ -265,7 +265,7 @@ function recordMobileVerifyFail(PDO $pdo, int $userId, array $user): void {
     }
     $newCount   = $previousCount + 1;
     $maxAttempts = 5;
-    $lockoutSecs = 900; // 15 minút
+    $lockoutSecs = 900; // 15 minút
     $lockedUntil = $newCount >= $maxAttempts
         ? date('Y-m-d H:i:s', time() + $lockoutSecs)
         : null;

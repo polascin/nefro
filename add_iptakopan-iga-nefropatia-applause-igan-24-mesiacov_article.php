@@ -2,7 +2,7 @@
 
 /**
  * add_iptakopan-iga-nefropatia-applause-igan-24-mesiacov_article.php
- * Konecne 24-mesacne vysledky studie APPLAUSE-IgAN
+ * Konečné 24-mesacne výsledky štúdie APPLAUSE-IgAN
  * (Barratt a spol., N Engl J Med 2026;395(5):465-477, doi 10.1056/NEJMoa2600743).
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -51,15 +51,15 @@ $articles[] = [
 
 <h2>Usporiadanie štúdie APPLAUSE-IgAN</h2>
 
-<p>APPLAUSE-IgAN (NCT04578834) bola medzinárodná, multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy III. Zaradení boli dospelí pacienti s biopsiou potvrdenou primárnou IgA nefropatiou, eGFR najmenej 30 ml/min/1,73 m² a 24-hodinovým pomerom bielkovín ku kreatinínu v moči najmenej 1 g/g <strong>napriek podpornej liečbe</strong>.</p>
+<p>APPLAUSE-IgAN (NCT04578834) bola medzinárodná, multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy III. Zaradení boli dospelí pacienti s biopsiou potvrdenou primárnou IgA nefropatiou, eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m² a 24-hodinovým pomerom bielkovín ku kreatinínu v moči najmenej 1&nbsp;g/g <strong>napriek podpornej liečbe</strong>.</p>
 
-<p>Pacienti boli randomizovaní v pomere 1 : 1 na iptakopan 200 mg perorálne dvakrát denne alebo placebo dvakrát denne. Obe skupiny pokračovali v podpornej liečbe zahŕňajúcej stabilnú maximálnu tolerovanú dávku inhibítora ACE alebo blokátora receptora AT1. Liečba inhibítorom SGLT2 bola povolená, ale nebola podmienkou zaradenia; pri vstupe ju dostávala približne pätina pacientov.</p>
+<p>Pacienti boli randomizovaní v pomere 1 : 1 na iptakopan 200&nbsp;mg perorálne dvakrát denne alebo placebo dvakrát denne. Obe skupiny pokračovali v podpornej liečbe zahŕňajúcej stabilnú maximálnu tolerovanú dávku inhibítora ACE alebo blokátora receptora AT1. Liečba inhibítorom SGLT2 bola povolená, ale nebola podmienkou zaradenia; pri vstupe ju dostávala približne pätina pacientov.</p>
 
 <p>Randomizovaných bolo 478 pacientov, konečná analýza primárneho výsledku zahŕňala <strong>477 pacientov</strong> – 238 na iptakopane a 239 na placebe. Tieto dva údaje treba rozlišovať.</p>
 
 <h2>Primárny výsledok: spomalenie poklesu eGFR</h2>
 
-<p>Primárnym výsledkom konečnej analýzy bol celkový anualizovaný sklon eGFR počas 24 mesiacov.</p>
+<p>Primárnym výsledkom konečnej analýzy bol celkový anualizovaný sklon eGFR počas 24&nbsp;mesiacov.</p>
 
 <div class="table-responsive" role="region" aria-label="Primárny a hlavný sekundárny výsledok štúdie APPLAUSE-IgAN" tabindex="0">
   <table>
@@ -74,8 +74,8 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Anualizovaný sklon eGFR</th>
-        <td>−3,10 ml/min/1,73 m²/rok</td>
-        <td>−6,12 ml/min/1,73 m²/rok</td>
+        <td>−3,10&nbsp;ml/min/1,73&nbsp;m²/rok</td>
+        <td>−6,12&nbsp;ml/min/1,73&nbsp;m²/rok</td>
         <td>3,02 (95 % IS 2,02 – 4,01); upravené p &lt; 0,001</td>
       </tr>
       <tr>
@@ -88,9 +88,9 @@ $articles[] = [
   </table>
 </div>
 
-<p>Iptakopan teda v priemere <strong>znížil ročnú stratu eGFR približne o polovicu</strong>. Absolútne spomalenie o 3,02 ml/min/1,73 m² za rok je klinicky významné, najmä ak by sa udržalo počas dlhšieho obdobia. Dvojročná štúdia však nedokazuje, že veľkosť účinku zostane nezmenená počas ďalších rokov.</p>
+<p>Iptakopan teda v priemere <strong>znížil ročnú stratu eGFR približne o polovicu</strong>. Absolútne spomalenie o 3,02&nbsp;ml/min/1,73&nbsp;m² za rok je klinicky významné, najmä ak by sa udržalo počas dlhšieho obdobia. Dvojročná štúdia však nedokazuje, že veľkosť účinku zostane nezmenená počas ďalších rokov.</p>
 
-<p>Za povšimnutie stojí aj rýchlosť poklesu v placebovom ramene: −6,12 ml/min/1,73 m² za rok napriek podpornej liečbe. Ide o populáciu s vysokým rizikom progresie, ktorá by pri nezmenenom tempe smerovala k zlyhaniu obličiek v horizonte rádovo jedného desaťročia.</p>
+<p>Za povšimnutie stojí aj rýchlosť poklesu v placebovom ramene: −6,12&nbsp;ml/min/1,73&nbsp;m² za rok napriek podpornej liečbe. Ide o populáciu s vysokým rizikom progresie, ktorá by pri nezmenenom tempe smerovala k zlyhaniu obličiek v horizonte rádovo jedného desaťročia.</p>
 
 <h2>Proteinúria</h2>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <h2>Kombinovaný výsledok progresie ochorenia obličiek</h2>
 
-<p>Kombinovaný ukazovateľ zahŕňal <strong>pretrvávajúci pokles eGFR najmenej o 30 %</strong>, pretrvávajúcu eGFR nižšiu ako 15 ml/min/1,73 m², začatie udržiavacej dialýzy, transplantáciu obličky alebo úmrtie v dôsledku zlyhania obličiek.</p>
+<p>Kombinovaný ukazovateľ zahŕňal <strong>pretrvávajúci pokles eGFR najmenej o 30 %</strong>, pretrvávajúcu eGFR nižšiu ako 15&nbsp;ml/min/1,73&nbsp;m², začatie udržiavacej dialýzy, transplantáciu obličky alebo úmrtie v dôsledku zlyhania obličiek.</p>
 
 <p>Udalosť sa vyskytla u 21,4 % pacientov na iptakopane oproti 33,5 % na placebe; pomer rizík 0,57 (95 % IS 0,40 – 0,81; upravené p = 0,003). Relatívne riziko sa teda znížilo približne o 43 % a absolútny rozdiel predstavoval <strong>12,1 percentuálneho bodu</strong>, čo zodpovedá počtu pacientov potrebných na liečbu (NNT) približne osem až deväť počas dvoch rokov.</p>
 
@@ -146,7 +146,7 @@ $articles[] = [
 
 <h3>Vybraná študijná populácia</h3>
 
-<p>Pacienti museli mať proteinúriu najmenej 1 g/g a eGFR najmenej 30 ml/min/1,73 m². Výsledky preto nemožno bez ďalších údajov preniesť na pacientov s nižšou proteinúriou, pokročilejším ochorením obličiek alebo veľmi pomaly progredujúcou IgA nefropatiou.</p>
+<p>Pacienti museli mať proteinúriu najmenej 1&nbsp;g/g a eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m². Výsledky preto nemožno bez ďalších údajov preniesť na pacientov s nižšou proteinúriou, pokročilejším ochorením obličiek alebo veľmi pomaly progredujúcou IgA nefropatiou.</p>
 
 <h3>Krátke obdobie vzhľadom na celoživotné ochorenie</h3>
 
@@ -176,7 +176,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Iptakopan pridaný k podpornej liečbe významne spomalil ročný pokles eGFR (−3,10 oproti −6,12 ml/min/1,73 m² za rok), znížil proteinúriu a znížil riziko kombinovaného ukazovateľa progresie ochorenia obličiek (21,4 % oproti 33,5 %; HR 0,57) u dospelých pacientov s IgA nefropatiou a pretrvávajúcou proteinúriou.</p>
+<p>Iptakopan pridaný k podpornej liečbe významne spomalil ročný pokles eGFR (−3,10 oproti −6,12&nbsp;ml/min/1,73&nbsp;m² za rok), znížil proteinúriu a znížil riziko kombinovaného ukazovateľa progresie ochorenia obličiek (21,4 % oproti 33,5 %; HR 0,57) u dospelých pacientov s IgA nefropatiou a pretrvávajúcou proteinúriou.</p>
 
 <p>Výsledky predstavujú presvedčivý dôkaz účinnosti inhibície faktora B pri vybranej populácii pacientov s vysokým rizikom progresie. Interpretácia bezpečnosti však musí zohľadniť vyšší výskyt závažných infekcií. Otvorenými otázkami zostávajú dlhodobá bezpečnosť, optimálna dĺžka liečby, miesto iptakopanu medzi ďalšími cielenými terapiami a jeho prínos pri plne optimalizovanej modernej podpornej liečbe.</p>
 
@@ -201,7 +201,7 @@ $articles[] = [
   <li><strong>Kidney Disease: Improving Global Outcomes, KDIGO IgA Nephropathy Guideline Work Group.</strong> <em>Clinical Practice Guideline for the Management of Immunoglobulin A Nephropathy and Immunoglobulin A Vasculitis.</em> <a href="https://kdigo.org/guidelines/iga-nephropathy/" target="_blank" rel="noopener noreferrer">KDIGO</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 477 pacientov v konečnej analýze (238 iptakopan, 239 placebo), vstupné kritériá eGFR ≥ 30 ml/min/1,73 m² a UPCR ≥ 1 g/g, dávka 200 mg dvakrát denne, anualizovaný sklon eGFR −3,10 oproti −6,12 s rozdielom 3,02 (95 % IS 2,02 – 4,01) pri upravenom p &lt; 0,001, kombinovaný ukazovateľ 21,4 % oproti 33,5 % s HR 0,57 (0,40 – 0,81) a upraveným p = 0,003, jeho úplná definícia vrátane 30-percentného poklesu eGFR, nežiaduce udalosti 87,0 % oproti 89,1 %, závažné nežiaduce udalosti 12,2 % oproti 11,7 %, závažné infekcie 6,7 % oproti 2,1 %, žiadne úmrtia, deväťmesačný pokles UPCR o 38,3 % oproti placebu, financovanie spoločnosťou Novartis a registračné číslo NCT04578834 – boli overené proti abstraktu v zázname PubMed. <strong>Úplný autorský kolektív (29 mien) bol doplnený z metaúdajov PubMed</strong>; podklad ho neuvádzal a upozorňoval, že mená netreba dopĺňať odhadom. Plný text v <em>New England Journal of Medicine</em> je za platobnou bariérou vydavateľa a nebol sprístupnený; údaje o počte randomizovaných pacientov (478), podiele užívateľov inhibítorov SGLT2 pri vstupe (približne pätina), stratifikácii randomizácie a požiadavkách na očkovanie pochádzajú z podkladového spracovania a <strong>neboli nezávisle overené</strong> proti plnému textu. Výpočet NNT, komentár k rýchlosti poklesu v placebovom ramene a upozornenie, že bezpečnosť nie je totožná s placebom, sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 477 pacientov v konečnej analýze (238 iptakopan, 239 placebo), vstupné kritériá eGFR ≥ 30&nbsp;ml/min/1,73&nbsp;m² a UPCR ≥ 1&nbsp;g/g, dávka 200&nbsp;mg dvakrát denne, anualizovaný sklon eGFR −3,10 oproti −6,12&nbsp;s rozdielom 3,02 (95 % IS 2,02 – 4,01) pri upravenom p &lt; 0,001, kombinovaný ukazovateľ 21,4 % oproti 33,5 % s HR 0,57 (0,40 – 0,81) a upraveným p = 0,003, jeho úplná definícia vrátane 30-percentného poklesu eGFR, nežiaduce udalosti 87,0 % oproti 89,1 %, závažné nežiaduce udalosti 12,2 % oproti 11,7 %, závažné infekcie 6,7 % oproti 2,1 %, žiadne úmrtia, deväťmesačný pokles UPCR o 38,3 % oproti placebu, financovanie spoločnosťou Novartis a registračné číslo NCT04578834 – boli overené proti abstraktu v zázname PubMed. <strong>Úplný autorský kolektív (29 mien) bol doplnený z metaúdajov PubMed</strong>; podklad ho neuvádzal a upozorňoval, že mená netreba dopĺňať odhadom. Plný text v <em>New England Journal of Medicine</em> je za platobnou bariérou vydavateľa a nebol sprístupnený; údaje o počte randomizovaných pacientov (478), podiele užívateľov inhibítorov SGLT2 pri vstupe (približne pätina), stratifikácii randomizácie a požiadavkách na očkovanie pochádzajú z podkladového spracovania a <strong>neboli nezávisle overené</strong> proti plnému textu. Výpočet NNT, komentár k rýchlosti poklesu v placebovom ramene a upozornenie, že bezpečnosť nie je totožná s placebom, sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

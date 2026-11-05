@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Na kongrese EASD 2026 odzneli prvé výsledky štúdie uskutočniteľnosti <strong>SMART02</strong>, ktorú prezentoval profesor Ahmad Haidar z McGill University. Výskum hodnotil skorý prototyp systému niia signature s cieľom overiť, či podávanie inzulínu v bezprostrednom okolí senzora glukózy nespôsobuje dočasné skreslenie meraných hodnôt.</p>
 
-<p>Pri bežnom bazálnom dávkovaní bola presnosť merania stabilná. Dočasná interferencia sa však vyskytovala po podaní bolusových dávok s veľkosťou 10 jednotiek inzulínu alebo vyšších. Pri takýchto dávkach dosahovala pravdepodobnosť prechodného výkyvu signálu približne 20 až 25 %. K úplnému obnoveniu spoľahlivého signálu senzora došlo v priemere do 20 minút po aplikácii bolusu.</p>
+<p>Pri bežnom bazálnom dávkovaní bola presnosť merania stabilná. Dočasná interferencia sa však vyskytovala po podaní bolusových dávok s veľkosťou 10 jednotiek inzulínu alebo vyšších. Pri takýchto dávkach dosahovala pravdepodobnosť prechodného výkyvu signálu približne 20 až 25 %. K úplnému obnoveniu spoľahlivého signálu senzora došlo v priemere do 20&nbsp;minút po aplikácii bolusu.</p>
 
 <p>Išlo o pilotnú štúdiu uskutočniteľnosti na obmedzenom počte účastníkov. Štúdia neposkytuje dôkaz o dlhodobej bezpečnosti, klinickej účinnosti ani o vplyve na metabolickú kompenzáciu v reálnom živote. Zverejnené dáta zatiaľ neobsahujú podrobné rozdelenie podľa veku, typu diabetu, referenčnej laboratórnej metódy ani klinické ukazovatele, akými sú percento času v hypoglykémii či výskyt technických zlyhaní.</p>
 
@@ -64,21 +64,21 @@ $articles[] = [
 <p>Kombinácia diabetu a chronickej choroby obličiek (CKD) patrí k najnáročnejším situáciám internej medicíny. Progresívny pokles renálnych funkcií zásadne mení homeostázu glukózy a metabolizmus inzulínu:</p>
 
 <ul>
-  <li><strong>Znížený renálny klírens inzulínu:</strong> Zdravé obličky odbúravajú približne 30 až 40 % cirkulujúceho inzulínu. Pri poklese glomerulovej filtrácie (eGFR pod 60 ml/min/1,73 m² a najmä pod 30 ml/min/1,73 m²) sa biologický polčas inzulínu výrazne predlžuje, čo zvyšuje riziko oneskorených a prolongovaných hypoglykémií.</li>
+  <li><strong>Znížený renálny klírens inzulínu:</strong> Zdravé obličky odbúravajú približne 30 až 40 % cirkulujúceho inzulínu. Pri poklese glomerulovej filtrácie (eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² a najmä pod 30&nbsp;ml/min/1,73&nbsp;m²) sa biologický polčas inzulínu výrazne predlžuje, čo zvyšuje riziko oneskorených a prolongovaných hypoglykémií.</li>
   <li><strong>Znížená renálna glukoneogenéza:</strong> Renálny kortex sa významne podieľa na systémovej novotvorbe glukózy nalačno. Pri zániku funkčného parenchýmu táto obrana pred hypoglykémiou slabne.</li>
   <li><strong>Nepredvídateľná glykemická variabilita:</strong> Sprievodná uremická enteropatia, diabetická gastroparéza a nechutenstvo spôsobujú disproporciu medzi resorpciou živín a farmakodynamikou podaného inzulínu.</li>
 </ul>
 
 <p>V pokročilých štádiách CKD (G4 a G5) a u pacientov v pravidelnom dialyzačnom programe navyše <strong>glykovaný hemoglobín (HbA1c) stráca svoju diagnostickú spoľahlivosť</strong>. Hodnoty HbA1c bývajú skreslené skráteným prežívaním erytrocytov, renálnou anémiou, liečbou erytropoetínom (ESA), intravenóznym železom, krvnými transfúziami aj prítomnosťou karbamylovaného hemoglobínu. HbA1c nedokáže zachytiť nebezpečné nočné hypoglykémie ani prudké výkyvy v priebehu dňa.</p>
 
-<p>Konsenzuálne odporúčania American Diabetes Association (ADA) a Kidney Disease: Improving Global Outcomes (KDIGO), ako aj odborné stanovisko publikované v roku 2025 (Rhee et al., <em>Journal of Diabetes Science and Technology</em>), zdôrazňujú kontinuálne monitorovanie glukózy ako kľúčový nástroj u pacientov s CKD. CGM poskytuje dynamický pohľad na čas strávený v cieľovom pásme (TIR 70–180 mg/dl, t. j. 3,9–10,0 mmol/l), čas pod cieľovým pásmom (TBR &lt; 70 mg/dl, t. j. &lt; 3,9 mmol/l) a odhaľuje asymptomatické hypoglykémie.</p>
+<p>Konsenzuálne odporúčania American Diabetes Association (ADA) a Kidney Disease: Improving Global Outcomes (KDIGO), ako aj odborné stanovisko publikované v roku 2025 (Rhee et al., <em>Journal of Diabetes Science and Technology</em>), zdôrazňujú kontinuálne monitorovanie glukózy ako kľúčový nástroj u pacientov s CKD. CGM poskytuje dynamický pohľad na čas strávený v cieľovom pásme (TIR 70–180&nbsp;mg/dl, t. j. 3,9–10,0&nbsp;mmol/l), čas pod cieľovým pásmom (TBR &lt; 70&nbsp;mg/dl, t. j. &lt; 3,9&nbsp;mmol/l) a odhaľuje asymptomatické hypoglykémie.</p>
 
 <h2>Špecifiká hemodialýzy a validácia presnosti senzorov</h2>
 
 <p>Hemodialyzačná procedúra vystavuje pacienta extrémnym metabolickým a objemovým zmenám, ktoré priamo ovplyvňujú správanie glukózy aj fungovanie biosenzorov:</p>
 
 <ul>
-  <li><strong>Difúzia glukózy cez dialyzačnú membránu:</strong> Pri použití dialyzačného roztoku bez glukózy dochádza k rýchlym stratám glukózy do dialyzátu. Použitie roztokov s fyziologickou koncentráciou glukózy (5,5 mmol/l, resp. 100 mg/dl) tieto straty tlmí, no dynamika výmeny ostáva výrazná.</li>
+  <li><strong>Difúzia glukózy cez dialyzačnú membránu:</strong> Pri použití dialyzačného roztoku bez glukózy dochádza k rýchlym stratám glukózy do dialyzátu. Použitie roztokov s fyziologickou koncentráciou glukózy (5,5&nbsp;mmol/l, resp. 100&nbsp;mg/dl) tieto straty tlmí, no dynamika výmeny ostáva výrazná.</li>
   <li><strong>Zmeny inzulínovej rezistencie:</strong> Odstránenie uremických toxínov počas dialýzy akútne zlepšuje tkanivovú citlivosť na inzulín, čo môže po dialýze viesť k náhlemu prepadu glykémie.</li>
   <li><strong>Objemové posuny a intersticiálna hydratácia:</strong> Ultrafiltrácia odstraňuje tekutinu z intravaskulárneho a následne z intersticiálneho priestoru. Keďže CGM senzory merajú koncentráciu glukózy v intersticiálnej tekutine, rýchla dehydratácia podkožia, periférna vazokonstrikcia a edémy môžu ovplyvniť difúziu glukózy k enzýmovej elektróde.</li>
 </ul>
@@ -157,10 +157,10 @@ $articles[] = [
 <p>Prechod integrovaného zariadenia typu <em>niia signature</em> z fázy technologického prototypu do klinickej praxe si vyžaduje rozsiahly translačný a klinický výskum. Regulačné orgány aj odborné spoločnosti budú vyžadovať dáta z prospektívnych štúdií zameraných priamo na nefrologickú populáciu:</p>
 
 <ul>
-  <li>presnosť merania glukózy overenú proti referenčnej laboratórnej metóde (napr. glukózooxidázovej metóde YSI) osobitne v hypoglykemickom pásme pod 70 mg/dl (3,9 mmol/l),</li>
+  <li>presnosť merania glukózy overenú proti referenčnej laboratórnej metóde (napr. glukózooxidázovej metóde YSI) osobitne v hypoglykemickom pásme pod 70&nbsp;mg/dl (3,9&nbsp;mmol/l),</li>
   <li>validáciu funkčnosti počas hemodialyzačnej procedúry a bezprostredne po nej,</li>
   <li>preukázanie, že lokálna infúzia inzulínu neovplyvňuje biosenzor pri kumulatívnych dávkach a po niekoľkých dňoch nosenia na jednom mieste,</li>
-  <li>štúdie bezpečnosti a účinnosti u pacientov s eGFR pod 30 ml/min/1,73 m², na hemodialýze, na peritoneálnej dialýze a po transplantácii obličky,</li>
+  <li>štúdie bezpečnosti a účinnosti u pacientov s eGFR pod 30&nbsp;ml/min/1,73&nbsp;m², na hemodialýze, na peritoneálnej dialýze a po transplantácii obličky,</li>
   <li>hodnotenie výskytu diabetickej ketoacidózy, ťažkej hypoglykémie s potrebou pomoci druhej osoby a frekvencie technických zlyhaní hardvéru.</li>
 </ul>
 
@@ -181,7 +181,7 @@ $articles[] = [
 <ul>
   <li>glykémia v mmol/l = glykémia v mg/dl ÷ 18,018 (približne mg/dl × 0,0555),</li>
   <li>glykémia v mg/dl = glykémia v mmol/l × 18,018 (približne mmol/l × 18),</li>
-  <li>cieľové pásmo 70 až 180 mg/dl zodpovedá 3,9 až 10,0 mmol/l; prah hypoglykémie 70 mg/dl zodpovedá 3,9 mmol/l; prah klinicky závažnej hypoglykémie 54 mg/dl zodpovedá 3,0 mmol/l.</li>
+  <li>cieľové pásmo 70 až 180&nbsp;mg/dl zodpovedá 3,9 až 10,0&nbsp;mmol/l; prah hypoglykémie 70&nbsp;mg/dl zodpovedá 3,9&nbsp;mmol/l; prah klinicky závažnej hypoglykémie 54&nbsp;mg/dl zodpovedá 3,0&nbsp;mmol/l.</li>
 </ul>
 </div>
 

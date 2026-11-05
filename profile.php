@@ -267,7 +267,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                         )->execute([':phone' => $data['mobile_phone'], ':id' => $user_id]);
                     }
 
-                    $mobileVerificationNotice = 'Overovací SMS kód bol odoslaný. Platnosť kódu je 10 minút.';
+                    $mobileVerificationNotice = 'Overovací SMS kód bol odoslaný. Platnosť kódu je 10 minút.';
 
                     if ($isLocalDev && !$usingExternalProvider && isset($tokenData['code'])) {
                         $mobileVerificationNotice .= ' [DEV] Kód: ' . $tokenData['code'];
@@ -331,7 +331,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                     $errors[] = "Dátum narodenia je mimo povolený rozsah.";
                     $data['birth_date'] = null;
                 } elseif ($today->diff($bd)->y < 16) {
-                    $errors[] = "Účet môžu používať len osoby vo veku aspoň 16 rokov.";
+                    $errors[] = "Účet môžu používať len osoby vo veku aspoň 16 rokov.";
                     $data['birth_date'] = null;
                 }
             }
@@ -357,7 +357,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
             );
             if (!$reauth['ok']) {
                 $errors[] = $reauth['blocked']
-                    ? "Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút."
+                    ? "Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút."
                     : "Súčasné heslo nie je správne.";
             } elseif (!isAppPasswordValid($new_password)) {
                 $errors[] = "Nové heslo musí mať 8–72 bajtov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
@@ -594,7 +594,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Môj profil';
-    $headerIntro = 'Správa osobných údajov a nastavení';
+    $headerIntro = 'Správa osobných údajov a nastavenie';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -615,7 +615,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                     <div class="form-grid">
                         <div class="form-group form-group--full-width">
                             <label for="mobile_phone">Číslo súkromného mobilného telefónu (voliteľné)</label>
-                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                             <small class="avatar-upload-hint">Pole je voliteľné. Povolený je iba medzinárodný formát začínajúci znakom +.</small>
 
                             <?php
@@ -741,7 +741,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                         </div>
                         <div class="form-group">
                             <label for="work_mobile_phone">Číslo pracovného mobilného telefónu (voliteľné)</label>
-                            <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['work_mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                            <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['work_mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                         </div>
                         <div class="form-group">
                             <label for="org_website">Webové stránky organizácie</label>
@@ -771,12 +771,12 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                         <div class="form-group">
                             <label for="social_linkedin">LinkedIn profil</label>
                             <input type="url" id="social_linkedin" name="social_linkedin" class="form-control" value="<?= htmlspecialchars($user['social_linkedin'] ?? '') ?>" placeholder="https://linkedin.com/in/meno-priezvisko">
-                            <small class="avatar-upload-hint">Formát: linkedin.com/in/<em>pouzivatelske-meno</em></small>
+                            <small class="avatar-upload-hint">Formát: linkedin.com/in/<em>používateľské meno</em></small>
                         </div>
                         <div class="form-group">
                             <label for="social_x">X (Twitter) profil</label>
-                            <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($user['social_x'] ?? '') ?>" placeholder="https://x.com/pouzivatelske_meno">
-                            <small class="avatar-upload-hint">Formát: x.com/<em>pouzivatelske_meno</em></small>
+                            <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($user['social_x'] ?? '') ?>" placeholder="https://x.com/používateľské_meno">
+                            <small class="avatar-upload-hint">Formát: x.com/<em>používateľské_meno</em></small>
                         </div>
                         <div class="form-group">
                             <label for="social_facebook">Facebook profil</label>
@@ -785,8 +785,8 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                         </div>
                         <div class="form-group">
                             <label for="social_instagram">Instagram profil</label>
-                            <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($user['social_instagram'] ?? '') ?>" placeholder="https://instagram.com/pouzivatelske_meno">
-                            <small class="avatar-upload-hint">Formát: instagram.com/<em>pouzivatelske_meno</em></small>
+                            <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($user['social_instagram'] ?? '') ?>" placeholder="https://instagram.com/používateľské_meno">
+                            <small class="avatar-upload-hint">Formát: instagram.com/<em>používateľské_meno</em></small>
                         </div>
                     </div>
                     <div class="form-group">
@@ -845,7 +845,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                             <li>História zmien profilu</li>
                             <li>Väzba prístupových záznamov na váš účet a používateľské meno</li>
                         </ul>
-                        <p>Minimalizovaný bezpečnostný audit zrušenia účtu bez používateľského mena môžeme uchovať najviac 90 dní.</p>
+                        <p>Minimalizovaný bezpečnostný audit zrušenia účtu bez používateľského mena môžeme uchovať najviac 90 dní.</p>
                     </div>
 
                     <?php if (!empty($deleteErrors)): ?>

@@ -73,7 +73,7 @@ $articles[] = [
 
 <p>To však neznamená liečbu bez hraníc. Pri akútnom poškodení obličiek, ťažkej hyperkaliémii, závažnej hypotenzii alebo hypoperfúzii môže byť potrebná dočasná úprava. Konkrétne prahy na začatie, zníženie dávky alebo prerušenie sa líšia podľa liekovej skupiny a lieku. Treba ich overiť v aktuálnom súhrne charakteristických vlastností lieku a prispôsobiť klinickej situácii.</p>
 
-<p>ESC odporúča titrovať FMT spravidla každé 1 až 2 týždne podľa symptómov, vitálnych funkcií a laboratórnych výsledkov až po cieľové alebo najvyššie tolerované dávky. Pre nefrologickú prax to znamená plánované kontroly, nie odkladanie účinnej liečby bez termínu ďalšieho kroku. [1, 2]</p>
+<p>ESC odporúča titrovať FMT spravidla každé 1 až 2&nbsp;týždne podľa symptómov, vitálnych funkcií a laboratórnych výsledkov až po cieľové alebo najvyššie tolerované dávky. Pre nefrologickú prax to znamená plánované kontroly, nie odkladanie účinnej liečby bez termínu ďalšieho kroku. [1, 2]</p>
 
 <h2>eGFR a UACR patria do vstupného vyšetrenia</h2>
 
@@ -95,12 +95,12 @@ $articles[] = [
 <p>V ambulantnom algoritme sa za hodnoty, pri ktorých je srdcové zlyhávanie pravdepodobné, považuje NT-proBNP:</p>
 
 <ul>
-  <li>≥ 125 pg/ml vo veku menej ako 50 rokov;</li>
-  <li>≥ 250 pg/ml vo veku 50 až 74 rokov;</li>
-  <li>≥ 500 pg/ml vo veku 75 rokov a viac.</li>
+  <li>≥ 125&nbsp;pg/ml vo veku menej ako 50&nbsp;rokov;</li>
+  <li>≥ 250&nbsp;pg/ml vo veku 50 až 74&nbsp;rokov;</li>
+  <li>≥ 500&nbsp;pg/ml vo veku 75&nbsp;rokov a viac.</li>
 </ul>
 
-<p>Hodnota NT-proBNP &lt; 125 pg/ml zostáva ambulantným prahom, pod ktorým je srdcové zlyhávanie menej pravdepodobné. Ani jeden prah však nie je samostatným diagnostickým testom. Pri vysokej klinickej pravdepodobnosti sa má pokračovať v echokardiografii a odbornom posúdení aj napriek nízkej hodnote. [1, 4]</p>
+<p>Hodnota NT-proBNP &lt; 125&nbsp;pg/ml zostáva ambulantným prahom, pod ktorým je srdcové zlyhávanie menej pravdepodobné. Ani jeden prah však nie je samostatným diagnostickým testom. Pri vysokej klinickej pravdepodobnosti sa má pokračovať v echokardiografii a odbornom posúdení aj napriek nízkej hodnote. [1, 4]</p>
 
 <p>Vyšší vek, fibrilácia predsiení, renálna dysfunkcia a viaceré ďalšie stavy môžu koncentráciu zvýšiť; obezita ju môže znížiť. Znížená eGFR preto nie je dôvodom NT-proBNP ignorovať, ale dôvodom interpretovať výsledok v širšom kontexte. Vekové prahy zlepšujú špecificitu, nekorigujú však automaticky všetky účinky CKD, rytmu, telesnej hmotnosti a akútneho klinického stavu.</p>
 

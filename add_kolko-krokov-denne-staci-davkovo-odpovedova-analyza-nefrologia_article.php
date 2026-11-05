@@ -30,21 +30,21 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/kolko-krokov-denne-staci-davkovo-odpovedova-analyza-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/kolko-krokov-denne-staci-davkovo-odpovedova-analyza-nefrologia.webp" alt="Stopa svietiacich krokov, ktorá najprv rýchlo jasnie a od istého miesta si už len drží rovnomerný jas" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Najväčší zisk prináša prvý prírastok pohybu; od istej hranice krivka plochne – a to je pre pacienta dobrá správa.</figcaption></figure>
 
-<p class="article-dek"><em>Cieľ 10 000 krokov denne je v praxi veľmi rozšírený, no nevznikol ako výsledok dávkovo-odpoveďového klinického dôkazu. Systematická analýza v <em>The Lancet Public Health</em> ukazuje, že zdravotné prínosy sa zreteľne prejavia už okolo 7 000 krokov denne a ďalej väčšinou nerastú lineárne. Ide o observačné asociácie, nie o priamy kauzálny dôkaz. Pre nefrológiu je to predovšetkým argument pre realistický a merateľný cieľ pohybovej aktivity.</em></p>
+<p class="article-dek"><em>Cieľ 10&nbsp;000 krokov denne je v praxi veľmi rozšírený, no nevznikol ako výsledok dávkovo-odpoveďového klinického dôkazu. Systematická analýza v <em>The Lancet Public Health</em> ukazuje, že zdravotné prínosy sa zreteľne prejavia už okolo 7&nbsp;000 krokov denne a ďalej väčšinou nerastú lineárne. Ide o observačné asociácie, nie o priamy kauzálny dôkaz. Pre nefrológiu je to predovšetkým argument pre realistický a merateľný cieľ pohybovej aktivity.</em></p>
 
-<p>V populárnej komunikácii sa 10 000 krokov denne často predkladá ako univerzálne minimum. Dôkaz pre takúto hranicu však nie je taký jednoznačný, ako sa uvádza. Autori najväčšej doterajšej syntézy prístrojovo meraných krokov ju označujú za <strong>neoficiálny cieľ bez jasného dôkazového základu</strong>. Ťažisko tohto článku preto nie je v histórii sloganu, ale v tom, čo dávkovo-odpoveďové údaje skutočne ukazujú – a čo z nich možno, a čo nemožno, preniesť k pacientovi s chronickou chorobou obličiek.</p>
+<p>V populárnej komunikácii sa 10&nbsp;000 krokov denne často predkladá ako univerzálne minimum. Dôkaz pre takúto hranicu však nie je taký jednoznačný, ako sa uvádza. Autori najväčšej doterajšej syntézy prístrojovo meraných krokov ju označujú za <strong>neoficiálny cieľ bez jasného dôkazového základu</strong>. Ťažisko tohto článku preto nie je v histórii sloganu, ale v tom, čo dávkovo-odpoveďové údaje skutočne ukazujú – a čo z nich možno, a čo nemožno, preniesť k pacientovi s chronickou chorobou obličiek.</p>
 
 <h2>Čo skúmala analýza v <em>The Lancet Public Health</em></h2>
 
-<p>Ding a spolupracovníci syntetizovali prospektívne štúdie, v ktorých sa denné kroky merali zariadením (akcelerometer, krokomer, inteligentné hodinky) v bežnom živote, nie v laboratóriu. Do systematického prehľadu zaradili <strong>57 štúdií z 35 kohort</strong>; do meta-analýz vstúpilo <strong>31 štúdií z 24 kohort</strong>. Referenčnou hodnotou bolo <strong>2 000 krokov denne</strong>, teda dolná hranica bežného rozpätia u starších dospelých.</p>
+<p>Ding a spolupracovníci syntetizovali prospektívne štúdie, v ktorých sa denné kroky merali zariadením (akcelerometer, krokomer, inteligentné hodinky) v bežnom živote, nie v laboratóriu. Do systematického prehľadu zaradili <strong>57 štúdií z 35 kohort</strong>; do meta-analýz vstúpilo <strong>31 štúdií z 24 kohort</strong>. Referenčnou hodnotou bolo <strong>2&nbsp;000 krokov denne</strong>, teda dolná hranica bežného rozpätia u starších dospelých.</p>
 
 <p>Na rozdiel od starších prehľadov, ktoré sa sústreďovali najmä na mortalitu a kardiovaskulárne ochorenia, táto práca hodnotila širšie spektrum ukazovateľov: úmrtie zo všetkých príčin, incidenciu a mortalitu kardiovaskulárnych ochorení, incidenciu a mortalitu nádorov, diabetes 2. typu, demenciu, depresívne príznaky, fyzickú funkciu a pády. Istota dôkazov sa hodnotila podľa GRADE. Protokol je registrovaný v PROSPERO (CRD42024529706).</p>
 
-<p>Do meta-analýzy mortality zo všetkých príčin vstúpilo 161 176 účastníkov. Väčšina zaradených prác pochádzala z krajín s vysokým príjmom; 77 % štúdií použilo akcelerometer a 19 % krokomer.</p>
+<p>Do meta-analýzy mortality zo všetkých príčin vstúpilo 161&nbsp;176 účastníkov. Väčšina zaradených prác pochádzala z krajín s vysokým príjmom; 77 % štúdií použilo akcelerometer a 19 % krokomer.</p>
 
-<h2>Hlavné výsledky: 7 000 oproti 2 000 krokom denne</h2>
+<h2>Hlavné výsledky: 7&nbsp;000 oproti 2&nbsp;000 krokom denne</h2>
 
-<p>Porovnanie 7 000 voči 2 000 krokom denne nie je tvrdenie, že pod 7 000 je pohyb bezvýznamný. Je to syntetizovaný odhad relatívneho rizika voči nízkej, ale ešte merateľnej aktivite.</p>
+<p>Porovnanie 7&nbsp;000 voči 2&nbsp;000 krokom denne nie je tvrdenie, že pod 7&nbsp;000 je pohyb bezvýznamný. Je to syntetizovaný odhad relatívneho rizika voči nízkej, ale ešte merateľnej aktivite.</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Zdravotné ukazovatele pri 7 000 krokoch denne v porovnaní s 2 000 krokmi denne" tabindex="0">
   <table>
@@ -127,17 +127,17 @@ $articles[] = [
 
 <p>HR je pomer rizík (hazard ratio) z náhodných dávkovo-odpoveďových modelov. Percentá sú prepočet z bodového odhadu HR a <strong>nie sú individuálnou prognózou</strong>. Heterogenita pri kardiovaskulárnej mortalite bola značná (I² = 78,2 %). Pri pádoch GRADE klesol na veľmi nízku úroveň pre nekonzistentné smery asociácie; po vynechaní jednej veľkej štúdie sa vzťah menil. Tento ukazovateľ preto v nefrologickej praxi nemožno predkladať ako spoľahlivý argument proti pádom.</p>
 
-<h2>Vzťah nie je lineárny – a 7 000 nie je biologický strop</h2>
+<h2>Vzťah nie je lineárny – a 7&nbsp;000 nie je biologický strop</h2>
 
-<p>Tvrdenie, že „po 7 000 krokoch sa benefit už nezvyšuje“, je zjednodušenie. Správnejšie je: <strong>vzťah je pri viacerých ukazovateľoch nelineárny a prírastok prínosu sa spravidla zmierňuje</strong>.</p>
+<p>Tvrdenie, že „po 7&nbsp;000 krokoch sa benefit už nezvyšuje“, je zjednodušenie. Správnejšie je: <strong>vzťah je pri viacerých ukazovateľoch nelineárny a prírastok prínosu sa spravidla zmierňuje</strong>.</p>
 
-<p>Inverzný nelineárny vzťah s inflexnými bodmi približne v pásme 5 000–7 000 krokov denne sa potvrdil pri mortalite zo všetkých príčin, incidencii kardiovaskulárnych ochorení, demencii a pádoch. Pri kardiovaskulárnej mortalite, incidencii a mortalite nádorov, diabete 2. typu a depresívnych príznakoch autori v abstrakte popisujú inverzný lineárny vzťah. Tvar krivky sa teda líši podľa ukazovateľa, veku aj typu zariadenia.</p>
+<p>Inverzný nelineárny vzťah s inflexnými bodmi približne v pásme 5&nbsp;000–7&nbsp;000 krokov denne sa potvrdil pri mortalite zo všetkých príčin, incidencii kardiovaskulárnych ochorení, demencii a pádoch. Pri kardiovaskulárnej mortalite, incidencii a mortalite nádorov, diabete 2. typu a depresívnych príznakoch autori v abstrakte popisujú inverzný lineárny vzťah. Tvar krivky sa teda líši podľa ukazovateľa, veku aj typu zariadenia.</p>
 
-<p>Aj po 7 000 krokoch riziko pri niektorých ukazovateľoch ďalej klesalo, no prírastok bol malý. Napríklad 10 000 krokov denne oproti 7 000 bolo spojených s približne <strong>10 % nižším rizikom úmrtia zo všetkých príčin</strong>. Pri kardiovaskulárnej mortalite, incidencii nádorov, diabete 2. typu a pádoch už rozdiel oproti 7 000 nebol štatisticky významný. Desaťtisíc krokov preto ostáva primeraným cieľom pre aktívnejších ľudí, nie však nutným minimom pre každého.</p>
+<p>Aj po 7&nbsp;000 krokoch riziko pri niektorých ukazovateľoch ďalej klesalo, no prírastok bol malý. Napríklad 10&nbsp;000 krokov denne oproti 7&nbsp;000 bolo spojených s približne <strong>10 % nižším rizikom úmrtia zo všetkých príčin</strong>. Pri kardiovaskulárnej mortalite, incidencii nádorov, diabete 2. typu a pádoch už rozdiel oproti 7&nbsp;000 nebol štatisticky významný. Desaťtisíc krokov preto ostáva primeraným cieľom pre aktívnejších ľudí, nie však nutným minimom pre každého.</p>
 
-<p>Rovnako dôležité je druhé rameno krivky. Už 4 000 krokov denne oproti 2 000 bolo spojených s približne <strong>36 % nižším rizikom úmrtia zo všetkých príčin</strong>. Posolstvo analýzy teda nie je „buď 7 000, alebo nič“, ale „každý bezpečne pridaný krok má význam, najmä pri nízkej východiskovej aktivite“.</p>
+<p>Rovnako dôležité je druhé rameno krivky. Už 4&nbsp;000 krokov denne oproti 2&nbsp;000 bolo spojených s približne <strong>36 % nižším rizikom úmrtia zo všetkých príčin</strong>. Posolstvo analýzy teda nie je „buď 7&nbsp;000, alebo nič“, ale „každý bezpečne pridaný krok má význam, najmä pri nízkej východiskovej aktivite“.</p>
 
-<h2>Ak pacient 7 000 krokov objektívne nezvládne</h2>
+<h2>Ak pacient 7&nbsp;000 krokov objektívne nezvládne</h2>
 
 <p>V logike nelinearity aj v klinickej praxi je najlepšia stratégia začať od reálne nameranej východiskovej hodnoty, cieliť na postupné zvyšovanie a udržať konzistentnosť. Sedemtisíc krokov je orientačný verejnozdravotný cieľ, nie absolútne minimum a nie predpis tréningu.</p>
 
@@ -146,7 +146,7 @@ $articles[] = [
 <ol>
   <li>zistiť, koľko krokov pacient skutočne urobí – aspoň niekoľko dní merania, nie jednorazový odhad,</li>
   <li>odlíšiť nízku aktivitu od obmedzenia chorobou, bolesťou, anémiou, objemovým stavom alebo krehkosťou,</li>
-  <li>stanoviť malý, merateľný prírastok (napríklad o 500–1 000 krokov denne) namiesto skoku na populačné maximum,</li>
+  <li>stanoviť malý, merateľný prírastok (napríklad o 500–1&nbsp;000 krokov denne) namiesto skoku na populačné maximum,</li>
   <li>kombinovať chôdzu so silovým a rovnovážnym cvičením, najmä pri riziku pádu,</li>
   <li>pri nových alarmujúcich príznakoch (bolesť na hrudníku, synkopa, neprimeraná dýchavica, nestabilita) záťaž prerušiť a stav prehodnotiť.</li>
 </ol>
@@ -157,18 +157,18 @@ $articles[] = [
 
 <p>Analýza Ding a spolupracovníkov <strong>nemá chronickú chorobu obličiek ako primárny ukazovateľ</strong>. Štúdie v špecifických populáciách s chronickým ochorením boli na samostatnú meta-analýzu príliš málo početné a heterogénne. Výsledky teda nemožno automaticky preniesť na dialyzovaného, krehkého alebo ťažko anémického pacienta. Dajú sa však použiť na nastavenie realistického cieľa v populácii s vysokým kardiovaskulárnym rizikom a častými pádmi – a to chronická choroba obličiek jednoznačne je.</p>
 
-<p>KDIGO 2024 odporúča dospelým s chronickou chorobou obličiek aspoň <strong>150 minút stredne intenzívnej aktivity týždenne</strong>, alebo úroveň zlučiteľnú s kardiovaskulárnou a fyzickou toleranciou (odporúčanie 1D). Ľudí s chronickou chorobou obličiek treba zároveň nabádať, aby sa vyhýbali dlhému sedavému správaniu. Pri vyššom riziku pádu treba radu individualizovať podľa intenzity aj typu cvičenia. KDIGO neurčuje denný počet krokov; 7 000 krokov je preto doplnková, zrozumiteľná metrika, nie náhrada tohto odporúčania.</p>
+<p>KDIGO 2024 odporúča dospelým s chronickou chorobou obličiek aspoň <strong>150&nbsp;minút stredne intenzívnej aktivity týždenne</strong>, alebo úroveň zlučiteľnú s kardiovaskulárnou a fyzickou toleranciou (odporúčanie 1D). Ľudí s chronickou chorobou obličiek treba zároveň nabádať, aby sa vyhýbali dlhému sedavému správaniu. Pri vyššom riziku pádu treba radu individualizovať podľa intenzity aj typu cvičenia. KDIGO neurčuje denný počet krokov; 7&nbsp;000 krokov je preto doplnková, zrozumiteľná metrika, nie náhrada tohto odporúčania.</p>
 
-<p>Reálna východisková hodnota v nefrológii je pritom podstatne nižšia ako populačný slogan. Meta-analýza 28 observačných štúdií (Zhang a kol.) odhadla priemerný denný počet krokov u pacientov s chronickou chorobou obličiek na <strong>približne 4 640</strong> (95 % IS 4 274–5 011), s veľkou heterogenitou. Podľa štádia:</p>
+<p>Reálna východisková hodnota v nefrológii je pritom podstatne nižšia ako populačný slogan. Meta-analýza 28 observačných štúdií (Zhang a kol.) odhadla priemerný denný počet krokov u pacientov s chronickou chorobou obličiek na <strong>približne 4&nbsp;640</strong> (95 % IS 4&nbsp;274–5&nbsp;011), s veľkou heterogenitou. Podľa štádia:</p>
 
 <ul>
-  <li>predialýza približne 5 640 krokov denne,</li>
-  <li>peritoneálna dialýza približne 4 260,</li>
-  <li>hemodialýza približne 4 110; v dialyzačný deň približne 3 410, v nedialyzačný približne 4 200,</li>
-  <li>po transplantácii obličky približne 8 690.</li>
+  <li>predialýza približne 5&nbsp;640 krokov denne,</li>
+  <li>peritoneálna dialýza približne 4&nbsp;260,</li>
+  <li>hemodialýza približne 4&nbsp;110; v dialyzačný deň približne 3&nbsp;410, v nedialyzačný približne 4&nbsp;200,</li>
+  <li>po transplantácii obličky približne 8&nbsp;690.</li>
 </ul>
 
-<p>Tieto čísla sú popisné priemery, nie ciele liečby. Ukazujú však, že pre väčšinu nefrologických pacientov je skok na 10 000 krokov denne nereálny, kým posun od 3 500 k 5 000 alebo od 5 000 k 7 000 môže byť dosiahnuteľný. Zhangova analýza je prierezová a silne heterogénna; neslúži ako dôkaz, že vyšší počet krokov spomalí pokles glomerulovej filtrácie.</p>
+<p>Tieto čísla sú popisné priemery, nie ciele liečby. Ukazujú však, že pre väčšinu nefrologických pacientov je skok na 10&nbsp;000 krokov denne nereálny, kým posun od 3&nbsp;500 k 5&nbsp;000 alebo od 5&nbsp;000 k 7&nbsp;000 môže byť dosiahnuteľný. Zhangova analýza je prierezová a silne heterogénna; neslúži ako dôkaz, že vyšší počet krokov spomalí pokles glomerulovej filtrácie.</p>
 
 <p>Že nízka pohybová aktivita pri chronickej chorobe obličiek nie je kozmetický problém, naznačujú aj staršie populačné údaje. V NHANES III (Beddhu a kol.) bola neaktivita častejšia pri zníženej eGFR než bez nej (28,0 % oproti 13,5 %). V skupine s chronickou chorobou obličiek mali nedostatočne aktívni aj aktívni účastníci nižšie riziko úmrtia ako neaktívni (HR 0,58 a 0,44). Aj tu ide o observačnú asociáciu s dotazníkovým meraním aktivity, nie o randomizovaný tréningový protokol.</p>
 
@@ -180,7 +180,7 @@ $articles[] = [
   <li><strong>Predialýza:</strong> nízka aktivita sa objavuje už pred začiatkom náhrady funkcie obličiek. Tu má zmysel pýtať sa na chôdzu, meranie hodinkami alebo telefónom a postupný prírastok ešte pred poklesom funkčnej rezervy.</li>
   <li><strong>Hemodialýza:</strong> dialyzačný deň je spravidla chudobnejší na kroky. Reálnejší cieľ je často nedialyzačný deň, prípadne intradialyzačné bicyklovanie, ak to umožňuje hemodynamika, cievny prístup a krehkosť.</li>
   <li><strong>Peritoneálna dialýza:</strong> aktivita býva o niečo vyššia ako pri hemodialýze, ale stále hlboko pod populačným sloganom. Treba zohľadniť brušný diskomfort, hernie a záťaž katétra.</li>
-  <li><strong>Po transplantácii:</strong> priemerné počty sa blížia k verejnozdravotnému pásmu 7 000–10 000. Aj tu však rozhoduje infekčné riziko, osteopénia, steroidná myopatia a kardiovaskulárna rezerva, nie samotné číslo na hodinkách.</li>
+  <li><strong>Po transplantácii:</strong> priemerné počty sa blížia k verejnozdravotnému pásmu 7&nbsp;000–10&nbsp;000. Aj tu však rozhoduje infekčné riziko, osteopénia, steroidná myopatia a kardiovaskulárna rezerva, nie samotné číslo na hodinkách.</li>
 </ul>
 
 <p>Nositeľné zariadenia môžu meranie uľahčiť, ale samy osebe starostlivosť nezlepšia. Bez dohody, čo sa má stať pri nízkej aktivite, ostane počet krokov izolovaným údajom v aplikácii.</p>
@@ -198,7 +198,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Záver</h2>
 
-<p>Sedemtisíc krokov denne je v doteraz najširšej syntéze prístrojovo meranej chôdze spojených so štatisticky aj klinicky významným znížením rizika viacerých ukazovateľov v porovnaní s 2 000 krokmi. Po tomto bode vzťah spravidla nie je lineárny: ďalší prírastok ostáva možný, ale menší. Desaťtisíc krokov nie je vyvrátené – je však zbytočne vysokou latkou pre človeka, ktorý dnes urobí tri- až päťtisíc krokov.</p>
+<p>Sedemtisíc krokov denne je v doteraz najširšej syntéze prístrojovo meranej chôdze spojených so štatisticky aj klinicky významným znížením rizika viacerých ukazovateľov v porovnaní s 2&nbsp;000 krokmi. Po tomto bode vzťah spravidla nie je lineárny: ďalší prírastok ostáva možný, ale menší. Desaťtisíc krokov nie je vyvrátené – je však zbytočne vysokou latkou pre človeka, ktorý dnes urobí tri- až päťtisíc krokov.</p>
 
 <p><strong>V nefrológii z toho vyplýva skromné, ale použiteľné posolstvo: merať východisko, pridávať postupne a nepovažovať nesplnenie sloganu za zlyhanie liečby.</strong> Pohyb dopĺňa kontrolu tlaku, nefroprotekciu, liečbu anémie a objemový manažment. Nenahrádza ich.</p>
 </div>
@@ -224,7 +224,7 @@ $articles[] = [
   <li><strong>Kidney Disease: Improving Global Outcomes CKD Work Group.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(4S):S117–S314. doi: 10.1016/j.kint.2023.10.018. Odporúčanie 3.2.2.1 a praktické body k pohybovej aktivite. <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">KDIGO</a>.</li>
   <li><strong>World Health Organization.</strong> <em>WHO guidelines on physical activity and sedentary behaviour.</em> Geneva: WHO; 2020. <a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener noreferrer">Odporúčania WHO</a>.</li>
   <li><strong>Stamatakis E, Ahmadi M, Murphy MH.</strong> <em>Journey of a thousand miles: from ‘Manpo-Kei’ to the first steps-based physical activity recommendations.</em> Br J Sports Med. 2023;57(19):1227–1228. doi: 10.1136/bjsports-2023-106869. <a href="https://doi.org/10.1136/bjsports-2023-106869" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
-  <li><strong>Nextech.</strong> <em>Cieľ prejsť denne 10 000 krokov nevychádza z vedy. Toto je správna hranica.</em> Popularizačný článok, ktorý podnet spracovania priniesol; čísla a interpretácia v texte vychádzajú z primárnej meta-analýzy, nie z tohto zdroja. <a href="https://www.nextech.sk/a/Ciel-prejst-denne-10-000-krokov-nevychadza-z-vedy--Toto-je-spravna-hranica" target="_blank" rel="noopener noreferrer">Nextech</a>.</li>
+  <li><strong>Nextech.</strong> <em>Cieľ prejsť denne 10&nbsp;000 krokov nevychádza z vedy. Toto je správna hranica.</em> Popularizačný článok, ktorý podnet spracovania priniesol; čísla a interpretácia v texte vychádzajú z primárnej meta-analýzy, nie z tohto zdroja. <a href="https://www.nextech.sk/a/Ciel-prejst-denne-10-000-krokov-nevychadza-z-vedy--Toto-je-spravna-hranica" target="_blank" rel="noopener noreferrer">Nextech</a>.</li>
 </ol>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok sumarizuje observačné dávkovo-odpoveďové údaje a všeobecné odporúčania k pohybovej aktivite. Konkrétny plán chôdze a cvičenia treba prispôsobiť kardiovaskulárnej tolerancii, krehkosti, riziku pádu, anémii, objemovému stavu a štádiu chronickej choroby obličiek. Relatívne zníženie rizika nie je prísľubom individuálneho výsledku.</em></p>

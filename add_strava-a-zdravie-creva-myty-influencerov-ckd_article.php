@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: myty influencerov o strave a zdravi creva a co z nich plynie pre nefrologicku prax.
+ * Odborný článok: myty influencerov o strave a zdravi creva a co z nich plynie pre nefrologicku prax.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -42,9 +42,9 @@ $articles[] = [
 
 <h3>Čo hovoria dáta</h3>
 
-<p>Metaanalýza Mortona a spol. spracovala 49 randomizovaných štúdií s 1 863 účastníkmi a použila analýzu bodu zlomu. Výsledok je jednoznačný: <strong>pri celkovom príjme nad približne 1,62 g bielkovín na kilogram telesnej hmotnosti denne už ďalšie zvyšovanie neprinášalo žiadny prírastok beztukovej hmoty</strong> pri silovom tréningu. Účinnosť suplementácie navyše klesala s vekom.</p>
+<p>Metaanalýza Mortona a spol. spracovala 49 randomizovaných štúdií s 1&nbsp;863 účastníkmi a použila analýzu bodu zlomu. Výsledok je jednoznačný: <strong>pri celkovom príjme nad približne 1,62&nbsp;g bielkovín na kilogram telesnej hmotnosti denne už ďalšie zvyšovanie neprinášalo žiadny prírastok beztukovej hmoty</strong> pri silovom tréningu. Účinnosť suplementácie navyše klesala s vekom.</p>
 
-<p>Novšia metaanalýza Nunesa a spol. (74 randomizovaných štúdií) tento obraz dopĺňa: zvýšenie príjmu bielkovín prináša pri silovom tréningu iba <em>malý</em> prírastok beztukovej hmoty (štandardizovaný rozdiel priemerov 0,22; 95 % IS 0,14 až 0,30). Účinok bol významný u osôb nad 65 rokov pri príjme 1,2 až 1,59 g/kg/deň a u mladších pri príjme nad 1,6 g/kg/deň.</p>
+<p>Novšia metaanalýza Nunesa a spol. (74 randomizovaných štúdií) tento obraz dopĺňa: zvýšenie príjmu bielkovín prináša pri silovom tréningu iba <em>malý</em> prírastok beztukovej hmoty (štandardizovaný rozdiel priemerov 0,22; 95 % IS 0,14 až 0,30). Účinok bol významný u osôb nad 65&nbsp;rokov pri príjme 1,2 až 1,59&nbsp;g/kg/deň a u mladších pri príjme nad 1,6&nbsp;g/kg/deň.</p>
 
 <p>Tvrdenie „viac je lepšie“ teda nie je nepravdivé – je <strong>ohraničené</strong>. A hranica je známa.</p>
 
@@ -62,16 +62,16 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Prah, nad ktorým už nepribúda svalová hmota</th><td>≈ 1,62 g/kg/deň</td><td>Morton a spol. 2018</td></tr>
-    <tr><th scope="row">Odporúčaný príjem pri CKD G3–G5 (bez dialýzy)</th><td>0,8 g/kg/deň</td><td>KDIGO 2024 (odporúčanie 2C)</td></tr>
-    <tr><th scope="row">Hranica, ktorú netreba prekračovať pri riziku progresie</th><td>&gt; 1,3 g/kg/deň</td><td>KDIGO 2024 (praktický bod)</td></tr>
+    <tr><th scope="row">Prah, nad ktorým už nepribúda svalová hmota</th><td>≈ 1,62&nbsp;g/kg/deň</td><td>Morton a spol. 2018</td></tr>
+    <tr><th scope="row">Odporúčaný príjem pri CKD G3–G5 (bez dialýzy)</th><td>0,8&nbsp;g/kg/deň</td><td>KDIGO 2024 (odporúčanie 2C)</td></tr>
+    <tr><th scope="row">Hranica, ktorú netreba prekračovať pri riziku progresie</th><td>&gt; 1,3&nbsp;g/kg/deň</td><td>KDIGO 2024 (praktický bod)</td></tr>
   </tbody>
 </table>
 </div>
 
 <p>Kontrast je zreteľný: <strong>prah, pri ktorom sa vo fitness komunite prestáva oplácať ďalší proteín, leží nad hranicou, ktorú KDIGO pri riziku progresie neodporúča prekračovať.</strong> Pacient, ktorý sa riadi obsahom pre zdravých športovcov, sa teda môže úplne legitímne dostať do pásma, pred ktorým nefrologické odporúčanie varuje – bez toho, aby porušil čokoľvek z toho, čo počul.</p>
 
-<p>Aby výklad nebol jednostranný, treba doplniť dve upozornenia. KDIGO neodporúča prísne nízkobielkovinové diéty plošne: veľmi nízky príjem (0,3 až 0,4 g/kg/deň s ketoanalógmi) prichádza do úvahy len pod dohľadom u vybraných pacientov s rizikom zlyhania obličiek, a u metabolicky nestabilných pacientov ani nízko-, ani veľmi nízkobielkovinovú diétu predpisovať netreba. U detí s CKD sa bielkoviny neobmedzujú vôbec pre riziko poruchy rastu. Pacienti na dialýze majú navyše iné, vyššie potreby než pacienti bez dialýzy.</p>
+<p>Aby výklad nebol jednostranný, treba doplniť dve upozornenia. KDIGO neodporúča prísne nízkobielkovinové diéty plošne: veľmi nízky príjem (0,3 až 0,4&nbsp;g/kg/deň s ketoanalógmi) prichádza do úvahy len pod dohľadom u vybraných pacientov s rizikom zlyhania obličiek, a u metabolicky nestabilných pacientov ani nízko-, ani veľmi nízkobielkovinovú diétu predpisovať netreba. U detí s CKD sa bielkoviny neobmedzujú vôbec pre riziko poruchy rastu. Pacienti na dialýze majú navyše iné, vyššie potreby než pacienti bez dialýzy.</p>
 
 <p>Podrobnejšie sa proteínovým a kreatínovým doplnkom venuje samostatný článok uvedený v prehľade nižšie.</p>
 </div>
@@ -143,9 +143,9 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><td>Pri bielkovinách je viac vždy lepšie</td><td><strong>Ohraničene nepravdivé</strong></td><td>Nad ≈ 1,62 g/kg/deň už žiadny ďalší prírastok beztukovej hmoty (49 štúdií, 1 863 účastníkov)</td></tr>
+    <tr><td>Pri bielkovinách je viac vždy lepšie</td><td><strong>Ohraničene nepravdivé</strong></td><td>Nad ≈ 1,62&nbsp;g/kg/deň už žiadny ďalší prírastok beztukovej hmoty (49 štúdií, 1&nbsp;863 účastníkov)</td></tr>
     <tr><td>Bielkoviny sú pre svalovú hmotu dôležité</td><td><strong>Potvrdené, ale účinok je malý</strong></td><td>SMD 0,22 (95 % IS 0,14–0,30) pri silovom tréningu</td></tr>
-    <tr><td>Odporúčania pre športovcov platia aj pri CKD</td><td><strong>Nie</strong></td><td>KDIGO 2024: 0,8 g/kg/deň pri G3–G5, neprekračovať 1,3 g/kg/deň pri riziku progresie</td></tr>
+    <tr><td>Odporúčania pre športovcov platia aj pri CKD</td><td><strong>Nie</strong></td><td>KDIGO 2024: 0,8&nbsp;g/kg/deň pri G3–G5, neprekračovať 1,3&nbsp;g/kg/deň pri riziku progresie</td></tr>
     <tr><td>Detox diéta odstráni toxíny a resetuje črevo</td><td><strong>Nepodložené</strong></td><td>Žiadna metodologicky spoľahlivá štúdia; eliminačné orgány pracujú nepretržite</td></tr>
     <tr><td>Čistenie čriev je neškodné</td><td><strong>Nepravdivé</strong></td><td>Doložené poruchy elektrolytov, sepsa, kolitída, perforácia, úmrtia; pri amébóze z irigácie ≥ 36 infikovaných, 10 kolektómií, 6 úmrtí</td></tr>
     <tr><td>Prípravky na čistenie čriev nemajú renálne riziko</td><td><strong>Nepravdivé</strong></td><td>Akútna fosfátová nefropatia po perorálnom sodnom fosfáte – 21 opísaných pacientov, možné trvalé poškodenie</td></tr>
@@ -189,9 +189,9 @@ $articles[] = [
 <h2>Zdroje</h2>
 
 <ol>
-  <li><strong>Morton RW, Murphy KT, McKellar SR, Schoenfeld BJ, Henselmans M, Helms E, Aragon AA, Devries MC, Banfield L, Krieger JW, Phillips SM.</strong> <em>A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults.</em> Br J Sports Med. 2018;52(6):376–384. doi: 10.1136/bjsports-2017-097608. Zdroj prahu 1,62 g/kg/deň. <a href="https://doi.org/10.1136/bjsports-2017-097608" target="_blank" rel="noopener noreferrer">Metaanalýza</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
+  <li><strong>Morton RW, Murphy KT, McKellar SR, Schoenfeld BJ, Henselmans M, Helms E, Aragon AA, Devries MC, Banfield L, Krieger JW, Phillips SM.</strong> <em>A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults.</em> Br J Sports Med. 2018;52(6):376–384. doi: 10.1136/bjsports-2017-097608. Zdroj prahu 1,62&nbsp;g/kg/deň. <a href="https://doi.org/10.1136/bjsports-2017-097608" target="_blank" rel="noopener noreferrer">Metaanalýza</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Nunes EA, Colenso-Semple L, McKellar SR, Yau T, Ali MU, Fitzpatrick-Lewis D, Sherifali D, Gaudichon C, Tomé D, Atherton PJ, Robles MC, Naranjo-Modad S, Braun M, Landi F, Phillips SM.</strong> <em>Systematic review and meta-analysis of protein intake to support muscle mass and function in healthy adults.</em> J Cachexia Sarcopenia Muscle. 2022;13(2):795–810. doi: 10.1002/jcsm.12922. <a href="https://doi.org/10.1002/jcsm.12922" target="_blank" rel="noopener noreferrer">Metaanalýza 74 štúdií</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/35187864/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
-  <li><strong>Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(4 Suppl):S117–S314. doi: 10.1016/j.kint.2023.10.018. Zdroj odporúčania 0,8 g/kg/deň a praktického bodu o hranici 1,3 g/kg/deň. <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">Odporúčanie KDIGO</a>.</li>
+  <li><strong>Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(4 Suppl):S117–S314. doi: 10.1016/j.kint.2023.10.018. Zdroj odporúčania 0,8&nbsp;g/kg/deň a praktického bodu o hranici 1,3&nbsp;g/kg/deň. <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">Odporúčanie KDIGO</a>.</li>
   <li><strong>Mishori R, Otubu A, Jones AA.</strong> <em>The dangers of colon cleansing.</em> J Fam Pract. 2011;60(8):454–457. Prehľad dôkazov a poškodení pri čistení hrubého čreva. <a href="https://pubmed.ncbi.nlm.nih.gov/21814639/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Markowitz GS, Stokes MB, Radhakrishnan J, D'Agati VD.</strong> <em>Acute phosphate nephropathy following oral sodium phosphate bowel purgative: an underrecognized cause of chronic renal failure.</em> J Am Soc Nephrol. 2005;16(11):3389–3396. Séria 21 pacientov s akútnou fosfátovou nefropatiou. <a href="https://pubmed.ncbi.nlm.nih.gov/16192415/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Carr S, Chan E, Lavine E, Moote W.</strong> <em>CSACI Position statement on the testing of food-specific IgG.</em> Allergy Asthma Clin Immunol. 2012;8(1):12. doi: 10.1186/1710-1492-8-12. <a href="https://doi.org/10.1186/1710-1492-8-12" target="_blank" rel="noopener noreferrer">Stanovisko CSACI</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/22835332/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
@@ -199,7 +199,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>What Influencers Get Wrong About Diet and Gut Health.</em> Medscape, 2026. Sekundárny zdroj použitý ako východisko témy, nie ako dôkaz; ako autorka sa uvádza Charlotte Markey. <a href="https://www.medscape.com/viewarticle/what-influencers-get-wrong-about-diet-and-gut-health-2026a1000rxg" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Prah 1,62 g/kg/deň, počet 49 štúdií a 1 863 účastníkov boli overené proti abstraktu v PubMed (PMID 28698222); údaje druhej metaanalýzy (74 štúdií, SMD 0,22; 95 % IS 0,14–0,30, pásma 1,2–1,59 a ≥ 1,6 g/kg/deň) proti PMID 35187864; séria 21 pacientov s akútnou fosfátovou nefropatiou proti PMID 16192415; stanovisko CSACI proti PMID 22835332. Odporúčanie 0,8 g/kg/deň (2C) a praktický bod o neprekračovaní 1,3 g/kg/deň pochádzajú z odporúčania KDIGO 2024 pre CKD. <strong>Oprava oproti pôvodnému podkladu:</strong> ako doklad o „čistení čriev“ bola v podklade uvedená práca Restelliniho a spol. (World J Gastroenterol 2017), tá sa však týka prípravy čreva pred kolonoskopiou pri nešpecifických zápaloch čreva, nie detoxových praktík – bola nahradená prehľadom Mishoriovej a spol. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Prah 1,62&nbsp;g/kg/deň, počet 49 štúdií a 1&nbsp;863 účastníkov boli overené proti abstraktu v PubMed (PMID 28698222); údaje druhej metaanalýzy (74 štúdií, SMD 0,22; 95 % IS 0,14–0,30, pásma 1,2–1,59 a ≥ 1,6&nbsp;g/kg/deň) proti PMID 35187864; séria 21 pacientov s akútnou fosfátovou nefropatiou proti PMID 16192415; stanovisko CSACI proti PMID 22835332. Odporúčanie 0,8&nbsp;g/kg/deň (2C) a praktický bod o neprekračovaní 1,3&nbsp;g/kg/deň pochádzajú z odporúčania KDIGO 2024 pre CKD. <strong>Oprava oproti pôvodnému podkladu:</strong> ako doklad o „čistení čriev“ bola v podklade uvedená práca Restelliniho a spol. (World J Gastroenterol 2017), tá sa však týka prípravy čreva pred kolonoskopiou pri nešpecifických zápaloch čreva, nie detoxových praktík – bola nahradená prehľadom Mishoriovej a spol. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Príjem bielkovín, obmedzenia stravy a nutričné intervencie pri chronickej chorobe obličiek treba stanoviť individuálne podľa štádia ochorenia, dialyzačnej liečby, nutričného stavu a rizika sarkopénie, v spolupráci s nutričným terapeutom a podľa platných odporúčaní. Uvedené prahy sú orientačné hodnoty z populačných štúdií a odporúčaní, nie predpis pre konkrétneho pacienta.</em></p>
 </div>
@@ -223,9 +223,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

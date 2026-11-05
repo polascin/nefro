@@ -58,9 +58,9 @@ $articles[] = [
 
 <p>Išlo o pragmatickú, multicentrickú, klastrovo randomizovanú, trojito zaslepenú crossover štúdiu. Prebiehala v šiestich akademických aj komunitných nemocniciach v Kanade.</p>
 
-<p>Do analýzy bolo zahrnutých 1468 dospelých pacientov prijatých na jednotku intenzívnej starostlivosti. Všetci mali funkčný centrálny venózny katéter a aspoň jeden nepoužívaný lúmen. Priemerný vek pacientov bol 60 rokov a väčšinu tvorili muži.</p>
+<p>Do analýzy bolo zahrnutých 1468 dospelých pacientov prijatých na jednotku intenzívnej starostlivosti. Všetci mali funkčný centrálny venózny katéter a aspoň jeden nepoužívaný lúmen. Priemerný vek pacientov bol 60&nbsp;rokov a väčšinu tvorili muži.</p>
 
-<p>Jednotky intenzívnej starostlivosti boli randomizované na používanie identických, zaslepených, predplnených striekačiek s 2,5 ml 4 % tetrasodného EDTA alebo kontrolného lock roztoku. Kontrolou bol fyziologický roztok, prípadne 4 % citrát pri hemodialyzačných linkách.</p>
+<p>Jednotky intenzívnej starostlivosti boli randomizované na používanie identických, zaslepených, predplnených striekačiek s 2,5&nbsp;ml 4 % tetrasodného EDTA alebo kontrolného lock roztoku. Kontrolou bol fyziologický roztok, prípadne 4 % citrát pri hemodialyzačných linkách.</p>
 
 <p>Každé pracovisko používalo jednu stratégiu počas 3,5 mesiaca, potom prešlo na druhú stratégiu počas ďalších 3,5 mesiaca. Súčasťou bol aj 1-mesačný udržiavací interval.</p>
 

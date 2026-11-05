@@ -57,7 +57,7 @@ $articles[] = [
 
 <h2>Čo naozaj ukázala analýza Redditu</h2>
 
-<p>Ďalším zdrojom pozornosti sa stal preprint analyzujúci verejné príspevky na platforme Reddit. Autori pomocou jazykových modelov identifikovali 13 589 používateľov, ktorí sa podľa textu príspevkov sami označovali za aktuálnych užívateľov retatrutidu. Po metodických vylúčeniach malo 7 823 z nich, teda 57,6 %, v texte aspoň jeden príznak priradený ku klinickému termínu databázy MedDRA.</p>
+<p>Ďalším zdrojom pozornosti sa stal preprint analyzujúci verejné príspevky na platforme Reddit. Autori pomocou jazykových modelov identifikovali 13&nbsp;589 používateľov, ktorí sa podľa textu príspevkov sami označovali za aktuálnych užívateľov retatrutidu. Po metodických vylúčeniach malo 7&nbsp;823 z nich, teda 57,6 %, v texte aspoň jeden príznak priradený ku klinickému termínu databázy MedDRA.</p>
 
 <p>Tento údaj <strong>nie je incidenciou klinicky potvrdených nežiaducich účinkov</strong>. Výskumníci neoverovali totožnosť používateľov, skutočné zloženie produktu, dávku, súbežné užívanie iných látok, diagnózu ani príčinnú súvislosť. Nešlo ani o prospektívne sledovanie so známym a úplným menovateľom. Štúdia je navyše preprintom bez ukončeného recenzného konania.</p>
 

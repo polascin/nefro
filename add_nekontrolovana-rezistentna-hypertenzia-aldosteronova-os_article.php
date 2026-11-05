@@ -58,7 +58,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Podľa odporúčaní Európskej kardiologickej spoločnosti (ESC) z roku 2024 ide o rezistentnú hypertenziu vtedy, keď zostáva v ambulancii systolický tlak najmenej 140 mmHg a/alebo diastolický tlak najmenej 90 mmHg napriek maximálnym alebo maximálne tolerovaným dávkam najmenej troch liekov vrátane blokátora systému renín-angiotenzín, blokátora kalciových kanálov a tiazidového alebo tiazidom podobného diuretika. Zvýšené hodnoty treba potvrdiť domácim meraním alebo 24-hodinovým ambulantným monitorovaním krvného tlaku a vylúčiť zdanlivú rezistenciu. Pri odhadovanej glomerulovej filtrácii (eGFR) pod 30 ml/min/1,73 m² má byť na účely tejto definície primerane titrované kľučkové diuretikum. <a href="#odborny-zdroj-2">[2]</a></p>
+<p>Podľa odporúčaní Európskej kardiologickej spoločnosti (ESC) z roku 2024 ide o rezistentnú hypertenziu vtedy, keď zostáva v ambulancii systolický tlak najmenej 140&nbsp;mmHg a/alebo diastolický tlak najmenej 90&nbsp;mmHg napriek maximálnym alebo maximálne tolerovaným dávkam najmenej troch liekov vrátane blokátora systému renín-angiotenzín, blokátora kalciových kanálov a tiazidového alebo tiazidom podobného diuretika. Zvýšené hodnoty treba potvrdiť domácim meraním alebo 24-hodinovým ambulantným monitorovaním krvného tlaku a vylúčiť zdanlivú rezistenciu. Pri odhadovanej glomerulovej filtrácii (eGFR) pod 30&nbsp;ml/min/1,73&nbsp;m² má byť na účely tejto definície primerane titrované kľučkové diuretikum. <a href="#odborny-zdroj-2">[2]</a></p>
 
 <p>Americké odporúčanie AHA/ACC z roku 2025 používa širšiu definíciu a za rezistentnú považuje aj hypertenziu kontrolovanú štyrmi alebo viacerými antihypertenzívami. ESC túto kategóriu v definícii z roku 2024 nepoužíva. Pri čítaní štúdií preto treba vždy skontrolovať, podľa akej definície boli účastníci zaradení. <a href="#odborny-zdroj-2">[2]</a> <a href="#odborny-zdroj-3">[3]</a></p>
 
@@ -103,9 +103,9 @@ $articles[] = [
 
 <h2>Osvedčený liečebný základ pred novou triedou</h2>
 
-<p>Po potvrdení rezistentnej hypertenzie treba optimalizovať režimové opatrenia a základnú trojkombináciu, obmedziť príjem sodíka a podporiť adherenciu. V štúdii PATHWAY-2 bol spironolaktón účinnejší ako placebo, bisoprolol aj doxazosín; priemerný domáci systolický tlak bol oproti placebu nižší o 8,70 mmHg (95 % interval spoľahlivosti 7,69 až 9,72 mmHg). <a href="#odborny-zdroj-5">[5]</a></p>
+<p>Po potvrdení rezistentnej hypertenzie treba optimalizovať režimové opatrenia a základnú trojkombináciu, obmedziť príjem sodíka a podporiť adherenciu. V štúdii PATHWAY-2 bol spironolaktón účinnejší ako placebo, bisoprolol aj doxazosín; priemerný domáci systolický tlak bol oproti placebu nižší o 8,70&nbsp;mmHg (95 % interval spoľahlivosti 7,69 až 9,72&nbsp;mmHg). <a href="#odborny-zdroj-5">[5]</a></p>
 
-<p>ESC odporúča zvážiť nízku dávku spironolaktónu ako preferovaný prídavný liek, ak to dovoľujú funkcia obličiek a koncentrácia draslíka. Pri eGFR najmenej 30 ml/min/1,73 m² sa v odporúčaní uvádza vstupná koncentrácia draslíka najviac 4,5 mmol/l a potreba častého monitorovania. Ak spironolaktón nie je vhodný alebo tolerovaný, voľba ďalšej liečby sa individualizuje. <a href="#odborny-zdroj-2">[2]</a></p>
+<p>ESC odporúča zvážiť nízku dávku spironolaktónu ako preferovaný prídavný liek, ak to dovoľujú funkcia obličiek a koncentrácia draslíka. Pri eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m² sa v odporúčaní uvádza vstupná koncentrácia draslíka najviac 4,5&nbsp;mmol/l a potreba častého monitorovania. Ak spironolaktón nie je vhodný alebo tolerovaný, voľba ďalšej liečby sa individualizuje. <a href="#odborny-zdroj-2">[2]</a></p>
 
 <h2>Čím sa líšia inhibítory aldosterónsyntázy</h2>
 
@@ -123,22 +123,22 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Baxdrostat, BaxHTN</th>
-        <td>Po 12 týždňoch bol rozdiel v zmene systolického tlaku oproti placebu −8,7 mmHg pri 1 mg a −9,8 mmHg pri 2 mg. <a href="#odborny-zdroj-6">[6]</a></td>
-        <td>Do štúdie boli zaradení pacienti s eGFR najmenej 45 ml/min/1,73 m²; výsledok nepreukazuje zníženie počtu kardiovaskulárnych príhod.</td>
+        <td>Po 12 týždňoch bol rozdiel v zmene systolického tlaku oproti placebu −8,7&nbsp;mmHg pri 1&nbsp;mg a −9,8&nbsp;mmHg pri 2&nbsp;mg. <a href="#odborny-zdroj-6">[6]</a></td>
+        <td>Do štúdie boli zaradení pacienti s eGFR najmenej 45&nbsp;ml/min/1,73&nbsp;m²; výsledok nepreukazuje zníženie počtu kardiovaskulárnych príhod.</td>
       </tr>
       <tr>
         <th scope="row">Lorundrostat, Launch-HTN</th>
-        <td>Pri dávke 50 mg bol po 6 týždňoch rozdiel v zmene systolického krvného tlaku oproti placebu −9,1 mmHg. <a href="#odborny-zdroj-9">[9]</a></td>
-        <td>Pacienti s eGFR pod 45 ml/min/1,73 m² boli vylúčení; častejšie sa vyskytli hyperkaliémia, hyponatriémia a zhoršenie funkcie obličiek.</td>
+        <td>Pri dávke 50&nbsp;mg bol po 6 týždňoch rozdiel v zmene systolického krvného tlaku oproti placebu −9,1&nbsp;mmHg. <a href="#odborny-zdroj-9">[9]</a></td>
+        <td>Pacienti s eGFR pod 45&nbsp;ml/min/1,73&nbsp;m² boli vylúčení; častejšie sa vyskytli hyperkaliémia, hyponatriémia a zhoršenie funkcie obličiek.</td>
       </tr>
       <tr>
         <th scope="row">Vicadrostat, štúdia pri CKD</th>
-        <td>Po 14 týždňoch sa pri dávkach 3 až 20 mg znížila albuminúria približne o 22 až 39 %, pri placebe o 3 %. <a href="#odborny-zdroj-10">[10]</a></td>
+        <td>Po 14 týždňoch sa pri dávkach 3 až 20&nbsp;mg znížila albuminúria približne o 22 až 39 %, pri placebe o 3 %. <a href="#odborny-zdroj-10">[10]</a></td>
         <td>Albuminúria je náhradný ukazovateľ; štúdia nepreukázala spomalenie progresie CKD ani zníženie rizika zlyhania obličiek.</td>
       </tr>
       <tr>
         <th scope="row">Dexfadrostat, primárny aldosteronizmus</th>
-        <td>V malej osemtýždňovej štúdii klesol priemerný 24-hodinový systolický krvný tlak oproti východisku o 10,7 mmHg. <a href="#odborny-zdroj-11">[11]</a></td>
+        <td>V malej osemtýždňovej štúdii klesol priemerný 24-hodinový systolický krvný tlak oproti východisku o 10,7&nbsp;mmHg. <a href="#odborny-zdroj-11">[11]</a></td>
         <td>Hodnotených bolo 35 pacientov a chýbala súbežná placebová skupina; výsledok má exploratívny charakter.</td>
       </tr>
     </tbody>
@@ -147,13 +147,13 @@ $articles[] = [
 
 <p>K 27. augustu 2026 zostávali lorundrostat, vicadrostat a dexfadrostat skúšanými, neschválenými liekmi. FDA prijal žiadosť o registráciu lorundrostatu a určil cieľový termín rozhodnutia na 22. decembra 2026. Z uvedených štyroch molekúl bolo potvrdené regulačné schválenie iba pre baxdrostat v USA. <a href="#odborny-zdroj-7">[7]</a> <a href="#odborny-zdroj-9">[9]</a> <a href="#odborny-zdroj-10">[10]</a> <a href="#odborny-zdroj-11">[11]</a> <a href="#odborny-zdroj-12">[12]</a></p>
 
-<p>V randomizovanej štúdii BaxHTN bolo liečených 794 účastníkov s nekontrolovanou alebo rezistentnou hypertenziou. Koncentrácia draslíka nad 6,0 mmol/l sa vyskytla u 2,3 % účastníkov pri baxdrostate v dávke 1 mg, u 3,0 % pri dávke 2 mg a u 0,4 % pri placebe. Tieto údaje sa týkajú konkrétneho skúšania a prahu, nie celkovej frekvencie hyperkaliémie v klinickej praxi. <a href="#odborny-zdroj-6">[6]</a></p>
+<p>V randomizovanej štúdii BaxHTN bolo liečených 794 účastníkov s nekontrolovanou alebo rezistentnou hypertenziou. Koncentrácia draslíka nad 6,0&nbsp;mmol/l sa vyskytla u 2,3 % účastníkov pri baxdrostate v dávke 1&nbsp;mg, u 3,0 % pri dávke 2&nbsp;mg a u 0,4 % pri placebe. Tieto údaje sa týkajú konkrétneho skúšania a prahu, nie celkovej frekvencie hyperkaliémie v klinickej praxi. <a href="#odborny-zdroj-6">[6]</a></p>
 
-<p>Americký Úrad pre kontrolu potravín a liečiv (FDA) schválil 15. mája 2026 baxdrostat pod názvom BAXFENDY na prídavnú liečbu dospelých s hypertenziou, ktorá nie je dostatočne kontrolovaná inými liekmi. V americkej informácii o lieku sa vyžaduje sledovanie koncentrácií draslíka a sodíka. Bezpečnosť a účinnosť pri začatí liečby u pacientov s eGFR pod 45 ml/min/1,73 m² neboli stanovené. Dokument zároveň výslovne uvádza, že neexistujú kontrolované štúdie preukazujúce zníženie kardiovaskulárnych príhod s BAXFENDY. Americké schválenie samo osebe neznamená registráciu ani dostupnosť v Európskej únii alebo na Slovensku; aktuálny stav treba overiť v príslušnej liekovej informácii. <a href="#odborny-zdroj-7">[7]</a></p>
+<p>Americký Úrad pre kontrolu potravín a liečiv (FDA) schválil 15. mája 2026 baxdrostat pod názvom BAXFENDY na prídavnú liečbu dospelých s hypertenziou, ktorá nie je dostatočne kontrolovaná inými liekmi. V americkej informácii o lieku sa vyžaduje sledovanie koncentrácií draslíka a sodíka. Bezpečnosť a účinnosť pri začatí liečby u pacientov s eGFR pod 45&nbsp;ml/min/1,73&nbsp;m² neboli stanovené. Dokument zároveň výslovne uvádza, že neexistujú kontrolované štúdie preukazujúce zníženie kardiovaskulárnych príhod s BAXFENDY. Americké schválenie samo osebe neznamená registráciu ani dostupnosť v Európskej únii alebo na Slovensku; aktuálny stav treba overiť v príslušnej liekovej informácii. <a href="#odborny-zdroj-7">[7]</a></p>
 
 <h2>CKD: účinok na krvný tlak a zvýšené bezpečnostné nároky</h2>
 
-<p>V 26-týždňovej štúdii FigHTN u pacientov s CKD a nekontrolovanou hypertenziou bol pri baxdrostate rozdiel systolického tlaku oproti placebu −8,1 mmHg (95 % interval spoľahlivosti −13,4 až −2,8 mmHg). Medián pomeru albumínu ku kreatinínu v moči pri zaradení bol 714 mg/g a priemerná eGFR 44 ml/min/1,73 m². Prieskumná analýza ukázala zníženie albuminúrie oproti placebu približne o 55 %, nejde však o dôkaz ochrany pred zlyhaním obličiek. Hyperkaliémia hlásená ako nežiaduca udalosť sa vyskytla u 41 % účastníkov s baxdrostatom a u 5 % s placebom. <a href="#odborny-zdroj-8">[8]</a></p>
+<p>V 26-týždňovej štúdii FigHTN u pacientov s CKD a nekontrolovanou hypertenziou bol pri baxdrostate rozdiel systolického tlaku oproti placebu −8,1&nbsp;mmHg (95 % interval spoľahlivosti −13,4 až −2,8&nbsp;mmHg). Medián pomeru albumínu ku kreatinínu v moči pri zaradení bol 714&nbsp;mg/g a priemerná eGFR 44&nbsp;ml/min/1,73&nbsp;m². Prieskumná analýza ukázala zníženie albuminúrie oproti placebu približne o 55 %, nejde však o dôkaz ochrany pred zlyhaním obličiek. Hyperkaliémia hlásená ako nežiaduca udalosť sa vyskytla u 41 % účastníkov s baxdrostatom a u 5 % s placebom. <a href="#odborny-zdroj-8">[8]</a></p>
 
 <p>Vicadrostat v 14-týždňovej štúdii fázy 2 znížil albuminúriu pri súbežnej štandardnej liečbe CKD, pričom smer účinku bol podobný pri súbežnom podávaní empagliflozínu aj bez neho. Hyperkaliémia sa v závislosti od dávky vyskytla u 10 až 18 % účastníkov oproti 6 % pri placebe. Ani táto štúdia nehodnotila dlhodobé renálne výsledky. <a href="#odborny-zdroj-10">[10]</a></p>
 

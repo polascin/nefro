@@ -35,9 +35,9 @@ $articles[] = [
 
 <h2>Európske údaje ukazujú rastúcu expozíciu aj mortalitu</h2>
 
-<p>Správa <em>Lancet Countdown in Europe 2026</em> odhadla v Európe za rok 2024 celkovo 62 775 úmrtí pripísateľných teplu. Pri porovnaní období 1991–2000 a 2015–2024 sa mortalita pripísateľná teplu zvýšila v 820 z 823 sledovaných regiónov; priemerný nárast predstavoval 52 úmrtí na milión obyvateľov ročne (95 % CI 43–59).</p>
+<p>Správa <em>Lancet Countdown in Europe 2026</em> odhadla v Európe za rok 2024 celkovo 62&nbsp;775 úmrtí pripísateľných teplu. Pri porovnaní období 1991–2000 a 2015–2024 sa mortalita pripísateľná teplu zvýšila v 820 z 823 sledovaných regiónov; priemerný nárast predstavoval 52 úmrtí na milión obyvateľov ročne (95 % CI 43–59).</p>
 
-<p>V roku 2024 dosiahla expozícia dojčiat a ľudí vo veku ≥65 rokov vlnám horúčav 2,3 miliardy osobodní. Priemerná ročná expozícia týchto skupín bola v rokoch 2015–2024 o 254 % vyššia než v období 1991–2000. Nárast však nevysvetľuje iba častejší výskyt vĺn horúčav: podieľa sa na ňom aj rast počtu ľudí v zraniteľných vekových skupinách.</p>
+<p>V roku 2024 dosiahla expozícia dojčiat a ľudí vo veku ≥65&nbsp;rokov vlnám horúčav 2,3 miliardy osobodní. Priemerná ročná expozícia týchto skupín bola v rokoch 2015–2024 o 254 % vyššia než v období 1991–2000. Nárast však nevysvetľuje iba častejší výskyt vĺn horúčav: podieľa sa na ňom aj rast počtu ľudí v zraniteľných vekových skupinách.</p>
 
 <p>Tieto čísla sú výsledkom epidemiologického modelovania, nie súčtom úmrtí označených na úmrtnom liste ako „následok horúčavy“. Model odhaduje časť mortality pripísateľnú teplote na populačnej úrovni. Výsledok preto závisí od definície expozície, referenčnej teploty, zahrnutých regiónov a použitej metodiky. Neumožňuje určiť príčinu úmrtia konkrétneho človeka, presvedčivo však ukazuje rozsah a trend zdravotného rizika.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Pri ťažkej hypertermii sa pridáva priame bunkové poškodenie, systémová zápalová odpoveď, porucha koagulácie a niekedy rabdomyolýza. Dôsledkom môže byť kombinácia prerenálnej hypoperfúzie a intrarenálneho poškodenia. Nedostatočná náhrada vody môže podporiť hypernatriémiu; neuvážený príjem veľkého množstva hypotonickej tekutiny zasa môže prispieť k hyponatriémii.</p>
 
-<p>CKD znižuje schopnosť kompenzovať náhle hemodynamické a elektrolytové zmeny. V post hoc analýze štúdie DAPA-CKD u 4 017 účastníkov bolo viac dní s tepelným indexom &gt;30 °C spojených s rýchlejším poklesom eGFR. Išlo o observačnú analýzu expozície v rámci randomizovanej štúdie, preto sama nedokazuje kauzalitu a jej odhad nemožno mechanicky preniesť na každého pacienta. Podporuje však klinický predpoklad, že opakovaná tepelná záťaž môže mať pri už prítomnej CKD aj dlhodobejší význam.</p>
+<p>CKD znižuje schopnosť kompenzovať náhle hemodynamické a elektrolytové zmeny. V post hoc analýze štúdie DAPA-CKD u 4&nbsp;017 účastníkov bolo viac dní s tepelným indexom &gt;30&nbsp;°C spojených s rýchlejším poklesom eGFR. Išlo o observačnú analýzu expozície v rámci randomizovanej štúdie, preto sama nedokazuje kauzalitu a jej odhad nemožno mechanicky preniesť na každého pacienta. Podporuje však klinický predpoklad, že opakovaná tepelná záťaž môže mať pri už prítomnej CKD aj dlhodobejší význam.</p>
 
 <h2>Najväčšia praktická chyba: jedna rada pre všetkých</h2>
 
@@ -91,7 +91,7 @@ $articles[] = [
 
 <h2>Dialýza: riziko je reálne, mechanizmus nie je jednoduchý</h2>
 
-<p>V americkej kohorte 945 251 ľudí liečených udržiavacou dialýzou bola expozícia extrémnemu vlhkému teplu spojená s 18 % vyšším relatívnym rizikom úmrtia (adjustovaný HR 1,18; 95 % CI 1,15–1,20). Vo francúzskom registri REIN bola maximálna denná teplota &gt;32,5 °C spojená s vyššou mortalitou dialyzovaných pacientov (IR 1,09; 95 % CI 1,04–1,15); rovnaká asociácia sa v tejto analýze nepotvrdila u príjemcov transplantátu. Ide o observačné asociácie, ktoré môžu ovplyvňovať komorbidity, socioekonomické podmienky, kvalita bývania, znečistenie ovzdušia aj dostupnosť dopravy a zdravotnej starostlivosti.</p>
+<p>V americkej kohorte 945&nbsp;251 ľudí liečených udržiavacou dialýzou bola expozícia extrémnemu vlhkému teplu spojená s 18 % vyšším relatívnym rizikom úmrtia (adjustovaný HR 1,18; 95 % CI 1,15–1,20). Vo francúzskom registri REIN bola maximálna denná teplota &gt;32,5&nbsp;°C spojená s vyššou mortalitou dialyzovaných pacientov (IR 1,09; 95 % CI 1,04–1,15); rovnaká asociácia sa v tejto analýze nepotvrdila u príjemcov transplantátu. Ide o observačné asociácie, ktoré môžu ovplyvňovať komorbidity, socioekonomické podmienky, kvalita bývania, znečistenie ovzdušia aj dostupnosť dopravy a zdravotnej starostlivosti.</p>
 
 <p>Z týchto údajov nemožno vyvodiť, že vyššia vonkajšia teplota automaticky zvyšuje medzidialyzačný prírastok hmotnosti alebo výskyt intradialyzačnej hypotenzie. Vzťah medzi ročným obdobím, príjmom, potením, ultrafiltráciou a tlakom je komplexný; niektoré observačné štúdie dokonca zaznamenali viac hypotenzných epizód pri nižšej okolitej teplote. Klinický postup sa preto má opierať o konkrétne údaje pacienta, nie o jednoduchú sezónnu domnienku.</p>
 

@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Výskyt DDS v štúdii</h2>
 
-<p>Zo 48 pacientov bolo <strong>70,8 % mužov</strong> a medián veku bol <strong>67 rokov</strong>. DDS sa vyskytol u <strong>22,9 % pacientov</strong>. Dvaja pacienti mali viac než jednu epizódu.</p>
+<p>Zo 48 pacientov bolo <strong>70,8 % mužov</strong> a medián veku bol <strong>67&nbsp;rokov</strong>. DDS sa vyskytol u <strong>22,9 % pacientov</strong>. Dvaja pacienti mali viac než jednu epizódu.</p>
 
 <p>Ak sa DDS systematicky vyhľadáva, nemusí ísť o raritnú komplikáciu. Mierne formy môžu byť pri začiatku dialýzy pomerne časté. Neznamená to, že každý pacient má vysoké riziko ťažkého neurologického poškodenia, ale znamená to, že lekár a dialyzačný tím by mali pri prvých procedúrach cielene sledovať neurologické príznaky.</p>
 
@@ -84,7 +84,7 @@ $articles[] = [
   <li>užívanie centrálne pôsobiacich liekov: 45,5 % vs. 8,1 %, P = 0,01,</li>
   <li>prevodnenie: 45,4 % vs. 13,5 %, P = 0,03,</li>
   <li>nižšie predialyzačné pH: 7,28 vs. 7,37, P = 0,04,</li>
-  <li>vyšší chlorid: 100 vs. 94 mmol/l, P = 0,01.</li>
+  <li>vyšší chlorid: 100 vs. 94&nbsp;mmol/l, P = 0,01.</li>
 </ul>
 
 <p>Tieto výsledky naznačujú, že na vzniku DDS sa môžu podieľať nielen osmotické zmeny spojené s uremickými toxínmi, ale aj stav hydratácie, acidobázická rovnováha, lieky ovplyvňujúce centrálny nervový systém a mechanizmy regulácie intrakraniálneho tlaku.</p>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: dyslipidemia 2026 - riziko, ciele LDL, liecba pri CKD.
+ * Odborný článok: dyslipidemia 2026 - riziko, ciele LDL, liečba pri CKD.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -46,7 +46,7 @@ $articles[] = [
   <li>ďalších aterosklerotických príhod.</li>
 </ul>
 
-<p>Pri poklese LDL cholesterolu približne o 1 mmol/l možno počas niekoľkých rokov očakávať približne pätinové relatívne zníženie veľkých vaskulárnych príhod. Absolútny prínos však závisí od východiskového rizika. Rovnaké relatívne zníženie poskytne väčší absolútny úžitok pacientovi po infarkte alebo s pokročilou chronickou chorobou obličiek než mladému človeku s nízkym krátkodobým rizikom.</p>
+<p>Pri poklese LDL cholesterolu približne o 1&nbsp;mmol/l možno počas niekoľkých rokov očakávať približne pätinové relatívne zníženie veľkých vaskulárnych príhod. Absolútny prínos však závisí od východiskového rizika. Rovnaké relatívne zníženie poskytne väčší absolútny úžitok pacientovi po infarkte alebo s pokročilou chronickou chorobou obličiek než mladému človeku s nízkym krátkodobým rizikom.</p>
 
 <h2>Lipidový profil: čo treba skutočne vyšetrovať</h2>
 
@@ -91,7 +91,7 @@ $articles[] = [
   <li>stenóza aortálnej chlopne.</li>
 </ul>
 
-<p>Za rizikovú hranicu sa považuje koncentrácia nad 50 mg/dl, približne nad 105 až 125 nmol/l podľa použitej metódy. Jednotky mg/dl a nmol/l nemožno spoľahlivo prevádzať jediným univerzálnym koeficientom, pretože veľkosť izoforiem apolipoproteínu(a) sa medzi ľuďmi líši.</p>
+<p>Za rizikovú hranicu sa považuje koncentrácia nad 50&nbsp;mg/dl, približne nad 105 až 125&nbsp;nmol/l podľa použitej metódy. Jednotky mg/dl a nmol/l nemožno spoľahlivo prevádzať jediným univerzálnym koeficientom, pretože veľkosť izoforiem apolipoproteínu(a) sa medzi ľuďmi líši.</p>
 
 <p>Vysoký Lp(a) je modifikátor rizika, ktorý môže pacienta posunúť do vyššej rizikovej kategórie. Nie je však samostatnou indikáciou na experimentálnu liečbu. <strong>Zatiaľ nebolo preukázané, že zníženie Lp(a) znižuje riziko aterosklerotických príhod.</strong> Prvá výsledková štúdia s cielenou liečbou, Lp(a)HORIZON s pelakarsenom, mala pôvodne priniesť výsledky v prvej polovici roka 2026; k polovici augusta 2026 nebola zverejnená a očakáva sa v druhej polovici roka. Štúdia OCEAN(a) s olpasiranom má skončiť neskôr. Do ich vyhodnotenia zostáva základom intenzívna kontrola LDL cholesterolu a všetkých ostatných rizikových faktorov.</p>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <h2>Hodnotenie celkového kardiovaskulárneho rizika</h2>
 
-<p>Pri zdanlivo zdravých ľuďoch vo veku 40 až 69 rokov sa v európskych odporúčaniach používa SCORE2, vo veku 70 až 89 rokov SCORE2-OP. Tieto modely odhadujú desaťročné riziko fatálnej aj nefatálnej kardiovaskulárnej príhody.</p>
+<p>Pri zdanlivo zdravých ľuďoch vo veku 40 až 69&nbsp;rokov sa v európskych odporúčaniach používa SCORE2, vo veku 70 až 89&nbsp;rokov SCORE2-OP. Tieto modely odhadujú desaťročné riziko fatálnej aj nefatálnej kardiovaskulárnej príhody.</p>
 
 <p>Rozhodovacie hranice nie sú jednotné pre všetkých. Sú <strong>vekovo špecifické</strong>, pretože rovnaké desaťročné riziko znamená u mladšieho človeka podstatne vyššie celoživotné riziko:</p>
 
@@ -128,9 +128,9 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><td>menej ako 50 rokov</td><td>pod 2,5 %</td><td>2,5 až menej ako 7,5 %</td><td>7,5 % a viac</td></tr>
-    <tr><td>50 až 69 rokov</td><td>pod 5 %</td><td>5 až menej ako 10 %</td><td>10 % a viac</td></tr>
-    <tr><td>70 rokov a viac</td><td>pod 7,5 %</td><td>7,5 až menej ako 15 %</td><td>15 % a viac</td></tr>
+    <tr><td>menej ako 50&nbsp;rokov</td><td>pod 2,5 %</td><td>2,5 až menej ako 7,5 %</td><td>7,5 % a viac</td></tr>
+    <tr><td>50 až 69&nbsp;rokov</td><td>pod 5 %</td><td>5 až menej ako 10 %</td><td>10 % a viac</td></tr>
+    <tr><td>70&nbsp;rokov a viac</td><td>pod 7,5 %</td><td>7,5 až menej ako 15 %</td><td>15 % a viac</td></tr>
   </tbody>
 </table>
 </div>
@@ -153,8 +153,8 @@ $articles[] = [
 
 <ul>
   <li>rodinnú anamnézu predčasného kardiovaskulárneho ochorenia,</li>
-  <li>vysoký Lp(a) nad 50 mg/dl,</li>
-  <li>pretrvávajúco zvýšený vysoko senzitívny CRP nad 2 mg/l,</li>
+  <li>vysoký Lp(a) nad 50&nbsp;mg/dl,</li>
+  <li>pretrvávajúco zvýšený vysoko senzitívny CRP nad 2&nbsp;mg/l,</li>
   <li>obezitu a fyzickú neaktivitu,</li>
   <li>chronické zápalové ochorenie,</li>
   <li>infekciu HIV,</li>
@@ -194,17 +194,17 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><td>Veľmi vysoké</td><td>menej ako 1,4 mmol/l a pokles najmenej o 50 %</td></tr>
-    <tr><td>Vysoké</td><td>menej ako 1,8 mmol/l a pokles najmenej o 50 %</td></tr>
-    <tr><td>Stredné</td><td>menej ako 2,6 mmol/l</td></tr>
-    <tr><td>Nízke</td><td>menej ako 3,0 mmol/l</td></tr>
+    <tr><td>Veľmi vysoké</td><td>menej ako 1,4&nbsp;mmol/l a pokles najmenej o 50 %</td></tr>
+    <tr><td>Vysoké</td><td>menej ako 1,8&nbsp;mmol/l a pokles najmenej o 50 %</td></tr>
+    <tr><td>Stredné</td><td>menej ako 2,6&nbsp;mmol/l</td></tr>
+    <tr><td>Nízke</td><td>menej ako 3,0&nbsp;mmol/l</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Pri druhej vaskulárnej príhode do dvoch rokov napriek maximálne tolerovanej liečbe možno u vybraného pacienta zvážiť cieľ pod 1,0 mmol/l.</p>
+<p>Pri druhej vaskulárnej príhode do dvoch rokov napriek maximálne tolerovanej liečbe možno u vybraného pacienta zvážiť cieľ pod 1,0&nbsp;mmol/l.</p>
 
-<p>Percentuálny pokles a dosiahnutá absolútna hodnota vyjadrujú dve odlišné informácie. Pacient s východiskovým LDL cholesterolom 5,0 mmol/l, ktorý dosiahne 2,0 mmol/l, síce dosiahol 60 % pokles, ale pri veľmi vysokom riziku zostáva nad cieľovou hodnotou.</p>
+<p>Percentuálny pokles a dosiahnutá absolútna hodnota vyjadrujú dve odlišné informácie. Pacient s východiskovým LDL cholesterolom 5,0&nbsp;mmol/l, ktorý dosiahne 2,0&nbsp;mmol/l, síce dosiahol 60 % pokles, ale pri veľmi vysokom riziku zostáva nad cieľovou hodnotou.</p>
 
 <h2>„Čím nižšie, tým lepšie“ má klinický kontext</h2>
 
@@ -252,7 +252,7 @@ $articles[] = [
 
 <p>Statíny inhibujú HMG-CoA reduktázu, zvyšujú expresiu hepatálnych LDL receptorov a znižujú koncentráciu LDL cholesterolu. Majú najrozsiahlejší dôkaz o prevencii aterosklerotických príhod.</p>
 
-<p>Vysokointenzívna liečba, napríklad atorvastatínom alebo rosuvastatínom vo vhodnej dávke, má spravidla znížiť LDL cholesterol najmenej o 50 %. Skutočná odpoveď je individuálna, preto treba lipidový profil skontrolovať približne 4 až 6 týždňov po začatí alebo intenzifikácii liečby.</p>
+<p>Vysokointenzívna liečba, napríklad atorvastatínom alebo rosuvastatínom vo vhodnej dávke, má spravidla znížiť LDL cholesterol najmenej o 50 %. Skutočná odpoveď je individuálna, preto treba lipidový profil skontrolovať približne 4 až 6&nbsp;týždňov po začatí alebo intenzifikácii liečby.</p>
 
 <h3>Svalové ťažkosti</h3>
 
@@ -373,7 +373,7 @@ $articles[] = [
 
 <h3>Ikozapentetyl</h3>
 
-<p>U pacientov s vysokým alebo veľmi vysokým rizikom, ktorí užívajú statín a majú pretrvávajúce triacylglyceroly približne v rozmedzí 1,5 až 5,6 mmol/l, teda 135 až 499 mg/dl, sa má zvážiť ikozapentetyl v dávke 2 g dvakrát denne.</p>
+<p>U pacientov s vysokým alebo veľmi vysokým rizikom, ktorí užívajú statín a majú pretrvávajúce triacylglyceroly približne v rozmedzí 1,5 až 5,6&nbsp;mmol/l, teda 135 až 499&nbsp;mg/dl, sa má zvážiť ikozapentetyl v dávke 2&nbsp;g dvakrát denne.</p>
 
 <p>Výsledky prípravku s čistou etylovou formou kyseliny eikozapentaénovej nemožno preniesť na bežné rybie oleje alebo zmesi EPA a DHA. Treba zohľadniť zvýšený výskyt fibrilácie predsiení a krvácania pozorovaný v štúdii REDUCE-IT.</p>
 
@@ -385,14 +385,14 @@ $articles[] = [
 
 <h3>Familiárny chylomikronemický syndróm</h3>
 
-<p>Pri familiárnom chylomikronemickom syndróme s extrémnou hypertriglyceridémiou nad približne 8,5 mmol/l, teda nad 750 mg/dl, možno na zníženie rizika pankreatitídy zvážiť volanesorsen, antisense oligonukleotid namierený proti apolipoproteínu C-III. Ide o liečbu v špecializovanom centre s dôsledným sledovaním počtu trombocytov.</p>
+<p>Pri familiárnom chylomikronemickom syndróme s extrémnou hypertriglyceridémiou nad približne 8,5&nbsp;mmol/l, teda nad 750&nbsp;mg/dl, možno na zníženie rizika pankreatitídy zvážiť volanesorsen, antisense oligonukleotid namierený proti apolipoproteínu C-III. Ide o liečbu v špecializovanom centre s dôsledným sledovaním počtu trombocytov.</p>
 
 <h2>Osobitné situácie zavedené aktualizáciou 2025</h2>
 
 <p>Aktualizácia rozšírila indikácie statínu v dvoch klinicky dôležitých skupinách:</p>
 
 <ul>
-  <li><strong>Infekcia HIV.</strong> U ľudí vo veku najmenej 40 rokov sa v primárnej prevencii odporúča statín bez ohľadu na východiskový LDL cholesterol, s dôsledným zohľadnením interakcií s antiretrovírusovou liečbou.</li>
+  <li><strong>Infekcia HIV.</strong> U ľudí vo veku najmenej 40&nbsp;rokov sa v primárnej prevencii odporúča statín bez ohľadu na východiskový LDL cholesterol, s dôsledným zohľadnením interakcií s antiretrovírusovou liečbou.</li>
   <li><strong>Onkologickí pacienti.</strong> Statín sa odporúča v primárnej prevencii u pacientov s vysokým alebo veľmi vysokým rizikom kardiotoxicity spojenej s antracyklínmi.</li>
 </ul>
 
@@ -427,9 +427,9 @@ $articles[] = [
 
 <h2>Statíny pri nedialyzovanej CKD</h2>
 
-<p>KDIGO odporúča statín alebo kombináciu statínu s ezetimibom väčšine dospelých vo veku najmenej 50 rokov s eGFR pod 60 ml/min/1,73 m², ktorí nie sú liečení chronickou dialýzou ani nemajú transplantovanú obličku.</p>
+<p>KDIGO odporúča statín alebo kombináciu statínu s ezetimibom väčšine dospelých vo veku najmenej 50&nbsp;rokov s eGFR pod 60&nbsp;ml/min/1,73&nbsp;m², ktorí nie sú liečení chronickou dialýzou ani nemajú transplantovanú obličku.</p>
 
-<p>Pri eGFR najmenej 60 ml/min/1,73 m² je statín takisto indikovaný podľa veku a kardiovaskulárneho rizika. U mladších pacientov s chronickou chorobou obličiek sa rozhoduje podľa prítomnosti diabetu, ischemickej choroby srdca, predchádzajúcej ischemickej cievnej mozgovej príhody alebo dostatočne vysokého odhadovaného rizika.</p>
+<p>Pri eGFR najmenej 60&nbsp;ml/min/1,73&nbsp;m² je statín takisto indikovaný podľa veku a kardiovaskulárneho rizika. U mladších pacientov s chronickou chorobou obličiek sa rozhoduje podľa prítomnosti diabetu, ischemickej choroby srdca, predchádzajúcej ischemickej cievnej mozgovej príhody alebo dostatočne vysokého odhadovaného rizika.</p>
 
 <p>KDIGO tradične používa skôr stratégiu „fire and forget“, teda nasadiť a ďalej netitrovať podľa laboratórneho cieľa. Európske kardiologické odporúčania naopak pracujú s rizikovými kategóriami a cieľovými hodnotami LDL cholesterolu. Tieto prístupy nie sú totožné:</p>
 
@@ -629,9 +629,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

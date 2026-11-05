@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: variabilita systolickeho tlaku medzi navstevami a progresia lezii bielej hmoty
+ * Odborný článok: variabilita systolickeho tlaku medzi navstevami a progresia lezii bielej hmoty
  * (zdruzena analyza SPRINT MIND a ACCORD MIND).
  *
  * Spustenie na serveri:
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Hlavné výsledky</h2>
 
-<p>Medián objemu abnormálnej bielej hmoty vzrástol z 1,69 ml na 2,58 ml, teda o 0,43 ml za rok (smerodajná odchýlka 0,84).</p>
+<p>Medián objemu abnormálnej bielej hmoty vzrástol z 1,69&nbsp;ml na 2,58&nbsp;ml, teda o 0,43&nbsp;ml za rok (smerodajná odchýlka 0,84).</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky združenej analýzy" tabindex="0">
 <table>
@@ -91,7 +91,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Účastníci v najvyššom tercile variability mali v surovom ročnom vyjadrení o <strong>0,160 ml za rok</strong> rýchlejšiu progresiu než účastníci v najnižšom tercile. Vzhľadom na priemernú ročnú progresiu 0,43 ml ide o rozdiel zodpovedajúci zhruba tretine typického ročného prírastku – v relatívnom vyjadrení teda nejde o zanedbateľnú hodnotu.</p>
+<p>Účastníci v najvyššom tercile variability mali v surovom ročnom vyjadrení o <strong>0,160&nbsp;ml za rok</strong> rýchlejšiu progresiu než účastníci v najnižšom tercile. Vzhľadom na priemernú ročnú progresiu 0,43&nbsp;ml ide o rozdiel zodpovedajúci zhruba tretine typického ročného prírastku – v relatívnom vyjadrení teda nejde o zanedbateľnú hodnotu.</p>
 
 <div class="pdf-avoid-break">
 <h3>Prečo sú hodnoty β také malé a čo znamená deväť percent</h3>
@@ -212,7 +212,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Blood Pressure Variability Linked to Faster White Matter Lesion Progression.</em> Medscape, 2026. Sekundárny spravodajský zdroj použitý ako východisko, nie ako hlavný dôkaz. <a href="https://www.medscape.com/viewarticle/blood-pressure-variability-linked-faster-white-matter-lesion-2026a1000rji" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Dizajn, zaraďovacie podmienky, počet účastníkov, vek a zastúpenie žien, medián počtu meraní tlaku, vývoj objemu abnormálnej bielej hmoty, hodnoty β s intervalmi spoľahlivosti pre variabilitu aj pre intenzívnu kontrolu tlaku, rozdiel medzi tercilmi (0,160 ml za rok) a mediačný účinok vrátane podielu 9,15 % boli overené priamo proti abstraktu publikácie v časopise Neurology (PubMed, PMID 42430676). Úplný autorský zoznam bol overený cez Crossref a PubMed – ide o sedem autorov, prvým je Wenbo Zhao a posledným Hugh S. Markus; mená neboli dopĺňané odhadom. Podrobnosti o zozname kovariát, o dĺžke intervalu medzi vyšetreniami magnetickou rezonanciou v jednotlivých štúdiách a o počte simulácií pri bootstrappingu publikovaný abstrakt neuvádza, preto sa v texte neuvádzajú. Prepočet rozdielu medzi tercilmi voči priemernej ročnej progresii je vlastný orientačný výpočet.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Dizajn, zaraďovacie podmienky, počet účastníkov, vek a zastúpenie žien, medián počtu meraní tlaku, vývoj objemu abnormálnej bielej hmoty, hodnoty β s intervalmi spoľahlivosti pre variabilitu aj pre intenzívnu kontrolu tlaku, rozdiel medzi tercilmi (0,160&nbsp;ml za rok) a mediačný účinok vrátane podielu 9,15 % boli overené priamo proti abstraktu publikácie v časopise Neurology (PubMed, PMID 42430676). Úplný autorský zoznam bol overený cez Crossref a PubMed – ide o sedem autorov, prvým je Wenbo Zhao a posledným Hugh S. Markus; mená neboli dopĺňané odhadom. Podrobnosti o zozname kovariát, o dĺžke intervalu medzi vyšetreniami magnetickou rezonanciou v jednotlivých štúdiách a o počte simulácií pri bootstrappingu publikovaný abstrakt neuvádza, preto sa v texte neuvádzajú. Prepočet rozdielu medzi tercilmi voči priemernej ročnej progresii je vlastný orientačný výpočet.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Ide o post hoc analýzu s náhradným zobrazovacím ukazovateľom. Variabilita krvného tlaku v nej nebola randomizovanou expozíciou, preto z výsledku nemožno odvodiť, že intervencia zameraná priamo na jej zníženie zlepší klinické výsledky. Cieľové hodnoty krvného tlaku pri chronickej chorobe obličiek treba stanoviť podľa platných odporúčaní KDIGO a individuálneho rizika pacienta.</em></p>
 </div>
@@ -236,9 +236,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

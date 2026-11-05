@@ -7,7 +7,7 @@ declare(strict_types=1);
  * ════════════════════════════════════════════════════════════════════════════
  * Pošle týždenný prehľad (digest) nových článkov všetkým overeným príjemcom
  * (registrovaní používatelia so súhlasom + anonymní odberatelia). Posiela jeden
- * súhrnný e-mail za okno od konca posledného behu (predvolene posledných 7 dní).
+ * súhrnný e-mail za okno od konca posledného behu (predvolene posledných 7 dní).
  *
  * Spúšťa sa cez CRON, typicky raz týždenne, napr. v pondelok o 08:00:
  *   0 8 * * 1  php /cesta/k/nefro/newsletter_weekly_digest.php

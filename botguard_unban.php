@@ -20,7 +20,7 @@ declare(strict_types=1);
  *   php botguard_unban.php --all                  zruší všetky aktívne bany
  *
  * Typický dôvod použitia: vlastný nástroj (napr. generátor e-booku) prekročí
- * burst limit 600 požiadaviek / 15 minút a zabanuje celú odchádzajúcu IP —
+ * burst limit 600 požiadaviek / 15 minút a zabanuje celú odchádzajúcu IP —
  * teda aj prehliadač autora, ktorý ide z tej istej adresy.
  */
 

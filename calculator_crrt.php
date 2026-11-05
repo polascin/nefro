@@ -57,20 +57,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($weight === null) {
             $errors[] = "Hmotnosť musí byť kladné číslo (kg).";
         } elseif ($weight < 20.0 || $weight > 300.0) {
-            $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
+            $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
         }
 
         $dialysate = crrtParseNonNeg($form["dialysate_ml_h"]);
         if ($dialysate === null || $dialysate > 10000.0) {
-            $errors[] = "Prietok dialyzátu musí byť 0 až 10 000 mL/h.";
+            $errors[] = "Prietok dialyzátu musí byť 0 až 10 000 mL/h.";
         }
         $replacement = crrtParseNonNeg($form["replacement_ml_h"]);
         if ($replacement === null || $replacement > 10000.0) {
-            $errors[] = "Prietok substitučného roztoku musí byť 0 až 10 000 mL/h.";
+            $errors[] = "Prietok substitučného roztoku musí byť 0 až 10 000 mL/h.";
         }
         $netUf = crrtParseNonNeg($form["net_uf_ml_h"]);
         if ($netUf === null || $netUf > 2000.0) {
-            $errors[] = "Čistá ultrafiltrácia musí byť 0 až 2 000 mL/h.";
+            $errors[] = "Čistá ultrafiltrácia musí byť 0 až 2 000 mL/h.";
         }
         if ($dialysate !== null && $replacement !== null
             && $dialysate + $replacement <= 0.0) {

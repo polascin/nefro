@@ -31,7 +31,7 @@ $articles[] = [
 </figure>
 
 <h2>Čo prinášajú údaje zo stredného Poľska</h2>
-<p>Podnetom na diskusiu je editorial Stompóra a Zbrzeźniak-Suszczewiczovej k regionálnej štúdii Nowickej a spoluautorov. Autori analyzovali 1 662 prvých biopsií vlastných obličiek u dospelých obyvateľov Lodžského vojvodstva z rokov 2011 až 2023. Frekvencia biopsií vzrástla zo 43,9 na 102,2 na milión obyvateľov, s prechodným poklesom počas pandémie COVID-19. Zvyšoval sa podiel starších pacientov. [1, 2]</p>
+<p>Podnetom na diskusiu je editorial Stompóra a Zbrzeźniak-Suszczewiczovej k regionálnej štúdii Nowickej a spoluautorov. Autori analyzovali 1&nbsp;662 prvých biopsií vlastných obličiek u dospelých obyvateľov Lodžského vojvodstva z rokov 2011 až 2023. Frekvencia biopsií vzrástla zo 43,9 na 102,2 na milión obyvateľov, s prechodným poklesom počas pandémie COVID-19. Zvyšoval sa podiel starších pacientov. [1, 2]</p>
 <p>Najčastejšou diagnózou bola IgA nefropatia (17,4 %), nasledovali fokálna segmentálna glomeruloskleróza (16,3 %), membránová nefropatia (9,4 %) a diabetické ochorenie obličiek (8,0 %). Hodnota 11,7 % uvádzaná v editoriale pre diabetické ochorenie obličiek sa týka najstaršej vekovej skupiny, nie celého súboru. Arteriolonefroskleróza predstavovala 3,7 % všetkých biopsií. [1, 2]</p>
 <p><strong>Ide o spektrum chorôb medzi vybranými biopsiovanými pacientmi, nie o prevalenciu v celej populácii.</strong> Výsledky závisia od indikácií, dostupnosti výkonu a charakteristík odosielaných pacientov. Samotný nárast počtu biopsií nedokazuje zlepšenie klinických výsledkov. Štúdia poskytuje epidemiologický a organizačný pohľad; neporovnáva randomizovane stratégiu s biopsiou a bez nej. [2]</p>
 

@@ -43,11 +43,11 @@ $articles[] = [
 
 <h2>Dizajn štúdie TELIGAN a populácia</h2>
 
-<p>Išlo o <strong>multicentrickú, dvojito zaslepenú, randomizovanú a placebom kontrolovanú štúdiu fázy 3</strong>. Zaradení boli dospelí s <strong>biopticky potvrdenou IgA nefropatiou</strong> a <strong>perzistujúcou proteinúriou najmenej 1,0 g denne</strong> napriek primeranej podpornej liečbe.</p>
+<p>Išlo o <strong>multicentrickú, dvojito zaslepenú, randomizovanú a placebom kontrolovanú štúdiu fázy 3</strong>. Zaradení boli dospelí s <strong>biopticky potvrdenou IgA nefropatiou</strong> a <strong>perzistujúcou proteinúriou najmenej 1,0&nbsp;g denne</strong> napriek primeranej podpornej liečbe.</p>
 
 <ul>
   <li>randomizácia v pomere 1 : 1,</li>
-  <li>intervencia: <strong>telitacicept 240 mg subkutánne raz týždenne</strong>,</li>
+  <li>intervencia: <strong>telitacicept 240&nbsp;mg subkutánne raz týždenne</strong>,</li>
   <li>kontrola: zodpovedajúce placebo,</li>
   <li>celkovo <strong>318 pacientov</strong> (159 v každom ramene),</li>
   <li>hodnotenie v interim bode: <strong>po 39 týždňoch</strong>.</li>

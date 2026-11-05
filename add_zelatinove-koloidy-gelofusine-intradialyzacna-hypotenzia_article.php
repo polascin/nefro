@@ -39,9 +39,9 @@ $articles[] = [
 
 <h2>Čo je Gelofusine a kam patrí</h2>
 
-<p>Gelofusine je koloidný roztok obsahujúci 4 % sukcinylovanej želatíny, teda 40 g modifikovanej želatíny v jednom litri, spolu so 7,01 g chloridu sodného. Priemerná molekulová hmotnosť je približne 26 500 daltonov. Označuje sa ako syntetický koloid alebo náhrada objemu plazmy. Želatínová zložka má živočíšny pôvod a následne sa chemicky modifikuje; pojem „syntetický“ preto neznamená, že ide o látku bez živočíšneho pôvodu. [3]</p>
+<p>Gelofusine je koloidný roztok obsahujúci 4 % sukcinylovanej želatíny, teda 40&nbsp;g modifikovanej želatíny v jednom litri, spolu so 7,01&nbsp;g chloridu sodného. Priemerná molekulová hmotnosť je približne 26&nbsp;500 daltonov. Označuje sa ako syntetický koloid alebo náhrada objemu plazmy. Želatínová zložka má živočíšny pôvod a následne sa chemicky modifikuje; pojem „syntetický“ preto neznamená, že ide o látku bez živočíšneho pôvodu. [3]</p>
 
-<p>Dôležitý je elektrolytový nosič: roztok obsahuje <strong>154 mmol/l sodíka a 120 mmol/l chloridov</strong>, teda sodíkovú záťaž porovnateľnú s 0,9 % roztokom NaCl. Teoretická osmolarita je 274 mosm/l. [3] Predstava, že koloid šetrí pacienta pred sodíkom, teda neobstojí: na mililiter prináša rovnako sodíka ako fyziologický roztok.</p>
+<p>Dôležitý je elektrolytový nosič: roztok obsahuje <strong>154&nbsp;mmol/l sodíka a 120&nbsp;mmol/l chloridov</strong>, teda sodíkovú záťaž porovnateľnú s 0,9 % roztokom NaCl. Teoretická osmolarita je 274 mosm/l. [3] Predstava, že koloid šetrí pacienta pred sodíkom, teda neobstojí: na mililiter prináša rovnako sodíka ako fyziologický roztok.</p>
 
 <p>Koloidné roztoky nie sú jednotnou farmakologickou skupinou z hľadiska bezpečnosti a klinických výsledkov. Želatíny, ľudský albumín, dextrány a hydroxyetylškroby sa odlišujú pôvodom, štruktúrou, distribúciou, elimináciou aj nežiaducimi účinkami. Výsledky získané s jedným roztokom nemožno automaticky prenášať na ostatné.</p>
 
@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Práve tu sa fyzikálna úvaha rozchádza s údajmi. Systematický prehľad a metaanalýza Moellerovej a spoluautorov zistili, že <strong>17 až 31 % podanej želatíny sa zachytáva extravaskulárne</strong>. Priemerný pomer objemu kryštaloidu k objemu koloidu potrebného na dosiahnutie rovnakého hemodynamického cieľa bol pritom len <strong>1,4</strong> – nie tri ku jednej, ako sa niekedy predpokladá. [1]</p>
 
-<p>Z toho vyplývajú dva praktické závery. Po prvé, úspora objemu oproti kryštaloidu je malá a pri sodíkovej záťaži 154 mmol/l sa takmer celkom stráca. Po druhé, podstatná časť podanej želatíny skončí v interstíciu, odkiaľ sa pri ďalšej ultrafiltrácii odstraňuje pomaly.</p>
+<p>Z toho vyplývajú dva praktické závery. Po prvé, úspora objemu oproti kryštaloidu je malá a pri sodíkovej záťaži 154&nbsp;mmol/l sa takmer celkom stráca. Po druhé, podstatná časť podanej želatíny skončí v interstíciu, odkiaľ sa pri ďalšej ultrafiltrácii odstraňuje pomaly.</p>
 
 <p>Účinok navyše závisí od priepustnosti kapilár, funkcie srdca, východiskového objemového stavu a pokračujúcej ultrafiltrácie. Zo zloženia roztoku preto nemožno vypočítať univerzálny pomer, v ktorom nahradí kryštaloid u každého dialyzovaného pacienta.</p>
 
@@ -88,13 +88,13 @@ $articles[] = [
 
 <p>Želatínu nemožno zaradiť do univerzálneho algoritmu ako povinný „druhý krok“ po neúčinnosti fyziologického roztoku. Európske odporúčania síce pripúšťajú zvážiť koloidný roztok pri neodpovedi na izotonický kryštaloid, nejde však o automatický krok a od ich vydania pribudli údaje o bezpečnosti želatín. [4] Prípadné použitie musí vychádzať z individuálneho posúdenia očakávaného prínosu a rizík, z aktuálneho SPC a z postupu pracoviska.</p>
 
-<p>Dávkovanie v rozsahu 100 až 250 ml nemožno bez konkrétneho overeného zdroja označiť za štandardnú dávku pri IDH. Registračná dokumentácia uvádza pre dospelých úvodný rozsah 500 až 1 000 ml pri schválených indikáciách, ktorými sú hypovolémia a šok, prevencia hypotenzie počas anestézie a náhrada objemu pri mimotelovom obehu. Liečba IDH medzi nimi uvedená nie je. [3]</p>
+<p>Dávkovanie v rozsahu 100 až 250&nbsp;ml nemožno bez konkrétneho overeného zdroja označiť za štandardnú dávku pri IDH. Registračná dokumentácia uvádza pre dospelých úvodný rozsah 500 až 1&nbsp;000&nbsp;ml pri schválených indikáciách, ktorými sú hypovolémia a šok, prevencia hypotenzie počas anestézie a náhrada objemu pri mimotelovom obehu. Liečba IDH medzi nimi uvedená nie je. [3]</p>
 
 <h2>Čo možno povedať o dôkazoch</h2>
 
 <h3>Jediná dohľadaná štúdia pri dialyzačnej hypotenzii</h3>
 
-<p>Pilotná prospektívna skrížená štúdia Rostokera a spoluautorov z roku 2011 hodnotila rutinné infúzie 200 ml 20 % albumínu oproti 200 ml 4 % želatíny u desiatich pacientov s refraktérnou intradialyzačnou hypotenziou, ktorí nereagovali na bežné preventívne opatrenia. Sledovanie trvalo 20 týždňov. [2]</p>
+<p>Pilotná prospektívna skrížená štúdia Rostokera a spoluautorov z roku 2011 hodnotila rutinné infúzie 200&nbsp;ml 20 % albumínu oproti 200&nbsp;ml 4 % želatíny u desiatich pacientov s refraktérnou intradialyzačnou hypotenziou, ktorí nereagovali na bežné preventívne opatrenia. Sledovanie trvalo 20&nbsp;týždňov. [2]</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky skríženej štúdie albumínu a želatíny pri refraktérnej dialyzačnej hypotenzii" tabindex="0">
 <table>
@@ -221,7 +221,7 @@ $articles[] = [
 
 <p>Alergia na mäso cicavcov nie je len dôvodom na zvýšenú pozornosť. Protilátky triedy IgE proti galaktóze-α-1,3-galaktóze (α-gal) reagujú aj so želatínami cicavčieho pôvodu a opísaná je anafylaxia na sukcinylovanú želatínu u pacientky s alergiou na mäso. [6] Registračná dokumentácia Gelofusine preto uvádza <strong>precitlivenosť na α-gal a známu alergiu na červené mäso priamo medzi kontraindikáciami</strong>. [3] Cielená anamnéza predchádzajúcich reakcií na želatínu a alergie na mäso je teda povinnou súčasťou rozvahy, nie voliteľným doplnkom.</p>
 
-<p>Dokumentácia zároveň vyžaduje <strong>podať prvých 20 ml pomaly</strong>, aby bolo možné včas zachytiť alergickú reakciu. [3] Táto požiadavka je sama osebe argumentom proti predstave želatíny ako rýchleho záchranného bolusu pri náhlej hypotenzii.</p>
+<p>Dokumentácia zároveň vyžaduje <strong>podať prvých 20&nbsp;ml pomaly</strong>, aby bolo možné včas zachytiť alergickú reakciu. [3] Táto požiadavka je sama osebe argumentom proti predstave želatíny ako rýchleho záchranného bolusu pri náhlej hypotenzii.</p>
 
 <p>Pri podozrení na anafylaxiu treba podávanie okamžite prerušiť a začať urgentnú liečbu podľa platného postupu. Dostupnosť adrenalínu a pripravenosť personálu sú podstatnejšie než neurčitá formulácia „pripraviť antianafylaktický postup“.</p>
 
@@ -241,7 +241,7 @@ $articles[] = [
 
 <h3>Eliminácia pri zlyhaní obličiek</h3>
 
-<p>Želatínové roztoky obsahujú molekuly rôznej veľkosti. Údaj o priemernej molekulovej hmotnosti 26 500 daltonov nie je dostatočný na určenie ich správania pri hemodialýze.</p>
+<p>Želatínové roztoky obsahujú molekuly rôznej veľkosti. Údaj o priemernej molekulovej hmotnosti 26&nbsp;500 daltonov nie je dostatočný na určenie ich správania pri hemodialýze.</p>
 
 <p>Dialyzačné odstraňovanie závisí od vlastností membrány, distribúcie veľkosti molekúl a ďalších fyzikálno-chemických charakteristík. Bez konkrétnych údajov nemožno tvrdiť, že sa želatína pri bežnej hemodialýze klinicky významne odstráni. Registračná dokumentácia odporúča pri závažnej poruche funkcie obličiek opatrnosť. [3]</p>
 
@@ -269,7 +269,7 @@ $articles[] = [
 
 <p>Želatínové koloidy môžu byť predmetom individuálneho rozhodovania o objemovej podpore, ale ich koloidné vlastnosti nepredstavujú dôkaz nadradenosti pri intradialyzačnej hypotenzii. Údaje hovoria skôr opačne: podstatná časť dávky opúšťa cievne riečisko, úspora objemu oproti kryštaloidu je malá, sodíková záťaž je rovnaká ako pri fyziologickom roztoku a riziko anafylaxie je zvýšené.</p>
 
-<p>Želatínu preto nemožno odporučiť ako automatickú záchrannú náhradu po neúčinnosti fyziologického roztoku. Požiadavka podať prvých 20 ml pomaly je navyše v priamom rozpore s predstavou rýchleho záchranného bolusu.</p>
+<p>Želatínu preto nemožno odporučiť ako automatickú záchrannú náhradu po neúčinnosti fyziologického roztoku. Požiadavka podať prvých 20&nbsp;ml pomaly je navyše v priamom rozpore s predstavou rýchleho záchranného bolusu.</p>
 
 <p>Základom postupu zostáva rozpoznanie príčiny hypotenzie, prerušenie neprimeranej ultrafiltrácie a opatrná, priebežne prehodnocovaná liečba. Pri opakovaných epizódach má prednosť úprava dialyzačnej stratégie pred opakovaným podávaním objemových náhrad.</p>
 
@@ -283,7 +283,7 @@ $articles[] = [
 
 <p><em>2. Rostoker G, Griuncelli M, Loridon C, Bourlet T, Illouz E, Benmaadi A. A pilot study of routine colloid infusion in hypotension-prone dialysis patients unresponsive to preventive measures. Journal of Nephrology. 2011;24(2):208–217. <a href="https://doi.org/10.5301/jn.2011.6367" target="_blank" rel="noopener noreferrer">DOI: 10.5301/jn.2011.6367</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/21360469/" target="_blank" rel="noopener noreferrer">PubMed, PMID 21360469</a>.</em></p>
 
-<p><em>3. Súhrn charakteristických vlastností lieku Gelofusine 40 mg/ml + 7,01 mg/ml infúzny roztok (B. Braun Melsungen AG), časti 4.1 až 4.4 a 6.1. Údaje o zložení, indikáciách, kontraindikáciách, dávkovaní a upozorneniach boli overené v znení dostupnom na liekových databázach (<a href="https://www.adc.sk/databazy/produkty/pil/b-braun-gelofusine-510698.html" target="_blank" rel="noopener noreferrer">ADC.sk</a>). Pred použitím je potrebné overiť aktuálne platné znenie SPC konkrétneho prípravku.</em></p>
+<p><em>3. Súhrn charakteristických vlastností lieku Gelofusine 40&nbsp;mg/ml + 7,01&nbsp;mg/ml infúzny roztok (B. Braun Melsungen AG), časti 4.1 až 4.4 a 6.1. Údaje o zložení, indikáciách, kontraindikáciách, dávkovaní a upozorneniach boli overené v znení dostupnom na liekových databázach (<a href="https://www.adc.sk/databazy/produkty/pil/b-braun-gelofusine-510698.html" target="_blank" rel="noopener noreferrer">ADC.sk</a>). Pred použitím je potrebné overiť aktuálne platné znenie SPC konkrétneho prípravku.</em></p>
 
 <p><em>4. Kanbay M, Ertuglu LA, Afsar B, Ozdogan E, Siriopol D, Covic A, Basile C, Ortiz A. An update review of intradialytic hypotension: concept, risk factors, clinical implications and management. Clinical Kidney Journal. 2020;13(6):981–993. <a href="https://doi.org/10.1093/ckj/sfaa078" target="_blank" rel="noopener noreferrer">DOI: 10.1093/ckj/sfaa078</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/33391741/" target="_blank" rel="noopener noreferrer">PubMed, PMID 33391741</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7769545/" target="_blank" rel="noopener noreferrer">voľne dostupný plný text</a>.</em></p>
 

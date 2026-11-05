@@ -2,7 +2,7 @@
 
 /**
  * add_kreatin-ochorenia-obliciek-bezpecnost-benefit_article.php
- * Kriticka klinicka synteza o kreatine pri ochoreniach obliciek.
+ * Kriticka klinická synteza o kreatine pri ochoreniach obličiek.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -44,7 +44,7 @@ $articles[] = [
 
 <h2>Čo ukazujú kontrolované štúdie</h2>
 
-<p>Nová metaanalýza randomizovaných štúdií Tsiarasa a spoluautorov zahrnula 19 randomizovaných kontrolovaných štúdií a jednu dvojito zaslepenú randomizovanú krížovú štúdiu. Kreatín bol spojený s priemerným zvýšením sérového kreatinínu o 0,13 mg/dl (95 % interval spoľahlivosti 0,07–0,18). Medzi skupinami sa však nepreukázal štatisticky významný rozdiel v močovine ani v eGFR.</p>
+<p>Nová metaanalýza randomizovaných štúdií Tsiarasa a spoluautorov zahrnula 19 randomizovaných kontrolovaných štúdií a jednu dvojito zaslepenú randomizovanú krížovú štúdiu. Kreatín bol spojený s priemerným zvýšením sérového kreatinínu o 0,13&nbsp;mg/dl (95 % interval spoľahlivosti 0,07–0,18). Medzi skupinami sa však nepreukázal štatisticky významný rozdiel v močovine ani v eGFR.</p>
 
 <p>Tento výsledok je upokojujúci, ale nie definitívny. eGFR bola hodnotená iba v ôsmich zahrnutých štúdiách a môže byť sama odvodená od kreatinínu, teda od markera ovplyvneného intervenciou. Autori navyše upozorňujú na potrebu randomizovaných štúdií dlhších ako jeden rok. Neprítomnosť štatisticky významného rozdielu preto nie je dôkazom nulového rizika vo všetkých populáciách.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Zdravé obličky a CKD sú dve rozdielne otázky</h2>
 
-<p>Najpresvedčivejšie bezpečnostné údaje sa týkajú kreatínmonohydrátu u osôb bez známeho ochorenia obličiek. Štúdie často používajú udržiavacie dávky približne 3–5 g denne; niektoré protokoly začínajú krátkou nasycovacou fázou. Tieto režimy však nemožno bez ďalších údajov považovať za overené dávkovanie pre CKD.</p>
+<p>Najpresvedčivejšie bezpečnostné údaje sa týkajú kreatínmonohydrátu u osôb bez známeho ochorenia obličiek. Štúdie často používajú udržiavacie dávky približne 3–5&nbsp;g denne; niektoré protokoly začínajú krátkou nasycovacou fázou. Tieto režimy však nemožno bez ďalších údajov považovať za overené dávkovanie pre CKD.</p>
 
 <p>Pri etablovanej CKD zostávajú podstatné medzery:</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <p>Pacienti s CKD majú vysoké riziko sarkopénie, krehkosti a zníženej fyzickej výkonnosti. Kreatín má v kombinácii s odporovým tréningom biologicky aj klinicky plauzibilný potenciál podporiť svalovú funkciu. Dôkazy zo všeobecnej populácie však nie sú náhradou za štúdie u pacientov s CKD, ktorí majú odlišnú homeostázu, komorbidity, farmakoterapiu aj nutričné obmedzenia.</p>
 
-<p>V exploratívnej dvojito zaslepenej štúdii u hemodialyzovaných pacientov sa počas jedného roka podávalo 5 g kreatínmonohydrátu denne. V kreatínovej skupine sa zvýšila beztuková hmota a index kostrového svalstva hodnotené bioimpedanciou, skóre malnutrície a zápalu sa však nezlepšilo. Súčasne vzrástla celková aj intracelulárna voda. Časť zdanlivého zlepšenia telesného zloženia preto mohla súvisieť s hydratáciou a výsledok nemožno interpretovať ako definitívny dôkaz nárastu kontraktilnej svalovej hmoty alebo klinického prínosu.</p>
+<p>V exploratívnej dvojito zaslepenej štúdii u hemodialyzovaných pacientov sa počas jedného roka podávalo 5&nbsp;g kreatínmonohydrátu denne. V kreatínovej skupine sa zvýšila beztuková hmota a index kostrového svalstva hodnotené bioimpedanciou, skóre malnutrície a zápalu sa však nezlepšilo. Súčasne vzrástla celková aj intracelulárna voda. Časť zdanlivého zlepšenia telesného zloženia preto mohla súvisieť s hydratáciou a výsledok nemožno interpretovať ako definitívny dôkaz nárastu kontraktilnej svalovej hmoty alebo klinického prínosu.</p>
 
 <p>Úvahy o neuroprotekcii, protizápalovom účinku, oxidačnom strese a črevnej bariére sú zaujímavé, ale pri CKD zostávajú prevažne mechanistické alebo extrapolované z iných populácií. Zatiaľ neposkytujú podklad na rutinnú preskripciu kreatínu na kognitívne ťažkosti, zápal alebo dysbiózu pri CKD.</p>
 

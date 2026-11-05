@@ -58,22 +58,22 @@ $articles[] = [
   <li>Veľkosť zhoršenia závisela od dávky, od času od užitia a od toho, ktorá schopnosť sa testovala – a to osobitne pri perorálnom (243 odhadov účinku) aj inhalačnom (481 odhadov) podaní.</li>
 </ul>
 
-<p>Praktický výstup je nezvyčajne konkrétny. Model predpovedal, že väčšina s jazdou súvisiacich kognitívnych schopností sa <strong>upraví približne do 5 hodín</strong> (a takmer všetky približne do 7 hodín) po inhalácii <strong>20 mg Δ<sup>9</sup>-THC</strong>; po perorálnom užití môže zhoršenie trvať <strong>dlhšie</strong>. Autori z toho odvodzujú odporúčanie, ktoré sa dá povedať pacientovi doslova:</p>
+<p>Praktický výstup je nezvyčajne konkrétny. Model predpovedal, že väčšina s jazdou súvisiacich kognitívnych schopností sa <strong>upraví približne do 5&nbsp;hodín</strong> (a takmer všetky približne do 7&nbsp;hodín) po inhalácii <strong>20&nbsp;mg Δ<sup>9</sup>-THC</strong>; po perorálnom užití môže zhoršenie trvať <strong>dlhšie</strong>. Autori z toho odvodzujú odporúčanie, ktoré sa dá povedať pacientovi doslova:</p>
 
 <blockquote>
-<p>Po inhalačnom užití kanabisu by mal človek počkať <strong>najmenej 5 hodín</strong>, kým vykoná činnosť citlivú na bezpečnosť.</p>
+<p>Po inhalačnom užití kanabisu by mal človek počkať <strong>najmenej 5&nbsp;hodín</strong>, kým vykoná činnosť citlivú na bezpečnosť.</p>
 </blockquote>
 
 <h2>A čo konkrétne starší vodiči</h2>
 
-<p>Laboratórnych štúdií u ľudí nad 65 rokov bolo donedávna veľmi málo. Štúdia publikovaná v <em>JAMA Network Open</em> (2024) túto medzeru čiastočne zaplnila.</p>
+<p>Laboratórnych štúdií u ľudí nad 65&nbsp;rokov bolo donedávna veľmi málo. Štúdia publikovaná v <em>JAMA Network Open</em> (2024) túto medzeru čiastočne zaplnila.</p>
 
-<p><strong>Dizajn:</strong> 31 <em>pravidelných</em> užívateľov kanabisu (21 mužov, priemerný vek 68,7 roka; SD 3,5) jazdilo na simulátore pred fajčením, <strong>30 minút</strong> po ňom a <strong>180 minút</strong> po ňom – a v kontrolnej podmienke po oddychu, s vyváženým poradím. Účastníci fajčili <em>vlastný preferovaný legálny</em> kanabis; väčšina zvolila prípravok s prevahou THC s priemerným obsahom <strong>18,74 % THC</strong> (SD 6,12) a 1,46 % kanabidiolu (SD 3,37). Štúdia prebehla v Toronte od marca do novembra 2022.</p>
+<p><strong>Dizajn:</strong> 31 <em>pravidelných</em> užívateľov kanabisu (21 mužov, priemerný vek 68,7 roka; SD 3,5) jazdilo na simulátore pred fajčením, <strong>30&nbsp;minút</strong> po ňom a <strong>180&nbsp;minút</strong> po ňom – a v kontrolnej podmienke po oddychu, s vyváženým poradím. Účastníci fajčili <em>vlastný preferovaný legálny</em> kanabis; väčšina zvolila prípravok s prevahou THC s priemerným obsahom <strong>18,74 % THC</strong> (SD 6,12) a 1,46 % kanabidiolu (SD 3,37). Štúdia prebehla v Toronte od marca do novembra 2022.</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky simulátorovej štúdie u vodičov nad 65 rokov" tabindex="0">
 <table>
   <thead>
-    <tr><th scope="col">Ukazovateľ</th><th scope="col">30 minút po fajčení</th><th scope="col">180 minút po fajčení</th></tr>
+    <tr><th scope="col">Ukazovateľ</th><th scope="col">30&nbsp;minút po fajčení</th><th scope="col">180&nbsp;minút po fajčení</th></tr>
   </thead>
   <tbody>
     <tr><th scope="row">Kolísanie v jazdnom pruhu (SDLP) – jednoduchá úloha</th><td><strong>zvýšené</strong> (veľkosť účinku 0,30)</td><td>bez rozdielu</td></tr>
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h3>2) Objektívne zhoršenie odznelo skôr než subjektívny pocit</h3>
 
-<p>V 180. minúte už objektívne ukazovatele rozdiel nevykazovali – ale <strong>subjektívne hodnotenia účinku zostali zvýšené 5 hodín</strong> a účastníci uvádzali, že 3 hodiny po fajčení sú <em>menej ochotní</em> šoférovať. Je to zaujímavá disociácia a v poradenstve užitočná: pacient, ktorý „to na sebe ešte cíti“, má na svoj pocit dať – hoci v tomto konkrétnom experimente boli meradlá už v norme.</p>
+<p>V 180. minúte už objektívne ukazovatele rozdiel nevykazovali – ale <strong>subjektívne hodnotenia účinku zostali zvýšené 5&nbsp;hodín</strong> a účastníci uvádzali, že 3&nbsp;hodiny po fajčení sú <em>menej ochotní</em> šoférovať. Je to zaujímavá disociácia a v poradenstve užitočná: pacient, ktorý „to na sebe ešte cíti“, má na svoj pocit dať – hoci v tomto konkrétnom experimente boli meradlá už v norme.</p>
 
 <h3>3) Vzorka bola taká, že výsledok skôr podhodnocuje</h3>
 
@@ -137,7 +137,7 @@ $articles[] = [
 <p>Tri vety, ktoré sú podložené dátami a dajú sa povedať bez moralizovania:</p>
 
 <ol>
-  <li><strong>„Po užití kanabisu nešoférujte.“</strong> Pri inhalačnom užití je rozumné počkať <strong>najmenej 5 hodín</strong>; po užití v jedle alebo nápoji môže zhoršenie trvať dlhšie.</li>
+  <li><strong>„Po užití kanabisu nešoférujte.“</strong> Pri inhalačnom užití je rozumné počkať <strong>najmenej 5&nbsp;hodín</strong>; po užití v jedle alebo nápoji môže zhoršenie trvať dlhšie.</li>
   <li><strong>„To, koľko máte látky v krvi, nehovorí o tom, ako ste zhoršený.“</strong> Pri kanabise neexistuje obdoba „bezpečnej hladiny“ ako pri alkohole.</li>
   <li><strong>„Riziko sa sčítava.“</strong> Pri súčasnom užívaní liekov tlmiacich CNS je zhoršenie väčšie, než by zodpovedalo samotnému kanabisu – a pri zníženej funkcii obličiek môžu byť tieto lieky účinnejšie a pôsobiť dlhšie.</li>
 </ol>
@@ -152,7 +152,7 @@ $articles[] = [
   <li><strong>Nehovoria, aké je riziko skutočnej dopravnej nehody u staršieho vodiča.</strong> Ide o simulátorové a laboratórne výsledky, nie o epidemiológiu kolízií v tejto vekovej skupine.</li>
   <li><strong>Nehovoria nič o kombinácii kanabisu s konkrétnymi liekmi.</strong> Interakčný efekt nebol v citovaných štúdiách meraný – tvrdenie o kumulácii vychádza z farmakologickej úvahy a z literatúry o liekoch a jazde, nie z priameho experimentu.</li>
   <li><strong>Nehovoria nič o pacientoch s CKD.</strong> Renálna časť tohto článku je extrapoláciou známych farmakokinetických princípov, nie výsledkom štúdie u tejto populácie. Uvádzame ju ako dôvod na opatrnosť, nie ako dokázanú asociáciu.</li>
-  <li><strong>Hodnota „20 mg inhalovaného Δ<sup>9</sup>-THC“ je modelový vstup</strong>, nie dávka, ktorú pacient pozná. Reálne množstvo účinnej látky v tom, čo užíva, býva neznáme – čo je samostatný dôvod na konzervatívnu radu.</li>
+  <li><strong>Hodnota „20&nbsp;mg inhalovaného Δ<sup>9</sup>-THC“ je modelový vstup</strong>, nie dávka, ktorú pacient pozná. Reálne množstvo účinnej látky v tom, čo užíva, býva neznáme – čo je samostatný dôvod na konzervatívnu radu.</li>
 </ul>
 
 <h2>Záver</h2>

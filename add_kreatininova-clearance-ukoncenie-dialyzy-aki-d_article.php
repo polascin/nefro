@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Odkiaľ údaje pochádzajú</h2>
 
-<p>LIBERATE-D bola multicentrická, nezaslepená randomizovaná štúdia superiority, ktorá v rokoch 2020 až 2025 na štyroch pracoviskách v USA zaradila 221 pacientov s AKI-D. Podmienkou zaradenia bola východisková eGFR nad 15 ml/min/1,73 m², už začatá náhrada funkcie obličiek, hemodynamická stabilita a plánovaná intermitentná hemodialýza. V intervenčnom ramene sa dialýza vykonávala <strong>len pri splnení vopred definovaných metabolických alebo klinických indikácií</strong>, v kontrolnom ramene trikrát týždenne až do dosiahnutia kritérií diurézy alebo kreatinínovej clearance.</p>
+<p>LIBERATE-D bola multicentrická, nezaslepená randomizovaná štúdia superiority, ktorá v rokoch 2020 až 2025 na štyroch pracoviskách v USA zaradila 221 pacientov s AKI-D. Podmienkou zaradenia bola východisková eGFR nad 15&nbsp;ml/min/1,73&nbsp;m², už začatá náhrada funkcie obličiek, hemodynamická stabilita a plánovaná intermitentná hemodialýza. V intervenčnom ramene sa dialýza vykonávala <strong>len pri splnení vopred definovaných metabolických alebo klinických indikácií</strong>, v kontrolnom ramene trikrát týždenne až do dosiahnutia kritérií diurézy alebo kreatinínovej clearance.</p>
 
 <p>Konzervatívna stratégia viedla k obnove funkcie obličiek pri prepustení u 70 zo 109 pacientov (64 %) oproti 55 zo 109 (50 %) pri obvyklom režime (rozdiel 13,8 %; 95 % interval spoľahlivosti 0,8–26,8 %; p = 0,04). Po vopred špecifikovanej adjustácii však výsledok stratil štatistickú významnosť (OR 1,56; 95 % IS 0,86–2,84; p = 0,15), preto samotní autori odporúčajú overenie na väčšej populácii.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <h2>Východiskové hodnoty: nízke, ako sa očakávalo</h2>
 
-<p>Medián kreatinínovej clearance bol 7,1 ml/min (medzikvartilové rozpätie 3,1–15,9 ml/min), medián diurézy 930 ml/deň (medzikvartilové rozpätie 471–1 786 ml/deň). Dialýza bola v priebehu siedmich dní po zbere potrebná v 49 % prípadov.</p>
+<p>Medián kreatinínovej clearance bol 7,1&nbsp;ml/min (medzikvartilové rozpätie 3,1–15,9&nbsp;ml/min), medián diurézy 930&nbsp;ml/deň (medzikvartilové rozpätie 471–1&nbsp;786&nbsp;ml/deň). Dialýza bola v priebehu siedmich dní po zbere potrebná v 49 % prípadov.</p>
 
 <h2>Rozlišovacia schopnosť jednotlivých ukazovateľov</h2>
 
@@ -64,36 +64,36 @@ $articles[] = [
 
 <p>Kreatinínová clearance mala signifikantne vyššiu rozlišovaciu schopnosť než diuréza. eGFR bola signifikantne horšia než kreatinínová clearance aj než diuréza. Doplnenie ureovej clearance ku kreatinínovej clearance prognostickú výpovednú hodnotu <strong>nezlepšilo</strong> – meranie močoviny navyše teda nemá praktické opodstatnenie.</p>
 
-<p>Šanca na potrebu dialýzy klesala o 18 % na každý 1 ml/min kreatinínovej clearance a o 9 % na každých ďalších 100 ml diurézy.</p>
+<p>Šanca na potrebu dialýzy klesala o 18 % na každý 1&nbsp;ml/min kreatinínovej clearance a o 9 % na každých ďalších 100&nbsp;ml diurézy.</p>
 
 <h2>Podiel pacientov bez dialýzy podľa prahových hodnôt</h2>
 
 <div class="table-responsive" role="region" aria-label="Podiel zberov, po ktorých pacient nepotreboval dialýzu nasledujúcich sedem dní" tabindex="0">
 <table>
   <thead>
-    <tr><th scope="col">Pásmo</th><th scope="col">Bez dialýzy nasledujúcich 7 dní</th></tr>
+    <tr><th scope="col">Pásmo</th><th scope="col">Bez dialýzy nasledujúcich 7&nbsp;dní</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Kreatinínová clearance &gt; 20 ml/min</th><td>96 %</td></tr>
-    <tr><th scope="row">Kreatinínová clearance 10–20 ml/min</th><td>81 % (22 z 27)</td></tr>
-    <tr><th scope="row">Kreatinínová clearance 5 – &lt; 10 ml/min</th><td>44 % (19 z 43)</td></tr>
-    <tr><th scope="row">Diuréza &gt; 1 000 ml/deň</th><td>73 %</td></tr>
-    <tr><th scope="row">Diuréza 200–499 ml/deň</th><td>28 %</td></tr>
+    <tr><th scope="row">Kreatinínová clearance &gt; 20&nbsp;ml/min</th><td>96 %</td></tr>
+    <tr><th scope="row">Kreatinínová clearance 10–20&nbsp;ml/min</th><td>81 % (22 z 27)</td></tr>
+    <tr><th scope="row">Kreatinínová clearance 5 – &lt; 10&nbsp;ml/min</th><td>44 % (19 z 43)</td></tr>
+    <tr><th scope="row">Diuréza &gt; 1&nbsp;000&nbsp;ml/deň</th><td>73 %</td></tr>
+    <tr><th scope="row">Diuréza 200–499&nbsp;ml/deň</th><td>28 %</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Najvýraznejší je stredný riadok. Kreatinínová clearance 10–20 ml/min zodpovedá ťažkej poruche funkcie obličiek, napriek tomu štyria z piatich pacientov v tomto pásme dialýzu ďalší týždeň nepotrebovali. Dokonca aj v pásme 5 – &lt; 10 ml/min, ktoré by v chronickom kontexte zodpovedalo CKD 5. štádia, zostalo bez dialýzy 44 % pacientov.</p>
+<p>Najvýraznejší je stredný riadok. Kreatinínová clearance 10–20&nbsp;ml/min zodpovedá ťažkej poruche funkcie obličiek, napriek tomu štyria z piatich pacientov v tomto pásme dialýzu ďalší týždeň nepotrebovali. Dokonca aj v pásme 5 – &lt; 10&nbsp;ml/min, ktoré by v chronickom kontexte zodpovedalo CKD 5. štádia, zostalo bez dialýzy 44 % pacientov.</p>
 
 <h2>Opätovná potreba dialýzy</h2>
 
-<p>Zo 75 pacientov, ktorí po zbere sedem dní dialýzu nepotrebovali, ju počas tej istej hospitalizácie potrebovali znovu iba <strong>dvaja</strong>, a to s mediánom 14 dní. V oboch prípadoch bola kreatinínová clearance vyššia než 8 ml/min a diuréza vyššia než 1 000 ml/deň. Taká konštelácia skôr zodpovedá novej epizóde akútneho poškodenia obličiek než zlyhaniu pôvodného zotavenia.</p>
+<p>Zo 75 pacientov, ktorí po zbere sedem dní dialýzu nepotrebovali, ju počas tej istej hospitalizácie potrebovali znovu iba <strong>dvaja</strong>, a to s mediánom 14&nbsp;dní. V oboch prípadoch bola kreatinínová clearance vyššia než 8&nbsp;ml/min a diuréza vyššia než 1&nbsp;000&nbsp;ml/deň. Taká konštelácia skôr zodpovedá novej epizóde akútneho poškodenia obličiek než zlyhaniu pôvodného zotavenia.</p>
 
 <h2>Prečo kreatinínová clearance prekonáva diurézu aj eGFR</h2>
 
-<p>Dôvod nie je štatistický, ale fyziologický. Diuréza môže zostať zdanlivo zachovaná aj pri veľmi nízkej glomerulárnej filtrácii, pretože poškodené tubuly nedokážu vodu spätne vstrebávať. Objem moču potom hovorí viac o tubulárnej funkcii než o exkrečnej kapacite. Pacient s diurézou 1 200 ml denne a clearance 4 ml/min vyzerá na prvý pohľad lepšie, než aký v skutočnosti je.</p>
+<p>Dôvod nie je štatistický, ale fyziologický. Diuréza môže zostať zdanlivo zachovaná aj pri veľmi nízkej glomerulárnej filtrácii, pretože poškodené tubuly nedokážu vodu spätne vstrebávať. Objem moču potom hovorí viac o tubulárnej funkcii než o exkrečnej kapacite. Pacient s diurézou 1&nbsp;200&nbsp;ml denne a clearance 4&nbsp;ml/min vyzerá na prvý pohľad lepšie, než aký v skutočnosti je.</p>
 
-<p>Odhadovaná glomerulárna filtrácia zo sérového kreatinínu zlyháva z iného dôvodu. Rovnice na jej výpočet predpokladajú ustálený stav, ktorý pri AKI neexistuje. Sérová koncentrácia kreatinínu je výsledkom tvorby, distribučného objemu a exkrécie, pričom pri rýchlych zmenách funkcie zaostáva za skutočnosťou o desiatky hodín. Modelovanie kinetiky kreatinínu ukázalo, že 24 hodín po 90 % poklese clearance kreatinínu stúpne sérový kreatinín o 246 % pri normálnej východiskovej funkcii, ale len o 47 % pri CKD 4. štádia. Pri intermitentnej hemodialýze sa k tomu pridáva ešte extrakorporálna eliminácia, ktorá sérovú hodnotu ďalej skresľuje.</p>
+<p>Odhadovaná glomerulárna filtrácia zo sérového kreatinínu zlyháva z iného dôvodu. Rovnice na jej výpočet predpokladajú ustálený stav, ktorý pri AKI neexistuje. Sérová koncentrácia kreatinínu je výsledkom tvorby, distribučného objemu a exkrécie, pričom pri rýchlych zmenách funkcie zaostáva za skutočnosťou o desiatky hodín. Modelovanie kinetiky kreatinínu ukázalo, že 24&nbsp;hodín po 90 % poklese clearance kreatinínu stúpne sérový kreatinín o 246 % pri normálnej východiskovej funkcii, ale len o 47 % pri CKD 4. štádia. Pri intermitentnej hemodialýze sa k tomu pridáva ešte extrakorporálna eliminácia, ktorá sérovú hodnotu ďalej skresľuje.</p>
 
 <p>Časovaný zber moču túto nejednoznačnosť obchádza. Meria, koľko kreatinínu oblička v danom okne skutočne vylúčila.</p>
 
@@ -105,8 +105,8 @@ $articles[] = [
   <li><strong>Potvrdiť, že kritická fáza ustúpila.</strong> Bez vazopresorov, bez mechanickej ventilácie, hemodynamicky stabilný pacient. Mimo týchto podmienok výsledky neplatia.</li>
   <li><strong>Vykonať časovaný zber moču</strong> podľa miestneho protokolu a vypočítať kreatinínovú clearance. Ureovú clearance netreba dopĺňať.</li>
   <li><strong>Vyhodnotiť clearance v klinickom kontexte,</strong> nie izolovane. Diuréza zostáva doplnkovou informáciou, nie hlavným kritériom.</li>
-  <li><strong>Ukončiť plánovanú dialýzu a prejsť na režim riadený indikáciami.</strong> Pri clearance 10–20 ml/min je pravdepodobnosť, že pacient týždeň dialýzu nepotrebuje, približne 80 %.</li>
-  <li><strong>Zabezpečiť denné prehodnotenie.</strong> V pásme 5 – &lt; 10 ml/min je dialýza v priebehu týždňa potrebná v 56 % prípadov. Ukončenie je tu obhájiteľné iba vtedy, ak je zároveň zabezpečená rýchla reeskalácia pri splnení indikácií.</li>
+  <li><strong>Ukončiť plánovanú dialýzu a prejsť na režim riadený indikáciami.</strong> Pri clearance 10–20&nbsp;ml/min je pravdepodobnosť, že pacient týždeň dialýzu nepotrebuje, približne 80 %.</li>
+  <li><strong>Zabezpečiť denné prehodnotenie.</strong> V pásme 5 – &lt; 10&nbsp;ml/min je dialýza v priebehu týždňa potrebná v 56 % prípadov. Ukončenie je tu obhájiteľné iba vtedy, ak je zároveň zabezpečená rýchla reeskalácia pri splnení indikácií.</li>
 </ol>
 
 <p>Ide teda o posun od profylaktického pokračovania k postupu riadenému indikáciami. Nie o jednorazový príkaz „ukončiť“, ale o režim, v ktorom sa dialýza podá vtedy, keď je na ňu dôvod.</p>
@@ -119,10 +119,10 @@ $articles[] = [
 
 <ul>
   <li><strong>Doplnková analýza jedného ramena.</strong> Nejde o randomizované porovnanie stratégií ukončovania dialýzy, ale o pozorovanie prediktívnej hodnoty v rámci jednej intervenčnej skupiny.</li>
-  <li><strong>Úzko vybraná populácia.</strong> Hemodynamicky stabilní pacienti s intermitentnou hemodialýzou a východiskovou eGFR nad 15 ml/min/1,73 m². Výsledky sa <em>nedajú</em> preniesť na kriticky chorých, na pacientov na kontinuálnej náhrade funkcie obličiek ani na pokročilú CKD pred vznikom AKI.</li>
+  <li><strong>Úzko vybraná populácia.</strong> Hemodynamicky stabilní pacienti s intermitentnou hemodialýzou a východiskovou eGFR nad 15&nbsp;ml/min/1,73&nbsp;m². Výsledky sa <em>nedajú</em> preniesť na kriticky chorých, na pacientov na kontinuálnej náhrade funkcie obličiek ani na pokročilú CKD pred vznikom AKI.</li>
   <li><strong>Jednotka analýzy je zber, nie pacient.</strong> Od 85 pacientov pochádza 147 zberov, takže údaje nie sú navzájom nezávislé.</li>
   <li><strong>Sedemdňový ukazovateľ.</strong> Hovorí o najbližšom manažmente, nie o trvalom zotavení obličiek. Dlhodobý osud funkcie obličiek táto analýza nehodnotí.</li>
-  <li><strong>Malé čísla v krajných pásmach.</strong> Napríklad pásmo 10–20 ml/min stojí na 27 zberoch; interval spoľahlivosti okolo uvedených 81 % je preto široký.</li>
+  <li><strong>Malé čísla v krajných pásmach.</strong> Napríklad pásmo 10–20&nbsp;ml/min stojí na 27 zberoch; interval spoľahlivosti okolo uvedených 81 % je preto široký.</li>
   <li><strong>Praktické bariéry.</strong> Časovaný zber moču vyžaduje spoľahlivý katéter alebo disciplinovaný zber, čo na bežnom oddelení nie je samozrejmosť.</li>
 </ul>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <h3>Poznámka k dôkazom</h3>
 
-<p><small>Autorský zoznam, DOI a PMID oboch prác tímu LIBERATE-D boli overené cez Crossref a PubMed eutils. Číselné údaje z doplnkovej analýzy (AUC, pásma clearance, počty pacientov) pochádzajú zo štruktúrovaného abstraktu primárnej práce a z odborného spravodajstva Medscape, ktoré uvádza aj údaje nedostupné v abstrakte (AUC pre eGFR a ureovú clearance, pásmo &gt; 20 ml/min, pomer šancí, opätovná potreba dialýzy). Plný text v <em>JASN</em> je prístupný len za poplatok, preto údaje nad rámec abstraktu nebolo možné overiť priamo v primárnom zdroji; sú uvedené s vedomím tohto obmedzenia. Kontext hlavnej štúdie LIBERATE-D, kinetiku kreatinínu a znenie odporúčania KDIGO doplnil autor projektu nad rámec zdrojového textu; rovnako aj rozbor limitov a fyziologické vysvetlenie rozdielu medzi clearance, diurézou a eGFR.</small></p>
+<p><small>Autorský zoznam, DOI a PMID oboch prác tímu LIBERATE-D boli overené cez Crossref a PubMed eutils. Číselné údaje z doplnkovej analýzy (AUC, pásma clearance, počty pacientov) pochádzajú zo štruktúrovaného abstraktu primárnej práce a z odborného spravodajstva Medscape, ktoré uvádza aj údaje nedostupné v abstrakte (AUC pre eGFR a ureovú clearance, pásmo &gt; 20&nbsp;ml/min, pomer šancí, opätovná potreba dialýzy). Plný text v <em>JASN</em> je prístupný len za poplatok, preto údaje nad rámec abstraktu nebolo možné overiť priamo v primárnom zdroji; sú uvedené s vedomím tohto obmedzenia. Kontext hlavnej štúdie LIBERATE-D, kinetiku kreatinínu a znenie odporúčania KDIGO doplnil autor projektu nad rámec zdrojového textu; rovnako aj rozbor limitov a fyziologické vysvetlenie rozdielu medzi clearance, diurézou a eGFR.</small></p>
 
 <h3>Súvisiace články</h3>
 

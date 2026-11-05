@@ -38,12 +38,12 @@ $articles[] = [
     <tr><th scope="col">Elektrolyt</th><th scope="col">Rozsah</th></tr>
   </thead>
   <tbody>
-    <tr><td>Sodík (Na<sup>+</sup>)</td><td>135 – 145 mmol/l</td></tr>
-    <tr><td>Draslík (K<sup>+</sup>)</td><td>3,5 – 5,0 mmol/l</td></tr>
-    <tr><td>Vápnik celkový</td><td>2,15 – 2,55 mmol/l</td></tr>
-    <tr><td>Vápnik ionizovaný</td><td>1,15 – 1,30 mmol/l</td></tr>
-    <tr><td>Magnézium (Mg<sup>2+</sup>)</td><td>0,70 – 1,00 mmol/l</td></tr>
-    <tr><td>Fosfát (PO<sub>4</sub>)</td><td>0,80 – 1,45 mmol/l</td></tr>
+    <tr><td>Sodík (Na<sup>+</sup>)</td><td>135 – 145&nbsp;mmol/l</td></tr>
+    <tr><td>Draslík (K<sup>+</sup>)</td><td>3,5 – 5,0&nbsp;mmol/l</td></tr>
+    <tr><td>Vápnik celkový</td><td>2,15 – 2,55&nbsp;mmol/l</td></tr>
+    <tr><td>Vápnik ionizovaný</td><td>1,15 – 1,30&nbsp;mmol/l</td></tr>
+    <tr><td>Magnézium (Mg<sup>2+</sup>)</td><td>0,70 – 1,00&nbsp;mmol/l</td></tr>
+    <tr><td>Fosfát (PO<sub>4</sub>)</td><td>0,80 – 1,45&nbsp;mmol/l</td></tr>
   </tbody>
 </table>
 </div>
@@ -55,8 +55,8 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Kľúč k manažmentu</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hyponatriémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10 mmol/l/24 h</strong> (≤ 6 pri vysokom riziku) – prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
-    <tr><td>Hypernatriémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> – prevencia edému mozgu</td></tr>
+    <tr><td>Hyponatriémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10&nbsp;mmol/l/24&nbsp;h</strong> (≤ 6 pri vysokom riziku) – prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
+    <tr><td>Hypernatriémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12&nbsp;mmol/l/24&nbsp;h</strong> – prevencia edému mozgu</td></tr>
   </tbody>
 </table>
 </div>
@@ -68,7 +68,7 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">EKG / manažment</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hypokaliémia</td><td>Diuretiká, GIT straty (vracanie/hnačka), presun do bunky, hyperaldosteronizmus, hypomagneziémia</td><td>EKG: oploštené T, U vlny, ST depresia, predĺžené QT. <strong>Vždy doplň magnézium.</strong> i.v. K<sup>+</sup> ≤ 10 mmol/h periférne, monitoruj</td></tr>
+    <tr><td>Hypokaliémia</td><td>Diuretiká, GIT straty (vracanie/hnačka), presun do bunky, hyperaldosteronizmus, hypomagneziémia</td><td>EKG: oploštené T, U vlny, ST depresia, predĺžené QT. <strong>Vždy doplň magnézium.</strong> i.v. K<sup>+</sup> ≤ 10&nbsp;mmol/h periférne, monitoruj</td></tr>
     <tr><td>Hyperkaliémia</td><td>CKD/AKI, RAAS-blokátory + nsMRA, deštrukcia buniek, acidóza, pseudohyperkaliémia</td><td>EKG: vysoké hrotnaté T, široký QRS, strata P, sínusoida. Pri zmenách: <strong>kalcium i.v.</strong> (membrána) + inzulín/glukóza + β<sub>2</sub>-agonista; odstránenie (diuretiká, viazače, dialýza)</td></tr>
   </tbody>
 </table>
@@ -97,7 +97,7 @@ $articles[] = [
   <tbody>
     <tr><td>Hypomagneziémia</td><td>Diuretiká, PPI, alkohol, GIT straty, inhibítory EGFR</td><td>Spôsobuje refraktérnu hypokaliémiu a hypokalciémiu – koriguj ho ako prvé</td></tr>
     <tr><td>Hypermagneziémia</td><td>CKD + suplementácia/antacidá, eklampsia (liečba MgSO<sub>4</sub>)</td><td>Hyporeflexia, hypotenzia, zástava dychu; antidotum kalcium i.v.</td></tr>
-    <tr><td>Hypofosfatémia</td><td>Refeeding syndróm, alkohol, DKA pri liečbe, renálne straty (Fanconi)</td><td>Ťažká (&lt; 0,3 mmol/l): svalová slabosť, rabdomyolýza, respiračné zlyhanie</td></tr>
+    <tr><td>Hypofosfatémia</td><td>Refeeding syndróm, alkohol, DKA pri liečbe, renálne straty (Fanconi)</td><td>Ťažká (&lt; 0,3&nbsp;mmol/l): svalová slabosť, rabdomyolýza, respiračné zlyhanie</td></tr>
     <tr><td>Hyperfosfatémia</td><td>CKD (najčastejšie), syndróm rozpadu nádoru, rabdomyolýza</td><td>CKD-MBD: diétne obmedzenie + viazače fosfátov; rieš príčinu</td></tr>
   </tbody>
 </table>

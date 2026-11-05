@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "options" => ["min_range" => 18, "max_range" => 120],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $weightKg = calculatorParsePositiveFloat($form["weight_kg"]);
@@ -214,7 +214,7 @@ if (isLoggedIn()) {
                             $\text{Vek [roky]}$ &bull; $\text{Hmotnosť [kg]}$ &bull; $S_{cr} = \text{sérový kreatinín [mg/dL]}$
                         </div>
                         <p class="text-secondary-sm mt-8">
-                            Upozornenie: Hoci sa na zaradenie do štádií CKD používa rovnica CKD-EPI (s výstupom ml/min/1,73 m²), mnohé SPC liekov historicky vyžadujú na úpravu dávky práve tento vzorec (výstup ml/min). Pri extrémnej obezite sa niekedy odporúča použiť ideálnu alebo korigovanú telesnú hmotnosť.
+                            Upozornenie: Hoci sa na zaradenie do štádií CKD používa rovnica CKD-EPI (s výstupom ml/min/1,73 m²), mnohé SPC liekov historicky vyžadujú na úpravu dávky práve tento vzorec (výstup ml/min). Pri extrémnej obezite sa niekedy odporúča použiť ideálnu alebo korigovanú telesnú hmotnosť.
                         </p>
                     </div>
                 </details>

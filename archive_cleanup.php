@@ -5,7 +5,7 @@ declare(strict_types=1);
  * archive_cleanup.php — CLI-only retenčný cleanup skript
  *
  * Použitie: php archive_cleanup.php [profile_days] [avatar_days] [access_log_days]
- * Predvolená retenčná lehota: 365 dní pre archívy, 90 dní pre access logy/rate-limit záznamy.
+ * Predvolená retenčná lehota: 365 dní pre archívy, 90 dní pre access logy/rate-limit záznamy.
  *
  * Výsledky kalkulačiek majú vlastnú dvojstupňovú retenciu (lehoty sú
  * v calculators_common.php): po roku sa odstránia pacientské identifikátory,

@@ -37,7 +37,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/moderna-liecba-melanomu-internista-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/moderna-liecba-melanomu-internista-nefrolog.webp" alt="Imunitná bunka napádajúca melanómový útvar a vlákno svetla, ktoré vedie nadol k obličke sfarbenej do výstražnej oranžovej" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok imunoterapie sa nezastaví pri nádore – obličku zasiahne rovnaká aktivácia imunitného systému.</figcaption></figure>
 
-<p>Malígny melanóm patrí medzi biologicky najagresívnejšie nádory kože. Jeho incidencia celosvetovo stúpa a podľa epidemiologických odhadov môže do roku 2040 ročná globálna záťaž dosiahnuť približne 510 000 nových prípadov a 96 000 úmrtí. Hoci ide primárne o dermatologicko-onkologickú diagnózu, melanóm má význam aj pre internú medicínu a nefrológiu.</p>
+<p>Malígny melanóm patrí medzi biologicky najagresívnejšie nádory kože. Jeho incidencia celosvetovo stúpa a podľa epidemiologických odhadov môže do roku 2040 ročná globálna záťaž dosiahnuť približne 510&nbsp;000 nových prípadov a 96&nbsp;000 úmrtí. Hoci ide primárne o dermatologicko-onkologickú diagnózu, melanóm má význam aj pre internú medicínu a nefrológiu.</p>
 
 <p>Dôvodom je najmä zásadná zmena systémovej liečby. Inhibítory kontrolných bodov imunity, cielená liečba pri mutácii <strong>BRAF V600</strong>, adjuvantné režimy pri vysokorizikovom ochorení a ústup interferónu či klasickej chemoterapie zmenili prognózu mnohých pacientov. Súčasne však pribudla potreba sledovať imunitne podmienené nežiaduce účinky, renálnu toxicitu, liekové interakcie a bezpečnosť liečby u polymorbidných pacientov s chronickou chorobou obličiek.</p>
 
@@ -51,7 +51,7 @@ $articles[] = [
 
 <p>Základom liečby lokalizovaného kožného melanómu zostáva <strong>široká lokálna excízia</strong> s adekvátnym bezpečnostným lemom podľa hrúbky nádoru, anatomickej lokalizácie a rizikových charakteristík. Pri vybraných pacientoch sa dopĺňa <strong>biopsia sentinelovej lymfatickej uzliny</strong>.</p>
 
-<p>Biopsia sentinelovej uzliny má predovšetkým stagingový a prognostický význam. Pomáha presnejšie určiť riziko recidívy, patologické štádium a potrebu ďalšej liečby alebo intenzívnejšieho sledovania. V klinickej praxi sa zvažuje najmä pri melanómoch s hrúbkou približne ≥ 1,0 mm a pri tenších léziách okolo ≥ 0,8 mm, ak sú prítomné ďalšie rizikové znaky, napríklad ulcerácia alebo iné nepriaznivé parametre.</p>
+<p>Biopsia sentinelovej uzliny má predovšetkým stagingový a prognostický význam. Pomáha presnejšie určiť riziko recidívy, patologické štádium a potrebu ďalšej liečby alebo intenzívnejšieho sledovania. V klinickej praxi sa zvažuje najmä pri melanómoch s hrúbkou približne ≥ 1,0&nbsp;mm a pri tenších léziách okolo ≥ 0,8&nbsp;mm, ak sú prítomné ďalšie rizikové znaky, napríklad ulcerácia alebo iné nepriaznivé parametre.</p>
 
 <p>Indikácia však nemá byť mechanická. Treba zohľadniť vek, komorbidity, výkonnostný stav, očakávaný prínos výsledku pre ďalšie rozhodovanie a preferencie pacienta.</p>
 

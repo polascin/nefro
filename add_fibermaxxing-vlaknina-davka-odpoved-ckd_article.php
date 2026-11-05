@@ -34,7 +34,7 @@ $articles[] = [
 
 <h2>Čo dôkazy skutočne ukazujú</h2>
 
-<p>Najrozsiahlejším podkladom je séria systematických prehľadov a metaanalýz publikovaná v časopise <em>Lancet</em> v roku 2019. Zahrnula tesne pod 135 miliónov osoborokov údajov zo 185 prospektívnych štúdií a 58 klinických skúšaní so 4 635 dospelými účastníkmi.</p>
+<p>Najrozsiahlejším podkladom je séria systematických prehľadov a metaanalýz publikovaná v časopise <em>Lancet</em> v roku 2019. Zahrnula tesne pod 135 miliónov osoborokov údajov zo 185 prospektívnych štúdií a 58 klinických skúšaní so 4&nbsp;635 dospelými účastníkmi.</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Hlavné zistenia prehľadu o príjme vlákniny a zdravotných ukazovateľoch" tabindex="0">
   <table>
@@ -51,7 +51,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Najvýhodnejšie pásmo</th>
-        <td>Zníženie rizika bolo najväčšie pri dennom príjme vlákniny <strong>medzi 25 g a 29 g</strong>.</td>
+        <td>Zníženie rizika bolo najväčšie pri dennom príjme vlákniny <strong>medzi 25&nbsp;g a 29&nbsp;g</strong>.</td>
       </tr>
       <tr>
         <th scope="row">Klinické skúšania</th>
@@ -65,19 +65,19 @@ $articles[] = [
   </table>
 </div>
 
-<p>Druhým často citovaným podkladom je dávkovo-odpoveďová metaanalýza z časopisu <em>BMJ</em> (2013), ktorá zahrnula 22 kohortových publikácií. Každých ďalších <strong>7 g vlákniny denne</strong> sa v nej spájalo s <strong>rizikovým pomerom 0,91</strong> pre kardiovaskulárne ochorenie (95 % IS 0,88 – 0,94) aj pre ischemickú chorobu srdca (0,91; 95 % IS 0,87 – 0,94).</p>
+<p>Druhým často citovaným podkladom je dávkovo-odpoveďová metaanalýza z časopisu <em>BMJ</em> (2013), ktorá zahrnula 22 kohortových publikácií. Každých ďalších <strong>7&nbsp;g vlákniny denne</strong> sa v nej spájalo s <strong>rizikovým pomerom 0,91</strong> pre kardiovaskulárne ochorenie (95 % IS 0,88 – 0,94) aj pre ischemickú chorobu srdca (0,91; 95 % IS 0,87 – 0,94).</p>
 
 <h2>Prvá korekcia: „plateau“ nie je celkom presné slovo</h2>
 
-<p>Populárne prehľady z pásma 25 – 29 g/deň často vyvodzujú, že nad touto hranicou už úžitok nepribúda. Prehľad v <em>Lancete</em> však uvádza niečo iné: krivky dávky a odpovede naznačovali, že <strong>vyšší príjem vlákniny by mohol prinášať ešte väčší úžitok</strong> v ochrane pred kardiovaskulárnymi ochoreniami, diabetom 2. typu a kolorektálnym a prsníkovým karcinómom.</p>
+<p>Populárne prehľady z pásma 25 – 29&nbsp;g/deň často vyvodzujú, že nad touto hranicou už úžitok nepribúda. Prehľad v <em>Lancete</em> však uvádza niečo iné: krivky dávky a odpovede naznačovali, že <strong>vyšší príjem vlákniny by mohol prinášať ešte väčší úžitok</strong> v ochrane pred kardiovaskulárnymi ochoreniami, diabetom 2. typu a kolorektálnym a prsníkovým karcinómom.</p>
 
-<p>Presnejšie znenie teda je: pásmo 25 – 29 g/deň je úroveň, pri ktorej bolo zníženie rizika naprieč viacerými ukazovateľmi najkonzistentnejšie doložené – nie strop, za ktorým úžitok končí. Argument proti extrémnym dávkam preto nestojí na tom, že by boli zbytočné, ale na znášanlivosti, na chýbajúcich dôkazoch pre veľmi vysoké dávky z doplnkov a na tom, komu sa dôkazy vôbec týkajú.</p>
+<p>Presnejšie znenie teda je: pásmo 25 – 29&nbsp;g/deň je úroveň, pri ktorej bolo zníženie rizika naprieč viacerými ukazovateľmi najkonzistentnejšie doložené – nie strop, za ktorým úžitok končí. Argument proti extrémnym dávkam preto nestojí na tom, že by boli zbytočné, ale na znášanlivosti, na chýbajúcich dôkazoch pre veľmi vysoké dávky z doplnkov a na tom, komu sa dôkazy vôbec týkajú.</p>
 
 <h2>Druhá korekcia, pre nefrológiu podstatnejšia: koho sa dôkazy týkajú</h2>
 
 <p>Autori prehľadu v <em>Lancete</em> uvádzajú výslovné obmedzenie: <strong>zistenia sa vzťahujú na zníženie rizika v bežnej populácii, nie u osôb s chronickým ochorením</strong>. Prospektívne štúdie aj skúšania s účastníkmi s chronickým ochorením boli z analýzy vylúčené.</p>
 
-<p>To má priamy dôsledok. Pacient s CKD, ktorý si prečíta odporúčanie „25 – 29 g denne, pokojne aj viac“, čerpá z dôkazovej základne, ktorá ho nezahŕňala. Neznamená to, že vláknina je pri CKD škodlivá – existuje dobrý mechanistický dôvod pre opak. Znamená to, že prenos číselného cieľa aj očakávanej veľkosti úžitku je extrapoláciou, a že o zdroji vlákniny treba pri CKD rozhodovať inak než v bežnej populácii.</p>
+<p>To má priamy dôsledok. Pacient s CKD, ktorý si prečíta odporúčanie „25 – 29&nbsp;g denne, pokojne aj viac“, čerpá z dôkazovej základne, ktorá ho nezahŕňala. Neznamená to, že vláknina je pri CKD škodlivá – existuje dobrý mechanistický dôvod pre opak. Znamená to, že prenos číselného cieľa aj očakávanej veľkosti úžitku je extrapoláciou, a že o zdroji vlákniny treba pri CKD rozhodovať inak než v bežnej populácii.</p>
 
 <h2>Prečo je vláknina pri CKD napriek tomu zaujímavá</h2>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Vyšší príjem vlákniny je spojený s nižším rizikom viacerých ochorení a pásmo 25 – 29 g denne je najlepšie doloženou úrovňou. „Fibermaxxing“ však robí dva myšlienkové skoky naraz: zamieňa asociáciu za návod a bežnú populáciu za všetkých. Pri chronickej chorobe obličiek platí odporúčanie v inej podobe – vlákninu áno, prednostne z potravy, s postupným zvyšovaním a s výberom zdroja podľa kaliémie, fosfatémie a povoleného príjmu tekutín.</p>
+<p>Vyšší príjem vlákniny je spojený s nižším rizikom viacerých ochorení a pásmo 25 – 29&nbsp;g denne je najlepšie doloženou úrovňou. „Fibermaxxing“ však robí dva myšlienkové skoky naraz: zamieňa asociáciu za návod a bežnú populáciu za všetkých. Pri chronickej chorobe obličiek platí odporúčanie v inej podobe – vlákninu áno, prednostne z potravy, s postupným zvyšovaním a s výberom zdroja podľa kaliémie, fosfatémie a povoleného príjmu tekutín.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -121,7 +121,7 @@ $articles[] = [
 
 <p id="odborny-zdroj-1"><small><em><strong>1. Východiskový materiál:</strong> Medscape. What Is Fibermaxxing – and Is More Fiber Always Better? 2026. Východiskový materiál; číselné údaje a závery boli overené podľa primárnych publikácií uvedených nižšie.</em></small></p>
 
-<p id="odborny-zdroj-2"><small><em><strong>2. Dávka a odpoveď, séria prehľadov:</strong> Reynolds A, Mann J, Cummings J, Winter N, Mete E, Te Morenga L. Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <em>Lancet</em>. 2019;393(10170):434–445. doi: <a href="https://doi.org/10.1016/S0140-6736(18)31809-9" target="_blank" rel="noopener noreferrer">10.1016/S0140-6736(18)31809-9</a>. PMID 30638909. <a href="https://pubmed.ncbi.nlm.nih.gov/30638909/" target="_blank" rel="noopener noreferrer">PubMed</a>. Zdroj údajov o pásme 25 – 29 g/deň, o znížení rizika o 15 – 30 %, o tvare krivky dávky a odpovede aj o obmedzení platnosti na bežnú populáciu.</em></small></p>
+<p id="odborny-zdroj-2"><small><em><strong>2. Dávka a odpoveď, séria prehľadov:</strong> Reynolds A, Mann J, Cummings J, Winter N, Mete E, Te Morenga L. Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <em>Lancet</em>. 2019;393(10170):434–445. doi: <a href="https://doi.org/10.1016/S0140-6736(18)31809-9" target="_blank" rel="noopener noreferrer">10.1016/S0140-6736(18)31809-9</a>. PMID 30638909. <a href="https://pubmed.ncbi.nlm.nih.gov/30638909/" target="_blank" rel="noopener noreferrer">PubMed</a>. Zdroj údajov o pásme 25 – 29&nbsp;g/deň, o znížení rizika o 15 – 30 %, o tvare krivky dávky a odpovede aj o obmedzení platnosti na bežnú populáciu.</em></small></p>
 
 <p id="odborny-zdroj-3"><small><em><strong>3. Kardiovaskulárny ukazovateľ:</strong> Threapleton DE, Greenwood DC, Evans CEL, Cleghorn CL, Nykjaer C, Woodhead C, Cade JE, Gale CP, Burley VJ. Dietary fibre intake and risk of cardiovascular disease: systematic review and meta-analysis. <em>BMJ</em>. 2013;347:f6879. doi: <a href="https://doi.org/10.1136/bmj.f6879" target="_blank" rel="noopener noreferrer">10.1136/bmj.f6879</a>. PMID 24355537, PMCID PMC3898422. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3898422/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 

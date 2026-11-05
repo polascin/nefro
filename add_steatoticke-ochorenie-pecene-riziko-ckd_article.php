@@ -2,8 +2,8 @@
 
 /**
  * add_steatoticke-ochorenie-pecene-riziko-ckd_article.php
- * Odborne revidovane spracovanie prehladu Marshall et al. o zacleneni pecene
- * do hodnotenia kardiovaskularno-oblickovo-metabolickeho rizika.
+ * Odborne revidované spracovanie prehladu Marshall et al. o zacleneni pecene
+ * do hodnotenia kardiovaskularno-oblickovo-metabolickeho riziká.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -83,7 +83,7 @@ $articles[] = [
 
 <h2>Najdôležitejšia kohorta: užitočný signál, nie dôkaz kauzality</h2>
 
-<p>Kľúčovým podkladom pre tvrdenie o nepriaznivom súbehu MASLD a CKD bola analýza NHANES 2007 až 2018. Zahŕňala 14 818 dospelých s priemerným sledovaním 6,9 roka; 1 142 z nich malo klasifikované obe ochorenia. Súbeh MASLD a CKD bol po štatistickej úprave spojený s vyššou celkovou mortalitou a pacienti so súbežnou pokročilou pečeňovou fibrózou a CKD mali najhoršiu prognózu.</p>
+<p>Kľúčovým podkladom pre tvrdenie o nepriaznivom súbehu MASLD a CKD bola analýza NHANES 2007 až 2018. Zahŕňala 14&nbsp;818 dospelých s priemerným sledovaním 6,9 roka; 1&nbsp;142 z nich malo klasifikované obe ochorenia. Súbeh MASLD a CKD bol po štatistickej úprave spojený s vyššou celkovou mortalitou a pacienti so súbežnou pokročilou pečeňovou fibrózou a CKD mali najhoršiu prognózu.</p>
 
 <p>Interpretáciu obmedzuje dizajn štúdie. MASLD sa určovala prevažne pomocou indexu stukovatenia pečene, nie zobrazovaním alebo biopsiou; fibróza pomocou FIB-4. Klasifikácia CKD vychádzala z prierezových údajov prieskumu o eGFR, albuminúrii a dialýze, pričom pri jednorazových laboratórnych údajoch nemožno u každého človeka overiť trojmesačnú chronicitu. Skupiny sa výrazne líšili vekom, diabetom, obezitou, hypertenziou, príjmom aj liečbou.</p>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Európske odporúčania EASL–EASD–EASO podporujú vyhľadávanie MASLD s fibrózou najmä u ľudí s diabetom 2. typu, abdominálnou obezitou a aspoň jedným ďalším metabolickým rizikovým faktorom alebo s pretrvávajúcimi abnormalitami pečeňových testov. Nejde o plošný populačný skríning.</p>
 
-<p>Americké odporúčanie AHA/ACC/ADA/ASN z roku 2026 už pečeň výslovne začleňuje do manažmentu CKM. U dospelých s CKM, diabetom alebo najmenej dvoma kardiometabolickými rizikovými faktormi odporúča výpočet FIB-4 každé 1 až 2 roky. Pri CKM štádiu 1 z dôvodu prediabetu považuje interval 2 až 3 roky za primeraný.</p>
+<p>Americké odporúčanie AHA/ACC/ADA/ASN z roku 2026 už pečeň výslovne začleňuje do manažmentu CKM. U dospelých s CKM, diabetom alebo najmenej dvoma kardiometabolickými rizikovými faktormi odporúča výpočet FIB-4 každé 1 až 2&nbsp;roky. Pri CKM štádiu 1 z dôvodu prediabetu považuje interval 2 až 3&nbsp;roky za primeraný.</p>
 
 <p>Marshall a spoluautori navrhujú ešte širší praktický prístup: FIB-4 u každého pacienta s CKD a aspoň jedným kardiometabolickým rizikovým faktorom. Tento návrh je rozumným podnetom pre nefrologickú diskusiu, ale nie je totožný so znením európskeho ani amerického odporúčania.</p>
 
@@ -129,15 +129,15 @@ $articles[] = [
   <li><strong>nad 2,67:</strong> vysoké riziko a dôvod na hepatologické posúdenie.</li>
 </ul>
 
-<p>U ľudí starších ako 65 rokov sa na vstupnú triáž používa vyššia spodná hranica 2,0. U osôb mladších ako 35 rokov je FIB-4 menej presné a nemá sa interpretovať počas akútneho ochorenia. Aj hodnota pod 1,3 môže podľa EASL prehliadnuť približne desatinu pacientov s pokročilou fibrózou.</p>
+<p>U ľudí starších ako 65&nbsp;rokov sa na vstupnú triáž používa vyššia spodná hranica 2,0. U osôb mladších ako 35&nbsp;rokov je FIB-4 menej presné a nemá sa interpretovať počas akútneho ochorenia. Aj hodnota pod 1,3 môže podľa EASL prehliadnuť približne desatinu pacientov s pokročilou fibrózou.</p>
 
 <p>Pri CKD treba zohľadniť nepečeňové príčiny trombocytopénie alebo zvýšenej AST. U hemodialyzovaných pacientov bývajú aminotransferázy často nižšie a štandardné prahy nie sú dostatočne validované ako samostatná diagnostika. FIB-4 je preto signál pre ďalší krok, nie potvrdenie MASH alebo fibrózy F2–F3.</p>
 
 <h2>Elastografia pri CKD: na objemovom stave záleží</h2>
 
-<p>Elastografia meria tuhosť pečene, nie priamo množstvo histologického väziva. Výsledok môžu meniť zápal, cholestáza, jedlo, technické podmienky a venózna kongescia. Hodnota pod 8 kPa podporuje nízke riziko pokročilej fibrózy; hodnota 8 kPa alebo vyššia si vyžaduje klinickú interpretáciu a sama neurčuje MASH ani konkrétne histologické štádium.</p>
+<p>Elastografia meria tuhosť pečene, nie priamo množstvo histologického väziva. Výsledok môžu meniť zápal, cholestáza, jedlo, technické podmienky a venózna kongescia. Hodnota pod 8&nbsp;kPa podporuje nízke riziko pokročilej fibrózy; hodnota 8&nbsp;kPa alebo vyššia si vyžaduje klinickú interpretáciu a sama neurčuje MASH ani konkrétne histologické štádium.</p>
 
-<p>Prospektívna pilotná štúdia z roku 2026 vykonala elastografiu bezprostredne pred a po hemodialýze u 41 pacientov s párovými meraniami. Medián sa významne nezmenil, ale približne 10 % pacientov po dialýze prekročilo hranicu 8 kPa, ktorú pred dialýzou neprekračovali. FIB-4 a APRI mali slabú zhodu so zvýšenou tuhosťou. Štúdia nemala histologický referenčný štandard a jej 45 zaradených pacientov nestačí na vytvorenie dialyzačných prahov; dobre však ukazuje, prečo treba čas merania a objemový stav štandardizovať.</p>
+<p>Prospektívna pilotná štúdia z roku 2026 vykonala elastografiu bezprostredne pred a po hemodialýze u 41 pacientov s párovými meraniami. Medián sa významne nezmenil, ale približne 10 % pacientov po dialýze prekročilo hranicu 8&nbsp;kPa, ktorú pred dialýzou neprekračovali. FIB-4 a APRI mali slabú zhodu so zvýšenou tuhosťou. Štúdia nemala histologický referenčný štandard a jej 45 zaradených pacientov nestačí na vytvorenie dialyzačných prahov; dobre však ukazuje, prečo treba čas merania a objemový stav štandardizovať.</p>
 
 <h2>Liečba: orgánový prienik nie je univerzálny recept</h2>
 
@@ -179,17 +179,17 @@ $articles[] = [
 
 <h3>Semaglutid: rôzne dávky, populácie a cieľové ukazovatele</h3>
 
-<p>ESSENCE ukázala po 72 týždňoch ústup steatohepatitídy bez zhoršenia fibrózy u 62,9 % pacientov so semaglutidom 2,4 mg a u 34,3 % s placebom. FLOW preukázala kardiorenálny prínos semaglutidu 1 mg pri diabete 2. typu a CKD. SELECT hodnotila ľudí s obezitou a preukázaným kardiovaskulárnym ochorením bez diabetu; obličkový výsledok bol sekundárny. SMART trvala 24 týždňov a jej primárnym výsledkom bola zmena albuminúrie pri CKD bez diabetu.</p>
+<p>ESSENCE ukázala po 72 týždňoch ústup steatohepatitídy bez zhoršenia fibrózy u 62,9 % pacientov so semaglutidom 2,4&nbsp;mg a u 34,3 % s placebom. FLOW preukázala kardiorenálny prínos semaglutidu 1&nbsp;mg pri diabete 2. typu a CKD. SELECT hodnotila ľudí s obezitou a preukázaným kardiovaskulárnym ochorením bez diabetu; obličkový výsledok bol sekundárny. SMART trvala 24&nbsp;týždňov a jej primárnym výsledkom bola zmena albuminúrie pri CKD bez diabetu.</p>
 
 <p>Súhrn týchto štúdií podporuje široký klinický potenciál semaglutidu, nie však tvrdenie, že rovnaký liek v rovnakej dávke súčasne znížil tvrdé pečeňové, obličkové a kardiovaskulárne príhody u jednej populácie so súbehom všetkých ochorení.</p>
 
 <h3>Finerenón: zachovaný kardiorenálny prínos, nie antifibrotická liečba pečene</h3>
 
-<p>Post hoc analýza FIDELITY zahŕňala 13 026 pacientov s diabetom 2. typu a CKD. Kardiorenálny prínos finerenónu sa zachoval aj v podskupinách s abnormálnymi pečeňovými markermi a vyšší FIB-4 označoval vyššie kardiovaskulárne riziko. ALT, AST a GMT však zostali medzi liečebnými skupinami porovnateľné. Analýza teda podporuje bezpečnosť a prognostickú hodnotu pečeňových markerov v tejto populácii, nie tvrdenie, že finerenón lieči MASH alebo pečeňovú fibrózu.</p>
+<p>Post hoc analýza FIDELITY zahŕňala 13&nbsp;026 pacientov s diabetom 2. typu a CKD. Kardiorenálny prínos finerenónu sa zachoval aj v podskupinách s abnormálnymi pečeňovými markermi a vyšší FIB-4 označoval vyššie kardiovaskulárne riziko. ALT, AST a GMT však zostali medzi liečebnými skupinami porovnateľné. Analýza teda podporuje bezpečnosť a prognostickú hodnotu pečeňových markerov v tejto populácii, nie tvrdenie, že finerenón lieči MASH alebo pečeňovú fibrózu.</p>
 
 <h3>Resmetirom: európska informácia sa líši od amerických prahov</h3>
 
-<p>V praktickom algoritme prehľadu sa resmetirom spája s hranicou eGFR najmenej 45 ml/min/1,73 m<sup>2</sup>, ktorá vychádza z amerického kontextu. Aktuálny európsky súhrn charakteristických vlastností Rezdiffry uvádza, že pri eGFR 15 až 89 ml/min sa úprava dávky neodporúča. To neznamená automatickú vhodnosť pri každej CKD: liek je určený pre necirhotickú MASH s fibrózou F2–F3 a treba preveriť interakcie, hepatálny stav, dostupnosť a úhradu. Americkú hranicu nemožno bez vysvetlenia vydávať za európsku kontraindikáciu.</p>
+<p>V praktickom algoritme prehľadu sa resmetirom spája s hranicou eGFR najmenej 45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, ktorá vychádza z amerického kontextu. Aktuálny európsky súhrn charakteristických vlastností Rezdiffry uvádza, že pri eGFR 15 až 89&nbsp;ml/min sa úprava dávky neodporúča. To neznamená automatickú vhodnosť pri každej CKD: liek je určený pre necirhotickú MASH s fibrózou F2–F3 a treba preveriť interakcie, hepatálny stav, dostupnosť a úhradu. Americkú hranicu nemožno bez vysvetlenia vydávať za európsku kontraindikáciu.</p>
 
 <h2>CRHM je užitočný koncept, zatiaľ nie jednotná diagnóza</h2>
 
@@ -226,7 +226,7 @@ $articles[] = [
 <ul>
   <li>Observačná asociácia dokazuje, že MASLD priamo spôsobila CKD alebo mortalitu.</li>
   <li>Každý pacient s CKD potrebuje rovnaký pečeňový skríning bez ohľadu na vek a metabolické riziko.</li>
-  <li>FIB-4 nad 1,3 alebo elastografia nad 8 kPa samy potvrdzujú MASH s fibrózou F2–F3.</li>
+  <li>FIB-4 nad 1,3 alebo elastografia nad 8&nbsp;kPa samy potvrdzujú MASH s fibrózou F2–F3.</li>
   <li>Finerenón alebo inhibítor SGLT2 sú cielenou liečbou MASH.</li>
   <li>Výsledky viacerých štúdií semaglutidu dokazujú pan-orgánový klinický prínos v jednej CRHM populácii.</li>
   <li>Navrhovaný viacliekový režim bol ako celok otestovaný v randomizovanom skúšaní.</li>

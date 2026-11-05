@@ -43,11 +43,11 @@ $articles[] = [
 
 <p>Mendelovská randomizácia používa genetické varianty ako inštrumentálne premenné na posudzovanie možného kauzálneho vzťahu medzi určitou vlastnosťou a sledovaným výsledkom. Klinická časť naopak hodnotila, ktoré charakteristiky pacientov súviseli s následným výskytom zlyhania obličiek a či z nich možno zostaviť prognostický model.</p>
 
-<p>Genetické údaje pochádzali z databázy IEU OpenGWAS a boli filtrované na východoázijskú populáciu. Súbor pre diabetes 2. typu (ebi-a-GCST010118) zahŕňal 433 540 osôb, z toho 77 418 prípadov a 356 122 kontrol.</p>
+<p>Genetické údaje pochádzali z databázy IEU OpenGWAS a boli filtrované na východoázijskú populáciu. Súbor pre diabetes 2. typu (ebi-a-GCST010118) zahŕňal 433&nbsp;540 osôb, z toho 77&nbsp;418 prípadov a 356&nbsp;122 kontrol.</p>
 
 <h3>Kľúčový detail: výsledkom genetickej analýzy nebolo zlyhanie obličiek</h3>
 
-<p>Ako obličkový výsledok slúžil samostatný genetický súbor pre <strong>chronické zlyhávanie obličiek</strong> (ebi-a-GCST90018602) so 176 462 osobami. Toto číslo však treba čítať presne: zahŕňalo iba <strong>2 117 prípadov</strong> a 174 345 kontrol.</p>
+<p>Ako obličkový výsledok slúžil samostatný genetický súbor pre <strong>chronické zlyhávanie obličiek</strong> (ebi-a-GCST90018602) so 176&nbsp;462 osobami. Toto číslo však treba čítať presne: zahŕňalo iba <strong>2&nbsp;117 prípadov</strong> a 174&nbsp;345 kontrol.</p>
 
 <p>Z toho vyplývajú dve dôležité obmedzenia:</p>
 
@@ -56,7 +56,7 @@ $articles[] = [
   <li>Výsledkový fenotyp <em>chronic renal failure</em> nebol totožný s klinicky sledovanou progresiou do konečného štádia. Autori to v obmedzeniach výslovne priznávajú a upozorňujú, že ide o rozdielne štádiá kontinua.</li>
 </ul>
 
-<p>Genetickú časť preto nemožno bez výhrad opisovať ako dôkaz progresie diabetickej choroby obličiek do potreby dialýzy. Pri 2 117 prípadoch je navyše štatistická sila pre menej silné expozície obmedzená.</p>
+<p>Genetickú časť preto nemožno bez výhrad opisovať ako dôkaz progresie diabetickej choroby obličiek do potreby dialýzy. Pri 2&nbsp;117 prípadoch je navyše štatistická sila pre menej silné expozície obmedzená.</p>
 
 <p>Ani samotná prítomnosť diabetu u pacienta s chronickou chorobou obličiek automaticky nedokazuje diabetickú etiológiu poškodenia. Diabetická choroba obličiek je klinická diagnóza, pri ktorej treba zohľadniť priebeh ochorenia, močový nález a prípadné známky inej nefropatie.</p>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <p>Abstrakt uvádza, že všetky inštrumentálne premenné mali F-štatistiku vyššiu ako 10. Sprievodná správa zároveň uvádzala vyradenie glukózy pre slabý inštrument s F-štatistikou 5,65. Plný text tento zdanlivý rozpor rieši: glukóza bola vyradená <strong>z viacrozmernej</strong> analýzy práve pre F = 5,65, pričom jej asociácia s výsledkom bola ďaleko od významnosti (p = 0,671). Tvrdenie o F &gt; 10 sa vzťahuje na inštrumenty ponechané v analýze.</p>
 
-<p>Klinicky je to však nepríjemné zistenie: glukóza mala v jednorozmernej analýze najsilnejší účinok zo všetkých expozícií (pomer šancí 2,41), no práve tento odhad stojí na najslabšom inštrumente. Podobne treba pristupovať k údaju o glykovanom hemoglobíne – jeho genetický súbor (ukb-e-30750_EAS) zahŕňal len 2 566 osôb.</p>
+<p>Klinicky je to však nepríjemné zistenie: glukóza mala v jednorozmernej analýze najsilnejší účinok zo všetkých expozícií (pomer šancí 2,41), no práve tento odhad stojí na najslabšom inštrumente. Podobne treba pristupovať k údaju o glykovanom hemoglobíne – jeho genetický súbor (ukb-e-30750_EAS) zahŕňal len 2&nbsp;566 osôb.</p>
 
 <h3>Prečo je pri hematokrite predpoklad bez pleiotropie krehký</h3>
 
@@ -119,11 +119,11 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Index telesnej hmotnosti</th><td>na 1 kg/m²</td><td>1,085</td><td>1,026–1,147</td><td>0,004</td></tr>
-    <tr><th scope="row">Systolický krvný tlak</th><td>na 1 mm Hg</td><td>1,020</td><td>1,008–1,032</td><td>&lt; 0,001</td></tr>
+    <tr><th scope="row">Index telesnej hmotnosti</th><td>na 1&nbsp;kg/m²</td><td>1,085</td><td>1,026–1,147</td><td>0,004</td></tr>
+    <tr><th scope="row">Systolický krvný tlak</th><td>na 1&nbsp;mm Hg</td><td>1,020</td><td>1,008–1,032</td><td>&lt; 0,001</td></tr>
     <tr><th scope="row">Sérový kreatinín</th><td>na 1 µmol/l</td><td>1,018</td><td>1,014–1,022</td><td>&lt; 0,001</td></tr>
     <tr><th scope="row">Hematokrit</th><td>na 1 percentuálny bod</td><td>0,940</td><td>0,891–0,993</td><td>0,027</td></tr>
-    <tr><th scope="row">Albumín</th><td>na 1 g/l</td><td>0,953</td><td>0,913–0,995</td><td>0,027</td></tr>
+    <tr><th scope="row">Albumín</th><td>na 1&nbsp;g/l</td><td>0,953</td><td>0,913–0,995</td><td>0,027</td></tr>
   </tbody>
 </table>
 </div>
@@ -166,7 +166,7 @@ $articles[] = [
 
 <p>Najdôležitejším klinickým rozlíšením je rozdiel medzi markerom rizika a liečebným cieľom. Zo zistenia, že vyšší hematokrit súvisí s nižším rizikom zlyhania obličiek, <strong>nevyplýva odporúčanie farmakologicky normalizovať hematokrit alebo hemoglobín s cieľom spomaliť progresiu chronickej choroby obličiek</strong>.</p>
 
-<p>Randomizovaná štúdia CHOIR u 1 432 pacientov s chronickou chorobou obličiek porovnávala liečbu epoetínom alfa s cieľovou koncentráciou hemoglobínu 13,5 g/dl oproti 11,3 g/dl. Vyšší cieľ bol spojený so <strong>zvýšeným</strong> rizikom zloženého výsledku zahŕňajúceho úmrtie, infarkt myokardu, hospitalizáciu pre srdcové zlyhávanie a cievnu mozgovú príhodu – pomer rizík 1,34 (95 % IS 1,03–1,74; p = 0,03) – bez akéhokoľvek zlepšenia kvality života.</p>
+<p>Randomizovaná štúdia CHOIR u 1&nbsp;432 pacientov s chronickou chorobou obličiek porovnávala liečbu epoetínom alfa s cieľovou koncentráciou hemoglobínu 13,5&nbsp;g/dl oproti 11,3&nbsp;g/dl. Vyšší cieľ bol spojený so <strong>zvýšeným</strong> rizikom zloženého výsledku zahŕňajúceho úmrtie, infarkt myokardu, hospitalizáciu pre srdcové zlyhávanie a cievnu mozgovú príhodu – pomer rizík 1,34 (95 % IS 1,03–1,74; p = 0,03) – bez akéhokoľvek zlepšenia kvality života.</p>
 
 <p>CHOIR priamo netestovala nový prognostický model. Názorne však ukazuje, prečo nemožno priaznivú observačnú asociáciu vyššej krvnej hodnoty zamieňať za prospešnosť jej intenzívnej liečebnej korekcie. Ide o rovnaký typ omylu, ktorý by hrozil pri mechanickom čítaní tejto štúdie.</p>
 
@@ -222,7 +222,7 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120 mm Hg pri chronickej chorobe obličiek sa v praxi uplatňuje len obmedzene</a></li>
+  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120&nbsp;mm Hg pri chronickej chorobe obličiek sa v praxi uplatňuje len obmedzene</a></li>
   <li><a href="article.php?slug=vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia">Východisková eGFR pri biopsii obličky: ako jej výber a imputácia môžu skresliť výsledky observačných štúdií</a></li>
   <li><a href="article.php?slug=anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi">Anémia pri CKD 2026 prakticky: algoritmus od diagnostiky po ESA a HIF-PHI podľa KDOQI US Commentary</a></li>
 </ul>

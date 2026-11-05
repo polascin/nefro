@@ -117,7 +117,7 @@ $articles[] = [
 
 <h2>Čo očakáva verejnosť</h2>
 
-<p>Autori doplnili scenáre reprezentatívnym prieskumom medzi <strong>10 980 dospelými obyvateľmi USA</strong>. Pýtali sa, kedy bude umelá inteligencia schopná zvládnuť osem kognitívnych úloh rastúcej náročnosti, ako široko sa bude používať, aké veľké budú prírastky produktivity, či bude prácu automatizovať alebo dopĺňať a ako dlho bude vytlačenému pracovníkovi trvať nájsť si novú prácu.</p>
+<p>Autori doplnili scenáre reprezentatívnym prieskumom medzi <strong>10&nbsp;980 dospelými obyvateľmi USA</strong>. Pýtali sa, kedy bude umelá inteligencia schopná zvládnuť osem kognitívnych úloh rastúcej náročnosti, ako široko sa bude používať, aké veľké budú prírastky produktivity, či bude prácu automatizovať alebo dopĺňať a ako dlho bude vytlačenému pracovníkovi trvať nájsť si novú prácu.</p>
 
 <p>Po dosadení mediánových odpovedí do modelu vyšiel výsledok blízky <strong>podstatnému scenáru</strong>: do roku 2030 by HDP vzrástlo o 8 % a kognitívna zamestnanosť by klesla o 4 %. Očakávania verejnosti sa teda nachádzajú medzi krajnými variantmi.</p>
 

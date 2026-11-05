@@ -41,8 +41,8 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Skupina</th><th scope="col">Relatívne riziko IPD</th></tr></thead>
   <tbody>
-    <tr><th scope="row">CKD 3. alebo 4. štádia (GF 15–59 ml/min)</th><td>1,2-násobné</td></tr>
-    <tr><th scope="row">ESRD (GF pod 15 ml/min alebo dialýza)</th><td>3,7-násobné</td></tr>
+    <tr><th scope="row">CKD 3. alebo 4. štádia (GF 15–59&nbsp;ml/min)</th><td>1,2-násobné</td></tr>
+    <tr><th scope="row">ESRD (GF pod 15&nbsp;ml/min alebo dialýza)</th><td>3,7-násobné</td></tr>
   </tbody>
 </table>
 </div>
@@ -66,9 +66,9 @@ $articles[] = [
 
 <h2>Čo sa v odporúčaniach ACIP zmenilo</h2>
 
-<p>Odporúčanie ACIP z roku 2023 stanovilo rámec pre dospelých od 19 rokov. <strong>23. októbra 2024 ACIP rámec zmenil</strong>: jedna dávka konjugovanej vakcíny sa odporúča všetkým dospelým od 50 rokov, ktorí ešte PCV nedostali. Predtým bola veková hranica 65 rokov.</p>
+<p>Odporúčanie ACIP z roku 2023 stanovilo rámec pre dospelých od 19&nbsp;rokov. <strong>23. októbra 2024 ACIP rámec zmenil</strong>: jedna dávka konjugovanej vakcíny sa odporúča všetkým dospelým od 50&nbsp;rokov, ktorí ešte PCV nedostali. Predtým bola veková hranica 65&nbsp;rokov.</p>
 
-<p>Pre nefrológiu je dôležité, že <strong>odporúčania pre dospelých vo veku 19–49 rokov s rizikovými stavmi sa touto zmenou nezmenili</strong>. Rovnako sa nezmenili pravidlá pre pacientov očkovaných PCV13. Zmena teda neznamená, že mladší obličkový pacient môže čakať do päťdesiatky — práve naopak, patrí do rizikovej skupiny bez ohľadu na vek.</p>
+<p>Pre nefrológiu je dôležité, že <strong>odporúčania pre dospelých vo veku 19–49&nbsp;rokov s rizikovými stavmi sa touto zmenou nezmenili</strong>. Rovnako sa nezmenili pravidlá pre pacientov očkovaných PCV13. Zmena teda neznamená, že mladší obličkový pacient môže čakať do päťdesiatky — práve naopak, patrí do rizikovej skupiny bez ohľadu na vek.</p>
 
 <h2>Detail, ktorý sa v praxi najčastejšie minie: do ktorej kategórie patrí obličkový pacient</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Kategória</th><th scope="col">Minimálny interval PCV15 → PPSV23</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Imunokompromitujúci stav (vrátane zlyhania obličiek a nefrotického syndrómu), únik mozgovomiechového moku, kochleárny implantát</th><td>≥ 8 týždňov</td></tr>
+    <tr><th scope="row">Imunokompromitujúci stav (vrátane zlyhania obličiek a nefrotického syndrómu), únik mozgovomiechového moku, kochleárny implantát</th><td>≥ 8&nbsp;týždňov</td></tr>
     <tr><th scope="row">Chronické ochorenie bez týchto stavov</th><td>≥ 1 rok</td></tr>
   </tbody>
 </table>
@@ -90,7 +90,7 @@ $articles[] = [
 
 <h3>Praktické schémy podľa doterajšieho očkovania</h3>
 
-<p>Pre dospelého vo veku 19–64 rokov so zlyhaním obličiek alebo nefrotickým syndrómom platí podľa ACIP 2023:</p>
+<p>Pre dospelého vo veku 19–64&nbsp;rokov so zlyhaním obličiek alebo nefrotickým syndrómom platí podľa ACIP 2023:</p>
 
 <div class="table-responsive" role="region" aria-label="Schémy očkovania podľa doterajšej očkovacej anamnézy" tabindex="0">
 <table>
@@ -169,7 +169,7 @@ $articles[] = [
 
 <h2>Poznámka k dôkazom</h2>
 
-<p>Článok je odborným spracovaním odporúčaní ACIP (MMWR 2023 a aktualizácia z roku 2024), prehľadu k pneumokokovej vakcinácii pri CKD a jednej prierezovej štúdie o zaočkovanosti pri začatí hemodialýzy; doplnený je o platný slovenský predpis. Všetky číselné údaje (relatívne riziko IPD 1,2 a 3,7, minimálne intervaly 8 týždňov a 1 rok, schémy podľa očkovacej anamnézy, podiely zaočkovanosti 28,0 %, 47,7 % a 55,3 %) boli overené proti plnému textu odporúčania ACIP v PubMed Central a proti abstraktom citovaných prác. Bibliografické údaje boli overené cez PubMed. Oproti pôvodnému podkladu sme opravili zastaraný rámec z roku 2023 na stav po aktualizácii z 23. októbra 2024, spresnili zaradenie zlyhania obličiek medzi imunokompromitujúce stavy aj s dôsledkom pre interval, doplnili slovenskú právnu úpravu, a uviedli na pravú mieru tvrdenie o rutinnom preočkovaní PPSV23 po piatich rokoch, pre ktoré v dialyzovanej populácii dobré údaje neexistujú.</p>
+<p>Článok je odborným spracovaním odporúčaní ACIP (MMWR 2023 a aktualizácia z roku 2024), prehľadu k pneumokokovej vakcinácii pri CKD a jednej prierezovej štúdie o zaočkovanosti pri začatí hemodialýzy; doplnený je o platný slovenský predpis. Všetky číselné údaje (relatívne riziko IPD 1,2 a 3,7, minimálne intervaly 8&nbsp;týždňov a 1 rok, schémy podľa očkovacej anamnézy, podiely zaočkovanosti 28,0 %, 47,7 % a 55,3 %) boli overené proti plnému textu odporúčania ACIP v PubMed Central a proti abstraktom citovaných prác. Bibliografické údaje boli overené cez PubMed. Oproti pôvodnému podkladu sme opravili zastaraný rámec z roku 2023 na stav po aktualizácii z 23. októbra 2024, spresnili zaradenie zlyhania obličiek medzi imunokompromitujúce stavy aj s dôsledkom pre interval, doplnili slovenskú právnu úpravu, a uviedli na pravú mieru tvrdenie o rutinnom preočkovaní PPSV23 po piatich rokoch, pre ktoré v dialyzovanej populácii dobré údaje neexistujú.</p>
 
 <h2>Zdroje</h2>
 

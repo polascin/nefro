@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>Na 63. kongrese ERA boli prezentované výsledky multikohortovej analýzy (z databáz NHANES a HCNS), ktorá sledovala, či kvalita stravy súvisí s dlhodobými výsledkami u pacientov s <strong>chronickou chorobou obličiek (CKD)</strong>.</p>
 
-<p>CKD bolo definované ako <strong>eGFR &lt; 60 ml/min/1,73 m²</strong> a/alebo prítomnosť albuminúrie. Celkovo bolo zahrnutých <strong>8 165 dospelých</strong>, pričom medián sledovania trval približne <strong>7 až 8 rokov</strong>.</p>
+<p>CKD bolo definované ako <strong>eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m²</strong> a/alebo prítomnosť albuminúrie. Celkovo bolo zahrnutých <strong>8&nbsp;165 dospelých</strong>, pričom medián sledovania trval približne <strong>7 až 8&nbsp;rokov</strong>.</p>
 
 <h2>Porovnávané stravovacie modely</h2>
 

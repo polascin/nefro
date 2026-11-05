@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok o glukozamine, kognitivnom poklese a nefrologickej praxi.
+ * Odborný článok o glukozamine, kognitivnom poklese a nefrologickej praxi.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -48,13 +48,13 @@ $articles[] = [
 
 <h2>Experiment podporuje mechanizmus, nie klinické odporúčanie</h2>
 
-<p>Genetické zníženie expresie enzýmu PGM3 a farmakologická inhibícia N-glykozylácie zlepšili sociálnu pamäť v transgénnych myších modeloch. Glukozamín podávaný sondou počas dvoch týždňov v dávke 457 mg/kg/deň zvýšil N-glykány a zhoršil sociálnu pamäť u 5xFAD myší. Skupiny však boli malé: pri behaviorálnom porovnaní išlo o šesť liečených a sedem kontrolných zvierat. U zdravých myší rovnaký zásah nezhoršil sociálnu pamäť. [1]</p>
+<p>Genetické zníženie expresie enzýmu PGM3 a farmakologická inhibícia N-glykozylácie zlepšili sociálnu pamäť v transgénnych myších modeloch. Glukozamín podávaný sondou počas dvoch týždňov v dávke 457&nbsp;mg/kg/deň zvýšil N-glykány a zhoršil sociálnu pamäť u 5xFAD myší. Skupiny však boli malé: pri behaviorálnom porovnaní išlo o šesť liečených a sedem kontrolných zvierat. U zdravých myší rovnaký zásah nezhoršil sociálnu pamäť. [1]</p>
 
-<p>Transgénne modely zachytávajú iba vybrané časti ľudskej neurodegenerácie. Krátky experiment s modelovou dávkou prepočítanou z ľudskej dávky približne 2 500 mg/deň nemôže určiť riziko bežného dlhodobého užívania u človeka. Ani inhibítory glykozylácie z tejto práce nie sú pripravenou liečbou demencie.</p>
+<p>Transgénne modely zachytávajú iba vybrané časti ľudskej neurodegenerácie. Krátky experiment s modelovou dávkou prepočítanou z ľudskej dávky približne 2&nbsp;500&nbsp;mg/deň nemôže určiť riziko bežného dlhodobého užívania u človeka. Ani inhibítory glykozylácie z tejto práce nie sú pripravenou liečbou demencie.</p>
 
 <h2>Klinický signál: čo ukázali zdravotné záznamy</h2>
 
-<p>Analýza databázy UF Health z rokov 2012 až 2024 zahrnula 24 481 pacientov s Alzheimerovou chorobou alebo príbuznými demenciami (ADRD) a 41 884 pacientov s miernou kognitívnou poruchou. Záznam o glukozamíne malo 1 896 pacientov s ADRD a 2 750 pacientov s miernou kognitívnou poruchou, približne 8 % v oboch skupinách. Medián sledovania bol 1 835 dní, teda približne päť rokov. [1]</p>
+<p>Analýza databázy UF Health z rokov 2012 až 2024 zahrnula 24&nbsp;481 pacientov s Alzheimerovou chorobou alebo príbuznými demenciami (ADRD) a 41&nbsp;884 pacientov s miernou kognitívnou poruchou. Záznam o glukozamíne malo 1&nbsp;896 pacientov s ADRD a 2&nbsp;750 pacientov s miernou kognitívnou poruchou, približne 8 % v oboch skupinách. Medián sledovania bol 1&nbsp;835&nbsp;dní, teda približne päť rokov. [1]</p>
 
 <div class="table-responsive" role="region" aria-label="Klinické výsledky a ich interpretácia" tabindex="0">
 <table>

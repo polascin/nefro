@@ -58,15 +58,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
         $potassium = tlsParseNonNeg($form["potassium"]);
         if ($potassium === null || $potassium < 1.5 || $potassium > 9.5) {
-            $errors[] = "Draslík musí byť 1,5 – 9,5 mmol/L.";
+            $errors[] = "Draslík musí byť 1,5 – 9,5 mmol/L.";
         }
         $phosphate = tlsParseNonNeg($form["phosphate"]);
         if ($phosphate === null || $phosphate > 6.0) {
-            $errors[] = "Fosfát musí byť 0 – 6,0 mmol/L.";
+            $errors[] = "Fosfát musí byť 0 – 6,0 mmol/L.";
         }
         $calcium = tlsParseNonNeg($form["calcium"]);
         if ($calcium === null || $calcium < 0.5 || $calcium > 4.0) {
-            $errors[] = "Vápnik musí byť 0,5 – 4,0 mmol/L.";
+            $errors[] = "Vápnik musí byť 0,5 – 4,0 mmol/L.";
         }
 
         $isChild = $form["age_group"] === "child";
@@ -179,7 +179,7 @@ if (isLoggedIn()) {
   $pageTitle = "Syndróm rozpadu nádoru (TLS): Cairo-Bishop klasifikácia | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_tls.php";
   $seoDescription =
-      "Cairo-Bishop klasifikácia syndrómu rozpadu nádoru (TLS): laboratórny TLS = ≥ 2 metabolické odchýlky (kyselina močová ≥ 476 µmol/L, draslík ≥ 6,0, fosfát ≥ 1,45 dospelí / 2,1 deti, vápnik ≤ 1,75 mmol/L); klinický TLS = laboratórny TLS + obličkové postihnutie, arytmia alebo kŕče. Riziko akútneho poškodenia obličiek.";
+      "Cairo-Bishop klasifikácia syndrómu rozpadu nádoru (TLS): laboratórny TLS = ≥ 2 metabolické odchýlky (kyselina močová ≥ 476 µmol/L, draslík ≥ 6,0, fosfát ≥ 1,45 dospelí / 2,1 deti, vápnik ≤ 1,75 mmol/L); klinický TLS = laboratórny TLS + obličkové postihnutie, arytmia alebo kŕče. Riziko akútneho poškodenia obličiek.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -232,7 +232,7 @@ if (isLoggedIn()) {
                 <div class="info-box">
                     <strong>Čo počíta:</strong> Cairo-Bishop klasifikuje syndróm rozpadu
                     nádoru (TLS): život ohrozujúce metabolické rozvraty pri masívnom rozpade
-                    nádorových buniek (najčastejšie 3 dni pred až 7 dní po začatí cytotoxickej
+                    nádorových buniek (najčastejšie 3 dni pred až 7 dní po začatí cytotoxickej
                     liečby pri vysoko proliferatívnych nádoroch: Burkittov lymfóm, ALL).
                     <strong>Laboratórny TLS</strong> = ≥ 2 metabolické odchýlky;
                     <strong>klinický TLS</strong> = laboratórny TLS + obličkové postihnutie,
@@ -253,10 +253,10 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
                             <strong>Laboratórny TLS</strong> (≥ 2 z nasledujúcich):<br>
-                            kyselina močová ≥ 476 µmol/L (8 mg/dL) &bull;
-                            draslík ≥ 6,0 mmol/L &bull;
-                            fosfát ≥ 1,45 mmol/L (dospelí) / ≥ 2,1 mmol/L (deti) &bull;
-                            vápnik ≤ 1,75 mmol/L (7 mg/dL)
+                            kyselina močová ≥ 476 µmol/L (8 mg/dL) &bull;
+                            draslík ≥ 6,0 mmol/L &bull;
+                            fosfát ≥ 1,45 mmol/L (dospelí) / ≥ 2,1 mmol/L (deti) &bull;
+                            vápnik ≤ 1,75 mmol/L (7 mg/dL)
                         </div>
                         <div class="calc-formula-vars">
                             <strong>Klinický TLS</strong> = laboratórny TLS + aspoň 1 z:

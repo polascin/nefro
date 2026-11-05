@@ -21,7 +21,7 @@ $articles[] = [
     'content' => <<<'HTML'
 <p>Akútne poškodenie obličiek (AKI) patrí medzi najčastejšie komplikácie hospitalizácie pri zlyhávaní srdca. Zhoršuje prognózu, predlžuje pobyt v nemocnici a zužuje liečebné možnosti práve vtedy, keď ich pacient potrebuje najviac. U seniora sa k tomu pridáva nižšia funkčná rezerva obličiek, takže aj mierny hemodynamický podnet, infekcia alebo zmena objemového stavu môže viesť k poklesu glomerulovej filtrácie.</p>
 
-<p>Praktická otázka preto znie, či sa dá ohrozený pacient rozpoznať skôr, než sa kreatinín pohne. Práca kolektívu Liu a spoluautorov z Všeobecnej nemocnice Severného vojenského veliteľstva v Šen-jangu sa o to pokúsila na kohorte 7 076 hospitalizovaných seniorov so zlyhávaním srdca a použila výhradne údaje dostupné do 24 hodín od prijatia.</p>
+<p>Praktická otázka preto znie, či sa dá ohrozený pacient rozpoznať skôr, než sa kreatinín pohne. Práca kolektívu Liu a spoluautorov z Všeobecnej nemocnice Severného vojenského veliteľstva v Šen-jangu sa o to pokúsila na kohorte 7&nbsp;076 hospitalizovaných seniorov so zlyhávaním srdca a použila výhradne údaje dostupné do 24&nbsp;hodín od prijatia.</p>
 
 <figure>
   <picture>
@@ -36,28 +36,28 @@ $articles[] = [
 <p>Autori použili kritériá KDIGO z roku 2012. AKI bolo prítomné, ak bola splnená aspoň jedna z podmienok:</p>
 
 <ol>
-  <li>vzostup sérového kreatinínu o viac než 26,5 µmol/l v priebehu 48 hodín,</li>
-  <li>vzostup sérového kreatinínu najmenej na 1,5-násobok východiskovej hodnoty v priebehu 7 dní,</li>
-  <li>diuréza nižšia než 0,5 ml/kg/h počas viac než 6 hodín.</li>
+  <li>vzostup sérového kreatinínu o viac než 26,5 µmol/l v priebehu 48&nbsp;hodín,</li>
+  <li>vzostup sérového kreatinínu najmenej na 1,5-násobok východiskovej hodnoty v priebehu 7&nbsp;dní,</li>
+  <li>diuréza nižšia než 0,5&nbsp;ml/kg/h počas viac než 6&nbsp;hodín.</li>
 </ol>
 
 <p>Za východiskovú hodnotu kreatinínu a močoviny sa považovala hodnota pri prijatí. Nulovým časom predikcie bolo prijatie do nemocnice. Zlyhávanie srdca potvrdil kardiológ podľa diagnostických kritérií ESC z roku 2023.</p>
 
 <h2>Kto bol zaradený a kto nie</h2>
 
-<p>Išlo o retrospektívnu jednocentrovú kohortu za obdobie od 1. januára 2019 do 31. decembra 2023. Vstupné kritériá boli zlyhávanie srdca počas hospitalizácie (akútne aj chronické), vek najmenej 65 rokov, pobyt najmenej 48 hodín a úplné údaje.</p>
+<p>Išlo o retrospektívnu jednocentrovú kohortu za obdobie od 1. januára 2019 do 31. decembra 2023. Vstupné kritériá boli zlyhávanie srdca počas hospitalizácie (akútne aj chronické), vek najmenej 65&nbsp;rokov, pobyt najmenej 48&nbsp;hodín a úplné údaje.</p>
 
-<p>Vylúčení boli pacienti s terminálnym zlyhaním obličiek, po transplantácii obličky a liečení dialýzou, ďalej pacienti s AKI prítomným už pri prijatí, pacienti s kontrastom navodenou nefropatiou po intervenčnom výkone a pacienti s anamnézou zhubného nádoru. Vylúčení boli aj všetci s chýbajúcou hodnotou ktorejkoľvek premennej alebo sledovaného ukazovateľa; imputácia sa nerobila. Z pôvodných 7 842 pacientov tak do analýzy vstúpilo 7 076.</p>
+<p>Vylúčení boli pacienti s terminálnym zlyhaním obličiek, po transplantácii obličky a liečení dialýzou, ďalej pacienti s AKI prítomným už pri prijatí, pacienti s kontrastom navodenou nefropatiou po intervenčnom výkone a pacienti s anamnézou zhubného nádoru. Vylúčení boli aj všetci s chýbajúcou hodnotou ktorejkoľvek premennej alebo sledovaného ukazovateľa; imputácia sa nerobila. Z pôvodných 7&nbsp;842 pacientov tak do analýzy vstúpilo 7&nbsp;076.</p>
 
 <p>AKI vzniklo počas hospitalizácie u 796 pacientov, teda u 11,2 %. Táto hodnota je pre pochopenie celej práce kľúčová a vraciame sa k nej pri kalibrácii aj pri klinickej užitočnosti.</p>
 
 <h2>Postup pri výbere premenných</h2>
 
-<p>Súbor bol náhodne rozdelený na tréningovú (4 954 pacientov) a validačnú časť (2 122 pacientov) v pomere 7 : 3. Validačná časť slúžila výlučne na hodnotenie výkonnosti a nevstupovala do výberu premenných, trénovania ani ladenia modelu.</p>
+<p>Súbor bol náhodne rozdelený na tréningovú (4&nbsp;954 pacientov) a validačnú časť (2&nbsp;122 pacientov) v pomere 7 : 3. Validačná časť slúžila výlučne na hodnotenie výkonnosti a nevstupovala do výberu premenných, trénovania ani ladenia modelu.</p>
 
 <p>Východiskom bolo 43 kandidátskych premenných vybraných podľa literatúry a klinickej skúsenosti. Z nich bolo v jednorozmernej analýze významných 38. Nasledovala regresia LASSO s desaťnásobnou krížovou validáciou; autori ponechali premenné, ktorých absolútna hodnota štandardizovaného regresného koeficientu presiahla 20 % — ide o empirický prah, ktorý si stanovili sami, nie o predvolený výstup algoritmu. Takto vybraných osem premenných vstúpilo do viacrozmernej logistickej regresie. Súbežne sa porovnávalo trinásť postupov strojového učenia.</p>
 
-<p>Dôležitý metodický detail: všetky premenné boli obmedzené na údaje získané do 24 hodín od prijatia a pred vznikom AKI. Laboratórne hodnoty pochádzali z prvého odberu po prijatí, lieky sa zaznamenávali iba ako chronická liečba užívaná pred prijatím. Tým sa vylúčilo, aby sa do modelu dostal ukazovateľ už ovplyvnený prebiehajúcim AKI.</p>
+<p>Dôležitý metodický detail: všetky premenné boli obmedzené na údaje získané do 24&nbsp;hodín od prijatia a pred vznikom AKI. Laboratórne hodnoty pochádzali z prvého odberu po prijatí, lieky sa zaznamenávali iba ako chronická liečba užívaná pred prijatím. Tým sa vylúčilo, aby sa do modelu dostal ukazovateľ už ovplyvnený prebiehajúcim AKI.</p>
 
 <h2>Osem nezávislých prediktorov</h2>
 
@@ -109,7 +109,7 @@ $articles[] = [
 
 <h2>Nomogram a bodové skóre</h2>
 
-<p>Pre praktické použitie autori previedli regresné koeficienty na nomogram a na celočíselné bodové skóre. Cystatín C rozdelili podľa referenčného rozsahu a zaužívaných deliacich bodov do troch pásiem (pod 1,0 mg/l; 1,0–1,5 mg/l; najmenej 1,5 mg/l) s hodnotením 0, 4 a 7 bodov. Ejekčnú frakciu rozdelili podľa odporúčaní ESC z roku 2021 na pásma pod 40 %, 40–49 % a najmenej 50 %, pričom hodnota pod 40 % znamená 7 bodov. Vyšší súčet zodpovedá vyššiemu riziku.</p>
+<p>Pre praktické použitie autori previedli regresné koeficienty na nomogram a na celočíselné bodové skóre. Cystatín C rozdelili podľa referenčného rozsahu a zaužívaných deliacich bodov do troch pásiem (pod 1,0&nbsp;mg/l; 1,0–1,5&nbsp;mg/l; najmenej 1,5&nbsp;mg/l) s hodnotením 0, 4 a 7 bodov. Ejekčnú frakciu rozdelili podľa odporúčaní ESC z roku 2021 na pásma pod 40 %, 40–49 % a najmenej 50 %, pričom hodnota pod 40 % znamená 7 bodov. Vyšší súčet zodpovedá vyššiemu riziku.</p>
 
 <h2>Prečo práve tieto premenné dávajú zmysel</h2>
 
@@ -123,9 +123,9 @@ $articles[] = [
 
 <h2>Čo o cystatíne C hovorí širšia literatúra</h2>
 
-<p>Postavenie cystatínu C ako ukazovateľa rizika, nie iba funkcie obličiek, podporujú aj staršie práce. Dalboni a spoluautori sledovali 234 kriticky chorých pacientov starších než 60 rokov prijatých na jednotku intenzívnej starostlivosti bez AKI a s normálnym vstupným kreatinínom. AKI podľa kritérií AKIN sa rozvinulo u 45 z nich (19 %).</p>
+<p>Postavenie cystatínu C ako ukazovateľa rizika, nie iba funkcie obličiek, podporujú aj staršie práce. Dalboni a spoluautori sledovali 234 kriticky chorých pacientov starších než 60&nbsp;rokov prijatých na jednotku intenzívnej starostlivosti bez AKI a s normálnym vstupným kreatinínom. AKI podľa kritérií AKIN sa rozvinulo u 45 z nich (19 %).</p>
 
-<p>Výsledok bol dvojaký. Vstupná hodnota cystatínu C <em>nepredpovedala</em> vznik AKI (1,05 ± 0,48 oproti 0,94 ± 0,36 mg/l; p = 0,1). Bola však nezávislým prediktorom úmrtia po zohľadnení veku, pohlavia, skóre APACHE II, sepsy, použitia vazopresorov, dĺžky pobytu a albumínu, s pomerom rizika 6,16 (95 % IS 1,46–26,00; p = 0,01). Samotné AKI s úmrtím v tejto kohorte spojené nebolo. Plocha pod krivkou pre predpoveď úmrtia bola pre cystatín C 0,67 (p = 0,03), pre výskyt AKI 0,47 (p = 0,6).</p>
+<p>Výsledok bol dvojaký. Vstupná hodnota cystatínu C <em>nepredpovedala</em> vznik AKI (1,05 ± 0,48 oproti 0,94 ± 0,36&nbsp;mg/l; p = 0,1). Bola však nezávislým prediktorom úmrtia po zohľadnení veku, pohlavia, skóre APACHE II, sepsy, použitia vazopresorov, dĺžky pobytu a albumínu, s pomerom rizika 6,16 (95 % IS 1,46–26,00; p = 0,01). Samotné AKI s úmrtím v tejto kohorte spojené nebolo. Plocha pod krivkou pre predpoveď úmrtia bola pre cystatín C 0,67 (p = 0,03), pre výskyt AKI 0,47 (p = 0,6).</p>
 
 <p>Interpretovať to treba opatrne. Súbor bol malý, interval spoľahlivosti pomeru rizika mimoriadne široký a zistenie, že AKI nesúvisí s úmrtnosťou, odporuje väčšine literatúry — autori to pripisujú tomu, že zaradenie podľa normálneho vstupného kreatinínu v tejto vekovej skupine nerozdelilo pacientov správne. Napriek tomu údaje podporujú výklad, že zvýšený cystatín C odráža aj zápal a celkovú závažnosť stavu, nielen glomerulovú filtráciu. V modeli Liu a spoluautorov preto nemusí ísť o čisto obličkový ukazovateľ.</p>
 
@@ -149,7 +149,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Na kohorte 7 076 starších hospitalizovaných pacientov so zlyhávaním srdca bol zostavený a vnútorne validovaný logistický model rizika AKI z ôsmich údajov dostupných do 24 hodín od prijatia: diuretiká užívané pred prijatím, hypertenzia, diabetes, chlopňová chyba, CHOCHP, CKD, cystatín C pri prijatí a ejekčná frakcia ľavej komory. Vo validačnej časti dosiahol AUC 0,804 pri prijateľnej kalibrácii.</p>
+<p>Na kohorte 7&nbsp;076 starších hospitalizovaných pacientov so zlyhávaním srdca bol zostavený a vnútorne validovaný logistický model rizika AKI z ôsmich údajov dostupných do 24&nbsp;hodín od prijatia: diuretiká užívané pred prijatím, hypertenzia, diabetes, chlopňová chyba, CHOCHP, CKD, cystatín C pri prijatí a ejekčná frakcia ľavej komory. Vo validačnej časti dosiahol AUC 0,804 pri prijateľnej kalibrácii.</p>
 
 <p>Prínos modelu je však prahovo závislý a dôkaz oslabuje jednocentrový retrospektívny dizajn so zjavným preučením v tréningovej časti. Pred akýmkoľvek rutinným použitím je nevyhnutná externá validácia v nezávislých kohortách a prospektívne overenie — presne tak, ako to formulujú samotní autori.</p>
 

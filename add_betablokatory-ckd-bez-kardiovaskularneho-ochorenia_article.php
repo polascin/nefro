@@ -57,15 +57,15 @@ $articles[] = [
 
 <p>Išlo o <strong>celonárodnú kohortovú štúdiu</strong> využívajúcu údaje kórejského systému zdravotného poistenia. Pacienti boli identifikovaní v rokoch 2012 až 2015.</p>
 
-<p>Chronická choroba obličiek bola definovaná ako eGFR <strong>&lt; 60 ml/min/1,73 m²</strong> aspoň pri dvoch meraniach. Do analýzy boli zaradení pacienti bez predchádzajúceho preukázaného kardiovaskulárneho ochorenia.</p>
+<p>Chronická choroba obličiek bola definovaná ako eGFR <strong>&lt; 60&nbsp;ml/min/1,73&nbsp;m²</strong> aspoň pri dvoch meraniach. Do analýzy boli zaradení pacienti bez predchádzajúceho preukázaného kardiovaskulárneho ochorenia.</p>
 
-<p>Za používateľov betablokátorov boli považovaní pacienti, ktorí mali predpísaný betablokátor najmenej <strong>6 mesiacov</strong>.</p>
+<p>Za používateľov betablokátorov boli považovaní pacienti, ktorí mali predpísaný betablokátor najmenej <strong>6&nbsp;mesiacov</strong>.</p>
 
 <p>Autori použili <strong>propensity score matching</strong> v pomere 1 : 2, teda sa snažili štatisticky vyrovnať rozdiely medzi používateľmi a nepoužívateľmi betablokátorov. Po párovaní bolo zahrnutých:</p>
 
 <ul>
-  <li>9 067 používateľov betablokátorov,</li>
-  <li>17 094 nepoužívateľov betablokátorov.</li>
+  <li>9&nbsp;067 používateľov betablokátorov,</li>
+  <li>17&nbsp;094 nepoužívateľov betablokátorov.</li>
 </ul>
 
 <p>Primárne sledované výsledky boli celková mortalita a 4-bodové MACE, teda veľké nežiaduce kardiovaskulárne príhody zahŕňajúce kardiovaskulárne úmrtie, nefatálny infarkt myokardu, cievnu mozgovú príhodu a hospitalizáciu pre srdcové zlyhávanie.</p>

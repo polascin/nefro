@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Prakticky nefrologicky prehlad AUA 2026 pre medicinsky manazment nefrolitiazy.
+ * Prakticky nefrologicky prehľad AUA 2026 pre medicinsky manazment nefrolitiazy.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -80,7 +80,7 @@ $articles[] = [
 
 <h3>Hyperkalciúria</h3>
 
-<p>Pri kalciových kameňoch a vysokom močovom vápniku sa odporúča obmedziť sodík a zachovať normálny príjem vápnika zo stravy, približne 1 000 až 1 200 mg denne u väčšiny dospelých. Nízkovápniková diéta môže zvýšiť črevnú absorpciu oxalátu a riziko kalcium-oxalátových kameňov.</p>
+<p>Pri kalciových kameňoch a vysokom močovom vápniku sa odporúča obmedziť sodík a zachovať normálny príjem vápnika zo stravy, približne 1&nbsp;000 až 1&nbsp;200&nbsp;mg denne u väčšiny dospelých. Nízkovápniková diéta môže zvýšiť črevnú absorpciu oxalátu a riziko kalcium-oxalátových kameňov.</p>
 
 <p>Ak diéta nestačí a kamene recidivujú, možno ponúknuť tiazidové alebo tiazidom podobné diuretikum. Účinok závisí aj od kontroly sodíka. Treba sledovať tlak krvi, sodík, draslík, kreatinín, glukózu a urát; zvážiť treba riziko hypotenzie, hypokaliémie, hyponatriémie, hyperurikémie a poruchy glukózovej tolerancie.</p>
 

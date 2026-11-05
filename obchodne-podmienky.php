@@ -254,7 +254,7 @@ include 'legal_head.php';
                 <h3>8. Odstúpenie od zmluvy</h3>
                 <p>
                     Ak ste <strong>spotrebiteľ</strong>, máte pri zmluvách uzatvorených na diaľku
-                    právo odstúpiť od zmluvy do <strong>14 dní</strong> bez uvedenia dôvodu.
+                    právo odstúpiť od zmluvy do <strong>14 dní</strong> bez uvedenia dôvodu.
                 </p>
                 <div class="info-box-yellow">
                     <p>
@@ -272,7 +272,7 @@ include 'legal_head.php';
                     <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?></a>
                     s uvedením variabilného symbolu. Postačuje jednoznačne formulované vyhlásenie;
                     formulár nie je povinný. Zaplatenú sumu vám predávajúci vráti na účet,
-                    z ktorého platba prišla, najneskôr do 14 dní od doručenia oznámenia.
+                    z ktorého platba prišla, najneskôr do 14 dní od doručenia oznámenia.
                 </p>
                 <p>
                     Ak ste nakupovali <strong>ako podnikateľ</strong> (uviedli ste IČO),
@@ -308,7 +308,7 @@ include 'legal_head.php';
                 <p>
                     Ak nie ste s vybavením reklamácie spokojní alebo sa domnievate, že predávajúci
                     porušil vaše práva, môžete sa naň najprv obrátiť so žiadosťou o nápravu
-                    (e-mailom). Ak na ňu predávajúci odpovie zamietavo alebo neodpovie do 30 dní,
+                    (e-mailom). Ak na ňu predávajúci odpovie zamietavo alebo neodpovie do 30 dní,
                     máte ako spotrebiteľ právo podať <strong>návrh na alternatívne riešenie
                     sporu</strong> subjektu ADR podľa zákona č. 391/2015 Z. z., napríklad
                     Slovenskej obchodnej inšpekcii
@@ -339,10 +339,10 @@ include 'legal_head.php';
                 </p>
                 <p>
                     <strong>Doby uchovávania sa líšia podľa údaja</strong>; nie všetko sa drží
-                    10 rokov. Zaplatená objednávka ako účtovný doklad vrátane dokladu o súhlasoch
-                    10 rokov; neuhradená alebo zrušená objednávka 90 dní; IP adresa a prehliadač
-                    90 dní (potom sa z objednávky odstránia); prístup na stiahnutie 2 roky
-                    a podrobnosti o stiahnutiach 4 roky, potom zostáva len ich počet.
+                    10 rokov. Zaplatená objednávka ako účtovný doklad vrátane dokladu o súhlasoch
+                    10 rokov; neuhradená alebo zrušená objednávka 90 dní; IP adresa a prehliadač
+                    90 dní (potom sa z objednávky odstránia); prístup na stiahnutie 2 roky
+                    a podrobnosti o stiahnutiach 4 roky, potom zostáva len ich počet.
                     Úplný prehľad vrátane vašich práv je v
                     <a href="/privacy">Zásadách ochrany osobných údajov</a>.
                 </p>

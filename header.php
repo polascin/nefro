@@ -20,14 +20,14 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
 ?>
 <header class="site-header" role="banner" id="domov">
   <div class="site-header__wrapper">
-    
+
     <!-- Vľavo - Logo (1/3) -->
     <div class="site-header__col site-header__col--left">
         <a href="index.php" class="site-header__logo-link">
             <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="site-header__logo-img">
         </a>
     </div>
-    
+
     <!-- Stred - Nadpis a Podnadpis (1/3) -->
     <div class="site-header__col site-header__col--center">
         <a href="index.php" class="site-header__title-link">
@@ -52,12 +52,12 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
             </p>
         <?php endif; ?>
     </div>
-    
+
     <!-- Vpravo - Profil (1/3) -->
     <div class="site-header__col site-header__col--right">
         <?php include 'header_profile.php'; ?>
     </div>
-    
+
   </div>
 
   <?php

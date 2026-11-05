@@ -33,14 +33,14 @@ $articles[] = [
 
 <h2>Usporiadanie štúdie</h2>
 
-<p>Autori použili celoštátne juhokórejské údaje zdravotných poisťovní z rokov 2018 až 2023. Z <strong>141 093 pacientov s CKD, ktorí začali užívať tradičné NSAID</strong>, do porovnania vstúpili tí, ktorým bola súčasne predpísaná liečba potláčajúca sekréciu žalúdočnej kyseliny:</p>
+<p>Autori použili celoštátne juhokórejské údaje zdravotných poisťovní z rokov 2018 až 2023. Z <strong>141&nbsp;093 pacientov s CKD, ktorí začali užívať tradičné NSAID</strong>, do porovnania vstúpili tí, ktorým bola súčasne predpísaná liečba potláčajúca sekréciu žalúdočnej kyseliny:</p>
 
 <ul>
-  <li>5 315 pacientov s PPI,</li>
-  <li>7 112 pacientov s H2-antihistaminikom.</li>
+  <li>5&nbsp;315 pacientov s PPI,</li>
+  <li>7&nbsp;112 pacientov s H2-antihistaminikom.</li>
 </ul>
 
-<p>Porovnávaná kohorta teda zahŕňala 12 427 pacientov, čo je necelých 9 % z pôvodného súboru užívateľov NSAID. Väčšina pacientov s CKD, ktorým bolo NSAID predpísané, gastroprotekciu nedostala – samo osebe zaujímavé číslo.</p>
+<p>Porovnávaná kohorta teda zahŕňala 12&nbsp;427 pacientov, čo je necelých 9 % z pôvodného súboru užívateľov NSAID. Väčšina pacientov s CKD, ktorým bolo NSAID predpísané, gastroprotekciu nedostala – samo osebe zaujímavé číslo.</p>
 
 <p>Na vyváženie pozorovaných rozdielov medzi skupinami autori použili stabilizované inverzné váženie podľa pravdepodobnosti liečby. Nelineárne vzťahy medzi kumulatívnou expozíciou liekom a progresiou CKD analyzovali Coxovým modelom s obmedzenými kubickými splajnami. Analýzy citlivosti zamerané na prípady s nešpecifikovaným štádiom CKD podľa autorov potvrdili robustnosť hlavného nálezu.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h2>Podskupiny a problém krátkej expozície</h2>
 
-<p>Relatívne vyššie riziko pri PPI bolo najvýraznejšie u žien, u pacientov s CKD v štádiu G3, vo veku 71 rokov a viac a pri liečbe trvajúcej 1 až 15 dní.</p>
+<p>Relatívne vyššie riziko pri PPI bolo najvýraznejšie u žien, u pacientov s CKD v štádiu G3, vo veku 71&nbsp;rokov a viac a pri liečbe trvajúcej 1 až 15&nbsp;dní.</p>
 
 <p>Podskupinové výsledky treba interpretovať opatrne. Štatistická významnosť v jednej podskupine a jej neprítomnosť v druhej sama osebe nedokazuje, že sa účinok medzi skupinami skutočne líši – na také tvrdenie je potrebný významný test interakcie.</p>
 

@@ -29,7 +29,7 @@ $articles[] = [
   <figcaption>Ilustračná poloschematická scéna, nie snímka pacienta ani lieku. V jednej obličke sa stretáva novotvorba erytrocytov so zásobou železa.</figcaption>
 </figure>
 
-<p>Inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2) v združenej analýze 85 dvojito zaslepených randomizovaných štúdií zvýšili hemoglobín oproti kontrole o 0,60 g/dl a hematokrit o 2,36 percentuálneho bodu. Rozdiel je malý a štatisticky konzistentný. Autori sami označujú jeho klinický význam za nejasný. Priemerný vstupný hemoglobín bol 13,6 g/dl, takže išlo prevažne o ľudí bez anémie, nie o bežnú nefrologickú ambulanciu pacientov s anémiou pri chronickej chorobe obličiek (CKD).</p>
+<p>Inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2) v združenej analýze 85 dvojito zaslepených randomizovaných štúdií zvýšili hemoglobín oproti kontrole o 0,60&nbsp;g/dl a hematokrit o 2,36 percentuálneho bodu. Rozdiel je malý a štatisticky konzistentný. Autori sami označujú jeho klinický význam za nejasný. Priemerný vstupný hemoglobín bol 13,6&nbsp;g/dl, takže išlo prevažne o ľudí bez anémie, nie o bežnú nefrologickú ambulanciu pacientov s anémiou pri chronickej chorobe obličiek (CKD).</p>
 
 <p>Súčasne klesá saturácia transferínu a podľa správy autorov aj feritín. To nie je obraz doplnených zásob železa. Ak však feritín alebo saturácia prejdú prah, pri ktorom KDIGO železo odporúča zvážiť, vysvetlenie spotrebou na erytropoézu tento prah neruší.</p>
 
@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>Yang a spolupracovníci prehľadali PubMed, Web of Science a Cochrane Central od vzniku databáz do 22. júla 2026. Zaradili dvojito zaslepené randomizované štúdie u ľudí s aspoň jednou z týchto diagnóz: kardiovaskulárne ochorenie, diabetes, srdcové zlyhanie alebo CKD. Porovnávacou liečbou bolo placebo alebo iný liek. Údaje extrahovali traja posudzovatelia nezávisle od seba a združili ich modelom náhodných účinkov.</p>
 
-<p>Primárnymi ukazovateľmi boli zmena hemoglobínu a hematokritu. Vedľajšími boli koncentrácia erytrocytov, erytropoetín, sérové železo, feritín, saturácia transferínu (TSAT) a hepcidín. Analýza zahŕňa 70 543 účastníkov. Medián trvania bol 24 týždňov, medzikvartilové rozpätie 12 až 32 týždňov. Priemerný vek bol 62,4 roka (SD 9,4), žien bolo 25 334 (35,9 %). Vstupný hematokrit bol 41,5 % (SD 4,9). Placebo bolo porovnávacou liečbou v 78 štúdiách (67 208 účastníkov), iný liek v 7 štúdiách (3 335 účastníkov), najčastejšie sitagliptín v 2 štúdiách (1 158 účastníkov).</p>
+<p>Primárnymi ukazovateľmi boli zmena hemoglobínu a hematokritu. Vedľajšími boli koncentrácia erytrocytov, erytropoetín, sérové železo, feritín, saturácia transferínu (TSAT) a hepcidín. Analýza zahŕňa 70&nbsp;543 účastníkov. Medián trvania bol 24&nbsp;týždňov, medzikvartilové rozpätie 12 až 32&nbsp;týždňov. Priemerný vek bol 62,4 roka (SD 9,4), žien bolo 25&nbsp;334 (35,9 %). Vstupný hematokrit bol 41,5 % (SD 4,9). Placebo bolo porovnávacou liečbou v 78 štúdiách (67&nbsp;208 účastníkov), iný liek v 7 štúdiách (3&nbsp;335 účastníkov), najčastejšie sitagliptín v 2 štúdiách (1&nbsp;158 účastníkov).</p>
 
 <div class="table-responsive" role="region" aria-label="Zmeny hemoglobínu, hematokritu, erytropoetínu a saturácie transferínu pri inhibítoroch SGLT2" tabindex="0">
 <table>
@@ -52,9 +52,9 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Hemoglobín</th>
-      <td>+0,55 g/dl (0,49 až 0,61)</td>
-      <td>−0,08 g/dl (−0,13 až −0,03)</td>
-      <td>+0,60 g/dl (0,55 až 0,66)</td>
+      <td>+0,55&nbsp;g/dl (0,49 až 0,61)</td>
+      <td>−0,08&nbsp;g/dl (−0,13 až −0,03)</td>
+      <td>+0,60&nbsp;g/dl (0,55 až 0,66)</td>
     </tr>
     <tr>
       <th scope="row">Hematokrit</th>
@@ -78,17 +78,17 @@ $articles[] = [
 </table>
 </div>
 
-<p>Rozdiely hemoglobínu, hematokritu a saturácie transferínu sú štatisticky významné (p &lt; 0,001). Rozdiel erytropoetínu je tiež významný (p = 0,01), interval spoľahlivosti je však široký. V kontrolnom ramene hemoglobín klesol o 0,08 g/dl (p = 0,003). Hematokrit v kontrole sa významne nezmenil (p = 0,07). Na rozdiele hemoglobínu sa preto podieľa aj malý pokles v kontrole, nielen nárast pri inhibítore SGLT2.</p>
+<p>Rozdiely hemoglobínu, hematokritu a saturácie transferínu sú štatisticky významné (p &lt; 0,001). Rozdiel erytropoetínu je tiež významný (p = 0,01), interval spoľahlivosti je však široký. V kontrolnom ramene hemoglobín klesol o 0,08&nbsp;g/dl (p = 0,003). Hematokrit v kontrole sa významne nezmenil (p = 0,07). Na rozdiele hemoglobínu sa preto podieľa aj malý pokles v kontrole, nielen nárast pri inhibítore SGLT2.</p>
 
 <p>Zmeny vnútri ramien a rozdiel medzi ramenami sú samostatné združené odhady. Pri saturácii transferínu sa vnútroramenné zmeny a medzi skupinový rozdiel číselne nesčítajú. Na porovnanie s kontrolou platí rozdiel −0,84 percentuálneho bodu.</p>
 
 <p>Štyri zo šiestich vedľajších ukazovateľov boli s inhibítormi SGLT2 spojené významne. Abstrakt z nich menovite uvádza len erytropoetín a saturáciu transferínu. Koncentráciu erytrocytov, feritín, sérové železo a hepcidín číslami neuvádza. Správa Univerzitného medicínskeho centra v Groningene k tej istej práci hovorí, že feritín klesol a sérové železo sa podstatne nezmenilo. Veľkosť týchto dvoch zmien abstrakt neudáva. Hepcidín v abstrakte vyhodnotený nie je, takže z neho nemožno tvrdiť ani významný pokles, ani absenciu zmeny.</p>
 
-<h2>Prečo vstupný hemoglobín 13,6 g/dl obmedzuje prenos do ambulancie</h2>
+<h2>Prečo vstupný hemoglobín 13,6&nbsp;g/dl obmedzuje prenos do ambulancie</h2>
 
-<p>Väčšina zaradených ľudí anémiu nemala. Priestor na ďalší nárast je iný ako u pacienta s hemoglobínom okolo 9 g/dl, ktorý už dostáva látku stimulujúcu erytropoézu (ESA). Abstrakt metaanalýzy takúto podskupinu neuvádza.</p>
+<p>Väčšina zaradených ľudí anémiu nemala. Priestor na ďalší nárast je iný ako u pacienta s hemoglobínom okolo 9&nbsp;g/dl, ktorý už dostáva látku stimulujúcu erytropoézu (ESA). Abstrakt metaanalýzy takúto podskupinu neuvádza.</p>
 
-<p>Komentár European Renal Best Practice (ERBP) k odporúčaniu KDIGO 2026 zhŕňa osobitne štúdie fázy 3 pri CKD: nárast hemoglobínu oproti placebu približne o 0,7 g/dl a hematokritu o 2,2 až 2,4 percentuálneho bodu. To je bližšie nefrologickej populácii. Stále to nie je odhad pre dialyzovaného pacienta s anémiou liečeného ESA a v tomto texte nebol znova prepočítaný z pôvodných štúdií. Je to syntéza komentára, nie výsledok metaanalýzy v JAMA.</p>
+<p>Komentár European Renal Best Practice (ERBP) k odporúčaniu KDIGO 2026 zhŕňa osobitne štúdie fázy 3 pri CKD: nárast hemoglobínu oproti placebu približne o 0,7&nbsp;g/dl a hematokritu o 2,2 až 2,4 percentuálneho bodu. To je bližšie nefrologickej populácii. Stále to nie je odhad pre dialyzovaného pacienta s anémiou liečeného ESA a v tomto texte nebol znova prepočítaný z pôvodných štúdií. Je to syntéza komentára, nie výsledok metaanalýzy v JAMA.</p>
 
 <h2>Hemoglobín rastie, markery železa klesajú</h2>
 
@@ -108,11 +108,11 @@ $articles[] = [
 
 <ul>
   <li><strong>Plný text práce v JAMA nebol v čase prípravy článku voľne dostupný.</strong> Čísla primárnych ukazovateľov, erytropoetínu a saturácie transferínu sú zo štruktúrovaného abstraktu. Smer zmeny feritínu a sérového železa je zo správy pracoviska autorov, bez intervalu spoľahlivosti.</li>
-  <li><strong>Hepcidín, koncentrácia erytrocytov a pomer zmeny hematokritu k hemoglobínu v abstrakte vyčíslené nie sú.</strong> Tvrdenie o sklone 3,73 ani o poklese feritínu o 15,05 ng/ml sa preto nepreberá. Rovnako sa nepreberá tvrdenie, že hepcidín sa v tejto metaanalýze významne nezmenil.</li>
-  <li><strong>Súbor nie je kohorta anémie pri CKD.</strong> Priemerný hemoglobín 13,6 g/dl to ukazuje priamo. Trvanie 4 až 219 týždňov abstrakt neuvádza. Uvádza medián 24 týždňov a medzikvartilové rozpätie 12 až 32 týždňov.</li>
-  <li><strong>Odhad 0,7 g/dl pri CKD je syntéza komentára ERBP,</strong> nie výsledok tejto metaanalýzy, a nebol tu znova extrahovaný z pôvodných štúdií fázy 3.</li>
-  <li><strong>Klinický význam nárastu o 0,60 g/dl autori označujú za nejasný.</strong> Mediačné analýzy, podľa ktorých nárast hemoglobínu súvisí s kardiorenálnym prínosom, pochádzajú zo staršieho prehľadu. Nepotvrdzujú, že prínos inhibítorov SGLT2 ide cez hemoglobín.</li>
-  <li><strong>Bezpečnosť pri už prítomnej erytrocytóze komentár ERBP necháva otvorenú.</strong> Pri hemoglobíne nad 16,5 g/dl u mužov a nad 16 g/dl u žien, najmä pri nedostatku železa, leukocytóze, trombocytóze, svrbení alebo splenomegálii, treba pomýšľať na polycytémiu vera. To je iná otázka než anémia.</li>
+  <li><strong>Hepcidín, koncentrácia erytrocytov a pomer zmeny hematokritu k hemoglobínu v abstrakte vyčíslené nie sú.</strong> Tvrdenie o sklone 3,73 ani o poklese feritínu o 15,05&nbsp;ng/ml sa preto nepreberá. Rovnako sa nepreberá tvrdenie, že hepcidín sa v tejto metaanalýze významne nezmenil.</li>
+  <li><strong>Súbor nie je kohorta anémie pri CKD.</strong> Priemerný hemoglobín 13,6&nbsp;g/dl to ukazuje priamo. Trvanie 4 až 219&nbsp;týždňov abstrakt neuvádza. Uvádza medián 24&nbsp;týždňov a medzikvartilové rozpätie 12 až 32&nbsp;týždňov.</li>
+  <li><strong>Odhad 0,7&nbsp;g/dl pri CKD je syntéza komentára ERBP,</strong> nie výsledok tejto metaanalýzy, a nebol tu znova extrahovaný z pôvodných štúdií fázy 3.</li>
+  <li><strong>Klinický význam nárastu o 0,60&nbsp;g/dl autori označujú za nejasný.</strong> Mediačné analýzy, podľa ktorých nárast hemoglobínu súvisí s kardiorenálnym prínosom, pochádzajú zo staršieho prehľadu. Nepotvrdzujú, že prínos inhibítorov SGLT2 ide cez hemoglobín.</li>
+  <li><strong>Bezpečnosť pri už prítomnej erytrocytóze komentár ERBP necháva otvorenú.</strong> Pri hemoglobíne nad 16,5&nbsp;g/dl u mužov a nad 16&nbsp;g/dl u žien, najmä pri nedostatku železa, leukocytóze, trombocytóze, svrbení alebo splenomegálii, treba pomýšľať na polycytémiu vera. To je iná otázka než anémia.</li>
 </ul>
 
 <h2>Záver</h2>
@@ -134,7 +134,7 @@ $articles[] = [
 
 <h3>Poznámka k dôkazom</h3>
 
-<p><small>Štruktúrovaný abstrakt metaanalýzy bol overený cez PubMed (PMID 42925557) a OpenAlex. Úplný autorský zoznam, 11 mien, pochádza z PubMed. Plný text JAMA bol v čase prípravy uzavretý. Smer zmeny feritínu a sérového železa je preto prevzatý zo správy Univerzitného medicínskeho centra v Groningene z 26. októbra 2026 a je tak v texte označený. Komentár ERBP (PMID 41604211, PMC13423824) bol čítaný v plnom znení, vrátane časti o inhibítoroch SGLT2 a o základnom paneli vyšetrení. Prehľad Casesa, Cigarrána, Górriza a Núñeza bol overený na úrovni abstraktu a bibliografie (PMID 38604895). Anglické vydanie má DOI 10.1016/j.nefroe.2024.03.011. Predloha zamieňala hornú hranicu intervalu vnútroramennej zmeny hemoglobínu (0,61) s rozdielom oproti kontrole (0,60), uvádzala rozsah trvania 4 až 219 týždňov namiesto medzikvartilového rozpätia, pripisovala metaanalýze neoverený sklon 3,73 a pokles feritínu o 15,05 ng/ml a tvrdila, že hepcidín sa významne nezmenil. Tieto údaje abstrakt neobsahuje a do článku neprešli. Autor projektu doplnil oddelenie výsledku randomizovaného porovnania od mechanistického výkladu, vzťah malého poklesu saturácie k prahom KDIGO a limity prenosu na anemického pacienta liečeného ESA.</small></p>
+<p><small>Štruktúrovaný abstrakt metaanalýzy bol overený cez PubMed (PMID 42925557) a OpenAlex. Úplný autorský zoznam, 11 mien, pochádza z PubMed. Plný text JAMA bol v čase prípravy uzavretý. Smer zmeny feritínu a sérového železa je preto prevzatý zo správy Univerzitného medicínskeho centra v Groningene z 26. októbra 2026 a je tak v texte označený. Komentár ERBP (PMID 41604211, PMC13423824) bol čítaný v plnom znení, vrátane časti o inhibítoroch SGLT2 a o základnom paneli vyšetrení. Prehľad Casesa, Cigarrána, Górriza a Núñeza bol overený na úrovni abstraktu a bibliografie (PMID 38604895). Anglické vydanie má DOI 10.1016/j.nefroe.2024.03.011. Predloha zamieňala hornú hranicu intervalu vnútroramennej zmeny hemoglobínu (0,61) s rozdielom oproti kontrole (0,60), uvádzala rozsah trvania 4 až 219&nbsp;týždňov namiesto medzikvartilového rozpätia, pripisovala metaanalýze neoverený sklon 3,73 a pokles feritínu o 15,05&nbsp;ng/ml a tvrdila, že hepcidín sa významne nezmenil. Tieto údaje abstrakt neobsahuje a do článku neprešli. Autor projektu doplnil oddelenie výsledku randomizovaného porovnania od mechanistického výkladu, vzťah malého poklesu saturácie k prahom KDIGO a limity prenosu na anemického pacienta liečeného ESA.</small></p>
 
 <h3>Súvisiace články</h3>
 

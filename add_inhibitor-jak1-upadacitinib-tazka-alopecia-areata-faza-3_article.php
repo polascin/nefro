@@ -97,19 +97,19 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Populácia</th>
-      <td>dospievajúci a dospelí vo veku 12 až &lt; 64 rokov s ťažkou alopéciou areata (SALT ≥ 50)</td>
+      <td>dospievajúci a dospelí vo veku 12 až &lt; 64&nbsp;rokov s ťažkou alopéciou areata (SALT ≥ 50)</td>
     </tr>
     <tr>
       <th scope="row">Randomizácia</th>
-      <td>2 : 2 : 1 na upadacitinib 15 mg, upadacitinib 30 mg alebo zodpovedajúce placebo, raz denne</td>
+      <td>2 : 2 : 1 na upadacitinib 15&nbsp;mg, upadacitinib 30&nbsp;mg alebo zodpovedajúce placebo, raz denne</td>
     </tr>
     <tr>
       <th scope="row">Rozsah</th>
-      <td>1 399 randomizovaných; UP-AA1: 676, UP-AA2: 723</td>
+      <td>1&nbsp;399 randomizovaných; UP-AA1: 676, UP-AA2: 723</td>
     </tr>
     <tr>
       <th scope="row">Ramená (UP-AA1 / UP-AA2)</th>
-      <td>15 mg: 270 / 289; 30 mg: 271 / 289; placebo: 135 / 145</td>
+      <td>15&nbsp;mg: 270 / 289; 30&nbsp;mg: 271 / 289; placebo: 135 / 145</td>
     </tr>
     <tr>
       <th scope="row">Východiskové SALT</th>
@@ -117,7 +117,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Vek a pohlavie</th>
-      <td>priemer 36 rokov (rozpätie 12–64); 826 žien (59,0 %)</td>
+      <td>priemer 36&nbsp;rokov (rozpätie 12–64); 826 žien (59,0 %)</td>
     </tr>
     <tr>
       <th scope="row">Primárny cieľ</th>
@@ -131,7 +131,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Vekové kritérium v metódach je 12 až &lt; 64 rokov; vo výsledkoch autori uvádzajú rozpätie 12–64. Ide o bežný rozdiel medzi protokolovým zápisom a popisnou štatistikou, nie o druhú populáciu.</p>
+<p>Vekové kritérium v metódach je 12 až &lt; 64&nbsp;rokov; vo výsledkoch autori uvádzajú rozpätie 12–64. Ide o bežný rozdiel medzi protokolovým zápisom a popisnou štatistikou, nie o druhú populáciu.</p>
 
 <h2>Účinnosť: primárny cieľ v 24. týždni</h2>
 
@@ -142,8 +142,8 @@ $articles[] = [
   <thead>
     <tr>
       <th scope="col">Štúdia</th>
-      <th scope="col">Upadacitinib 15 mg</th>
-      <th scope="col">Upadacitinib 30 mg</th>
+      <th scope="col">Upadacitinib 15&nbsp;mg</th>
+      <th scope="col">Upadacitinib 30&nbsp;mg</th>
       <th scope="col">Placebo</th>
     </tr>
   </thead>
@@ -209,11 +209,11 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Upadacitinib 15 mg</th>
+      <th scope="row">Upadacitinib 15&nbsp;mg</th>
       <td>9 (1,6 %)</td>
     </tr>
     <tr>
-      <th scope="row">Upadacitinib 30 mg</th>
+      <th scope="row">Upadacitinib 30&nbsp;mg</th>
       <td>13 (2,3 %)</td>
     </tr>
     <tr>
@@ -224,11 +224,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Súhrn neuvádza menovatele týchto percent osobitne; pri spočítaní ramien (559 pri 15 mg, 560 pri 30 mg, 280 pri placebe) sa uverejnené podiely zhodujú. Závažné udalosti teda neboli časté, ale pri aktívnej liečbe ich bolo viac než pri placebe. Inhibítory JAK ako skupina nesú známe riziká závažných infekcií, venózneho tromboembolizmu, závažných kardiovaskulárnych príhod a malignít; EMA pre ne stanovila obmedzenia najmä u osôb vo veku 65 rokov a viac, pri kardiovaskulárnom riziku, u dlhodobých fajčiarov a pri zvýšenom riziku nádoru. Tieto triedové opatrenia platia aj vtedy, keď konkrétna štúdia v alopécii areata nové signály nenašla.</p>
+<p>Súhrn neuvádza menovatele týchto percent osobitne; pri spočítaní ramien (559 pri 15&nbsp;mg, 560 pri 30&nbsp;mg, 280 pri placebe) sa uverejnené podiely zhodujú. Závažné udalosti teda neboli časté, ale pri aktívnej liečbe ich bolo viac než pri placebe. Inhibítory JAK ako skupina nesú známe riziká závažných infekcií, venózneho tromboembolizmu, závažných kardiovaskulárnych príhod a malignít; EMA pre ne stanovila obmedzenia najmä u osôb vo veku 65&nbsp;rokov a viac, pri kardiovaskulárnom riziku, u dlhodobých fajčiarov a pri zvýšenom riziku nádoru. Tieto triedové opatrenia platia aj vtedy, keď konkrétna štúdia v alopécii areata nové signály nenašla.</p>
 
 <h2>Regulačný stav: EÚ nie je to isté ako FDA ani ako úhrada na Slovensku</h2>
 
-<p>Upadacitinib (Rinvoq) nie je v týchto štúdiách skúšaný ako nefrologická indikácia. Na stránke EMA je ťažká alopécia areata uvedená medzi terapeutickými indikáciami lieku; prehľad agentúry opisuje práve tieto dve štúdie s 1 399 účastníkmi. Verejné oznámenia výrobcu datujú rozhodnutie Európskej komisie na 29. júl 2026 pre dospelých a dospievajúcich od 12 rokov s ťažkou alopéciou areata, v dávkach 15 mg a 30 mg raz denne. Centrálne povolenie platí v celej EÚ, teda aj na Slovensku; <strong>dostupnosť v ambulancii, úhrada zdravotnou poisťovňou a miesto v terapeutickom poradí sú však samostatné vnútroštátne rozhodnutia</strong> a z tejto štúdie nevyplývajú.</p>
+<p>Upadacitinib (Rinvoq) nie je v týchto štúdiách skúšaný ako nefrologická indikácia. Na stránke EMA je ťažká alopécia areata uvedená medzi terapeutickými indikáciami lieku; prehľad agentúry opisuje práve tieto dve štúdie s 1&nbsp;399 účastníkmi. Verejné oznámenia výrobcu datujú rozhodnutie Európskej komisie na 29. júl 2026 pre dospelých a dospievajúcich od 12&nbsp;rokov s ťažkou alopéciou areata, v dávkach 15&nbsp;mg a 30&nbsp;mg raz denne. Centrálne povolenie platí v celej EÚ, teda aj na Slovensku; <strong>dostupnosť v ambulancii, úhrada zdravotnou poisťovňou a miesto v terapeutickom poradí sú však samostatné vnútroštátne rozhodnutia</strong> a z tejto štúdie nevyplývajú.</p>
 
 <p>V otvorených zdrojoch sme v čase spracovania (september 2026) nenašli schválenú indikáciu alopécie areata zo strany amerického FDA; liek tam má iné imunologické indikácie. Článok preto nemá implikovať, že ide o celosvetovo rovnako označený liek na alopéciu areata, ani že ho možno na Slovensku predpisovať mimo platného SPC, indikačných obmedzení a pravidiel úhrady.</p>
 
@@ -239,7 +239,7 @@ $articles[] = [
 <ul>
   <li><strong>Infekcie.</strong> Najčastejšie hlásené udalosti v UP-AA zahŕňali infekcie dýchacích ciest. Pacient s CKD má vyššie infekčné riziko; febrilná infekcia navyše zvyšuje riziko dehydratácie a akútneho zhoršenia funkcie obličiek.</li>
   <li><strong>Laboratórne odchýlky.</strong> Zvýšenie kreatínkinázy patrilo medzi časté nálezy. Interpretácia svalových enzýmov a krvného obrazu patrí k bežnému monitorovaniu podľa SPC, nie k „kozmetickej“ nežiaducej udalosti.</li>
-  <li><strong>Dávkovanie pri CKD.</strong> Podľa otvoreného európskeho plánu riadenia rizík a SPC nie je pri miernej a stredne ťažkej poruche funkcie obličiek úprava dávky potrebná. Pri ťažkej poruche (eGFR 15 až &lt; 30 ml/min/1,73 m²) je pre alopéciu areata v týchto dokumentoch uvedená odporúčaná dávka 15 mg raz denne. Použitie pri terminálnom zlyhaní obličiek (eGFR &lt; 15 ml/min/1,73 m²) nebolo študované a neodporúča sa. Presné dávky treba vždy overiť v aktuálnom SPC a v miestnych pravidlách; <strong>tento článok dávkovanie neskúša ani nenahrádza SPC</strong>.</li>
+  <li><strong>Dávkovanie pri CKD.</strong> Podľa otvoreného európskeho plánu riadenia rizík a SPC nie je pri miernej a stredne ťažkej poruche funkcie obličiek úprava dávky potrebná. Pri ťažkej poruche (eGFR 15 až &lt; 30&nbsp;ml/min/1,73&nbsp;m²) je pre alopéciu areata v týchto dokumentoch uvedená odporúčaná dávka 15&nbsp;mg raz denne. Použitie pri terminálnom zlyhaní obličiek (eGFR &lt; 15&nbsp;ml/min/1,73&nbsp;m²) nebolo študované a neodporúča sa. Presné dávky treba vždy overiť v aktuálnom SPC a v miestnych pravidlách; <strong>tento článok dávkovanie neskúša ani nenahrádza SPC</strong>.</li>
   <li><strong>Interakcie.</strong> Upadacitinib sa metabolizuje cez CYP3A4; silné inhibítory a induktory menia expozíciu. To je relevantné pri bežnej polyfarmácii pacienta s CKD.</li>
 </ul>
 
@@ -248,7 +248,7 @@ $articles[] = [
 <h2>Limity</h2>
 
 <ul>
-  <li>Primárny horizont je 24 týždňov; 28-týždňové predĺženie súhrn číselne nerozoberá a dlhodobá udržateľnosť aj bezpečnosť sa ešte skúmajú.</li>
+  <li>Primárny horizont je 24&nbsp;týždňov; 28-týždňové predĺženie súhrn číselne nerozoberá a dlhodobá udržateľnosť aj bezpečnosť sa ešte skúmajú.</li>
   <li>Súhrn neuvádza percentá SALT 0, SALT ≤ 10, obočia, mihalníc ani kvality života. Tieto ciele preto nemožno z otvoreného textu kvantifikovať.</li>
   <li>Priemerné východiskové SALT 83,9 opisuje ťažko postihnutú populáciu; výsledky sa nedajú automaticky preniesť na ľahšiu chorobu.</li>
   <li>Horná veková hranica protokolu vylučuje starších pacientov, teda práve skupinu, pre ktorú EMA pri inhibítoroch JAK stanovila prísnejšie podmienky použitia.</li>
@@ -257,11 +257,11 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Upadacitinib 15 mg a 30 mg raz denne v dvoch veľkých štúdiách fázy 3 výrazne zvýšil podiel dospelých a dospievajúcich s ťažkou alopéciou areata, ktorí v 24. týždni dosiahli SALT ≤ 20, oproti takmer nulovej odpovedi pri placebe. Bezpečnostný obraz bol v súlade s triedou a so schválenými indikáciami, so závažnými udalosťami v ráde jednotiek percent. Primárnym cieľom nebola úplná obnova vlasov. Mediálne číslo 23 % pre SALT 0 sa v otvorenom primárnom súhrne nepotvrdilo, a preto sa tu neuvádza. V EÚ je ťažká alopécia areata medzi indikáciami Rinvoqu; to neznamená automatickú úhradu ani to, že ide o nefrologický liek. Pri pacientovi s CKD treba dávku, infekčné riziko a interakcie riadiť podľa aktuálneho SPC, nie podľa spravodajského titulku.</p>
+<p>Upadacitinib 15&nbsp;mg a 30&nbsp;mg raz denne v dvoch veľkých štúdiách fázy 3 výrazne zvýšil podiel dospelých a dospievajúcich s ťažkou alopéciou areata, ktorí v 24. týždni dosiahli SALT ≤ 20, oproti takmer nulovej odpovedi pri placebe. Bezpečnostný obraz bol v súlade s triedou a so schválenými indikáciami, so závažnými udalosťami v ráde jednotiek percent. Primárnym cieľom nebola úplná obnova vlasov. Mediálne číslo 23 % pre SALT 0 sa v otvorenom primárnom súhrne nepotvrdilo, a preto sa tu neuvádza. V EÚ je ťažká alopécia areata medzi indikáciami Rinvoqu; to neznamená automatickú úhradu ani to, že ide o nefrologický liek. Pri pacientovi s CKD treba dávku, infekčné riziko a interakcie riadiť podľa aktuálneho SPC, nie podľa spravodajského titulku.</p>
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Mostaghimi A, Gooderham MJ, Lynde C, et al. Upadacitinib for Severe Alopecia Areata in Adults and Adolescents: Two Phase 3 UP-AA Randomized Clinical Trials. <em>JAMA Dermatol</em>. Published online August 12, 2026. doi:<a href="https://doi.org/10.1001/jamadermatol.2026.2853" target="_blank" rel="noopener noreferrer">10.1001/jamadermatol.2026.2853</a> (PMID <a href="https://pubmed.ncbi.nlm.nih.gov/42584887/" target="_blank" rel="noopener noreferrer">42584887</a>; ClinicalTrials.gov NCT06012240). Mediálny príklad nesprávneho stotožnenia SALT ≤ 20 s úplnou obnovou: Nextech, 3. 9. 2026, <a href="https://www.nextech.sk/a/Liek-na-reumu-preukazal-schopnost-aj-uplne-obnovit-rast-vlasov" target="_blank" rel="noopener noreferrer">Liek na reumu preukázal schopnosť aj úplne obnoviť rast vlasov</a>. Regulačný prehľad: <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/rinvoq" target="_blank" rel="noopener noreferrer">EMA EPAR Rinvoq</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Mostaghimi A, Gooderham MJ, Lynde C, et al. Upadacitinib for Severe Alopecia Areata in Adults and Adolescents: Two Phase 3 UP-AA Randomized Clinical Trials. <em>JAMA Dermatol</em>. Published online August 12, 2026. doi:<a href="https://doi.org/10.1001/jamadermatol.2026.2853" target="_blank" rel="noopener noreferrer">10.1001/jamadermatol.2026.2853</a> (PMID <a href="https://pubmed.ncbi.nlm.nih.gov/42584887/" target="_blank" rel="noopener noreferrer">42584887</a>; ClinicalTrials.gov NCT06012240). Mediálny príklad nesprávneho stotožnenia SALT ≤ 20&nbsp;s úplnou obnovou: Nextech, 3. 9. 2026, <a href="https://www.nextech.sk/a/Liek-na-reumu-preukazal-schopnost-aj-uplne-obnovit-rast-vlasov" target="_blank" rel="noopener noreferrer">Liek na reumu preukázal schopnosť aj úplne obnoviť rast vlasov</a>. Regulačný prehľad: <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/rinvoq" target="_blank" rel="noopener noreferrer">EMA EPAR Rinvoq</a>.</em></p>
 HTML,
 ];
 

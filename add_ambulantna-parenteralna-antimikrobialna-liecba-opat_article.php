@@ -2,7 +2,7 @@
 
 /**
  * add_ambulantna-parenteralna-antimikrobialna-liecba-opat_article.php
- * Ambulantna parenteralna antimikrobialna liecba so zameranim na bezpecnost a ochranu zil pri CKD.
+ * Ambulantna parenterálna antimikrobiálna liečba so zameraním na bezpečnosť a ochranu zil pri CKD.
  *
  * Povodni autori klucoveho spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -97,7 +97,7 @@ $articles[] = [
 
 <h2>Cievny prístup sa vyberá podľa lieku, trvania aj budúcnosti pacienta</h2>
 
-<p>Periférna kanyla je vhodná najmä na krátku liečbu. Midline katéter možno u dospelých zvážiť pri kratších kúrach, často do 14 dní, ak je liek kompatibilný s periférnou žilou. Tento časový rámec však vychádza z odporúčania s veľmi nízkou kvalitou dôkazov a nenahrádza individuálne posúdenie vlastností roztoku ani stavu žíl.</p>
+<p>Periférna kanyla je vhodná najmä na krátku liečbu. Midline katéter možno u dospelých zvážiť pri kratších kúrach, často do 14&nbsp;dní, ak je liek kompatibilný s periférnou žilou. Tento časový rámec však vychádza z odporúčania s veľmi nízkou kvalitou dôkazov a nenahrádza individuálne posúdenie vlastností roztoku ani stavu žíl.</p>
 
 <p>Periférne zavedený centrálny katéter (PICC) poskytuje dlhodobejší prístup, ale prináša riziko trombózy, infekcie, oklúzie, malpozície a mechanických komplikácií. Zaviesť ho „pre istotu“ ešte pred rozhodnutím o potrebe a dĺžke intravenóznej liečby nie je správny postup.</p>
 
@@ -120,7 +120,7 @@ $articles[] = [
 <h3>Lieky vyžadujúce osobitnú pozornosť</h3>
 
 <ul>
-  <li><strong>Vankomycín:</strong> pri závažných infekciách spôsobených MRSA konsenzus ASHP, IDSA, PIDS a SIDP uprednostňuje monitorovanie expozície podľa AUC pred samotným sledovaním minimálnej koncentrácie. Bežne uvádzaný cieľ AUC<sub>24</sub> 400 až 600 mg·h/l predpokladá MIC 1 mg/l stanovenú referenčnou mikrodilučnou metódou a nemožno ho nekriticky prenášať na každú diagnózu, populáciu ani metódu stanovenia MIC.</li>
+  <li><strong>Vankomycín:</strong> pri závažných infekciách spôsobených MRSA konsenzus ASHP, IDSA, PIDS a SIDP uprednostňuje monitorovanie expozície podľa AUC pred samotným sledovaním minimálnej koncentrácie. Bežne uvádzaný cieľ AUC<sub>24</sub> 400 až 600&nbsp;mg·h/l predpokladá MIC 1&nbsp;mg/l stanovenú referenčnou mikrodilučnou metódou a nemožno ho nekriticky prenášať na každú diagnózu, populáciu ani metódu stanovenia MIC.</li>
   <li><strong>Aminoglykozidy:</strong> majú kumulatívne riziko nefrotoxicity a ototoxicity. Dlhšie ambulantné podávanie potrebuje presvedčivú indikáciu, individualizovaný farmakokinetický plán, terapeutické monitorovanie a aktívne zisťovanie porúch sluchu alebo rovnováhy.</li>
   <li><strong>Cefepím a ďalšie renálne eliminované betalaktámy:</strong> akumulácia môže vyvolať encefalopatiu, myoklónie alebo epileptické záchvaty. Renálna dysfunkcia patrí k najvýznamnejším rizikovým faktorom neurotoxicity cefepímu, ktorá sa môže objaviť aj napriek formálne upravenej dávke.</li>
   <li><strong>Daptomycín:</strong> vyžaduje sledovanie kreatínkinázy, svalových príznakov a funkcie obličiek. Častejšie kontroly môžu byť potrebné pri poruche funkcie obličiek, vyšších dávkach alebo súbežnej myotoxickej liečbe.</li>

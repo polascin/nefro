@@ -40,7 +40,7 @@ if ($requestMethod === 'POST') {
             if (mb_strlen($content, 'UTF-8') < 3) {
                 $errorMessage = 'Príspevok je príliš krátky (min. 3 znaky).';
             } elseif (mb_strlen($content, 'UTF-8') > 3000) {
-                $errorMessage = 'Príspevok je príliš dlhý (max. 3 000 znakov).';
+                $errorMessage = 'Príspevok je príliš dlhý (max. 3 000 znakov).';
             } else {
                 try {
                     if ($action === 'new_reply' && $parentId > 0) {
@@ -276,11 +276,11 @@ function discAvatarSrc(array $row): string
                 class="disc-form__textarea"
                 rows="4"
                 maxlength="3000"
-                placeholder="Napíšte svoj príspevok… (max. 3 000 znakov)"
+                placeholder="Napíšte svoj príspevok… (max. 3 000 znakov)"
                 required
                 aria-describedby="newPostCounter"
               ></textarea>
-              <div class="disc-form__counter" id="newPostCounter" aria-live="polite">0 / 3 000</div>
+              <div class="disc-form__counter" id="newPostCounter" aria-live="polite">0 / 3 000</div>
             </div>
             <div class="disc-form__actions">
               <button type="submit" class="btn-primary disc-form__submit">Pridať príspevok</button>
@@ -416,10 +416,10 @@ function discAvatarSrc(array $row): string
                           class="disc-form__textarea disc-form__textarea--reply"
                           rows="3"
                           maxlength="3000"
-                          placeholder="Napíšte odpoveď… (max. 3 000 znakov)"
+                          placeholder="Napíšte odpoveď… (max. 3 000 znakov)"
                           required
                         ></textarea>
-                        <div class="disc-form__counter" aria-live="polite">0 / 3 000</div>
+                        <div class="disc-form__counter" aria-live="polite">0 / 3 000</div>
                       </div>
                       <div class="disc-form__actions">
                         <button type="submit" class="btn-primary disc-form__submit">Odpovedať</button>

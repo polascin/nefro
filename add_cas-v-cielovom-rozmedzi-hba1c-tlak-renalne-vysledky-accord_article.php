@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Usporiadanie analýzy a populácia</h2>
 
-<p>Išlo o post hoc observačnú kohortovú analýzu údajov zo štúdie ACCORD (<em>Action to Control Cardiovascular Risk in Diabetes</em>). Zahrnutých bolo <strong>6542 účastníkov</strong> s diabetes mellitus 2. typu a prítomným kardiovaskulárnym ochorením alebo viacerými kardiovaskulárnymi rizikovými faktormi, ktorí mali počas prvých 12 mesiacov po randomizácii najmenej <strong>tri merania</strong> HbA1c aj STK.</p>
+<p>Išlo o post hoc observačnú kohortovú analýzu údajov zo štúdie ACCORD (<em>Action to Control Cardiovascular Risk in Diabetes</em>). Zahrnutých bolo <strong>6542 účastníkov</strong> s diabetes mellitus 2. typu a prítomným kardiovaskulárnym ochorením alebo viacerými kardiovaskulárnymi rizikovými faktormi, ktorí mali počas prvých 12&nbsp;mesiacov po randomizácii najmenej <strong>tri merania</strong> HbA1c aj STK.</p>
 
 <p>ACCORD používala faktoriálne usporiadanie s dvoma liečebnými cieľmi:</p>
 
@@ -54,18 +54,18 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Krvný tlak</th>
-      <td>STK pod 120 mmHg</td>
-      <td>STK pod 140 mmHg</td>
+      <td>STK pod 120&nbsp;mmHg</td>
+      <td>STK pod 140&nbsp;mmHg</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Tlaková vetva ACCORD pritom zahrnula 4733 účastníkov, glykemická 10 251. Verejne dostupný súhrn analýzy neuvádza, ako presne bolo cieľové rozmedzie definované pre jednotlivé randomizačné vetvy ani ako sa postupovalo u účastníkov, ktorí neboli randomizovaní v tlakovej vetve. Pri preberaní konkrétnych prahov je preto namieste opatrnosť.</p>
+<p>Tlaková vetva ACCORD pritom zahrnula 4733 účastníkov, glykemická 10&nbsp;251. Verejne dostupný súhrn analýzy neuvádza, ako presne bolo cieľové rozmedzie definované pre jednotlivé randomizačné vetvy ani ako sa postupovalo u účastníkov, ktorí neboli randomizovaní v tlakovej vetve. Pri preberaní konkrétnych prahov je preto namieste opatrnosť.</p>
 
 <h3>Ako sa čas v cieľovom rozmedzí kategorizoval</h3>
 
-<p>HbA1c-TTR a STK-TTR sa hodnotili počas prvých 12 mesiacov po randomizácii. Každý ukazovateľ bol samostatne rozdelený na hodnotu <strong>100 %</strong> a na <strong>tercily medzi zvyšnými účastníkmi</strong>. Referenčnou skupinou pre jednotlivé porovnania bol teda najnižší tercil <em>spomedzi tých, ktorí nedosiahli 100 %</em> – nie najnižší tercil celej kohorty.</p>
+<p>HbA1c-TTR a STK-TTR sa hodnotili počas prvých 12&nbsp;mesiacov po randomizácii. Každý ukazovateľ bol samostatne rozdelený na hodnotu <strong>100 %</strong> a na <strong>tercily medzi zvyšnými účastníkmi</strong>. Referenčnou skupinou pre jednotlivé porovnania bol teda najnižší tercil <em>spomedzi tých, ktorí nedosiahli 100 %</em> – nie najnižší tercil celej kohorty.</p>
 
 <p>Pre spoločné hodnotenie autori vytvorili <strong>štyri kategórie</strong>:</p>
 
@@ -157,7 +157,7 @@ $articles[] = [
 
 <p>Toto je pri interpretácii najdôležitejšie. Pôvodná glykemická vetva ACCORD ukázala, že intenzívna liečba s cieľom HbA1c pod 6,0 % <strong>neznížila</strong> primárny kardiovaskulárny výsledok a bola spojená so <strong>zvýšenou celkovou mortalitou</strong>; táto vetva bola preto predčasne ukončená. Zistenia novej analýzy nemožno použiť ako argument pre univerzálne dosahovanie HbA1c pod 6,0 %.</p>
 
-<p>Podobne tlaková vetva ACCORD nepreukázala, že cieľ STK pod 120 mmHg znižuje výskyt zloženého kardiovaskulárneho ukazovateľa oproti cieľu pod 140 mmHg (pomer hazardu 0,88; 95 % interval spoľahlivosti 0,73 – 1,06; P = 0,20). Znížil sa výskyt cievnej mozgovej príhody, ale závažné nežiaduce udalosti pripísané antihypertenzívnej liečbe boli v intenzívnej vetve podstatne častejšie (3,3 % oproti 1,3 %; P &lt; 0,001).</p>
+<p>Podobne tlaková vetva ACCORD nepreukázala, že cieľ STK pod 120&nbsp;mmHg znižuje výskyt zloženého kardiovaskulárneho ukazovateľa oproti cieľu pod 140&nbsp;mmHg (pomer hazardu 0,88; 95 % interval spoľahlivosti 0,73 – 1,06; P = 0,20). Znížil sa výskyt cievnej mozgovej príhody, ale závažné nežiaduce udalosti pripísané antihypertenzívnej liečbe boli v intenzívnej vetve podstatne častejšie (3,3 % oproti 1,3 %; P &lt; 0,001).</p>
 
 <p>Cieľová hodnota HbA1c aj krvného tlaku musí byť individualizovaná podľa veku, trvania diabetu, rizika hypoglykémie, kognitívneho a funkčného stavu, prítomnosti chronickej choroby obličiek a očakávanej dĺžky života.</p>
 
@@ -165,7 +165,7 @@ $articles[] = [
 
 <p>Pojem <em>time in range</em> sa v diabetológii najčastejšie používa v súvislosti s kontinuálnym monitorovaním glukózy, kde vyjadruje percento času s glykémiou v stanovenom rozmedzí, typicky za dva až dvanásť týždňov. Analogicky sa 24-hodinové ambulantné monitorovanie krvného tlaku týka jediného dňa.</p>
 
-<p>V tejto analýze vychádzal čas v cieľovom rozmedzí z <strong>opakovaných klinických meraní počas 12 mesiacov</strong>. Nešlo o kontinuálny záznam. Ukazovateľ preto zachytáva stabilitu <em>medzi návštevami</em> v priebehu roka, nie skutočný čas strávený v cieľovom rozmedzí v každom dni. Autori tento rozdiel sami zdôrazňujú a uvádzajú, že krátkodobé metriky naopak nezachytávajú variabilitu za hranicami krátkeho monitorovacieho obdobia. Obe rodiny ukazovateľov teda merajú niečo iné a nie sú zameniteľné.</p>
+<p>V tejto analýze vychádzal čas v cieľovom rozmedzí z <strong>opakovaných klinických meraní počas 12&nbsp;mesiacov</strong>. Nešlo o kontinuálny záznam. Ukazovateľ preto zachytáva stabilitu <em>medzi návštevami</em> v priebehu roka, nie skutočný čas strávený v cieľovom rozmedzí v každom dni. Autori tento rozdiel sami zdôrazňujú a uvádzajú, že krátkodobé metriky naopak nezachytávajú variabilitu za hranicami krátkeho monitorovacieho obdobia. Obe rodiny ukazovateľov teda merajú niečo iné a nie sú zameniteľné.</p>
 
 <p>Pri STK to znamená aj to, že klinické merania nemusia zachytiť nočnú hypertenziu, ranný vzostup tlaku, maskovanú hypertenziu ani domáce hodnoty.</p>
 
@@ -178,7 +178,7 @@ $articles[] = [
 <p>Pri každej kontrole je preto vhodné hodnotiť:</p>
 
 <ol>
-  <li>trend HbA1c za posledných 6 až 12 mesiacov, nie iba poslednú hodnotu,</li>
+  <li>trend HbA1c za posledných 6 až 12&nbsp;mesiacov, nie iba poslednú hodnotu,</li>
   <li>opakované ambulantné alebo domáce merania krvného tlaku,</li>
   <li>albuminúriu a jej vývoj,</li>
   <li>eGFR a rýchlosť jej poklesu,</li>
@@ -207,7 +207,7 @@ $articles[] = [
   <li>že dlhší čas v cieľovom rozmedzí renálne riziko <em>znižuje</em> – TTR nebol randomizovaný;</li>
   <li>synergiu v štatistickom ani biologickom zmysle – chýba formálna analýza interakcie;</li>
   <li>prínos pre tvrdé renálne výsledky posudzované samostatne – makroalbuminúria ani zlyhanie obličiek významnú asociáciu nevykázali;</li>
-  <li>že ciele HbA1c pod 6,0 % alebo STK pod 120 mmHg sú vhodné pre bežnú prax – pôvodné vetvy ACCORD to nepodporujú;</li>
+  <li>že ciele HbA1c pod 6,0 % alebo STK pod 120&nbsp;mmHg sú vhodné pre bežnú prax – pôvodné vetvy ACCORD to nepodporujú;</li>
   <li>prenositeľnosť na populácie mimo vysokorizikovej kohorty ACCORD.</li>
 </ul>
 

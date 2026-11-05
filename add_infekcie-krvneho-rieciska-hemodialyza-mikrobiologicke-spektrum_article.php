@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: infekcie krvneho rieciska pri hemodialyze - mikrobiologicke spektrum.
+ * Odborný článok: infekcie krvneho rieciska pri hemodialyze - mikrobiologicke spektrum.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -41,9 +41,9 @@ $articles[] = [
 
 <h2>Čo skúmala írska štúdia</h2>
 
-<p>Autorský kolektív z Beaumont Hospital v Dubline uskutočnil retrospektívnu longitudinálnu kohortovú štúdiu. Z elektronických zdravotných záznamov získal údaje o hemokultúrach, klinických charakteristikách a infekciách u pacientov liečených hemodialýzou počas 15 rokov.</p>
+<p>Autorský kolektív z Beaumont Hospital v Dubline uskutočnil retrospektívnu longitudinálnu kohortovú štúdiu. Z elektronických zdravotných záznamov získal údaje o hemokultúrach, klinických charakteristikách a infekciách u pacientov liečených hemodialýzou počas 15&nbsp;rokov.</p>
 
-<p>Do analýzy bolo zahrnutých <strong>1 248 pacientov na hemodialýze</strong>, u ktorých sa vyskytlo <strong>522 epizód infekcie krvného riečiska</strong>.</p>
+<p>Do analýzy bolo zahrnutých <strong>1&nbsp;248 pacientov na hemodialýze</strong>, u ktorých sa vyskytlo <strong>522 epizód infekcie krvného riečiska</strong>.</p>
 
 <p>Pozitívne hemokultúry boli rozdelené podľa mikroorganizmov. Výskyt infekcií sa vyjadroval ako počet epizód na 100 pacientorokov a porovnával sa v ročných intervaloch. Autori použili analýzu prerušovaného časového radu s pomermi incidencií, označovanými skratkou IRR, na hodnotenie súvislosti medzi tromi zmenami balíkov protiepidemických opatrení a vývojom infekcií.</p>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Mužské pohlavie bolo spojené so zvýšeným rizikom infekcie: pomer incidencií 1,43 pri P &lt; 0,001. To znamená približne o 43 % vyššiu incidenciu po zohľadnení premenných zahrnutých do modelu. Neznamená to, že mužské pohlavie je priamou biologickou príčinou infekcie. Výsledok môže ovplyvňovať typ cievneho prístupu, komorbidity, správanie, hospitalizácie alebo reziduálne konfundujúce faktory.</p>
 
-<p>Autori uviedli aj súvislosť s vekom nad 34 rokov. Takto stanovená hranica má pri typickej hemodialyzačnej populácii, ktorej podstatná časť je staršia, obmedzenú klinickú užitočnosť. Bez podrobného vysvetlenia vekových kategórií, referenčnej skupiny a modelu nemožno tento výsledok presvedčivo interpretovať a nemá sa prenášať do klinického skríningu ako samostatná riziková hranica.</p>
+<p>Autori uviedli aj súvislosť s vekom nad 34&nbsp;rokov. Takto stanovená hranica má pri typickej hemodialyzačnej populácii, ktorej podstatná časť je staršia, obmedzenú klinickú užitočnosť. Bez podrobného vysvetlenia vekových kategórií, referenčnej skupiny a modelu nemožno tento výsledok presvedčivo interpretovať a nemá sa prenášať do klinického skríningu ako samostatná riziková hranica.</p>
 
 <h2>Otvorenie novej dialyzačnej jednotky a pokles infekcií</h2>
 
@@ -282,7 +282,7 @@ $articles[] = [
 
 <ul>
   <li>pätnásťročné sledovanie,</li>
-  <li>veľká kohorta 1 248 pacientov a 522 zachytených infekčných epizód,</li>
+  <li>veľká kohorta 1&nbsp;248 pacientov a 522 zachytených infekčných epizód,</li>
   <li>vyjadrenie incidencie na pacientoroky,</li>
   <li>mikrobiologické rozdelenie pôvodcov,</li>
   <li>použitie analýzy prerušovaného časového radu namiesto jednoduchého porovnania období,</li>
@@ -296,11 +296,11 @@ $articles[] = [
   <li><strong>Retrospektívny dizajn.</strong> Výsledky závisia od kvality a úplnosti elektronických záznamov.</li>
   <li><strong>Jedno centrum.</strong> Mikrobiologické spektrum a organizačné podmienky nemusia byť prenosné na iné pracoviská.</li>
   <li><strong>Bez randomizácie.</strong> Nemožno spoľahlivo oddeliť účinok intervencií od súbežných časových zmien.</li>
-  <li><strong>Možné zmeny definícií a diagnostiky.</strong> Počas 15 rokov sa mohli meniť kritériá infekcie, odber hemokultúr aj laboratórne metódy.</li>
+  <li><strong>Možné zmeny definícií a diagnostiky.</strong> Počas 15&nbsp;rokov sa mohli meniť kritériá infekcie, odber hemokultúr aj laboratórne metódy.</li>
   <li><strong>Nejasný vplyv cievneho prístupu.</strong> Bez podrobného vývoja podielu katétrov, fistúl a štepov nemožno určiť, do akej miery vysvetľuje pokles infekcií.</li>
   <li><strong>Zmena podielu nie je zmena incidencie.</strong> Relatívny vzostup gramnegatívnych baktérií nemožno označiť za absolútny nárast.</li>
   <li><strong>Možné opakované epizódy u tých istých pacientov.</strong> Z abstraktu nie je jasné, ako model zohľadnil vnútroindividuálnu koreláciu a recidívy.</li>
-  <li><strong>Obmedzená interpretácia veku nad 34 rokov.</strong> Nezvyčajná hranica potrebuje vysvetlenie.</li>
+  <li><strong>Obmedzená interpretácia veku nad 34&nbsp;rokov.</strong> Nezvyčajná hranica potrebuje vysvetlenie.</li>
   <li><strong>Viacero súbežných intervencií.</strong> Otvorenie novej jednotky mohlo byť spojené s personálnymi, technickými a organizačnými zmenami.</li>
   <li><strong>Hraničná štatistická významnosť pri gramnegatívnych infekciách.</strong> Hodnotu P = 0,048 treba interpretovať opatrne, najmä pri troch testovaných intervenciách a viacerých mikrobiologických skupinách, teda pri opakovanom testovaní.</li>
   <li><strong>Chýbajúce klinické výsledky v abstrakte.</strong> Nie sú uvedené údaje o mortalite, hospitalizáciách, endokarditíde, strate cievneho prístupu ani o rezistencii.</li>
@@ -319,14 +319,14 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Centrálny venózny katéter zvyšuje infekčné riziko</td><td>Jednoznačne potvrdené</td><td>Najvýznamnejší modifikovateľný rizikový faktor.</td></tr>
-    <tr><td>Podiel stafylokokových infekcií v skúmanom centre klesol</td><td>Potvrdené</td><td>Zo 60 % na 34,8 % počas 15 rokov.</td></tr>
+    <tr><td>Podiel stafylokokových infekcií v skúmanom centre klesol</td><td>Potvrdené</td><td>Zo 60 % na 34,8 % počas 15&nbsp;rokov.</td></tr>
     <tr><td>Podiel gramnegatívnych paličiek vzrástol</td><td>Potvrdené</td><td>Z 18,5 % na 43,9 %.</td></tr>
     <tr><td>Absolútna incidencia gramnegatívnych infekcií stúpla</td><td>Nepodporené</td><td>Modelovaný pomer incidencií 0,49 svedčí skôr o poklese.</td></tr>
     <tr><td>Gramnegatívne baktérie sú dnes dominantné vo všetkých centrách</td><td>Nedokázané</td><td>Ide o nález z jednej írskej nemocnice.</td></tr>
     <tr><td>Otvorenie novej jednotky spôsobilo pokles infekcií</td><td>Nedokázané</td><td>Preukázaná je časová asociácia; autori sami hovoria o asociácii.</td></tr>
     <tr><td>Pomer incidencií 0,42 znamená približne 58-percentné relatívne zníženie</td><td>Podporené</td><td>Presný význam závisí od parametrizácie časového modelu.</td></tr>
     <tr><td>Muži mali vyššiu incidenciu infekcií</td><td>Potvrdené v tejto kohorte</td><td>Kauzalita nie je dokázaná; môže ísť o typ prístupu a komorbidity.</td></tr>
-    <tr><td>Vek nad 34 rokov je praktická hranica infekčného rizika</td><td>Nesprávne</td><td>Bez ďalšieho vysvetlenia má pre dialyzačnú populáciu malú hodnotu.</td></tr>
+    <tr><td>Vek nad 34&nbsp;rokov je praktická hranica infekčného rizika</td><td>Nesprávne</td><td>Bez ďalšieho vysvetlenia má pre dialyzačnú populáciu malú hodnotu.</td></tr>
     <tr><td>Každá pozitívna hemokultúra u pacienta s katétrom je katétrová infekcia</td><td>Nesprávne</td><td>Zdrojom môže byť pneumónia, uroinfekcia, cholangitída či endokarditída.</td></tr>
     <tr><td>Každý koaguláza-negatívny stafylokok je kontaminant</td><td>Nesprávne</td><td>Je aj častým skutočným pôvodcom katétrovej infekcie.</td></tr>
     <tr><td>Prevenciu možno zabezpečiť jedným antiseptickým prípravkom</td><td>Nesprávne</td><td>Potrebný je komplexný, auditovaný balík opatrení so spätnou väzbou.</td></tr>
@@ -360,7 +360,7 @@ $articles[] = [
 <h2>Zdroje</h2>
 
 <ol>
-  <li><strong>Conlon P, Skally M, de Barra E, O'Kelly P, Greene M, Fitzpatrick F, Conlon PJ.</strong> <em>Declining rates of bloodstream infections among haemodialysis patients and the temporal association with changes in infection, prevention and control bundles of care between 2009 and 2023.</em> J Nephrol. Publikované online 14. augusta 2026. doi: 10.1093/joneph/aajag171. Retrospektívna kohorta 1 248 pacientov z Beaumont Hospital v Dubline. <a href="https://doi.org/10.1093/joneph/aajag171" target="_blank" rel="noopener noreferrer">Primárna publikácia</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/42599172/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
+  <li><strong>Conlon P, Skally M, de Barra E, O'Kelly P, Greene M, Fitzpatrick F, Conlon PJ.</strong> <em>Declining rates of bloodstream infections among haemodialysis patients and the temporal association with changes in infection, prevention and control bundles of care between 2009 and 2023.</em> J Nephrol. Publikované online 14. augusta 2026. doi: 10.1093/joneph/aajag171. Retrospektívna kohorta 1&nbsp;248 pacientov z Beaumont Hospital v Dubline. <a href="https://doi.org/10.1093/joneph/aajag171" target="_blank" rel="noopener noreferrer">Primárna publikácia</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/42599172/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Lok CE, Huber TS, Lee T, a spol.</strong> <em>KDOQI Clinical Practice Guideline for Vascular Access: 2019 Update.</em> Am J Kidney Dis. 2020;75(4 Suppl 2):S1–S164. doi: 10.1053/j.ajkd.2019.12.001. <a href="https://doi.org/10.1053/j.ajkd.2019.12.001" target="_blank" rel="noopener noreferrer">Odporúčanie KDOQI pre cievny prístup</a>.</li>
   <li><strong>Mermel LA, Allon M, Bouza E, a spol.</strong> <em>Clinical Practice Guidelines for the Diagnosis and Management of Intravascular Catheter-Related Infection: 2009 Update by the Infectious Diseases Society of America.</em> Clin Infect Dis. 2009;49(1):1–45. doi: 10.1086/599376. Stále platná verzia odporúčania IDSA pre manažment katétrových infekcií. <a href="https://doi.org/10.1086/599376" target="_blank" rel="noopener noreferrer">Odporúčanie IDSA</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4039170/" target="_blank" rel="noopener noreferrer">plný text</a>.</li>
   <li><strong>Vanholder R, Canaud B, Fluck R, a spol.</strong> <em>Diagnosis, prevention and treatment of haemodialysis catheter-related bloodstream infections (CRBSI): a position statement of European Renal Best Practice.</em> NDT Plus. 2010;3(3):234–246. doi: 10.1093/ndtplus/sfq041. <a href="https://doi.org/10.1093/ndtplus/sfq041" target="_blank" rel="noopener noreferrer">Stanovisko ERBP</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6371390/" target="_blank" rel="noopener noreferrer">plný text</a>.</li>
@@ -394,9 +394,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

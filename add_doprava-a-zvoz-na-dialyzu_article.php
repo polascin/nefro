@@ -80,7 +80,7 @@ a podmienky závisia od toho, kde bývate, a od vášho zdravotného stavu, pret
 <p>O možnostiach dopravy a zvozu sa informujte v
 <strong>Dialyzačnom stredisku Medimpax</strong> v Bratislave-Dúbravke:</p>
 <ul>
-  <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940 609 480</a></li>
+  <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940&nbsp;609&nbsp;480</a></li>
   <li>E-mail: <a href="mailto:medimpax@impax.sk">medimpax@impax.sk</a></li>
 </ul>
 <p>Viac na stránke <a href="dialyza-bratislava.php">Dialyzačné stredisko Bratislava</a>.</p>

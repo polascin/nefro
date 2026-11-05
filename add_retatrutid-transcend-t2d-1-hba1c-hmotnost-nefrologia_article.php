@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: retatrutid v studii TRANSCEND-T2D-1 - kriticke zhodnotenie a nefrologicke suvislosti.
+ * Odborný článok: retatrutid v štúdií TRANSCEND-T2D-1 - kriticke zhodnotenie a nefrologicke suvislosti.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -59,11 +59,11 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><th scope="row">Dizajn</th><td>randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3</td></tr>
-    <tr><th scope="row">Trvanie</th><td>40 týždňov</td></tr>
+    <tr><th scope="row">Trvanie</th><td>40&nbsp;týždňov</td></tr>
     <tr><th scope="row">Pracoviská</th><td>48 centier v USA, Mexiku a Indii</td></tr>
     <tr><th scope="row">Zaraďovanie</th><td>10. apríl 2024 až 21. apríl 2025</td></tr>
     <tr><th scope="row">Skríning a randomizácia</th><td>930 skrínovaných, 537 randomizovaných v pomere 1 : 1 : 1 : 1</td></tr>
-    <tr><th scope="row">Liečba</th><td>retatrutid 4 mg, 9 mg alebo 12 mg podkožne raz týždenne s postupnou titráciou, alebo placebo</td></tr>
+    <tr><th scope="row">Liečba</th><td>retatrutid 4&nbsp;mg, 9&nbsp;mg alebo 12&nbsp;mg podkožne raz týždenne s postupnou titráciou, alebo placebo</td></tr>
     <tr><th scope="row">Primárny ukazovateľ</th><td>zmena HbA1c od začiatku do 40. týždňa</td></tr>
     <tr><th scope="row">Kľúčový sekundárny ukazovateľ</th><td>percentuálna zmena telesnej hmotnosti</td></tr>
     <tr><th scope="row">Registrácia</th><td>ClinicalTrials.gov NCT06354660 (ukončená)</td></tr>
@@ -72,7 +72,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Zaradení boli dospelí od 18 rokov s diabetom 2. typu nedostatočne kontrolovaným samotnou diétou a pohybom, s HbA1c od 7,0 do 9,5 % (53 až 80 mmol/mol) a s BMI najmenej 23 kg/m², ktorí neužívali inú glukózu znižujúcu farmakoterapiu.</p>
+<p>Zaradení boli dospelí od 18&nbsp;rokov s diabetom 2. typu nedostatočne kontrolovaným samotnou diétou a pohybom, s HbA1c od 7,0 do 9,5 % (53 až 80&nbsp;mmol/mol) a s BMI najmenej 23&nbsp;kg/m², ktorí neužívali inú glukózu znižujúcu farmakoterapiu.</p>
 
 <div class="table-responsive" role="region" aria-label="Rozdelenie účastníkov do liečebných skupín" tabindex="0">
 <table>
@@ -83,15 +83,15 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Retatrutid 4 mg</th><td>134</td></tr>
-    <tr><th scope="row">Retatrutid 9 mg</th><td>133</td></tr>
-    <tr><th scope="row">Retatrutid 12 mg</th><td>136</td></tr>
+    <tr><th scope="row">Retatrutid 4&nbsp;mg</th><td>134</td></tr>
+    <tr><th scope="row">Retatrutid 9&nbsp;mg</th><td>133</td></tr>
+    <tr><th scope="row">Retatrutid 12&nbsp;mg</th><td>136</td></tr>
     <tr><th scope="row">Placebo</th><td>134</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Priemerný vek účastníkov bol 48,8 roka (smerodajná odchýlka 12,1), priemerné HbA1c 7,9 % (1,1), priemerný BMI 35,8 kg/m² (7,0) a priemerné trvanie diabetu iba 2,5 roka (4,4). Ženy tvorili 55 % súboru (296 z 537).</p>
+<p>Priemerný vek účastníkov bol 48,8 roka (smerodajná odchýlka 12,1), priemerné HbA1c 7,9 % (1,1), priemerný BMI 35,8&nbsp;kg/m² (7,0) a priemerné trvanie diabetu iba 2,5 roka (4,4). Ženy tvorili 55 % súboru (296 z 537).</p>
 
 <p>Liečebné obdobie na pridelenej liečbe dokončilo 490 účastníkov (91 %) a celú štúdiu 504 účastníkov (94 %).</p>
 
@@ -107,9 +107,9 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Retatrutid 4 mg</th><td>−1,69 p. b. (0,11)</td><td>−0,88 (−1,18 až −0,59)</td></tr>
-    <tr><th scope="row">Retatrutid 9 mg</th><td>−1,86 p. b. (0,10)</td><td>−1,04 (−1,32 až −0,76)</td></tr>
-    <tr><th scope="row">Retatrutid 12 mg</th><td>−1,94 p. b. (0,08)</td><td>−1,12 (−1,39 až −0,85)</td></tr>
+    <tr><th scope="row">Retatrutid 4&nbsp;mg</th><td>−1,69 p. b. (0,11)</td><td>−0,88 (−1,18 až −0,59)</td></tr>
+    <tr><th scope="row">Retatrutid 9&nbsp;mg</th><td>−1,86 p. b. (0,10)</td><td>−1,04 (−1,32 až −0,76)</td></tr>
+    <tr><th scope="row">Retatrutid 12&nbsp;mg</th><td>−1,94 p. b. (0,08)</td><td>−1,12 (−1,39 až −0,85)</td></tr>
     <tr><th scope="row">Placebo</th><td>−0,81 p. b. (0,12)</td><td>referenčná skupina</td></tr>
   </tbody>
 </table>
@@ -146,9 +146,9 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Retatrutid 4 mg</th><td>−11,5 % (0,7)</td><td>asi 8,9 p. b.</td></tr>
-    <tr><th scope="row">Retatrutid 9 mg</th><td>−13,9 % (0,8)</td><td>asi 11,3 p. b.</td></tr>
-    <tr><th scope="row">Retatrutid 12 mg</th><td>−15,3 % (0,8)</td><td>asi 12,7 p. b.</td></tr>
+    <tr><th scope="row">Retatrutid 4&nbsp;mg</th><td>−11,5 % (0,7)</td><td>asi 8,9 p. b.</td></tr>
+    <tr><th scope="row">Retatrutid 9&nbsp;mg</th><td>−13,9 % (0,8)</td><td>asi 11,3 p. b.</td></tr>
+    <tr><th scope="row">Retatrutid 12&nbsp;mg</th><td>−15,3 % (0,8)</td><td>asi 12,7 p. b.</td></tr>
     <tr><th scope="row">Placebo</th><td>−2,6 % (0,5)</td><td>referenčná skupina</td></tr>
   </tbody>
 </table>
@@ -156,7 +156,7 @@ $articles[] = [
 
 <p>Účinok bol jasne závislý od dávky. Rozdiely oproti placebu v poslednom stĺpci sú <strong>vlastným odčítaním priemerov</strong>, nie publikovanými odhadmi liečebného rozdielu – publikovaný abstrakt pri hmotnosti neuvádza ani bodové odhady rozdielu, ani intervaly spoľahlivosti. Treba ich preto brať ako orientačné.</p>
 
-<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6 kg. Z toho vyplýva východisková hmotnosť približne 99 kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte nedosiahla plató.</p>
+<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6&nbsp;kg. Z toho vyplýva východisková hmotnosť približne 99&nbsp;kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte nedosiahla plató.</p>
 
 <div class="pdf-avoid-break">
 <h3>Pozor na rozdielne čísla: dva estimandy</h3>
@@ -194,7 +194,7 @@ $articles[] = [
 
 <p>V štúdii nebola zaznamenaná závažná hypoglykémia. Tento výsledok je priaznivý, ale týka sa <strong>monoterapie</strong> u pacientov, ktorí dovtedy neužívali žiadnu glukózu znižujúcu farmakoterapiu. Riziko môže byť odlišné pri kombinácii s inzulínom alebo derivátmi sulfonylurey.</p>
 
-<p>Počas štúdie zomreli dvaja účastníci, obaja v skupine s dávkou 4 mg; podľa hodnotenia skúšajúcich úmrtia nesúviseli so skúšaným liekom. Takýto malý počet udalostí neumožňuje posúdiť vplyv retatrutidu na mortalitu.</p>
+<p>Počas štúdie zomreli dvaja účastníci, obaja v skupine s dávkou 4&nbsp;mg; podľa hodnotenia skúšajúcich úmrtia nesúviseli so skúšaným liekom. Takýto malý počet udalostí neumožňuje posúdiť vplyv retatrutidu na mortalitu.</p>
 
 <h3>Otvorené bezpečnostné otázky</h3>
 
@@ -279,9 +279,9 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">TRANSCEND-T2D-2<br>(NCT06260722)</th>
-      <td>diabetes 2. typu; retatrutid oproti <strong>semaglutidu</strong>, 80 týždňov</td>
+      <td>diabetes 2. typu; retatrutid oproti <strong>semaglutidu</strong>, 80&nbsp;týždňov</td>
       <td>glykemická kontrola</td>
-      <td>1 250 účastníkov</td>
+      <td>1&nbsp;250 účastníkov</td>
     </tr>
     <tr>
       <th scope="row">TRANSCEND-T2D-3<br>(NCT06297603)</th>
@@ -358,9 +358,9 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Retatrutid aktivuje receptory GIP, GLP-1 a glukagónu</td><td>Potvrdené</td></tr>
-    <tr><td>Pri dávke 12 mg znížil HbA1c o 1,94 percentuálneho bodu</td><td>Potvrdené ako zmena oproti východisku podľa estimandu liečebného režimu</td></tr>
-    <tr><td>Placebom korigovaný pokles HbA1c pri 12 mg bol 1,12 percentuálneho bodu</td><td>Potvrdené; 95 % IS −1,39 až −0,85</td></tr>
-    <tr><td>Pri dávke 12 mg znížil hmotnosť o 15,3 %</td><td>Potvrdené ako priemerná zmena oproti východisku</td></tr>
+    <tr><td>Pri dávke 12&nbsp;mg znížil HbA1c o 1,94 percentuálneho bodu</td><td>Potvrdené ako zmena oproti východisku podľa estimandu liečebného režimu</td></tr>
+    <tr><td>Placebom korigovaný pokles HbA1c pri 12&nbsp;mg bol 1,12 percentuálneho bodu</td><td>Potvrdené; 95 % IS −1,39 až −0,85</td></tr>
+    <tr><td>Pri dávke 12&nbsp;mg znížil hmotnosť o 15,3 %</td><td>Potvrdené ako priemerná zmena oproti východisku</td></tr>
     <tr><td>Rozdiel v hmotnosti oproti placebu bol 12,7 percentuálneho bodu</td><td>Vlastný orientačný prepočet; publikovaný odhad rozdielu ani interval spoľahlivosti abstrakt neuvádza</td></tr>
     <tr><td>Tlačová správa a publikácia uvádzajú rovnaké čísla</td><td>Nie; 16,8 % oproti 15,3 % pre hmotnosť – pravdepodobne rozdiel estimandov</td></tr>
     <tr><td>Retatrutid je účinnejší než semaglutid alebo tirzepatid</td><td>Nedokázané; chýba priame porovnanie (prebieha TRANSCEND-T2D-2)</td></tr>
@@ -380,7 +380,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Praktický záver</h2>
 
-<p>Retatrutid v štúdii TRANSCEND-T2D-1 priniesol výrazný pokles HbA1c a telesnej hmotnosti u dospelých s relatívne včasným diabetom 2. typu a prevažne prítomnou obezitou. Pri najvyššej dávke sa HbA1c za 40 týždňov znížil o 1,94 percentuálneho bodu a hmotnosť o 15,3 %.</p>
+<p>Retatrutid v štúdii TRANSCEND-T2D-1 priniesol výrazný pokles HbA1c a telesnej hmotnosti u dospelých s relatívne včasným diabetom 2. typu a prevažne prítomnou obezitou. Pri najvyššej dávke sa HbA1c za 40&nbsp;týždňov znížil o 1,94 percentuálneho bodu a hmotnosť o 15,3 %.</p>
 
 <p>Výsledky predstavujú významný dôkaz metabolickej účinnosti, nie však dôkaz celkového klinického prínosu. Zatiaľ nevieme, či retatrutid znižuje mortalitu, infarkt myokardu, cievnu mozgovú príhodu, hospitalizácie pre srdcové zlyhávanie alebo progresiu chronickej choroby obličiek.</p>
 
@@ -450,9 +450,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

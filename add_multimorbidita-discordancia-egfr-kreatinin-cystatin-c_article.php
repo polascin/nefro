@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Dizajn analýzy</h2>
 
-<p>Pracovalo sa s údajmi viac než 400 000 účastníkov UK Biobank. Obe hodnoty eGFR sa počítali rovnicami European Kidney Function Consortium (EKFC), čo je metodicky podstatné: použitie jednej rovnicovej rodiny pre kreatinín aj cystatín C odstraňuje časť rozdielu, ktorý by inak vznikol len odlišnou kalibráciou vzorcov.</p>
+<p>Pracovalo sa s údajmi viac než 400&nbsp;000 účastníkov UK Biobank. Obe hodnoty eGFR sa počítali rovnicami European Kidney Function Consortium (EKFC), čo je metodicky podstatné: použitie jednej rovnicovej rodiny pre kreatinín aj cystatín C odstraňuje časť rozdielu, ktorý by inak vznikol len odlišnou kalibráciou vzorcov.</p>
 
 <p><strong>Veľký negatívny rozdiel eGFR</strong> bol definovaný ako eGFRcys nižšia o viac než 30 % oproti eGFRcr, teda (eGFRcys − eGFRcr) / eGFRcr &lt; −30 %.</p>
 
@@ -76,7 +76,7 @@ $articles[] = [
   <li><strong>Pri multimorbidnom pacientovi nepovažovať eGFRcr za hotovú odpoveď.</strong> Platí to najmä pri štyroch a viacerých dlhodobých ochoreniach.</li>
   <li><strong>Cystatín C doplniť vtedy, keď na presnom zaradení záleží.</strong> Hranica CKD 3b/4, rozhodnutie o odoslaní k nefrológovi, príprava na náhradu funkcie obličiek, hodnotenie rizika progresie.</li>
   <li><strong>Cystatín C doplniť aj pri zjavnej nezhode medzi klinikou a laboratórnym nálezom.</strong> Výrazná sarkopénia, strata hmotnosti, imobilita, cirhóza, stav po amputácii.</li>
-  <li><strong>Rozhodujúci je vplyv na dávkovanie liekov.</strong> Pri priamych perorálnych antikoagulanciách, antibiotikách, gabapentinoidoch, metformíne a cytostatikách môže nadhodnotená eGFR viesť k predávkovaniu u krehkého pacienta. KDIGO 2024 odporúča pri dávkovaní liekov s úzkym terapeutickým oknom používať neindexovanú eGFR v ml/min, nie hodnotu prepočítanú na 1,73 m².</li>
+  <li><strong>Rozhodujúci je vplyv na dávkovanie liekov.</strong> Pri priamych perorálnych antikoagulanciách, antibiotikách, gabapentinoidoch, metformíne a cytostatikách môže nadhodnotená eGFR viesť k predávkovaniu u krehkého pacienta. KDIGO 2024 odporúča pri dávkovaní liekov s úzkym terapeutickým oknom používať neindexovanú eGFR v ml/min, nie hodnotu prepočítanú na 1,73&nbsp;m².</li>
   <li><strong>Rozpor interpretovať, nie automaticky uprednostniť nižšiu hodnotu.</strong> Pri aktívnom zápale alebo liečbe glukokortikoidmi je nižšia eGFRcys pravdepodobne skreslená smerom nadol.</li>
   <li><strong>Pri pretrvávajúcej neistote zvážiť meranú clearance.</strong> Zber moču alebo exogénny marker zostávajú referenčnou metódou, keď rozhodnutie nesmie stáť na odhade.</li>
 </ol>

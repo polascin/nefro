@@ -86,10 +86,10 @@ $articles[] = [
 
 <h2>Normálny eGFR nevylučuje CKD</h2>
 
-<p>Podľa KDIGO je CKD definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má zdravotné dôsledky. Diagnózu preto možno stanoviť aj pri eGFR ≥60 ml/min/1,73 m<sup>2</sup>, ak je prítomný pretrvávajúci marker poškodenia obličiek, napríklad:</p>
+<p>Podľa KDIGO je CKD definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má zdravotné dôsledky. Diagnózu preto možno stanoviť aj pri eGFR ≥60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, ak je prítomný pretrvávajúci marker poškodenia obličiek, napríklad:</p>
 
 <ul>
-  <li>albuminúria s pomerom albumín/kreatinín v moči (UACR) ≥30 mg/g, teda ≥3 mg/mmol,</li>
+  <li>albuminúria s pomerom albumín/kreatinín v moči (UACR) ≥30&nbsp;mg/g, teda ≥3&nbsp;mg/mmol,</li>
   <li>abnormalita močového sedimentu alebo pretrvávajúca hematúria renálneho pôvodu,</li>
   <li>tubulárna elektrolytová alebo iná funkčná porucha,</li>
   <li>histologická abnormalita,</li>

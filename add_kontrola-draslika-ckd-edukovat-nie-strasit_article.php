@@ -70,7 +70,7 @@ $articles[] = [
 
 <p>Mnohí pacienti si z edukácie zapamätajú najmä vetu: „Banány nesmiete.“ Alebo: „Pomarančový džús je zakázaný.“ Problém je, že takto formulované odporúčania nevedú pacienta k porozumeniu. Vedú skôr k slepému dodržiavaniu alebo k úplnému odmietnutiu diéty.</p>
 
-<p>Niektoré potraviny, ktoré sa tradične objavovali na zoznamoch zakázaných jedál, nemusia byť pri primeranej porcii problémom. Napríklad jedna šálka melóna alebo zeleného hrozna obsahuje približne 180 mg draslíka, čo je pod bežne používanou hranicou 200 mg na porciu pre potravinu s vysokým obsahom draslíka.</p>
+<p>Niektoré potraviny, ktoré sa tradične objavovali na zoznamoch zakázaných jedál, nemusia byť pri primeranej porcii problémom. Napríklad jedna šálka melóna alebo zeleného hrozna obsahuje približne 180&nbsp;mg draslíka, čo je pod bežne používanou hranicou 200&nbsp;mg na porciu pre potravinu s vysokým obsahom draslíka.</p>
 
 <p>Kľúčom je veľkosť porcie.</p>
 

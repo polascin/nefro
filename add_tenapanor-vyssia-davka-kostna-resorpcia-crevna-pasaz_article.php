@@ -2,8 +2,8 @@
 
 /**
  * add_tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz_article.php
- * Ktori dialyzovani pacienti potrebuju vyssiu davku tenapanoru - suhrnna analyza
- * troch japonskych studii fazy 3 (PLOS ONE 2026;21(8):e0356873).
+ * Ktori dialyzovani pacienti potrebuju vyssiu dávku tenapanoru - suhrnna analyza
+ * troch japonskych štúdií fazy 3 (PLOS ONE 2026;21(8):e0356873).
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -31,7 +31,7 @@ $articles[] = [
 
 <p class="article-dek"><em>Tenapanor nie je viazač fosfátov, ale znižuje ich vstrebávanie v čreve. Nová súhrnná analýza troch japonských štúdií fázy 3 sa pýta prakticky: čím sa líšia pacienti, ktorí po titrácii skončili na najvyšších dávkach. Odpoveďou sú dva signály: kostná resorpcia a črevná pasáž. Oba sú zaujímavé, ani jeden zatiaľ nie je prediktorom.</em></p>
 
-<p>Hyperfosfatémia patrí medzi základné prejavy minerálovej a kostnej poruchy pri chronickej chorobe obličiek (CKD-MBD). U dialyzovaných pacientov sú možnosti odstránenia fosfátov obmedzené: bežný dialyzačný režim odstráni približne <strong>1 800 až 2 520 mg fosfátov týždenne</strong>, čo je výrazne menej, než koľko sa priemerne prijme a vstrebe z potravy. Liečba preto stojí na troch pilieroch: primeranej dialyzačnej dávke, nutričnej intervencii a farmakoterapii.</p>
+<p>Hyperfosfatémia patrí medzi základné prejavy minerálovej a kostnej poruchy pri chronickej chorobe obličiek (CKD-MBD). U dialyzovaných pacientov sú možnosti odstránenia fosfátov obmedzené: bežný dialyzačný režim odstráni približne <strong>1&nbsp;800 až 2&nbsp;520&nbsp;mg fosfátov týždenne</strong>, čo je výrazne menej, než koľko sa priemerne prijme a vstrebe z potravy. Liečba preto stojí na troch pilieroch: primeranej dialyzačnej dávke, nutričnej intervencii a farmakoterapii.</p>
 
 <p>Viazače fosfátov účinkujú v črevnom lúmene, kde viažu fosfáty prijaté potravou. Ich používanie však sprevádza vysoká tabletová záťaž, gastrointestinálne nežiaduce účinky a nedostatočná adherencia. Tenapanor predstavuje farmakologicky odlišný prístup: fosfáty neviaže, ale znižuje ich <strong>paracelulárnu absorpciu</strong> inhibíciou sodíkovo-vodíkového výmenníka 3 (NHE3).</p>
 
@@ -60,12 +60,12 @@ $articles[] = [
       <tr>
         <th scope="row">Japonsko</th>
         <td>PHOZEVEL</td>
-        <td>Začiatok 5 mg dvakrát denne, titrácia na 10, 20 alebo 30 mg dvakrát denne podľa fosfatémie a znášanlivosti; monoterapia aj kombinácia s viazačmi</td>
+        <td>Začiatok 5&nbsp;mg dvakrát denne, titrácia na 10, 20 alebo 30&nbsp;mg dvakrát denne podľa fosfatémie a znášanlivosti; monoterapia aj kombinácia s viazačmi</td>
       </tr>
       <tr>
         <th scope="row">USA</th>
         <td>XPHOZAH</td>
-        <td>Fixne 30 mg dvakrát denne; <strong>len ako prídavná liečba</strong> pri nedostatočnej odpovedi na viazače alebo pri ich neznášanlivosti</td>
+        <td>Fixne 30&nbsp;mg dvakrát denne; <strong>len ako prídavná liečba</strong> pri nedostatočnej odpovedi na viazače alebo pri ich neznášanlivosti</td>
       </tr>
       <tr>
         <th scope="row">EÚ vrátane SR</th>
@@ -105,7 +105,7 @@ $articles[] = [
         <th scope="row">B (n = 80)</th>
         <td>NCT04766398</td>
         <td>Randomizovaná, dvojito zaslepená, placebom kontrolovaná</td>
-        <td>Hemodialýza, refraktérna hyperfosfatémia (fosfor ≥ 6,1 a &lt; 10,0 mg/dl napriek viazačom)</td>
+        <td>Hemodialýza, refraktérna hyperfosfatémia (fosfor ≥ 6,1 a &lt; 10,0&nbsp;mg/dl napriek viazačom)</td>
         <td>Pridanie k existujúcim viazačom</td>
       </tr>
       <tr>
@@ -122,8 +122,8 @@ $articles[] = [
 <p>Do analýzy účinnosti vstúpilo <strong>212 pacientov</strong>, ktorí v 8. týždni užívali tenapanor:</p>
 
 <ul>
-  <li><strong>127 pacientov</strong> na dávke 5 alebo 10 mg dvakrát denne – skupina s nižšou dávkou,</li>
-  <li><strong>85 pacientov</strong> na dávke 20 alebo 30 mg dvakrát denne – skupina s vyššou dávkou.</li>
+  <li><strong>127 pacientov</strong> na dávke 5 alebo 10&nbsp;mg dvakrát denne – skupina s nižšou dávkou,</li>
+  <li><strong>85 pacientov</strong> na dávke 20 alebo 30&nbsp;mg dvakrát denne – skupina s vyššou dávkou.</li>
 </ul>
 
 <p>Bezpečnostná analýza zahŕňala <strong>218 pacientov</strong> (133 v skupine s nižšou a 85 v skupine s vyššou dávkou) – pri porovnávaní percent nežiaducich účinkov treba mať na pamäti, že menovateľ nie je totožný s analýzou účinnosti.</p>
@@ -132,17 +132,17 @@ $articles[] = [
 
 <h3>Kto boli títo pacienti</h3>
 
-<p>Priemerný vek bol <strong>63,2 roka</strong>, muži tvorili 65,1 % a priemerné trvanie dialyzačnej liečby bolo <strong>93,1 mesiaca</strong>, teda takmer osem rokov. Diabetická nefropatia bola príčinou zlyhania obličiek u 32,1 % pacientov. Východisková koncentrácia sérového fosforu dosahovala v priemere <strong>7,39 mg/dl</strong> (približne 2,39 mmol/l), korigovaného vápnika 8,88 mg/dl.</p>
+<p>Priemerný vek bol <strong>63,2 roka</strong>, muži tvorili 65,1 % a priemerné trvanie dialyzačnej liečby bolo <strong>93,1 mesiaca</strong>, teda takmer osem rokov. Diabetická nefropatia bola príčinou zlyhania obličiek u 32,1 % pacientov. Východisková koncentrácia sérového fosforu dosahovala v priemere <strong>7,39&nbsp;mg/dl</strong> (približne 2,39&nbsp;mmol/l), korigovaného vápnika 8,88&nbsp;mg/dl.</p>
 
-<p>Hodnota 7,39 mg/dl je nápadne vysoká a nemožno ju čítať ako „bežnú“ fosfatémiu dialyzovaného pacienta. V štúdiách A a C sa merala <strong>po vysadení viazačov</strong>, teda v stave zámerne navodenej nekontrolovanej hyperfosfatémie; v štúdii B išlo o vstupné kritérium refraktérnosti. Východisková hodnota je teda artefaktom dizajnu, nie odrazom kvality bežnej starostlivosti.</p>
+<p>Hodnota 7,39&nbsp;mg/dl je nápadne vysoká a nemožno ju čítať ako „bežnú“ fosfatémiu dialyzovaného pacienta. V štúdiách A a C sa merala <strong>po vysadení viazačov</strong>, teda v stave zámerne navodenej nekontrolovanej hyperfosfatémie; v štúdii B išlo o vstupné kritérium refraktérnosti. Východisková hodnota je teda artefaktom dizajnu, nie odrazom kvality bežnej starostlivosti.</p>
 
 <h2>Dosiahnuté dávky a kontrola fosfatémie</h2>
 
 <p>Po ôsmich týždňoch bola priemerná dávka:</p>
 
 <ul>
-  <li><strong>8,0 ± 2,5 mg dvakrát denne</strong> v skupine s nižšou dávkou,</li>
-  <li><strong>26,7 ± 4,9 mg dvakrát denne</strong> v skupine s vyššou dávkou.</li>
+  <li><strong>8,0 ± 2,5&nbsp;mg dvakrát denne</strong> v skupine s nižšou dávkou,</li>
+  <li><strong>26,7 ± 4,9&nbsp;mg dvakrát denne</strong> v skupine s vyššou dávkou.</li>
 </ul>
 
 <p>Koncentrácia sérového fosforu počas liečby postupne klesala v oboch skupinách. Zmena oproti východiskovej hodnote sa však medzi skupinami štatisticky významne nelíšila (p = 0,456; zmiešaný model opakovaných meraní, MMRM).</p>
@@ -197,9 +197,9 @@ $articles[] = [
 
 <h3>TRACP-5b – marker kostnej resorpcie</h3>
 
-<p>Každé zvýšenie TRACP-5b o 100 mU/dl bolo spojené s vyššou pravdepodobnosťou zaradenia do skupiny s vyššou dávkou: <strong>OR 1,121 (95 % IS 1,005–1,249; p = 0,040)</strong>.</p>
+<p>Každé zvýšenie TRACP-5b o 100&nbsp;mU/dl bolo spojené s vyššou pravdepodobnosťou zaradenia do skupiny s vyššou dávkou: <strong>OR 1,121 (95 % IS 1,005–1,249; p = 0,040)</strong>.</p>
 
-<p>Efekt treba čítať v mierke skutočného rozdielu medzi skupinami. Ten predstavoval približne 128 mU/dl, čomu zodpovedá pomer šancí okolo 1,16 – teda <strong>skromný efekt</strong>. Dolná hranica intervalu spoľahlivosti (1,005) sa navyše takmer dotýka jednotky. Ide o hranične štatisticky významnú asociáciu, ktorú treba považovať za signál na ďalšie skúmanie, nie za potvrdený prediktor použiteľný na samostatné rozhodovanie.</p>
+<p>Efekt treba čítať v mierke skutočného rozdielu medzi skupinami. Ten predstavoval približne 128&nbsp;mU/dl, čomu zodpovedá pomer šancí okolo 1,16 – teda <strong>skromný efekt</strong>. Dolná hranica intervalu spoľahlivosti (1,005) sa navyše takmer dotýka jednotky. Ide o hranične štatisticky významnú asociáciu, ktorú treba považovať za signál na ďalšie skúmanie, nie za potvrdený prediktor použiteľný na samostatné rozhodovanie.</p>
 
 <p>TRACP-5b je marker aktivity osteoklastov a kostnej resorpcie. Biologická úvaha autorov je priamočiara: približne <strong>85 % celkového telesného fosforu</strong> sa nachádza v kosti vo forme hydroxyapatitu a osteoklastová resorpcia ho uvoľňuje do obehu. Tenapanor pritom účinkuje výlučne v čreve a na kostnú resorpciu priamo nepôsobí. Pacient s vyšším prísunom fosfátov z kostného kompartmentu tak môže potrebovať intenzívnejšiu liečbu – alebo, presnejšie povedané, liečbu zameranú inam než na črevo.</p>
 
@@ -281,7 +281,7 @@ $articles[] = [
   <li>zlúčenie troch štúdií s rozdielnym dizajnom (dve zaslepené, jedna otvorená a jednoramenná),</li>
   <li>zlúčenie monoterapie po vysadení viazačov s prídavnou liečbou; samostatné analýzy neboli pre malé počty uskutočniteľné,</li>
   <li>zlúčenie hemodialýzy, hemodiafiltrácie a peritoneálnej dialýzy napriek odlišnej kinetike odstraňovania fosfátov,</li>
-  <li>krátke, osemtýždňové hodnotenie (v štúdii C sa nevyužilo dostupných 16 týždňov),</li>
+  <li>krátke, osemtýždňové hodnotenie (v štúdii C sa nevyužilo dostupných 16&nbsp;týždňov),</li>
   <li>iba 85 pacientov v skupine s vyššou dávkou pri veľkom počte premenných vo viacrozmernom modeli – riziko nadmerného prispôsobenia modelu,</li>
   <li>výlučne japonská populácia s dlhým dialyzačným vekom a odlišnými stravovacími zvyklosťami,</li>
   <li>protokolová titrácia, ktorá nemusí zodpovedať bežnej klinickej praxi,</li>
@@ -347,7 +347,7 @@ $articles[] = [
   <li><strong>U.S. Food and Drug Administration.</strong> <em>XPHOZAH (tenapanor) tablets — Highlights of Prescribing Information.</em> 2023. <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/213931s000lbl.pdf" target="_blank" rel="noopener noreferrer">FDA</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje pripísané súhrnnej analýze – 212 pacientov v analýze účinnosti (127 a 85), 218 v bezpečnostnej analýze (133 a 85), rozdelenie 107/54/51 podľa modality, vek 63,2 roka, 65,1 % mužov, 93,1 mesiaca dialyzačnej liečby, fosfor 7,39 mg/dl, korigovaný vápnik 8,88 mg/dl, diabetická nefropatia 32,1 %, dávky 8,0 ± 2,5 a 26,7 ± 4,9 mg dvakrát denne, p = 0,456, TRACP-5b 532,4 ± 312,9 oproti 660,1 ± 389,3 mU/dl, BSFS 4,15 ± 0,87 oproti 3,88 ± 0,89, stolice 8,17 ± 3,76 oproti 8,35 ± 3,37 za týždeň, OR 1,121 (95 % IS 1,005–1,249; p = 0,040), OR 0,667 (95 % IS 0,468–0,951; p = 0,025), hnačka 95 (71,4 %) oproti 57 (67,1 %) pri p = 0,546 a mäkká stolica 7 (5,3 %) oproti 5 (5,9 %) – boli overené proti plnému textu a tabuľkám otvorene prístupnej publikácie v PLOS ONE. Bibliografické údaje všetkých citovaných prác vrátane mien autorov boli overené v registri Crossref. Údaj o týždennom odstránení 1 800 – 2 520 mg fosfátov dialýzou pochádza z prehľadu Sprague a spol. (zdroj 5); podiel 85 % telesného fosforu v kosti uvádza samotná primárna práca. Porovnanie dávkovania medzi Japonskom a USA vychádza z registračných údajov FDA (zdroj 10) a z prehľadu Akizawa a spol. (zdroj 2); neprítomnosť tenapanoru v databáze centrálne registrovaných liekov EMA bola overená k septembru 2026. Kritické komentáre – skreslenie indikáciou, selekcia podľa tolerancie, mierka efektu TRACP-5b, nepresné označenie parathormónu za marker kostnej formácie a vnútorná nezrovnalosť v počtoch podľa modality – sú <strong>vlastným odborným hodnotením</strong>, nie záverom pôvodných autorov.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje pripísané súhrnnej analýze – 212 pacientov v analýze účinnosti (127 a 85), 218 v bezpečnostnej analýze (133 a 85), rozdelenie 107/54/51 podľa modality, vek 63,2 roka, 65,1 % mužov, 93,1 mesiaca dialyzačnej liečby, fosfor 7,39&nbsp;mg/dl, korigovaný vápnik 8,88&nbsp;mg/dl, diabetická nefropatia 32,1 %, dávky 8,0 ± 2,5 a 26,7 ± 4,9&nbsp;mg dvakrát denne, p = 0,456, TRACP-5b 532,4 ± 312,9 oproti 660,1 ± 389,3&nbsp;mU/dl, BSFS 4,15 ± 0,87 oproti 3,88 ± 0,89, stolice 8,17 ± 3,76 oproti 8,35 ± 3,37 za týždeň, OR 1,121 (95 % IS 1,005–1,249; p = 0,040), OR 0,667 (95 % IS 0,468–0,951; p = 0,025), hnačka 95 (71,4 %) oproti 57 (67,1 %) pri p = 0,546 a mäkká stolica 7 (5,3 %) oproti 5 (5,9 %) – boli overené proti plnému textu a tabuľkám otvorene prístupnej publikácie v PLOS ONE. Bibliografické údaje všetkých citovaných prác vrátane mien autorov boli overené v registri Crossref. Údaj o týždennom odstránení 1&nbsp;800 – 2&nbsp;520&nbsp;mg fosfátov dialýzou pochádza z prehľadu Sprague a spol. (zdroj 5); podiel 85 % telesného fosforu v kosti uvádza samotná primárna práca. Porovnanie dávkovania medzi Japonskom a USA vychádza z registračných údajov FDA (zdroj 10) a z prehľadu Akizawa a spol. (zdroj 2); neprítomnosť tenapanoru v databáze centrálne registrovaných liekov EMA bola overená k septembru 2026. Kritické komentáre – skreslenie indikáciou, selekcia podľa tolerancie, mierka efektu TRACP-5b, nepresné označenie parathormónu za marker kostnej formácie a vnútorná nezrovnalosť v počtoch podľa modality – sú <strong>vlastným odborným hodnotením</strong>, nie záverom pôvodných autorov.</em></p>
 HTML,
 ];
 

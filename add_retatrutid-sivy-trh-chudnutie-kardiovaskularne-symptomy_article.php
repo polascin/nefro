@@ -118,20 +118,20 @@ $articles[] = [
   </table>
 </div>
 
-<p>Sledovanie je kratšie a nerovnomerné: v diskusii autori uvádzajú medián približne 3 mesiace v ramenách retatrutidu oproti približne 6 mesiacom u komparátorov. V tabuľke 1 preprintu je medián sledovania 125 a 130 dní pri retatrutide oproti 270 a 255 dňom pri semaglutide a tirzepatide. Medián trvania liečby podľa zmienok v poznámkach bol 83 dní v ramene skúšania a 56 dní na sivom trhu. Diabetes 2. typu aj chronická choroba obličiek (CKD) mali v retatrutidových ramenách nízke počty (CKD pod prahom zverejnenia &lt; 11), preto z tejto práce <strong>nemožno vyvodiť špecifické závery pre CKD</strong>.</p>
+<p>Sledovanie je kratšie a nerovnomerné: v diskusii autori uvádzajú medián približne 3&nbsp;mesiace v ramenách retatrutidu oproti približne 6 mesiacom u komparátorov. V tabuľke 1 preprintu je medián sledovania 125 a 130&nbsp;dní pri retatrutide oproti 270 a 255 dňom pri semaglutide a tirzepatide. Medián trvania liečby podľa zmienok v poznámkach bol 83&nbsp;dní v ramene skúšania a 56&nbsp;dní na sivom trhu. Diabetes 2. typu aj chronická choroba obličiek (CKD) mali v retatrutidových ramenách nízke počty (CKD pod prahom zverejnenia &lt; 11), preto z tejto práce <strong>nemožno vyvodiť špecifické závery pre CKD</strong>.</p>
 
 <h2>Úbytok hmotnosti: rameno skúšania versus sivý trh</h2>
 
-<p>Rameno skúšania v bežnej starostlivosti stratilo v okne 6–12 mesiacov v priemere <strong>15,5 %</strong> hmotnosti. To sa blíži váženému priemeru 16,9 % v programoch TRIUMPH-1 až TRIUMPH-4 v 80. týždni, ktorý zahŕňa aj placebo. Toto rameno ostalo zaslepené a obsahuje aj príjemcov placeba, takže 15,5 % <strong>podhodnocuje</strong> účinok aktívneho lieku. Užívatelia produktov zo sivého trhu stratili v tom istom okne <strong>7,2 %</strong> (P = 0,004 oproti ramenu skúšania), čo je porovnateľné s 7,7 % pri spárovanom tirzepatide (P = 0,79) a 4,6 % pri semaglutide (P = 0,13).</p>
+<p>Rameno skúšania v bežnej starostlivosti stratilo v okne 6–12&nbsp;mesiacov v priemere <strong>15,5 %</strong> hmotnosti. To sa blíži váženému priemeru 16,9 % v programoch TRIUMPH-1 až TRIUMPH-4 v 80. týždni, ktorý zahŕňa aj placebo. Toto rameno ostalo zaslepené a obsahuje aj príjemcov placeba, takže 15,5 % <strong>podhodnocuje</strong> účinok aktívneho lieku. Užívatelia produktov zo sivého trhu stratili v tom istom okne <strong>7,2 %</strong> (P = 0,004 oproti ramenu skúšania), čo je porovnateľné s 7,7 % pri spárovanom tirzepatide (P = 0,79) a 4,6 % pri semaglutide (P = 0,13).</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Priemerný percentuálny úbytok hmotnosti v spárovaných ramenách" tabindex="0">
   <table>
     <thead>
       <tr>
         <th scope="col">Rameno</th>
-        <th scope="col">3 mesiace</th>
-        <th scope="col">6 mesiacov</th>
-        <th scope="col">6–12 mesiacov</th>
+        <th scope="col">3&nbsp;mesiace</th>
+        <th scope="col">6&nbsp;mesiacov</th>
+        <th scope="col">6–12&nbsp;mesiacov</th>
       </tr>
     </thead>
     <tbody>

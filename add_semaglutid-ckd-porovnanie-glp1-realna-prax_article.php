@@ -38,7 +38,7 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Autori využili údaje z databázy OptumLabs Data Warehouse a úplný súbor administratívnych údajov Medicare fee-for-service v Spojených štátoch. Zaradili dospelých vo veku ≥21 rokov, ktorí od 1. januára 2019 do 31. decembra 2021 začali liečbu jedným zo štyroch skúmaných agonistov receptora GLP-1.</p>
+<p>Autori využili údaje z databázy OptumLabs Data Warehouse a úplný súbor administratívnych údajov Medicare fee-for-service v Spojených štátoch. Zaradili dospelých vo veku ≥21&nbsp;rokov, ktorí od 1. januára 2019 do 31. decembra 2021 začali liečbu jedným zo štyroch skúmaných agonistov receptora GLP-1.</p>
 
 <p>Išlo o retrospektívnu observačnú štúdiu s rámcom <strong>emulácie cieľovej klinickej štúdie</strong>. Tento postup vopred formuluje podmienky hypotetického randomizovaného skúšania a potom ich čo najvernejšie napodobní v dostupných údajoch. Rozdiely medzi liečenými skupinami autori vyvažovali vážením podľa inverznej pravdepodobnosti liečby (IPTW); skóre pravdepodobnosti odhadli pomocou ansámblovej metódy SuperLearner. Analýza času do udalosti vychádzala z princípu intention-to-treat a z Coxových modelov príčinovo špecifického rizika s IPTW.</p>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <h2>Ako výsledok zapadá do štúdie FLOW</h2>
 
-<p>FLOW bola randomizovaná, placebom kontrolovaná štúdia u 3 533 pacientov s diabetom 2. typu a CKD definovanou pomocou eGFR a UACR. Subkutánny semaglutid v dávke 1,0 mg raz týždenne znížil riziko primárneho kompozitného ukazovateľa závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu (HR 0,76; 95 % CI 0,66–0,88). Priaznivý bol aj výsledok kompozitu pozostávajúceho iba z obličkových zložiek (HR 0,79; 95 % CI 0,66–0,94).</p>
+<p>FLOW bola randomizovaná, placebom kontrolovaná štúdia u 3&nbsp;533 pacientov s diabetom 2. typu a CKD definovanou pomocou eGFR a UACR. Subkutánny semaglutid v dávke 1,0&nbsp;mg raz týždenne znížil riziko primárneho kompozitného ukazovateľa závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu (HR 0,76; 95 % CI 0,66–0,88). Priaznivý bol aj výsledok kompozitu pozostávajúceho iba z obličkových zložiek (HR 0,79; 95 % CI 0,66–0,94).</p>
 
 <p>FLOW teda poskytuje randomizovaný dôkaz, že semaglutid má obličkový prínos vo vymedzenej populácii s už prítomnou CKD. Neumillerova analýza skúma inú otázku: porovnanie jednotlivých agonistov receptora GLP-1 pri prevencii novozaznamenanej CKD alebo zlyhania obličiek v reálnej praxi. <strong>Dôkaz semaglutidu oproti placebu nemožno zameniť za dôkaz jeho nadradenosti oproti iným účinným látkam tej istej triedy.</strong></p>
 

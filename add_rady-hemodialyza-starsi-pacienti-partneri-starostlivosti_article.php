@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Čo presne skúmala štúdia</h2>
 
-<p>DePasquale a spoluautori uskutočnili deskriptívnu kvalitatívnu štúdiu v zdravotníckom systéme Duke Health. Zaradili dospelých vo veku najmenej 65 rokov, ktorí dostávali strediskovú hemodialýzu najviac jeden rok, a ich primárnych partnerov starostlivosti. Každý účastník absolvoval pološtruktúrovaný rozhovor a dotazníkové zisťovanie. Prepisy rozhovorov boli spracované kombinovanou deduktívno-induktívnou tematickou analýzou.</p>
+<p>DePasquale a spoluautori uskutočnili deskriptívnu kvalitatívnu štúdiu v zdravotníckom systéme Duke Health. Zaradili dospelých vo veku najmenej 65&nbsp;rokov, ktorí dostávali strediskovú hemodialýzu najviac jeden rok, a ich primárnych partnerov starostlivosti. Každý účastník absolvoval pološtruktúrovaný rozhovor a dotazníkové zisťovanie. Prepisy rozhovorov boli spracované kombinovanou deduktívno-induktívnou tematickou analýzou.</p>
 
 <p>Rozhovory dokončilo <strong>33 pacientov a 36 partnerov starostlivosti</strong>. Výsledkom nie je skúška účinnosti konkrétneho edukačného programu ani dôkaz, že jedna rada zlepší prežívanie či zníži počet hospitalizácií. Ide o systematicky analyzovanú skúsenosť ľudí, ktorí prešli prvým rokom strediskovej hemodialýzy.</p>
 

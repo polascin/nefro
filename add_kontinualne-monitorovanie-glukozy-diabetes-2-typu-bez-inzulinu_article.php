@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Obe skupiny pokračovali v predchádzajúcej antidiabetickej liečbe, dostali edukáciu o strave a pohybe a absolvovali pravidelné kontroly.</p>
 
-<p>Priemerný vek pacientov bol 60 rokov. Medián trvania diabetu bol 10 rokov. Priemerná vstupná hodnota HbA1c bola 8,8 %, pričom 31 % pacientov malo HbA1c aspoň 9 %. Priemerný BMI bol 33 kg/m². Inhibítor SGLT2 užívalo 37 % pacientov a liečbu založenú na inkretínoch, napríklad agonistu receptora GLP-1, 40 %.</p>
+<p>Priemerný vek pacientov bol 60&nbsp;rokov. Medián trvania diabetu bol 10&nbsp;rokov. Priemerná vstupná hodnota HbA1c bola 8,8 %, pričom 31 % pacientov malo HbA1c aspoň 9 %. Priemerný BMI bol 33&nbsp;kg/m². Inhibítor SGLT2 užívalo 37 % pacientov a liečbu založenú na inkretínoch, napríklad agonistu receptora GLP-1, 40 %.</p>
 
 <h2>Výraznejšie zníženie HbA1c</h2>
 
@@ -78,7 +78,7 @@ $articles[] = [
 
 <p>CGM neukazuje iba priemernú glykémiu, ale aj to, koľko času pacient trávi v cieľovom glykemickom rozmedzí.</p>
 
-<p>V štúdii sa hodnotilo rozmedzie <strong>70 až 180 mg/dl</strong> (3,9 až 10,0 mmol/l). Pacienti s CGM strávili v tomto cieľovom rozmedzí približne o <strong>5 hodín denne viac</strong> než pacienti v bežnej starostlivosti.</p>
+<p>V štúdii sa hodnotilo rozmedzie <strong>70 až 180&nbsp;mg/dl</strong> (3,9 až 10,0&nbsp;mmol/l). Pacienti s CGM strávili v tomto cieľovom rozmedzí približne o <strong>5&nbsp;hodín denne viac</strong> než pacienti v bežnej starostlivosti.</p>
 
 <p>Čas v cieľovom rozmedzí sa v skupine s CGM zvýšil z 29 % na 62 %. V skupine bežnej starostlivosti stúpol z 31 % na 42 %. Rozdiel bol štatisticky významný.</p>
 

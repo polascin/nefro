@@ -43,7 +43,7 @@ $articles[] = [
 
 <p>Vzťah nie je jednosmerný. Nižšia eGFR je silným rizikovým faktorom nepriaznivých výsledkov pri HF so zníženou aj so zachovanou ejekčnou frakciou (HFrEF aj HFpEF). Albuminúria nezávisle predikuje vznik HFpEF a horšie výsledky pri už prítomnom zlyhávaní. Závažnosť CKD je so srdcovým zlyhávaním asociovaná stupňovito – a naopak.</p>
 
-<p>Presné čísla prináša prospektívna kohorta CRIC (Chronic Renal Insufficiency Cohort) u 3 791 dospelých s CKD v USA. Hrubá miera hospitalizácií pre HF bola <strong>5,8 na 100 osoborokov</strong>. Upravené miery hospitalizácie rástli s klesajúcou eGFR aj s vyššou albuminúriou. Hospitalizácia pre HF v prvých dvoch rokoch sledovania bola spojená s následnou progresiou CKD aj s úmrtím z akejkoľvek príčiny:</p>
+<p>Presné čísla prináša prospektívna kohorta CRIC (Chronic Renal Insufficiency Cohort) u 3&nbsp;791 dospelých s CKD v USA. Hrubá miera hospitalizácií pre HF bola <strong>5,8 na 100 osoborokov</strong>. Upravené miery hospitalizácie rástli s klesajúcou eGFR aj s vyššou albuminúriou. Hospitalizácia pre HF v prvých dvoch rokoch sledovania bola spojená s následnou progresiou CKD aj s úmrtím z akejkoľvek príčiny:</p>
 
 <div class="table-responsive" role="region" aria-label="Hospitalizácie pre srdcové zlyhávanie v kohorte CRIC" tabindex="0">
 <table>
@@ -59,23 +59,23 @@ $articles[] = [
       <td>5,8 na 100 osoborokov</td>
     </tr>
     <tr>
-      <th scope="row">Upravený pomer mier (eGFR 30–44 vs. &gt;45 ml/min/1,73 m<sup>2</sup>)</th>
+      <th scope="row">Upravený pomer mier (eGFR 30–44 vs. &gt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>)</th>
       <td>1,7</td>
     </tr>
     <tr>
-      <th scope="row">Upravený pomer mier (eGFR &lt;30 vs. &gt;45 ml/min/1,73 m<sup>2</sup>)</th>
+      <th scope="row">Upravený pomer mier (eGFR &lt;30 vs. &gt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>)</th>
       <td>2,2</td>
     </tr>
     <tr>
-      <th scope="row">Upravený pomer mier (UACR 30–299 vs. &lt;30 mg/g)</th>
+      <th scope="row">Upravený pomer mier (UACR 30–299 vs. &lt;30&nbsp;mg/g)</th>
       <td>1,9</td>
     </tr>
     <tr>
-      <th scope="row">Upravený pomer mier (UACR ≥300 vs. &lt;30 mg/g)</th>
+      <th scope="row">Upravený pomer mier (UACR ≥300 vs. &lt;30&nbsp;mg/g)</th>
       <td>2,6</td>
     </tr>
     <tr>
-      <th scope="row">Rehospitalizácia pre HF do 30 dní</th>
+      <th scope="row">Rehospitalizácia pre HF do 30&nbsp;dní</th>
       <td>20,6 %</td>
     </tr>
     <tr>
@@ -111,7 +111,7 @@ $articles[] = [
     <tr>
       <th scope="row">Štádiá HF A–D (univerzálna definícia HF)</th>
       <td>Kontinuum od rizika cez preklinické štrukturálne zmeny po symptomatické a pokročilé zlyhávanie</td>
-      <td>Konferencia navrhuje zaradiť zníženú eGFR (&lt;60 ml/min/1,73 m<sup>2</sup>) aj UACR &gt;30 mg/g do <strong>štádia A (riziko HF)</strong>, hoci CKD v pôvodnom texte univerzálnej definície nie je výslovne vypísaná</td>
+      <td>Konferencia navrhuje zaradiť zníženú eGFR (&lt;60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>) aj UACR &gt;30&nbsp;mg/g do <strong>štádia A (riziko HF)</strong>, hoci CKD v pôvodnom texte univerzálnej definície nie je výslovne vypísaná</td>
     </tr>
     <tr>
       <th scope="row">Štádiá CKM 0–4 (AHA 2023)</th>
@@ -130,7 +130,7 @@ $articles[] = [
 
 <p>HF je klinický syndróm so súčasnými alebo predchádzajúcimi príznakmi a známkami spôsobenými štrukturálnou alebo funkčnou srdcovou abnormalitou, potvrdený natriuretickými peptidmi alebo objektívnym dôkazom kongescie. Pri CKD sa príznaky prekrývajú s retenciou tekutín z obličiek. Ortopnoe, paroxyzmálna nočná dyspnoe, zvýšená náplň krčných žíl, tretia ozva a kardiomegália svedčia skôr pre HF, ale nie sú spoľahlivo špecifické.</p>
 
-<p><strong>Natriuretické peptidy</strong> sú pri CKD často vyššie pre znížený renálny klírens a korelujú so závažnosťou CKD aj s horšou prognózou. Naopak pri obezite a často aj pri HFpEF bývajú nižšie. Všeobecné prahy (ambulancia: BNP ≥35 pg/ml, NT-proBNP ≥125 pg/ml; akútny stav: BNP ≥100 pg/ml, NT-proBNP ≥300 pg/ml) <strong>nie sú CKD-špecifické</strong>. Konferencia preto žiada prahy prispôsobené CKD. Prakticky: vyššia hodnota diagnózu HF skôr podporuje, <strong>normálna hodnota ju pomáha vylúčiť</strong>. Pri G4–G5 a u dialyzovaných sú užitočné aj iné dôkazy zvýšených plniacich tlakov (echokardiografia, vo vybraných situáciách pravostranná katetrizácia). Zobrazovanie u hemodialyzovaných treba podľa možnosti plánovať na deň bez dialýzy. Ľavokomorová hypertrofia je pri pokročilej CKD častá a sama osebe HF nediagnostikuje.</p>
+<p><strong>Natriuretické peptidy</strong> sú pri CKD často vyššie pre znížený renálny klírens a korelujú so závažnosťou CKD aj s horšou prognózou. Naopak pri obezite a často aj pri HFpEF bývajú nižšie. Všeobecné prahy (ambulancia: BNP ≥35&nbsp;pg/ml, NT-proBNP ≥125&nbsp;pg/ml; akútny stav: BNP ≥100&nbsp;pg/ml, NT-proBNP ≥300&nbsp;pg/ml) <strong>nie sú CKD-špecifické</strong>. Konferencia preto žiada prahy prispôsobené CKD. Prakticky: vyššia hodnota diagnózu HF skôr podporuje, <strong>normálna hodnota ju pomáha vylúčiť</strong>. Pri G4–G5 a u dialyzovaných sú užitočné aj iné dôkazy zvýšených plniacich tlakov (echokardiografia, vo vybraných situáciách pravostranná katetrizácia). Zobrazovanie u hemodialyzovaných treba podľa možnosti plánovať na deň bez dialýzy. Ľavokomorová hypertrofia je pri pokročilej CKD častá a sama osebe HF nediagnostikuje.</p>
 
 <p>Vzostup kreatinínu pri akútne dekompenzovanom HF môže znamenať poškodenie parenchýmu obličiek, ale aj primeraný hemodynamický posun pri účinnej dekongescii. V post-hoc analýze štúdie DOSE zhoršenie kreatinínu nebolo spojené s horšími výsledkami; v inej práci bol vzostup kreatinínu spojený s lepším prežívaním. Konferencia preto uvádza, že <strong>definície AKI odvodené od kreatinínu nemusia pri HF a začatí GDMT platiť rovnako</strong> ako pri iných stavoch. Liečba má smerovať na symptómy, objemový stav a hemodynamiku – nie na izolované číslo kreatinínu.</p>
 
@@ -141,13 +141,13 @@ $articles[] = [
 <p>Prínos treba viazať na indikačné populácie, nie prezentovať ako univerzálnu „dvojitú ochranu“ u každého:</p>
 
 <ul>
-  <li><strong>Inhibítory SGLT2</strong> sú podľa KDIGO 2024 základom nefroprotekcie pri CKD s diabetes mellitus 2. typu aj bez neho (pri splnení prahov eGFR a albuminúrie). Súčasne sú súčasťou GDMT HFrEF aj HFpEF. Konferenčný rámec počíta s použitím spravidla pri eGFR nad približne 20 ml/min/1,73 m<sup>2</sup>.</li>
-  <li><strong>ACEi/ARB</strong> ostávajú základom pri CKD s albuminúriou. KDIGO odporúča v liečbe pokračovať aj vtedy, keď eGFR klesne pod 30 ml/min/1,73 m<sup>2</sup>, ak je to klinicky únosné. ESC pri HF uvádza pokračovanie v RAAS inhibícii, pokiaľ vzostup sérového kreatinínu nie je &gt;50 % (a kreatinín ostáva &lt;3 mg/dl, eGFR &gt;25 ml/min/1,73 m<sup>2</sup> a nie je hyperkaliémia).</li>
-  <li><strong>Finerenón</strong> v predšpecifikovanej súhrnnej analýze FIDELITY (13 026 pacientov s DM2 a CKD) znížil kompozitný kardiovaskulárny výsledok (HR 0,86; 95 % CI 0,78–0,95) aj kompozitný obličkový výsledok (HR 0,77; 0,67–0,88) oproti placebu. Trvalé ukončenie pre hyperkaliémiu bolo častejšie pri finerenóne (1,7 % vs. 0,6 %). Konferencia spomína aj prínos finerenónu pri HF s mierne zníženou alebo zachovanou ejekčnou frakciou (FINEARTS-HF); ide o inú populáciu než FIDELITY.</li>
-  <li><strong>Semaglutid</strong> v štúdii FLOW u 3 533 pacientov s DM2 a CKD znížil riziko primárneho kompozitu závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % (HR 0,76; 95 % CI 0,66–0,88). KDIGO 2024 odporúča dlhodobo pôsobiaci GLP-1 RA u dospelých s DM2 a CKD, ktorí nedosiahli glykemické ciele alebo inhibítor SGLT2/metformín nemôžu užívať; prednosť majú látky s preukázaným kardiovaskulárnym prínosom. Konferencia pre GLP-1 RA pri CKD uvádza aj praktický názor účastníkov (nie samostatné odporúčanie KDIGO) vo väzbe na údaje z klinických štúdií.</li>
+  <li><strong>Inhibítory SGLT2</strong> sú podľa KDIGO 2024 základom nefroprotekcie pri CKD s diabetes mellitus 2. typu aj bez neho (pri splnení prahov eGFR a albuminúrie). Súčasne sú súčasťou GDMT HFrEF aj HFpEF. Konferenčný rámec počíta s použitím spravidla pri eGFR nad približne 20&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>.</li>
+  <li><strong>ACEi/ARB</strong> ostávajú základom pri CKD s albuminúriou. KDIGO odporúča v liečbe pokračovať aj vtedy, keď eGFR klesne pod 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, ak je to klinicky únosné. ESC pri HF uvádza pokračovanie v RAAS inhibícii, pokiaľ vzostup sérového kreatinínu nie je &gt;50 % (a kreatinín ostáva &lt;3&nbsp;mg/dl, eGFR &gt;25&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a nie je hyperkaliémia).</li>
+  <li><strong>Finerenón</strong> v predšpecifikovanej súhrnnej analýze FIDELITY (13&nbsp;026 pacientov s DM2 a CKD) znížil kompozitný kardiovaskulárny výsledok (HR 0,86; 95 % CI 0,78–0,95) aj kompozitný obličkový výsledok (HR 0,77; 0,67–0,88) oproti placebu. Trvalé ukončenie pre hyperkaliémiu bolo častejšie pri finerenóne (1,7 % vs. 0,6 %). Konferencia spomína aj prínos finerenónu pri HF s mierne zníženou alebo zachovanou ejekčnou frakciou (FINEARTS-HF); ide o inú populáciu než FIDELITY.</li>
+  <li><strong>Semaglutid</strong> v štúdii FLOW u 3&nbsp;533 pacientov s DM2 a CKD znížil riziko primárneho kompozitu závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % (HR 0,76; 95 % CI 0,66–0,88). KDIGO 2024 odporúča dlhodobo pôsobiaci GLP-1 RA u dospelých s DM2 a CKD, ktorí nedosiahli glykemické ciele alebo inhibítor SGLT2/metformín nemôžu užívať; prednosť majú látky s preukázaným kardiovaskulárnym prínosom. Konferencia pre GLP-1 RA pri CKD uvádza aj praktický názor účastníkov (nie samostatné odporúčanie KDIGO) vo väzbe na údaje z klinických štúdií.</li>
 </ul>
 
-<p>Pri HFrEF ostáva cieľom rýchla iniciácia a titrácia štyroch kľúčových tried (ARNI, inhibítor SGLT2, MRA, betablokátor) v tolerovaných dávkach. Pri CKD sú častými bariérami vzostup kreatinínu, hypotenzia a hyperkaliémia – a práve pre ne sa GDMT často <strong>neprimerane vysadzuje</strong>. Pri eGFR &lt;60 ml/min/1,73 m<sup>2</sup> konferencia v koncepčnom rámci uvádza začatie ACEi/ARB, steroidného MRA alebo nsMRA pri sérovom draslíku &lt;5 mmol/l, s opakovaným meraním kaliémie. Diuretiká treba použiť pri expanzii objemu bez ohľadu na eGFR; pri nízkej eGFR sú spravidla potrebné vyššie dávky slučkových diuretík. ARNI sa nesmie kombinovať s ACEi.</p>
+<p>Pri HFrEF ostáva cieľom rýchla iniciácia a titrácia štyroch kľúčových tried (ARNI, inhibítor SGLT2, MRA, betablokátor) v tolerovaných dávkach. Pri CKD sú častými bariérami vzostup kreatinínu, hypotenzia a hyperkaliémia – a práve pre ne sa GDMT často <strong>neprimerane vysadzuje</strong>. Pri eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> konferencia v koncepčnom rámci uvádza začatie ACEi/ARB, steroidného MRA alebo nsMRA pri sérovom draslíku &lt;5&nbsp;mmol/l, s opakovaným meraním kaliémie. Diuretiká treba použiť pri expanzii objemu bez ohľadu na eGFR; pri nízkej eGFR sú spravidla potrebné vyššie dávky slučkových diuretík. ARNI sa nesmie kombinovať s ACEi.</p>
 
 <p>Hyperkaliémiu pri RAAS inhibícii, MRA/nsMRA a ARNI treba riešiť cielenými opatreniami, nie automatickým ukončením GDMT: súbežný inhibítor SGLT2, viazače draslíka, korekcia acidózy, úprava diéty a súbežných liekov, diuretiká. Reflexné vysadenie prognosticky účinnej liečby je podľa konferencie jedným z hlavných praktických zlyhaní.</p>
 
@@ -199,11 +199,11 @@ $articles[] = [
     <tr>
       <th scope="row">Pred začatím ACEi/ARB, MRA/nsMRA</th>
       <td>eGFR, draslík, objemový stav, súbežné lieky (NSAID, kálium šetriace diuretiká)</td>
-      <td>Pri K<sup>+</sup> ≥5 mmol/l najprv upraviť kaliémiu; nezačínať „naslepo“</td>
+      <td>Pri K<sup>+</sup> ≥5&nbsp;mmol/l najprv upraviť kaliémiu; nezačínať „naslepo“</td>
     </tr>
     <tr>
       <th scope="row">Po začatí alebo titrácii RAAS/MRA</th>
-      <td>Kreatinín a draslík o 2–4 týždne (pri vysokom riziku skôr)</td>
+      <td>Kreatinín a draslík o 2–4&nbsp;týždne (pri vysokom riziku skôr)</td>
       <td>Mierny pokles eGFR pri stabilnom klinickom stave: pokračovať; &gt;30 % alebo alarmujúce znaky: hľadať AKI</td>
     </tr>
     <tr>

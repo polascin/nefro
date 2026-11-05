@@ -69,7 +69,7 @@ $articles[] = [
 <p>Zo štúdie boli vylúčení:</p>
 
 <ul>
-  <li>pacienti mladší ako 18 rokov,</li>
+  <li>pacienti mladší ako 18&nbsp;rokov,</li>
   <li>biopsie transplantovanej obličky,</li>
   <li>biopsie fokálnych nádorov,</li>
   <li>výkony vyžadujúce navigáciu počítačovou tomografiou.</li>
@@ -181,7 +181,7 @@ $articles[] = [
 
 <h2>Krvácavé komplikácie</h2>
 
-<p>V žiadnej skupine sa nevyskytlo krvácanie vyžadujúce embolizáciu ani iná závažná komplikácia (SIR trieda C až F). Nebolo zaznamenané ani predĺženie hospitalizácie v dôsledku komplikácie. Všetci pacienti boli hospitalizovaní, 24 hodín dodržiavali prísny pokoj na lôžku a 48 hodín boli klinicky sledovaní.</p>
+<p>V žiadnej skupine sa nevyskytlo krvácanie vyžadujúce embolizáciu ani iná závažná komplikácia (SIR trieda C až F). Nebolo zaznamenané ani predĺženie hospitalizácie v dôsledku komplikácie. Všetci pacienti boli hospitalizovaní, 24&nbsp;hodín dodržiavali prísny pokoj na lôžku a 48&nbsp;hodín boli klinicky sledovaní.</p>
 
 <div class="table-responsive" role="region" aria-label="Výskyt krvácavých komplikácií podľa techniky biopsie" tabindex="0">
 <table>
@@ -313,13 +313,13 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Metaanalýza Corapi a spol. (2012)</th>
-      <td>34 štúdií, 9 474 biopsií</td>
+      <td>34 štúdií, 9&nbsp;474 biopsií</td>
       <td>3,5 % (95 % IS 2,2–5,1)</td>
       <td>Transfúzia 0,9 % (0,4–1,5)</td>
     </tr>
     <tr>
       <th scope="row">Nórsky register (Tøndel a spol., 2012)</th>
-      <td>9 288 biopsií, 8 573 dospelých</td>
+      <td>9&nbsp;288 biopsií, 8&nbsp;573 dospelých</td>
       <td>1,9 %</td>
       <td>Transfúzia 0,9 %; chirurgický alebo katétrový zákrok 0,2 %</td>
     </tr>
@@ -378,14 +378,14 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Corapi a spol. (2012) – bezpečnosť</th>
-      <td>Systematický prehľad a metaanalýza, 9 474 biopsií</td>
+      <td>Systematický prehľad a metaanalýza, 9&nbsp;474 biopsií</td>
       <td>Makroskopická hematúria 3,5 %; transfúzia 0,9 %. Ihly hrubšie ako 14 G mali vyššiu potrebu transfúzie (2,1 % oproti 0,5 %; p = 0,009)</td>
       <td>Referenčné hodnoty, oproti ktorým sú čísla hodnotenej štúdie rádovo odlišné</td>
     </tr>
     <tr>
       <th scope="row">Tøndel a spol. (2012) – register</th>
-      <td>Národný register, 9 288 biopsií</td>
-      <td>97,9 % biopsií bez komplikácie. Riziko závažnej komplikácie stúpa pri eGFR &lt; 30 ml/min/1,73 m² (OR 15,5) a v centrách s menej ako 30 biopsiami ročne (OR 1,60)</td>
+      <td>Národný register, 9&nbsp;288 biopsií</td>
+      <td>97,9 % biopsií bez komplikácie. Riziko závažnej komplikácie stúpa pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m² (OR 15,5) a v centrách s menej ako 30 biopsiami ročne (OR 1,60)</td>
       <td>Objem pracoviska a funkcia obličiek ovplyvňujú riziko viac než detail techniky</td>
     </tr>
   </tbody>
@@ -507,7 +507,7 @@ $articles[] = [
 
 <ul>
   <li><a href="article.php?slug=vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia">Východisková eGFR pri biopsii obličky: ako jej výber a imputácia môžu skresliť výsledky observačných štúdií</a></li>
-  <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Praktická príloha: Algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 s ohľadom na KDOQI US Commentary</a></li>
+  <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Praktická príloha: Algoritmus manažmentu IgA nefropatie podľa KDIGO 2025&nbsp;s ohľadom na KDOQI US Commentary</a></li>
   <li><a href="article.php?slug=nahly-vzostup-kreatininu-starsi-pacient-hypertenzia-aki">Náhly vzostup kreatinínu u staršieho pacienta s hypertenziou: príčiny, diagnostika a klinický postup</a></li>
 </ul>
 

@@ -76,7 +76,7 @@ $articles[] = [
 <p>Toto regulačné odvodenie je dôležité, nemožno ho však zamieňať s tvrdením, že FINE-ONE preukázala prevenciu terminálneho zlyhania obličiek. Štúdia trvala šesť mesiacov, mala 242 účastníkov a na takýto klinický výsledok nebola navrhnutá ani štatisticky dimenzovaná. UACR je prognosticky dôležitý biomarker a v tomto programe registračný preklenovací ukazovateľ; zostáva však náhradným ukazovateľom. [1–3]</p>
 
 <h2>Koho zahŕňala FINE-ONE</h2>
-<p>FINE-ONE bola multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia 3. fázy. Zaradila dospelých s diabetom 1. typu a CKD, ktorí mali eGFR 25 až menej ako 90 ml/min/1,73 m², UACR 200 až menej ako 5 000 mg/g a HbA1c pod 10 %. Účastníci dostávali inzulín a stabilnú dávku inhibítora ACE alebo blokátora receptorov angiotenzínu II. Vstupná koncentrácia draslíka musela byť najviac 4,8 mmol/l. [1, 2]</p>
+<p>FINE-ONE bola multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia 3. fázy. Zaradila dospelých s diabetom 1. typu a CKD, ktorí mali eGFR 25 až menej ako 90&nbsp;ml/min/1,73&nbsp;m², UACR 200 až menej ako 5&nbsp;000&nbsp;mg/g a HbA1c pod 10 %. Účastníci dostávali inzulín a stabilnú dávku inhibítora ACE alebo blokátora receptorov angiotenzínu II. Vstupná koncentrácia draslíka musela byť najviac 4,8&nbsp;mmol/l. [1, 2]</p>
 <p>Pacienti užívajúci inhibítor SGLT2 alebo agonistu receptora GLP-1 boli zo štúdie vylúčení. Výsledok preto neposkytuje priamy dôkaz o účinnosti ani bezpečnosti súbežnej liečby týmito liekmi pri diabete 1. typu a rozhodovanie nemožno prenášať zo situácie pri diabete 2. typu. [1]</p>
 
 <h2>Primárny výsledok: tri čísla, tri odlišné významy</h2>
@@ -89,7 +89,7 @@ $articles[] = [
 <p>Americký predpisový text uvádza aj časové odhady: oproti placebu bol UACR nižší o 22 % v treťom a o 28 % v šiestom mesiaci. Tieto čísla nie sú v rozpore s primárnym výsledkom 25 %; opisujú jednotlivé návštevy, zatiaľ čo primárna analýza ich spriemerovala. [1]</p>
 
 <h2>eGFR: krátkodobý pokles bol po vysadení prevažne reverzibilný</h2>
-<p>Po šiestich mesiacoch sa eGFR zmenila o −5,6 ml/min/1,73 m² pri finerenóne a o −2,7 ml/min/1,73 m² pri placebe. Rozdiel bol −2,9 ml/min/1,73 m² (95 % interval spoľahlivosti −5,1 až −0,7). Počas vymývacieho obdobia sa hodnoty približovali k východiskovým, čo podporuje hemodynamickú zložku zmeny. [2]</p>
+<p>Po šiestich mesiacoch sa eGFR zmenila o −5,6&nbsp;ml/min/1,73&nbsp;m² pri finerenóne a o −2,7&nbsp;ml/min/1,73&nbsp;m² pri placebe. Rozdiel bol −2,9&nbsp;ml/min/1,73&nbsp;m² (95 % interval spoľahlivosti −5,1 až −0,7). Počas vymývacieho obdobia sa hodnoty približovali k východiskovým, čo podporuje hemodynamickú zložku zmeny. [2]</p>
 <p>Jednotlivý pokles eGFR preto nemožno automaticky označiť za progresiu CKD, no nemožno ho ani ignorovať. Treba posúdiť objemový stav, tlak, interkurentné ochorenie, súbežné lieky a dynamiku kreatinínu a draslíka. FINE-ONE neposkytuje dlhodobú krivku eGFR ani dôkaz spomalenia zlyhania obličiek počas rokov.</p>
 
 <h2>Hyperkaliémia je hlavné bezpečnostné riziko</h2>
@@ -100,15 +100,15 @@ $articles[] = [
 <h2>Americké dávkovanie pri CKD s diabetom 1. typu</h2>
 <p>Nasledujúce údaje opisujú <strong>americký predpisový text</strong>, nie európske alebo slovenské preskripčné pravidlá: [1]</p>
 <ul>
-<li>pred začatím sa meria eGFR a sérový draslík; liečba sa nezačína pri draslíku nad 5,0 mmol/l,</li>
-<li>pri eGFR najmenej 60 ml/min/1,73 m² je úvodná dávka 20 mg raz denne,</li>
-<li>pri eGFR 25 až menej ako 60 ml/min/1,73 m² je úvodná dávka 10 mg raz denne,</li>
-<li>pri eGFR pod 25 ml/min/1,73 m² sa začatie neodporúča,</li>
-<li>cieľová dávka pri CKD asociovanej s diabetom 1. alebo 2. typu je 20 mg raz denne,</li>
+<li>pred začatím sa meria eGFR a sérový draslík; liečba sa nezačína pri draslíku nad 5,0&nbsp;mmol/l,</li>
+<li>pri eGFR najmenej 60&nbsp;ml/min/1,73&nbsp;m² je úvodná dávka 20&nbsp;mg raz denne,</li>
+<li>pri eGFR 25 až menej ako 60&nbsp;ml/min/1,73&nbsp;m² je úvodná dávka 10&nbsp;mg raz denne,</li>
+<li>pri eGFR pod 25&nbsp;ml/min/1,73&nbsp;m² sa začatie neodporúča,</li>
+<li>cieľová dávka pri CKD asociovanej s diabetom 1. alebo 2. typu je 20&nbsp;mg raz denne,</li>
 <li>draslík sa kontroluje po štyroch týždňoch od začatia a po každej zmene dávky, potom periodicky podľa rizika.</li>
 </ul>
 </div>
-<p>Pri draslíku nad 5,5 mmol/l sa má liečba prerušiť a podľa hodnoty draslíka neskôr obnoviť v dávke 10 mg. Ak eGFR pri zvažovanej titrácii klesla o viac ako 30 % oproti predchádzajúcemu meraniu, americký predpisový text odporúča ponechať 10 mg. Tieto pravidlá treba vždy overiť v aktuálnom dokumente platnom pre danú krajinu a konkrétnu indikáciu. [1]</p>
+<p>Pri draslíku nad 5,5&nbsp;mmol/l sa má liečba prerušiť a podľa hodnoty draslíka neskôr obnoviť v dávke 10&nbsp;mg. Ak eGFR pri zvažovanej titrácii klesla o viac ako 30 % oproti predchádzajúcemu meraniu, americký predpisový text odporúča ponechať 10&nbsp;mg. Tieto pravidlá treba vždy overiť v aktuálnom dokumente platnom pre danú krajinu a konkrétnu indikáciu. [1]</p>
 
 <h2>Čo to znamená pre slovenskú a európsku prax</h2>
 <p><strong>Schválenie FDA nie je automaticky schválením v Európskej únii ani na Slovensku.</strong> K 24. septembru 2026 Európska lieková agentúra uvádza renálnu indikáciu Kerendie pre dospelých s CKD, albuminúriou a diabetom 2. typu. Európska produktová informácia zatiaľ neuvádza CKD asociovanú s diabetom 1. typu. Použitie v tejto populácii je preto v EÚ mimo schválenej renálnej indikácie, pokiaľ sa regulačný stav nezmení. [4]</p>

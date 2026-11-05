@@ -241,7 +241,7 @@ $articles[] = [
   <li><a href="article.php?slug=nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou">Načasovanie cievneho prístupu pred hemodialýzou: AVF potrebuje väčší predstih než AVG</a></li>
   <li><a href="article.php?slug=swam-technika-tromboza-hemodialyzacneho-pristupu">SWAM technika pri trombóze hemodialyzačného prístupu: nová možnosť mechanickej trombektómie</a></li>
   <li><a href="article.php?slug=paliativna-starostlivost-nefrologia-krehki-starsi-eskd">Paliatívna starostlivosť v rutinnej nefrológii: nástroje s nízkym prahom pre krehkých a starších pacientov</a></li>
-  <li><a href="article.php?slug=dialyzacna-modalita-prezivanie-oktogenari-pd-hd">Dialyzačná modalita a prežívanie u pacientov vo veku 80 rokov a viac</a></li>
+  <li><a href="article.php?slug=dialyzacna-modalita-prezivanie-oktogenari-pd-hd">Dialyzačná modalita a prežívanie u pacientov vo veku 80&nbsp;rokov a viac</a></li>
 </ul>
 
 <h2>Zdroje</h2>

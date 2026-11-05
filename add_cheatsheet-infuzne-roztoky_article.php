@@ -50,9 +50,9 @@ $articles[] = [
     <tr><td>Ringer-laktát (Hartmann)</td><td>130</td><td>109</td><td>4</td><td>Ca 1,5; laktát 28</td><td>~273</td></tr>
     <tr><td>Plasma-Lyte 148</td><td>140</td><td>98</td><td>5</td><td>Mg 1,5; acetát 27; glukonát 23</td><td>~295</td></tr>
     <tr><td>0,45 % NaCl (½ fyziologický)</td><td>77</td><td>77</td><td>0</td><td>–</td><td>~154</td></tr>
-    <tr><td>5 % glukóza (G5)</td><td>0</td><td>0</td><td>0</td><td>glukóza 50 g</td><td>~278*</td></tr>
+    <tr><td>5 % glukóza (G5)</td><td>0</td><td>0</td><td>0</td><td>glukóza 50&nbsp;g</td><td>~278*</td></tr>
     <tr><td>3 % NaCl (hypertonický)</td><td>513</td><td>513</td><td>0</td><td>–</td><td>~1027</td></tr>
-    <tr><td>8,4 % NaHCO<sub>3</sub></td><td>1000</td><td>0</td><td>0</td><td>HCO<sub>3</sub><sup>−</sup> 1000 (1 mmol/ml)</td><td>~2000</td></tr>
+    <tr><td>8,4 % NaHCO<sub>3</sub></td><td>1000</td><td>0</td><td>0</td><td>HCO<sub>3</sub><sup>−</sup> 1000 (1&nbsp;mmol/ml)</td><td>~2000</td></tr>
   </tbody>
 </table>
 </div>
@@ -67,7 +67,7 @@ $articles[] = [
   <tbody>
     <tr><td>Izotonické</td><td>0,9 % NaCl, Ringer-laktát, Plasma-Lyte</td><td>Náhrada objemu, resuscitácia, udržiavacia terapia</td></tr>
     <tr><td>Hypotonické</td><td>0,45 % NaCl, G5</td><td>Náhrada voľnej vody (hypernatriémia); v udržiavacej terapii u dospelých opatrne (riziko hyponatriémie)</td></tr>
-    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatriémia (bolusy 100–150 ml), edém mozgu</td></tr>
+    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatriémia (bolusy 100–150&nbsp;ml), edém mozgu</td></tr>
   </tbody>
 </table>
 </div>
@@ -88,9 +88,9 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Resuscitácia / hypovolémia</td><td>Balansovaný kryštaloid (Ringer-laktát, Plasma-Lyte)</td></tr>
-    <tr><td>Hypernatriémia (náhrada voľnej vody)</td><td>G5 alebo 0,45 % NaCl, pomalá korekcia (≤ 10–12 mmol/l/24 h)</td></tr>
-    <tr><td>Symptomatická ťažká hyponatriémia</td><td>3 % NaCl 100–150 ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8 mmol/l/24 h</td></tr>
-    <tr><td>Diabetická ketoacidóza</td><td>Najprv 0,9 % NaCl, potom balansovaný; pridať glukózu pri glykémii &lt; 14 mmol/l</td></tr>
+    <tr><td>Hypernatriémia (náhrada voľnej vody)</td><td>G5 alebo 0,45 % NaCl, pomalá korekcia (≤ 10–12&nbsp;mmol/l/24&nbsp;h)</td></tr>
+    <tr><td>Symptomatická ťažká hyponatriémia</td><td>3 % NaCl 100–150&nbsp;ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8&nbsp;mmol/l/24&nbsp;h</td></tr>
+    <tr><td>Diabetická ketoacidóza</td><td>Najprv 0,9 % NaCl, potom balansovaný; pridať glukózu pri glykémii &lt; 14&nbsp;mmol/l</td></tr>
     <tr><td>Hyperkalciémia</td><td>Izotonický roztok (0,9 % NaCl) na obnovu volémie a kalciurézu</td></tr>
     <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým – riziko nozokomiálnej hyponatriémie)</td></tr>
   </tbody>

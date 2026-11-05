@@ -1,7 +1,7 @@
 <?php
 /**
  * add_obezita-kardiometabolicke-zdravie-ckd-ckm-ramec_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie: Mathew et al. (Clinical Journal of the American Society
  * of Nephrology, 2026).
  */

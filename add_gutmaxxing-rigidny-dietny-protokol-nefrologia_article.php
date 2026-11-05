@@ -63,13 +63,13 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Aktívny dospelý bez ochorenia obličiek</th>
-        <td>Bežne uvádzané rozpätie približne 1,2 – 1,6 g/kg/deň</td>
-        <td>Populárne zdroje zároveň odrádzajú od dlhodobého prekračovania 2 g/kg/deň.</td>
+        <td>Bežne uvádzané rozpätie približne 1,2 – 1,6&nbsp;g/kg/deň</td>
+        <td>Populárne zdroje zároveň odrádzajú od dlhodobého prekračovania 2&nbsp;g/kg/deň.</td>
       </tr>
       <tr>
         <th scope="row">CKD G3 – G5 bez dialýzy</th>
-        <td><strong>0,8 g/kg/deň</strong></td>
-        <td>Odporúčanie KDIGO 2024; pri riziku progresie sa <strong>neodporúča prekračovať 1,3 g/kg/deň</strong>.</td>
+        <td><strong>0,8&nbsp;g/kg/deň</strong></td>
+        <td>Odporúčanie KDIGO 2024; pri riziku progresie sa <strong>neodporúča prekračovať 1,3&nbsp;g/kg/deň</strong>.</td>
       </tr>
       <tr>
         <th scope="row">Pacient na dialýze</th>
@@ -80,7 +80,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Rozdiel je zásadný. Cieľ 1,6 g/kg/deň prevzatý z fitness obsahu leží u pacienta s CKD nad hranicou, ktorú KDIGO neodporúča prekračovať. U 80-kilogramového pacienta ide o rozdiel medzi približne 64 g a 128 g bielkovín denne. Podrobnejšie sa tejto otázke venuje samostatný článok o mýtoch influencerov (odkaz nižšie).</p>
+<p>Rozdiel je zásadný. Cieľ 1,6&nbsp;g/kg/deň prevzatý z fitness obsahu leží u pacienta s CKD nad hranicou, ktorú KDIGO neodporúča prekračovať. U 80-kilogramového pacienta ide o rozdiel medzi približne 64&nbsp;g a 128&nbsp;g bielkovín denne. Podrobnejšie sa tejto otázke venuje samostatný článok o mýtoch influencerov (odkaz nižšie).</p>
 
 <h3>Doplnky výživy a minerálový profil</h3>
 
@@ -147,7 +147,7 @@ $articles[] = [
 
 <p id="odborny-zdroj-1"><small><em><strong>1. Východiskový materiál:</strong> Medscape. Gutmaxxing: Online Trend, Real-World GI Implications. 2026. Naratívny klinický komentár; autorstvo nie je v dostupnej časti materiálu jednoznačne uvedené, preto sa v tomto článku neuvádza. Odborné prahy a nefrologické súvislosti boli doplnené a overené podľa zdrojov nižšie.</em></small></p>
 
-<p id="odborny-zdroj-2"><small><em><strong>2. Odporúčanie pre príjem bielkovín pri CKD:</strong> Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. <em>Kidney International</em>. 2024;105(4 Suppl):S117–S314. doi: <a href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank" rel="noopener noreferrer">10.1016/j.kint.2023.10.018</a>. Zdroj odporúčania 0,8 g/kg/deň pri CKD G3–G5 a praktického bodu o hranici 1,3 g/kg/deň pri riziku progresie.</em></small></p>
+<p id="odborny-zdroj-2"><small><em><strong>2. Odporúčanie pre príjem bielkovín pri CKD:</strong> Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. <em>Kidney International</em>. 2024;105(4 Suppl):S117–S314. doi: <a href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank" rel="noopener noreferrer">10.1016/j.kint.2023.10.018</a>. Zdroj odporúčania 0,8&nbsp;g/kg/deň pri CKD G3–G5 a praktického bodu o hranici 1,3&nbsp;g/kg/deň pri riziku progresie.</em></small></p>
 
 <p><small><em><strong>Poznámka k dôkazovému základu:</strong> Číselné prahy pre príjem bielkovín pri CKD boli overené podľa odporúčania KDIGO 2024; rozpätia uvádzané pre bežnú populáciu pochádzajú z východiskového materiálu a platia pre osoby bez ochorenia obličiek. Údaje o prevalencii tohto správania medzi pacientmi s CKD ani o jeho vplyve na progresiu ochorenia obličiek nie sú k dispozícii a článok ich neuvádza. Klasifikácia varovných znakov porúch príjmu potravy je uvedená ako orientačná; diagnostiku vykonáva psychiater alebo klinický psychológ.</em></small></p>
 

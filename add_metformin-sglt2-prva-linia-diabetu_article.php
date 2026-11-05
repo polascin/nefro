@@ -81,7 +81,7 @@ $articles[] = [
 
 <p>Ani nové odporúčania neznamenajú, že inhibítor SGLT2 je vhodný pre každého pacienta. Pred nasadením treba zohľadniť kontraindikácie, renálne funkcie, riziko dehydratácie, infekcií urogenitálneho traktu, ketoacidózy a celkový klinický stav.</p>
 
-<p>Pri chronickej chorobe obličiek sa v odporúčaní NICE spomína hranica odhadovanej glomerulovej filtrácie nad <strong>30 ml/min/1,73 m²</strong>. U krehkých pacientov treba osobitne posúdiť pomer prínosu a rizika. Dôležitá je aj edukácia pacienta, najmä pri akútnom ochorení, zníženom príjme tekutín, vracaní, hnačke alebo pred plánovaným operačným výkonom.</p>
+<p>Pri chronickej chorobe obličiek sa v odporúčaní NICE spomína hranica odhadovanej glomerulovej filtrácie nad <strong>30&nbsp;ml/min/1,73&nbsp;m²</strong>. U krehkých pacientov treba osobitne posúdiť pomer prínosu a rizika. Dôležitá je aj edukácia pacienta, najmä pri akútnom ochorení, zníženom príjme tekutín, vracaní, hnačke alebo pred plánovaným operačným výkonom.</p>
 
 <p>V týchto situáciách môže byť potrebné dočasné prerušenie liečby inhibítorom SGLT2 podľa lokálnych odporúčaní a klinického posúdenia.</p>
 
@@ -92,7 +92,7 @@ $articles[] = [
 <ul>
   <li>metformín s predĺženým uvoľňovaním,</li>
   <li>inhibítor SGLT2,</li>
-  <li>subkutánny semaglutid v dávke do 1 mg týždenne.</li>
+  <li>subkutánny semaglutid v dávke do 1&nbsp;mg týždenne.</li>
 </ul>
 
 <p>Aj tu platí, že liečba sa má začínať postupne a nie naraz. NICE tu prvýkrát odporúča konkrétny liek, nie iba celú liekovú skupinu.</p>

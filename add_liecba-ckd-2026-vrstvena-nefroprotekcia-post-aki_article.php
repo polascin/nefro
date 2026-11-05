@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>Najprv určiť príčinu a absolútne riziko</h2>
 
-<p>Jedna hodnota eGFR nestačí. Dvaja pacienti s eGFR 50 ml/min/1,73 m² môžu mať úplne odlišnú prognózu: u jedného zostáva funkcia obličiek roky stabilná, u druhého rýchlo klesá. Hodnotenie má preto zahŕňať:</p>
+<p>Jedna hodnota eGFR nestačí. Dvaja pacienti s eGFR 50&nbsp;ml/min/1,73&nbsp;m² môžu mať úplne odlišnú prognózu: u jedného zostáva funkcia obličiek roky stabilná, u druhého rýchlo klesá. Hodnotenie má preto zahŕňať:</p>
 
 <ul>
   <li>potvrdenie chronicity nálezu a určenie pravdepodobnej príčiny CKD,</li>
@@ -58,17 +58,17 @@ $articles[] = [
 
 <p>Inhibítor angiotenzín konvertujúceho enzýmu (ACEi) alebo blokátor receptora angiotenzínu II (ARB) je základnou liečbou vhodných pacientov s albuminurickou CKD. KDIGO odporúča titráciu na najvyššiu schválenú tolerovanú dávku. Kombinácia ACEi s ARB ani ich kombinovanie s priamym inhibítorom renínu sa neodporúča, pretože zvyšuje riziko hypotenzie, hyperkaliémie a akútneho poškodenia obličiek bez zodpovedajúceho klinického prínosu.</p>
 
-<p>Po nasadení alebo zvýšení dávky treba spravidla do 2 až 4 týždňov skontrolovať krvný tlak, kreatinín a draslík. Prechodný vzostup kreatinínu nemusí znamenať poškodenie obličiek; podľa KDIGO sa má pátrať po reverzibilnej príčine najmä vtedy, ak kreatinín do 4 týždňov stúpne o viac ako 30 %. Hyperkaliémiu je často možné zvládnuť bez automatického vysadenia liečby.</p>
+<p>Po nasadení alebo zvýšení dávky treba spravidla do 2 až 4&nbsp;týždňov skontrolovať krvný tlak, kreatinín a draslík. Prechodný vzostup kreatinínu nemusí znamenať poškodenie obličiek; podľa KDIGO sa má pátrať po reverzibilnej príčine najmä vtedy, ak kreatinín do 4&nbsp;týždňov stúpne o viac ako 30 %. Hyperkaliémiu je často možné zvládnuť bez automatického vysadenia liečby.</p>
 
 <h3>2. Inhibítory SGLT2 majú široké, nie však neobmedzené použitie</h3>
 
-<p>Dapagliflozín v štúdii DAPA-CKD a empagliflozín v štúdii EMPA-KIDNEY znížili riziko progresie CKD vo vymedzených populáciách s diabetom aj bez diabetu. KDIGO 2024 odporúča inhibítor SGLT2 dospelým s CKD a eGFR ≥ 20 ml/min/1,73 m², ak majú UACR ≥ 200 mg/g (≥ 20 mg/mmol), alebo ak majú srdcové zlyhávanie bez ohľadu na albuminúriu. Samostatné silné odporúčanie platí pre pacientov s diabetom 2. typu a CKD pri eGFR ≥ 20 ml/min/1,73 m². Pri eGFR 20 až 45 ml/min/1,73 m² a nižšej albuminúrii ide o slabšie odporúčanie.</p>
+<p>Dapagliflozín v štúdii DAPA-CKD a empagliflozín v štúdii EMPA-KIDNEY znížili riziko progresie CKD vo vymedzených populáciách s diabetom aj bez diabetu. KDIGO 2024 odporúča inhibítor SGLT2 dospelým s CKD a eGFR ≥ 20&nbsp;ml/min/1,73&nbsp;m², ak majú UACR ≥ 200&nbsp;mg/g (≥ 20&nbsp;mg/mmol), alebo ak majú srdcové zlyhávanie bez ohľadu na albuminúriu. Samostatné silné odporúčanie platí pre pacientov s diabetom 2. typu a CKD pri eGFR ≥ 20&nbsp;ml/min/1,73&nbsp;m². Pri eGFR 20 až 45&nbsp;ml/min/1,73&nbsp;m² a nižšej albuminúrii ide o slabšie odporúčanie.</p>
 
 <p>Po začatí liečby sa môže objaviť reverzibilný počiatočný pokles eGFR, ktorý sám osebe zvyčajne nie je dôvodom na vysadenie. Treba zhodnotiť objemový stav a diuretickú liečbu a pacienta poučiť o genitálnych mykotických infekciách a zriedkavej euglykemickej ketoacidóze. Inhibítor SGLT2 je rozumné dočasne prerušiť pri dlhšom hladovaní, operácii alebo kritickom ochorení so zvýšeným rizikom ketózy.</p>
 
 <h3>3. Finerenón: presne vymedzená dôkazová základňa</h3>
 
-<p>Finerenón znížil v štúdiách FIDELIO-DKD a FIGARO-DKD riziko obličkových a kardiovaskulárnych príhod u pacientov s CKD spojenou s diabetom 2. typu. KDIGO 2024 ho navrhuje u dospelých s diabetom 2. typu, eGFR &gt; 25 ml/min/1,73 m², normálnou koncentráciou draslíka a pretrvávajúcou albuminúriou &gt; 30 mg/g (&gt; 3 mg/mmol) napriek maximálnej tolerovanej dávke ACEi alebo ARB. Európska registračná indikácia pre liečbu CKD je naďalej viazaná na diabetes 2. typu.</p>
+<p>Finerenón znížil v štúdiách FIDELIO-DKD a FIGARO-DKD riziko obličkových a kardiovaskulárnych príhod u pacientov s CKD spojenou s diabetom 2. typu. KDIGO 2024 ho navrhuje u dospelých s diabetom 2. typu, eGFR &gt; 25&nbsp;ml/min/1,73&nbsp;m², normálnou koncentráciou draslíka a pretrvávajúcou albuminúriou &gt; 30&nbsp;mg/g (&gt; 3&nbsp;mg/mmol) napriek maximálnej tolerovanej dávke ACEi alebo ARB. Európska registračná indikácia pre liečbu CKD je naďalej viazaná na diabetes 2. typu.</p>
 
 <p>Výsledky štúdie CONFIDENCE podporujú skoré kombinovanie finerenónu s empagliflozínom u vybraných pacientov s diabetom 2. typu a albuminurickou CKD: po 180 dňoch bol pokles UACR väčší než pri každom lieku samostatne. Primárnym výsledkom však bol zástupný ukazovateľ, nie zlyhanie obličiek, kardiovaskulárna príhoda alebo mortalita. Štúdia preto nedokazuje dlhodobý klinický prínos súčasného začatia oboch liekov. Pri finerenóne je nevyhnutný výber pacienta podľa draslíka a pravidelné monitorovanie kaliémie.</p>
 

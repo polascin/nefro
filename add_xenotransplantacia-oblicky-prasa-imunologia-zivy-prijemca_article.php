@@ -2,7 +2,7 @@
 /**
  * add_xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * Odborný článok (category = 'odborne'): Xenotransplantácia obličky z geneticky
+ * Odborný článok (category = 'odborne'): Xenotransplantácia obličky z genetický
  * upraveného prasaťa — imunologické poznatky z prvého živého príjemcu (62-ročný
  * muž, Massachusetts General Hospital, 2024; prasa so 69 genomickými úpravami).
  * Slovenské odborné spracovanie s dôrazom na T-bunkovú rejekciu, pretrvávajúcu
@@ -100,7 +100,7 @@ $articles[] = [
   <li>meranie ľudskej a prasacej bezbunkovej DNA.</li>
 </ul>
 
-<p>Vzorky krvi sa odoberali pred transplantáciou a opakovane počas 51 dní. Biopsie xenoštepu boli vyšetrené na 8. a 34. pooperačný deň a následne post mortem.</p>
+<p>Vzorky krvi sa odoberali pred transplantáciou a opakovane počas 51&nbsp;dní. Biopsie xenoštepu boli vyšetrené na 8. a 34. pooperačný deň a následne post mortem.</p>
 
 <p>Metodika poskytla podrobný časový obraz imunitnej odpovede, ale všetky údaje pochádzali z jediného príjemcu. Štatistické porovnania preto nemajú rovnakú výpovednú hodnotu ako výsledky kohortovej štúdie.</p>
 

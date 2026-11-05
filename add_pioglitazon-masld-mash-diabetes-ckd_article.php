@@ -56,13 +56,13 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">PIVENS</th>
-        <td>247 dospelých bez diabetu; pioglitazón 30 mg, vitamín E alebo placebo počas 96 týždňov</td>
+        <td>247 dospelých bez diabetu; pioglitazón 30&nbsp;mg, vitamín E alebo placebo počas 96&nbsp;týždňov</td>
         <td>Primárny výsledok pri pioglitazóne nesplnil vopred určenú hranicu významnosti; zlepšila sa steatóza a lobulárny zápal, nie fibróza</td>
         <td>Bez diabetu, staršia definícia NASH a kompozitný histologický cieľ</td>
       </tr>
       <tr>
         <th scope="row">Cusi et al.</th>
-        <td>101 pacientov s prediabetom alebo diabetom 2. typu a biopsiou potvrdenou NASH; pioglitazón 45 mg alebo placebo</td>
+        <td>101 pacientov s prediabetom alebo diabetom 2. typu a biopsiou potvrdenou NASH; pioglitazón 45&nbsp;mg alebo placebo</td>
         <td>58 % dosiahlo primárny histologický cieľ a 51 % ústup NASH; rozdiel fibrózneho skóre bol malý</td>
         <td>Jedno centrum, malá vzorka a primárne náhradné histologické ukazovatele</td>
       </tr>
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h3>PIVENS: často citovaný, ale často nesprávne interpretovaný</h3>
 
-<p>PIVENS zaradila 247 dospelých s biopsiou potvrdenou NASH bez diabetu. Pioglitazón 30 mg denne užívalo 80 účastníkov, vitamín E 84 a placebo 83 počas 96 týždňov. Pre dve plánované primárne porovnania sa za štatisticky významnú považovala hodnota p &lt;0,025.</p>
+<p>PIVENS zaradila 247 dospelých s biopsiou potvrdenou NASH bez diabetu. Pioglitazón 30&nbsp;mg denne užívalo 80 účastníkov, vitamín E 84 a placebo 83 počas 96&nbsp;týždňov. Pre dve plánované primárne porovnania sa za štatisticky významnú považovala hodnota p &lt;0,025.</p>
 
 <p>Primárne histologické zlepšenie nastalo pri pioglitazóne u 34 % a pri placebe u 19 % pacientov, ale p = 0,04 nesplnilo vopred určenú hranicu. Pioglitazón znížil aminotransferázy, steatózu a lobulárny zápal; skóre fibrózy sa významne nezlepšilo. Pacienti na pioglitazóne viac pribrali.</p>
 
@@ -80,9 +80,9 @@ $articles[] = [
 
 <h3>Pacienti s prediabetom alebo diabetom: silnejší signál, stále nie definitívny</h3>
 
-<p>Jednocentrová štúdia Kennetha Cusiho a spolupracovníkov zaradila 101 pacientov s prediabetom alebo diabetom 2. typu a biopsiou potvrdenou NASH. Po hypokalorickej diéte dostávali pioglitazón 45 mg denne alebo placebo počas 18 mesiacov; nasledovala otvorená fáza s pioglitazónom.</p>
+<p>Jednocentrová štúdia Kennetha Cusiho a spolupracovníkov zaradila 101 pacientov s prediabetom alebo diabetom 2. typu a biopsiou potvrdenou NASH. Po hypokalorickej diéte dostávali pioglitazón 45&nbsp;mg denne alebo placebo počas 18&nbsp;mesiacov; nasledovala otvorená fáza s pioglitazónom.</p>
 
-<p>Primárny cieľ – pokles skóre aktivity najmenej o dva body v dvoch histologických kategóriách bez zhoršenia fibrózy – dosiahlo 58 % pacientov na pioglitazóne. Ústup NASH nastal u 51 %. Priemerný rozdiel skóre fibrózy bol −0,5 bodu (95 % interval spoľahlivosti −0,9 až 0,0; p = 0,039) a prírastok hmotnosti bol o 2,5 kg vyšší než pri placebe.</p>
+<p>Primárny cieľ – pokles skóre aktivity najmenej o dva body v dvoch histologických kategóriách bez zhoršenia fibrózy – dosiahlo 58 % pacientov na pioglitazóne. Ústup NASH nastal u 51 %. Priemerný rozdiel skóre fibrózy bol −0,5 bodu (95 % interval spoľahlivosti −0,9 až 0,0; p = 0,039) a prírastok hmotnosti bol o 2,5&nbsp;kg vyšší než pri placebe.</p>
 
 <p>Výsledok podporuje možný prínos u pacientov s diabetom alebo prediabetom a MASH. Malá jednocentrová štúdia však nepreukazuje zníženie cirhózy, transplantácie, kardiovaskulárnych udalostí ani mortality.</p>
 
@@ -96,12 +96,12 @@ $articles[] = [
 
 <h2>Kardiovaskulárny prínos existuje, ale nie bez ceny</h2>
 
-<p>Štúdia IRIS zaradila 3 876 pacientov bez diabetu, ktorí mali inzulínovú rezistenciu po nedávnej ischemickej cievnej mozgovej príhode alebo tranzitórnom ischemickom ataku. Po mediáne 4,8 roka sa cievna mozgová príhoda alebo infarkt myokardu vyskytli u 9,0 % pacientov na pioglitazóne a u 11,8 % na placebe (pomer rizík 0,76; 95 % interval spoľahlivosti 0,62 až 0,93).</p>
+<p>Štúdia IRIS zaradila 3&nbsp;876 pacientov bez diabetu, ktorí mali inzulínovú rezistenciu po nedávnej ischemickej cievnej mozgovej príhode alebo tranzitórnom ischemickom ataku. Po mediáne 4,8 roka sa cievna mozgová príhoda alebo infarkt myokardu vyskytli u 9,0 % pacientov na pioglitazóne a u 11,8 % na placebe (pomer rizík 0,76; 95 % interval spoľahlivosti 0,62 až 0,93).</p>
 
 <p>Súčasne sa však častejšie vyskytli:</p>
 
 <ul>
-  <li>prírastok hmotnosti nad 4,5 kg: 52,2 % oproti 33,7 %,</li>
+  <li>prírastok hmotnosti nad 4,5&nbsp;kg: 52,2 % oproti 33,7 %,</li>
   <li>edémy: 35,6 % oproti 24,9 %,</li>
   <li>zlomeniny vyžadujúce operáciu alebo hospitalizáciu: 5,1 % oproti 3,2 %.</li>
 </ul>

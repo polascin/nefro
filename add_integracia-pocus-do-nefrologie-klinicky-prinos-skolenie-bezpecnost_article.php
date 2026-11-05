@@ -39,7 +39,7 @@ $articles[] = [
 <h2>Prečo konvenčné fyzikálne vyšetrenie v nefrológii často nestačí</h2>
 
 <h3>1. Nízka senzitivita klasických klinických znakov kongescie</h3>
-<p>Tradičné fyzikálne znaky objemového preťaženia, akými sú auskultačné krepitácie nad pľúcnymi bázami alebo predkolenné opuchy, môžu byť u nefrologických pacientov klamlivo negatívne aj pri pokročilej intersticiálnej pľúcnej alebo systémovej venóznej kongescii.<sup>1,2</sup> Presvedčivý kvantitatívny dôkaz priniesla podštúdia projektu <strong>LUST</strong> (Torino a spolupracovníci, <em>Clinical Journal of the American Society of Nephrology</em>, 2016), ktorá porovnala <strong>1 106 pred- a postdialyzačných ultrazvukových vyšetrení pľúc</strong> u 79 hemodialyzovaných pacientov so štandardizovanou auskultáciou pľúc a hodnotením periférnych opuchov:<sup>3</sup></p>
+<p>Tradičné fyzikálne znaky objemového preťaženia, akými sú auskultačné krepitácie nad pľúcnymi bázami alebo predkolenné opuchy, môžu byť u nefrologických pacientov klamlivo negatívne aj pri pokročilej intersticiálnej pľúcnej alebo systémovej venóznej kongescii.<sup>1,2</sup> Presvedčivý kvantitatívny dôkaz priniesla podštúdia projektu <strong>LUST</strong> (Torino a spolupracovníci, <em>Clinical Journal of the American Society of Nephrology</em>, 2016), ktorá porovnala <strong>1&nbsp;106 pred- a postdialyzačných ultrazvukových vyšetrení pľúc</strong> u 79 hemodialyzovaných pacientov so štandardizovanou auskultáciou pľúc a hodnotením periférnych opuchov:<sup>3</sup></p>
 <ul>
   <li>Auskultačné chrôpky vysvetľovali iba <strong>12 % variancie</strong> a periférne opuchy len <strong>4 % variancie</strong> skutočnej závažnosti pľúcnej kongescie určenej počtom ultrazvukových B-línií (hodnoty koeficientu zhody κ sa pohybovali medzi 0,00 a 0,16).<sup>3</sup></li>
   <li>Diskriminačná schopnosť pľúcnej auskultácie pre záchyt miernej, stredne ťažkej a ťažkej pľúcnej kongescie bola nízka (plocha pod ROC krivkou [AUC] 0,61; 0,65 a 0,68) a pri periférnych opuchoch ešte slabšia (AUC ≤ 0,56).<sup>3</sup></li>
@@ -76,7 +76,7 @@ $articles[] = [
       <tr>
         <td><strong>Základný POCUS:</strong> Vnútorná jugulárna žila (IJV)</td>
         <td>B-mód</td>
-        <td>Zobrazenie v dlhej a krátkej osi, lokalizácia bodu kolapsu (<em>meniscus/collapse point</em>) a odhad centrálneho venózneho tlaku s využitím reálnej hĺbky pravej predsiene z FoCUS namiesto fixného predpokladu 5 cm; zmeny priemeru pri dýchaní a Valsalvovom manévri.<sup>2</sup></td>
+        <td>Zobrazenie v dlhej a krátkej osi, lokalizácia bodu kolapsu (<em>meniscus/collapse point</em>) a odhad centrálneho venózneho tlaku s využitím reálnej hĺbky pravej predsiene z FoCUS namiesto fixného predpokladu 5&nbsp;cm; zmeny priemeru pri dýchaní a Valsalvovom manévri.<sup>2</sup></td>
       </tr>
       <tr>
         <td><strong>Základný POCUS:</strong> Cielená echokardiografia (FoCUS)</td>
@@ -120,8 +120,8 @@ $articles[] = [
 
 <p>Pre udelenie inštitucionálnych oprávnení (<em>credentialing and privileging</em>) podporuje IAPN v nadväznosti na prácu Romera-Gonzáleza a spolupracovníkov (2024) a štandardy Americkej spoločnosti pre diagnostickú a intervenčnú nefrológiu (ASDIN, revízia 2024) aj politiku Americkej lekárskej asociácie (AMA H-230.960, podľa ktorej si každá medicínska odbornosť definuje vlastné kompetenčné kritériá pre ultrasonografiu) tieto minimálne číselné prahy:<sup>2,6–8</sup></p>
 <ul>
-  <li><strong>Certifikácia pre základný POCUS (B-mód a farebný Doppler):</strong> minimálne <strong>6 hodín didaktickej výučby</strong>, najmenej <strong>30 minút praktického nácviku pod priamym dohľadom na každú sonografickú aplikáciu</strong> (napr. 30 min pre obličky, 30 min pre pľúca, 30 min pre základné kardiálne projekcie) a zdokumentovanie najmenej <strong>25 technicky adekvátnych a expertom skontrolovaných vyšetrení pre každú aplikáciu</strong>.<sup>2,6</sup></li>
-  <li><strong>Certifikácia pre pokročilý POCUS (spektrálny a tkanivový Doppler):</strong> ďalších minimálne <strong>6 hodín didaktickej výučby</strong>, najmenej <strong>60 minút praktického nácviku pod priamym dohľadom na každú aplikáciu</strong> a zdokumentovanie najmenej <strong>50 adekvátnych vyšetrení pre každú pokročilú aplikáciu</strong>.<sup>2,6</sup></li>
+  <li><strong>Certifikácia pre základný POCUS (B-mód a farebný Doppler):</strong> minimálne <strong>6&nbsp;hodín didaktickej výučby</strong>, najmenej <strong>30&nbsp;minút praktického nácviku pod priamym dohľadom na každú sonografickú aplikáciu</strong> (napr. 30&nbsp;min pre obličky, 30&nbsp;min pre pľúca, 30&nbsp;min pre základné kardiálne projekcie) a zdokumentovanie najmenej <strong>25 technicky adekvátnych a expertom skontrolovaných vyšetrení pre každú aplikáciu</strong>.<sup>2,6</sup></li>
+  <li><strong>Certifikácia pre pokročilý POCUS (spektrálny a tkanivový Doppler):</strong> ďalších minimálne <strong>6&nbsp;hodín didaktickej výučby</strong>, najmenej <strong>60&nbsp;minút praktického nácviku pod priamym dohľadom na každú aplikáciu</strong> a zdokumentovanie najmenej <strong>50 adekvátnych vyšetrení pre každú pokročilú aplikáciu</strong>.<sup>2,6</sup></li>
 </ul>
 
 <h2>Prístrojové vybavenie, umelá inteligencia, archivácia a metodológia výskumu</h2>

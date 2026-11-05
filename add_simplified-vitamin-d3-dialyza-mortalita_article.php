@@ -34,9 +34,9 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/simplified-vitamin-d3-dialyza-mortalita.webp" rel="noopener noreferrer" target="_blank"><img src="img/simplified-vitamin-d3-dialyza-mortalita.webp" alt="Tmavá makrosnímka čelného rezu zväzku kapilár dialyzátora, nasvietená zľava, s teplým jantárovým svetlom v strede zväzku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná poloschematická scéna, nejde o snímku konkrétneho prístroja ani pacienta. Zväzok kapilár dialyzátora: miesto, kde sa rozhoduje, čo z plazmy odíde a čo zostane.</figcaption></figure>
 
-<p>Otázka bola jednoduchá a klinicky dôležitá: predĺži vysokodávkový vitamín D3 život pacientom na dialýze? Odpoveď zo štúdie SIMPLIFIED je nie. Štúdia randomizovala 3 866 dospelých dialyzovaných pacientov v 55 strediskách Spojeného kráľovstva medzi marcom 2017 a júlom 2025, podávala 60 000 IU cholekalciferolu ústne každé dva týždne a výsledok porovnávala so štandardnou starostlivosťou. Primárnym ukazovateľom bola celková mortalita.</p>
+<p>Otázka bola jednoduchá a klinicky dôležitá: predĺži vysokodávkový vitamín D3 život pacientom na dialýze? Odpoveď zo štúdie SIMPLIFIED je nie. Štúdia randomizovala 3&nbsp;866 dospelých dialyzovaných pacientov v 55 strediskách Spojeného kráľovstva medzi marcom 2017 a júlom 2025, podávala 60&nbsp;000&nbsp;IU cholekalciferolu ústne každé dva týždne a výsledok porovnávala so štandardnou starostlivosťou. Primárnym ukazovateľom bola celková mortalita.</p>
 
-<p>Výsledok je zároveň menej jednoznačný, než znie prvá veta. V ramene s cholekalciferolom zomrelo 883 účastníkov (45,5 %), v ramene so štandardnou starostlivosťou 934 (48,5 %), pomer rizík 0,95 s 95 % intervalom spoľahlivosti 0,86 až 1,04 a p = 0,27. Interval spoľahlivosti pripúšťa aj 14 % zníženie rizika úmrtia. Štúdia teda účinok nepreukázala, nevyvrátila ho však s takou presnosťou, akú si sama naplánovala.</p>
+<p>Výsledok je zároveň menej jednoznačný, než znie prvá veta. V ramene s cholekalciferolom zomrelo 883 účastníkov (45,5 %), v ramene so štandardnou starostlivosťou 934 (48,5 %), pomer rizík 0,95&nbsp;s 95 % intervalom spoľahlivosti 0,86 až 1,04 a p = 0,27. Interval spoľahlivosti pripúšťa aj 14 % zníženie rizika úmrtia. Štúdia teda účinok nepreukázala, nevyvrátila ho však s takou presnosťou, akú si sama naplánovala.</p>
 
 <p>Tretia vrstva je najzradnejšia. Podskupinové analýzy naznačili nižšiu mortalitu u mužov a u nebelošských účastníkov, kompozit závažných kardiovaskulárnych príhod bol pri cholekalciferole menej častý. Práve tieto čísla sa najľahšie prečítajú ako návod na liečbu, hoci autori ich sami označili za hypotézu.</p>
 
@@ -44,7 +44,7 @@ $articles[] = [
 
 <p>SIMPLIFIED (Survival Improvement with Cholecalciferol in Patients on Dialysis) je pragmatická, multicentrická, otvorená randomizovaná štúdia s dvoma ramenami v pomere 1 : 1, stratifikovaná podľa strediska. Zaradila dospelých pacientov liečených dialýzou v 55 strediskách Spojeného kráľovstva.</p>
 
-<p>Zaradených bolo 3 866 účastníkov: 1 940 dostávalo cholekalciferol 60 000 IU ústne každé dva týždne, 1 926 štandardnú starostlivosť. Medián veku bol 65 rokov, muži tvorili 68 %, belošského pôvodu bolo 80 % účastníkov, medián trvania dialyzačnej liečby bol 2,25 roka a diabetes malo 40 % účastníkov. Vylučovaní boli pacienti s pretrvávajúcou hyperkalciémiou, s príjmom viac ako 1 000 IU cholekalciferolu denne v predchádzajúcich 30 dňoch, gravidné ženy a pacienti s očakávaným prežívaním kratším ako šesť mesiacov.</p>
+<p>Zaradených bolo 3&nbsp;866 účastníkov: 1&nbsp;940 dostávalo cholekalciferol 60&nbsp;000&nbsp;IU ústne každé dva týždne, 1&nbsp;926 štandardnú starostlivosť. Medián veku bol 65&nbsp;rokov, muži tvorili 68 %, belošského pôvodu bolo 80 % účastníkov, medián trvania dialyzačnej liečby bol 2,25 roka a diabetes malo 40 % účastníkov. Vylučovaní boli pacienti s pretrvávajúcou hyperkalciémiou, s príjmom viac ako 1&nbsp;000&nbsp;IU cholekalciferolu denne v predchádzajúcich 30 dňoch, gravidné ženy a pacienti s očakávaným prežívaním kratším ako šesť mesiacov.</p>
 
 <p>Primárnym ukazovateľom bola celková mortalita. Sekundárne ukazovatele zahŕňali prvú hospitalizáciu pre kardiovaskulárnu príhodu, infekciu, zlomeninu a vopred určený kompozit závažných kardiovaskulárnych príhod (MACE: kardiovaskulárna smrť, infarkt myokardu, koronárna revaskularizácia, cievna mozgová príhoda a periférne artériové ochorenie).</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
 
 <p>Skôr než sa interpretuje nulový výsledok, treba overiť, či intervencia fungovala.</p>
 
-<p>U prvých 206 účastníkov, u ktorých sa koncentrácia 25(OH)D merala po štyroch mesiacoch, bol medián 141 nmol/l v ramene s cholekalciferolom a 36,5 nmol/l v ramene so štandardnou starostlivosťou. Dávka sa teda užila, vstrebala a substrát zvýšila približne štvornásobne, hlboko nad hranicu deficitu.</p>
+<p>U prvých 206 účastníkov, u ktorých sa koncentrácia 25(OH)D merala po štyroch mesiacoch, bol medián 141&nbsp;nmol/l v ramene s cholekalciferolom a 36,5&nbsp;nmol/l v ramene so štandardnou starostlivosťou. Dávka sa teda užila, vstrebala a substrát zvýšila približne štvornásobne, hlboko nad hranicu deficitu.</p>
 
 <p>Tento údaj je pre interpretáciu rozhodujúci. Štúdia neporovnávala neliečený deficit s liečeným. Porovnávala bežnú starostlivosť s režimom, ktorý koncentráciu 25(OH)D spoľahlivo zvýšil, a napriek tomu nezmenil prežívanie. Námietka, že štúdia zlyhala pre nízke dodržiavanie liečby alebo pre poddávkovanie, preto v rovine substrátu neobstojí. Abstrakt presnú mieru dodržiavania liečby neuvádza, ale nameraná koncentrácia 25(OH)D svedčí o tom, že intervencia v sledovanej skupine fungovala.</p>
 
@@ -107,7 +107,7 @@ $articles[] = [
 
 <h2>Prečo nulový rozdiel nie je dôkazom nulového účinku</h2>
 
-<p>Protokol počítal s približne 4 200 pacientmi a s 2 200 úmrtiami, čo malo dať 90 % silu preukázať pomer rizík 0,87. Skutočnosť bola 3 866 randomizovaných a 1 817 úmrtí. Štúdia teda dosiahla približne 83 % plánovaného počtu úmrtí a jej skutočná sila bola nižšia, než predpokladal návrh.</p>
+<p>Protokol počítal s približne 4&nbsp;200 pacientmi a s 2&nbsp;200 úmrtiami, čo malo dať 90 % silu preukázať pomer rizík 0,87. Skutočnosť bola 3&nbsp;866 randomizovaných a 1&nbsp;817 úmrtí. Štúdia teda dosiahla približne 83 % plánovaného počtu úmrtí a jej skutočná sila bola nižšia, než predpokladal návrh.</p>
 
 <p>To mení formuláciu záveru. Štúdia nepreukázala, že cholekalciferol neznižuje mortalitu. Vylúčila iba prínos nad určitú hranicu. Dolná hranica intervalu spoľahlivosti 0,86 znamená, že najväčší prínos, ktorý dáta ešte pripúšťajú, je 14 %. Prínos okolo 10 alebo 12 % je s nimi zlučiteľný.</p>
 
@@ -173,7 +173,7 @@ $articles[] = [
   <li>Dve prezentácie uvádzajú mierne odlišné počty úmrtí (881 a 883) aj mierne odlišné odhady (0,94 oproti 0,95, p = 0,22 oproti 0,27). Najpravdepodobnejším vysvetlením sú dve rôzne uzávierky dát, abstrakty to však neuvádzajú.</li>
   <li>Išlo o otvorenú štúdiu bez placeba. Pacient aj lekár vedeli o zaradení, čo pri ukazovateľoch závislých od rozhodnutia, napríklad od revaskularizácie, vytvára priestor na skreslenie.</li>
   <li>Ukazovatele pochádzali z administratívnych dát. Ich presnosť závisí od kódovania, od zachytenia udalostí a od toho, či pacienta ošetrovali v systéme, ktorý štúdia sledovala.</li>
-  <li>Počet úmrtí bol nižší, než sa plánovalo (2 200), takže skutočná sila štúdie bola nižšia než plánovaná.</li>
+  <li>Počet úmrtí bol nižší, než sa plánovalo (2&nbsp;200), takže skutočná sila štúdie bola nižšia než plánovaná.</li>
   <li>Podskupinové analýzy neboli podľa dostupných textov upravené na viacnásobné porovnania a abstrakty neuvádzajú, koľko podskupín sa testovalo.</li>
   <li>Koncentrácia 25(OH)D sa overovala len u prvých 206 účastníkov a len po štyroch mesiacoch. Dlhodobé dodržiavanie liečby nie je z abstraktov zrejmé.</li>
   <li>Chýbajú údaje o súbežnej liečbe aktívnymi formami vitamínu D, o kalciémii a o fosfatémii počas sledovania.</li>
@@ -182,7 +182,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>SIMPLIFIED je najväčšia randomizovaná štúdia cholekalciferolu u dialyzovaných pacientov a jej hlavný výsledok je jasný: 60 000 IU každé dva týždne nepredĺžilo prežívanie. Tento záver stojí na 1 817 úmrtiach a na podstatnom zvýšení koncentrácie 25(OH)D, takže ho nemožno vysvetliť tým, že by intervencia nefungovala.</p>
+<p>SIMPLIFIED je najväčšia randomizovaná štúdia cholekalciferolu u dialyzovaných pacientov a jej hlavný výsledok je jasný: 60&nbsp;000&nbsp;IU každé dva týždne nepredĺžilo prežívanie. Tento záver stojí na 1&nbsp;817 úmrtiach a na podstatnom zvýšení koncentrácie 25(OH)D, takže ho nemožno vysvetliť tým, že by intervencia nefungovala.</p>
 
 <p>Rovnako jasné je, čo štúdia nepreukázala. Nevylúčila malý prínos, nevyvrátila význam aktívnych foriem vitamínu D pri sekundárnej hyperparatyreóze a nepodala dôkaz o účinku v podskupinách. Kompozit MACE a nižšia mortalita u mužov a u nebelošských účastníkov sú hypotézy, ktoré si vyžadujú potvrdenie, nie indikácie.</p>
 
@@ -213,7 +213,7 @@ $articles[] = [
   <li>Neale RE, Baxter C, Romero BD, McLeod DSA, English DR, Armstrong BK, Ebeling PR, Hartel G, Kimlin MG, O'Connell R, van der Pols JC, Venn AJ, Webb PM, Whiteman DC, Waterhouse M. <em>The D-Health Trial: a randomised controlled trial of the effect of vitamin D on mortality.</em> The Lancet Diabetes &amp; Endocrinology. 2022;10(2):120-128. doi: <a href="https://doi.org/10.1016/S2213-8587(21)00345-4" target="_blank" rel="noopener noreferrer">10.1016/S2213-8587(21)00345-4</a>. PMID 35026158.</li>
 </ol>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Oba abstrakty ASN boli 1. novembra 2026 prečítané v celom rozsahu, rovnako ako správa Medscape vrátane podpisu autorky a dátumu vydania. Protokol štúdie bol overený v PubMed a Crossref (PMID 41094532, PMCID PMC12522466) a odtiaľ pochádza plánovaný počet 2 200 úmrtí, sila 90 % a cieľový pomer rizík 0,87; počet 1 817 úmrtí je súčet oboch ramien z abstraktu. Znenie odporúčaní 3.1.3, 4.2.3 a 4.2.4 bolo overené priamo v texte guidelines KDIGO 2017. Údaje o koncentráciách 25(OH)D, o podiele hospitalizovaných, o vylučovacích kritériách a o podiele účinku MACE tvorenom revaskularizáciou pochádzajú zo správy Medscape, ktorá cituje prednášajúcu; abstrakty ich neuvádzajú.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Oba abstrakty ASN boli 1. novembra 2026 prečítané v celom rozsahu, rovnako ako správa Medscape vrátane podpisu autorky a dátumu vydania. Protokol štúdie bol overený v PubMed a Crossref (PMID 41094532, PMCID PMC12522466) a odtiaľ pochádza plánovaný počet 2&nbsp;200 úmrtí, sila 90 % a cieľový pomer rizík 0,87; počet 1&nbsp;817 úmrtí je súčet oboch ramien z abstraktu. Znenie odporúčaní 3.1.3, 4.2.3 a 4.2.4 bolo overené priamo v texte guidelines KDIGO 2017. Údaje o koncentráciách 25(OH)D, o podiele hospitalizovaných, o vylučovacích kritériách a o podiele účinku MACE tvorenom revaskularizáciou pochádzajú zo správy Medscape, ktorá cituje prednášajúcu; abstrakty ich neuvádzajú.</em></small></p>
 
 <p><small><em><strong>Čo bolo v predlohe opravené:</strong> Predloha podávala rozdiel medzi 881 a 883 úmrtiami ako rozpor medzi abstraktom ASN a správou Medscape. Ide o dve prezentácie tej istej štúdie, plagát FR-PO0503 a ústnu prednášku FR-OR101, s dvoma uzávierkami dát; Medscape spracoval ústnu prezentáciu. Predloha ďalej neuvádzala koncentrácie 25(OH)D, plánovanú silu štúdie ani počet skutočne pozorovaných úmrtí, teda tri údaje, bez ktorých sa nulový výsledok nedá správne interpretovať. Tvrdenie o vplyve „vybranej zložky kompozitu“ bolo nahradené konkrétnym údajom o koronárnej revaskularizácii. Doplnená bola časť o vnútornom rozpore dvoch kardiovaskulárnych kompozitov a o rozdielnej sile záveru oboch abstraktov. Ilustračný obrázok bol vytvorený pre tento článok.</em></small></p>
 HTML,

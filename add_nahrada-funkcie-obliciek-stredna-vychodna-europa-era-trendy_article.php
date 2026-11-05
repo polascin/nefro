@@ -118,7 +118,7 @@ $articles[] = [
       <td>Prevalencia KRT</td>
       <td>Západná Európa</td>
       <td>984,4</td>
-      <td>1 253,9</td>
+      <td>1&nbsp;253,9</td>
       <td>+2,6 % (+2,3 až +2,9)</td>
     </tr>
   </tbody>
@@ -129,7 +129,7 @@ $articles[] = [
 
 <p>Štatisticky významný rast incidencie sa zistil v ôsmich krajinách: v Albánsku, na Cypre, v Grécku, Severnom Macedónsku, Rumunsku, Rusku, Turecku a na Ukrajine. Pokles sa v primárnej analýze preukázal iba v Bosne a Hercegovine (AAPC −1,9 %; 95 % IS −3,5 až −0,6). V deviatich ďalších krajinách vrátane Slovenska bol trend štatisticky stabilný. Keďže preemptívne transplantácie tvorili približne 5 % začatí KRT a viaceré súbory ich vôbec nezahŕňali, regionálna incidencia do veľkej miery odrážala začatia dialýzy.</p>
 
-<p>Prevalencia rástla podstatne rýchlejšie než incidencia. V roku 2019 sa pohybovala od 244,1 pmp na Ukrajine po 1 413,3 pmp v Grécku. Celková prevalencia sa štatisticky významne zvyšovala vo všetkých krajinách s vyhodnotiteľnými úplnými údajmi okrem Bieloruska. Cyprus nemal použiteľné údaje o celkovej prevalencii a chorvátske údaje boli neúplné alebo obmedzené na dialýzu.</p>
+<p>Prevalencia rástla podstatne rýchlejšie než incidencia. V roku 2019 sa pohybovala od 244,1 pmp na Ukrajine po 1&nbsp;413,3 pmp v Grécku. Celková prevalencia sa štatisticky významne zvyšovala vo všetkých krajinách s vyhodnotiteľnými úplnými údajmi okrem Bieloruska. Cyprus nemal použiteľné údaje o celkovej prevalencii a chorvátske údaje boli neúplné alebo obmedzené na dialýzu.</p>
 
 <h2>Modalita liečby: región zostáva prevažne hemodialyzačný</h2>
 
@@ -215,7 +215,7 @@ $articles[] = [
   <li><strong>Vybudovať úplný pacientsky register.</strong> Slovensko potrebuje kontinuálne zachytiť dialýzu, preemptívnu transplantáciu, život s funkčným štepom, zmenu modality a výsledky. Ak sa hranica registra zmení, musí byť zreteľne označená. Evidencia komplexnej konzervatívnej starostlivosti by pomohla odlíšiť nenaplnenú potrebu od informovanej voľby.</li>
   <li><strong>Zverejňovať neupravené aj štandardizované miery.</strong> Neupravené pmp sú dôležité pre plánovanie kapacity, vekovo a pohlavne štandardizované miery zasa umožnia zmysluplnejšie porovnanie epidemiológie medzi krajinami.</li>
   <li><strong>Spomaľovať progresiu chronickej choroby obličiek.</strong> Včasná diagnostika, kontrola krvného tlaku, diabetu a albuminúrie a použitie liečby s dokázaným renálnym a kardiovaskulárnym prínosom patria k štandardnej starostlivosti. Register ERA však účinnosť jednotlivých liekov v tejto populácii netestoval.</li>
-  <li><strong>Plánovať podľa rizika a trajektórie, nie podľa jediného čísla eGFR.</strong> <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024</a> odporúča zvažovať plánovanie preemptívnej transplantácie alebo dialyzačného prístupu pri eGFR pod 15–20 ml/min/1,73 m² alebo pri dvojročnom riziku KRT nad 40 %. Výber prístupu a jeho načasovanie musia zohľadniť rýchlosť progresie, anatómiu, komorbidity, očakávanú dĺžku života a preferencie pacienta. Praktické kroky približuje aj článok <a href="https://nefro.polascin.net/article.php?slug=priprava-na-dialyzacny-program">Príprava na dialyzačný program</a>.</li>
+  <li><strong>Plánovať podľa rizika a trajektórie, nie podľa jediného čísla eGFR.</strong> <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024</a> odporúča zvažovať plánovanie preemptívnej transplantácie alebo dialyzačného prístupu pri eGFR pod 15–20&nbsp;ml/min/1,73&nbsp;m² alebo pri dvojročnom riziku KRT nad 40 %. Výber prístupu a jeho načasovanie musia zohľadniť rýchlosť progresie, anatómiu, komorbidity, očakávanú dĺžku života a preferencie pacienta. Praktické kroky približuje aj článok <a href="https://nefro.polascin.net/article.php?slug=priprava-na-dialyzacny-program">Príprava na dialyzačný program</a>.</li>
   <li><strong>Ponúknuť modalitne neutrálnu edukáciu.</strong> Hemodialýza, peritoneálna dialýza, transplantácia a komplexná konzervatívna starostlivosť majú byť vysvetlené zrozumiteľne a bez nátlaku. Pokles PD na Slovensku je dôvodom preskúmať bariéry, nie automaticky presmerovať každého pacienta na domácu liečbu. Voľba modality je spoločné, individualizované rozhodnutie.</li>
   <li><strong>Odoslať vhodných kandidátov na transplantačné vyšetrenie včas.</strong> Preemptívna transplantácia môže u vhodného pacienta predísť obdobiu dialýzy, nie každý pacient je však kandidátom. Samotná táto registračná štúdia nehodnotila prežívanie ani kauzálny účinok transplantácie.</li>
   <li><strong>Plánovať kapacity aj podpornú starostlivosť.</strong> Rast prevalencie liečených pacientov znamená potrebu personálu, dialyzačných miest, domácej podpory, transplantačnej následnej starostlivosti a geriatricko-paliatívnych služieb. Starší a krehkí pacienti potrebujú rozhodovanie zamerané na ciele, očakávaný prínos a záťaž liečby.</li>

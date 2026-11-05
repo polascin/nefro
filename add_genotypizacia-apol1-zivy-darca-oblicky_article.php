@@ -32,7 +32,7 @@ $articles[] = [
 
 <p>Darovanie obličky od živého darcu prináša príjemcovi významný klinický prínos, zároveň však zaväzuje transplantačný tím čo najpresnejšie posúdiť celoživotné zdravotné riziko zdravého človeka, ktorý z darovania nemá medicínsky prospech. Osobitne citlivou otázkou je dlhodobé renálne riziko u osôb s nedávnym africkým genetickým pôvodom, u ktorých sa častejšie vyskytujú rizikové varianty génu <strong>APOL1</strong>.</p>
 
-<p>Americká retrospektívna kohortová štúdia Living Donor Extended Time Outcomes (LETO), publikovaná v <em>JAMA Internal Medicine</em>, zistila, že darcovia s dvoma rizikovými alelami APOL1 mali takmer dve desaťročia po darovaní viac než dvojnásobné neupravené relatívne riziko eGFR &lt;45 ml/min/1,73 m<sup>2</sup> oproti darcom s nulou alebo jednou rizikovou alelou. Po zohľadnení eGFR pred darovaním sa však odhad znížil a štatistická významnosť sa stratila.</p>
+<p>Americká retrospektívna kohortová štúdia Living Donor Extended Time Outcomes (LETO), publikovaná v <em>JAMA Internal Medicine</em>, zistila, že darcovia s dvoma rizikovými alelami APOL1 mali takmer dve desaťročia po darovaní viac než dvojnásobné neupravené relatívne riziko eGFR &lt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> oproti darcom s nulou alebo jednou rizikovou alelou. Po zohľadnení eGFR pred darovaním sa však odhad znížil a štatistická významnosť sa stratila.</p>
 
 <p>Výsledok preto podporuje <strong>geneticky presnejšiu stratifikáciu a informovaný dialóg</strong>, nie automatické vylúčenie kandidáta. Zároveň pripomína, že genotypizácia nemôže nahradiť dôkladné klinické vyšetrenie ani presne vyčísliť individuálne riziko zlyhania obličiek po nefrektómii.</p>
 
@@ -79,8 +79,8 @@ $articles[] = [
     </tr>
     <tr>
       <td>Priemerný vek pri darovaní</td>
-      <td>38 rokov</td>
-      <td>44 rokov</td>
+      <td>38&nbsp;rokov</td>
+      <td>44&nbsp;rokov</td>
     </tr>
     <tr>
       <td>Podiel žien</td>
@@ -96,13 +96,13 @@ $articles[] = [
 </table>
 </div>
 
-<p>Medián intervalu medzi darovaním a domácou návštevou bol <strong>18,5 roka</strong> (medzikvartilové rozpätie 16,9–20,5 roka). Primárnym výsledkom bola kreatinínová eGFR &lt;45 ml/min/1,73 m<sup>2</sup> pri tejto návšteve. Medzi ďalšie výsledky patrili eGFR &lt;60 ml/min/1,73 m<sup>2</sup>, UACR ≥30 mg/g alebo ≥300 mg/g a artériová hypertenzia.</p>
+<p>Medián intervalu medzi darovaním a domácou návštevou bol <strong>18,5 roka</strong> (medzikvartilové rozpätie 16,9–20,5 roka). Primárnym výsledkom bola kreatinínová eGFR &lt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> pri tejto návšteve. Medzi ďalšie výsledky patrili eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, UACR ≥30&nbsp;mg/g alebo ≥300&nbsp;mg/g a artériová hypertenzia.</p>
 
 <p>Primárny výsledok je klinicky relevantným prahom zodpovedajúcim kategórii G3b, ale v tejto štúdii išlo o <strong>jedno meranie</strong>. Nie je preto totožný s potvrdenou CKD G3b, ktorá vyžaduje pretrvávanie abnormality najmenej tri mesiace, a už vôbec nie so zlyhaním obličiek.</p>
 
 <h2>Hlavné výsledky</h2>
 
-<p>eGFR &lt;45 ml/min/1,73 m<sup>2</sup> malo 46 zo všetkých 653 účastníkov (7,0 %). Medzi 445 darcami v kategórii Black sa tento výsledok vyskytol u 7,6 %. Rozdiel podľa genotypu bol výrazný:</p>
+<p>eGFR &lt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> malo 46 zo všetkých 653 účastníkov (7,0 %). Medzi 445 darcami v kategórii Black sa tento výsledok vyskytol u 7,6 %. Rozdiel podľa genotypu bol výrazný:</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavný výsledok podľa genotypu APOL1" tabindex="0">
 <table>
@@ -133,7 +133,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pri sekundárnom výsledku eGFR &lt;60 ml/min/1,73 m<sup>2</sup> zostala podľa sprievodného redakčného komentára asociácia významná aj po zohľadnení eGFR pred darovaním (RR 1,50; 95 % IS 1,18–1,90). Vysokorizikový genotyp bol spojený aj s vyšším výskytom výraznej albuminúrie. Tieto sekundárne nálezy podporujú biologickú konzistentnosť signálu, nesmú však zatieniť neistotu primárnej upravenej analýzy.</p>
+<p>Pri sekundárnom výsledku eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> zostala podľa sprievodného redakčného komentára asociácia významná aj po zohľadnení eGFR pred darovaním (RR 1,50; 95 % IS 1,18–1,90). Vysokorizikový genotyp bol spojený aj s vyšším výskytom výraznej albuminúrie. Tieto sekundárne nálezy podporujú biologickú konzistentnosť signálu, nesmú však zatieniť neistotu primárnej upravenej analýzy.</p>
 
 <p>Zlyhanie obličiek sa rozvinulo u troch darcov v kategórii Black, pričom jeden mal vysokorizikový genotyp. Takýto malý počet udalostí neumožňuje spoľahlivo odhadnúť genotypovo špecifické riziko zlyhania obličiek po darovaní.</p>
 
@@ -209,7 +209,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V kohorte amerických živých darcov bol vysokorizikový genotyp APOL1 spojený s viac než dvojnásobným neupraveným rizikom eGFR &lt;45 ml/min/1,73 m<sup>2</sup> približne 18,5 roka po darovaní. Po zohľadnení východiskovej eGFR pred darovaním zostal bodový odhad zvýšený, no asociácia už nebola štatisticky významná. Pre zlyhanie obličiek bolo udalostí príliš málo na spoľahlivú kvantifikáciu rizika.</p>
+<p>V kohorte amerických živých darcov bol vysokorizikový genotyp APOL1 spojený s viac než dvojnásobným neupraveným rizikom eGFR &lt;45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> približne 18,5 roka po darovaní. Po zohľadnení východiskovej eGFR pred darovaním zostal bodový odhad zvýšený, no asociácia už nebola štatisticky významná. Pre zlyhanie obličiek bolo udalostí príliš málo na spoľahlivú kvantifikáciu rizika.</p>
 
 <p>Genotypizácia APOL1 môže zlepšiť informovaný súhlas a nahradiť nepresnú rasovú kategorizáciu konkrétnejšou biologickou informáciou. Výsledok však musí zostať súčasťou holistického hodnotenia veku, funkcie obličiek, albuminúrie, krvného tlaku, metabolického a rodinného rizika. Presnejšia medicína tu nemá znamenať menej darcov, ale spravodlivejšie a transparentnejšie rozhodovanie o riziku.</p>
 

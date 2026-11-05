@@ -2,7 +2,7 @@
 
 /**
  * add_ckm-syndrom-stadia-skrining-liecba-usmernenie-2026_article.php
- * CKM syndrom - stadia 0-4, skrining a liecba podla usmernenia AHA/ACC/ADA/ASN 2026.
+ * CKM syndrom - stadia 0-4, skríning a liečba podla usmernenia AHA/ACC/ADA/ASN 2026.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -86,7 +86,7 @@ $articles[] = [
 
 <ul>
   <li><strong>subklinické koronárne ochorenie</strong> – kalciové skóre koronárnych artérií nad 100;</li>
-  <li><strong>subklinické srdcové zlyhávanie</strong> – NT-proBNP ≥ 125 pg/ml spolu s echokardiografickým dôkazom komorovej dysfunkcie;</li>
+  <li><strong>subklinické srdcové zlyhávanie</strong> – NT-proBNP ≥ 125&nbsp;pg/ml spolu s echokardiografickým dôkazom komorovej dysfunkcie;</li>
   <li><strong>chronická choroba obličiek s veľmi vysokým rizikom</strong> podľa kombinácie eGFR a albuminúrie v tabuľke KDIGO, prípadne štádium G4 alebo G5;</li>
   <li><strong>vysoké predikované riziko</strong> – desaťročné riziko nad 20 % podľa rovníc PREVENT.</li>
 </ul>
@@ -195,7 +195,7 @@ $articles[] = [
   <li><strong>American Heart Association.</strong> <em>First-ever clinical guideline issued for cardiovascular-kidney-metabolic (CKM) syndrome.</em> Newsroom, 2026. <a href="https://newsroom.heart.org/news/first-ever-guideline-on-cardiovascular-kidney-metabolic-syndrome-issued" target="_blank" rel="noopener noreferrer">AHA Newsroom</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje usmernenia vrátane kompletného autorstva písacieho výboru boli overené v Europe PMC (Circulation 2026;154(4):e50–e158, PMID 42263157). Prahové hodnoty pre štádium 3 – kalciové skóre nad 100, NT-proBNP ≥ 125 pg/ml s echokardiografickým dôkazom komorovej dysfunkcie, veľmi vysoké riziko chronickej choroby obličiek podľa tabuľky KDIGO a desaťročné riziko nad 20 % podľa rovníc PREVENT – boli overené proti publikovanému opisu klasifikácie štádií. Plné znenie usmernenia je rozsiahly dokument a nebolo pri príprave článku prečítané v celom rozsahu; jednotlivé odporúčania preto nie sú citované s uvedením triedy odporúčania a úrovne dôkazov. Dve spresnenia oproti populárnym zhrnutiam – že klasifikácia má <strong>päť</strong> štádií vrátane štádia 0 (nie štyri) a že adipozita je ústredným, <strong>nie jediným</strong> mechanizmom – sú vlastnou korekciou. Časti o hraniciach klasifikácie štádií a o význame pre nefrologickú prax sú vlastným odborným spracovaním.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje usmernenia vrátane kompletného autorstva písacieho výboru boli overené v Europe PMC (Circulation 2026;154(4):e50–e158, PMID 42263157). Prahové hodnoty pre štádium 3 – kalciové skóre nad 100, NT-proBNP ≥ 125&nbsp;pg/ml s echokardiografickým dôkazom komorovej dysfunkcie, veľmi vysoké riziko chronickej choroby obličiek podľa tabuľky KDIGO a desaťročné riziko nad 20 % podľa rovníc PREVENT – boli overené proti publikovanému opisu klasifikácie štádií. Plné znenie usmernenia je rozsiahly dokument a nebolo pri príprave článku prečítané v celom rozsahu; jednotlivé odporúčania preto nie sú citované s uvedením triedy odporúčania a úrovne dôkazov. Dve spresnenia oproti populárnym zhrnutiam – že klasifikácia má <strong>päť</strong> štádií vrátane štádia 0 (nie štyri) a že adipozita je ústredným, <strong>nie jediným</strong> mechanizmom – sú vlastnou korekciou. Časti o hraniciach klasifikácie štádií a o význame pre nefrologickú prax sú vlastným odborným spracovaním.</em></p>
 HTML,
 ];
 

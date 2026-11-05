@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: lokalny finasterid pri muzskej androgenovej alopecii.
+ * Odborný článok: lokalny finasterid pri muzskej androgenovej alopecii.
  */
 
 // Ochrana - len admin alebo CLI
@@ -40,8 +40,8 @@ $articles[] = [
 <p>V kohorte sa používali dve farmaceuticky odlišné formulácie:</p>
 
 <ul>
-  <li><strong>78 mužov</strong> používalo komerčný sprej s obsahom 2,275 mg finasteridu v 1 ml a dávkou jedného až štyroch strekov denne podľa veľkosti ošetrovanej plochy,</li>
-  <li><strong>45 mužov</strong> používalo individuálne pripravený 0,25 % hydroalkoholový roztok v objeme 1 ml denne.</li>
+  <li><strong>78 mužov</strong> používalo komerčný sprej s obsahom 2,275&nbsp;mg finasteridu v 1&nbsp;ml a dávkou jedného až štyroch strekov denne podľa veľkosti ošetrovanej plochy,</li>
+  <li><strong>45 mužov</strong> používalo individuálne pripravený 0,25 % hydroalkoholový roztok v objeme 1&nbsp;ml denne.</li>
 </ul>
 
 <p>Primárnym ukazovateľom bola zmena celkového počtu vlasov. Ďalšie ukazovatele zahŕňali priemer vlasového stvolu, pomer terminálnych a velusových vlasov, hodnotenie lekárom, odpoveď pacienta a nežiaduce udalosti.</p>
@@ -69,17 +69,17 @@ $articles[] = [
 
 <h2>Koncentrácia nie je to isté ako denná dávka</h2>
 
-<p>Pri lokálnom finasteride treba vždy uviesť <strong>koncentráciu, objem jednej dávky, počet strekov a ošetrovanú plochu</strong>. Slovenský registrovaný liek Finjuve obsahuje 2,275 mg/ml, čo pri prepočte zodpovedá približne 0,2275 % m/V. Jeden 50-mikrolitrový strek obsahuje 114 mikrogramov finasteridu. Odporúčaná dávka je jeden až štyri neprekrývajúce sa streky raz denne, teda najviac približne 0,46 mg finasteridu naneseného na pokožku.</p>
+<p>Pri lokálnom finasteride treba vždy uviesť <strong>koncentráciu, objem jednej dávky, počet strekov a ošetrovanú plochu</strong>. Slovenský registrovaný liek Finjuve obsahuje 2,275&nbsp;mg/ml, čo pri prepočte zodpovedá približne 0,2275 % m/V. Jeden 50-mikrolitrový strek obsahuje 114 mikrogramov finasteridu. Odporúčaná dávka je jeden až štyri neprekrývajúce sa streky raz denne, teda najviac približne 0,46&nbsp;mg finasteridu naneseného na pokožku.</p>
 
-<p>Ak 0,25 % magistraliter roztok obsahuje 2,5 mg/ml a aplikuje sa v objeme 1 ml, na pokožku sa nanesie približne 2,5 mg finasteridu, teda asi 5,5-násobok množstva v maximálnej dennej dávke registrovaného spreja. To neznamená 5,5-násobnú systémovú expozíciu: penetrácia závisí od vehikula, plochy, kožnej bariéry a aplikačnej techniky. Znamená to však, že údaje o bezpečnosti štandardizovaného spreja nemožno automaticky preniesť na každý individuálne pripravený roztok.</p>
+<p>Ak 0,25 % magistraliter roztok obsahuje 2,5&nbsp;mg/ml a aplikuje sa v objeme 1&nbsp;ml, na pokožku sa nanesie približne 2,5&nbsp;mg finasteridu, teda asi 5,5-násobok množstva v maximálnej dennej dávke registrovaného spreja. To neznamená 5,5-násobnú systémovú expozíciu: penetrácia závisí od vehikula, plochy, kožnej bariéry a aplikačnej techniky. Znamená to však, že údaje o bezpečnosti štandardizovaného spreja nemožno automaticky preniesť na každý individuálne pripravený roztok.</p>
 
 <h2>Ako výsledky zapadajú do randomizovaných dôkazov</h2>
 
-<p>V multicentrickom randomizovanom skúšaní fázy III bolo 458 mužov pridelených k lokálnemu finasteridovému spreju, placebu alebo perorálnemu finasteridu 1 mg. Bezpečnostná populácia zahŕňala 446 účastníkov a 323 mužov dokončilo 24 týždňov liečby.</p>
+<p>V multicentrickom randomizovanom skúšaní fázy III bolo 458 mužov pridelených k lokálnemu finasteridovému spreju, placebu alebo perorálnemu finasteridu 1&nbsp;mg. Bezpečnostná populácia zahŕňala 446 účastníkov a 323 mužov dokončilo 24&nbsp;týždňov liečby.</p>
 
 <p>Počet vlasov v cieľovej oblasti sa pri lokálnom finasteride zvýšil v priemere o 20,2 vlasu, pri placebe o 6,7 vlasu (<strong>p &lt; 0,001</strong>). Numerický účinok bol podobný perorálnemu finasteridu, skúšanie však nebolo formálnym dôkazom úplnej terapeutickej ekvivalencie.</p>
 
-<p>Maximálne priemerné plazmatické koncentrácie finasteridu boli pri štandardizovanom spreji viac než stonásobne nižšie než pri perorálnej dávke 1 mg. Sérový DHT po 24 týždňoch klesol približne o 34,5 % pri lokálnej a o 55,6 % pri perorálnej liečbe. Lokálne podanie teda znižuje systémovú expozíciu, ale sérový DHT môže ovplyvniť klinicky významne.</p>
+<p>Maximálne priemerné plazmatické koncentrácie finasteridu boli pri štandardizovanom spreji viac než stonásobne nižšie než pri perorálnej dávke 1&nbsp;mg. Sérový DHT po 24 týždňoch klesol približne o 34,5 % pri lokálnej a o 55,6 % pri perorálnej liečbe. Lokálne podanie teda znižuje systémovú expozíciu, ale sérový DHT môže ovplyvniť klinicky významne.</p>
 
 <p>Schválený súhrn charakteristických vlastností Finjuve doteraz uvádza, že klinické skúsenosti s používaním dlhšie ako šesť mesiacov nie sú k dispozícii. Nová kohorta túto medzeru čiastočne dopĺňa, ide však o observačné údaje, nie o predĺženie registračného randomizovaného skúšania.</p>
 
@@ -159,7 +159,7 @@ $articles[] = [
 <ol>
   <li><strong>Gallo G, Mastorino L, Quaglino P, Ribero S.</strong> <em>Long-term effectiveness and safety of topical finasteride 0.25% monotherapy in male androgenetic alopecia: a 52-week real-world retrospective study.</em> Clinical and Experimental Dermatology. Publikované online 3. augusta 2026. doi: 10.1093/ced/llag333. <a href="https://doi.org/10.1093/ced/llag333" target="_blank" rel="noopener noreferrer">Primárna publikácia</a>.</li>
   <li><strong>Piraccini BM, Blume-Peytavi U, Scarci F, et al.</strong> <em>Efficacy and safety of topical finasteride spray solution for male androgenetic alopecia: a phase III, randomized, controlled clinical trial.</em> J Eur Acad Dermatol Venereol. 2022;36(2):286-294. doi: 10.1111/jdv.17738. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9297965/" target="_blank" rel="noopener noreferrer">Plný text</a>.</li>
-  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Finjuve pre mužov 2,275 mg/ml dermálny roztokový sprej: súhrn charakteristických vlastností lieku.</em> Registračné číslo 46/0119/24-S. <a href="https://www.sukl.sk/finjuve-pre-muzov-2275-mg-ml-dermalny-roztokovy-sprej-6262e" target="_blank" rel="noopener noreferrer">Databáza ŠÚKL</a>.</li>
+  <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Finjuve pre mužov 2,275&nbsp;mg/ml dermálny roztokový sprej: súhrn charakteristických vlastností lieku.</em> Registračné číslo 46/0119/24-S. <a href="https://www.sukl.sk/finjuve-pre-muzov-2275-mg-ml-dermalny-roztokovy-sprej-6262e" target="_blank" rel="noopener noreferrer">Databáza ŠÚKL</a>.</li>
   <li><strong>Štátny ústav pre kontrolu liečiv.</strong> <em>Opatrenia na minimalizáciu rizika samovražedných myšlienok pri liečbe finasteridom a dutasteridom.</em> 9. mája 2025. <a href="https://www.sukl.sk/pre-odbornikov-a-firmy/bezpecnost-liekov/bezpecnostne-upozornenia/opatrenia-na-minimalizaciu-rizika-samovrazednych-myslienok-pri-liecbe-finasteridom-a-dutasteridom" target="_blank" rel="noopener noreferrer">Bezpečnostné upozornenie</a>.</li>
   <li><strong>European Medicines Agency.</strong> <em>Finasteride- and dutasteride-containing medicinal products: Article 31 referral.</em> Európska komisia prijala konečné rozhodnutie 22. augusta 2025. <a href="https://www.ema.europa.eu/en/medicines/human/referrals/finasteride-dutasteride-containing-medicinal-products" target="_blank" rel="noopener noreferrer">EMA</a>.</li>
   <li><strong>Caserini M, Radicioni M, Leuratti C, Annoni O, Palmieri R.</strong> <em>Effects of a novel finasteride 0.25% topical solution on scalp and serum dihydrotestosterone in healthy men with androgenetic alopecia.</em> Int J Clin Pharmacol Ther. 2016;54(1):19-27. doi: 10.5414/CP202467. <a href="https://pubmed.ncbi.nlm.nih.gov/26636418/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
@@ -188,9 +188,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

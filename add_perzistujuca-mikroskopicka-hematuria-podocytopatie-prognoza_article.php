@@ -48,9 +48,9 @@ $articles[] = [
 
 <h2>Hlavné výsledky</h2>
 
-<p>Perzistujúcu hematúriu malo 73 pacientov, teda 31 % kohorty. V porovnaní s pacientmi bez perzistujúcej hematúrie mali vyššiu proteinúriu (5,3 oproti 3,2 g/g; <em>p</em> = 0,01) a častejšie hypertenziu (55 % oproti 36 %; <em>p</em> = 0,007).</p>
+<p>Perzistujúcu hematúriu malo 73 pacientov, teda 31 % kohorty. V porovnaní s pacientmi bez perzistujúcej hematúrie mali vyššiu proteinúriu (5,3 oproti 3,2&nbsp;g/g; <em>p</em> = 0,01) a častejšie hypertenziu (55 % oproti 36 %; <em>p</em> = 0,007).</p>
 
-<p>Počas mediánu sledovania 96 mesiacov dosiahlo zlyhanie obličiek 38 pacientov, teda 16 % celej kohorty. V skupine s perzistujúcou hematúriou to bolo 32 % pacientov, kým v skupine bez nej 9 % (<em>p</em> &lt; 0,001).</p>
+<p>Počas mediánu sledovania 96&nbsp;mesiacov dosiahlo zlyhanie obličiek 38 pacientov, teda 16 % celej kohorty. V skupine s perzistujúcou hematúriou to bolo 32 % pacientov, kým v skupine bez nej 9 % (<em>p</em> &lt; 0,001).</p>
 
 <p>Po uvedenej multivariabilnej úprave bola perzistujúca hematúria spojená s vyšším rizikom zlyhania obličiek: hazard ratio (HR) 3,55; 95 % interval spoľahlivosti 1,78–7,05; <em>p</em> &lt; 0,001. Asociácia teda pretrvala aj po zohľadnení viacerých významných prognostických premenných.</p>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <h2>Výsledok nadväzuje na väčšiu kohortu</h2>
 
-<p>Nová práca nie je prvým signálom prognostického významu hematúrie pri týchto diagnózach. Marchel a spoluautori analyzovali 1 516 detí a dospelých z prospektívnych kohort NEPTUNE a CureGN. Hematúriu pri vstupnom vyšetrení malo 33 % účastníkov. Po úprave o diagnózu, vek, pohlavie, proteinúriu, eGFR, čas od biopsie a kohortu bola spojená s vyšším rizikom kompozitného renálneho výsledku (HR 1,31; 95 % interval spoľahlivosti 1,04–1,65) a s nižšou mierou dosiahnutia remisie proteinúrie (HR 0,80; 95 % interval spoľahlivosti 0,65–0,98).</p>
+<p>Nová práca nie je prvým signálom prognostického významu hematúrie pri týchto diagnózach. Marchel a spoluautori analyzovali 1&nbsp;516 detí a dospelých z prospektívnych kohort NEPTUNE a CureGN. Hematúriu pri vstupnom vyšetrení malo 33 % účastníkov. Po úprave o diagnózu, vek, pohlavie, proteinúriu, eGFR, čas od biopsie a kohortu bola spojená s vyšším rizikom kompozitného renálneho výsledku (HR 1,31; 95 % interval spoľahlivosti 1,04–1,65) a s nižšou mierou dosiahnutia remisie proteinúrie (HR 0,80; 95 % interval spoľahlivosti 0,65–0,98).</p>
 
 <p>Obe štúdie sa navzájom podporujú, ich odhady však nemožno priamo porovnávať. Líšia sa vekom a pôvodom účastníkov, definíciou hematúrie, okamihom merania aj sledovaným výsledkom. Novšia práca hodnotila opakovane potvrdenú perzistenciu a tvrdší výsledok v podobe zlyhania obličiek vyžadujúceho chronickú náhradu funkcie.</p>
 

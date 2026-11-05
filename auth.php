@@ -330,7 +330,7 @@ function requireLogin(): void {
 function requireAdmin(): void {
     requireLogin();
     if (!isAdmin()) {
-        header("HTTP/1.1 403 Forbidden");
+        header("HTTP/1.1 403 Forbidden");
         exit("Prístup len pre administrátora.");
     }
     if (empty($_SESSION['totp_enabled'])) {
@@ -1341,7 +1341,7 @@ function isEmailDomainValid(string $email): bool {
 // ── 2FA helpre ────────────────────────────────────────────────────────────────
 
 /**
- * Vráti true ak je v session uložený 2FA pending stav a ešte nevypršal (TTL 5 min).
+ * Vráti true ak je v session uložený 2FA pending stav a ešte nevypršal (TTL 5 min).
  * Automaticky vyčistí expirovaný pending stav.
  */
 function isTwoFactorPending(): bool

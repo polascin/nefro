@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>eOČR je služba eZdravia určená na elektronické zaznamenávanie vzniku, zmien, storna a ukončenia potreby ošetrovania alebo starostlivosti. Záznam sa vystavuje na ošetrovanú osobu, teda na pacienta, ktorého zdravotný stav si celodennú pomoc vyžaduje. [1]</p>
 
-<p>Osoba, ktorá starostlivosť poskytuje, sa v zázname eOČR podľa NCZI vôbec neeviduje. Lekár preto v systéme neurčuje, ktorý rodinný príslušník bude poberať dávku, ani neposudzuje jeho poistné vzťahy. Skúmanie podmienok nemocenského poistenia (napríklad trvanie poistenia najmenej 270 dní v posledných dvoch rokoch či absencia nedoplatkov u samostatne zárobkovo činnej osoby) patrí výlučne Sociálnej poisťovni.</p>
+<p>Osoba, ktorá starostlivosť poskytuje, sa v zázname eOČR podľa NCZI vôbec neeviduje. Lekár preto v systéme neurčuje, ktorý rodinný príslušník bude poberať dávku, ani neposudzuje jeho poistné vzťahy. Skúmanie podmienok nemocenského poistenia (napríklad trvanie poistenia najmenej 270&nbsp;dní v posledných dvoch rokoch či absencia nedoplatkov u samostatne zárobkovo činnej osoby) patrí výlučne Sociálnej poisťovni.</p>
 
 <p>Vystavenie eOČR nie je automatickým podaním žiadosti o dávku ošetrovné. Ošetrujúca osoba si nárok uplatňuje samostatne. Sociálna poisťovňa umožňuje elektronické podanie cez svoj portál eSlužieb (elektronický účet poistenca) alebo listinnú žiadosť doručenú poštou či osobne. Po prijatí žiadosti si poisťovňa údaje o potvrdenej potrebe starostlivosti vyžiada z eZdravia automatizovane. [1,2]</p>
 
@@ -59,12 +59,12 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Krátkodobá eOČR</th>
-      <td>Náhle zhoršenie zdravotného stavu vyžadujúce celodenné ošetrovanie. Vystavuje všeobecný lekár alebo lekár so špecializáciou pre pacientov starších ako 18 rokov.</td>
+      <td>Náhle zhoršenie zdravotného stavu vyžadujúce celodenné ošetrovanie. Vystavuje všeobecný lekár alebo lekár so špecializáciou pre pacientov starších ako 18&nbsp;rokov.</td>
       <td>Ambulantný aj nemocničný nefrológ môže vystaviť eOČR dospelému pacientovi priamo v rámci svojho odborného vyšetrenia.</td>
     </tr>
     <tr>
       <th scope="row">Dlhodobá eOČR po hospitalizácii</th>
-      <td>Hospitalizácia trvala aspoň 5 po sebe nasledujúcich kalendárnych dní a predpokladá sa domáca starostlivosť najmenej ďalších 30 dní. Vystavuje určený lekár ústavného zariadenia najneskôr v deň prepustenia.</td>
+      <td>Hospitalizácia trvala aspoň 5 po sebe nasledujúcich kalendárnych dní a predpokladá sa domáca starostlivosť najmenej ďalších 30&nbsp;dní. Vystavuje určený lekár ústavného zariadenia najneskôr v deň prepustenia.</td>
       <td>Vystavuje ústavný nefrológ ako určený lekár zariadenia. Ambulantný nefrológ ju nemôže dodatočne založiť namiesto nemocnice. Následné vedenie preberá všeobecný lekár.</td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pri krátkodobej eOČR uvádza NCZI formuláciu „pre osoby staršie ako 18 rokov“. Pre detských pacientov vystavuje krátkodobú eOČR primárne všeobecný lekár pre deti a dorast. Pri hraničných vekových situáciách sa treba riadiť presným znením účinného predpisu, nie voľnou interpretáciou informačného letáku. [1,4]</p>
+<p>Pri krátkodobej eOČR uvádza NCZI formuláciu „pre osoby staršie ako 18&nbsp;rokov“. Pre detských pacientov vystavuje krátkodobú eOČR primárne všeobecný lekár pre deti a dorast. Pri hraničných vekových situáciách sa treba riadiť presným znením účinného predpisu, nie voľnou interpretáciou informačného letáku. [1,4]</p>
 
 <h2>Dlhodobá eOČR po hospitalizácii a predpoklad domácej starostlivosti</h2>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Sociálna poisťovňa vypláca dávku ošetrovné po obmedzený čas: pri krátkodobom ošetrovaní najviac 14 kalendárnych dní, pri dlhodobom ošetrovaní najviac 90 kalendárnych dní. Počas dlhodobého ošetrovania sa navyše ošetrujúce osoby môžu striedať (spravidla najskôr po 30 dňoch) prostredníctvom formulára v Sociálnej poisťovni bez nutnosti zakladania nového medicínskeho prípadu lekárom. [2,4]</p>
 
-<p>Lekár nesmie eOČR ukončiť len preto, že uplynulo 14 alebo 90 dní výplaty peňažnej dávky, ak zdravotný stav pacienta osobnú a celodennú starostlivosť naďalej vyžaduje. eOČR zostáva pre ošetrujúceho rodinného príslušníka dôležitým dokladom voči zamestnávateľovi ako ospravedlnená prekážka v práci (hoci už bez nároku na nemocenskú dávku). Rovnako sa po uplynutí podpornej doby nevystavuje nový prípad eOČR, pokiaľ nedošlo k zmene diagnózy alebo k novému medicínskemu dôvodu po reálnom prerušení starostlivosti. [1]</p>
+<p>Lekár nesmie eOČR ukončiť len preto, že uplynulo 14 alebo 90&nbsp;dní výplaty peňažnej dávky, ak zdravotný stav pacienta osobnú a celodennú starostlivosť naďalej vyžaduje. eOČR zostáva pre ošetrujúceho rodinného príslušníka dôležitým dokladom voči zamestnávateľovi ako ospravedlnená prekážka v práci (hoci už bez nároku na nemocenskú dávku). Rovnako sa po uplynutí podpornej doby nevystavuje nový prípad eOČR, pokiaľ nedošlo k zmene diagnózy alebo k novému medicínskemu dôvodu po reálnom prerušení starostlivosti. [1]</p>
 
 <h2>Požiadavky na zdravotnú dokumentáciu: prečo pacient potrebuje osobnú a celodennú pomoc</h2>
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * add_clinical_trials_migration.php
  * Fáza 6 — schéma pre kurátorský register klinických štúdií (ClinicalTrials.gov v2).
- * Dáta plní `sync_clinical_trials.php` (CLI/cron). Zobrazenie: `studie.php` / `studia.php`.
+ * Dáta plní `sync_clinical_trials.php` (CLI/cron). Zobrazenie: `štúdie.php` / `štúdia.php`.
  *
  * Idempotentné (CREATE TABLE IF NOT EXISTS). Spustenie:
  *   - admin cez prehliadač (requireAdmin), alebo

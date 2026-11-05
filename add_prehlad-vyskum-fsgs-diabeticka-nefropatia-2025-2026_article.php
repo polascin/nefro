@@ -38,7 +38,7 @@ $articles[] = [
 
 <h3>1. Historický prelom: FDA schválila sparsentan (apríl 2026)</h3>
 
-<p>Pre liečbu FSGS ide o zásadnú správu. Dňa 13. apríla 2026 schválil americký Úrad pre kontrolu potravín a liečiv (FDA) <strong>sparsentan (FILSPARI)</strong> ako <strong>prvý a jediný liek schválený špecificky na liečbu FSGS</strong>, a to po desaťročiach čisto empirickej terapie. Schválenie sa týka dospelých a detských pacientov vo veku <strong>≥ 8 rokov</strong> s FSGS <strong>bez</strong> nefrotického syndrómu.</p>
+<p>Pre liečbu FSGS ide o zásadnú správu. Dňa 13. apríla 2026 schválil americký Úrad pre kontrolu potravín a liečiv (FDA) <strong>sparsentan (FILSPARI)</strong> ako <strong>prvý a jediný liek schválený špecificky na liečbu FSGS</strong>, a to po desaťročiach čisto empirickej terapie. Schválenie sa týka dospelých a detských pacientov vo veku <strong>≥ 8&nbsp;rokov</strong> s FSGS <strong>bez</strong> nefrotického syndrómu.</p>
 
 <p>Liek je duálnym antagonistom receptorov pre angiotenzín II a endotelín-1 (v liečbe IgA nefropatie je už schválený). Rozhodnutie FDA vychádza z výsledkov štúdie fázy 3 DUPLEX (n = 371, doteraz najväčšia štúdia FSGS), publikovanej v <em>New England Journal of Medicine</em>:</p>
 
@@ -155,7 +155,7 @@ $articles[] = [
 
 <h3>2. Inhibítory SGLT2 verzus agonisty GLP-1: prvé priame porovnanie</h3>
 
-<p>Rozsiahla štúdia v <em>JAMA Internal Medicine</em>, ktorá využila dánske registrové dáta (sledovanie 5 rokov), porovnala obe liekové skupiny:</p>
+<p>Rozsiahla štúdia v <em>JAMA Internal Medicine</em>, ktorá využila dánske registrové dáta (sledovanie 5&nbsp;rokov), porovnala obe liekové skupiny:</p>
 
 <div class="table-responsive">
 <table>
@@ -190,7 +190,7 @@ $articles[] = [
 
 <h3>3. Finerénon verzus spironolaktón: prvé priame porovnanie</h3>
 
-<p>Emulácia cieľového klinického skúšania (target trial emulation) publikovaná v <em>Nature Communications</em> (október 2025) priniesla prvé porovnanie finerénonu a spironolaktónu z reálnej praxe u pacientov s DM2 a CKD (n = 2 268 po spárovaní podľa skóre náchylnosti, databáza TriNetX):</p>
+<p>Emulácia cieľového klinického skúšania (target trial emulation) publikovaná v <em>Nature Communications</em> (október 2025) priniesla prvé porovnanie finerénonu a spironolaktónu z reálnej praxe u pacientov s DM2 a CKD (n = 2&nbsp;268 po spárovaní podľa skóre náchylnosti, databáza TriNetX):</p>
 
 <div class="table-responsive">
 <table>
@@ -214,7 +214,7 @@ $articles[] = [
       <td>aHR 0,47 (o 53 % nižšie riziko)</td>
     </tr>
     <tr>
-      <td>Hyperkaliémia (K⁺ ≥ 5,5 mmol/l)</td>
+      <td>Hyperkaliémia (K⁺ ≥ 5,5&nbsp;mmol/l)</td>
       <td>17,2 % vs. 26,4 %</td>
     </tr>
   </tbody>

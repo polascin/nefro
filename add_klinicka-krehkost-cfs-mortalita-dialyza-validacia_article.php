@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Usporiadanie štúdie</h2>
 
-<p>Išlo o prospektívnu multicentrickú observačnú kohortu 792 prevalentných dospelých pacientov na udržiavacej dialýze v šiestich strediskách v severovýchodnom Francúzsku. Podľa sekundárneho spracovania štúdie v odbornom spravodajstve prebiehal zber údajov v rokoch 2016 až 2020, priemerný vek bol 69 rokov a muži tvorili 57,7 % súboru; tieto údaje nie sú súčasťou verejne dostupného súhrnu primárnej práce.</p>
+<p>Išlo o prospektívnu multicentrickú observačnú kohortu 792 prevalentných dospelých pacientov na udržiavacej dialýze v šiestich strediskách v severovýchodnom Francúzsku. Podľa sekundárneho spracovania štúdie v odbornom spravodajstve prebiehal zber údajov v rokoch 2016 až 2020, priemerný vek bol 69&nbsp;rokov a muži tvorili 57,7 % súboru; tieto údaje nie sú súčasťou verejne dostupného súhrnu primárnej práce.</p>
 
 <p>CFS stanovili jedenkrát vyškolené dialyzačné sestry. Skóre sa analyzovalo dvoma spôsobmi:</p>
 
@@ -268,7 +268,7 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=krehkost-negeriatricki-dialyzovani-pacienti-frail-skala">Krehkosť u dialyzovaných pacientov mladších než 65 rokov: čo prináša prierezová štúdia z Tbilisi</a></li>
+  <li><a href="article.php?slug=krehkost-negeriatricki-dialyzovani-pacienti-frail-skala">Krehkosť u dialyzovaných pacientov mladších než 65&nbsp;rokov: čo prináša prierezová štúdia z Tbilisi</a></li>
   <li><a href="article.php?slug=frailty-ckd-vyziva-pohyb-stisk-ruky">Frailty pri chronickej chorobe obličiek: prečo nestačí sledovať iba eGFR</a></li>
   <li><a href="article.php?slug=paliativna-starostlivost-nefrologia-krehki-starsi-eskd">Paliatívna starostlivosť v rutinnej nefrológii: nástroje s nízkym prahom pre krehkých a starších pacientov</a></li>
   <li><a href="article.php?slug=sarkopenia-peritonealna-dialyza-modifikovany-kreatininovy-index">Sarkopénia pri peritoneálnej dialýze: prečo modifikovaný kreatinínový index nestačí</a></li>

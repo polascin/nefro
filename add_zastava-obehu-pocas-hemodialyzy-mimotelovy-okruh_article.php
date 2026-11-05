@@ -47,13 +47,13 @@ $articles[] = [
 
 <p>Odporúčania Európskej resuscitačnej rady (ERC) pre zástavu obehu za osobitných okolností obsahujú od roku 2021 samostatnú časť venovanú dialyzačnému pracovisku a v aktualizácii z roku 2025 ju zachovávajú takmer bez zmeny. Znenie je jednoznačné: <strong>zastaviť dialýzu a vrátiť pacientovi objem jeho krvi spolu s bolusom tekutiny</strong>, odpojiť ho od prístroja (ak prístroj nie je certifikovaný ako odolný voči defibrilácii), dávať pozor na mokré povrchy, ponechať cievny prístup otvorený a použiť ho na podávanie liekov.</p>
 
-<p>Odporúčanie „krv opustiť“ teda nie je to, čo hovorí súčasné európske usmernenie. Dôvod je fyziologický: pacient je v okamihu zástavy spravidla po niekoľkých hodinách ultrafiltrácie, teda v stave relatívnej hypovolémie. Mimotelový okruh pritom obsahuje rádovo 200 ml krvi (podľa typu setu a dialyzátora približne 150–300 ml). Tento objem nie je zanedbateľný a jeho návrat pôsobí rovnakým smerom ako odporúčaný bolus tekutiny.</p>
+<p>Odporúčanie „krv opustiť“ teda nie je to, čo hovorí súčasné európske usmernenie. Dôvod je fyziologický: pacient je v okamihu zástavy spravidla po niekoľkých hodinách ultrafiltrácie, teda v stave relatívnej hypovolémie. Mimotelový okruh pritom obsahuje rádovo 200&nbsp;ml krvi (podľa typu setu a dialyzátora približne 150–300&nbsp;ml). Tento objem nie je zanedbateľný a jeho návrat pôsobí rovnakým smerom ako odporúčaný bolus tekutiny.</p>
 
 <p>Obava pôvodného textu je napriek tomu oprávnená – len vedie k inému záveru. Návrat krvi <strong>nesmie</strong> oddialiť kompresie hrudníka ani defibriláciu. Riešením nie je vzdať sa objemu, ale rozdeliť úlohy: jeden člen tímu vedie resuscitáciu, druhý – vyškolený na obsluhu prístroja – paralelne ukončuje dialýzu a vracia krv. Presne to ERC formuluje pokynom prideliť obsluhu prístroja vyškolenej osobe. Ak takáto osoba k dispozícii nie je, prednosť majú vždy kompresie a výboj.</p>
 
 <h2>Katétrový zámok: riziko, ktoré sa dá vyčísliť</h2>
 
-<p>Upozornenie na heparínový zámok patrí k najcennejším častiam pôvodného textu a je vecne správne. Tunelizované dialyzačné katétre sa medzi sedeniami plnia uzamykacím roztokom, ktorý má zabrániť trombóze. Pri nefrakcionovanom heparíne sa v praxi používajú koncentrácie v rozpätí <strong>1 000 – 10 000 U/ml</strong> a plniaci objem jedného ramena býva približne 1,3–2,0 ml. Obsah jedného ramena teda predstavuje rádovo 1 300 až 20 000 jednotiek heparínu – množstvo, ktoré po podaní do centrálnej žily nie je nevinné.</p>
+<p>Upozornenie na heparínový zámok patrí k najcennejším častiam pôvodného textu a je vecne správne. Tunelizované dialyzačné katétre sa medzi sedeniami plnia uzamykacím roztokom, ktorý má zabrániť trombóze. Pri nefrakcionovanom heparíne sa v praxi používajú koncentrácie v rozpätí <strong>1&nbsp;000 – 10&nbsp;000&nbsp;U/ml</strong> a plniaci objem jedného ramena býva približne 1,3–2,0&nbsp;ml. Obsah jedného ramena teda predstavuje rádovo 1&nbsp;300 až 20&nbsp;000 jednotiek heparínu – množstvo, ktoré po podaní do centrálnej žily nie je nevinné.</p>
 
 <p>Správny postup preto je odsať uzamykací roztok (spravidla plniaci objem ramena s malou rezervou) a až potom katéter použiť. V praxi to trvá sekundy a nie je dôvod tento krok vynechávať. Zároveň platí, že ide o úkon, ktorý sa vykonáva súbežne s kompresiami, nie namiesto nich.</p>
 
@@ -75,11 +75,11 @@ $articles[] = [
 
 <p>Tvrdenie, že hyperkaliémia je „najpravdepodobnejším spúšťačom“ zástavy pri dialýze, je klinicky pochopiteľné, ale dostupné údaje ho v takejto podobe nepotvrdzujú.</p>
 
-<p>Štúdia <em>Monitoring in Dialysis</em> implantovala 66 pacientom na udržiavacej hemodialýze slučkové záznamníky a sledovala ich šesť mesiacov. U 44 pacientov zaznamenala 1 678 klinicky významných arytmických príhod, z toho <strong>1 461 bradyarytmií, 14 epizód asystólie a jedinú epizódu zotrvalej komorovej tachykardie</strong>. Terminálny rytmus u dialyzovaných pacientov teda zďaleka nie je len obraz hyperkaliemickej komorovej fibrilácie, ako sa často predpokladá.</p>
+<p>Štúdia <em>Monitoring in Dialysis</em> implantovala 66 pacientom na udržiavacej hemodialýze slučkové záznamníky a sledovala ich šesť mesiacov. U 44 pacientov zaznamenala 1&nbsp;678 klinicky významných arytmických príhod, z toho <strong>1&nbsp;461 bradyarytmií, 14 epizód asystólie a jedinú epizódu zotrvalej komorovej tachykardie</strong>. Terminálny rytmus u dialyzovaných pacientov teda zďaleka nie je len obraz hyperkaliemickej komorovej fibrilácie, ako sa často predpokladá.</p>
 
-<p>Prípadovo-kontrolná analýza 502 náhlych zástav obehu vzniknutých priamo v dialyzačných strediskách oproti 1 632 kontrolám udáva výskyt <strong>4,5 zástavy na 100 000 dialyzačných procedúr</strong> a identifikuje ako rizikové faktory expozíciu dialyzačnému roztoku s draslíkom pod 2 mmol/l, roztok s nízkym obsahom vápnika a vyšší ultrafiltračný objem. Ide teda o rizikové faktory na strane <em>preskripcie dialýzy</em>, nie iba na strane pacientovej diétnej spolupráce.</p>
+<p>Prípadovo-kontrolná analýza 502 náhlych zástav obehu vzniknutých priamo v dialyzačných strediskách oproti 1&nbsp;632 kontrolám udáva výskyt <strong>4,5 zástavy na 100&nbsp;000 dialyzačných procedúr</strong> a identifikuje ako rizikové faktory expozíciu dialyzačnému roztoku s draslíkom pod 2&nbsp;mmol/l, roztok s nízkym obsahom vápnika a vyšší ultrafiltračný objem. Ide teda o rizikové faktory na strane <em>preskripcie dialýzy</em>, nie iba na strane pacientovej diétnej spolupráce.</p>
 
-<p>Samostatnou kapitolou je načasovanie. V americkej kohorte s 32 065 pacientmi na trikrát týždennom režime bola úmrtnosť v prvý deň po dlhom medzidialyzačnom intervale <strong>22,1 oproti 18,0 úmrtia na 100 pacientorokov</strong> v ostatné dni. Pondelok, respektíve utorok teda nie je len organizačná zvláštnosť rozpisu.</p>
+<p>Samostatnou kapitolou je načasovanie. V americkej kohorte s 32&nbsp;065 pacientmi na trikrát týždennom režime bola úmrtnosť v prvý deň po dlhom medzidialyzačnom intervale <strong>22,1 oproti 18,0 úmrtia na 100 pacientorokov</strong> v ostatné dni. Pondelok, respektíve utorok teda nie je len organizačná zvláštnosť rozpisu.</p>
 
 <p>V diferenciálnej diagnostike zástavy na dialyzačnej sále preto popri hyperkaliémii patria aj intradialytická hypotenzia s ťažkou hypovolémiou, arytmia na podklade štrukturálneho ochorenia srdca, akútny koronárny syndróm, vzduchová embólia, hemolýza pri chybe dialyzačného roztoku alebo jeho prehriatí, anafylaktoidná reakcia na dialyzátor a krvácanie z cievneho prístupu. Hypokaliémia po agresívnej korekcii je pritom rovnako reálna hrozba ako hyperkaliémia pred ňou.</p>
 
@@ -104,17 +104,17 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Stabilizovať myokard</th>
-      <td>10 ml 10 % chloridu vápenatého i. v. rýchlym bolusom</td>
-      <td>Alternatívne 30 ml 10 % glukonátu vápenatého. Pri refraktérnej alebo dlhotrvajúcej zástave zvážiť opakovanie.</td>
+      <td>10&nbsp;ml 10 % chloridu vápenatého i. v. rýchlym bolusom</td>
+      <td>Alternatívne 30&nbsp;ml 10 % glukonátu vápenatého. Pri refraktérnej alebo dlhotrvajúcej zástave zvážiť opakovanie.</td>
     </tr>
     <tr>
       <th scope="row">Presunúť draslík do buniek</th>
-      <td>10 j. rozpustného inzulínu s 25 g glukózy i. v.</td>
+      <td>10 j. rozpustného inzulínu s 25&nbsp;g glukózy i. v.</td>
       <td>Nástup účinku je v desiatkach minút – nejde o okamžite život zachraňujúci krok. Po obnovení obehu sledovať glykémiu a podávať 10 % glukózu.</td>
     </tr>
     <tr>
       <th scope="row">Hydrogénuhličitan sodný</th>
-      <td>50 mmol i. v.</td>
+      <td>50&nbsp;mmol i. v.</td>
       <td>V algoritme zástavy áno; mimo zástavy je jeho úloha oveľa spornejšia a riadi sa acidobázickým stavom.</td>
     </tr>
     <tr>
@@ -126,7 +126,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Dôležité rozlíšenie: inhalačný salbutamol (10–20 mg v nebulizácii) a perorálne viažuce látky, napríklad cyklosilikát zirkoničito-sodný, patria k pacientovi <strong>so zachovaným obehom</strong>. Počas zástavy sa nebulizácia ani perorálne podanie uskutočniť nedajú.</p>
+<p>Dôležité rozlíšenie: inhalačný salbutamol (10–20&nbsp;mg v nebulizácii) a perorálne viažuce látky, napríklad cyklosilikát zirkoničito-sodný, patria k pacientovi <strong>so zachovaným obehom</strong>. Počas zástavy sa nebulizácia ani perorálne podanie uskutočniť nedajú.</p>
 
 <h2>Vecná kontrola tvrdení</h2>
 
@@ -153,7 +153,7 @@ $articles[] = [
     <tr>
       <th scope="row">Pred podaním liekov cez tunelizovaný katéter treba odsať uzamykací roztok</th>
       <td>Potvrdené</td>
-      <td>Pri koncentrácii 1 000–10 000 U/ml a plniacom objeme 1,3–2,0 ml na rameno ide rádovo o 1 300–20 000 jednotiek heparínu.</td>
+      <td>Pri koncentrácii 1&nbsp;000–10&nbsp;000&nbsp;U/ml a plniacom objeme 1,3–2,0&nbsp;ml na rameno ide rádovo o 1&nbsp;300–20&nbsp;000 jednotiek heparínu.</td>
     </tr>
     <tr>
       <th scope="row">Hyperkaliémia je najpravdepodobnejší spúšťač zástavy pri terminálnom zlyhaní obličiek</th>
@@ -197,7 +197,7 @@ $articles[] = [
   <li><strong>Rozdelené úlohy.</strong> Vedúci resuscitácie, obsluha prístroja a osoba pre lieky a cievny prístup. Bez rozdelenia úloh sa návrat krvi a odsatie zámku nevyhnutne menia na zdržanie.</li>
   <li><strong>Nacvičená manipulácia s katétrom.</strong> Odsatie uzamykacieho roztoku má byť reflex, nie rozhodnutie.</li>
   <li><strong>Dostupnosť analyzátora krvných plynov</strong> alebo iného rýchleho stanovenia kaliémie priamo na pracovisku.</li>
-  <li><strong>Kontrola preskripcie dialýzy ako prevencia.</strong> Draslík v dialyzačnom roztoku pod 2 mmol/l, nízky obsah vápnika v roztoku a vysoká ultrafiltračná rýchlosť sú modifikovateľné rizikové faktory.</li>
+  <li><strong>Kontrola preskripcie dialýzy ako prevencia.</strong> Draslík v dialyzačnom roztoku pod 2&nbsp;mmol/l, nízky obsah vápnika v roztoku a vysoká ultrafiltračná rýchlosť sú modifikovateľné rizikové faktory.</li>
   <li><strong>Zvýšená pozornosť po dlhom medzidialyzačnom intervale</strong> vrátane predialyzačného posúdenia pacienta a rozvahy o rýchlosti korekcie.</li>
   <li><strong>Dohodnutá cesta prevozu.</strong> Kto volá, kam, s akým očakávaným časom a kto zabezpečí pokračovanie eliminačnej liečby.</li>
   <li><strong>Rozbor po udalosti.</strong> Krátky štruktúrovaný rozbor v tíme má na zvládnutie ďalšej príhody väčší vplyv než ktorékoľvek školenie mimo pracoviska.</li>

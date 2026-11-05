@@ -1,8 +1,8 @@
 <?php
 /**
  * add_kdigo-ckm-syndrom-oblicka-v-strede_article.php
- * Idempotentny publikacny skript odborneho clanku.
- * Spracovanie: Levin et al. (Kidney International, 2026) + KDIGO konferencne spravy.
+ * Idempotentný publikačný skript odborného článku.
+ * Spracovanie: Levin et al. (Kidney International, 2026) + KDIGO konferencne správy.
  */
 
 // Ochrana – len admin alebo CLI
@@ -70,7 +70,7 @@ $articles[] = [
 
 <p>CKD zvyšuje riziko progresie do zlyhania obličiek, kardiovaskulárnych príhod, hospitalizácie aj úmrtia. Riziko rastie už v skorých štádiách a nie je dané iba odhadovanou glomerulovou filtráciou (eGFR), ale aj <strong>albuminúriou</strong>, ktorá je silným a nezávislým markerom poškodenia obličiek i kardiovaskulárneho rizika.</p>
 
-<p>CKD pritom nie je definovaná iba zníženou eGFR. Diagnóza sa opiera o prítomnosť štrukturálneho alebo funkčného poškodenia obličiek, jeho trvanie <strong>najmenej 3 mesiace</strong> a klasifikáciu podľa <strong>príčiny, G kategórie eGFR a A kategórie albuminúrie</strong>.</p>
+<p>CKD pritom nie je definovaná iba zníženou eGFR. Diagnóza sa opiera o prítomnosť štrukturálneho alebo funkčného poškodenia obličiek, jeho trvanie <strong>najmenej 3&nbsp;mesiace</strong> a klasifikáciu podľa <strong>príčiny, G kategórie eGFR a A kategórie albuminúrie</strong>.</p>
 
 <p>V praxi to znamená, že u rizikového pacienta nestačí vyšetriť kreatinín. Základom je kombinácia eGFR, <strong>pomeru albumín/kreatinín v moči (UACR)</strong> a posúdenia príčiny ochorenia. Samotný kreatinín bez albuminúrie prehliadne značnú časť pacientov s CKD kategórie A2 alebo A3 pri zachovanej filtrácii.</p>
 
@@ -96,15 +96,15 @@ $articles[] = [
 
 <h3>Životný štýl</h3>
 
-<p>Základom zostáva fyzická aktivita primeranej intenzity <strong>aspoň 150 minút týždenne</strong>, nefajčenie, obmedzenie nadmerného príjmu soli, primeraný príjem bielkovín a redukcia hmotnosti pri obezite. Pri CKD sa uvádza približne <strong>sodík pod 2 g/deň</strong> a <strong>bielkoviny okolo 0,8 g/kg/deň</strong> u vhodných skupín pacientov.</p>
+<p>Základom zostáva fyzická aktivita primeranej intenzity <strong>aspoň 150&nbsp;minút týždenne</strong>, nefajčenie, obmedzenie nadmerného príjmu soli, primeraný príjem bielkovín a redukcia hmotnosti pri obezite. Pri CKD sa uvádza približne <strong>sodík pod 2&nbsp;g/deň</strong> a <strong>bielkoviny okolo 0,8&nbsp;g/kg/deň</strong> u vhodných skupín pacientov.</p>
 
 <p>Tieto čísla treba individualizovať podľa výživového stavu, veku, komorbidít a rizika malnutrície. U krehkého pacienta s nízkym príjmom energie môže reštrikcia bielkovín napáchať viac škody než osohu.</p>
 
 <h3>Kontrola krvného tlaku</h3>
 
-<p>U dospelých s CKD bez dialýzy sa odporúča cieľový <strong>systolický tlak pod 120 mmHg</strong>, ak sa meria štandardizovane a pacient ho toleruje. Ide o silné odporúčanie, nie však o univerzálny cieľ pre každého.</p>
+<p>U dospelých s CKD bez dialýzy sa odporúča cieľový <strong>systolický tlak pod 120&nbsp;mmHg</strong>, ak sa meria štandardizovane a pacient ho toleruje. Ide o silné odporúčanie, nie však o univerzálny cieľ pre každého.</p>
 
-<p>Podmienka štandardizovaného merania nie je formalita – cieľ pod 120 mmHg sa vzťahuje na hodnoty získané správnou technikou, nie na bežné ambulantné meranie v zhone. Opatrnosť je namieste pri pokročilej CKD, u krehkých pacientov, pri ortostatickej hypotenzii, vo veľmi vysokom veku a pri zvýšenom riziku pádov.</p>
+<p>Podmienka štandardizovaného merania nie je formalita – cieľ pod 120&nbsp;mmHg sa vzťahuje na hodnoty získané správnou technikou, nie na bežné ambulantné meranie v zhone. Opatrnosť je namieste pri pokročilej CKD, u krehkých pacientov, pri ortostatickej hypotenzii, vo veľmi vysokom veku a pri zvýšenom riziku pádov.</p>
 
 <h3>Blokáda systému renín–angiotenzín</h3>
 
@@ -124,7 +124,7 @@ $articles[] = [
 
 <h3>Statíny</h3>
 
-<p>Pacienti s CKD sú vo všeobecnosti vysoko kardiovaskulárne rizikoví. Statín alebo kombinácia statínu s ezetimibom sa odporúča najmä vo veku <strong>50 rokov a viac</strong> pri CKD bez dialýzy a u mladších pacientov so špecifickými rizikovými faktormi.</p>
+<p>Pacienti s CKD sú vo všeobecnosti vysoko kardiovaskulárne rizikoví. Statín alebo kombinácia statínu s ezetimibom sa odporúča najmä vo veku <strong>50&nbsp;rokov a viac</strong> pri CKD bez dialýzy a u mladších pacientov so špecifickými rizikovými faktormi.</p>
 
 <h3>Antiagregácia a antikoagulácia</h3>
 
@@ -188,7 +188,7 @@ $articles[] = [
   <li><a href="article.php?slug=acc-aha-ckm-syndrom-prve-odporucanie">CKM syndróm: prvé odporúčanie ACC/AHA</a></li>
   <li><a href="article.php?slug=5-kritickych-chyb-manazment-ckm-syndromu-nefrologia">Päť kritických chýb v manažmente CKM syndrómu</a></li>
   <li><a href="article.php?slug=kdigo-2024-od-stadii-ckd-k-personalizovanemu-odhadu-rizika">KDIGO 2024: od štádií CKD k personalizovanému odhadu rizika</a></li>
-  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120 mmHg pri CKD v reálnej praxi</a></li>
+  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120&nbsp;mmHg pri CKD v reálnej praxi</a></li>
   <li><a href="article.php?slug=obezita-a-oblicky">Obezita a obličky</a></li>
 </ul>
 

@@ -34,7 +34,7 @@ function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
             );
             if (!$reauth['ok']) {
                 $deleteErrors[] = $reauth['blocked']
-                    ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                    ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
                     : 'Zadané heslo nie je správne. Účet nebol zrušený.';
                 return ['errors' => $deleteErrors, 'showForm' => $showDeleteForm];
             }
@@ -70,7 +70,7 @@ function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
 
                 setFlashMessage('info',
                     'Na vašu e-mailovú adresu sme zaslali potvrdzovací odkaz. '
-                    . 'Kliknite naň do 24 hodín pre trvalé zrušenie účtu. '
+                    . 'Kliknite naň do 24 hodín pre trvalé zrušenie účtu. '
                     . 'Ak e-mail neprišiel, skontrolujte priečinok so spamom.'
                 );
                 $showDeleteForm = false;

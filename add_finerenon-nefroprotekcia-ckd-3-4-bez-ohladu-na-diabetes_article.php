@@ -35,15 +35,15 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" alt="Dve obličky – jedna s cukrovými iskrami, druhá bez – obe dostávajú rovnako silný ochranný lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana obličky nezávisí od prítomnosti diabetu – to je jadro nálezu.</figcaption></figure>
 
-<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronickej choroby obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60 ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnosť: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
+<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronickej choroby obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60&nbsp;ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnosť: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
 
 <h2>Kto bol v štúdii</h2>
 
-<p>Išlo o prospektívne hodnotenie u <strong>180 ambulantných pacientov</strong> v Iraku (CKD 3.–4. štádia; eGFR <strong>20–60 ml/min</strong>; <strong>UACR &gt; 30 mg/g</strong>):</p>
+<p>Išlo o prospektívne hodnotenie u <strong>180 ambulantných pacientov</strong> v Iraku (CKD 3.–4. štádia; eGFR <strong>20–60&nbsp;ml/min</strong>; <strong>UACR &gt; 30&nbsp;mg/g</strong>):</p>
 
 <ul>
   <li>pri vstupnom hodnotení malo <strong>78 % pacientov diabetes</strong>,</li>
-  <li><strong>36 %</strong> malo eGFR v pásme <strong>20 až 25 ml/min</strong>.</li>
+  <li><strong>36 %</strong> malo eGFR v pásme <strong>20 až 25&nbsp;ml/min</strong>.</li>
 </ul>
 
 <h2>Hlavné výsledky (po 1 roku)</h2>
@@ -51,8 +51,8 @@ $articles[] = [
 <p>V skupine ako celku:</p>
 
 <ul>
-  <li><strong>eGFR sa zlepšila</strong>: z približne <strong>32 ± 10</strong> na <strong>47 ± 15 ml/min</strong>,</li>
-  <li><strong>UACR sa znížila</strong>: z približne <strong>542 ± 400</strong> na <strong>180 ± 170 mg/g</strong>.</li>
+  <li><strong>eGFR sa zlepšila</strong>: z približne <strong>32 ± 10</strong> na <strong>47 ± 15&nbsp;ml/min</strong>,</li>
+  <li><strong>UACR sa znížila</strong>: z približne <strong>542 ± 400</strong> na <strong>180 ± 170&nbsp;mg/g</strong>.</li>
 </ul>
 
 <h2>Analýza podskupín</h2>
@@ -60,27 +60,27 @@ $articles[] = [
 <h3>Pacienti bez diabetu</h3>
 
 <ul>
-  <li>eGFR: z približne <strong>33 ± 10</strong> na <strong>50 ± 16 ml/min</strong>,</li>
-  <li>UACR: z približne <strong>592 ± 431</strong> na <strong>203 ± 197 mg/g</strong>.</li>
+  <li>eGFR: z približne <strong>33 ± 10</strong> na <strong>50 ± 16&nbsp;ml/min</strong>,</li>
+  <li>UACR: z približne <strong>592 ± 431</strong> na <strong>203 ± 197&nbsp;mg/g</strong>.</li>
 </ul>
 
-<h3>Pacienti s eGFR 20 až 25 ml/min</h3>
+<h3>Pacienti s eGFR 20 až 25&nbsp;ml/min</h3>
 
 <ul>
-  <li>eGFR: z približne <strong>21 ± 2</strong> na <strong>36 ± 8 ml/min</strong> po roku,</li>
-  <li>UACR: z približne <strong>602 ± 380</strong> na <strong>209 ± 152 mg/g</strong>.</li>
+  <li>eGFR: z približne <strong>21 ± 2</strong> na <strong>36 ± 8&nbsp;ml/min</strong> po roku,</li>
+  <li>UACR: z približne <strong>602 ± 380</strong> na <strong>209 ± 152&nbsp;mg/g</strong>.</li>
 </ul>
 
 <h2>Bezpečnosť: draslík</h2>
 
-<p>Článok priamo uvádza, že <strong>finerenón nezvyšoval hladinu sérového draslíka</strong>. Aj v podskupine s eGFR <strong>20–25 ml/min</strong> boli priemerné hodnoty draslíka približne <strong>4,8 ± 0,7 mmol/l na začiatku</strong> a <strong>4,8 ± 0,6 mmol/l po 1 roku</strong>.</p>
+<p>Článok priamo uvádza, že <strong>finerenón nezvyšoval hladinu sérového draslíka</strong>. Aj v podskupine s eGFR <strong>20–25&nbsp;ml/min</strong> boli priemerné hodnoty draslíka približne <strong>4,8 ± 0,7&nbsp;mmol/l na začiatku</strong> a <strong>4,8 ± 0,6&nbsp;mmol/l po 1 roku</strong>.</p>
 
 <h2>Praktické ponaučenie</h2>
 
 <p>Zdroj podporuje predstavu, že u vybraných pacientov s <strong>CKD 3.–4. štádia a významnou albuminúriou</strong> môže mať finerenón <strong>nefroprotektívny prínos aj bez diabetu</strong>. Ide však o reálnu populáciu (ambulantní pacienti, podľa textu zjavne mimo schválenej indikácie), z čoho pre prax vyplýva:</p>
 
 <ul>
-  <li>do úvahy prichádzajú pacienti s albuminúriou (UACR &gt; 30 mg/g) a eGFR v príslušnom rozmedzí,</li>
+  <li>do úvahy prichádzajú pacienti s albuminúriou (UACR &gt; 30&nbsp;mg/g) a eGFR v príslušnom rozmedzí,</li>
   <li>draslík treba monitorovať podľa bežných klinických zásad, aj keď v tejto kohorte hyperkaliémia nebola problémom.</li>
 </ul>
 

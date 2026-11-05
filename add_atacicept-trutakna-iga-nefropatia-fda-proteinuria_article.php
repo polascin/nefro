@@ -30,7 +30,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" rel="noopener noreferrer" target="_blank"><img src="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" alt="Glomerulus so zastaveným únikom bielkoviny a v diaľke ešte rozostavané svetelné dvere s lešením" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zrýchlené schválenie stojí na znížení proteinúrie – potvrdenie tvrdých obličkových výsledkov ešte len má prísť.</figcaption></figure>
 
-<p>Americký Úrad pre kontrolu potravín a liečiv (FDA) udelil 7. júla 2026 lieku Trutakna (atacicept-vymj) zrýchlené schválenie na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou, ktorí sú ohrození progresiou ochorenia. Odporúčaná dávka je 150 mg podkožne raz týždenne; liek sa podáva pomocou jednodávkového naplneného autoinjektora.</p>
+<p>Americký Úrad pre kontrolu potravín a liečiv (FDA) udelil 7. júla 2026 lieku Trutakna (atacicept-vymj) zrýchlené schválenie na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou, ktorí sú ohrození progresiou ochorenia. Odporúčaná dávka je 150&nbsp;mg podkožne raz týždenne; liek sa podáva pomocou jednodávkového naplneného autoinjektora.</p>
 
 <p>Ide o prvý liek schválený FDA pri IgA nefropatii, ktorý súčasne inhibuje signálne dráhy BAFF a APRIL. Regulačné rozhodnutie však neznamená, že atacicept už preukázal spomalenie dlhodobého poklesu glomerulovej filtrácie alebo prevenciu zlyhania obličiek. Schválená indikácia je založená na redukcii proteinúrie a jej ďalšie trvanie môže závisieť od potvrdenia klinického prínosu v pokračujúcej štúdii ORIGIN 3.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Dávkovanie</td>
-      <td>150 mg podkožne raz týždenne</td>
+      <td>150&nbsp;mg podkožne raz týždenne</td>
     </tr>
     <tr>
       <td>Typ schválenia</td>
@@ -67,7 +67,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Potvrdzujúce hodnotenie</td>
-      <td>pokračujúca zaslepená časť ORIGIN 3 s hodnotením zmeny eGFR</td>
+      <td>pokračujúca zaslepená časť ORIGIN 3&nbsp;s hodnotením zmeny eGFR</td>
     </tr>
   </tbody>
 </table>
@@ -85,21 +85,21 @@ $articles[] = [
 
 <h2>ORIGIN 3: koho vlastne skúmali</h2>
 
-<p>ORIGIN 3 (NCT04716231) je pokračujúca globálna, multicentrická, randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3. Účastníci dostávali atacicept 150 mg podkožne raz týždenne alebo zodpovedajúce placebo. Predbežne špecifikovaná analýza účinnosti zahŕňala prvých 203 pacientov, ktorí dosiahli 36. týždeň: 106 v skupine s ataciceptom a 97 v skupine s placebom.</p>
+<p>ORIGIN 3 (NCT04716231) je pokračujúca globálna, multicentrická, randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3. Účastníci dostávali atacicept 150&nbsp;mg podkožne raz týždenne alebo zodpovedajúce placebo. Predbežne špecifikovaná analýza účinnosti zahŕňala prvých 203 pacientov, ktorí dosiahli 36. týždeň: 106 v skupine s ataciceptom a 97 v skupine s placebom.</p>
 
 <p>Podľa americkej preskripčnej informácie boli zaradení dospelí s:</p>
 
 <ul>
   <li>biopticky potvrdenou primárnou IgA nefropatiou,</li>
-  <li>eGFR najmenej 30 ml/min/1,73 m²,</li>
-  <li>UPCR najmenej 1 g/g v 24-hodinovej vzorke alebo proteinúriou najmenej 1 g za 24 hodín,</li>
+  <li>eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m²,</li>
+  <li>UPCR najmenej 1&nbsp;g/g v 24-hodinovej vzorke alebo proteinúriou najmenej 1&nbsp;g za 24&nbsp;hodín,</li>
   <li>stabilnou maximálne tolerovanou dávkou inhibítora systému renín-angiotenzín,</li>
   <li>možnosťou súbežnej stabilnej liečby inhibítorom SGLT2 a/alebo antagonistom mineralokortikoidného receptora.</li>
 </ul>
 
-<p>Pacienti s inou glomerulopatiou alebo so systémovou imunosupresívnou liečbou počas 12 týždňov pred skríningom boli vylúčení. Priemerná východisková eGFR bola 65 ml/min/1,73 m² a geometrický priemer UPCR 1,5 g/g. Takmer všetci užívali inhibítor ACE a/alebo sartán a 53 % užívalo inhibítor SGLT2.</p>
+<p>Pacienti s inou glomerulopatiou alebo so systémovou imunosupresívnou liečbou počas 12&nbsp;týždňov pred skríningom boli vylúčení. Priemerná východisková eGFR bola 65&nbsp;ml/min/1,73&nbsp;m² a geometrický priemer UPCR 1,5&nbsp;g/g. Takmer všetci užívali inhibítor ACE a/alebo sartán a 53 % užívalo inhibítor SGLT2.</p>
 
-<p>Pre prax je to podstatné: výsledok nevznikol v neselektovanej populácii so všetkými štádiami IgA nefropatie, ale u pacientov s pretrvávajúcou proteinúriou napriek nastavenej podpornej liečbe a s eGFR najmenej 30 ml/min/1,73 m².</p>
+<p>Pre prax je to podstatné: výsledok nevznikol v neselektovanej populácii so všetkými štádiami IgA nefropatie, ale u pacientov s pretrvávajúcou proteinúriou napriek nastavenej podpornej liečbe a s eGFR najmenej 30&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <h2>Primárny výsledok: výrazná redukcia proteinúrie</h2>
 
@@ -139,7 +139,7 @@ $articles[] = [
   <li>erytém v mieste vpichu: 6 % oproti 1 %.</li>
 </ul>
 
-<p>Väčšina reakcií bola mierna alebo stredne závažná a ustúpila bez prerušenia alebo ukončenia liečby. Trvanie expozície v registračnej bezpečnostnej analýze však bolo obmedzené; medián predstavoval 34 týždňov pri atacicepte a 31 týždňov pri placebe. Menej časté alebo neskoré nežiaduce účinky preto môže spoľahlivejšie charakterizovať až dlhšie sledovanie a farmakovigilancia.</p>
+<p>Väčšina reakcií bola mierna alebo stredne závažná a ustúpila bez prerušenia alebo ukončenia liečby. Trvanie expozície v registračnej bezpečnostnej analýze však bolo obmedzené; medián predstavoval 34&nbsp;týždňov pri atacicepte a 31&nbsp;týždňov pri placebe. Menej časté alebo neskoré nežiaduce účinky preto môže spoľahlivejšie charakterizovať až dlhšie sledovanie a farmakovigilancia.</p>
 
 <p>Trutakna je kontraindikovaná pri závažnej precitlivenosti na atacicept-vymj alebo ktorúkoľvek pomocnú látku. Pred začatím liečby treba posúdiť aktívnu infekciu a podanie odložiť, kým infekcia neustúpi alebo nie je primerane liečená. Pri závažnej infekcii počas liečby sa má zvážiť dočasné prerušenie.</p>
 
@@ -147,9 +147,9 @@ $articles[] = [
 
 <h2>Očkovanie a osobitné populácie</h2>
 
-<p>Pred začatím liečby sa majú dokončiť očkovania primerané veku podľa aktuálnych odporúčaní. Živé vakcíny sa neodporúčajú počas 30 dní pred prvou dávkou ani počas liečby, pretože atacicept môže oslabiť imunitnú odpoveď na vakcíny a zvýšiť riziko infekcie po živej vakcíne.</p>
+<p>Pred začatím liečby sa majú dokončiť očkovania primerané veku podľa aktuálnych odporúčaní. Živé vakcíny sa neodporúčajú počas 30&nbsp;dní pred prvou dávkou ani počas liečby, pretože atacicept môže oslabiť imunitnú odpoveď na vakcíny a zvýšiť riziko infekcie po živej vakcíne.</p>
 
-<p>Údaje o použití v gravidite nie sú dostatočné na spoľahlivé posúdenie rizika. Vzhľadom na mechanizmus účinku sa má zohľadniť možná imunosupresia dieťaťa exponovaného in utero. Nie sú dostupné údaje o prítomnosti lieku v ľudskom mlieku a jeho bezpečnosť ani účinnosť u detí neboli stanovené. V štúdiách tiež nebol dostatok pacientov vo veku najmenej 65 rokov na spoľahlivé posúdenie odlišnej odpovede.</p>
+<p>Údaje o použití v gravidite nie sú dostatočné na spoľahlivé posúdenie rizika. Vzhľadom na mechanizmus účinku sa má zohľadniť možná imunosupresia dieťaťa exponovaného in utero. Nie sú dostupné údaje o prítomnosti lieku v ľudskom mlieku a jeho bezpečnosť ani účinnosť u detí neboli stanovené. V štúdiách tiež nebol dostatok pacientov vo veku najmenej 65&nbsp;rokov na spoľahlivé posúdenie odlišnej odpovede.</p>
 
 <h2>Miesto v liečebnej stratégii</h2>
 

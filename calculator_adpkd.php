@@ -21,19 +21,19 @@ function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
 
     if ($k < 0.015) {
         $class = "1A";
-        $speed = "Pomalá (<1,5 %/rok)";
+        $speed = "Pomalá (<1,5 %/rok)";
     } elseif ($k < 0.03) {
         $class = "1B";
-        $speed = "Mierna (1,5–3 %/rok)";
+        $speed = "Mierna (1,5–3 %/rok)";
     } elseif ($k < 0.045) {
         $class = "1C";
-        $speed = "Rýchla (3–4,5 %/rok)";
+        $speed = "Rýchla (3–4,5 %/rok)";
     } elseif ($k < 0.06) {
         $class = "1D";
-        $speed = "Veľmi rýchla (4,5–6 %/rok)";
+        $speed = "Veľmi rýchla (4,5–6 %/rok)";
     } else {
         $class = "1E";
-        $speed = "Extrémne rýchla (>6 %/rok)";
+        $speed = "Extrémne rýchla (>6 %/rok)";
     }
 
     return [
@@ -66,7 +66,7 @@ function adpkdInterpretation(string $class): array
         case "1D":
             $interp[] =
                 "Trieda 1D: veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
-            $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
+            $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
             break;
         case "1E":
             $interp[] =
@@ -123,13 +123,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $isTypical = $form["typical_adpkd"] === "1";
 
         if ($tkvMl === null || $tkvMl > 10000) {
-            $errors[] = "Celkový objem obličiek (TKV) musí byť 1–10 000 mL.";
+            $errors[] = "Celkový objem obličiek (TKV) musí byť 1–10 000 mL.";
         }
         if ($heightCm === null || $heightCm < 100 || $heightCm > 220) {
-            $errors[] = "Výška musí byť 100–220 cm.";
+            $errors[] = "Výška musí byť 100–220 cm.";
         }
         if ($ageYears === null || $ageYears < 15 || $ageYears > 80) {
-            $errors[] = "Vek musí byť 15–80 rokov.";
+            $errors[] = "Vek musí byť 15–80 rokov.";
         }
 
         if (empty($errors)) {

@@ -72,9 +72,9 @@ $articles[] = [
 <h3>Hemodialýza (CKD G5HD)</h3>
 
 <ul>
-  <li>Pri kombinácii <strong>ferritín ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> je racionálne začať <strong>IV železo</strong>.</li>
+  <li>Pri kombinácii <strong>ferritín ≤ 500&nbsp;ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> je racionálne začať <strong>IV železo</strong>.</li>
   <li>Pri liečbe železom mať jasnú <strong>bezpečnostnú hranicu</strong>.</li>
-  <li><strong>Rutinné železo zadržať</strong>, ak je <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
+  <li><strong>Rutinné železo zadržať</strong>, ak je <strong>ferritín &gt; 700&nbsp;ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
 <h3>Non-HD CKD</h3>
@@ -98,8 +98,8 @@ $articles[] = [
 <ul>
   <li>Pred nasadením ESA alebo HIF-PHI treba mať riešené korektibilné príčiny, najmä deficit železa.</li>
   <li>Rozhodnutie má byť <strong>zdieľané s pacientom</strong> a má zohľadniť benefit, riziká aj riziko transfúzie.</li>
-  <li>Pri CKD G5D sa ESA typicky zvažuje pri <strong>Hb približne ≤ 9,0 až 10,0 g/dl</strong> podľa symptómov a trendu.</li>
-  <li>Pri udržiavaní liečby držať Hb <strong>pod hornou hranicou približne 11,5 g/dl</strong>.</li>
+  <li>Pri CKD G5D sa ESA typicky zvažuje pri <strong>Hb približne ≤ 9,0 až 10,0&nbsp;g/dl</strong> podľa symptómov a trendu.</li>
+  <li>Pri udržiavaní liečby držať Hb <strong>pod hornou hranicou približne 11,5&nbsp;g/dl</strong>.</li>
 </ul>
 
 <p>Nehodnotí sa len samotná laboratórna hodnota, ale aj symptómy, komorbidity a bezpečnostný profil terapie.</p>
@@ -108,8 +108,8 @@ $articles[] = [
 
 <ul>
   <li><strong>Hb, ferritín, TSAT</strong> kontrolovať pravidelne podľa typu CKD.</li>
-  <li>Pri CKD bez dialýzy a CKD G5PD: <strong>každé 3 mesiace</strong>.</li>
-  <li>Pri CKD G5HD: <strong>každých 1 až 3 mesiace</strong>.</li>
+  <li>Pri CKD bez dialýzy a CKD G5PD: <strong>každé 3&nbsp;mesiace</strong>.</li>
+  <li>Pri CKD G5HD: <strong>každých 1 až 3&nbsp;mesiace</strong>.</li>
   <li>Pri zmene klinického stavu plán revidovať, najmä pri infekcii, krvácaní, hospitalizácii alebo zhoršení výživy.</li>
 </ul>
 

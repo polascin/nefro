@@ -53,7 +53,7 @@ $articles[] = [
 
 <p>Celý problém má jeden farmakokinetický koreň. Gabapentín sa <strong>nemetabolizuje</strong> – v klasickej práci Bluma a spolupracovníkov (<em>Clinical Pharmacology and Therapeutics</em>, 1994) sa u 60 osôb s rôznym stupňom renálnej funkcie nenašli známky metabolizmu ani pri ťažkej renálnej insuficiencii a celkové množstvo nezmeneného liečiva vylúčeného močom bolo porovnateľné vo všetkých skupinách. Plazmatický aj renálny klírens gabapentínu pritom <strong>lineárne koreloval s klírensom kreatinínu</strong>.</p>
 
-<p>Dôsledok je priamočiary a pre nefrológa neprekvapivý: pri klesajúcej glomerulovej filtrácii rastie maximálna plazmatická koncentrácia, predlžuje sa čas do jej dosiahnutia a predlžuje sa eliminačný polčas. Pri normálnej funkcii obličiek je polčas <strong>asi 5 až 9 hodín</strong>; u dialyzovaného pacienta sa uvádza až <strong>132 hodín</strong>. To nie je jemné posunutie dávkovacieho intervalu – to je zmena o celý rád.</p>
+<p>Dôsledok je priamočiary a pre nefrológa neprekvapivý: pri klesajúcej glomerulovej filtrácii rastie maximálna plazmatická koncentrácia, predlžuje sa čas do jej dosiahnutia a predlžuje sa eliminačný polčas. Pri normálnej funkcii obličiek je polčas <strong>asi 5 až 9&nbsp;hodín</strong>; u dialyzovaného pacienta sa uvádza až <strong>132&nbsp;hodín</strong>. To nie je jemné posunutie dávkovacieho intervalu – to je zmena o celý rád.</p>
 
 <p>Dve praktické poznámky k tomu:</p>
 
@@ -97,7 +97,7 @@ $articles[] = [
 
 <h2>Línia 2: čo sa reálne deje na hemodialýze – zmätenosť, pády, fraktúry</h2>
 
-<p>Najcitovanejšou nefrologickou prácou k tejto téme je kohortová analýza <strong>Ishidovej a spolupracovníkov</strong> (<em>Journal of the American Society of Nephrology</em>, 2018). Z registra USRDS identifikovala <strong>140 899 dospelých</strong> na hemodialýze s krytím Medicare Part D v roku <strong>2011</strong>. Expozícia gabapentínu a pregabalínu bola modelovaná ako <em>časovo premenná</em>, zvlášť pre každé liečivo a podľa kategórií dennej dávky. Coxove modely boli upravené na demografiu, komorbidity, trvanie expozície, počet liekov a súbežnú potenciálne zavádzajúcu medikáciu. Sledovaným ukazovateľom bol čas do prvej návštevy urgentného príjmu alebo hospitalizácie pre <strong>zmenený duševný stav, pád a fraktúru</strong>.</p>
+<p>Najcitovanejšou nefrologickou prácou k tejto téme je kohortová analýza <strong>Ishidovej a spolupracovníkov</strong> (<em>Journal of the American Society of Nephrology</em>, 2018). Z registra USRDS identifikovala <strong>140&nbsp;899 dospelých</strong> na hemodialýze s krytím Medicare Part D v roku <strong>2011</strong>. Expozícia gabapentínu a pregabalínu bola modelovaná ako <em>časovo premenná</em>, zvlášť pre každé liečivo a podľa kategórií dennej dávky. Coxove modely boli upravené na demografiu, komorbidity, trvanie expozície, počet liekov a súbežnú potenciálne zavádzajúcu medikáciu. Sledovaným ukazovateľom bol čas do prvej návštevy urgentného príjmu alebo hospitalizácie pre <strong>zmenený duševný stav, pád a fraktúru</strong>.</p>
 
 <div class="table-responsive" role="region" aria-label="Asociácia gabapentínu a pregabalínu s nepriaznivými udalosťami u hemodialyzovaných pacientov" tabindex="0">
 <table>
@@ -105,18 +105,18 @@ $articles[] = [
     <tr><th scope="col">Expozícia</th><th scope="col">Zmenený duševný stav</th><th scope="col">Pád</th><th scope="col">Fraktúra</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Gabapentín &gt; 300 mg/deň (najvyššia kategória)</th><td>o <strong>50 %</strong> vyššie riziko</td><td>o <strong>55 %</strong> vyššie riziko</td><td>o <strong>38 %</strong> vyššie riziko</td></tr>
+    <tr><th scope="row">Gabapentín &gt; 300&nbsp;mg/deň (najvyššia kategória)</th><td>o <strong>50 %</strong> vyššie riziko</td><td>o <strong>55 %</strong> vyššie riziko</td><td>o <strong>38 %</strong> vyššie riziko</td></tr>
     <tr><th scope="row">Gabapentín v nižších dávkových kategóriách</th><td>o <strong>31 – 41 %</strong> vyššie riziko</td><td>o <strong>26 – 30 %</strong> vyššie riziko</td><td>bez konzistentného signálu</td></tr>
     <tr><th scope="row">Pregabalín</th><td>až o <strong>51 %</strong> vyššie riziko</td><td>až o <strong>68 %</strong> vyššie riziko</td><td>bez konzistentného signálu</td></tr>
   </tbody>
 </table>
-<p><em>Ishida JH a kol., JASN 2018;29(7):1970–1978. Dávkové kategórie gabapentínu: &gt; 0 – 100, &gt; 100 – 200, &gt; 200 – 300 a &gt; 300 mg denne; pregabalínu: &gt; 0 – 100 a &gt; 100 mg denne. Údaje sú upravené pomery rizík z Coxových modelov, vyjadrené ako percentuálny nárast oproti neužívaniu.</em></p>
+<p><em>Ishida JH a kol., JASN 2018;29(7):1970–1978. Dávkové kategórie gabapentínu: &gt; 0 – 100, &gt; 100 – 200, &gt; 200 – 300 a &gt; 300&nbsp;mg denne; pregabalínu: &gt; 0 – 100 a &gt; 100&nbsp;mg denne. Údaje sú upravené pomery rizík z Coxových modelov, vyjadrené ako percentuálny nárast oproti neužívaniu.</em></p>
 </div>
 
 <p>Z tejto tabuľky vyplývajú tri veci, ktoré sa v sekundárnych citáciách pravidelne strácajú:</p>
 
 <ol>
-  <li><strong>Nejde o „predávkovanie“.</strong> Najvyššia skúmaná kategória je „viac ako 300 mg denne“ – teda dávka, ktorú by mnohý predpisujúci lekár označil za konzervatívnu. Riziko sa nezačína pri gramových dávkach.</li>
+  <li><strong>Nejde o „predávkovanie“.</strong> Najvyššia skúmaná kategória je „viac ako 300&nbsp;mg denne“ – teda dávka, ktorú by mnohý predpisujúci lekár označil za konzervatívnu. Riziko sa nezačína pri gramových dávkach.</li>
   <li><strong>Riziko sa nestráca ani pri nižších dávkach.</strong> Pre zmenený duševný stav a pády bolo zvýšené vo <em>všetkých</em> dávkových kategóriách. Dávkovo závislá je veľkosť efektu, nie jeho prítomnosť.</li>
   <li><strong>Pregabalín nie je bezpečná alternatíva.</strong> Pre pády bol jeho signál dokonca najvýraznejší z celej analýzy.</li>
 </ol>
@@ -134,15 +134,15 @@ $articles[] = [
 <p>Pacient s CKD, ktorý nie je na dialýze, má najhoršiu kombináciu: zníženú elimináciu <em>a</em> žiadny mimotelový odtok. Populačná kohortová štúdia <strong>Muandu a spolupracovníkov</strong> (<em>American Journal of Kidney Diseases</em>, 2022) túto skupinu zmapovala v kanadskom Ontáriu:</p>
 
 <ul>
-  <li><strong>74 084 starších dospelých</strong> (64 % ženy, medián veku 79 rokov) s eGFR &lt; 60 ml/min/1,73 m², bez dialýzy, s novo predpísaným gabapentinoidom v rokoch 2008 až 2020.</li>
-  <li>Porovnávala sa <strong>vyššia štartovacia dávka</strong> (gabapentín &gt; 300 mg/deň alebo pregabalín &gt; 75 mg/deň) oproti nižšej (≤ 300 mg, resp. ≤ 75 mg denne).</li>
+  <li><strong>74&nbsp;084 starších dospelých</strong> (64 % ženy, medián veku 79&nbsp;rokov) s eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m², bez dialýzy, s novo predpísaným gabapentinoidom v rokoch 2008 až 2020.</li>
+  <li>Porovnávala sa <strong>vyššia štartovacia dávka</strong> (gabapentín &gt; 300&nbsp;mg/deň alebo pregabalín &gt; 75&nbsp;mg/deň) oproti nižšej (≤ 300&nbsp;mg, resp. ≤ 75&nbsp;mg denne).</li>
   <li><strong>41 % pacientov začalo vyššou dávkou</strong> – teda nejde o okrajovú prax, ale takmer o polovicu preskripcií.</li>
-  <li>Zložený ukazovateľ do 30 dní: nemocničná návšteva pre encefalopatiu, pád alebo fraktúru, alebo hospitalizácia pre respiračnú depresiu.</li>
+  <li>Zložený ukazovateľ do 30&nbsp;dní: nemocničná návšteva pre encefalopatiu, pád alebo fraktúru, alebo hospitalizácia pre respiračnú depresiu.</li>
 </ul>
 
-<p>Výsledok po vážení pravdepodobnosťou liečby: <strong>585 z 30 660 (1,9 %)</strong> pri vyššej dávke oproti <strong>462 z 30 707 (1,5 %)</strong> pri nižšej. Vážený <strong>pomer rizík 1,27 (95 % IS 1,13 – 1,42)</strong>, vážený <strong>rozdiel rizík 0,40 % (95 % IS 0,21 – 0,60 %)</strong>. Ani multiplikatívne, ani aditívne interakcie v podskupinách podľa kategórie eGFR a typu gabapentinoidu neboli štatisticky významné.</p>
+<p>Výsledok po vážení pravdepodobnosťou liečby: <strong>585 z 30&nbsp;660 (1,9 %)</strong> pri vyššej dávke oproti <strong>462 z 30&nbsp;707 (1,5 %)</strong> pri nižšej. Vážený <strong>pomer rizík 1,27 (95 % IS 1,13 – 1,42)</strong>, vážený <strong>rozdiel rizík 0,40 % (95 % IS 0,21 – 0,60 %)</strong>. Ani multiplikatívne, ani aditívne interakcie v podskupinách podľa kategórie eGFR a typu gabapentinoidu neboli štatisticky významné.</p>
 
-<p>Interpretácia si žiada presnosť v oboch smeroch. Relatívny nárast o 27 % znie veľa, <strong>absolútny rozdiel 0,40 percentného bodu počas 30 dní</strong> znie málo – a autori sami hovoria o „mierne vyššom riziku“, ktoré treba vyvážiť prínosom vyššej dávky. Lenže ide o <em>tridsaťdňové</em> okno u pacientov, ktorí gabapentinoid často užívajú roky, a o udalosti, ktoré nie sú nevinné: fraktúra proximálneho femuru u 79-ročného pacienta s CKD G4 je udalosť mortalitného rádu. Počet pacientov potrebných na uškodenie približne 250 pri jednej jedinej voľbe štartovacej dávky je pri takej jednoduchej intervencii – začať nižšie – veľmi výhodný kompromis.</p>
+<p>Interpretácia si žiada presnosť v oboch smeroch. Relatívny nárast o 27 % znie veľa, <strong>absolútny rozdiel 0,40 percentného bodu počas 30&nbsp;dní</strong> znie málo – a autori sami hovoria o „mierne vyššom riziku“, ktoré treba vyvážiť prínosom vyššej dávky. Lenže ide o <em>tridsaťdňové</em> okno u pacientov, ktorí gabapentinoid často užívajú roky, a o udalosti, ktoré nie sú nevinné: fraktúra proximálneho femuru u 79-ročného pacienta s CKD G4 je udalosť mortalitného rádu. Počet pacientov potrebných na uškodenie približne 250 pri jednej jedinej voľbe štartovacej dávky je pri takej jednoduchej intervencii – začať nižšie – veľmi výhodný kompromis.</p>
 
 <h2>Línia 4: zneužívanie a nesprávne užívanie</h2>
 
@@ -172,7 +172,7 @@ $articles[] = [
   <li>Najčastejšie išlo o osoby s anamnézou zneužívania látok – to je použiteľný stratifikačný údaj pri rozhodovaní o preskripcii.</li>
 </ul>
 
-<p>Regulačné následky na seba nedali čakať: v <strong>Spojenom kráľovstve boli gabapentín aj pregabalín od 1. apríla 2019 preradené</strong> medzi kontrolované liečivá (Schedule 3 podľa <em>Misuse of Drugs Regulations</em> 2001, trieda C podľa <em>Misuse of Drugs Act</em> 1971) s prísnejšími požiadavkami na predpis a s platnosťou receptu 28 dní. V Slovenskej republike takéto zaradenie neplatí, čo z pohľadu klinika znamená jediné: <strong>kontrolu musí zabezpečiť preskripčná disciplína, nie legislatíva</strong>.</p>
+<p>Regulačné následky na seba nedali čakať: v <strong>Spojenom kráľovstve boli gabapentín aj pregabalín od 1. apríla 2019 preradené</strong> medzi kontrolované liečivá (Schedule 3 podľa <em>Misuse of Drugs Regulations</em> 2001, trieda C podľa <em>Misuse of Drugs Act</em> 1971) s prísnejšími požiadavkami na predpis a s platnosťou receptu 28&nbsp;dní. V Slovenskej republike takéto zaradenie neplatí, čo z pohľadu klinika znamená jediné: <strong>kontrolu musí zabezpečiť preskripčná disciplína, nie legislatíva</strong>.</p>
 
 <h2>Signál, na ktorý sa zatiaľ nedá spoliehať</h2>
 
@@ -197,7 +197,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Indikáciu pomenujte výslovne a zapíšte ju do dokumentácie.</strong> Neuropatická bolesť, syndróm nepokojných nôh, uremický pruritus – alebo nič z toho. Zistenie, že takmer tretina používateľov v registri USRDS zdokumentovanú indikáciu nemala, je prvé miesto, kde sa dá riziko znížiť bez akejkoľvek straty prínosu. Pri pruritu stojí za zváženie, či nejde o situáciu, ktorú rozoberá článok <a href="article.php?slug=uviaznuti-na-antihistaminikach-pri-ckd-ap">o uviaznutí na antihistaminikách pri CKD-aP</a>.</li>
-  <li><strong>Začínajte nízko, a to aj vtedy, keď sa dávka zdá malá.</strong> Údaje z Ontária hovoria, že voľba štartovacej dávky robí merateľný rozdiel už do 30 dní; údaje z USRDS hovoria, že „viac ako 300 mg denne“ už je najrizikovejšia kategória. Titrujte podľa odpovede, nie podľa schémy prevzatej z neurologickej indikácie.</li>
+  <li><strong>Začínajte nízko, a to aj vtedy, keď sa dávka zdá malá.</strong> Údaje z Ontária hovoria, že voľba štartovacej dávky robí merateľný rozdiel už do 30&nbsp;dní; údaje z USRDS hovoria, že „viac ako 300&nbsp;mg denne“ už je najrizikovejšia kategória. Titrujte podľa odpovede, nie podľa schémy prevzatej z neurologickej indikácie.</li>
   <li><strong>Pred predpisom prejdite celý zoznam liekov so zameraním na CNS-depresíva.</strong> Opioidy, benzodiazepíny, Z-hypnotiká, sedatívne antihistaminiká, antipsychotiká, antidepresíva. Ak je kombinácia s opioidom nevyhnutná, pacienta aj jeho blízkych poučte o prejavoch respiračnej depresie: pomalé a plytké dýchanie, nereagovanie, cyanóza, zmätenosť, závrat, letargia. Širší rámec dáva článok <a href="article.php?slug=ckd-samostatny-faktor-polyfarmacie">o CKD ako samostatnom faktore polyfarmácie</a>.</li>
   <li><strong>Rizikové faktory zo zoznamu FDA vyhľadávajte aktívne.</strong> CHOCHP, spánkové apnoe, vyšší vek, krehkosť. Pri ich prítomnosti platí nielen nižšia štartovacia dávka, ale aj pomalšia titrácia a včasnejšia kontrola.</li>
   <li><strong>Monitorujte to, čo sa reálne stáva.</strong> V prvých týždňoch a po každom zvýšení dávky cielene sledujte ospalosť, zmätenosť, myoklonus, ataxiu, poruchu chôdze a nestabilitu – a u rizikových pacientov zapojte opatrenia na prevenciu pádov. U dialyzovaného pacienta s novovzniknutou zmätenosťou patrí gabapentín do diferenciálnej diagnózy.</li>

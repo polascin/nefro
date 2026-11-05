@@ -27,7 +27,7 @@ $articles[] = [
   <figcaption>Ilustračná poloschematická scéna vytesnenia agonistu z opioidného receptora antagonistom. Nejde o zobrazenie reálnej molekulárnej štruktúry ani o snímku konkrétneho pacienta.</figcaption>
 </figure>
 
-<p>Naltrexón je kompetitívny antagonista opioidných receptorov a pri liečbe závislosti od alkoholu patrí k štandardným možnostiam. Jeho bezpečné začatie má jednu dobre známu podmienku: pred podaním sa vyžaduje <strong>obdobie 7 až 10 dní bez opioidov</strong>, inak môže vyvolať nebezpečnú precipitovanú abstinenciu.</p>
+<p>Naltrexón je kompetitívny antagonista opioidných receptorov a pri liečbe závislosti od alkoholu patrí k štandardným možnostiam. Jeho bezpečné začatie má jednu dobre známu podmienku: pred podaním sa vyžaduje <strong>obdobie 7 až 10&nbsp;dní bez opioidov</strong>, inak môže vyvolať nebezpečnú precipitovanú abstinenciu.</p>
 
 <p>Kazuistika uverejnená 21. októbra 2026 v časopise <em>Federal Practitioner</em> opisuje, čo sa stane, keď je opioidnou aktivitou niečo, čo za opioid nikto nepovažuje. Informácie o lieku kratom ako výstrahu neuvádzajú a bežné toxikologické vyšetrenie moču ho nezachytí.</p>
 
@@ -39,25 +39,25 @@ $articles[] = [
 
 <p>Závislosť sa však vyvíja. V populačnej štúdii malo problémy so závislosťou až 55 % používateľov, pričom 65 % malo mierne a 35 % stredne ťažké až ťažké abstinenčné príznaky. Patria k nim nepokoj, nekľud, tremor, hnačka, potenie, zívanie, výtok z nosa a baženie.</p>
 
-<p>Epidemiologicky nejde o okrajový jav. V prierezovom prieskume v rámci National Survey on Drug Use and Health užilo kratom za uplynulý rok odhadom 0,7 % populácie, ale medzi ľuďmi s poruchou užívania opioidov to bolo 10,4 %. Medzi rokmi 2011 a 2017 bolo americkým toxikologickým centrám hlásených 1 807 expozícií kratomu; 31,8 % viedlo k hospitalizácii a zaznamenaných bolo 11 úmrtí.</p>
+<p>Epidemiologicky nejde o okrajový jav. V prierezovom prieskume v rámci National Survey on Drug Use and Health užilo kratom za uplynulý rok odhadom 0,7 % populácie, ale medzi ľuďmi s poruchou užívania opioidov to bolo 10,4 %. Medzi rokmi 2011 a 2017 bolo americkým toxikologickým centrám hlásených 1&nbsp;807 expozícií kratomu; 31,8 % viedlo k hospitalizácii a zaznamenaných bolo 11 úmrtí.</p>
 
 <h2>Prípad</h2>
 
-<p>Šesťdesiatštyriročný muž s hmotnosťou 65 kg bol zaradený do multidisciplinárneho programu pre ukončenie užívania alkoholu. Uvádzal pitie počas posledných štyroch rokov, naposledy približne 8 uncí liehu denne, ráno a večer. V anamnéze mal veľkú depresívnu poruchu, artériovú hypertenziu a chronickú bolesť chrbta, pre ktorú v minulosti užíval opioidy; posledných desať rokov podľa svojich slov nie. Chronicky užíval metoprolol, famotidín, tamsulozín, mirtazapín, lizinopril a kyselinu listovú.</p>
+<p>Šesťdesiatštyriročný muž s hmotnosťou 65&nbsp;kg bol zaradený do multidisciplinárneho programu pre ukončenie užívania alkoholu. Uvádzal pitie počas posledných štyroch rokov, naposledy približne 8 uncí liehu denne, ráno a večer. V anamnéze mal veľkú depresívnu poruchu, artériovú hypertenziu a chronickú bolesť chrbta, pre ktorú v minulosti užíval opioidy; posledných desať rokov podľa svojich slov nie. Chronicky užíval metoprolol, famotidín, tamsulozín, mirtazapín, lizinopril a kyselinu listovú.</p>
 
-<p>Pri vstupnom vyšetrení bol <strong>eutýmny</strong>, spolupracujúci, orientovaný osobou, miestom, časom aj situáciou, s logickým a cieleným myslením. Toxikologické vyšetrenie moču bolo negatívne na fencyklidín, benzodiazepíny, kokaín, amfetamíny, kanabinoidy, opiáty, barbituráty a metadón. Dostal predpis na naltrexón 25 mg denne a kontrolu o týždeň.</p>
+<p>Pri vstupnom vyšetrení bol <strong>eutýmny</strong>, spolupracujúci, orientovaný osobou, miestom, časom aj situáciou, s logickým a cieleným myslením. Toxikologické vyšetrenie moču bolo negatívne na fencyklidín, benzodiazepíny, kokaín, amfetamíny, kanabinoidy, opiáty, barbituráty a metadón. Dostal predpis na naltrexón 25&nbsp;mg denne a kontrolu o týždeň.</p>
 
 <p>Prvú dávku užil večer. <strong>Do jednej hodiny</strong> sa stal mimoriadne nepokojným a povedal: „Niečo nie je v poriadku, zavolajte záchranku.“ Spočiatku bol pri ťažkej úzkosti ešte spolupracujúci a sám si nastúpil do sanitky. Počas prevozu sa nepokoj zhoršil a dostal diazepam intravenózne.</p>
 
-<p>Na urgentnom príjme mal tachykardiu 118/min, tachypnoe 22/min a tlak 189/121 mm Hg. Bol orientovaný miestom a osobou, nie však situáciou. V diferenciálnej diagnostike boli zvažované pečeňová encefalopatia, odvykací stav pri alkohole, akútna intoxikácia a nežiaduci účinok lieku.</p>
+<p>Na urgentnom príjme mal tachykardiu 118/min, tachypnoe 22/min a tlak 189/121&nbsp;mm Hg. Bol orientovaný miestom a osobou, nie však situáciou. V diferenciálnej diagnostike boli zvažované pečeňová encefalopatia, odvykací stav pri alkohole, akútna intoxikácia a nežiaduci účinok lieku.</p>
 
 <p>Počas nasledujúcich hodín sa stal spoteným, nespolupracujúcim a agresívnym a vytrhol si intravenózne kanyly. Pre nepokoj <strong>refraktérny na benzodiazepíny</strong> bol intubovaný na zaistenie dýchacích ciest.</p>
 
-<p>Opakované toxikologické vyšetrenie moču bolo negatívne, hladina alkoholu v sére 147 mg/dl, amoniak 56 µmol/l, vyšetrenie moču bez odchýlok a počítačová tomografia hlavy bez prínosu. Z laboratórnych nálezov bola odchýlkou len mierna transaminitída.</p>
+<p>Opakované toxikologické vyšetrenie moču bolo negatívne, hladina alkoholu v sére 147&nbsp;mg/dl, amoniak 56 µmol/l, vyšetrenie moču bez odchýlok a počítačová tomografia hlavy bez prínosu. Z laboratórnych nálezov bola odchýlkou len mierna transaminitída.</p>
 
-<p>Až pri ďalšom rozhovore s rodinou vyšlo najavo, že pacient desať rokov pravidelne užíval kratom v prášku, jednu čajovú lyžičku trikrát denne rozmiešanú v horúcej vode, teda približne <strong>6,0 až 7,5 g denne</strong>. Manželka vysvetlila, že s kratomom začal, aby zvládol abstinenčné príznaky po opioidoch.</p>
+<p>Až pri ďalšom rozhovore s rodinou vyšlo najavo, že pacient desať rokov pravidelne užíval kratom v prášku, jednu čajovú lyžičku trikrát denne rozmiešanú v horúcej vode, teda približne <strong>6,0 až 7,5&nbsp;g denne</strong>. Manželka vysvetlila, že s kratomom začal, aby zvládol abstinenčné príznaky po opioidoch.</p>
 
-<p>Pacient bol prijatý na jednotku intenzívnej starostlivosti s minimálnymi parametrami ventilácie a liečený podľa protokolu pre odvykací stav pri alkohole vrátane parenterálneho tiamínu. Dostával benzodiazepíny a titrovateľné infúzie opioidov, propofolu a dexmedetomidínu. Pre horúčku 38,8 °C dostal empirické antibiotiká, zdroj infekcie sa však nezistil (hemokultúry aj vírusový panel negatívne). Na druhý deň sa objavili vodnaté stolice. Extubovaný bol na siedmy deň, pre následnú slabosť potreboval rehabilitáciu a na dvanásty deň bol prepustený do intenzívneho ambulantného programu.</p>
+<p>Pacient bol prijatý na jednotku intenzívnej starostlivosti s minimálnymi parametrami ventilácie a liečený podľa protokolu pre odvykací stav pri alkohole vrátane parenterálneho tiamínu. Dostával benzodiazepíny a titrovateľné infúzie opioidov, propofolu a dexmedetomidínu. Pre horúčku 38,8&nbsp;°C dostal empirické antibiotiká, zdroj infekcie sa však nezistil (hemokultúry aj vírusový panel negatívne). Na druhý deň sa objavili vodnaté stolice. Extubovaný bol na siedmy deň, pre následnú slabosť potreboval rehabilitáciu a na dvanásty deň bol prepustený do intenzívneho ambulantného programu.</p>
 
 <h2>Prečo je príčinná súvislosť pravdepodobná</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
   <li><strong>Informácie o lieku neobsahujú výstrahu.</strong> Kratom nie je v informáciách o naltrexóne uvedený ako upozornenie ani opatrenie a liekové databázy túto kombináciu neuvádzajú ako interakciu kategórie X, ako by to urobili pri opioidoch.</li>
 </ul>
 
-<p>Rizikovými faktormi abstinenčnej reakcie sú vyššie dávky, orientačne od 6 g denne, a dlhodobé užívanie, hoci údaje z dobrovoľných prieskumov sú veľmi premenlivé a variabilita komerčných výrobkov presné kvantifikovanie sťažuje. Vyššie riziko môžu mať aj osoby s predchádzajúcou závislosťou od opioidov, čo bol presne tento prípad.</p>
+<p>Rizikovými faktormi abstinenčnej reakcie sú vyššie dávky, orientačne od 6&nbsp;g denne, a dlhodobé užívanie, hoci údaje z dobrovoľných prieskumov sú veľmi premenlivé a variabilita komerčných výrobkov presné kvantifikovanie sťažuje. Vyššie riziko môžu mať aj osoby s predchádzajúcou závislosťou od opioidov, čo bol presne tento prípad.</p>
 
 <h2>Čo z toho platí v nefrológii</h2>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p><small><em>Všetky klinické údaje prípadu vrátane dávkovania, laboratórnych hodnôt, časovej postupnosti, skóre podľa Naranja a údajov o epidemiológii a závislosti boli overené priamo v plnom texte kazuistiky na verejne prístupnej stránke zdroja, vrátane úplného autorského zoznamu, afiliácie, bibliografických údajov a vyhlásenia o konflikte záujmov. Informovaný súhlas bol podľa autorov získaný od manželky pacienta ako osoby splnomocnenej na zdravotnú starostlivosť. Bibliografické údaje ostatných citovaných prác boli prevzaté zo zoznamu literatúry primárnej kazuistiky; údaje o multiorgánovej dysfunkcii boli samostatne overené v zázname PubMed.</em></small></p>
 
-<p><small><em>Vlastným prínosom tohto spracovania je prepočet dennej dávky kratomu voči uvádzanému prahu rizika 6 g denne, zdôraznenie refraktérnosti voči benzodiazepínom ako diagnostického vodidla, oprava prekladu klinického stavu pri vstupnom vyšetrení (eutýmny, nie eufórický) a nefrologická časť o multiorgánovej toxicite, o analgézii pri dialýze a o prenosnej metodickej lekcii, podľa ktorej negatívne toxikologické vyšetrenie nevylučuje netestovanú látku. Tieto súvislosti nie sú obsiahnuté v primárnej kazuistike.</em></small></p>
+<p><small><em>Vlastným prínosom tohto spracovania je prepočet dennej dávky kratomu voči uvádzanému prahu rizika 6&nbsp;g denne, zdôraznenie refraktérnosti voči benzodiazepínom ako diagnostického vodidla, oprava prekladu klinického stavu pri vstupnom vyšetrení (eutýmny, nie eufórický) a nefrologická časť o multiorgánovej toxicite, o analgézii pri dialýze a o prenosnej metodickej lekcii, podľa ktorej negatívne toxikologické vyšetrenie nevylučuje netestovanú látku. Tieto súvislosti nie sú obsiahnuté v primárnej kazuistike.</em></small></p>
 
 <h3>Súvisiace články</h3>
 

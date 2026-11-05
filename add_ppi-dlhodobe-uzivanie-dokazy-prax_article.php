@@ -1,7 +1,7 @@
 <?php
 /**
  * add_ppi-dlhodobe-uzivanie-dokazy-prax_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie ACG guideline a syntézy Ben-Eltriki et al. s nefrologickym kontextom.
  */
 
@@ -68,13 +68,13 @@ $articles[] = [
 
 <h2>Randomizované bezpečnostné dáta: pantoprazol v COMPASS</h2>
 
-<p>V štúdii COMPASS boli pacienti so stabilným kardiovaskulárnym alebo periférnym arteriálnym ochorením, ktorí nemali schválenú indikáciu na PPI, sekundárne randomizovaní na pantoprazol 40 mg denne alebo placebo. Po mediáne približne 3 rokov sa celková mortalita významne nelíšila: <strong>HR 1,03; 95 % interval spoľahlivosti 0,92–1,15</strong>. Jediným ukazovateľom s významným rozdielom boli črevné infekcie: <strong>1,4 % oproti 1,0 %</strong> pri placebe (pomer šancí 1,33; 95 % IS 1,01–1,75). Infekcia <em>Clostridioides difficile</em> bola v skupine s pantoprazolom približne dvakrát častejšia, celkovo však bolo zaznamenaných len 13 prípadov, takže rozdiel nedosiahol štatistickú významnosť.</p>
+<p>V štúdii COMPASS boli pacienti so stabilným kardiovaskulárnym alebo periférnym arteriálnym ochorením, ktorí nemali schválenú indikáciu na PPI, sekundárne randomizovaní na pantoprazol 40&nbsp;mg denne alebo placebo. Po mediáne približne 3&nbsp;rokov sa celková mortalita významne nelíšila: <strong>HR 1,03; 95 % interval spoľahlivosti 0,92–1,15</strong>. Jediným ukazovateľom s významným rozdielom boli črevné infekcie: <strong>1,4 % oproti 1,0 %</strong> pri placebe (pomer šancí 1,33; 95 % IS 1,01–1,75). Infekcia <em>Clostridioides difficile</em> bola v skupine s pantoprazolom približne dvakrát častejšia, celkovo však bolo zaznamenaných len 13 prípadov, takže rozdiel nedosiahol štatistickú významnosť.</p>
 
 <p>COMPASS však nebola štúdia navrhnutá primárne na zachytenie zriedkavých alebo veľmi neskorých nežiaducich účinkov. Výsledok preto podporuje upokojenie pri niekoľkoročnej expozícii, ale nemôže definitívne vylúčiť malý účinok pri dlhšom sledovaní, v inej populácii alebo pri inom klinickom kontexte.</p>
 
 <h2>Čo ukazuje syntéza o mortalite</h2>
 
-<p>Systematický prehľad Ben-Eltrikiho a kol. z roku 2020 hľadal dôkazy o celkovej mortalite pri používaní PPI dlhšom než 12 týždňov. Porovnal tri odlišné typy údajov:</p>
+<p>Systematický prehľad Ben-Eltrikiho a kol. z roku 2020 hľadal dôkazy o celkovej mortalite pri používaní PPI dlhšom než 12&nbsp;týždňov. Porovnal tri odlišné typy údajov:</p>
 
 <ul>
   <li>systematický prehľad observačných štúdií s približne ročným sledovaním: súhrnný OR 1,68 (95 % IS 1,53–1,84),</li>
@@ -100,9 +100,9 @@ $articles[] = [
 
 <h3>Najnovší nefrologický kontext: PPI verzus H2-antagonisty pri tNSAID</h3>
 
-<p>V juhokórejskej retrospektívnej kohorte pacientov s CKD, ktorí začali užívať tradičné NSAID, bolo medzi 5 315 používateľmi PPI a 7 112 používateľmi H2-antagonistov používanie PPI spojené s vyšším rizikom progresie CKD: <strong>aHR 1,38 (95 % IS 1,10–1,74)</strong>. Asociácia bola najvýraznejšia u žien, pri CKD G3, vo veku najmenej 71 rokov a pri 1–15 dňoch liečby.</p>
+<p>V juhokórejskej retrospektívnej kohorte pacientov s CKD, ktorí začali užívať tradičné NSAID, bolo medzi 5&nbsp;315 používateľmi PPI a 7&nbsp;112 používateľmi H2-antagonistov používanie PPI spojené s vyšším rizikom progresie CKD: <strong>aHR 1,38 (95 % IS 1,10–1,74)</strong>. Asociácia bola najvýraznejšia u žien, pri CKD G3, vo veku najmenej 71&nbsp;rokov a pri 1–15 dňoch liečby.</p>
 
-<p>Krátka expozícia 1–15 dní je pre príčinnú progresiu CKD biologicky nepresvedčivá a upozorňuje na možné časové skreslenie, akútne ochorenie, hospitalizáciu alebo reverznú kauzalitu. Štúdia preto podporuje otázku, či je gastroprotekcia potrebná a či je PPI nevyhnutný, ale nedokazuje, že zámena PPI za H2-antagonistu zabráni progresii CKD.</p>
+<p>Krátka expozícia 1–15&nbsp;dní je pre príčinnú progresiu CKD biologicky nepresvedčivá a upozorňuje na možné časové skreslenie, akútne ochorenie, hospitalizáciu alebo reverznú kauzalitu. Štúdia preto podporuje otázku, či je gastroprotekcia potrebná a či je PPI nevyhnutný, ale nedokazuje, že zámena PPI za H2-antagonistu zabráni progresii CKD.</p>
 
 <p>Najsilnejším nefrologickým preventívnym zásahom v tejto situácii často zostáva prehodnotenie samotného NSAID, objemového stavu a kombinácie NSAID + diuretikum + ACEi/ARB. PPI chráni pred časťou horných gastrointestinálnych komplikácií, nie pred hemodynamickým účinkom NSAID na obličku.</p>
 
@@ -129,7 +129,7 @@ $articles[] = [
   <li><strong>Overiť indikáciu.</strong> Rozlíšiť potvrdenú GERD, závažnú erozívnu ezofagitídu, Barrettov pažerák, ulcerózne krvácanie, hypersekrečný stav, eradikáciu <em>H. pylori</em> a gastroprotekciu pri vysokom riziku od „zabudnutého“ PPI po empirickom kurze.</li>
   <li><strong>Určiť, či je potrebná dlhodobá liečba.</strong> Pri typických príznakoch bez alarmujúcich prejavov ACG odporúča 8-týždňový empirický kurz raz denne pred jedlom; pri odpovedi odporúča pokus o vysadenie. Toto neplatí automaticky pri Barrettovom pažeráku alebo LA C/D ezofagitíde.</li>
   <li><strong>Použiť najnižšiu účinnú dávku.</strong> Pri potrebe udržiavacej liečby voliť dávku, ktorá kontroluje symptómy a udržiava hojenie. Pri neerozívnej GERD možno zvážiť intermitentné podávanie alebo užívanie podľa potreby.</li>
-  <li><strong>Skontrolovať užívanie.</strong> Enterosolventný PPI je pri dávkovaní raz denne spravidla účinnejší 30–60 minút pred prvým jedlom než pred spaním.</li>
+  <li><strong>Skontrolovať užívanie.</strong> Enterosolventný PPI je pri dávkovaní raz denne spravidla účinnejší 30–60&nbsp;minút pred prvým jedlom než pred spaním.</li>
   <li><strong>Prehodnotiť NSAID a antitrombotiká.</strong> Najprv riešiť potrebu NSAID, krvácavé riziko, renálnu funkciu a objemový stav; gastroprotekcia nenahrádza renálnu bezpečnosť.</li>
   <li><strong>Monitorovať podľa rizika.</strong> Pri CKD alebo predchádzajúcom AKI sledovať kreatinín/eGFR a podľa kontextu draslík, objemový stav a magnézium. Pri nevysvetlenom vzostupe kreatinínu myslieť na AIN.</li>
   <li><strong>Depreskribovať kontrolovane.</strong> Po zrušení indikácie možno znížiť dávku, prejsť na intermitentné podávanie alebo liečbu vysadiť; treba pacienta upozorniť na možné prechodné návratové symptómy.</li>

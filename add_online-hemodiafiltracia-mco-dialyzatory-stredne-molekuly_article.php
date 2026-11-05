@@ -77,15 +77,15 @@ $articles[] = [
   <li>tolerancia ultrafiltrácie a hemodynamická stabilita.</li>
 </ul>
 
-<p>Pri postdilučnej OL-HDF je na dosiahnutie približne 23 litrov konvekcie spravidla výhodný prietok krvi nad 350 ml/min. Predĺženie liečby o 30 minút môže zvýšiť konvekčný objem približne o 2 až 3 litre, výsledok však závisí od ostatných parametrov.</p>
+<p>Pri postdilučnej OL-HDF je na dosiahnutie približne 23 litrov konvekcie spravidla výhodný prietok krvi nad 350&nbsp;ml/min. Predĺženie liečby o 30&nbsp;minút môže zvýšiť konvekčný objem približne o 2 až 3 litre, výsledok však závisí od ostatných parametrov.</p>
 
 <p>Moderné dialyzačné prístroje dokážu priebežne upravovať filtračnú frakciu a transmembránový tlak. Ani automatické riadenie však nenahrádza kontrolu cievneho prístupu, zrážania v okruhu a skutočne dosiahnutého konvekčného objemu.</p>
 
 <h2>Dôkazy o prežívaní</h2>
 
-<p>Najvýznamnejším novším dôkazom je randomizovaná štúdia CONVINCE, ktorá porovnávala vysokodávkovú OL-HDF s konvenčnou vysokoprietokovou hemodialýzou. Do štúdie bolo zaradených 1 360 pacientov.</p>
+<p>Najvýznamnejším novším dôkazom je randomizovaná štúdia CONVINCE, ktorá porovnávala vysokodávkovú OL-HDF s konvenčnou vysokoprietokovou hemodialýzou. Do štúdie bolo zaradených 1&nbsp;360 pacientov.</p>
 
-<p>Počas mediánu sledovania približne 30 mesiacov zomrelo:</p>
+<p>Počas mediánu sledovania približne 30&nbsp;mesiacov zomrelo:</p>
 
 <ul>
   <li>17,3 % pacientov liečených OL-HDF,</li>

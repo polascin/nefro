@@ -2,7 +2,7 @@
 
 /**
  * add_monoklonalna-gamapatia-klinickeho-vyznamu-mgcs-mimo-mgrs_article.php
- * MGCS mimo standardnej MGRS - prakticky prehlad pre nefrologa.
+ * MGCS mimo standardnej MGRS - prakticky prehľad pre nefrologa.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */

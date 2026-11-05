@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Dôkazová základňa pri DM2: čo hovorí metaanalýza</h2>
 
-<p>Systematický prehľad a metaanalýza publikovaná v <em>Diabetes, Obesity and Metabolism</em> (vyhľadávanie do 1. júla 2025, protokol PROSPERO CRD420251083874) zahrnula <strong>deväť randomizovaných štúdií a 714 dospelých s DM2</strong>, ktoré porovnávali AID s inou liečbou znižujúcou glykémiu a uvádzali podiel času v cieľovom rozmedzí 3,9–10,0 mmol/l (70–180 mg/dl).</p>
+<p>Systematický prehľad a metaanalýza publikovaná v <em>Diabetes, Obesity and Metabolism</em> (vyhľadávanie do 1. júla 2025, protokol PROSPERO CRD420251083874) zahrnula <strong>deväť randomizovaných štúdií a 714 dospelých s DM2</strong>, ktoré porovnávali AID s inou liečbou znižujúcou glykémiu a uvádzali podiel času v cieľovom rozmedzí 3,9–10,0&nbsp;mmol/l (70–180&nbsp;mg/dl).</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky metaanalýzy automatizovaného podávania inzulínu pri diabete 2. typu" tabindex="0">
 <table>
@@ -59,12 +59,12 @@ $articles[] = [
 <tr><th scope="col">Ukazovateľ</th><th scope="col">Účinok AID oproti kontrole</th><th scope="col">Istota dôkazu</th></tr>
 </thead>
 <tbody>
-<tr><th scope="row">Čas v cieľovom rozmedzí (3,9–10,0 mmol/l)</th><td>MD +18,43 % (95 % IS 12,40 až 24,46)</td><td>nízka</td></tr>
+<tr><th scope="row">Čas v cieľovom rozmedzí (3,9–10,0&nbsp;mmol/l)</th><td>MD +18,43 % (95 % IS 12,40 až 24,46)</td><td>nízka</td></tr>
 <tr><th scope="row">HbA1c</th><td>MD −1,02 % (95 % IS −1,71 až −0,32)</td><td>stredná</td></tr>
-<tr><th scope="row">Čas nad cieľovým rozmedzím &gt; 13,9 mmol/l</th><td>MD −7,81 % (95 % IS −14,18 až −1,44)</td><td>—</td></tr>
-<tr><th scope="row">Čas pod cieľovým rozmedzím (&lt; 3,9 mmol/l)</th><td>bez rozdielu</td><td>stredná</td></tr>
-<tr><th scope="row">Čas pod 3,0 mmol/l a variačný koeficient</th><td>bez rozdielu</td><td>—</td></tr>
-<tr><th scope="row">Telesná hmotnosť</th><td>MD +1,58 kg (95 % IS 0,75 až 2,40)</td><td>len dve štúdie</td></tr>
+<tr><th scope="row">Čas nad cieľovým rozmedzím &gt; 13,9&nbsp;mmol/l</th><td>MD −7,81 % (95 % IS −14,18 až −1,44)</td><td>—</td></tr>
+<tr><th scope="row">Čas pod cieľovým rozmedzím (&lt; 3,9&nbsp;mmol/l)</th><td>bez rozdielu</td><td>stredná</td></tr>
+<tr><th scope="row">Čas pod 3,0&nbsp;mmol/l a variačný koeficient</th><td>bez rozdielu</td><td>—</td></tr>
+<tr><th scope="row">Telesná hmotnosť</th><td>MD +1,58&nbsp;kg (95 % IS 0,75 až 2,40)</td><td>len dve štúdie</td></tr>
 <tr><th scope="row">Závažné nežiaduce udalosti vrátane ťažkej hypoglykémie</th><td>zriedkavé</td><td>—</td></tr>
 <tr><th scope="row">Diabetická ketoacidóza</th><td>nehlásená ani raz</td><td>—</td></tr>
 </tbody>
@@ -73,7 +73,7 @@ $articles[] = [
 
 <p>Dva body si zaslúžia zdôraznenie, lebo v populárnych zhrnutiach vypadávajú.</p>
 
-<p><strong>Prvý: prírastok hmotnosti.</strong> AID viedlo k miernemu, ale štatisticky významnému nárastu telesnej hmotnosti o 1,58 kg – a to napriek porovnateľnej celkovej dennej dávke inzulínu. V populácii, kde sa súčasne vedie boj o kardiometabolické riziko a kde sa súbežne zvažujú inhibítory SGLT2 či agonisty receptora GLP-1, to nie je zanedbateľný údaj. Zistenie však stojí len na dvoch štúdiách.</p>
+<p><strong>Prvý: prírastok hmotnosti.</strong> AID viedlo k miernemu, ale štatisticky významnému nárastu telesnej hmotnosti o 1,58&nbsp;kg – a to napriek porovnateľnej celkovej dennej dávke inzulínu. V populácii, kde sa súčasne vedie boj o kardiometabolické riziko a kde sa súbežne zvažujú inhibítory SGLT2 či agonisty receptora GLP-1, to nie je zanedbateľný údaj. Zistenie však stojí len na dvoch štúdiách.</p>
 
 <p><strong>Druhý: istota dôkazu je nízka až stredná.</strong> Zaradené štúdie trvali od troch dní po tri mesiace, štyri prebehli za hospitalizácie a šesť z deviatich použilo prototypové, nie komerčné systémy. Hovoríme teda o krátkodobom náhradnom ukazovateli – čase v rozmedzí – nie o preukázanom vplyve na komplikácie.</p>
 
@@ -81,16 +81,16 @@ $articles[] = [
 
 <p>Dve zo zaradených štúdií zahŕňali pacientov s terminálnym zlyhaním obličiek na dialýze. Jedna z nich bola na túto populáciu priamo zameraná a stojí za samostatné uvedenie.</p>
 
-<p>Boughton a kol. v otvorenej randomizovanej prekríženej štúdii v dvoch centrách (Cambridge a Bern) zaradili <strong>26 dospelých s DM2 vyžadujúcich dialýzu</strong> – 17 mužov a 9 žien, priemerný vek 68 ± 11 rokov, trvanie diabetu 20 ± 10 rokov. Každý účastník absolvoval dve <strong>20-dňové obdobia neobmedzeného bežného života</strong>: cambridgeský plne uzavretý systém s rýchlo pôsobiacim inzulínom aspartom verzus štandardná inzulínová liečba so zaslepeným senzorom.</p>
+<p>Boughton a kol. v otvorenej randomizovanej prekríženej štúdii v dvoch centrách (Cambridge a Bern) zaradili <strong>26 dospelých s DM2 vyžadujúcich dialýzu</strong> – 17 mužov a 9 žien, priemerný vek 68 ± 11&nbsp;rokov, trvanie diabetu 20 ± 10&nbsp;rokov. Každý účastník absolvoval dve <strong>20-dňové obdobia neobmedzeného bežného života</strong>: cambridgeský plne uzavretý systém s rýchlo pôsobiacim inzulínom aspartom verzus štandardná inzulínová liečba so zaslepeným senzorom.</p>
 
 <ul>
-  <li>Podiel času v cieľovom rozmedzí 5,6–10,0 mmol/l (hlavný ukazovateľ): <strong>52,8 ± 12,5 % pri uzavretej slučke verzus 37,7 ± 20,5 % pri štandardnej liečbe</strong>; rozdiel 15,1 percentuálneho bodu (95 % IS 8,0–22,2; P &lt; 0,001).</li>
-  <li>Priemerná glykémia: 10,1 ± 1,3 verzus 11,6 ± 2,8 mmol/l (P = 0,003).</li>
-  <li>Čas v hypoglykémii pod 3,9 mmol/l: medián 0,1 % (0,0–0,4) verzus 0,2 % (0,0–0,9); P = 0,040 – teda <strong>menej hypoglykémie, nie viac</strong>.</li>
+  <li>Podiel času v cieľovom rozmedzí 5,6–10,0&nbsp;mmol/l (hlavný ukazovateľ): <strong>52,8 ± 12,5 % pri uzavretej slučke verzus 37,7 ± 20,5 % pri štandardnej liečbe</strong>; rozdiel 15,1 percentuálneho bodu (95 % IS 8,0–22,2; P &lt; 0,001).</li>
+  <li>Priemerná glykémia: 10,1 ± 1,3 verzus 11,6 ± 2,8&nbsp;mmol/l (P = 0,003).</li>
+  <li>Čas v hypoglykémii pod 3,9&nbsp;mmol/l: medián 0,1 % (0,0–0,4) verzus 0,2 % (0,0–0,9); P = 0,040 – teda <strong>menej hypoglykémie, nie viac</strong>.</li>
   <li>Jedna ťažká hypoglykémia nastala v období uzavretej slučky, ale nie počas jej prevádzky; v kontrolnom období žiadna.</li>
 </ul>
 
-<p>Všimnime si šírku smerodajnej odchýlky v kontrolnej skupine (20,5 %). Pri štandardnej liečbe sa dialyzovaní pacienti v čase v rozmedzí extrémne líšia – a práve túto nepredvídateľnosť automatizácia zužuje. Ide o najpresvedčivejší dôkaz, aký v tejto populácii máme; zároveň však o <strong>26 pacientov a 20 dní</strong>, čo je príliš málo na akýkoľvek záver o dlhodobej bezpečnosti alebo o komplikáciách.</p>
+<p>Všimnime si šírku smerodajnej odchýlky v kontrolnej skupine (20,5 %). Pri štandardnej liečbe sa dialyzovaní pacienti v čase v rozmedzí extrémne líšia – a práve túto nepredvídateľnosť automatizácia zužuje. Ide o najpresvedčivejší dôkaz, aký v tejto populácii máme; zároveň však o <strong>26 pacientov a 20&nbsp;dní</strong>, čo je príliš málo na akýkoľvek záver o dlhodobej bezpečnosti alebo o komplikáciách.</p>
 
 <h3>Prečo je dialyzovaný pacient iný</h3>
 
@@ -104,15 +104,15 @@ $articles[] = [
 
 <h2>Regulačný stav: čo je k dispozícii</h2>
 
-<p>Americká FDA povolila <strong>26. augusta 2024</strong> prvé zariadenie umožňujúce automatizované dávkovanie inzulínu u dospelých s DM2 – technológiu SmartAdjust spoločnosti Insulet, posúdenú na základe údajov od 289 účastníkov sledovaných 13 týždňov; v klinických údajoch neboli hlásené komplikácie ani závažné nežiaduce udalosti súvisiace s technológiou.</p>
+<p>Americká FDA povolila <strong>26. augusta 2024</strong> prvé zariadenie umožňujúce automatizované dávkovanie inzulínu u dospelých s DM2 – technológiu SmartAdjust spoločnosti Insulet, posúdenú na základe údajov od 289 účastníkov sledovaných 13&nbsp;týždňov; v klinických údajoch neboli hlásené komplikácie ani závažné nežiaduce udalosti súvisiace s technológiou.</p>
 
-<p>V októbri 2026 pribudol systém <strong>twiist</strong> (Sequel Med Tech), povolený pre dospelých od 18 rokov s DM2 liečeným inzulínom. Podľa správy Medscape:</p>
+<p>V októbri 2026 pribudol systém <strong>twiist</strong> (Sequel Med Tech), povolený pre dospelých od 18&nbsp;rokov s DM2 liečeným inzulínom. Podľa správy Medscape:</p>
 
 <ul>
   <li>systém priebežne upravuje bazálnu dodávku, má zásobník na 300 jednotiek a mení sa každé tri dni;</li>
   <li>je kompatibilný so senzormi Abbott FreeStyle Libre 3 Plus a Senseonics Eversense 365, <strong>nie však so systémami Dexcom</strong>;</li>
   <li>pivotná multicentrická štúdia zahŕňala <strong>307 dospelých</strong> s DM2 liečeným inzulínom; po 13 týždňoch klesol priemerný HbA1c z 8,1 % na 7,4 % (P &lt; 0,001) a čas v rozmedzí stúpol zo 57 % na 73 % (P &lt; 0,001), bez hlásenej ťažkej hypoglykémie. Najväčšie zlepšenie dosiahli pacienti so vstupným HbA1c ≥ 9 %;</li>
-  <li>pre DM1 od veku 6 rokov bol systém povolený už v roku 2024.</li>
+  <li>pre DM1 od veku 6&nbsp;rokov bol systém povolený už v roku 2024.</li>
 </ul>
 
 <p>Tvrdenie výrobcu, že proprietárna technológia iiSure odhalí upchatie „až deväťkrát rýchlejšie než iné systémy AID“, pochádza z vyhlásenia spoločnosti a nie je nezávisle overené – treba ho čítať ako marketingový údaj, nie ako zistenie z recenzovanej práce.</p>
@@ -123,7 +123,7 @@ $articles[] = [
 
 <ol>
   <li><strong>CGM pred AID.</strong> U dialyzovaného pacienta s inzulínom je prvým krokom kontinuálny monitoring, nie automatizácia. Sám osebe rieši najväčší problém – neviditeľnosť hypoglykémie a nespoľahlivosť HbA1c.</li>
-  <li><strong>Cieľové hodnoty prispôsobte, nie prevezmite.</strong> Štandardné rozmedzie 3,9–10,0 mmol/l a cieľ 70 % času v ňom boli odvodené pre inú populáciu. U staršieho, krehkého dialyzovaného pacienta má prednosť vyhýbanie sa hypoglykémii pred dosiahnutím cieľa – uvoľnenejšie dolné hranice sú opodstatnené.</li>
+  <li><strong>Cieľové hodnoty prispôsobte, nie prevezmite.</strong> Štandardné rozmedzie 3,9–10,0&nbsp;mmol/l a cieľ 70 % času v ňom boli odvodené pre inú populáciu. U staršieho, krehkého dialyzovaného pacienta má prednosť vyhýbanie sa hypoglykémii pred dosiahnutím cieľa – uvoľnenejšie dolné hranice sú opodstatnené.</li>
   <li><strong>Pri poklese filtrácie očakávajte pokles potreby inzulínu.</strong> Algoritmus sa prispôsobí, ale len v rozsahu, ktorý mu nastavenia umožnia; východiskové parametre treba pri zmene renálnej funkcie revidovať.</li>
   <li><strong>Overujte senzor pri nesúlade.</strong> CGM meria glukózu v medzibunkovej tekutine s oneskorením oproti krvi. Ak klinický obraz nezodpovedá hodnote, platí meranie glukomerom. V urémii a pri rýchlych zmenách objemu je rozdiel väčší než za bežných okolností.</li>
   <li><strong>Edukácia sa nedá preskočiť.</strong> Výmena spotrebného materiálu, reakcia na alarmy, rozpoznanie upchatia, postup pri výpadku systému – u pacienta, ktorý trávi tri poldni v týždni na dialýze, musí byť tento plán vopred písomne dohodnutý so strediskom.</li>
@@ -159,7 +159,7 @@ $articles[] = [
 
 <p>Číselné údaje z metaanalýzy a z dialyzačnej štúdie pochádzajú zo štruktúrovaných abstraktov a plného znenia v PMC; bibliografické údaje všetkých citácií boli overené cez PubMed a Crossref k 17. októbru 2026. Dátum a obsah rozhodnutia FDA z roku 2024 boli overené priamo v tlačovej správe agentúry.</p>
 
-<p>Oproti bežným sekundárnym zhrnutiam tejto témy tu boli doplnené alebo opravené štyri veci. Metaanalýza zahŕňa <strong>deväť štúdií a 714 dospelých</strong>, pričom veľkosť účinku na čas v rozmedzí je +18,43 percentuálneho bodu – vágne „zlepšenie“ nahrádza konkrétne číslo s intervalom spoľahlivosti a hodnotením istoty dôkazu. Doplnený je <strong>prírastok hmotnosti o 1,58 kg</strong>, ktorý sa v prehľadoch tejto témy takmer nikdy neuvádza, hoci je pre kardiometabolickú rozvahu podstatný. Konštatovanie, že „dve štúdie zahŕňali dialyzovaných“, je rozvinuté na skutočný obsah tej z nich, ktorá bola na dialyzovanú populáciu priamo zameraná, aj s jej číslami a obmedzeniami. A napokon je doplnená nefrologická fyziológia, ktorá robí z tejto populácie osobitný prípad – znížený klírens inzulínu, cyklus dialyzačných a nedialyzačných dní a nespoľahlivosť HbA1c, pre ktorú má čas v cieľovom rozmedzí vyššiu výpovednú hodnotu než samotný HbA1c. Tvrdenie výrobcu o deväťnásobne rýchlejšej detekcii upchatia je označené ako neoverený marketingový údaj.</p>
+<p>Oproti bežným sekundárnym zhrnutiam tejto témy tu boli doplnené alebo opravené štyri veci. Metaanalýza zahŕňa <strong>deväť štúdií a 714 dospelých</strong>, pričom veľkosť účinku na čas v rozmedzí je +18,43 percentuálneho bodu – vágne „zlepšenie“ nahrádza konkrétne číslo s intervalom spoľahlivosti a hodnotením istoty dôkazu. Doplnený je <strong>prírastok hmotnosti o 1,58&nbsp;kg</strong>, ktorý sa v prehľadoch tejto témy takmer nikdy neuvádza, hoci je pre kardiometabolickú rozvahu podstatný. Konštatovanie, že „dve štúdie zahŕňali dialyzovaných“, je rozvinuté na skutočný obsah tej z nich, ktorá bola na dialyzovanú populáciu priamo zameraná, aj s jej číslami a obmedzeniami. A napokon je doplnená nefrologická fyziológia, ktorá robí z tejto populácie osobitný prípad – znížený klírens inzulínu, cyklus dialyzačných a nedialyzačných dní a nespoľahlivosť HbA1c, pre ktorú má čas v cieľovom rozmedzí vyššiu výpovednú hodnotu než samotný HbA1c. Tvrdenie výrobcu o deväťnásobne rýchlejšej detekcii upchatia je označené ako neoverený marketingový údaj.</p>
 
 <h3>Súvisiace články</h3>
 

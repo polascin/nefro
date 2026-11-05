@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>VICTORY bola <strong>medzinárodná multicentrická randomizovaná, dvojito zaslepená a placebom kontrolovaná štúdia fázy 3</strong> realizovaná v <strong>24 popáleninových centrách</strong> v Severnej, Strednej a Južnej Amerike, v Európe a v Ázii. Pacientov zaraďovali od 18. augusta 2020 do 12. septembra 2025.</p>
 
-<p>Do štúdie boli zaradení dospelí (≥ 18 rokov) s:</p>
+<p>Do štúdie boli zaradení dospelí (≥ 18&nbsp;rokov) s:</p>
 
 <ul>
   <li><strong>hlbokými popáleninami 2. a/alebo 3. stupňa</strong>,</li>
@@ -57,7 +57,7 @@ $articles[] = [
 <p>Randomizácia prebehla v pomere 1 : 1:</p>
 
 <ul>
-  <li><strong>vitamín C</strong>: <strong>50 mg/kg intravenózne každých 6 hodín počas 96 hodín</strong>,</li>
+  <li><strong>vitamín C</strong>: <strong>50&nbsp;mg/kg intravenózne každých 6&nbsp;hodín počas 96&nbsp;hodín</strong>,</li>
   <li><strong>placebo</strong>: zodpovedajúce placebo.</li>
 </ul>
 
@@ -66,7 +66,7 @@ $articles[] = [
 <p><strong>Primárny cieľ</strong> bol kompozitný:</p>
 
 <ul>
-  <li><strong>úmrtie do 28 dní</strong> a</li>
+  <li><strong>úmrtie do 28&nbsp;dní</strong> a</li>
   <li><strong>pretrvávajúca dysfunkcia orgánov</strong> definovaná závislosťou od:
     <ul>
       <li>umelej pľúcnej ventilácie,</li>
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p><strong>Primárny kompozitný výsledok</strong> sa nepotvrdil ako prospešný: vyskytol sa u <strong>49 pacientov (40,8 %)</strong> v ramene s vitamínom C oproti <strong>35 pacientom (29,7 %)</strong> v ramene s placebom; upravený rizikový pomer (RR) <strong>1,28</strong> (95 % CI <strong>0,99 – 1,65</strong>; p = <strong>0,06</strong>). Štúdia tým <strong>prekročila vopred stanovený prah futility/škodlivosti</strong> a po prvej priebežnej (interim) analýze sa <strong>predčasne zastavila</strong>. Predčasné zastavenie znižuje presnosť odhadov, no v tomto prípade bol signál škodlivosti už klinicky relevantný.</p>
 
-<p><strong>Čas do prepustenia z nemocnice živého do 90 dní</strong> sa nezlepšil (upravený subdistribučný pomer rizík <strong>0,85</strong>; 95 % CI <strong>0,62 – 1,16</strong>; p = <strong>0,31</strong>).</p>
+<p><strong>Čas do prepustenia z nemocnice živého do 90&nbsp;dní</strong> sa nezlepšil (upravený subdistribučný pomer rizík <strong>0,85</strong>; 95 % CI <strong>0,62 – 1,16</strong>; p = <strong>0,31</strong>).</p>
 
 <p><strong>28-dňová mortalita</strong> bola vyššia v ramene s vitamínom C:</p>
 

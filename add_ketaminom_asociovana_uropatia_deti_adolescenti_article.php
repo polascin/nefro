@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Odborny prehlad ketaminom asociovanej uropatie u deti a adolescentov.
+ * Odborný prehľad ketaminom asociovanej uropatie u deti a adolescentov.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -29,7 +29,7 @@ $articles[] = [
 <p>Dostupné dôkazy pozostávajú najmä z retrospektívnych kohort, kazuistík, mechanistických experimentov a konsenzuálnych odporúčaní. Preto treba odlišovať dobre opísané klinické prejavy od hypotéz o mechanizme a od liečebných postupov, ktorých účinnosť nebola potvrdená randomizovanými štúdiami.</p>
 
 <h2>Prečo je problém dôležitý v pediatrii</h2>
-<p>Najväčšia publikovaná skúsenosť s KAU pochádza zo súborov adolescentov a mladých dospelých, najmä z oblastí s rozšíreným rekreačným užívaním ketamínu. Kohorta 318 dospievajúcich a mladých dospelých bola vyšetrená v rámci multidisciplinárnej „one-stop“ kliniky, čo podporuje význam systematického urologického a adiktologického vyšetrenia. Novšie britské údaje upozorňujú aj na vznik špecializovanej služby pre pacientov mladších ako 16 rokov; skoré observačné údaje však nemožno automaticky zovšeobecniť na všetkých adolescentov.</p>
+<p>Najväčšia publikovaná skúsenosť s KAU pochádza zo súborov adolescentov a mladých dospelých, najmä z oblastí s rozšíreným rekreačným užívaním ketamínu. Kohorta 318 dospievajúcich a mladých dospelých bola vyšetrená v rámci multidisciplinárnej „one-stop“ kliniky, čo podporuje význam systematického urologického a adiktologického vyšetrenia. Novšie britské údaje upozorňujú aj na vznik špecializovanej služby pre pacientov mladších ako 16&nbsp;rokov; skoré observačné údaje však nemožno automaticky zovšeobecniť na všetkých adolescentov.</p>
 <p>V klinickej praxi sa na KAU má myslieť pri nevysvetlenej frekvencii močenia, urgencii, dyzúrii alebo panvovej bolesti, predovšetkým ak sú symptómy sprevádzané opakovanými negatívnymi kultiváciami moču, hematuriou, zníženou kapacitou močového mechúra alebo hydronefrózou. Neodsudzujúci rozhovor v súkromí je nevyhnutný. Pri maloletom pacientovi treba postupovať podľa miestnych pravidiel ochrany dieťaťa, dôvernosti a zapojenia zákonného zástupcu.</p>
 
 <h2>Klinický obraz</h2>

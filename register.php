@@ -265,7 +265,7 @@ if ($requestMethod === 'POST') {
                     }
 
                     if (requestScalarString($_POST, 'age_confirm') !== '1') {
-                        $errors[] = 'Pre registráciu potvrďte, že máte aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom vašej krajiny.';
+                        $errors[] = 'Pre registráciu potvrďte, že máte aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom vašej krajiny.';
                     }
 
                     // Dátum narodenia je nepovinný, ale ak je zadaný, musí
@@ -279,9 +279,9 @@ if ($requestMethod === 'POST') {
                         } elseif ($bd > $today) {
                             $errors[] = 'Dátum narodenia nemôže byť v budúcnosti.';
                         } elseif ($bd < (new DateTime())->modify('-120 years')) {
-                            $errors[] = 'Dátum narodenia je mimo povolený rozsah (max. 120 rokov).';
+                            $errors[] = 'Dátum narodenia je mimo povolený rozsah (max. 120 rokov).';
                         } elseif ($today->diff($bd)->y < 16) {
-                            $errors[] = 'Registrácia je povolená len osobám vo veku aspoň 16 rokov.';
+                            $errors[] = 'Registrácia je povolená len osobám vo veku aspoň 16 rokov.';
                         }
                     }
 
@@ -627,7 +627,7 @@ if ($requestMethod === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="work_mobile_phone">Číslo pracovného mobilného telefónu (voliteľné)</label>
-                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="work tel-national">
+                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="work tel-national">
                             </div>
                             <div class="form-group">
                                 <label for="org_website">Webové stránky organizácie</label>
@@ -645,7 +645,7 @@ if ($requestMethod === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
-                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="tel">
+                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="tel">
                                 <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                             </div>
                             <div class="form-group">
@@ -662,12 +662,12 @@ if ($requestMethod === 'POST') {
                             <div class="form-group">
                                 <label for="social_linkedin">LinkedIn profil</label>
                                 <input type="url" id="social_linkedin" name="social_linkedin" class="form-control" value="<?= htmlspecialchars($_POST['social_linkedin'] ?? '') ?>" placeholder="https://linkedin.com/in/meno-priezvisko">
-                                <small class="avatar-upload-hint">Formát: linkedin.com/in/<em>pouzivatelske-meno</em></small>
+                                <small class="avatar-upload-hint">Formát: linkedin.com/in/<em>používateľské meno</em></small>
                             </div>
                             <div class="form-group">
                                 <label for="social_x">X (Twitter) profil</label>
-                                <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($_POST['social_x'] ?? '') ?>" placeholder="https://x.com/pouzivatelske_meno">
-                                <small class="avatar-upload-hint">Formát: x.com/<em>pouzivatelske_meno</em></small>
+                                <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($_POST['social_x'] ?? '') ?>" placeholder="https://x.com/používateľské_meno">
+                                <small class="avatar-upload-hint">Formát: x.com/<em>používateľské_meno</em></small>
                             </div>
                             <div class="form-group">
                                 <label for="social_facebook">Facebook profil</label>
@@ -676,8 +676,8 @@ if ($requestMethod === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="social_instagram">Instagram profil</label>
-                                <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($_POST['social_instagram'] ?? '') ?>" placeholder="https://instagram.com/pouzivatelske_meno">
-                                <small class="avatar-upload-hint">Formát: instagram.com/<em>pouzivatelske_meno</em></small>
+                                <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($_POST['social_instagram'] ?? '') ?>" placeholder="https://instagram.com/používateľské_meno">
+                                <small class="avatar-upload-hint">Formát: instagram.com/<em>používateľské_meno</em></small>
                             </div>
                         </div>
                         <div class="form-group">
@@ -804,7 +804,7 @@ if ($requestMethod === 'POST') {
 
                     <div class="form-check">
                         <input type="checkbox" id="age_confirm" name="age_confirm" value="1" required <?= isset($_POST['age_confirm']) ? 'checked' : '' ?>>
-                        <label for="age_confirm">Potvrdzujem, že mám aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom mojej krajiny.</label>
+                        <label for="age_confirm">Potvrdzujem, že mám aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom mojej krajiny.</label>
                     </div>
 
                     <p class="auth-consent-note">

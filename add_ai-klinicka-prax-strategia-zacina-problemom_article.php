@@ -87,7 +87,7 @@ $articles[] = [
   <li><strong>DAX:</strong> bez významného rozdielu oproti kontrole, <strong>−1,7 %</strong> (95 % interval spoľahlivosti −9,4 % až +5,9 %; P = 0,66).</li>
 </ul>
 
-<p>DAX sa použil v 33,5 % z 24 696 návštev, Nabla v 29,5 % z 23 653 návštev. <strong>Sekundárne ukazovatele</strong> (Mini-Z 2.0, záťaž úlohami lekára, index profesionálneho naplnenia – pracovné vyčerpanie) naznačili možné zlepšenie pri oboch nástrojoch, no autori zdôrazňujú potrebu potvrdenia vo väčších multicentrických skúškach. Klinicky významné nepresnosti sa podľa hodnotení klinikov vyskytovali „občas“ v oboch nástrojoch; hlásená bola jedna mierna nežiaduca udalosť (stupeň 1). Preto je nutná priebežná opatrnosť a dohľad klinika.<sup>4</sup></p>
+<p>DAX sa použil v 33,5 % z 24&nbsp;696 návštev, Nabla v 29,5 % z 23&nbsp;653 návštev. <strong>Sekundárne ukazovatele</strong> (Mini-Z 2.0, záťaž úlohami lekára, index profesionálneho naplnenia – pracovné vyčerpanie) naznačili možné zlepšenie pri oboch nástrojoch, no autori zdôrazňujú potrebu potvrdenia vo väčších multicentrických skúškach. Klinicky významné nepresnosti sa podľa hodnotení klinikov vyskytovali „občas“ v oboch nástrojoch; hlásená bola jedna mierna nežiaduca udalosť (stupeň 1). Preto je nutná priebežná opatrnosť a dohľad klinika.<sup>4</sup></p>
 
 <p>Čo z toho plynie prakticky:</p>
 

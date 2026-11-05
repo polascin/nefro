@@ -57,7 +57,7 @@ látky a prebytočnú vodu, a očistená sa vracia späť do tela. Ide o bezpeč
   <li><strong>Príchod a odváženie.</strong> Na začiatku vás odvážia. Podľa hmotnosti sa určí,
       koľko vody treba počas dialýzy odobrať.</li>
   <li><strong>Napojenie.</strong> Sestra vás napojí na prístroj cez váš cievny prístup (pozri nižšie).</li>
-  <li><strong>Samotná dialýza.</strong> Liečba trvá spravidla <strong>4 až 5 hodín</strong>. Počas nej
+  <li><strong>Samotná dialýza.</strong> Liečba trvá spravidla <strong>4 až 5&nbsp;hodín</strong>. Počas nej
       pohodlne sedíte alebo ležíte a môžete čítať, sledovať obrazovku, oddychovať či spať.</li>
   <li><strong>Sledovanie.</strong> Personál priebežne kontroluje váš krvný tlak a chod prístroja.</li>
   <li><strong>Odpojenie a kontrola.</strong> Na záver vás odpoja, ošetria prístup a znova odvážia.</li>

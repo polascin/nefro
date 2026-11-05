@@ -165,7 +165,7 @@ if ($requestMethod === 'POST') {
                     if (!$cooldownActive) {
                         $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
                         $tokenHash = hash('sha256', $rawToken);
-                        $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
+                        $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
                         $pdo->prepare("DELETE FROM password_resets WHERE user_id = :user_id AND used_at IS NULL")
                             ->execute(['user_id' => (int) $user['id']]);
                         $pdo->prepare(

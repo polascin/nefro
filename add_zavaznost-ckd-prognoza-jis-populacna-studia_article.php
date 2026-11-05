@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: zavaznost CKD a prognoza pacientov prijatych na JIS (populacna studia z Ontaria).
+ * Odborný článok: zavaznost CKD a prognoza pacientov prijatych na JIS (populacna štúdia z Ontaria).
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -51,8 +51,8 @@ $articles[] = [
     <tr><th scope="row">Dizajn</th><td>populačná retrospektívna kohortová štúdia</td></tr>
     <tr><th scope="row">Miesto</th><td>provincia Ontário, Kanada</td></tr>
     <tr><th scope="row">Obdobie</th><td>1. november 2008 až 28. február 2021</td></tr>
-    <tr><th scope="row">Populácia</th><td>531 090 konsekutívnych dospelých (18 rokov a viac) prijatých na JIS</td></tr>
-    <tr><th scope="row">Podmienka zaradenia</th><td>dostupný ambulantný sérový kreatinín 7 až 365 dní pred prijatím</td></tr>
+    <tr><th scope="row">Populácia</th><td>531&nbsp;090 konsekutívnych dospelých (18&nbsp;rokov a viac) prijatých na JIS</td></tr>
+    <tr><th scope="row">Podmienka zaradenia</th><td>dostupný ambulantný sérový kreatinín 7 až 365&nbsp;dní pred prijatím</td></tr>
     <tr><th scope="row">Expozícia</th><td>závažnosť CKD podľa východiskovej eGFR (kategórie KDIGO)</td></tr>
     <tr><th scope="row">Hlavné výsledky</th><td>mortalita na JIS, nemocničná a 90-dňová; začatie náhrady funkcie obličiek na JIS a závislosť od nej po 90 dňoch</td></tr>
     <tr><th scope="row">Štatistická analýza</th><td>23. júl 2025 až 16. apríl 2026</td></tr>
@@ -60,7 +60,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Priemerný vek bol 67 rokov (smerodajná odchýlka 15) a muži tvorili 57 % súboru.</p>
+<p>Priemerný vek bol 67&nbsp;rokov (smerodajná odchýlka 15) a muži tvorili 57 % súboru.</p>
 
 <div class="table-responsive" role="region" aria-label="Rozdelenie pacientov podľa východiskovej funkcie obličiek" tabindex="0">
 <table>
@@ -72,11 +72,11 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Bez CKD</th><td>eGFR najmenej 60 ml/min/1,73 m²</td><td>75 %</td></tr>
-    <tr><th scope="row">G3a</th><td>eGFR 45 až 59 ml/min/1,73 m²</td><td>12 %</td></tr>
-    <tr><th scope="row">G3b</th><td>eGFR 30 až 44 ml/min/1,73 m²</td><td>7 %</td></tr>
-    <tr><th scope="row">G4</th><td>eGFR 15 až 29 ml/min/1,73 m²</td><td>3 %</td></tr>
-    <tr><th scope="row">Nedialyzované G5</th><td>eGFR pod 15 ml/min/1,73 m²</td><td>1 %</td></tr>
+    <tr><th scope="row">Bez CKD</th><td>eGFR najmenej 60&nbsp;ml/min/1,73&nbsp;m²</td><td>75 %</td></tr>
+    <tr><th scope="row">G3a</th><td>eGFR 45 až 59&nbsp;ml/min/1,73&nbsp;m²</td><td>12 %</td></tr>
+    <tr><th scope="row">G3b</th><td>eGFR 30 až 44&nbsp;ml/min/1,73&nbsp;m²</td><td>7 %</td></tr>
+    <tr><th scope="row">G4</th><td>eGFR 15 až 29&nbsp;ml/min/1,73&nbsp;m²</td><td>3 %</td></tr>
+    <tr><th scope="row">Nedialyzované G5</th><td>eGFR pod 15&nbsp;ml/min/1,73&nbsp;m²</td><td>1 %</td></tr>
     <tr><th scope="row">Udržiavacia dialýza</th><td>predchádzajúca chronická dialyzačná liečba</td><td>2 %</td></tr>
   </tbody>
 </table>
@@ -84,7 +84,7 @@ $articles[] = [
 
 <h2>Chronická choroba obličiek bola prítomná u štvrtiny pacientov</h2>
 
-<p>Každý štvrtý pacient prijatý na JIS mal eGFR pod 60 ml/min/1,73 m² alebo bol liečený udržiavacou dialýzou. Ide o podstatne vyšší podiel než v bežnej dospelej populácii.</p>
+<p>Každý štvrtý pacient prijatý na JIS mal eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² alebo bol liečený udržiavacou dialýzou. Ide o podstatne vyšší podiel než v bežnej dospelej populácii.</p>
 
 <p>Takáto nadmerná reprezentácia je biologicky aj klinicky pravdepodobná. Pacienti s chronickou chorobou obličiek majú častejšie diabetes mellitus, kardiovaskulárne ochorenia, infekcie, poruchy vnútorného prostredia, anémiu, objemové preťaženie a vyššiu liekovú záťaž. Súčasne majú nižšiu funkčnú rezervu obličiek a vyššie riziko akútneho poškodenia obličiek pri sepse, hypotenzii, chirurgickom výkone alebo expozícii nefrotoxickým faktorom.</p>
 
@@ -109,7 +109,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Referenčnou skupinou boli pacienti s eGFR najmenej 60 ml/min/1,73 m². Výsledky ukazujú konzistentný gradient rizika: aj mierne až stredne závažné zníženie eGFR bolo spojené s vyššou mortalitou, pričom najsilnejšia asociácia sa zistila pri nedialyzovanom štádiu G5.</p>
+<p>Referenčnou skupinou boli pacienti s eGFR najmenej 60&nbsp;ml/min/1,73&nbsp;m². Výsledky ukazujú konzistentný gradient rizika: aj mierne až stredne závažné zníženie eGFR bolo spojené s vyššou mortalitou, pričom najsilnejšia asociácia sa zistila pri nedialyzovanom štádiu G5.</p>
 
 <p>Pomer šancí však nie je totožný s relatívnym rizikom. Pri častom výsledku, a mortalita kriticky chorých pacientov častá je, pomer šancí veľkosť relatívneho rizika opticky nadhodnocuje. Na klinickú interpretáciu sú preto potrebné aj absolútne riziká, ktoré publikovaný abstrakt neuvádza.</p>
 
@@ -135,7 +135,7 @@ $articles[] = [
 
 <p>Súvislosť je veľmi výrazná, ale výsledok nemožno interpretovať výlučne ako rozdiel vo výskyte závažného akútneho poškodenia obličiek. O začatí náhrady funkcie obličiek (KRT) rozhoduje kombinácia klinického stavu, východiskovej funkcie obličiek, hyperkaliémie, acidózy, objemového preťaženia, oligúrie, komplikácií urémie a odpovede na konzervatívnu liečbu.</p>
 
-<p>Pacient s eGFR pod 15 ml/min/1,73 m² môže dosiahnuť indikáciu na dialýzu už pri menšom akútnom poklese funkcie než pacient s normálnou obličkovou rezervou. Časť pozorovaného gradientu preto vyplýva aj z rozdielnej vzdialenosti od klinického prahu na začatie liečby. Pri nedialyzovanom štádiu G5 mohlo navyše v časti prípadov ísť skôr o <em>plánovaný začiatok chronickej dialýzy urýchlený akútnym ochorením</em> než o klasické akútne poškodenie obličiek.</p>
+<p>Pacient s eGFR pod 15&nbsp;ml/min/1,73&nbsp;m² môže dosiahnuť indikáciu na dialýzu už pri menšom akútnom poklese funkcie než pacient s normálnou obličkovou rezervou. Časť pozorovaného gradientu preto vyplýva aj z rozdielnej vzdialenosti od klinického prahu na začatie liečby. Pri nedialyzovanom štádiu G5 mohlo navyše v časti prípadov ísť skôr o <em>plánovaný začiatok chronickej dialýzy urýchlený akútnym ochorením</em> než o klasické akútne poškodenie obličiek.</p>
 
 <h2>Dĺžka hospitalizácie</h2>
 
@@ -236,7 +236,7 @@ $articles[] = [
 
 <h3>Chýbala albuminúria</h3>
 
-<p>Klasifikácia KDIGO používa kombináciu príčiny ochorenia, kategórie eGFR a albuminúrie. Pacient s eGFR nad 60 ml/min/1,73 m² a významnou albuminúriou môže mať CKD a zvýšené riziko, hoci bol v tejto analýze zaradený medzi pacientov bez CKD. Referenčná skupina teda pravdepodobne obsahuje časť pacientov so skutočnou chorobou obličiek, čo veľkosť pozorovaných rozdielov skôr podhodnocuje.</p>
+<p>Klasifikácia KDIGO používa kombináciu príčiny ochorenia, kategórie eGFR a albuminúrie. Pacient s eGFR nad 60&nbsp;ml/min/1,73&nbsp;m² a významnou albuminúriou môže mať CKD a zvýšené riziko, hoci bol v tejto analýze zaradený medzi pacientov bez CKD. Referenčná skupina teda pravdepodobne obsahuje časť pacientov so skutočnou chorobou obličiek, čo veľkosť pozorovaných rozdielov skôr podhodnocuje.</p>
 
 <h3>Dlhý interval medzi meraním kreatinínu a prijatím</h3>
 
@@ -286,11 +286,11 @@ $articles[] = [
     <tr><td>Štvrtina pacientov na JIS mala CKD</td><td><strong>Podporené použitou klasifikáciou</strong></td><td>Nie všetci pacienti spĺňali formálnu definíciu CKD potvrdenú trvaním najmenej tri mesiace</td></tr>
     <tr><td>Závažnejšia CKD predpovedá vyššiu mortalitu</td><td><strong>Potvrdená prognostická asociácia</strong></td><td>Observačný dizajn nepreukazuje kauzalitu; „predpovedá“ tu znamená štatistickú asociáciu</td></tr>
     <tr><td>Závažnosť CKD zvyšuje potrebu KRT</td><td><strong>Silná asociácia</strong></td><td>Výsledok ovplyvňuje aj nižšia východisková rezerva a klinický prah začatia KRT</td></tr>
-    <tr><td>Vyššie štádium CKD znižuje pravdepodobnosť zotavenia obličiek</td><td><strong>Podporené</strong></td><td>Analýza zahŕňa len pacientov, ktorí prežili 90 dní, čo je výber po expozícii; možné je aj neskoršie zotavenie</td></tr>
+    <tr><td>Vyššie štádium CKD znižuje pravdepodobnosť zotavenia obličiek</td><td><strong>Podporené</strong></td><td>Analýza zahŕňa len pacientov, ktorí prežili 90&nbsp;dní, čo je výber po expozícii; možné je aj neskoršie zotavenie</td></tr>
     <tr><td>Udržiavacia dialýza znižuje mortalitu</td><td><strong>Nepreukázané</strong></td><td>Dialyzovaní mali nižšiu upravenú mortalitu než skupina G5 bez dialýzy, ale nejde o dôkaz ochranného účinku</td></tr>
     <tr><td>Pokročilejšia CKD predlžuje hospitalizáciu</td><td><strong>Potvrdené</strong></td><td>Pomer rizika prepustenia klesal z 0,94 pri G3a na 0,65 pri nedialyzovanom G5</td></tr>
     <tr><td>Výsledky možno použiť pri rozhodovaní o obmedzení intenzívnej liečby</td><td><strong>Nie samostatne</strong></td><td>Štádium CKD nesmie byť jediným kritériom; potrebné sú klinický stav, reverzibilita, krehkosť, prognóza a preferencie pacienta</td></tr>
-    <tr><td>eGFR najmenej 60 ml/min/1,73 m² vylučuje CKD</td><td><strong>Nesprávne</strong></td><td>CKD môže byť prítomná pri albuminúrii, štrukturálnej abnormalite alebo inom markeri poškodenia aj pri zachovanej eGFR</td></tr>
+    <tr><td>eGFR najmenej 60&nbsp;ml/min/1,73&nbsp;m² vylučuje CKD</td><td><strong>Nesprávne</strong></td><td>CKD môže byť prítomná pri albuminúrii, štrukturálnej abnormalite alebo inom markeri poškodenia aj pri zachovanej eGFR</td></tr>
   </tbody>
 </table>
 </div>
@@ -372,9 +372,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

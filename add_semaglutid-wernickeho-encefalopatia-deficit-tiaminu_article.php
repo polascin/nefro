@@ -2,7 +2,7 @@
 
 /**
  * add_semaglutid-wernickeho-encefalopatia-deficit-tiaminu_article.php
- * Wernickeho encefalopatia pri liecbe semaglutidom - deficit tiaminu.
+ * Wernickeho encefalopatia pri liečbe semaglutidom - deficit tiaminu.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -96,7 +96,7 @@ $articles[] = [
   <li>tirzepatid 11,4 (95 % interval spoľahlivosti 2,8–45,8).</li>
 </ul>
 
-<p>Analýza opísala „trojitý zásah“ (<em>triple hit</em>): iatrogénnu gastroparézu, pretrvávajúce vracanie a rýchly úbytok hmotnosti rýchlosťou 3,5 až 13,3 kg mesačne – v jednom prípade 30 kg za 12 týždňov. Medián nástupu bol 3 až 6 mesiacov od začatia liečby alebo od zvýšenia dávky, čo dobre zodpovedá priemerným 4,9 mesiaca v prehľade kazuistík.</p>
+<p>Analýza opísala „trojitý zásah“ (<em>triple hit</em>): iatrogénnu gastroparézu, pretrvávajúce vracanie a rýchly úbytok hmotnosti rýchlosťou 3,5 až 13,3&nbsp;kg mesačne – v jednom prípade 30&nbsp;kg za 12&nbsp;týždňov. Medián nástupu bol 3 až 6&nbsp;mesiacov od začatia liečby alebo od zvýšenia dávky, čo dobre zodpovedá priemerným 4,9 mesiaca v prehľade kazuistík.</p>
 
 <p>Tieto čísla treba čítať správne. ROR je mierou <strong>disproporcionality hlásení</strong>, nie incidencie ani relatívneho rizika. Databázy spontánnych hlásení nemajú menovateľa, trpia podhlásením aj mediálne podmieneným nadhlásením a nedokazujú kauzalitu. Zmysluplné je preto najmä porovnanie oboch liečiv navzájom: hodnota pre tirzepatid nie je nižšia než pre semaglutid, čo skôr podporuje mechanizmus <strong>spoločný pre celú triedu</strong> než účinok špecifický pre jednu molekulu. Široký interval spoľahlivosti pri tirzepatide zároveň pripomína, že ide o veľmi malé počty.</p>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <p><strong>semaglutid → potlačenie apetítu a gastrointestinálne nežiaduce účinky → obmedzený príjem potravy a rýchle chudnutie → vyčerpanie zásob tiamínu → Wernickeho encefalopatia.</strong></p>
 
-<p>Zásoby tiamínu v organizme sú malé, rádovo 25–30 mg, a pri výrazne zníženom príjme sa môžu vyčerpať v priebehu niekoľkých týždňov. Riziko zvyšuje pretrvávajúce vracanie, malnutrícia, malabsorpcia alebo iné ochorenie narúšajúce príjem a využitie živín.</p>
+<p>Zásoby tiamínu v organizme sú malé, rádovo 25–30&nbsp;mg, a pri výrazne zníženom príjme sa môžu vyčerpať v priebehu niekoľkých týždňov. Riziko zvyšuje pretrvávajúce vracanie, malnutrícia, malabsorpcia alebo iné ochorenie narúšajúce príjem a využitie živín.</p>
 
 <p>Závažný nutričný deficit pritom môže vzniknúť aj u človeka s obezitou. Vysoký index telesnej hmotnosti nevylučuje nedostatok vitamínov ani stopových prvkov a práve u týchto pacientov sa naň myslí najmenej.</p>
 
@@ -154,11 +154,11 @@ $articles[] = [
 <p>Medzi odbornými odporúčaniami nie je úplná zhoda o optimálnej dávke:</p>
 
 <ul>
-  <li><strong>EFNS 2010</strong> odporúča pri predpokladanej alebo manifestnej Wernickeho encefalopatii 200 mg tiamínu trikrát denne, prednostne intravenózne (odporúčanie úrovne C).</li>
-  <li><strong>Novšie protokoly a práce autorov prehľadu</strong> používajú 500 mg intravenózne trikrát denne; v analýze hlásení sa uvádzajú vysoké dávky 500–1500 mg denne.</li>
+  <li><strong>EFNS 2010</strong> odporúča pri predpokladanej alebo manifestnej Wernickeho encefalopatii 200&nbsp;mg tiamínu trikrát denne, prednostne intravenózne (odporúčanie úrovne C).</li>
+  <li><strong>Novšie protokoly a práce autorov prehľadu</strong> používajú 500&nbsp;mg intravenózne trikrát denne; v analýze hlásení sa uvádzajú vysoké dávky 500–1500&nbsp;mg denne.</li>
 </ul>
 
-<p>Hranica menej ako 500 mg parenterálneho tiamínu v úvodnej dávke, ktorú autori prehľadu označili za suboptimálnu liečbu, teda nie je svojvoľná: vychádza z ich vlastného predchádzajúceho systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek, kde dávka 500 mg trikrát denne často viedla k úplnému zotaveniu, zatiaľ čo Korsakovov syndróm sa vyskytol u pacientov liečených nízkymi dávkami. Nejde však o univerzálne prijatú dávkovaciu normu – liečba sa má riadiť miestnym protokolom a klinickou odpoveďou a v žiadnom prípade sa nesmie odkladať.</p>
+<p>Hranica menej ako 500&nbsp;mg parenterálneho tiamínu v úvodnej dávke, ktorú autori prehľadu označili za suboptimálnu liečbu, teda nie je svojvoľná: vychádza z ich vlastného predchádzajúceho systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek, kde dávka 500&nbsp;mg trikrát denne často viedla k úplnému zotaveniu, zatiaľ čo Korsakovov syndróm sa vyskytol u pacientov liečených nízkymi dávkami. Nejde však o univerzálne prijatú dávkovaciu normu – liečba sa má riadiť miestnym protokolom a klinickou odpoveďou a v žiadnom prípade sa nesmie odkladať.</p>
 
 <p>Hodnotiť a korigovať treba aj hypomagneziémiu: magnézium je kofaktorom premeny tiamínu na tiamínpyrofosfát a pri jeho nedostatku môže byť odpoveď na substitúciu tiamínu neúplná. Myslieť treba aj na súčasný deficit ďalších vitamínov skupiny B a na riziko realimentačného (refeeding) syndrómu.</p>
 
@@ -187,7 +187,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Dlhodobé gastrointestinálne ťažkosti pri liečbe nemožno bagatelizovať.</strong> Pretrvávajúce vracanie nie je len otázkou komfortu.</li>
-  <li><strong>Rýchly pokles hmotnosti nemusí byť vždy priaznivým výsledkom</strong>, najmä ak ho sprevádza minimálny príjem potravy a slabosť. Úbytok presahujúci približne 4 kg mesačne pri takmer nulovom príjme je varovný, nie úspešný.</li>
+  <li><strong>Rýchly pokles hmotnosti nemusí byť vždy priaznivým výsledkom</strong>, najmä ak ho sprevádza minimálny príjem potravy a slabosť. Úbytok presahujúci približne 4&nbsp;kg mesačne pri takmer nulovom príjme je varovný, nie úspešný.</li>
   <li><strong>Pri neurologických príznakoch treba na deficit tiamínu myslieť včas</strong> a použiť Caineove kritériá namiesto čakania na kompletnú triádu.</li>
   <li><strong>Pri dôvodnom podozrení sa parenterálny tiamín podáva ihneď</strong>, bez čakania na laboratórne alebo zobrazovacie potvrdenie a pred podaním glukózy.</li>
   <li><strong>Signál sa netýka len semaglutidu.</strong> Rovnaká pozornosť patrí tirzepatidu a ďalším liekom triedy, keďže mechanizmus je nutričný, nie molekulovo špecifický.</li>
@@ -222,7 +222,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Semaglutide Linked to Rare Brain Illness.</em> 14. júla 2026. <a href="https://www.medscape.com/viewarticle/semaglutide-linked-rare-brain-illness-2026a1000npa" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Hlavným spracovaným zdrojom je systematický prehľad Bidesieovej a Oudmana; jeho bibliografické údaje a kľúčové čísla (šesť prípadov, štyri ženy a dvaja muži, priemerný vek 47,2 roka, priemerné trvanie liečby 4,9 mesiaca, jedno úmrtie, štyria pacienti s Korsakovovým syndrómom, hranica &lt; 500 mg parenterálneho tiamínu) boli overené v PubMed a Europe PMC. Farmakovigilančné údaje pochádzajú z nezávislej analýzy prezentovanej na kongrese AACE 2026 – ide o konferenčný abstrakt, teda o predbežné údaje bez plnej recenzie. Nefrologická časť vychádza zo systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek a z prehľadu vodorozpustných vitamínov pri dialýze. Podrobné frekvencie jednotlivých príznakov sú prevzaté z plného textu prehľadu v podobe, v akej ich referovala odborná tlač.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Hlavným spracovaným zdrojom je systematický prehľad Bidesieovej a Oudmana; jeho bibliografické údaje a kľúčové čísla (šesť prípadov, štyri ženy a dvaja muži, priemerný vek 47,2 roka, priemerné trvanie liečby 4,9 mesiaca, jedno úmrtie, štyria pacienti s Korsakovovým syndrómom, hranica &lt; 500&nbsp;mg parenterálneho tiamínu) boli overené v PubMed a Europe PMC. Farmakovigilančné údaje pochádzajú z nezávislej analýzy prezentovanej na kongrese AACE 2026 – ide o konferenčný abstrakt, teda o predbežné údaje bez plnej recenzie. Nefrologická časť vychádza zo systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek a z prehľadu vodorozpustných vitamínov pri dialýze. Podrobné frekvencie jednotlivých príznakov sú prevzaté z plného textu prehľadu v podobe, v akej ich referovala odborná tlač.</em></p>
 HTML,
 ];
 

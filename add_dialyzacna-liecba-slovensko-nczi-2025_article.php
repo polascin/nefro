@@ -2,9 +2,9 @@
 
 /**
  * add_dialyzacna-liecba-slovensko-nczi-2025_article.php
- * Dialyzacna liecba na Slovensku podla udajov NCZI za rok 2025
- * (Nefrologicka starostlivost a liecba nahradzajuca funkciu obliciek v SR 2025,
- *  publikovane august 2026), s porovnanim roku 2024 a klinickym kontextom.
+ * Dialyzacna liečba na Slovensku podla údajov NCZI za rok 2025
+ * (Nefrologicka starostlivost a liečba nahradzajuca funkciu obličiek v SR 2025,
+ *  publikované august 2026), s porovnanim roku 2024 a klinickym kontextom.
  *
  * Institucionalny autor zdroja (NCZI) - individualni autori nie su uvedeni,
  * preto sa do source_authors.php nic nedoplna.
@@ -35,7 +35,7 @@ $articles[] = [
 
 <p>Národné centrum zdravotníckych informácií (NCZI) zverejnilo v auguste 2026 súhrnnú správu <em>Nefrologická starostlivosť a liečba nahrádzajúca funkciu obličiek v Slovenskej republike 2025</em>. Zdrojom sú ročné výkazy o činnosti nefrologickej ambulancie (A [MZ SR] 13-01) a o činnosti stacionára v odbore nefrológia (T [MZ SR] 2-01).</p>
 
-<p>Výstup za rok 2025 nahrádza údaje za rok 2024, ktoré NCZI publikovalo v novembri 2025 a sprevádzalo tlačovou správou z 3. decembra 2025 s titulkom o tom, že dialýzu potrebuje čoraz viac seniorov. Tento článok vychádza z oboch výstupov, pretože až ich porovnanie ukazuje, ktoré závery sú stabilné a ktoré boli platné iba pre jeden rok.</p>
+<p>Výstup za rok 2025 nahrádza údaje za rok 2024, ktoré NCZI publikovalo v novembri 2025 a sprevádzalo tlačovou správou z 3. decembra 2025&nbsp;s titulkom o tom, že dialýzu potrebuje čoraz viac seniorov. Tento článok vychádza z oboch výstupov, pretože až ich porovnanie ukazuje, ktoré závery sú stabilné a ktoré boli platné iba pre jeden rok.</p>
 
 <h2>Čo ukazujú najnovšie celoštátne údaje</h2>
 
@@ -55,24 +55,24 @@ $articles[] = [
         <td>72</td>
       </tr>
       <tr>
-        <th scope="row">Lôžka pre pacientov vo veku 19 rokov a viac</th>
+        <th scope="row">Lôžka pre pacientov vo veku 19&nbsp;rokov a viac</th>
         <td>999</td>
         <td>962</td>
       </tr>
       <tr>
         <th scope="row">Pacienti v pravidelnej dialyzačnej liečbe (PDL)</th>
-        <td>4 445</td>
-        <td>4 352</td>
+        <td>4&nbsp;445</td>
+        <td>4&nbsp;352</td>
       </tr>
       <tr>
-        <th scope="row">Pacienti v PDL na 100 000 obyvateľov</th>
+        <th scope="row">Pacienti v PDL na 100&nbsp;000 obyvateľov</th>
         <td>82,0</td>
         <td>80,5</td>
       </tr>
       <tr>
         <th scope="row">Liečení hemodialýzou k 31. 12.</th>
-        <td>3 319</td>
-        <td>3 330</td>
+        <td>3&nbsp;319</td>
+        <td>3&nbsp;330</td>
       </tr>
       <tr>
         <th scope="row">Liečení peritoneálnou dialýzou k 31. 12.</th>
@@ -96,8 +96,8 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Osoby s CKD v 5. štádiu v nefrologických ambulanciách, nezaradené do PDL</th>
-        <td>1 529</td>
-        <td>1 500</td>
+        <td>1&nbsp;529</td>
+        <td>1&nbsp;500</td>
       </tr>
     </tbody>
   </table>
@@ -105,15 +105,15 @@ $articles[] = [
 
 <p>Každý riadok tejto tabuľky má inú metodickú povahu. Počet pacientov v PDL je prevalenčný údaj za celý rok. Počty liečených hemodialýzou a peritoneálnou dialýzou sú stavy k 31. decembru. Počet transplantácií je ročný tok. Osoby na čakacej listine sú stav k jednému dňu. Tieto ukazovatele <strong>nemožno navzájom deliť ani sčítavať</strong> bez toho, aby sme si uvedomili, že ide o rôzne typy veličín.</p>
 
-<p>Názorne to ukazuje samotná správa. K 31. decembru 2025 bolo hemodialýzou liečených 3 330 a peritoneálnou dialýzou 103 pacientov, spolu teda 3 433 osôb. Za celý rok však bolo v PDL evidovaných 4 352 pacientov. Rozdiel nie je chybou – vyjadruje, že počas roka časť pacientov zomrela, podstúpila transplantáciu alebo z programu odišla z iných dôvodov.</p>
+<p>Názorne to ukazuje samotná správa. K 31. decembru 2025 bolo hemodialýzou liečených 3&nbsp;330 a peritoneálnou dialýzou 103 pacientov, spolu teda 3&nbsp;433 osôb. Za celý rok však bolo v PDL evidovaných 4&nbsp;352 pacientov. Rozdiel nie je chybou – vyjadruje, že počas roka časť pacientov zomrela, podstúpila transplantáciu alebo z programu odišla z iných dôvodov.</p>
 
 <h2>Medziročný pokles neznamená, že zlyhania obličiek ubúda</h2>
 
-<p>Miera pacientov v PDL klesla z 82,0 na 80,5 prípadu na 100 000 obyvateľov, teda o 1,2 %, čo v absolútnom vyjadrení predstavuje 93 osôb. Ide o prvý pokles po období, ktoré NCZI dlhodobo opisovalo ako rastúce; od roku 2009 miera stúpla o 11 %.</p>
+<p>Miera pacientov v PDL klesla z 82,0 na 80,5 prípadu na 100&nbsp;000 obyvateľov, teda o 1,2 %, čo v absolútnom vyjadrení predstavuje 93 osôb. Ide o prvý pokles po období, ktoré NCZI dlhodobo opisovalo ako rastúce; od roku 2009 miera stúpla o 11 %.</p>
 
 <p>Pokles o 1,2 % v jedinom roku <strong>nie je dôkazom obratu trendu</strong>. Prevalencia dialyzovaných pacientov je výsledkom rovnováhy medzi prítokom a odtokom. Zvýšiť ju môže vyšší výskyt zlyhania obličiek alebo dlhšie prežívanie; znížiť ju môže viac transplantácií, vyššia úmrtnosť, menej nových pacientov, ale aj zmena vo vykazovaní.</p>
 
-<p>Práve posledná možnosť si zaslúži pozornosť. Počet stacionárov, ktoré vykázali činnosť, klesol zo 75 na 72 a počet lôžok z 999 na 962. Správa za rok 2025 navyše uvádza, že na začiatku roka bolo hemodialýzou liečených 3 172 pacientov, hoci podľa správy za rok 2024 ich na konci predchádzajúceho roka bolo 3 319. Takýto nesúlad medzi koncom jedného a začiatkom nasledujúceho roka ukazuje, že časť medziročnej zmeny môže vzniknúť na úrovni vykazujúcich pracovísk, nie v epidemiológii.</p>
+<p>Práve posledná možnosť si zaslúži pozornosť. Počet stacionárov, ktoré vykázali činnosť, klesol zo 75 na 72 a počet lôžok z 999 na 962. Správa za rok 2025 navyše uvádza, že na začiatku roka bolo hemodialýzou liečených 3&nbsp;172 pacientov, hoci podľa správy za rok 2024 ich na konci predchádzajúceho roka bolo 3&nbsp;319. Takýto nesúlad medzi koncom jedného a začiatkom nasledujúceho roka ukazuje, že časť medziročnej zmeny môže vzniknúť na úrovni vykazujúcich pracovísk, nie v epidemiológii.</p>
 
 <p>Zodpovedný záver preto znie: miera dialyzovaných pacientov v roku 2025 mierne klesla, dlhodobý trend zostáva rastúci a na posúdenie, či ide o začiatok zmeny, bude potrebných viac rokov a stabilné vykazovanie.</p>
 
@@ -122,7 +122,7 @@ $articles[] = [
 <p>Podľa vykazovanej základnej diagnózy tvorili v roku 2025 pacienti v PDL:</p>
 
 <ul>
-  <li><strong>34,8 %</strong> glomerulová choroba pri diabetes mellitus, teda diabetická nefropatia (N08.3) – 1 513 osôb,</li>
+  <li><strong>34,8 %</strong> glomerulová choroba pri diabetes mellitus, teda diabetická nefropatia (N08.3) – 1&nbsp;513 osôb,</li>
   <li><strong>15,2 %</strong> hypertenzná a vaskulárna nefroskleróza (I12 – I13, I70.1, N28.0) – 661 osôb,</li>
   <li><strong>15,1 %</strong> tubulointersticiálne nefritídy (N10 – N16) – 657 osôb,</li>
   <li><strong>11,7 %</strong> primárne (N00 – N06) a hereditárne (N07) glomerulové choroby – 510 osôb,</li>
@@ -133,7 +133,7 @@ $articles[] = [
 
 <p>Tieto podiely však <strong>nevyjadrujú riziko</strong>, že konkrétny človek s diabetom alebo hypertenziou bude potrebovať dialýzu. Opisujú zloženie dialyzovanej populácie, nie pravdepodobnosť progresie. Na takéto hodnotenie by boli potrebné údaje o všetkých osobách s danou chorobou a o ich dlhodobom sledovaní.</p>
 
-<p>Užitočné je porovnanie s ambulantnou nefrologickou starostlivosťou, kde bolo v roku 2025 sledovaných 149 527 osôb. Tam tvorila diabetická nefropatia iba 20,1 % a tubulointersticiálne nefritídy 18,8 %. Diabetické poškodenie obličiek je teda v dialyzačnej populácii zastúpené <strong>takmer dvojnásobne</strong> oproti ambulantnej. To je zlučiteľné s vyššou pravdepodobnosťou progresie do zlyhania obličiek, no samo osebe to nedokazuje – rovnaký obraz by mohol vzniknúť aj rozdielnym prežívaním alebo rozdielnou dostupnosťou transplantácie.</p>
+<p>Užitočné je porovnanie s ambulantnou nefrologickou starostlivosťou, kde bolo v roku 2025 sledovaných 149&nbsp;527 osôb. Tam tvorila diabetická nefropatia iba 20,1 % a tubulointersticiálne nefritídy 18,8 %. Diabetické poškodenie obličiek je teda v dialyzačnej populácii zastúpené <strong>takmer dvojnásobne</strong> oproti ambulantnej. To je zlučiteľné s vyššou pravdepodobnosťou progresie do zlyhania obličiek, no samo osebe to nedokazuje – rovnaký obraz by mohol vzniknúť aj rozdielnym prežívaním alebo rozdielnou dostupnosťou transplantácie.</p>
 
 <p>Pri diabete treba navyše dôsledne rozlišovať štatistickú kategóriu, klinickú diagnózu a histologický nález. Označenie „glomerulová choroba pri diabetes mellitus“ je prevzaté z vykazovania a nie je dôkazom, že u každého takto zaradeného pacienta bolo diabetické poškodenie potvrdené biopsiou. Nie každá chronická choroba obličiek u človeka s diabetom je spôsobená diabetom.</p>
 
@@ -148,31 +148,31 @@ $articles[] = [
     <thead>
       <tr>
         <th scope="col">Veková skupina</th>
-        <th scope="col">2024 (na 100 000 obyvateľov daného veku)</th>
-        <th scope="col">2025 (na 100 000 obyvateľov daného veku)</th>
+        <th scope="col">2024 (na 100&nbsp;000 obyvateľov daného veku)</th>
+        <th scope="col">2025 (na 100&nbsp;000 obyvateľov daného veku)</th>
       </tr>
     </thead>
     <tbody>
-      <tr><th scope="row">70 rokov a viac</th><td>268,6</td><td>257,2</td></tr>
-      <tr><th scope="row">60 – 69 rokov</th><td>176,6</td><td>168,9</td></tr>
-      <tr><th scope="row">50 – 59 rokov</th><td>97,4</td><td>94,7</td></tr>
-      <tr><th scope="row">40 – 49 rokov</th><td>44,7</td><td>44,0</td></tr>
-      <tr><th scope="row">30 – 39 rokov</th><td>28,0</td><td>27,7</td></tr>
-      <tr><th scope="row">19 – 29 rokov</th><td>12,8</td><td>13,1</td></tr>
+      <tr><th scope="row">70&nbsp;rokov a viac</th><td>268,6</td><td>257,2</td></tr>
+      <tr><th scope="row">60 – 69&nbsp;rokov</th><td>176,6</td><td>168,9</td></tr>
+      <tr><th scope="row">50 – 59&nbsp;rokov</th><td>97,4</td><td>94,7</td></tr>
+      <tr><th scope="row">40 – 49&nbsp;rokov</th><td>44,7</td><td>44,0</td></tr>
+      <tr><th scope="row">30 – 39&nbsp;rokov</th><td>28,0</td><td>27,7</td></tr>
+      <tr><th scope="row">19 – 29&nbsp;rokov</th><td>12,8</td><td>13,1</td></tr>
       <tr><th scope="row">Slovenská republika spolu</th><td>82,0</td><td>80,5</td></tr>
     </tbody>
   </table>
 </div>
 
-<p>Medzi skupinou 19 – 29 rokov a skupinou 70 rokov a viac je rozdiel takmer dvadsaťnásobný. Vekovo špecifické miery zároveň ukazujú, že medziročný pokles celkovej miery nebol rovnomerný: v najstarších skupinách klesla výraznejšie, v skupine 19 – 29 rokov naopak mierne stúpla.</p>
+<p>Medzi skupinou 19 – 29&nbsp;rokov a skupinou 70&nbsp;rokov a viac je rozdiel takmer dvadsaťnásobný. Vekovo špecifické miery zároveň ukazujú, že medziročný pokles celkovej miery nebol rovnomerný: v najstarších skupinách klesla výraznejšie, v skupine 19 – 29&nbsp;rokov naopak mierne stúpla.</p>
 
 <p>Prevaha starších pacientov má praktické dôsledky pre organizáciu starostlivosti. U nich je potrebné venovať väčšiu pozornosť funkčnej zdatnosti, krehkosti, výžive, kognitívnym schopnostiam, riziku pádov, dostupnosti pomoci v domácnosti a záťaži spojenej s dopravou na pracovisko a zotavením po procedúre.</p>
 
-<p>Kalendárny vek však <strong>nie je dostatočným podkladom</strong> na rozhodnutie o začatí, pokračovaní či spôsobe dialýzy. Klasická práca Kurella Tamura a spolupracovníkov na 3 702 obyvateľoch amerických zariadení dlhodobej starostlivosti ukázala, že dvanásť mesiacov po začatí dialýzy bolo 58 % z nich mŕtvych a predialyzačnú funkčnú zdatnosť si zachovalo iba 13 %. Táto populácia je mimoriadne krehká a výsledky nemožno zovšeobecňovať na všetkých starších pacientov – práve preto je ich odkazom individuálne posúdenie, nie vekový limit.</p>
+<p>Kalendárny vek však <strong>nie je dostatočným podkladom</strong> na rozhodnutie o začatí, pokračovaní či spôsobe dialýzy. Klasická práca Kurella Tamura a spolupracovníkov na 3&nbsp;702 obyvateľoch amerických zariadení dlhodobej starostlivosti ukázala, že dvanásť mesiacov po začatí dialýzy bolo 58 % z nich mŕtvych a predialyzačnú funkčnú zdatnosť si zachovalo iba 13 %. Táto populácia je mimoriadne krehká a výsledky nemožno zovšeobecňovať na všetkých starších pacientov – práve preto je ich odkazom individuálne posúdenie, nie vekový limit.</p>
 
 <h2>Modalita: hemodialýza takmer bez alternatívy</h2>
 
-<p>Správa za rok 2025 umožňuje spoľahlivo posúdiť zastúpenie dialyzačných metód. K 31. decembru 2025 bolo hemodialýzou liečených 3 330 pacientov (2 078 mužov a 1 252 žien) a peritoneálnou dialýzou 103 pacientov. Peritoneálna dialýza teda tvorila <strong>približne 3 % dialyzovanej populácie</strong> (v roku 2024 približne 2,8 %).</p>
+<p>Správa za rok 2025 umožňuje spoľahlivo posúdiť zastúpenie dialyzačných metód. K 31. decembru 2025 bolo hemodialýzou liečených 3&nbsp;330 pacientov (2&nbsp;078 mužov a 1&nbsp;252 žien) a peritoneálnou dialýzou 103 pacientov. Peritoneálna dialýza teda tvorila <strong>približne 3 % dialyzovanej populácie</strong> (v roku 2024 približne 2,8 %).</p>
 
 <p>Pre porovnanie: podľa výročnej správy registra Európskej renálnej asociácie (ERA) za rok 2022, ktorá pokrývala 530 miliónov obyvateľov z 35 krajín, tvorila peritoneálna dialýza 5 % všetkých pacientov liečených náhradou funkcie obličiek a hemodialýza 56 %. Prepočítané na samotnú dialyzovanú populáciu ide o približne <strong>8 % peritoneálnej dialýzy</strong>, teda zhruba dvaapolnásobok slovenského podielu.</p>
 
@@ -180,19 +180,19 @@ $articles[] = [
 
 <p>Tieto čísla samy osebe nehovoria, prečo je podiel domácej metódy taký nízky. Prispievať môže zloženie pacientov, dostupnosť predialyzačnej edukácie, personálne a technické zabezpečenie pracovísk, spôsob úhrady aj preferencie pacientov. Údaje však ukazujú, kde by sa dal priestor na zmenu hľadať – a že ten priestor nie je rozložený rovnomerne po krajoch.</p>
 
-<p>Pozoruhodný je aj údaj o type mimotelovej liečby. V roku 2025 bolo vykázaných 449 333 procedúr hemodiafiltrácie oproti 53 251 procedúram klasickej hemodialýzy; hemodiafiltrácia teda tvorila približne <strong>89 % mimotelových eliminačných procedúr</strong>. To je klinicky priaznivé zistenie: randomizovaná štúdia CONVINCE s 1 360 pacientmi preukázala, že vysokoobjemová hemodiafiltrácia znižuje celkovú úmrtnosť oproti konvenčnej vysokoprietokovej hemodialýze (17,3 % oproti 21,9 %; HR 0,77; 95 % IS 0,65 – 0,93).</p>
+<p>Pozoruhodný je aj údaj o type mimotelovej liečby. V roku 2025 bolo vykázaných 449&nbsp;333 procedúr hemodiafiltrácie oproti 53&nbsp;251 procedúram klasickej hemodialýzy; hemodiafiltrácia teda tvorila približne <strong>89 % mimotelových eliminačných procedúr</strong>. To je klinicky priaznivé zistenie: randomizovaná štúdia CONVINCE s 1&nbsp;360 pacientmi preukázala, že vysokoobjemová hemodiafiltrácia znižuje celkovú úmrtnosť oproti konvenčnej vysokoprietokovej hemodialýze (17,3 % oproti 21,9 %; HR 0,77; 95 % IS 0,65 – 0,93).</p>
 
 <p>Dôležitá výhrada: výkaz NCZI eviduje počty procedúr, <strong>nie dosahovaný konvekčný objem</strong>. Prínos preukázaný v štúdii CONVINCE bol viazaný na vysoký konvekčný objem (v priemere 25,3 litra na procedúru). Z počtu vykázaných procedúr hemodiafiltrácie preto nemožno usudzovať, že slovenskí pacienti dostávajú dávku porovnateľnú s tou, ktorá prínos preukázala.</p>
 
 <h2>Kategória G5 neznamená automatickú indikáciu dialýzy</h2>
 
-<p>V nefrologických ambulanciách bolo v roku 2025 evidovaných 1 500 osôb s chronickou chorobou obličiek v 5. štádiu, ktoré neboli zaradené do pravidelnej dialyzačnej liečby. Osobitne správa uvádza 664 pacientov s týmto ochorením zaradených do PDL.</p>
+<p>V nefrologických ambulanciách bolo v roku 2025 evidovaných 1&nbsp;500 osôb s chronickou chorobou obličiek v 5. štádiu, ktoré neboli zaradené do pravidelnej dialyzačnej liečby. Osobitne správa uvádza 664 pacientov s týmto ochorením zaradených do PDL.</p>
 
-<p>Tieto dve hodnoty <strong>nemožno interpretovať</strong> tak, že 664 pacientov pochádzalo práve zo skupiny 1 500 osôb, a nemožno z nich počítať podiel tých, ktorí počas roka „prešli na dialýzu“.</p>
+<p>Tieto dve hodnoty <strong>nemožno interpretovať</strong> tak, že 664 pacientov pochádzalo práve zo skupiny 1&nbsp;500 osôb, a nemožno z nich počítať podiel tých, ktorí počas roka „prešli na dialýzu“.</p>
 
-<p>Z klinického hľadiska kategória G5 podľa KDIGO označuje chronickú chorobu obličiek s odhadovanou glomerulovou filtráciou nižšou ako 15 ml/min/1,73 m². Sama osebe neurčuje deň začatia dialýzy. Rozhodujú prejavy zlyhania obličiek, zvládnuteľnosť porúch vnútorného prostredia a objemového stavu, výživový stav a celkový klinický kontext.</p>
+<p>Z klinického hľadiska kategória G5 podľa KDIGO označuje chronickú chorobu obličiek s odhadovanou glomerulovou filtráciou nižšou ako 15&nbsp;ml/min/1,73&nbsp;m². Sama osebe neurčuje deň začatia dialýzy. Rozhodujú prejavy zlyhania obličiek, zvládnuteľnosť porúch vnútorného prostredia a objemového stavu, výživový stav a celkový klinický kontext.</p>
 
-<p>Randomizovaná štúdia IDEAL u 828 pacientov porovnávala plánované začatie dialýzy pri odhadovanej glomerulovej filtrácii 10 – 14 ml/min oproti 5 – 7 ml/min. Po mediáne sledovania 3,59 roka sa úmrtnosť medzi skupinami nelíšila (37,6 % oproti 36,6 %; HR 1,04; 95 % IS 0,83 – 1,30), rovnako ani výskyt kardiovaskulárnych príhod, infekcií a komplikácií dialýzy. Pozoruhodné je, že 75,9 % pacientov v skupine s neskorým začatím začalo dialýzu skôr, než klesli na cieľovú hodnotu – pre rozvoj príznakov. Práve to podporuje záver, že o načasovaní má rozhodovať klinický stav, nie prahová hodnota filtrácie.</p>
+<p>Randomizovaná štúdia IDEAL u 828 pacientov porovnávala plánované začatie dialýzy pri odhadovanej glomerulovej filtrácii 10 – 14&nbsp;ml/min oproti 5 – 7&nbsp;ml/min. Po mediáne sledovania 3,59 roka sa úmrtnosť medzi skupinami nelíšila (37,6 % oproti 36,6 %; HR 1,04; 95 % IS 0,83 – 1,30), rovnako ani výskyt kardiovaskulárnych príhod, infekcií a komplikácií dialýzy. Pozoruhodné je, že 75,9 % pacientov v skupine s neskorým začatím začalo dialýzu skôr, než klesli na cieľovú hodnotu – pre rozvoj príznakov. Práve to podporuje záver, že o načasovaní má rozhodovať klinický stav, nie prahová hodnota filtrácie.</p>
 
 <p>Medzi naliehavé dôvody na začatie dialyzačnej liečby patria nezvládnuteľná hyperkaliémia, metabolická acidóza, prevodnenie a uremické komplikácie. Naliehavosť sa posudzuje individuálne a nemožno ju určiť z jednej hodnoty kreatinínu ani z odhadovanej glomerulovej filtrácie.</p>
 
@@ -204,13 +204,13 @@ $articles[] = [
 
 <p>Tu je namieste <strong>vecná oprava formulácie samotného zdroja</strong>. Správa NCZI uvádza, že transplantácia obličky sa vykonáva u pacientov, ktorí pravidelne podstupujú dialyzačnú liečbu, a že podmienkou je „dobrý zdravotný stav pacienta“. Obe formulácie sú zjednodušujúce.</p>
 
-<p>Transplantácia obličky nie je vyhradená pacientom, ktorí už dialýzu podstupujú. U vhodného kandidáta možno vykonať <strong>preemptívnu transplantáciu</strong>, teda transplantáciu pred začatím pravidelnej dialyzačnej liečby. Nejde o okrajovú možnosť: podľa registra ERA tvorila preemptívna transplantácia v roku 2022 <strong>5 % všetkých začatí náhrady funkcie obličiek</strong> v sledovaných európskych krajinách. Rozsiahla analýza 38 836 prvých transplantácií obličky zistila, že preemptívna transplantácia bola spojená s nižším rizikom zlyhania štepu (relatívne riziko 0,75 pri darcovi po smrti a 0,73 pri žijúcom darcovi) aj s nižším rizikom úmrtia (0,84, resp. 0,69). Ide o observačné údaje, pri ktorých nemožno vylúčiť, že preemptívne transplantovaní pacienti boli vybranejšou skupinou.</p>
+<p>Transplantácia obličky nie je vyhradená pacientom, ktorí už dialýzu podstupujú. U vhodného kandidáta možno vykonať <strong>preemptívnu transplantáciu</strong>, teda transplantáciu pred začatím pravidelnej dialyzačnej liečby. Nejde o okrajovú možnosť: podľa registra ERA tvorila preemptívna transplantácia v roku 2022 <strong>5 % všetkých začatí náhrady funkcie obličiek</strong> v sledovaných európskych krajinách. Rozsiahla analýza 38&nbsp;836 prvých transplantácií obličky zistila, že preemptívna transplantácia bola spojená s nižším rizikom zlyhania štepu (relatívne riziko 0,75 pri darcovi po smrti a 0,73 pri žijúcom darcovi) aj s nižším rizikom úmrtia (0,84, resp. 0,69). Ide o observačné údaje, pri ktorých nemožno vylúčiť, že preemptívne transplantovaní pacienti boli vybranejšou skupinou.</p>
 
 <p>Ani transplantačnú spôsobilosť nemožno zúžiť na „dobrý zdravotný stav“. Odporúčanie KDIGO z roku 2020 ju definuje ako odborné posúdenie pomeru prínosu a rizika, imunologických a psychosociálnych faktorov, jednotlivých komorbidít a možnosti dlhodobej potransplantačnej starostlivosti – pričom každý rizikový faktor sa posudzuje samostatne a výsledkom je celkový úsudok, nie splnenie jedinej podmienky.</p>
 
-<p>Pomer 348 čakajúcich k 4 352 dialyzovaným <strong>nemožno interpretovať</strong> ako podiel pacientov, ktorým bola transplantácia neoprávnene odopretá. Na posúdenie dostupnosti transplantácie sú potrebné údaje o spôsobilosti, odosielaní na vyšetrenie, dôvodoch nezaradenia a čase strávenom na čakacej listine.</p>
+<p>Pomer 348 čakajúcich k 4&nbsp;352 dialyzovaným <strong>nemožno interpretovať</strong> ako podiel pacientov, ktorým bola transplantácia neoprávnene odopretá. Na posúdenie dostupnosti transplantácie sú potrebné údaje o spôsobilosti, odosielaní na vyšetrenie, dôvodoch nezaradenia a čase strávenom na čakacej listine.</p>
 
-<p>Určitý kontext predsa len poskytnúť možno. Pri počte obyvateľov 5 409 407 k 31. decembru 2025 zodpovedá 118 transplantácií približne 21,8 výkonu na milión obyvateľov; v roku 2024 to bolo približne 25,8. Register ERA uvádza za rok 2022 priemernú mieru transplantácií 40 na milión obyvateľov. Ide o hrubé, vekovo neštandardizované porovnanie s inou metodikou aj iným rokom a slovenský údaj navyše zahŕňa iba transplantácie u pacientov z vlastného dialyzačného stacionára. Ani s týmito výhradami nejde o rozdiel, ktorý by sa dal prehliadnuť.</p>
+<p>Určitý kontext predsa len poskytnúť možno. Pri počte obyvateľov 5&nbsp;409&nbsp;407 k 31. decembru 2025 zodpovedá 118 transplantácií približne 21,8 výkonu na milión obyvateľov; v roku 2024 to bolo približne 25,8. Register ERA uvádza za rok 2022 priemernú mieru transplantácií 40 na milión obyvateľov. Ide o hrubé, vekovo neštandardizované porovnanie s inou metodikou aj iným rokom a slovenský údaj navyše zahŕňa iba transplantácie u pacientov z vlastného dialyzačného stacionára. Ani s týmito výhradami nejde o rozdiel, ktorý by sa dal prehliadnuť.</p>
 
 <h2>Čo možno a nemožno povedať o úmrtnosti</h2>
 
@@ -239,7 +239,7 @@ $articles[] = [
 
 <p>Označenie <strong>„dialyzačná kachexia“</strong> treba chápať ako termín použitý vo výkaze. Nezodpovedá zavedenej odbornej terminológii. Expertný panel Medzinárodnej spoločnosti pre renálnu výživu a metabolizmus odporúča pre stratu telesnej bielkovinovej hmoty a energetických zásob pri chorobe obličiek termín <strong>proteínovo-energetické chradnutie</strong> a kachexiu vyhradzuje pre jeho najťažšiu, zriedkavú formu. Bez definície vykazovanej kategórie nemožno 24 úmrtí stotožniť s počtom pacientov s proteínovo-energetickým chradnutím ani ich čítať ako dôkaz, že príčinou úmrtia bola samotná dialýza.</p>
 
-<p>Jednoduché vydelenie 548 úmrtí počtom 4 352 pacientov (12,6 %) <strong>neposkytuje spoľahlivý odhad ročnej mortality</strong>. Počas roka pacienti do programu vstupujú, podstupujú transplantáciu, zomierajú alebo z neho odchádzajú z iných dôvodov; korektný výpočet vyžaduje populáciu v riziku a čas sledovania.</p>
+<p>Jednoduché vydelenie 548 úmrtí počtom 4&nbsp;352 pacientov (12,6 %) <strong>neposkytuje spoľahlivý odhad ročnej mortality</strong>. Počas roka pacienti do programu vstupujú, podstupujú transplantáciu, zomierajú alebo z neho odchádzajú z iných dôvodov; korektný výpočet vyžaduje populáciu v riziku a čas sledovania.</p>
 
 <p>Podrobnejšie údaje o pohybe pacientov to dokladajú. V roku 2025 bolo do PDL prijatých 151 pacientov dovtedy nesledovaných pre zlyhanie obličiek, 534 z vlastnej nefrologickej ambulancie, 149 z inej nefrologickej ambulancie a 265 z iných dôvodov; prepustených bolo 548 pre úmrtie, 114 pre transplantáciu a 257 pre preradenie do iného stacionára. Pacienti teda do sledovanej populácie vstupovali a z nej vystupovali v priebehu celého roka.</p>
 
@@ -247,7 +247,7 @@ $articles[] = [
 
 <p>Osobitnú pozornosť si zaslúži skupina 151 pacientov prijatých bez predchádzajúceho sledovania pre zlyhanie obličiek. Zo 834 pacientov prijatých buď z nefrologickej ambulancie, alebo bez nej, ide približne o 18 %. Neplánovaný začiatok dialýzy je vo všeobecnosti spojený s horšími výsledkami, nižším podielom natívnych cievnych prístupov a menšou možnosťou voľby modality. Samotný výkaz však neuvádza, či išlo o neskorý záchyt, o akútny priebeh alebo o pacientov sledovaných inde, a nemožno z neho tieto situácie rozlíšiť.</p>
 
-<p>Zaujímavý je aj vzťah medzi dĺžkou dialyzačnej liečby a úmrtnosťou. Najpočetnejšiu skupinu tvorili pacienti liečení kratšie ako jeden rok (1 716 osôb), z ktorých počas roka zomrelo 192, teda 11,2 %. Najvyššia úmrtnosť bola v skupine liečenej 15 a viac rokov (14,7 %) a v skupine 6 až 10 rokov (14,6 %). Ani tieto podiely nie sú ročnou mortalitou v epidemiologickom zmysle: súčet pacientov vo všetkých skupinách (4 734) prevyšuje počet pacientov v PDL (4 352), pretože zahŕňa aj osoby dialyzované kratšie ako 90 dní, ktoré do PDL zaradené neboli.</p>
+<p>Zaujímavý je aj vzťah medzi dĺžkou dialyzačnej liečby a úmrtnosťou. Najpočetnejšiu skupinu tvorili pacienti liečení kratšie ako jeden rok (1&nbsp;716 osôb), z ktorých počas roka zomrelo 192, teda 11,2 %. Najvyššia úmrtnosť bola v skupine liečenej 15 a viac rokov (14,7 %) a v skupine 6 až 10&nbsp;rokov (14,6 %). Ani tieto podiely nie sú ročnou mortalitou v epidemiologickom zmysle: súčet pacientov vo všetkých skupinách (4&nbsp;734) prevyšuje počet pacientov v PDL (4&nbsp;352), pretože zahŕňa aj osoby dialyzované kratšie ako 90&nbsp;dní, ktoré do PDL zaradené neboli.</p>
 
 <p>Z celoštátneho počtu úmrtí napokon <strong>nemožno porovnávať kvalitu jednotlivých pracovísk</strong>. Takéto porovnanie vyžaduje zohľadniť vek, komorbidity, krehkosť, spôsob začatia dialýzy a ďalšie prognostické faktory.</p>
 
@@ -259,7 +259,7 @@ $articles[] = [
   <li>základná diagnóza je vykazovaná, nie overená biopsiou ani jednotnou klinickou definíciou,</li>
   <li>nie sú dostupné údaje o cievnych prístupoch, dialyzačnej dávke, konvekčnom objeme ani o reziduálnej funkcii obličiek,</li>
   <li>chýbajú údaje o plánovanom oproti neplánovanému začatiu liečby, o hospitalizáciách a o infekčných komplikáciách,</li>
-  <li>chýbajú údaje o počte žijúcich príjemcov štepu, takže nemožno vypočítať celkovú prevalenciu náhrady funkcie obličiek ani ju porovnať s európskym priemerom 1 074 pacientov na milión obyvateľov,</li>
+  <li>chýbajú údaje o počte žijúcich príjemcov štepu, takže nemožno vypočítať celkovú prevalenciu náhrady funkcie obličiek ani ju porovnať s európskym priemerom 1&nbsp;074 pacientov na milión obyvateľov,</li>
   <li>chýbajú údaje o kvalite života, o záťaži spojenej s dochádzaním a o preferenciách pacientov,</li>
   <li>návratnosť výkazov a počet vykazujúcich pracovísk sa medzi rokmi mení, čo ovplyvňuje porovnateľnosť.</li>
 </ul>

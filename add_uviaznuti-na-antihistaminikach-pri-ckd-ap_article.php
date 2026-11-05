@@ -30,7 +30,7 @@ $articles[] = [
 
 <h2>Prípad z praxe: silné svrbenie, ktoré nikto včas nezachytil</h2>
 
-<p>V dialyzačnom stredisku zachytili 62-ročného muža s polycystickým ochorením obličiek, ktorý bol približne 1 rok liečený hemodialýzou. Svrbenie bolo závažné a trvalo minimálne 3 mesiace, pričom pacient o ňom nikdy nehovoril ani zdravotníkom na vizitách.</p>
+<p>V dialyzačnom stredisku zachytili 62-ročného muža s polycystickým ochorením obličiek, ktorý bol približne 1 rok liečený hemodialýzou. Svrbenie bolo závažné a trvalo minimálne 3&nbsp;mesiace, pričom pacient o ňom nikdy nehovoril ani zdravotníkom na vizitách.</p>
 
 <p>Pri vyšetrení boli kožné lézie zjavne druhotné, typicky z následkov škrabania (exkoriácie, prurigo lézie). Po vylúčení iných príčin chronického pruritu sa potvrdilo CKD-aP. Intenzita svrbenia na škále WI-NRS bola 7/10, svrbenie výrazne znižovalo kvalitu života a sprevádzali ho nedostatok spánku, úzkosť a výrazná spoločenská izolácia. Antihistaminiká boli predtým nasadené, ale bez efektu.</p>
 
@@ -100,7 +100,7 @@ $articles[] = [
 <p>Z aktivity vyplývajú dve praktické posolstvá:</p>
 
 <ol>
-  <li><strong>CKD-aP treba aktívne vyhľadávať</strong>: podstatné je pýtať sa na svrbenie v pravidelných intervaloch (v dialýze typicky každé 3 mesiace), <strong>merať závažnosť</strong> a následne liečiť.</li>
+  <li><strong>CKD-aP treba aktívne vyhľadávať</strong>: podstatné je pýtať sa na svrbenie v pravidelných intervaloch (v dialýze typicky každé 3&nbsp;mesiace), <strong>merať závažnosť</strong> a následne liečiť.</li>
   <li>Ak má pacient CKD-aP, <strong>antihistaminiká často nemajú racionálne miesto ako prvá línia</strong>, lebo nezasahujú hlavnú cestu svrbenia. Namiesto nich treba siahnuť po liečbe cielenej na patofyziológiu.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ol>
 

@@ -2,7 +2,7 @@
 
 /**
  * add_mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek_article.php
- * MMP-2, MMP-9, toxicke prvky a CKD - taiwanska pripadovo-kontrolna studia
+ * MMP-2, MMP-9, toxicke prvky a CKD - taiwanska pripadovo-kontrolna štúdia
  * (Chen a spol., Ecotoxicol Environ Saf 2026;309:119529, doi 10.1016/j.ecoenv.2025.119529).
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -65,9 +65,9 @@ $articles[] = [
 
 <h2>Usporiadanie štúdie</h2>
 
-<p>Do štúdie uskutočnenej v dvoch nemocniciach v Tchaj-peji bolo zaradených <strong>215 pacientov s chronickou chorobou obličiek</strong> a <strong>389 kontrolných osôb</strong> zodpovedajúceho veku a pohlavia. Pacienti mali eGFR nižšiu ako 60 ml/min/1,73 m² počas viac ako troch mesiacov a nepotrebovali náhradu funkcie obličiek; eGFR sa vypočítala rovnicou MDRD. Kontrolnú skupinu tvorili osoby bez známej CKD s eGFR vyššou ako 60 ml/min/1,73 m².</p>
+<p>Do štúdie uskutočnenej v dvoch nemocniciach v Tchaj-peji bolo zaradených <strong>215 pacientov s chronickou chorobou obličiek</strong> a <strong>389 kontrolných osôb</strong> zodpovedajúceho veku a pohlavia. Pacienti mali eGFR nižšiu ako 60&nbsp;ml/min/1,73&nbsp;m² počas viac ako troch mesiacov a nepotrebovali náhradu funkcie obličiek; eGFR sa vypočítala rovnicou MDRD. Kontrolnú skupinu tvorili osoby bez známej CKD s eGFR vyššou ako 60&nbsp;ml/min/1,73&nbsp;m².</p>
 
-<p>Takáto definícia kontrol nie je postačujúca na vylúčenie chronickej choroby obličiek. Osoba s eGFR od 60 do 89 ml/min/1,73 m² môže mať CKD, ak sú prítomné albuminúria, štruktúrne poškodenie alebo iné markery trvajúce najmenej tri mesiace. <strong>Bez údajov o albuminúrii je možná nesprávna klasifikácia časti kontrol</strong> – čo by systematicky zväčšovalo pozorované rozdiely.</p>
+<p>Takáto definícia kontrol nie je postačujúca na vylúčenie chronickej choroby obličiek. Osoba s eGFR od 60 do 89&nbsp;ml/min/1,73&nbsp;m² môže mať CKD, ak sú prítomné albuminúria, štruktúrne poškodenie alebo iné markery trvajúce najmenej tri mesiace. <strong>Bez údajov o albuminúrii je možná nesprávna klasifikácia časti kontrol</strong> – čo by systematicky zväčšovalo pozorované rozdiely.</p>
 
 <h3>Laboratórne metódy</h3>
 
@@ -182,7 +182,7 @@ $articles[] = [
   <li><strong>Emily C. Moody, Steven G. Coca, Alison P. Sanders.</strong> <em>Toxic Metals and Chronic Kidney Disease: a Systematic Review of Recent Literature.</em> Current Environmental Health Reports. 2018;5(4):453–463. <a href="https://doi.org/10.1007/s40572-018-0212-1" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 215 pacientov s CKD a 389 vekovo a pohlavím zodpovedajúcich kontrol, upravený pomer šancí 12,45 (6,04 – 25,66) pre MMP-2 a 3,77 (2,14 – 6,66) pre MMP-9, absencia asociácie genotypov MMP2 a MMP9 s CKD, aditívne interakcie medzi vysokou MMP-2 a vyšším močovým arzénom, kadmiom, olovom alebo MMP-9 a nízkym selénom, ako aj multiplikatívna interakcia medzi MMP-2 a olovom – boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; mená autorov sa v origináli uvádzajú so spojovníkmi (Hsi-Hsien Chen a podobne). Údaj, že pomery šancí porovnávajú najvyšší a najnižší tercil, ako aj podrobnosti o laboratórnych metódach a asociáciách s pohlavím, diabetom, hypertenziou či užívaním analgetík pochádzajú z plného textu, ktorý <strong>nebol nezávisle sprístupnený</strong>. Práca sama výslovne definuje súhrnný pojem „kovy“ ako kovy a polokovy – pripomienka k terminológii sa preto týka jej prekladu do slovenčiny, nie nepresnosti originálu. Argument, že absencia genetického signálu podporuje výklad zvýšených MMP ako sprievodného javu, a komentáre k spätnej kauzalite a ku korekcii na močový kreatinín sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 215 pacientov s CKD a 389 vekovo a pohlavím zodpovedajúcich kontrol, upravený pomer šancí 12,45 (6,04 – 25,66) pre MMP-2 a 3,77 (2,14 – 6,66) pre MMP-9, absencia asociácie genotypov MMP2 a MMP9&nbsp;s CKD, aditívne interakcie medzi vysokou MMP-2 a vyšším močovým arzénom, kadmiom, olovom alebo MMP-9 a nízkym selénom, ako aj multiplikatívna interakcia medzi MMP-2 a olovom – boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; mená autorov sa v origináli uvádzajú so spojovníkmi (Hsi-Hsien Chen a podobne). Údaj, že pomery šancí porovnávajú najvyšší a najnižší tercil, ako aj podrobnosti o laboratórnych metódach a asociáciách s pohlavím, diabetom, hypertenziou či užívaním analgetík pochádzajú z plného textu, ktorý <strong>nebol nezávisle sprístupnený</strong>. Práca sama výslovne definuje súhrnný pojem „kovy“ ako kovy a polokovy – pripomienka k terminológii sa preto týka jej prekladu do slovenčiny, nie nepresnosti originálu. Argument, že absencia genetického signálu podporuje výklad zvýšených MMP ako sprievodného javu, a komentáre k spätnej kauzalite a ku korekcii na močový kreatinín sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

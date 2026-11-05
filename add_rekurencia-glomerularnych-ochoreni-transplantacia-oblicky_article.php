@@ -110,7 +110,7 @@ $articles[] = [
 
 <h4>Štúdia NOBLE: prvé priame údaje z transplantovanej populácie</h4>
 
-<p>Priamo transplantačnej populácii sa venovala štúdia <strong>NOBLE</strong> (NCT04572854) – prospektívna, multicentrická, otvorená randomizovaná štúdia fázy 2 s pegcetakoplanom u pacientov s rekurentnou C3 glomerulopatiou alebo primárnou imunokomplexovo sprostredkovanou membranoproliferatívnou glomerulonefritídou po transplantácii. Primárnym ukazovateľom bolo zníženie farbenia na C3c v biopsii štepu v 12. týždni. Do 12. týždňa dostalo <strong>10 pacientov pegcetakoplan</strong> (1 080 mg subkutánne dvakrát týždenne spolu so štandardnou starostlivosťou) a <strong>3 pacienti iba štandardnú starostlivosť</strong>. [3]</p>
+<p>Priamo transplantačnej populácii sa venovala štúdia <strong>NOBLE</strong> (NCT04572854) – prospektívna, multicentrická, otvorená randomizovaná štúdia fázy 2&nbsp;s pegcetakoplanom u pacientov s rekurentnou C3 glomerulopatiou alebo primárnou imunokomplexovo sprostredkovanou membranoproliferatívnou glomerulonefritídou po transplantácii. Primárnym ukazovateľom bolo zníženie farbenia na C3c v biopsii štepu v 12. týždni. Do 12. týždňa dostalo <strong>10 pacientov pegcetakoplan</strong> (1&nbsp;080&nbsp;mg subkutánne dvakrát týždenne spolu so štandardnou starostlivosťou) a <strong>3 pacienti iba štandardnú starostlivosť</strong>. [3]</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky štúdie NOBLE v 12. týždni" tabindex="0">
 <table>
@@ -138,7 +138,7 @@ $articles[] = [
       <td>–</td>
     </tr>
     <tr>
-      <th scope="row">Proteinúria pri vstupnom uPCR ≥ 1 000 mg/g</th>
+      <th scope="row">Proteinúria pri vstupnom uPCR ≥ 1&nbsp;000&nbsp;mg/g</th>
       <td>medián poklesu 54,4 %</td>
       <td>–</td>
     </tr>
@@ -153,7 +153,7 @@ $articles[] = [
 
 <p>Pegcetakoplan bol dobre tolerovaný, väčšina nežiaducich udalostí bola mierna až stredne závažná a nezaznamenalo sa žiadne prerušenie liečby, vysadenie ani úmrtie. [3]</p>
 
-<p>Pri interpretácii treba zachovať mieru. Ide o <strong>štúdiu fázy 2 s trinástimi pacientmi</strong>, otvoreným dizajnom a <strong>histologickým náhradným ukazovateľom</strong> v 12. týždni. Z takého dizajnu nemožno odvodiť vplyv na dlhodobé prežívanie štepu ani optimálny čas začatia liečby. Výsledky sú povzbudivé a prvýkrát pochádzajú priamo z transplantovanej populácie, nedokazujú však účinok na tvrdé klinické ukazovatele.</p>
+<p>Pri interpretácii treba zachovať mieru. Ide o <strong>štúdiu fázy 2&nbsp;s trinástimi pacientmi</strong>, otvoreným dizajnom a <strong>histologickým náhradným ukazovateľom</strong> v 12. týždni. Z takého dizajnu nemožno odvodiť vplyv na dlhodobé prežívanie štepu ani optimálny čas začatia liečby. Výsledky sú povzbudivé a prvýkrát pochádzajú priamo z transplantovanej populácie, nedokazujú však účinok na tvrdé klinické ukazovatele.</p>
 
 <p>Pri indikácii inhibície komplementu treba osobitne riešiť riziko závažných infekcií, vakcináciu a podľa konkrétneho prípravku aj antimikrobiálnu profylaxiu. U transplantovaného pacienta sa tieto riziká pripočítavajú k účinku udržiavacej imunosupresie. Klinické výsledky štúdie, registrovaná indikácia, dostupnosť a úhrada lieku sú štyri odlišné otázky – pred použitím treba overiť aktuálny súhrn charakteristických vlastností lieku a miestne podmienky.</p>
 
@@ -169,7 +169,7 @@ $articles[] = [
 
 <p>Primárna FSGS môže recidivovať veľmi skoro po transplantácii, často náhlym vznikom výraznej proteinúrie. V počiatočnej biopsii ešte nemusí byť prítomná segmentálna skleróza – elektrónová mikroskopia však môže ukázať rozsiahle splývanie výbežkov podocytov.</p>
 
-<p>Odborný prehľad odporúča u rizikových pacientov <strong>každodennú kvantifikáciu proteinúrie počas prvých 1 až 2 týždňov</strong> po transplantácii, s následným postupným predlžovaním intervalov. [2] Ide o praktické expertné odporúčanie, nie o režim overený randomizovanou štúdiou.</p>
+<p>Odborný prehľad odporúča u rizikových pacientov <strong>každodennú kvantifikáciu proteinúrie počas prvých 1 až 2&nbsp;týždňov</strong> po transplantácii, s následným postupným predlžovaním intervalov. [2] Ide o praktické expertné odporúčanie, nie o režim overený randomizovanou štúdiou.</p>
 
 <h3>Liečba zostáva prevažne empirická</h3>
 
@@ -266,7 +266,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Zásadné obmedzenie liečby</th>
-      <td>Priame dôkazy len z malej štúdie fázy 2 s náhradným ukazovateľom</td>
+      <td>Priame dôkazy len z malej štúdie fázy 2&nbsp;s náhradným ukazovateľom</td>
       <td>Prevažne observačné údaje; profylaxia sa neodporúča</td>
       <td>Obmedzené priame dôkazy pre špecifickú liečbu v štepe</td>
     </tr>
@@ -282,7 +282,7 @@ $articles[] = [
 
 <h2>Limity</h2>
 
-<p>Článok zhŕňa prehľadové a expertné odporúčania, nie výsledky veľkých randomizovaných štúdií. Uvádzané frekvencie rekurencie pochádzajú z observačných súborov s rozdielnou biopsickou praxou a dĺžkou sledovania; nejde o individuálne riziko konkrétneho pacienta. Údaj o nulovej rekurencii u pacientov s FSGS bez nefrotického syndrómu sa opiera o 22 pacientov. Priame údaje o inhibícii komplementu v transplantovanej populácii pochádzajú z jednej otvorenej štúdie fázy 2 s trinástimi pacientmi a histologickým náhradným ukazovateľom. Odporúčania týkajúce sa monitorovania proteinúrie majú charakter expertného konsenzu.</p>
+<p>Článok zhŕňa prehľadové a expertné odporúčania, nie výsledky veľkých randomizovaných štúdií. Uvádzané frekvencie rekurencie pochádzajú z observačných súborov s rozdielnou biopsickou praxou a dĺžkou sledovania; nejde o individuálne riziko konkrétneho pacienta. Údaj o nulovej rekurencii u pacientov s FSGS bez nefrotického syndrómu sa opiera o 22 pacientov. Priame údaje o inhibícii komplementu v transplantovanej populácii pochádzajú z jednej otvorenej štúdie fázy 2&nbsp;s trinástimi pacientmi a histologickým náhradným ukazovateľom. Odporúčania týkajúce sa monitorovania proteinúrie majú charakter expertného konsenzu.</p>
 
 <hr>
 
@@ -290,7 +290,7 @@ $articles[] = [
 
 <h2>Literatúra</h2>
 
-<p><em>1. Rupprecht H, Müller-Deile J, Seikrit C. Rekurrenz der Grundkrankheit nach Transplantation. NephroLIVE, streamed-up.com; vedecké vedenie Mario Schiffer (Universitätsklinikum Erlangen). Program v trvaní 89 minút: C3 glomerulonefritída (H. Rupprecht, Klinikum Bayreuth), FSGS (J. Müller-Deile, Universitätsklinikum Erlangen), IgA nefropatia (C. Seikrit, Uniklinik RWTH Aachen). <a href="https://streamed-up.com/video/rekurrenz-der-grundkrankheit-nach-transplantation" target="_blank" rel="noopener noreferrer">Verejná stránka vzdelávacieho programu</a>. Mená prednášajúcich, ich pracoviská, vedecké vedenie aj členenie programu boli overené na verejne dostupnej stránke; zdrojom bola anotácia a program, nie obsah videa.</em></p>
+<p><em>1. Rupprecht H, Müller-Deile J, Seikrit C. Rekurrenz der Grundkrankheit nach Transplantation. NephroLIVE, streamed-up.com; vedecké vedenie Mario Schiffer (Universitätsklinikum Erlangen). Program v trvaní 89&nbsp;minút: C3 glomerulonefritída (H. Rupprecht, Klinikum Bayreuth), FSGS (J. Müller-Deile, Universitätsklinikum Erlangen), IgA nefropatia (C. Seikrit, Uniklinik RWTH Aachen). <a href="https://streamed-up.com/video/rekurrenz-der-grundkrankheit-nach-transplantation" target="_blank" rel="noopener noreferrer">Verejná stránka vzdelávacieho programu</a>. Mená prednášajúcich, ich pracoviská, vedecké vedenie aj členenie programu boli overené na verejne dostupnej stránke; zdrojom bola anotácia a program, nie obsah videa.</em></p>
 
 <p><em>2. Uffing A, Hullekes F, Riella LV, Hogan JJ. Recurrent Glomerular Disease after Kidney Transplantation: Diagnostic and Management Dilemmas. Clinical Journal of the American Society of Nephrology. 2021;16(11):1730–1742. <a href="https://doi.org/10.2215/CJN.00280121" target="_blank" rel="noopener noreferrer">DOI: 10.2215/CJN.00280121</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/34686531/" target="_blank" rel="noopener noreferrer">PubMed, PMID 34686531</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8729409/" target="_blank" rel="noopener noreferrer">voľne dostupný plný text</a>.</em></p>
 

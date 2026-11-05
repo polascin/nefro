@@ -57,11 +57,11 @@ $articles[] = [
 
 <h2>Otázka 2: Koľko proteínu sa odporúča a ako sa mení situácia pri GLP-1?</h2>
 
-<p>Pre dospelých článok uvádza orientačne približne <strong>1,2 až 1,6 g proteínu na kilogram telesnej hmotnosti denne</strong>.</p>
+<p>Pre dospelých článok uvádza orientačne približne <strong>1,2 až 1,6&nbsp;g proteínu na kilogram telesnej hmotnosti denne</strong>.</p>
 
-<p>Medscape to ilustruje aj príkladom: pri 82 kg ide približne o 100 až 130 g denne.</p>
+<p>Medscape to ilustruje aj príkladom: pri 82&nbsp;kg ide približne o 100 až 130&nbsp;g denne.</p>
 
-<p>Pri liečbe GLP-1 sa však situácia mení: pacienti majú znížený apetít a často klesá aj príjem potravy vrátane bielkovín. Podľa článku sa preto v praxi často mieri na <strong>nižší denný cieľ okolo 1 až 1,2 g/kg/deň</strong>, pričom zachovanie svalovej hmoty sa dosahuje najmä kombináciou bielkovín a odporového tréningu (proteín je „druhý v poradí“ za tréningom).</p>
+<p>Pri liečbe GLP-1 sa však situácia mení: pacienti majú znížený apetít a často klesá aj príjem potravy vrátane bielkovín. Podľa článku sa preto v praxi často mieri na <strong>nižší denný cieľ okolo 1 až 1,2&nbsp;g/kg/deň</strong>, pričom zachovanie svalovej hmoty sa dosahuje najmä kombináciou bielkovín a odporového tréningu (proteín je „druhý v poradí“ za tréningom).</p>
 
 <h2>Otázka 3: Aký proteín a ktorý kreatín vybrať</h2>
 
@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Podľa článku vyššie jednorazové množstvá nie sú automaticky „plytvaním“. Celkový denný príjem a kvalita proteínu majú dôležitejšiu úlohu než to, či je proteín rozdelený do jedného alebo viacerých jedál.</p>
 
-<p>Na stimuláciu syntézy bielkovín podľa článku orientačne stačí približne 20 g v jednom jedle u mladších dospelých a okolo 30 g u starších; vyššie hodnoty (napr. 40 g) môžu syntézu maximalizovať pre väčšinu ľudí.</p>
+<p>Na stimuláciu syntézy bielkovín podľa článku orientačne stačí približne 20&nbsp;g v jednom jedle u mladších dospelých a okolo 30&nbsp;g u starších; vyššie hodnoty (napr. 40&nbsp;g) môžu syntézu maximalizovať pre väčšinu ľudí.</p>
 
 <h2>Otázka 5: Majú zmysel doplnky bez tréningu?</h2>
 

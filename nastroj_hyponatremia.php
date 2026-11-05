@@ -125,8 +125,8 @@ $baseUrl = "https://nefro.polascin.net/";
                         </tbody>
                     </table>
                     <div class="info-box-green">
-                        <strong>Limity korekcie (ODS):</strong> spravidla neprekročiť ~8 až 10 mmol/l za 24 h
-                        (pri vysokom riziku ≤ 6 až 8 mmol/l/24 h). Rizikoví: chronická hyponatrémia, alkoholizmus,
+                        <strong>Limity korekcie (ODS):</strong> spravidla neprekročiť ~8 až 10 mmol/l za 24 h
+                        (pri vysokom riziku ≤ 6 až 8 mmol/l/24 h). Rizikoví: chronická hyponatrémia, alkoholizmus,
                         malnutrícia, hypokaliémia, choroba pečene. Na plánovanie korekcie využite kalkulačku
                         porúch sodíka (Adrogue-Madias).
                     </div>

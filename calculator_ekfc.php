@@ -67,12 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = 'Vyberte pohlavie (vstupuje do hodnoty Q pre kreatinín).';
         }
 
-        // EKFC je validovaná od 2 rokov — na rozdiel od CKD-EPI (len ≥ 18 r.)
+        // EKFC je validovaná od 2 rokov — na rozdiel od CKD-EPI (len ≥ 18 r.)
         $ageYears = filter_var($form['age_years'], FILTER_VALIDATE_INT, [
             'options' => ['min_range' => 2, 'max_range' => 120],
         ]);
         if ($ageYears === false) {
-            $errors[] = 'Vek musí byť celé číslo v intervale 2 až 120 rokov.';
+            $errors[] = 'Vek musí byť celé číslo v intervale 2 až 120 rokov.';
         }
 
         $creatinineValue = null;
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($cystatinValue === null) {
                 $errors[] = 'Cystatín C musí byť kladné číslo (mg/L).';
             } elseif ($cystatinValue < 0.3 || $cystatinValue > 10.0) {
-                $errors[] = 'Cystatín C mimo očakávaného rozsahu (0,3 – 10 mg/L).';
+                $errors[] = 'Cystatín C mimo očakávaného rozsahu (0,3 – 10 mg/L).';
             }
         }
 
@@ -266,7 +266,7 @@ function ekfcModeLabel(string $mode): string
   $pageTitle = 'eGFR podľa EKFC (full age spectrum) | Kalkulačky | Nefro-projekt Slovensko';
   $canonicalUrl = 'https://nefro.polascin.net/calculator_ekfc.php';
   $seoDescription =
-      'Kalkulačka eGFR podľa rovnice EKFC (European Kidney Function Consortium) z kreatinínu, cystatínu C alebo kombinovane. Jediná rovnica pre vek 2 – 120 rokov, bez rasového koeficientu, s reškálovaním na Q hodnotu. Pre lekárov na Slovensku.';
+      'Kalkulačka eGFR podľa rovnice EKFC (European Kidney Function Consortium) z kreatinínu, cystatínu C alebo kombinovane. Jediná rovnica pre vek 2 – 120 rokov, bez rasového koeficientu, s reškálovaním na Q hodnotu. Pre lekárov na Slovensku.';
   $baseUrl = 'https://nefro.polascin.net/';
   $structuredData = [
       [
@@ -303,7 +303,7 @@ function ekfcModeLabel(string $mode): string
 
     <?php
     $headerTitle = 'Kalkulačka eGFR: EKFC';
-    $headerIntro = 'European Kidney Function Consortium, vek 2 – 120 rokov';
+    $headerIntro = 'European Kidney Function Consortium, vek 2 – 120 rokov';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -319,9 +319,9 @@ function ekfcModeLabel(string $mode): string
                 <div class="info-box">
                     <strong>Kedy použiť EKFC:</strong> rovnica pracuje s reškálovaným biomarkerom
                     (pomer k mediánu normy Q), preto <em>nepotrebuje rasový koeficient</em> a platí
-                    plynulo pre celé vekové spektrum od 2 rokov, bez skoku pri prechode
+                    plynulo pre celé vekové spektrum od 2 rokov, bez skoku pri prechode
                     z pediatrickej do dospelej nefrológie. V hornom pásme filtrácie
-                    (&gt; 60 ml/min/1,73 m²) je spravidla presnejšia než CKD-EPI 2021, ktorá tam
+                    (&gt; 60 ml/min/1,73 m²) je spravidla presnejšia než CKD-EPI 2021, ktorá tam
                     GFR systematicky nadhodnocuje; to mení zaradenie do štádia CKD aj dávkovanie
                     liekov. Kombinovaná verzia (kreatinín + cystatín C) má najmenšie skreslenie.
                 </div>
@@ -331,7 +331,7 @@ function ekfcModeLabel(string $mode): string
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{eGFR} = 107{,}3 \times \left(\frac{\text{biomarker}}{Q}\right)^{\alpha} \times \begin{cases} 1 & \text{vek} \le 40 \\ 0{,}990^{(\text{vek}-40)} & \text{vek} > 40 \end{cases} \]</div>
                         <div class="calc-formula-line">\[ \alpha = \begin{cases} -0{,}322 & \text{ak } \text{biomarker}/Q < 1 \\ -1{,}132 & \text{ak } \text{biomarker}/Q \ge 1 \end{cases} \]</div>
-                        <div class="calc-formula-line"><strong>Q pre kreatinín</strong> (µmol/L), vek 2 – 25 rokov:</div>
+                        <div class="calc-formula-line"><strong>Q pre kreatinín</strong> (µmol/L), vek 2 – 25 rokov:</div>
                         <div class="calc-formula-line">\[ \ln Q_{\text{muž}} = 3{,}200 + 0{,}259\,A - 0{,}543\ln A - 0{,}00763\,A^2 + 0{,}0000790\,A^3 \]</div>
                         <div class="calc-formula-line">\[ \ln Q_{\text{žena}} = 3{,}080 + 0{,}177\,A - 0{,}223\ln A - 0{,}00596\,A^2 + 0{,}0000686\,A^3 \]</div>
                         <div class="calc-formula-line">\[ \text{vek} > 25\ \text{r.:}\quad Q = 80\ \mu\text{mol/L (muž)},\ 62\ \mu\text{mol/L (žena)} \]</div>
@@ -400,7 +400,7 @@ function ekfcModeLabel(string $mode): string
                             <div class="form-group">
                                 <label for="age_years">Vek (roky)</label>
                                 <input type="number" id="age_years" name="age_years" min="2" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>" placeholder="automaticky z dát. nar. / RČ">
-                                <small class="form-hint">EKFC je validovaná od 2 rokov (full age spectrum).</small>
+                                <small class="form-hint">EKFC je validovaná od 2 rokov (full age spectrum).</small>
                             </div>
                             <div class="form-group" data-ekfc-need="cr">
                                 <label for="creatinine_value">S-kreatinín</label>
@@ -436,8 +436,8 @@ function ekfcModeLabel(string $mode): string
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float) $calculated['egfr'], 1, ',', ' ')) ?></span>
-                                <span class="calc-result-unit">ml/min/1,73 m²</span>
-                                <span class="calc-result-unit">= <?= htmlspecialchars(number_format((float) $calculated['egfr'] / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ')) ?> ml/s/1,73 m²</span>
+                                <span class="calc-result-unit">ml/min/1,73 m²</span>
+                                <span class="calc-result-unit">= <?= htmlspecialchars(number_format((float) $calculated['egfr'] / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ')) ?> ml/s/1,73 m²</span>
                             </div>
                             <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
                                 <?= htmlspecialchars($calculated['g_category']) ?>
@@ -460,7 +460,7 @@ function ekfcModeLabel(string $mode): string
                                 $gap = abs((float) $calculated['egfr_cr'] - (float) $calculated['egfr_cys']);
                                 if ($gap >= 20.0):
                                 ?>
-                                    <br><em>Rozdiel medzi biomarkermi je <?= htmlspecialchars(number_format($gap, 1, ',', ' ')) ?> ml/min/1,73 m².
+                                    <br><em>Rozdiel medzi biomarkermi je <?= htmlspecialchars(number_format($gap, 1, ',', ' ')) ?> ml/min/1,73 m².
                                     Zvážte vplyv svalovej masy (sarkopénia, amputácia, kulturistika) na kreatinín alebo vplyv
                                     tyreopatie, kortikoidov, zápalu a obezity na cystatín C; pri rozhodovaní s veľkými dôsledkami
                                     uvažujte o meranej GFR.</em>
@@ -482,7 +482,7 @@ function ekfcModeLabel(string $mode): string
                                         <strong>2. Q pre kreatinín</strong>
                                         (<?= $calculated['q_source'] === 'plateau'
                                             ? 'plateau dospelého veku'
-                                            : 'polynóm pre vek 2 – 25 rokov' ?>,
+                                            : 'polynóm pre vek 2 – 25 rokov' ?>,
                                         <?= $calculated['sex'] === 'female' ? 'žena' : 'muž' ?>,
                                         <?= (int) $calculated['age_years'] ?> r.):
                                         <?= htmlspecialchars(number_format((float) $calculated['q_cr_umol'], 2, ',', ' ')) ?> µmol/L
@@ -499,7 +499,7 @@ function ekfcModeLabel(string $mode): string
                                     <p>
                                         <strong>4. EKFC<sub>cr</sub></strong> = 107,3 × <?= htmlspecialchars(number_format((float) $calculated['ratio_cr'], 3, ',', ' ')) ?><sup><?= htmlspecialchars(number_format((float) $calculated['exponent_cr'], 3, ',', ' ')) ?></sup>
                                         × <?= htmlspecialchars(number_format((float) $calculated['age_factor'], 4, ',', ' ')) ?>
-                                        = <?= htmlspecialchars(number_format((float) $calculated['egfr_cr'], 1, ',', ' ')) ?> ml/min/1,73 m²
+                                        = <?= htmlspecialchars(number_format((float) $calculated['egfr_cr'], 1, ',', ' ')) ?> ml/min/1,73 m²
                                     </p>
                                 <?php endif; ?>
 
@@ -514,7 +514,7 @@ function ekfcModeLabel(string $mode): string
                                         <strong><?= $calculated['q_cr_umol'] !== null ? '6' : '2' ?>. EKFC<sub>cys</sub></strong>
                                         = 107,3 × <?= htmlspecialchars(number_format((float) $calculated['ratio_cys'], 3, ',', ' ')) ?><sup><?= htmlspecialchars(number_format((float) $calculated['exponent_cys'], 3, ',', ' ')) ?></sup>
                                         × <?= htmlspecialchars(number_format((float) $calculated['age_factor'], 4, ',', ' ')) ?>
-                                        = <?= htmlspecialchars(number_format((float) $calculated['egfr_cys'], 1, ',', ' ')) ?> ml/min/1,73 m²
+                                        = <?= htmlspecialchars(number_format((float) $calculated['egfr_cys'], 1, ',', ' ')) ?> ml/min/1,73 m²
                                     </p>
                                 <?php endif; ?>
 
@@ -522,7 +522,7 @@ function ekfcModeLabel(string $mode): string
                                     <strong>Veková korekcia:</strong>
                                     <?= (int) $calculated['age_years'] > 40
                                         ? '0,990<sup>(' . (int) $calculated['age_years'] . ' − 40)</sup> = ' . htmlspecialchars(number_format((float) $calculated['age_factor'], 4, ',', ' '))
-                                        : 'vek ≤ 40 rokov → bez korekcie (faktor 1,0)' ?>
+                                        : 'vek ≤ 40 rokov → bez korekcie (faktor 1,0)' ?>
                                 </p>
                             </div>
                         </details>
@@ -533,10 +533,10 @@ function ekfcModeLabel(string $mode): string
                         ?>
                             <p class="calc-result-detail">
                                 <strong>Porovnanie s CKD-EPI 2021 (kreatinín):</strong>
-                                <?= htmlspecialchars(number_format((float) $calculated['ckd_epi_2021'], 1, ',', ' ')) ?> ml/min/1,73 m²
+                                <?= htmlspecialchars(number_format((float) $calculated['ckd_epi_2021'], 1, ',', ' ')) ?> ml/min/1,73 m²
                                 (<?= htmlspecialchars($ckdEpiCat) ?>)
                                 &ensp;&bull;&ensp;rozdiel EKFC − CKD-EPI =
-                                <?= htmlspecialchars(($delta >= 0 ? '+' : '−') . number_format(abs($delta), 1, ',', ' ')) ?> ml/min/1,73 m²
+                                <?= htmlspecialchars(($delta >= 0 ? '+' : '−') . number_format(abs($delta), 1, ',', ' ')) ?> ml/min/1,73 m²
                                 <?php if ($ckdEpiCat !== $calculated['g_category']): ?>
                                     <br><em>Pozor: obe rovnice zaraďujú pacienta do <strong>odlišnej</strong> kategórie G
                                     (<?= htmlspecialchars($ckdEpiCat) ?> vs. <?= htmlspecialchars((string) $calculated['g_category']) ?>).
@@ -574,7 +574,7 @@ function ekfcModeLabel(string $mode): string
                     $egfrValue = (float) ($result['egfr'] ?? 0);
                     $category = (string) ($result['g_category'] ?? '');
                     $mode = (string) ($result['mode'] ?? '');
-                    echo htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) . ' ml/min/1,73 m²';
+                    echo htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) . ' ml/min/1,73 m²';
                     if ($category !== '') {
                         echo ' (' . htmlspecialchars($category) . ')';
                     }

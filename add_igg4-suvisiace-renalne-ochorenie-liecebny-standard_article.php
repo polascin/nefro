@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Dôkazová základňa pre rituximab pritom dlho stála na otvorenej pilotnej štúdii s 30 pacientmi: odpoveď nastala u 97 %, primárny ukazovateľ v šiestom mesiaci dosiahlo 23 účastníkov (77 %), úplnú remisiu malo v šiestom mesiaci 14 pacientov (47 %) a v dvanástom mesiaci ju udržalo 12 (40 %). Ide o presvedčivé čísla, ale bez kontrolnej skupiny.</p>
 
-<p>Zásadná zmena nastala v roku 2025. Randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3 <strong>MITIGATE</strong> hodnotila inebilizumab – protilátku, ktorá cieli a deplécuje CD19-pozitívne B bunky – u 135 dospelých s aktívnym IgG4-súvisiacim ochorením počas 52 týždňov. Obe skupiny dostávali rovnaké znižovanie dávky glukokortikoidov; súbežné imunosupresíva neboli povolené.</p>
+<p>Zásadná zmena nastala v roku 2025. Randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3 <strong>MITIGATE</strong> hodnotila inebilizumab – protilátku, ktorá cieli a deplécuje CD19-pozitívne B bunky – u 135 dospelých s aktívnym IgG4-súvisiacim ochorením počas 52&nbsp;týždňov. Obe skupiny dostávali rovnaké znižovanie dávky glukokortikoidov; súbežné imunosupresíva neboli povolené.</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky štúdie MITIGATE" tabindex="0">
 <table>

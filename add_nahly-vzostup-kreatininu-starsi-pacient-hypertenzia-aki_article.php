@@ -31,7 +31,7 @@ $articles[] = [
 
 <h2>Kedy ide o akútne poškodenie obličiek</h2>
 
-<p>Podľa finálneho odporúčania KDIGO sa AKI diagnostikuje pri splnení aspoň jedného z troch kritérií: vzostup sérového kreatinínu o najmenej 26,5 µmol/l počas 48 hodín, vzostup na najmenej 1,5-násobok východiskovej hodnoty počas predchádzajúcich siedmich dní alebo pokles diurézy pod 0,5 ml/kg/h počas najmenej šiestich hodín. Aktuálna verzia NICE NG148 používa rovnaký klinický rámec.</p>
+<p>Podľa finálneho odporúčania KDIGO sa AKI diagnostikuje pri splnení aspoň jedného z troch kritérií: vzostup sérového kreatinínu o najmenej 26,5 µmol/l počas 48&nbsp;hodín, vzostup na najmenej 1,5-násobok východiskovej hodnoty počas predchádzajúcich siedmich dní alebo pokles diurézy pod 0,5&nbsp;ml/kg/h počas najmenej šiestich hodín. Aktuálna verzia NICE NG148 používa rovnaký klinický rámec.</p>
 
 <div class="table-responsive" role="region" aria-label="Klasifikácia akútneho poškodenia obličiek podľa KDIGO" tabindex="0">
 <table>
@@ -46,17 +46,17 @@ $articles[] = [
     <tr>
       <th scope="row">1. stupeň</th>
       <td>1,5- až 1,9-násobok východiskovej hodnoty alebo vzostup o ≥ 26,5 µmol/l</td>
-      <td>&lt; 0,5 ml/kg/h počas 6 až 12 hodín</td>
+      <td>&lt; 0,5&nbsp;ml/kg/h počas 6 až 12&nbsp;hodín</td>
     </tr>
     <tr>
       <th scope="row">2. stupeň</th>
       <td>2,0- až 2,9-násobok východiskovej hodnoty</td>
-      <td>&lt; 0,5 ml/kg/h počas ≥ 12 hodín</td>
+      <td>&lt; 0,5&nbsp;ml/kg/h počas ≥ 12&nbsp;hodín</td>
     </tr>
     <tr>
       <th scope="row">3. stupeň</th>
       <td>≥ 3-násobok východiskovej hodnoty, akútny vzostup na ≥ 353,6 µmol/l alebo začatie náhrady funkcie obličiek</td>
-      <td>&lt; 0,3 ml/kg/h počas ≥ 24 hodín alebo anúria počas ≥ 12 hodín</td>
+      <td>&lt; 0,3&nbsp;ml/kg/h počas ≥ 24&nbsp;hodín alebo anúria počas ≥ 12&nbsp;hodín</td>
     </tr>
   </tbody>
 </table>
@@ -86,7 +86,7 @@ $articles[] = [
 
 <p>Vzostup kreatinínu po začatí alebo zvýšení dávky ACE inhibítora či sartanu neznamená automaticky trvalé ukončenie liečby ani automaticky nepotvrdzuje stenózu renálnych artérií. KDIGO 2024 odporúča skontrolovať tlak, kreatinín a draslík počas dvoch až štyroch týždňov po začatí alebo zvýšení dávky a pri vzostupe kreatinínu nad 30 % pátrať po AKI, objemovej deplécii, NSAID, nadmernej diuréze a podľa kontextu po stenóze renálnych artérií. Dočasné prerušenie môže byť potrebné pri hemodynamickej nestabilite, symptomatickej hypotenzii alebo nekontrolovanej hyperkaliémii, ale má byť spojené s plánom opätovného posúdenia a obnovenia indikovaných liekov.</p>
 
-<p>Pri jódovej kontrastnej látke treba používať pojem kontrastom asociované AKI a nepredpokladať automaticky príčinnú súvislosť. Riziko intravenózneho kontrastu sa historicky nadhodnocovalo; NICE v aktualizácii z roku 2024 uvádza malé, ale zvýšené riziko najmä pri eGFR &lt; 30 ml/min/1,73 m<sup>2</sup>. Klinicky potrebné urgentné kontrastné vyšetrenie sa nemá odkladať, ak by odklad predstavoval významnejšie riziko.</p>
+<p>Pri jódovej kontrastnej látke treba používať pojem kontrastom asociované AKI a nepredpokladať automaticky príčinnú súvislosť. Riziko intravenózneho kontrastu sa historicky nadhodnocovalo; NICE v aktualizácii z roku 2024 uvádza malé, ale zvýšené riziko najmä pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Klinicky potrebné urgentné kontrastné vyšetrenie sa nemá odkladať, ak by odklad predstavoval významnejšie riziko.</p>
 
 <h3>Obštrukcia odtoku moču</h3>
 
@@ -110,7 +110,7 @@ $articles[] = [
   <li><strong>Posúdiť objemový stav a perfúziu:</strong> príjem a straty tekutín, ortostatické príznaky, jugulárnu náplň, edémy, kongesciu a známky krvácania. Žiadny jednotlivý fyzikálny znak objemový stav spoľahlivo neurčí.</li>
   <li><strong>Urobiť úplnú liekovú rekonciliáciu:</strong> názov, dávka, dátum začatia alebo zmeny, NSAID zo samoliečby, nedávny kontrast a potenciálne nefrotoxické kombinácie.</li>
   <li><strong>Vyšetriť moč:</strong> testovací prúžok na krv, bielkovinu, leukocyty, nitrity a glukózu, následne močový sediment, pomer albumínu ku kreatinínu alebo bielkoviny ku kreatinínu a kultiváciu podľa indikácie.</li>
-  <li><strong>Vylúčiť retenciu a obštrukciu:</strong> cielená anamnéza dolných močových príznakov, palpácia mechúra, bladder scan a ultrasonografia podľa rizika. Pri neobjasnenej príčine AKI alebo riziku obštrukcie NICE odporúča ultrazvuk do 24 hodín; pri podozrení na pyonefrózu do šiestich hodín.</li>
+  <li><strong>Vylúčiť retenciu a obštrukciu:</strong> cielená anamnéza dolných močových príznakov, palpácia mechúra, bladder scan a ultrasonografia podľa rizika. Pri neobjasnenej príčine AKI alebo riziku obštrukcie NICE odporúča ultrazvuk do 24&nbsp;hodín; pri podozrení na pyonefrózu do šiestich hodín.</li>
   <li><strong>Doplniť cielené testy:</strong> krvný obraz, urea, sodík, draslík, chloridy, bikarbonát, vápnik a podľa situácie CRP, laktát, hemokultúry, kreatínkináza, hemolytické parametre, imunologické vyšetrenia alebo paraproteín.</li>
 </ol>
 
@@ -132,7 +132,7 @@ $articles[] = [
 
 <p>O potrebe urgentnej hospitalizácie alebo náhrady funkcie obličiek nerozhoduje izolované číslo kreatinínu. Bezodkladné nemocničné vyšetrenie vyžaduje najmä anúria, výrazná alebo progresívna oligúria, hemodynamická nestabilita, závažná hyperkaliémia, významná metabolická acidóza, pľúcny edém, refraktérne objemové preťaženie, uremická encefalopatia alebo perikarditída, sepsa, rýchla progresia či podozrenie na infikovanú alebo úplnú obštrukciu.</p>
 
-<p>Podľa NICE sa má nefrológ kontaktovať okamžite pri indikácii náhrady funkcie obličiek a čo najskôr, najneskôr do 24 hodín, pri AKI 3. stupňa, nejasnej príčine, nedostatočnej odpovedi na liečbu, komplikáciách, transplantovanej obličke, východiskovej CKD G4 až G5 alebo podozrení na ochorenie vyžadujúce špecializovanú liečbu.</p>
+<p>Podľa NICE sa má nefrológ kontaktovať okamžite pri indikácii náhrady funkcie obličiek a čo najskôr, najneskôr do 24&nbsp;hodín, pri AKI 3. stupňa, nejasnej príčine, nedostatočnej odpovedi na liečbu, komplikáciách, transplantovanej obličke, východiskovej CKD G4 až G5 alebo podozrení na ochorenie vyžadujúce špecializovanú liečbu.</p>
 
 <h2>Čo si z prípadu odniesť</h2>
 

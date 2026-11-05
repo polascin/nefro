@@ -40,7 +40,7 @@ $articles[] = [
 <p>Prehľad zhŕňa praktické body z plného textu článku (najmä z časti o liekoch na redukciu hmotnosti) so zameraním na:</p>
 
 <ul>
-  <li>čo treba zohľadniť pri <strong>GFR &lt; 30 ml/min/1,73 m²</strong>,</li>
+  <li>čo treba zohľadniť pri <strong>GFR &lt; 30&nbsp;ml/min/1,73&nbsp;m²</strong>,</li>
   <li>čo mení <strong>dialýza</strong> (odstránenie lieku),</li>
   <li>ako nastaviť <strong>titráciu a dávkovanie</strong>,</li>
   <li>na čo myslieť pri <strong>nežiaducich účinkoch a kontraindikáciách</strong>.</li>
@@ -71,13 +71,13 @@ $articles[] = [
 <p><strong>Dávkovanie:</strong></p>
 
 <ul>
-  <li>udržiavacia liečba: <strong>16 mg dvakrát denne v kombinácii so 180 mg bupropiónu</strong>,</li>
-  <li>začiatok: <strong>12,5 mg/deň</strong>, opatrne titrovať na <strong>25 mg/deň</strong>, prípadne v dvoch denných dávkach.</li>
+  <li>udržiavacia liečba: <strong>16&nbsp;mg dvakrát denne v kombinácii so 180&nbsp;mg bupropiónu</strong>,</li>
+  <li>začiatok: <strong>12,5&nbsp;mg/deň</strong>, opatrne titrovať na <strong>25&nbsp;mg/deň</strong>, prípadne v dvoch denných dávkach.</li>
 </ul>
 
 <p><strong>Nežiaduce účinky:</strong> nauzea, vracanie, hnačka, úzkosť.</p>
 
-<p><strong>Kľúčová bezpečnostná poznámka:</strong> pred začatím musí byť pacient <strong>bez opioidov 7 až 10 dní</strong> – inak hrozí vyvolanie abstinenčných (odvykacích) prejavov.</p>
+<p><strong>Kľúčová bezpečnostná poznámka:</strong> pred začatím musí byť pacient <strong>bez opioidov 7 až 10&nbsp;dní</strong> – inak hrozí vyvolanie abstinenčných (odvykacích) prejavov.</p>
 
 <p>Pri ESKD preto netreba riešiť „doplnkovú dávku po dialýze“, liek sa dialýzou neodstraňuje.</p>
 
@@ -87,14 +87,14 @@ $articles[] = [
 
 <ul>
   <li>približne <strong>60 až 70 % sa vylučuje močom</strong>,</li>
-  <li><strong>clearance je približne polovičná pri GFR &lt; 30 ml/min</strong>,</li>
+  <li><strong>clearance je približne polovičná pri GFR &lt; 30&nbsp;ml/min</strong>,</li>
   <li><strong>dialýza odstráni približne 50 %</strong> dávky, preto sa <strong>dávka má podať po dialýze</strong>.</li>
 </ul>
 
 <p><strong>Dávkovanie:</strong></p>
 
 <ul>
-  <li>monoterapia – udržiavanie: <strong>50 až 100 mg denne</strong>, počiatočne: <strong>25 mg každý druhý deň</strong>; udržiavanie v režime s obmedzením: <strong>50 mg každý druhý deň</strong>,</li>
+  <li>monoterapia – udržiavanie: <strong>50 až 100&nbsp;mg denne</strong>, počiatočne: <strong>25&nbsp;mg každý druhý deň</strong>; udržiavanie v režime s obmedzením: <strong>50&nbsp;mg každý druhý deň</strong>,</li>
   <li>topiramát je schválený na liečbu epilepsie a prevenciu migrény; jeho samostatné použitie na redukciu hmotnosti je mimo schválenej indikácie (off-label). V USA je na chronický manažment hmotnosti schválená fixná kombinácia fentermínu s topiramátom, nie topiramát samotný.</li>
 </ul>
 
@@ -104,21 +104,21 @@ $articles[] = [
 
 <p>U dialyzovaných pacientov je topiramát „dialyzačne citlivý“, preto k bezpečnému režimu patrí načasovanie dávky a prípadné doplnenie po dialýze.</p>
 
-<h2>Bupropión: úprava dávky pri GFR &lt; 30 ml/min</h2>
+<h2>Bupropión: úprava dávky pri GFR &lt; 30&nbsp;ml/min</h2>
 
 <p>Perorálny bupropión inhibuje spätné vychytávanie noradrenalínu a dopamínu. Z hľadiska obličiek je dôležité, že:</p>
 
 <ul>
   <li>primárne sa metabolizuje v pečeni cez <strong>CYP2B6</strong> na aktívne metabolity,</li>
   <li><strong>renálna clearance má významnú úlohu</strong> pri exkrécii metabolitov,</li>
-  <li>preto sa pri <strong>GFR &lt; 30 ml/min/1,73 m²</strong> odporúčajú <strong>úpravy dávky</strong> a začatie liečby nižšími dávkami.</li>
+  <li>preto sa pri <strong>GFR &lt; 30&nbsp;ml/min/1,73&nbsp;m²</strong> odporúčajú <strong>úpravy dávky</strong> a začatie liečby nižšími dávkami.</li>
 </ul>
 
 <p><strong>Dávkovanie:</strong></p>
 
 <ul>
-  <li>forma s okamžitým uvoľňovaním (IR) – začiatok: <strong>75 mg 1× denne</strong>,</li>
-  <li>forma s predĺženým uvoľňovaním (ER) – začiatok: <strong>150 mg každý druhý deň</strong> alebo <strong>1× denne</strong>.</li>
+  <li>forma s okamžitým uvoľňovaním (IR) – začiatok: <strong>75&nbsp;mg 1× denne</strong>,</li>
+  <li>forma s predĺženým uvoľňovaním (ER) – začiatok: <strong>150&nbsp;mg každý druhý deň</strong> alebo <strong>1× denne</strong>.</li>
 </ul>
 
 <p><strong>Nežiaduce účinky:</strong> nespavosť, bolesť hlavy, sucho v ústach, nauzea, agitácia alebo úzkosť.</p>
@@ -143,7 +143,7 @@ $articles[] = [
   <li>preto <strong>nie je potrebná úprava dávky</strong> a liek je <strong>bezpečný pri ESKD</strong>.</li>
 </ul>
 
-<p><strong>Dávkovanie:</strong> <strong>60 až 120 mg 3× denne</strong> s jedlami obsahujúcimi tuk.</p>
+<p><strong>Dávkovanie:</strong> <strong>60 až 120&nbsp;mg 3× denne</strong> s jedlami obsahujúcimi tuk.</p>
 
 <p><strong>Nežiaduce účinky a riziká:</strong></p>
 
@@ -169,7 +169,7 @@ $articles[] = [
 
 <h3>Liraglutid</h3>
 
-<p><strong>Dávkovanie a titrácia:</strong> postupné navyšovanie na <strong>3,0 mg/deň</strong> na redukciu hmotnosti; pri dialýze sa odporúča <strong>obozretne začať a monitorovať gastrointestinálnu toleranciu</strong> (údaje pri dialýze sú obmedzené).</p>
+<p><strong>Dávkovanie a titrácia:</strong> postupné navyšovanie na <strong>3,0&nbsp;mg/deň</strong> na redukciu hmotnosti; pri dialýze sa odporúča <strong>obozretne začať a monitorovať gastrointestinálnu toleranciu</strong> (údaje pri dialýze sú obmedzené).</p>
 
 <p><strong>Nežiaduce účinky:</strong> nauzea, vracanie, pankreatitída, cholelitiáza.</p>
 
@@ -177,7 +177,7 @@ $articles[] = [
 
 <h3>Semaglutid</h3>
 
-<p><strong>Dávkovanie:</strong> postupné navyšovanie na <strong>2,4 mg/týždeň</strong> na redukciu hmotnosti; pri dialýze sa <strong>odporúčajú nižšie dávky</strong> (obmedzené dáta). Uvádzaný titračný rámec: postupné navyšovanie na <strong>2 až 2,4 mg/týždeň</strong>, ak sa znáša.</p>
+<p><strong>Dávkovanie:</strong> postupné navyšovanie na <strong>2,4&nbsp;mg/týždeň</strong> na redukciu hmotnosti; pri dialýze sa <strong>odporúčajú nižšie dávky</strong> (obmedzené dáta). Uvádzaný titračný rámec: postupné navyšovanie na <strong>2 až 2,4&nbsp;mg/týždeň</strong>, ak sa znáša.</p>
 
 <p><strong>Nežiaduce účinky:</strong> nauzea, vracanie, hnačka, zriedkavo pankreatitída, zhoršenie diabetickej retinopatie.</p>
 
@@ -192,7 +192,7 @@ $articles[] = [
   <li><strong>bez závislosti od obličiek</strong> pri eliminácii.</li>
 </ul>
 
-<p><strong>Dávkovanie:</strong> postupné navyšovanie na maximum <strong>15 mg/týždeň</strong>; pre ESKD nie je špecifické schválenie, preto sa uvádza praktický rámec <strong>začať 2,5 mg/týždeň a titrovať podľa tolerancie</strong>.</p>
+<p><strong>Dávkovanie:</strong> postupné navyšovanie na maximum <strong>15&nbsp;mg/týždeň</strong>; pre ESKD nie je špecifické schválenie, preto sa uvádza praktický rámec <strong>začať 2,5&nbsp;mg/týždeň a titrovať podľa tolerancie</strong>.</p>
 
 <p><strong>Nežiaduce účinky:</strong> nauzea, vracanie, hnačka, zápcha, zriedkavo pankreatitída, cholelitiáza.</p>
 
@@ -205,7 +205,7 @@ $articles[] = [
 <h2>Praktický kontrolný zoznam pred začiatkom liečby</h2>
 
 <ol>
-  <li><strong>Aké je GFR?</strong> Pri GFR &lt; 30 ml/min/1,73 m² materiál explicitne upozorňuje na úpravu bupropiónu a zníženú clearance topiramátu.</li>
+  <li><strong>Aké je GFR?</strong> Pri GFR &lt; 30&nbsp;ml/min/1,73&nbsp;m² materiál explicitne upozorňuje na úpravu bupropiónu a zníženú clearance topiramátu.</li>
   <li><strong>Je pacient na dialýze?</strong> Topiramát: dialýza odstráni približne 50 %, po dialýze dávku doplniť. Naltrexón: dialýzou sa neodstraňuje.</li>
   <li><strong>Je prítomné riziko záchvatov alebo porúch elektrolytov?</strong> Pri bupropióne je to priamo uvedené ako varovanie.</li>
   <li><strong>Existuje riziko endokrinných nádorov (MEN2, medulárny karcinóm štítnej žľazy)?</strong> Pri agonistoch GLP-1 a tirzepatide je to v materiáli uvedené.</li>
@@ -220,7 +220,7 @@ $articles[] = [
 <ul>
   <li><strong>topiramát</strong> je renálne limitovaný a dialýza mu skracuje expozíciu (pravdepodobne doplnenie dávky po dialýze),</li>
   <li><strong>naltrexón</strong> sa dialýzou neodstraňuje (nevyžaduje dialyzačnú „kompenzáciu“),</li>
-  <li><strong>bupropión</strong> si pri GFR &lt; 30 ml/min/1,73 m² vyžaduje opatrnosť v dávkovaní,</li>
+  <li><strong>bupropión</strong> si pri GFR &lt; 30&nbsp;ml/min/1,73&nbsp;m² vyžaduje opatrnosť v dávkovaní,</li>
   <li><strong>orlistat</strong> je z hľadiska obličiek výhodný, ale klinicky dominujú gastrointestinálne a výživové otázky,</li>
   <li><strong>agonisty GLP-1 a tirzepatid</strong> majú eliminačnú výhodu (proteolýza, bez renálnej závislosti), no materiál zároveň upozorňuje na obmedzené dáta pri dialýze, najmä pri tirzepatide.</li>
 </ul>

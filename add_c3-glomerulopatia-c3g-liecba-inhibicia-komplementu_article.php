@@ -57,7 +57,7 @@ $articles[] = [
 
 <h3>Kedy pridať imunosupresiu</h3>
 
-<p>Pri <strong>stredne ťažkom až ťažkom priebehu</strong> (definovanom ako <strong>proteinúria &gt; 1 g/deň</strong> a zároveň buď <strong>hematúria</strong>, alebo <strong>pokles funkcie počas aspoň 6 mesiacov</strong>) možno podľa KDIGO 2021 začať <strong>imunosupresiu</strong>:</p>
+<p>Pri <strong>stredne ťažkom až ťažkom priebehu</strong> (definovanom ako <strong>proteinúria &gt; 1&nbsp;g/deň</strong> a zároveň buď <strong>hematúria</strong>, alebo <strong>pokles funkcie počas aspoň 6&nbsp;mesiacov</strong>) možno podľa KDIGO 2021 začať <strong>imunosupresiu</strong>:</p>
 
 <ul>
   <li><strong>mykofenolát mofetil (MMF) v kombinácii s glukokortikoidmi (kortikosteroidmi)</strong>.</li>
@@ -130,12 +130,12 @@ $articles[] = [
 <p><strong>Fáza 3 (APPEAR-C3G):</strong></p>
 
 <ul>
-  <li>74 pacientov, randomizácia na iptakopan 200 mg 2× denne oproti placebu, následne otvorené pokračovanie (open-label),</li>
+  <li>74 pacientov, randomizácia na iptakopan 200&nbsp;mg 2× denne oproti placebu, následne otvorené pokračovanie (open-label),</li>
   <li>primárny cieľový ukazovateľ: <strong>35,1 % redukcia 24-hodinového UPCR</strong> oproti placebu po 6 mesiacoch (P = 0,0014),</li>
   <li>kompozitný renálny cieľový ukazovateľ (≥ 50 % redukcia UPCR a zároveň ≤ 15 % pokles eGFR) mal <strong>7-násobne vyššiu pravdepodobnosť (odds)</strong> v ramene s iptakopanom,</li>
-  <li>zmena eGFR po 6 mesiacoch: <strong>+1,3 ml/min/1,73 m²</strong> pri iptakopane oproti <strong>−0,9 ml/min/1,73 m²</strong> pri placebe,</li>
+  <li>zmena eGFR po 6 mesiacoch: <strong>+1,3&nbsp;ml/min/1,73&nbsp;m²</strong> pri iptakopane oproti <strong>−0,9&nbsp;ml/min/1,73&nbsp;m²</strong> pri placebe,</li>
   <li>biomarkerové zmeny konzistentné s inhibíciou komplementu: napríklad <strong>vzostup sérového C3 (o 185 %)</strong>, pokles <strong>plazmatického sC5b-9 (−65,1 %)</strong> a pokles <strong>močového sC5b-9/kreatinín (−77,3 %)</strong>,</li>
-  <li>rýchly nástup: účinok na proteinúriu sa uvádza približne do <strong>2 týždňov</strong>.</li>
+  <li>rýchly nástup: účinok na proteinúriu sa uvádza približne do <strong>2&nbsp;týždňov</strong>.</li>
 </ul>
 
 <p><strong>Bezpečnosť:</strong> v štúdii APPEAR-C3G sa pri iptakopane vyskytla <strong>1 závažná pneumokoková infekcia</strong>; meningokokové ochorenie sa medzi opísanými udalosťami neobjavilo.</p>
@@ -153,7 +153,7 @@ $articles[] = [
 <ul>
   <li>96 pacientov s C3G,</li>
   <li>po 26 týždňoch: <strong>67,3 % priemerná redukcia UPCR</strong> pri pegcetakoplane oproti <strong>+3,2 %</strong> pri placebe (rozdiel 68,3 %; P &lt; 0,0001),</li>
-  <li>stabilizácia eGFR: zmena <strong>−1,6 ml/min</strong> pri pegcetakoplane oproti <strong>−7,9 ml/min</strong> pri placebe (nominálne P = 0,0322),</li>
+  <li>stabilizácia eGFR: zmena <strong>−1,6&nbsp;ml/min</strong> pri pegcetakoplane oproti <strong>−7,9&nbsp;ml/min</strong> pri placebe (nominálne P = 0,0322),</li>
   <li>bezpečnosť: <strong>3 pacienti</strong> mali závažné infekcie, pričom <strong>žiadna sa nepripísala opuzdreným (enkapsulovaným) baktériám</strong>.</li>
 </ul>
 

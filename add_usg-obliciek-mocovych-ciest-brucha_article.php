@@ -57,17 +57,17 @@ ciest, stav močového mechúra či orgánov brucha (pečeň, žlčník, slezina
   <li>Lekár nanesie na kožu <strong>gél</strong> (chvíľu môže byť chladný) a priloží sondu.</li>
   <li>Sondou prechádza po koži a sníma obraz; niekedy vás požiada o <strong>nádych a zadržanie
       dychu</strong> alebo o zmenu polohy.</li>
-  <li>Vyšetrenie zvyčajne trvá približne <strong>15–20 minút</strong> a nebolí.</li>
+  <li>Vyšetrenie zvyčajne trvá približne <strong>15–20&nbsp;minút</strong> a nebolí.</li>
 </ol>
 
 <h2>Ako sa pripraviť</h2>
 <p>Príprava závisí od toho, čo sa vyšetruje – riaďte sa pokynmi pri objednaní. Vo všeobecnosti:</p>
 <ul>
   <li><strong>USG brucha</strong> – príďte <strong>nalačno</strong> (zvyčajne nejedzte približne
-      6 hodín pred vyšetrením), aby črevá neboli plné plynu a obraz bol jasný. Vodu si v malom
+      6&nbsp;hodín pred vyšetrením), aby črevá neboli plné plynu a obraz bol jasný. Vodu si v malom
       množstve spravidla vypiť môžete; lieky berte podľa pokynov lekára.</li>
   <li><strong>USG močových ciest a močového mechúra</strong> – naopak je potrebný
-      <strong>plný močový mechúr</strong>. Pred vyšetrením vypite väčšie množstvo vody (napr. 0,5–1 l)
+      <strong>plný močový mechúr</strong>. Pred vyšetrením vypite väčšie množstvo vody (napr. 0,5–1&nbsp;l)
       a <strong>nemočte</strong>, aby bol mechúr naplnený.</li>
   <li><strong>USG obličiek</strong> – často je vhodné prísť nalačno; samotné obličky bývajú dobre
       zobraziteľné aj bez náročnej prípravy.</li>

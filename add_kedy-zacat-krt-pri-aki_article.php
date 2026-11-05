@@ -92,7 +92,7 @@ $articles[] = [
 
 <h3>ELAIN (2016): skorší benefit v jednej štúdii</h3>
 
-<p>ELAIN bolo jednocentrické skúšanie, v ktorom skoré KRT (do 8 hodín) viedlo k nižšej 90-dňovej mortalite oproti oneskoreniu do progresie (napr. štádium 3). Ako obmedzenie sa však uvádza aj index krehkosti (fragility index).</p>
+<p>ELAIN bolo jednocentrické skúšanie, v ktorom skoré KRT (do 8&nbsp;hodín) viedlo k nižšej 90-dňovej mortalite oproti oneskoreniu do progresie (napr. štádium 3). Ako obmedzenie sa však uvádza aj index krehkosti (fragility index).</p>
 
 <h3>AKIKI (2016): bez rozdielu v mortalite</h3>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <h3>STARRT-AKI: akcelerované vs. štandardné, tiež bez benefitov v prežívaní</h3>
 
-<p>STARRT-AKI bolo veľké multicentrické skúšanie v 15 krajinách. Akcelerované rameno znamenalo začatie KRT do 12 hodín od splnenia kritérií zaradenia, zatiaľ čo v štandardnom ramene sa odporúčalo skôr odkladať, ak sa komplikácie dali zvládnuť bez KRT. V celkových výsledkoch nebol rozdiel v mortalite, pričom v akcelerovanom ramene bolo viac pacientov, ktorí dostali KRT, a častejšie sa objavili niektoré nežiaduce udalosti (napr. hypotenzia súvisiaca s KRT a hypofosfatémia).</p>
+<p>STARRT-AKI bolo veľké multicentrické skúšanie v 15 krajinách. Akcelerované rameno znamenalo začatie KRT do 12&nbsp;hodín od splnenia kritérií zaradenia, zatiaľ čo v štandardnom ramene sa odporúčalo skôr odkladať, ak sa komplikácie dali zvládnuť bez KRT. V celkových výsledkoch nebol rozdiel v mortalite, pričom v akcelerovanom ramene bolo viac pacientov, ktorí dostali KRT, a častejšie sa objavili niektoré nežiaduce udalosti (napr. hypotenzia súvisiaca s KRT a hypofosfatémia).</p>
 
 <h2>AKIKI-2 a otázka „ako dlho môžem ešte čakať“</h2>
 

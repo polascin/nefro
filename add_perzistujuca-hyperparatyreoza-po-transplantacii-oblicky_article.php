@@ -59,9 +59,9 @@ $articles[] = [
 
 <h2>Rozsah analyzovaných údajov</h2>
 
-<p>Do systematického prehľadu bolo zaradených <strong>23 štúdií</strong>. Do metaanalýz prispelo <strong>19 štúdií</strong> s celkovým počtom <strong>26 266 príjemcov transplantovanej obličky</strong>.</p>
+<p>Do systematického prehľadu bolo zaradených <strong>23 štúdií</strong>. Do metaanalýz prispelo <strong>19 štúdií</strong> s celkovým počtom <strong>26&nbsp;266 príjemcov transplantovanej obličky</strong>.</p>
 
-<p>Z toho 3 štúdie hodnotili predtransplantačnú hyperparatyreózu u 12 819 pacientov a 16 štúdií hodnotilo posttransplantačnú hyperparatyreózu u 13 447 pacientov. Ide teda o pomerne rozsiahly súbor observačných údajov. Zároveň platí, že ani veľká metaanalýza observačných štúdií sama osebe nedokazuje kauzalitu.</p>
+<p>Z toho 3 štúdie hodnotili predtransplantačnú hyperparatyreózu u 12&nbsp;819 pacientov a 16 štúdií hodnotilo posttransplantačnú hyperparatyreózu u 13&nbsp;447 pacientov. Ide teda o pomerne rozsiahly súbor observačných údajov. Zároveň platí, že ani veľká metaanalýza observačných štúdií sama osebe nedokazuje kauzalitu.</p>
 
 <h2>Predtransplantačná hyperparatyreóza: neistý prognostický význam</h2>
 

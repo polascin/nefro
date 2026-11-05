@@ -44,7 +44,7 @@ $articles[] = [
 <p>V opísanom prípade 71-ročný muž:</p>
 
 <ul>
-  <li>začal užívať alopurinol 3 týždne pred hospitalizáciou,</li>
+  <li>začal užívať alopurinol 3&nbsp;týždne pred hospitalizáciou,</li>
   <li>prišiel s <strong>horúčkou</strong>, <strong>difúznou morbiliformnou vyrážkou</strong> (bez postihnutia slizníc), <strong>poruchou vedomia</strong>, celkovou slabosťou a brušnými ťažkosťami,</li>
   <li>laboratórne mal <strong>akútnu progresiu obličkového poškodenia (AKI)</strong>, <strong>výraznú eozinofíliu</strong>, <strong>hepatocelulárne poškodenie</strong> a <strong>veľmi vysokú hladinu lipázy</strong>,</li>
   <li>zobrazovacie vyšetrenie potvrdilo <strong>akútnu pankreatitídu</strong> bez jasnej biliárnej príčiny.</li>
@@ -95,7 +95,7 @@ $articles[] = [
 
 <h3>1) Na DRESS myslieť aj vtedy, keď to „vyzerá“ ako infekcia alebo iný akútny syndróm</h3>
 
-<p>Ak sa objaví horúčka, difúzna vyrážka, eozinofília, hepatopatia a AKI s časovým odstupom 2 až 6 týždňov od začatia rizikového lieku, treba mať DRESS vysoko v diferenciálnej diagnostike.</p>
+<p>Ak sa objaví horúčka, difúzna vyrážka, eozinofília, hepatopatia a AKI s časovým odstupom 2 až 6&nbsp;týždňov od začatia rizikového lieku, treba mať DRESS vysoko v diferenciálnej diagnostike.</p>
 
 <h3>2) Pri multietiologickom AKI neváhať s biopsiou</h3>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <h3>3) Pri alopurinole u pacientov s CKD začínať opatrne a monitorovať</h3>
 
-<p>Alopurinol sa síce používa aj u pacientov s chronickou chorobou obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100 mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U pacientov z vysokorizikových etnických skupín treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
+<p>Alopurinol sa síce používa aj u pacientov s chronickou chorobou obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100&nbsp;mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U pacientov z vysokorizikových etnických skupín treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
 
 <h2>Záver</h2>
 

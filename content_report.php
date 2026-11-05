@@ -41,10 +41,10 @@ if ($isPost) {
         $errors[] = 'E-mailová adresa nemá platný formát.';
     }
     if (mb_strlen($legalBasis) < 10 || mb_strlen($legalBasis) > 1000) {
-        $errors[] = 'Opíšte právny dôvod oznámenia v rozsahu 10 až 1 000 znakov.';
+        $errors[] = 'Opíšte právny dôvod oznámenia v rozsahu 10 až 1 000 znakov.';
     }
     if (mb_strlen($explanation) < 20 || mb_strlen($explanation) > 5000) {
-        $errors[] = 'Uveďte dostatočne presné vysvetlenie v rozsahu 20 až 5 000 znakov.';
+        $errors[] = 'Uveďte dostatočne presné vysvetlenie v rozsahu 20 až 5 000 znakov.';
     }
     if (!isset($_POST['good_faith'])) {
         $errors[] = 'Potvrďte, že oznámenie podávate v dobrej viere.';

@@ -43,7 +43,7 @@ $articles[] = [
 
 <h3>Kedy uvažovať o biopsii</h3>
 
-<p>KDIGO odporúča biopsiu zvážiť u dospelých s <strong>proteinúriou ≥ 0,5 g/deň</strong> alebo ekvivalentom, ak IgAN prichádza do úvahy a biopsia nie je kontraindikovaná.</p>
+<p>KDIGO odporúča biopsiu zvážiť u dospelých s <strong>proteinúriou ≥ 0,5&nbsp;g/deň</strong> alebo ekvivalentom, ak IgAN prichádza do úvahy a biopsia nie je kontraindikovaná.</p>
 
 <h3>Po potvrdení diagnózy</h3>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <h2>3) Cieľ liečby: spomaliť pokles eGFR a znížiť proteinúriu</h2>
 
-<p>KDIGO nastavuje cieľ liečby tak, aby sa rýchlosť poklesu eGFR približovala fyziologickému tempu pre väčšinu dospelých, teda približne <strong>&lt; 1 ml/min/rok</strong>. Najpraktickejším skorým markerom odpovede zostáva proteinúria, ktorá má byť minimálne <strong>&lt; 0,5 g/deň</strong> a ideálne <strong>&lt; 0,3 g/deň</strong>.</p>
+<p>KDIGO nastavuje cieľ liečby tak, aby sa rýchlosť poklesu eGFR približovala fyziologickému tempu pre väčšinu dospelých, teda približne <strong>&lt; 1&nbsp;ml/min/rok</strong>. Najpraktickejším skorým markerom odpovede zostáva proteinúria, ktorá má byť minimálne <strong>&lt; 0,5&nbsp;g/deň</strong> a ideálne <strong>&lt; 0,3&nbsp;g/deň</strong>.</p>
 
 <p>KDOQI zároveň pripomína, že u pacientov s pokročilým jazvením nemusí byť tento cieľ realisticky dosiahnuteľný a bude treba kombinovať farmakologické aj nefarmakologické postupy.</p>
 
@@ -84,10 +84,10 @@ $articles[] = [
 <p>Praktické body KDIGO sú konkrétne a komentár zdôrazňuje, že nejde o „doplnky“, ale o skutočné terapeutické zásahy:</p>
 
 <ul>
-  <li><strong>zníženie príjmu sodíka</strong> pod 2 g/deň,</li>
+  <li><strong>zníženie príjmu sodíka</strong> pod 2&nbsp;g/deň,</li>
   <li><strong>ukončenie fajčenia a vapingu</strong>,</li>
   <li><strong>kontrola hmotnosti</strong> a vhodná aeróbna aktivita,</li>
-  <li><strong>cieľ tlaku krvi ≤ 120/70 mm Hg</strong>,</li>
+  <li><strong>cieľ tlaku krvi ≤ 120/70&nbsp;mm Hg</strong>,</li>
   <li><strong>blokáda RAS</strong> (ACEi/ARB) a podľa situácie aj stratégia na zníženie hyperfiltrácie,</li>
   <li>zváženie <strong>inhibítora SGLT2</strong> ako súčasti nefroprotektívneho rámca,</li>
   <li>komplexná kardiovaskulárna prevencia podľa lokálnych odporúčaní,</li>
@@ -116,14 +116,14 @@ $articles[] = [
 
 <h2>7) Ak Nefecon nie je dostupný: znížená dávka systémových kortikoidov s profylaxiou</h2>
 
-<p>V prostredí bez Nefeconu KDOQI podporuje KDIGO odporúčanie použiť <strong>6 až 9 mesiacov zníženej dávky systémového glukokortikoidu</strong> s vhodnou profylaxiou.</p>
+<p>V prostredí bez Nefeconu KDOQI podporuje KDIGO odporúčanie použiť <strong>6 až 9&nbsp;mesiacov zníženej dávky systémového glukokortikoidu</strong> s vhodnou profylaxiou.</p>
 
 <h3>Odporúčaný režim methylprednizolónu</h3>
 
 <ul>
-  <li><strong>0,4 mg/kg/deň</strong>, maximálne <strong>32 mg/deň</strong>, počas <strong>2 mesiacov</strong>,</li>
-  <li>potom postupné znižovanie o <strong>4 mg/deň každý mesiac</strong>,</li>
-  <li>celková dĺžka liečby <strong>6 až 9 mesiacov</strong>.</li>
+  <li><strong>0,4&nbsp;mg/kg/deň</strong>, maximálne <strong>32&nbsp;mg/deň</strong>, počas <strong>2&nbsp;mesiacov</strong>,</li>
+  <li>potom postupné znižovanie o <strong>4&nbsp;mg/deň každý mesiac</strong>,</li>
+  <li>celková dĺžka liečby <strong>6 až 9&nbsp;mesiacov</strong>.</li>
 </ul>
 
 <h3>Povinná bezpečnostná vrstva</h3>
@@ -141,7 +141,7 @@ $articles[] = [
 <p>KDOQI upozorňuje na zvýšenú obozretnosť najmä pri týchto faktoroch:</p>
 
 <ul>
-  <li>eGFR &lt; 30 ml/min/1,73 m²,</li>
+  <li>eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m²,</li>
   <li>diabetes alebo prediabetes,</li>
   <li>obezita,</li>
   <li>latentné infekcie, napríklad vírusové hepatitídy alebo tuberkulóza,</li>
@@ -153,7 +153,7 @@ $articles[] = [
 
 <h2>Záver pre prax</h2>
 
-<p>V manažmente IgAN sa ťažisko presúva na tri body: správnu diagnostiku, včasné rizikové zhodnotenie a liečbu zameranú na mechanizmy ochorenia. Bez biopsie sa diagnóza potvrdiť nedá, proteinúria ≥ 0,5 g/deň nie je banálna a cieľom je spomaliť pokles eGFR. Nefecon je preferovaným 9-mesačným zásahom, ak je dostupný; pri nedostupnosti sa zvažujú znížené dávky systémových kortikoidov s profylaxiou.</p>
+<p>V manažmente IgAN sa ťažisko presúva na tri body: správnu diagnostiku, včasné rizikové zhodnotenie a liečbu zameranú na mechanizmy ochorenia. Bez biopsie sa diagnóza potvrdiť nedá, proteinúria ≥ 0,5&nbsp;g/deň nie je banálna a cieľom je spomaliť pokles eGFR. Nefecon je preferovaným 9-mesačným zásahom, ak je dostupný; pri nedostupnosti sa zvažujú znížené dávky systémových kortikoidov s profylaxiou.</p>
 
 <hr>
 

@@ -3,7 +3,7 @@
  * add_umela-inteligencia-sucha-hmotnost-hemodialyza_article.php
  * ════════════════════════════════════════════════════════════════════════════
  * Odborný článok (category = default 'odborne'): využitie strojového učenia
- * pri odhade klinicky primeranej suchej hmotnosti u hemodialyzovaných pacientov.
+ * pri odhade klinický primeranej suchej hmotnosti u hemodialyzovaných pacientov.
  *
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
@@ -62,7 +62,7 @@ $articles[] = [
 
 <h2>Dizajn a metodika</h2>
 
-<p>Išlo o retrospektívnu jednocentrovú štúdiu z Chungnam National University Hospital. Autori analyzovali údaje 1 672 pacientov liečených udržiavacou hemodialýzou. Zaradení boli pacienti s terminálnym zlyhaním obličiek, ktorí podstupovali hemodialýzu trikrát týždenne a liečba trvala aspoň tri mesiace. Vylúčení boli pacienti s akútnym poškodením obličiek, nestabilným klinickým stavom, akútnou infekciou, pobytom na jednotke intenzívnej starostlivosti, neúplnými údajmi o hydratácii alebo zmenou antihypertenzív v okolí merania telesného zloženia.</p>
+<p>Išlo o retrospektívnu jednocentrovú štúdiu z Chungnam National University Hospital. Autori analyzovali údaje 1&nbsp;672 pacientov liečených udržiavacou hemodialýzou. Zaradení boli pacienti s terminálnym zlyhaním obličiek, ktorí podstupovali hemodialýzu trikrát týždenne a liečba trvala aspoň tri mesiace. Vylúčení boli pacienti s akútnym poškodením obličiek, nestabilným klinickým stavom, akútnou infekciou, pobytom na jednotke intenzívnej starostlivosti, neúplnými údajmi o hydratácii alebo zmenou antihypertenzív v okolí merania telesného zloženia.</p>
 
 <p>Bioimpedančné merania sa vykonávali pred dialýzou. Hodnotili sa ukazovatele telesnej vody a zloženia tela vrátane extracelulárnej vody (ECW), intracelulárnej vody (ICW), celkovej telesnej vody (TBW), pomeru ECW/ICW, indexu chudej hmoty a indexu tukovej hmoty. Do analýzy boli zahrnuté aj laboratórne hodnoty, napríklad hemoglobín, urea, kreatinín, albumín, celkové bielkoviny, vápnik, fosfor, sodík, draslík a chloridy.</p>
 
@@ -77,14 +77,14 @@ $articles[] = [
 <p>Podľa veľkosti rozdielu medzi bioimpedančne odvodenou a klinicky primeranou suchou hmotnosťou boli pacienti rozdelení do troch skupín:</p>
 
 <ul>
-  <li><strong>Gap<sub>DW</sub> &lt; 1 kg:</strong> 972 pacientov,</li>
-  <li><strong>Gap<sub>DW</sub> ≥ 1 kg a &lt; 2 kg:</strong> 303 pacientov,</li>
-  <li><strong>Gap<sub>DW</sub> ≥ 2 kg:</strong> 384 pacientov.</li>
+  <li><strong>Gap<sub>DW</sub> &lt; 1&nbsp;kg:</strong> 972 pacientov,</li>
+  <li><strong>Gap<sub>DW</sub> ≥ 1&nbsp;kg a &lt; 2&nbsp;kg:</strong> 303 pacientov,</li>
+  <li><strong>Gap<sub>DW</sub> ≥ 2&nbsp;kg:</strong> 384 pacientov.</li>
 </ul>
 
-<p>Pri použití celého súboru bola predikcia klinicky primeranej suchej hmotnosti slabá. Autori uvádzajú presnosť menej než 40 % a maximálnu chybu predikcie nadbytku tekutiny až približne 1,5 kg. Inými slovami: ak sa do modelu vložili aj pacienti s veľkým nesúladom medzi BIS a klinikou, algoritmus nedokázal spoľahlivo určiť cieľovú hodnotu.</p>
+<p>Pri použití celého súboru bola predikcia klinicky primeranej suchej hmotnosti slabá. Autori uvádzajú presnosť menej než 40 % a maximálnu chybu predikcie nadbytku tekutiny až približne 1,5&nbsp;kg. Inými slovami: ak sa do modelu vložili aj pacienti s veľkým nesúladom medzi BIS a klinikou, algoritmus nedokázal spoľahlivo určiť cieľovú hodnotu.</p>
 
-<p>Výsledky sa zlepšili po obmedzení analýzy na pacientov s menším rozdielom medzi DW<sub>BIS</sub> a DW<sub>CP</sub>. Pri Gap<sub>DW</sub> &lt; 1 kg dosiahol XGBoost podľa autormi použitej metriky priemernú presnosť približne 83 %. Pri rozšírení na Gap<sub>DW</sub> &lt; 2 kg klesla priemerná presnosť približne na 72 %. Prakticky to znamená, že strojové učenie pomáhalo najmä tam, kde sa technický a klinický odhad už relatívne zhodovali. Pri väčšom nesúlade výkon modelu klesal.</p>
+<p>Výsledky sa zlepšili po obmedzení analýzy na pacientov s menším rozdielom medzi DW<sub>BIS</sub> a DW<sub>CP</sub>. Pri Gap<sub>DW</sub> &lt; 1&nbsp;kg dosiahol XGBoost podľa autormi použitej metriky priemernú presnosť približne 83 %. Pri rozšírení na Gap<sub>DW</sub> &lt; 2&nbsp;kg klesla priemerná presnosť približne na 72 %. Prakticky to znamená, že strojové učenie pomáhalo najmä tam, kde sa technický a klinický odhad už relatívne zhodovali. Pri väčšom nesúlade výkon modelu klesal.</p>
 
 <h2>Čo zväčšovalo rozdiel medzi BIS a klinickou realitou</h2>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <h2>Praktický záver</h2>
 
-<p>Strojové učenie môže pomôcť pri odhade klinicky primeranej suchej hmotnosti u hemodialyzovaných pacientov, najmä ak rozdiel medzi bioimpedančným a klinickým odhadom nie je veľký. Najlepšie výsledky v tejto štúdii dosiahol XGBoost u pacientov s Gap<sub>DW</sub> &lt; 1 kg. Pri väčších rozdieloch sa presnosť zhoršovala a pri Gap<sub>DW</sub> ≥ 2 kg ostáva predikcia klinicky problematická.</p>
+<p>Strojové učenie môže pomôcť pri odhade klinicky primeranej suchej hmotnosti u hemodialyzovaných pacientov, najmä ak rozdiel medzi bioimpedančným a klinickým odhadom nie je veľký. Najlepšie výsledky v tejto štúdii dosiahol XGBoost u pacientov s Gap<sub>DW</sub> &lt; 1&nbsp;kg. Pri väčších rozdieloch sa presnosť zhoršovala a pri Gap<sub>DW</sub> ≥ 2&nbsp;kg ostáva predikcia klinicky problematická.</p>
 
 <p>Najväčší klinický význam práce spočíva v upozornení, že veľký nesúlad medzi BIS a klinickou suchou hmotnosťou často súvisí s extracelulárnou prevodnenosťou a znakmi malnutrície. Bioimpedančný výsledok preto treba interpretovať opatrne a vždy ho konfrontovať s klinickým stavom. Suchá hmotnosť má byť výsledkom kombinácie objektívneho merania, klinického pozorovania, laboratórnych údajov a skúsenosti dialyzačného tímu. Algoritmus môže pomôcť, ale nemá rozhodovať sám.</p>
 

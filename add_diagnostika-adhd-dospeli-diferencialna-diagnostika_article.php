@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: diagnostika ADHD u dospelych - diferencialna diagnostika a nefrologicke suvislosti.
+ * Odborný článok: diagnostika ADHD u dospelych - diferencialna diagnostika a nefrologicke suvislosti.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -233,7 +233,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h3>Ak sa ADHD potvrdí: čo znamená jeho liečba pri CKD</h3>
 
-<p>Farmakoterapia ADHD zasahuje do kardiovaskulárnych parametrov. Metaanalýza 22 štúdií so 46 107 účastníkmi potvrdila, že <strong>metylfenidát zvyšuje srdcovú frekvenciu aj systolický tlak</strong> oproti placebu (obe P &lt; 0,001) a že u detí a dorastu <strong>atomoxetín zvyšoval tieto parametre ešte viac než metylfenidát</strong>. V počte nežiaducich kardiálnych príhod sa skupiny nelíšili, ale sledovanie bolo krátkodobé.</p>
+<p>Farmakoterapia ADHD zasahuje do kardiovaskulárnych parametrov. Metaanalýza 22 štúdií so 46&nbsp;107 účastníkmi potvrdila, že <strong>metylfenidát zvyšuje srdcovú frekvenciu aj systolický tlak</strong> oproti placebu (obe P &lt; 0,001) a že u detí a dorastu <strong>atomoxetín zvyšoval tieto parametre ešte viac než metylfenidát</strong>. V počte nežiaducich kardiálnych príhod sa skupiny nelíšili, ale sledovanie bolo krátkodobé.</p>
 
 <p>Pre pacienta s CKD, u ktorého je kontrola tlaku jedným z hlavných nefroprotektívnych opatrení, z toho vyplýva:</p>
 
@@ -276,11 +276,11 @@ $articles[] = [
   <li><strong>National Institute for Health and Care Excellence (NICE).</strong> <em>Attention deficit hyperactivity disorder: diagnosis and management.</em> NICE guideline NG87. Publikované 14. marca 2018, naposledy aktualizované 13. septembra 2019. Britské odporúčanie, na Slovensku nie je záväzné. <a href="https://www.nice.org.uk/Guidance/ng87" target="_blank" rel="noopener noreferrer">Odporúčanie NICE</a>.</li>
   <li><strong>Ramos-Quiroga JA, Nasillo V, Richarte V, Corrales M, Palma F, Ibáñez P, Michelsen M, Van de Glind G, Casas M, Kooij JJS.</strong> <em>Criteria and Concurrent Validity of DIVA 2.0: A Semi-Structured Diagnostic Interview for Adult ADHD.</em> J Atten Disord. 2019;23(10):1126–1135. doi: 10.1177/1087054716646451. Validácia na 40 ambulantných pacientoch podľa kritérií DSM-IV. <a href="https://doi.org/10.1177/1087054716646451" target="_blank" rel="noopener noreferrer">Validačná štúdia</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/27125994/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>DIVA Foundation.</strong> <em>DIVA-5 — Diagnostic Interview for ADHD in Adults.</em> Inštitucionálne autorstvo. Aktuálna verzia podľa DSM-5 vrátane variantov Young DIVA-5 a DIVA-5 ID; nástroj je spoplatnený. <a href="https://www.divacenter.eu/" target="_blank" rel="noopener noreferrer">DIVA Foundation</a>.</li>
-  <li><strong>Liang EF, Lim SZ, Tam WW, Ho CS, Zhang MW, McIntyre RS, Ho RC.</strong> <em>The Effect of Methylphenidate and Atomoxetine on Heart Rate and Systolic Blood Pressure in Young People and Adults with Attention-Deficit Hyperactivity Disorder (ADHD): Systematic Review, Meta-Analysis, and Meta-Regression.</em> Int J Environ Res Public Health. 2018;15(8):1789. doi: 10.3390/ijerph15081789. Metaanalýza 22 štúdií so 46 107 účastníkmi. <a href="https://doi.org/10.3390/ijerph15081789" target="_blank" rel="noopener noreferrer">Metaanalýza</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/30127314/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
+  <li><strong>Liang EF, Lim SZ, Tam WW, Ho CS, Zhang MW, McIntyre RS, Ho RC.</strong> <em>The Effect of Methylphenidate and Atomoxetine on Heart Rate and Systolic Blood Pressure in Young People and Adults with Attention-Deficit Hyperactivity Disorder (ADHD): Systematic Review, Meta-Analysis, and Meta-Regression.</em> Int J Environ Res Public Health. 2018;15(8):1789. doi: 10.3390/ijerph15081789. Metaanalýza 22 štúdií so 46&nbsp;107 účastníkmi. <a href="https://doi.org/10.3390/ijerph15081789" target="_blank" rel="noopener noreferrer">Metaanalýza</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/30127314/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Medscape Medical News.</strong> <em>The Challenge of Diagnosing ADHD in Adults.</em> Medscape, 2026. Sekundárny zdroj použitý ako východisko, nie ako hlavný dôkaz; ako autorka sa uvádza Zebib K. Abraham. <a href="https://www.medscape.com/viewarticle/challenge-diagnosing-adhd-adults-2026a1000rxl" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o vlastnostiach škály ASRS (senzitivita 68,7 % oproti 56,3 %, špecificita 99,5 % oproti 98,3 %, celková presnosť 97,9 % oproti 96,2 %, kappa 0,76 oproti 0,58, rozsah kappa 0,16–0,81 pri jednotlivých položkách, vzorka 154 respondentov) boli overené priamo proti abstraktu v PubMed (PMID 15841682), rovnako ako úplný zoznam 12 autorov. Údaje metaanalýzy o metylfenidáte a atomoxetíne (22 štúdií, 46 107 účastníkov, P &lt; 0,001) pochádzajú z abstraktu PMID 30127314; ročník a číslo boli overené cez Crossref. Validačná štúdia DIVA 2.0 (n = 40, kritériá DSM-IV) bola overená cez PMID 27125994 – pozor, týka sa verzie 2.0, nie aktuálnej DIVA-5. Dátumy publikovania a poslednej aktualizácie odporúčania NICE NG87 boli prevzaté priamo zo stránky odporúčania. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o vlastnostiach škály ASRS (senzitivita 68,7 % oproti 56,3 %, špecificita 99,5 % oproti 98,3 %, celková presnosť 97,9 % oproti 96,2 %, kappa 0,76 oproti 0,58, rozsah kappa 0,16–0,81 pri jednotlivých položkách, vzorka 154 respondentov) boli overené priamo proti abstraktu v PubMed (PMID 15841682), rovnako ako úplný zoznam 12 autorov. Údaje metaanalýzy o metylfenidáte a atomoxetíne (22 štúdií, 46&nbsp;107 účastníkov, P &lt; 0,001) pochádzajú z abstraktu PMID 30127314; ročník a číslo boli overené cez Crossref. Validačná štúdia DIVA 2.0 (n = 40, kritériá DSM-IV) bola overená cez PMID 27125994 – pozor, týka sa verzie 2.0, nie aktuálnej DIVA-5. Dátumy publikovania a poslednej aktualizácie odporúčania NICE NG87 boli prevzaté priamo zo stránky odporúčania. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok neslúži na stanovenie diagnózy ani na výber liečby. Diagnostika ADHD u dospelých patrí do rúk psychiatra; nefrológ prispieva vylúčením medicínskych príčin poruchy pozornosti a sledovaním kardiovaskulárnych parametrov pri liečbe. Dávkovanie liekov pri zníženej funkcii obličiek sa riadi platným súhrnom charakteristických vlastností konkrétneho lieku a preskripčnými obmedzeniami platnými na Slovensku.</em></p>
 </div>
@@ -304,9 +304,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

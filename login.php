@@ -97,7 +97,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
     try {
         $blockedUntilTs = ipRateLimitBlockedUntil($pdo, 'login_attempts', $clientIp);
         if ($blockedUntilTs > 0) {
-            $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+            $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
             if ($isLocalDev) {
                 $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
                 $loginFailureDetails[] = "Prihlásenie z IP adresy je blokované ešte približne {$remainingMins} min.";
@@ -141,7 +141,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
             try {
                 $accountBlockedFor = formRateLimitBlockedForSeconds($pdo, 'login', $accountKey);
                 if ($accountBlockedFor > 0) {
-                    $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+                    $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
                     if ($isLocalDev) {
                         $remainingMins = max(1, (int) ceil($accountBlockedFor / 60));
                         $loginFailureDetails[] = "Prihlásenie na tento účet je blokované ešte približne {$remainingMins} min.";
@@ -170,7 +170,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
             try {
                 $count = recordIpFailedAttempt($pdo, 'login_attempts', $clientIp, $maxAttempts, $blockSecs);
                 if ($count >= $maxAttempts) {
-                    $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
+                    $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
                     if ($isLocalDev) {
                         $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre túto IP adresu.';
                     }
@@ -190,7 +190,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
                 try {
                     $accountCount = recordFormRateLimitFailure($pdo, 'login', $accountKey, $maxAttempts, $blockSecs);
                     if ($accountCount >= $maxAttempts) {
-                        $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
+                        $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
                         if ($isLocalDev) {
                             $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre tento účet.';
                         }

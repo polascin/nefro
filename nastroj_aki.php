@@ -108,8 +108,8 @@ $baseUrl = "https://nefro.polascin.net/";
                     <h3 id="kdigo-heading">Definícia a štádiá AKI (KDIGO 2012)</h3>
                     <div class="info-box-blue">
                         <p><strong>AKI</strong> = aspoň jedno z kritérií: vzostup S-kreatinínu o ≥ 26,5 µmol/l
-                        (0,3 mg/dl) za 48 h; alebo na ≥ 1,5-násobok východiska za 7 dní; alebo diuréza
-                        &lt; 0,5 ml/kg/h počas ≥ 6 h.</p>
+                        (0,3 mg/dl) za 48 h; alebo na ≥ 1,5-násobok východiska za 7 dní; alebo diuréza
+                        &lt; 0,5 ml/kg/h počas ≥ 6 h.</p>
                     </div>
                     <table class="tool-table">
                         <caption class="visually-hidden">Štádiá AKI podľa KDIGO</caption>
@@ -117,9 +117,9 @@ $baseUrl = "https://nefro.polascin.net/";
                             <tr><th scope="col">Štádium</th><th scope="col">Sérový kreatinín</th><th scope="col">Diuréza</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">1</th><td>1,5 až 1,9× východisko alebo ↑ ≥ 26,5 µmol/l</td><td>&lt; 0,5 ml/kg/h počas 6 až 12 h</td></tr>
-                            <tr><th scope="row">2</th><td>2,0 až 2,9× východisko</td><td>&lt; 0,5 ml/kg/h počas ≥ 12 h</td></tr>
-                            <tr><th scope="row">3</th><td>≥ 3,0× východisko, alebo SCr ≥ 353,6 µmol/l, alebo začatie KRT</td><td>&lt; 0,3 ml/kg/h počas ≥ 24 h alebo anúria ≥ 12 h</td></tr>
+                            <tr><th scope="row">1</th><td>1,5 až 1,9× východisko alebo ↑ ≥ 26,5 µmol/l</td><td>&lt; 0,5 ml/kg/h počas 6 až 12 h</td></tr>
+                            <tr><th scope="row">2</th><td>2,0 až 2,9× východisko</td><td>&lt; 0,5 ml/kg/h počas ≥ 12 h</td></tr>
+                            <tr><th scope="row">3</th><td>≥ 3,0× východisko, alebo SCr ≥ 353,6 µmol/l, alebo začatie KRT</td><td>&lt; 0,3 ml/kg/h počas ≥ 24 h alebo anúria ≥ 12 h</td></tr>
                         </tbody>
                     </table>
                 </section>

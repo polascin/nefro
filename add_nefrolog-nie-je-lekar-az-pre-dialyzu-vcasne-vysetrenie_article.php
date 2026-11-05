@@ -2,7 +2,7 @@
 
 /**
  * add_nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie_article.php
- * Kedy a preco ma vyznam vcasne nefrologicke vysetrenie - odborne spracovanie
+ * Kedy a preco ma vyznam vcasne nefrologicke vyšetrenie - odborne spracovanie
  * s oporou v KDIGO 2024 a v systematickom prehlade Smart & Titus.
  */
 
@@ -65,7 +65,7 @@ $articles[] = [
 
 <h2>Ako sa diagnostikuje chronická choroba obličiek</h2>
 
-<p>Podľa KDIGO je CKD abnormalita štruktúry alebo funkcie obličiek prítomná najmenej tri mesiace a významná pre zdravie pacienta. Diagnózu môže podporiť eGFR nižšia ako 60 ml/min/1,73 m², albuminúria, abnormalita močového sedimentu, perzistujúca hematúria glomerulového pôvodu, porucha tubulárnej funkcie, histologická abnormalita, štruktúrna zmena zistená zobrazovacím vyšetrením alebo stav po transplantácii obličky.</p>
+<p>Podľa KDIGO je CKD abnormalita štruktúry alebo funkcie obličiek prítomná najmenej tri mesiace a významná pre zdravie pacienta. Diagnózu môže podporiť eGFR nižšia ako 60&nbsp;ml/min/1,73&nbsp;m², albuminúria, abnormalita močového sedimentu, perzistujúca hematúria glomerulového pôvodu, porucha tubulárnej funkcie, histologická abnormalita, štruktúrna zmena zistená zobrazovacím vyšetrením alebo stav po transplantácii obličky.</p>
 
 <p>Jedna znížená eGFR ani jednorazovo zvýšená albuminúria chronickú chorobu obličiek spravidla nepotvrdzujú. Najprv treba zvážiť akútne poškodenie obličiek, prechodnú albuminúriu a ďalšie reverzibilné príčiny.</p>
 
@@ -76,7 +76,7 @@ $articles[] = [
     <thead>
       <tr>
         <th scope="col">Kategória</th>
-        <th scope="col">eGFR (ml/min/1,73 m²)</th>
+        <th scope="col">eGFR (ml/min/1,73&nbsp;m²)</th>
         <th scope="col">Charakteristika</th>
       </tr>
     </thead>
@@ -122,12 +122,12 @@ $articles[] = [
 
 <h2>Kedy je vhodné nefrologické vyšetrenie</h2>
 
-<p>Samotná eGFR nižšia ako 60 ml/min/1,73 m² neznamená, že každý pacient musí byť bezodkladne odoslaný k nefrológovi. Stabilnú CKD s nižším rizikom môže v mnohých prípadoch sledovať všeobecný lekár, diabetológ alebo internista podľa miestnych kompetencií a dostupnosti starostlivosti.</p>
+<p>Samotná eGFR nižšia ako 60&nbsp;ml/min/1,73&nbsp;m² neznamená, že každý pacient musí byť bezodkladne odoslaný k nefrológovi. Stabilnú CKD s nižším rizikom môže v mnohých prípadoch sledovať všeobecný lekár, diabetológ alebo internista podľa miestnych kompetencií a dostupnosti starostlivosti.</p>
 
 <p>Nefrologická konzultácia je osobitne vhodná pri:</p>
 
 <ul>
-  <li>eGFR nižšej ako 30 ml/min/1,73 m²,</li>
+  <li>eGFR nižšej ako 30&nbsp;ml/min/1,73&nbsp;m²,</li>
   <li>rýchlom alebo nevysvetlenom poklese eGFR,</li>
   <li>významnej albuminúrii, najmä v kategórii A3,</li>
   <li>albuminúrii spojenej s hematúriou,</li>
@@ -156,15 +156,15 @@ $articles[] = [
     </thead>
     <tbody>
       <tr>
-        <th scope="row">3 – 5 % za 5 rokov</th>
+        <th scope="row">3 – 5 % za 5&nbsp;rokov</th>
         <td>Odoslanie do nefrologickej starostlivosti (popri kritériách podľa eGFR)</td>
       </tr>
       <tr>
-        <th scope="row">&gt; 10 % za 2 roky</th>
+        <th scope="row">&gt; 10 % za 2&nbsp;roky</th>
         <td>Zaradenie do multidisciplinárnej starostlivosti</td>
       </tr>
       <tr>
-        <th scope="row">&gt; 40 % za 2 roky</th>
+        <th scope="row">&gt; 40 % za 2&nbsp;roky</th>
         <td>Edukácia o modalitách, príprava na náhradu funkcie obličiek vrátane cievneho prístupu alebo odoslanie na transplantáciu</td>
       </tr>
     </tbody>
@@ -173,7 +173,7 @@ $articles[] = [
 
 <p>Najpoužívanejšia <strong>Kidney Failure Risk Equation</strong> vyžaduje iba štyri údaje: vek, pohlavie, eGFR a UACR. Je validovaná pre CKD kategórie G3 až G5; rovnice vyvinuté pre túto populáciu <strong>nemusia platiť pri kategóriách G1 a G2</strong> a nemajú sa tam nekriticky používať.</p>
 
-<p>Praktický dôsledok je zreteľný: dvaja pacienti s rovnakou eGFR 40 ml/min/1,73 m² môžu mať pri albuminúrii A1 a A3 zásadne odlišné riziko – a teda aj odlišnú naliehavosť odoslania. Bez UACR sa toto rozlíšenie urobiť nedá.</p>
+<p>Praktický dôsledok je zreteľný: dvaja pacienti s rovnakou eGFR 40&nbsp;ml/min/1,73&nbsp;m² môžu mať pri albuminúrii A1 a A3 zásadne odlišné riziko – a teda aj odlišnú naliehavosť odoslania. Bez UACR sa toto rozlíšenie urobiť nedá.</p>
 
 <h2>Čo možno očakávať pri prvom vyšetrení</h2>
 
@@ -181,7 +181,7 @@ $articles[] = [
 
 <p>Ultrazvuk nie je automaticky potrebný pri každej miernej a jednoznačne vysvetlenej abnormalite a väčšina pacientov nepotrebuje biopsiu obličky.</p>
 
-<p>Pre rozhodovanie je často dôležitejší trend než izolovaný výsledok: pokles eGFR zo 75 na 55 ml/min/1,73 m² za jeden rok môže byť naliehavejší než dlhodobo stabilná eGFR 48 ml/min/1,73 m².</p>
+<p>Pre rozhodovanie je často dôležitejší trend než izolovaný výsledok: pokles eGFR zo 75 na 55&nbsp;ml/min/1,73&nbsp;m² za jeden rok môže byť naliehavejší než dlhodobo stabilná eGFR 48&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <h2>Nefrologická liečba nie je iba „sledovanie kreatinínu“</h2>
 
@@ -281,7 +281,7 @@ $articles[] = [
   <li><strong>Centers for Disease Control and Prevention.</strong> <em>Chronic Kidney Disease in the United States.</em> <a href="https://www.cdc.gov/kidney-disease/php/data-research/" target="_blank" rel="noopener noreferrer">CDC</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Prahy rizika zlyhania obličiek odporúčané v KDIGO 2024 – 3 až 5 % za 5 rokov pre odoslanie k nefrológovi, viac než 10 % za 2 roky pre multidisciplinárnu starostlivosť a viac než 40 % za 2 roky pre edukáciu o modalitách a prípravu náhrady funkcie obličiek – ako aj upozornenie, že rovnice validované pre CKD G3 – G5 nemusia platiť pri G1 – G2, boli overené proti verejne dostupnému zneniu odporúčaní. Bibliografia bola overená cez Crossref. <strong>Opravy oproti pôvodnému spracovaniu:</strong> opravené mená <strong>Neil A. Smart</strong> a <strong>Thomas T. Titus</strong> (v podklade nesprávne „Nicole A. Smart, Timothy T. Titus“); autorský kolektív výkonného súhrnu KDIGO 2024 má <strong>33 členov</strong> (v podklade bolo uvedených 12), citácia preto uvádza prvých trinásť a „a spol.“. Doplnené boli dva ďalšie rizikové prahy KDIGO, ktoré podklad neuvádzal. Rozdelenie kompetencií nefrológ – urológ, poznámky k diéte a kritický rozbor populárnych tvrdení sú <strong>vlastným odborným spracovaním</strong>, nie prekladom konkrétneho zdroja.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Prahy rizika zlyhania obličiek odporúčané v KDIGO 2024 – 3 až 5 % za 5&nbsp;rokov pre odoslanie k nefrológovi, viac než 10 % za 2&nbsp;roky pre multidisciplinárnu starostlivosť a viac než 40 % za 2&nbsp;roky pre edukáciu o modalitách a prípravu náhrady funkcie obličiek – ako aj upozornenie, že rovnice validované pre CKD G3 – G5 nemusia platiť pri G1 – G2, boli overené proti verejne dostupnému zneniu odporúčaní. Bibliografia bola overená cez Crossref. <strong>Opravy oproti pôvodnému spracovaniu:</strong> opravené mená <strong>Neil A. Smart</strong> a <strong>Thomas T. Titus</strong> (v podklade nesprávne „Nicole A. Smart, Timothy T. Titus“); autorský kolektív výkonného súhrnu KDIGO 2024 má <strong>33 členov</strong> (v podklade bolo uvedených 12), citácia preto uvádza prvých trinásť a „a spol.“. Doplnené boli dva ďalšie rizikové prahy KDIGO, ktoré podklad neuvádzal. Rozdelenie kompetencií nefrológ – urológ, poznámky k diéte a kritický rozbor populárnych tvrdení sú <strong>vlastným odborným spracovaním</strong>, nie prekladom konkrétneho zdroja.</em></p>
 HTML,
 ];
 

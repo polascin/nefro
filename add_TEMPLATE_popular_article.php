@@ -23,7 +23,7 @@
  *   • slug     – len [a-z0-9-], max 80 znakov, unikátny. Diakritika → ASCII.
  *   • excerpt  – 1–2 vety, čo sa čitateľ dozvie; zobrazí sa na karte v sekcii
  *   • content  – HTML; NEZAČÍNAJ <h2> zhodným s titulom (duplikát)
- *                Obrázok → <figure><img src="img/<subor>.png" alt="popis" loading="lazy">
+ *                Obrázok → <figure><img src="img/<súbor>.png" alt="popis" loading="lazy">
  *                          <figcaption>Popis obrázka</figcaption></figure>
  *                PRVÝ <img> v obsahu sa automaticky použije ako náhľad karty.
  *                Vždy vyplň zmysluplný alt text (prístupnosť + SEO).

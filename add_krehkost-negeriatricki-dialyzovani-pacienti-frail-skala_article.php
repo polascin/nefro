@@ -27,13 +27,13 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/krehkost-negeriatricki-dialyzovani-pacienti-frail-skala.webp" rel="noopener noreferrer" target="_blank"><img src="img/krehkost-negeriatricki-dialyzovani-pacienti-frail-skala.webp" alt="Mladá vzpriamená presklená konštrukcia, v ktorej už presvitajú jemné vlasové praskliny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Krehkosť nie je vyhradená starobe – u dialyzovaných sa objavuje podstatne skôr, než by vek napovedal.</figcaption></figure>
 
-<p>Krehkosť sa v nefrológii stále vníma ako téma starších pacientov. Prierezová štúdia publikovaná v auguste 2026 v časopise <em>Cureus</em> to spochybňuje: v jednocentrovom súbore hemodialyzovaných dospelých vo veku 18 až 64 rokov bola krehkosť alebo predkrehkosť prítomná u takmer dvoch tretín pacientov.</p>
+<p>Krehkosť sa v nefrológii stále vníma ako téma starších pacientov. Prierezová štúdia publikovaná v auguste 2026 v časopise <em>Cureus</em> to spochybňuje: v jednocentrovom súbore hemodialyzovaných dospelých vo veku 18 až 64&nbsp;rokov bola krehkosť alebo predkrehkosť prítomná u takmer dvoch tretín pacientov.</p>
 
 <p>Posolstvo o skríningu je správne a zodpovedá doterajšej literatúre. Niektoré jednotlivé výsledky štúdie však vyplývajú z veľmi malej vzorky a jeden z nich je biologicky nepravdepodobný natoľko, že by sa nemal preberať bez komentára.</p>
 
 <h2>Čo štúdia urobila</h2>
 
-<p>Išlo o prierezové hodnotenie <strong>50 pacientov vo veku 18–64 rokov</strong> s chronickou chorobou obličiek štádia 5D na udržiavacej hemodialýze v jednom centre v Tbilisi. Priemerný vek bol 54,34 ± 8,26 roka a 33 účastníkov (66 %) boli muži.</p>
+<p>Išlo o prierezové hodnotenie <strong>50 pacientov vo veku 18–64&nbsp;rokov</strong> s chronickou chorobou obličiek štádia 5D na udržiavacej hemodialýze v jednom centre v Tbilisi. Priemerný vek bol 54,34 ± 8,26 roka a 33 účastníkov (66 %) boli muži.</p>
 
 <p>Krehkosť sa hodnotila <strong>škálou FRAIL</strong> – päťpoložkovým dotazníkom, ktorý sa pýta na únavu, schopnosť vyjsť desať schodov, schopnosť prejsť niekoľko sto metrov, počet ochorení a úbytok hmotnosti. Skóre 0 znamená zdatnosť, 1–2 predkrehkosť a 3 a viac krehkosť. Súvislosti sa hodnotili Fisherovým exaktným testom a multinomickou logistickou regresiou.</p>
 
@@ -74,9 +74,9 @@ $articles[] = [
 
 <p>Metaanalýza prevalencie krehkosti u hemodialyzovaných pacientov uvádza súhrnný odhad <strong>34,3 % (95 % IS 24,5–44,1)</strong> pri rozpätí jednotlivých štúdií 6 až 82 %. To rozpätie je samo osebe najdôležitejším údajom: prevalencia závisí od použitého nástroja, od definície a od zloženia súboru minimálne tak silno ako od skutočného zdravotného stavu populácie.</p>
 
-<p>Rovnaká metaanalýza uvádza súhrnnú prevalenciu 56,0 % u pacientov mladších než 55 rokov, 32,3 % vo veku 55–65 rokov a 20,3 % vo veku 65 rokov a viac. Tento zdanlivo obrátený vekový gradient nemožno čítať ako dôkaz, že mladší dialyzovaní sú krehkejší než starší – ide o združenie heterogénnych štúdií s rôznymi nástrojmi. Podporuje však presne to, čo tvrdia autori z Tbilisi: <strong>krehkosť pri dialýze nie je záležitosťou veku samotného.</strong></p>
+<p>Rovnaká metaanalýza uvádza súhrnnú prevalenciu 56,0 % u pacientov mladších než 55&nbsp;rokov, 32,3 % vo veku 55–65&nbsp;rokov a 20,3 % vo veku 65&nbsp;rokov a viac. Tento zdanlivo obrátený vekový gradient nemožno čítať ako dôkaz, že mladší dialyzovaní sú krehkejší než starší – ide o združenie heterogénnych štúdií s rôznymi nástrojmi. Podporuje však presne to, čo tvrdia autori z Tbilisi: <strong>krehkosť pri dialýze nie je záležitosťou veku samotného.</strong></p>
 
-<p>Klinický význam nálezu je dobre podložený. V kohorte 2 275 incidentných dialyzovaných pacientov bola krehkosť po adjustácii spojená s úmrtnosťou (HR 2,24; 95 % IS 1,60–3,15) a so zloženým ukazovateľom hospitalizácie alebo úmrtia (HR 1,90; 95 % IS 1,67–2,17). Skríning krehkosti pri dialýze teda nepotrebuje ospravedlnenie novou štúdiou – potrebuje zavedenie do praxe.</p>
+<p>Klinický význam nálezu je dobre podložený. V kohorte 2&nbsp;275 incidentných dialyzovaných pacientov bola krehkosť po adjustácii spojená s úmrtnosťou (HR 2,24; 95 % IS 1,60–3,15) a so zloženým ukazovateľom hospitalizácie alebo úmrtia (HR 1,90; 95 % IS 1,67–2,17). Skríning krehkosti pri dialýze teda nepotrebuje ospravedlnenie novou štúdiou – potrebuje zavedenie do praxe.</p>
 
 <h2>Kde treba byť opatrný</h2>
 
@@ -87,7 +87,7 @@ $articles[] = [
   <li><strong>Škála FRAIL je dotazníková.</strong> Zachytáva sebahodnotenie, nie výkon. Prevalencia 20 % preto nie je priamo porovnateľná s číslami zo štúdií používajúcich Friedov fyzický fenotyp s meraním sily stisku a rýchlosti chôdze.</li>
   <li><strong>Smer vzťahu s fosfatémiou nie je známy.</strong> Prierezový dizajn nerozlíši, či nižší fosfát odráža nedostatočný príjem bielkovín pri chradnutí, alebo či vyšší fosfát odráža zlé dodržiavanie liečby viažucimi látkami. Klinicky ide o dva protichodné závery.</li>
   <li><strong>Jedno centrum a viacnásobné testovanie.</strong> Bez korekcie na počet porovnaní je časť „významných“ nálezov očakávateľná náhodou.</li>
-  <li><strong>Označenie „negeriatrickí“ je zavádzajúce.</strong> Priemerný vek 54 rokov opisuje populáciu stredného až vyššieho stredného veku, nie mladých dospelých. Tvrdenie o krehkosti nezávislej od veku by presvedčivejšie doložil súbor s väčším zastúpením pacientov pod 45 rokov.</li>
+  <li><strong>Označenie „negeriatrickí“ je zavádzajúce.</strong> Priemerný vek 54&nbsp;rokov opisuje populáciu stredného až vyššieho stredného veku, nie mladých dospelých. Tvrdenie o krehkosti nezávislej od veku by presvedčivejšie doložil súbor s väčším zastúpením pacientov pod 45&nbsp;rokov.</li>
 </ol>
 
 <h2>Vecná kontrola tvrdení</h2>
@@ -103,7 +103,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Krehkosť a predkrehkosť sú u dialyzovaných pod 65 rokov časté</th>
+      <th scope="row">Krehkosť a predkrehkosť sú u dialyzovaných pod 65&nbsp;rokov časté</th>
       <td>Potvrdené</td>
       <td>V súbore 64 % pacientov nebolo zdatných. Zodpovedá to publikovanej metaanalýze aj klinickej skúsenosti.</td>
     </tr>
@@ -155,7 +155,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Štúdia z Tbilisi je malá, jednocentrová a prierezová a jej regresné nálezy nemožno preberať ako klinické závery – zvlášť nie ten o fajčení. Jej hlavné posolstvo je napriek tomu správne a užitočné: <strong>medzi dialyzovanými pacientmi vo veku 18 až 64 rokov nebolo zdatných ani 40 %</strong>. Krehkosť je pri dialyzačnej liečbe klinickou premennou naprieč vekovými skupinami a jej vyhľadávanie má byť súčasťou bežnej nefrologickej starostlivosti, nie doplnkom vyhradeným pre geriatriu.</p>
+<p>Štúdia z Tbilisi je malá, jednocentrová a prierezová a jej regresné nálezy nemožno preberať ako klinické závery – zvlášť nie ten o fajčení. Jej hlavné posolstvo je napriek tomu správne a užitočné: <strong>medzi dialyzovanými pacientmi vo veku 18 až 64&nbsp;rokov nebolo zdatných ani 40 %</strong>. Krehkosť je pri dialyzačnej liečbe klinickou premennou naprieč vekovými skupinami a jej vyhľadávanie má byť súčasťou bežnej nefrologickej starostlivosti, nie doplnkom vyhradeným pre geriatriu.</p>
 
 <h2>Súvisiace články</h2>
 

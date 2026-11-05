@@ -41,9 +41,9 @@ $articles[] = [
 
 <p>Výskumníčky Emily Brindalová a Danielle Bairdová pripravili občiansko-vedecký projekt s názvom <strong>Chart Your Fart</strong>. Išlo o mobilnú aplikáciu, prostredníctvom ktorej účastníci v reálnom čase zaznamenávali odchod črevných plynov.</p>
 
-<p>Do projektu sa zapojilo viac ako 19 000 ľudí, pričom do finálnej analýzy bolo zaradených 6416 účastníkov. Súbor bol vo všeobecnosti reprezentatívny pre austrálsku populáciu.</p>
+<p>Do projektu sa zapojilo viac ako 19&nbsp;000 ľudí, pričom do finálnej analýzy bolo zaradených 6416 účastníkov. Súbor bol vo všeobecnosti reprezentatívny pre austrálsku populáciu.</p>
 
-<p>Účastníci spolu zaznamenali <strong>360 192 epizód odchodu črevných plynov</strong> počas priemerne 10 dní sledovania. Jeden z účastníkov dokonca zaznamenával údaje 97 dní.</p>
+<p>Účastníci spolu zaznamenali <strong>360&nbsp;192 epizód odchodu črevných plynov</strong> počas priemerne 10&nbsp;dní sledovania. Jeden z účastníkov dokonca zaznamenával údaje 97&nbsp;dní.</p>
 
 <h2>Priemer: približne päťkrát denne</h2>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Štúdia zistila, že muži zaznamenávali odchod plynov častejšie než ženy. Pri takomto type výskumu však treba počítať s možnosťou rozdielneho sebazaznamenávania, takže nie je isté, či ide výlučne o biologický rozdiel.</p>
 
-<p>Podľa veku bola najvyššia frekvencia v skupine <strong>26 až 45 rokov</strong>. Najnižšie hodnoty boli zaznamenané u mladších účastníkov vo veku <strong>14 až 25 rokov</strong>.</p>
+<p>Podľa veku bola najvyššia frekvencia v skupine <strong>26 až 45&nbsp;rokov</strong>. Najnižšie hodnoty boli zaznamenané u mladších účastníkov vo veku <strong>14 až 25&nbsp;rokov</strong>.</p>
 
 <p>Zaujímavý bol aj denný rytmus. Frekvencia odchodu plynov počas dňa postupne stúpala a vrcholila tesne pred spaním. Najnižšia bola v skorých ranných hodinách. Tento priebeh je biologicky logický, pretože tvorba a odchod črevných plynov súvisia s príjmom potravy, trávením a bakteriálnou fermentáciou v čreve.</p>
 

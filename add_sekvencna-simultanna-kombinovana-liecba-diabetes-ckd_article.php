@@ -63,7 +63,7 @@ $articles[] = [
 
 <h2>Priamy dôkaz: CONFIDENCE</h2>
 
-<p>Zo štúdií citovaných v diskusii odpovedá na položenú otázku <strong>priamo iba jedna</strong>. Štúdia CONFIDENCE randomizovala účastníkov s CKD (eGFR 30 – 90 ml/min/1,73 m²), albuminúriou (pomer albumínu ku kreatinínu v moči 100 – 5 000 mg/g) a diabetom 2. typu, ktorí už užívali blokátor systému renín-angiotenzín, v pomere 1 : 1 : 1 na finerenón, empagliflozín alebo ich kombináciu. Primárnym ukazovateľom bola relatívna zmena pomeru albumínu ku kreatinínu v moči od začiatku do 180. dňa.</p>
+<p>Zo štúdií citovaných v diskusii odpovedá na položenú otázku <strong>priamo iba jedna</strong>. Štúdia CONFIDENCE randomizovala účastníkov s CKD (eGFR 30 – 90&nbsp;ml/min/1,73&nbsp;m²), albuminúriou (pomer albumínu ku kreatinínu v moči 100 – 5&nbsp;000&nbsp;mg/g) a diabetom 2. typu, ktorí už užívali blokátor systému renín-angiotenzín, v pomere 1 : 1 : 1 na finerenón, empagliflozín alebo ich kombináciu. Primárnym ukazovateľom bola relatívna zmena pomeru albumínu ku kreatinínu v moči od začiatku do 180. dňa.</p>
 
 <ul>
   <li>Kombinácia znížila albuminúriu <strong>o 29 % viac než samotný finerenón</strong> (pomer najmenších štvorcov 0,71; 95 % IS 0,61 – 0,82; p &lt; 0,001).</li>
@@ -71,9 +71,9 @@ $articles[] = [
   <li>Symptomatická hypotenzia, akútne poškodenie obličiek a hyperkaliémia vedúca k ukončeniu liečby boli podľa autorov zriedkavé.</li>
 </ul>
 
-<p>Vopred plánovaná analýza podľa kategórií rizika KDIGO priniesla dva prakticky užitočné doplnky. Prínos kombinácie bol konzistentný naprieč celým spektrom predpokladaného rizika progresie. Hyperkaliémia bola pri kombinácii <strong>častejšia</strong>, no <strong>včasný pokles eGFR o viac než 30 % do 30 dní bol menej častý u pacientov s vyšším rizikom podľa KDIGO</strong> než u pacientov s nižším rizikom. To je v protiklade s bežnou obavou, že práve najrizikovejší pacienti simultánne začatie „neunesú“.</p>
+<p>Vopred plánovaná analýza podľa kategórií rizika KDIGO priniesla dva prakticky užitočné doplnky. Prínos kombinácie bol konzistentný naprieč celým spektrom predpokladaného rizika progresie. Hyperkaliémia bola pri kombinácii <strong>častejšia</strong>, no <strong>včasný pokles eGFR o viac než 30 % do 30&nbsp;dní bol menej častý u pacientov s vyšším rizikom podľa KDIGO</strong> než u pacientov s nižším rizikom. To je v protiklade s bežnou obavou, že práve najrizikovejší pacienti simultánne začatie „neunesú“.</p>
 
-<p><strong>Hranica dôkazu:</strong> CONFIDENCE je štúdia fázy 2 s trvaním 180 dní a s <strong>náhradným ukazovateľom</strong>, albuminúriou. Nepreukázala spomalenie progresie CKD, zníženie rizika zlyhania obličiek ani zníženie počtu kardiovaskulárnych príhod. Albuminúria je uznávaný prediktor, ale zníženie albuminúrie nie je totožné so zlepšením tvrdého obličkového ukazovateľa.</p>
+<p><strong>Hranica dôkazu:</strong> CONFIDENCE je štúdia fázy 2&nbsp;s trvaním 180&nbsp;dní a s <strong>náhradným ukazovateľom</strong>, albuminúriou. Nepreukázala spomalenie progresie CKD, zníženie rizika zlyhania obličiek ani zníženie počtu kardiovaskulárnych príhod. Albuminúria je uznávaný prediktor, ale zníženie albuminúrie nie je totožné so zlepšením tvrdého obličkového ukazovateľa.</p>
 
 <h2>Argumenty prevzaté z diabetológie a ich hranice</h2>
 
@@ -81,7 +81,7 @@ $articles[] = [
 
 <h3>VERIFY: o glykemickej trvácnosti, nie o obličkách</h3>
 
-<p>Štúdia VERIFY zaradila 2 001 pacientov s <strong>novodiagnostikovaným</strong> diabetom 2. typu a HbA1c 6,5 – 7,5 %. Porovnala včasnú kombináciu vildagliptínu s metformínom oproti postupnému začatiu metformínom. Výskyt počiatočného zlyhania liečby bol <strong>43,6 % pri včasnej kombinácii oproti 62,1 % pri monoterapii</strong> (pomer rizík 0,51; 95 % IS 0,45 – 0,58; p &lt; 0,0001).</p>
+<p>Štúdia VERIFY zaradila 2&nbsp;001 pacientov s <strong>novodiagnostikovaným</strong> diabetom 2. typu a HbA1c 6,5 – 7,5 %. Porovnala včasnú kombináciu vildagliptínu s metformínom oproti postupnému začatiu metformínom. Výskyt počiatočného zlyhania liečby bol <strong>43,6 % pri včasnej kombinácii oproti 62,1 % pri monoterapii</strong> (pomer rizík 0,51; 95 % IS 0,45 – 0,58; p &lt; 0,0001).</p>
 
 <p>Pri prenose tohto výsledku treba byť presný v tom, čo znamená „zlyhanie liečby“: <strong>HbA1c ≥ 7,0 % pri dvoch po sebe nasledujúcich návštevách</strong>. Ide teda o stratu glykemickej kontroly, nie o intoleranciu, neadherenciu ani o obličkový ukazovateľ. VERIFY nie je štúdia u pacientov s CKD a netýka sa liekov, o ktorých rozhodujeme pri nefroprotekcii. Podporuje všeobecný princíp „skoršia kombinácia vydrží dlhšie“, nie konkrétne odporúčanie pre kardiorenálnu liečbu.</p>
 

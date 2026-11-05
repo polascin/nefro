@@ -63,7 +63,7 @@ $articles[] = [
 
 <p>Kľúčovým pojmom článku je <em>stage migration</em>, teda presun pacienta medzi kategóriami podľa toho, aká rovnica sa použije na výpočet eGFR.</p>
 
-<p>Podľa dostupného textu článku rovnica CKD-EPI kreatinín 2021 zaradila 37,44 % pacientov do kategórie G1, teda eGFR ≥ 90 ml/min/1,73 m². Pri použití rovnice EKFC kreatinín sa významná časť týchto pacientov presunula do kategórie G2. EKFC zaradila do G2 33,09 % pacientov, zatiaľ čo CKD-EPI 25,90 %.</p>
+<p>Podľa dostupného textu článku rovnica CKD-EPI kreatinín 2021 zaradila 37,44 % pacientov do kategórie G1, teda eGFR ≥ 90&nbsp;ml/min/1,73&nbsp;m². Pri použití rovnice EKFC kreatinín sa významná časť týchto pacientov presunula do kategórie G2. EKFC zaradila do G2 33,09 % pacientov, zatiaľ čo CKD-EPI 25,90 %.</p>
 
 <p>Tento rozdiel naznačuje, že EKFC môže byť pri diabetických pacientoch konzervatívnejšia. To môže byť výhodné, ak pomáha identifikovať pacientov, ktorí podľa jednej rovnice vyzerajú ako pacienti s normálnou alebo takmer normálnou filtráciou, ale v skutočnosti už majú vyššie renálne riziko.</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <p>Pre nefrológa z toho vyplýva, že eGFR nie je absolútna hodnota nezávislá od metódy výpočtu. Pri pacientovi s diabetom 2. typu treba vedieť, akú rovnicu laboratórium používa, najmä ak sa rozhoduje o štádiu CKD, úprave dávok liekov alebo nefrologickom sledovaní.</p>
 
-<p>V praxi má veľký význam trend. Jednorazová hodnota eGFR je menej informatívna než opakované merania v čase. Ak sa pacient podľa jednej rovnice nachádza v G1 a podľa inej v G2, klinické rozhodovanie by nemalo stáť iba na hranici 90 ml/min/1,73 m².</p>
+<p>V praxi má veľký význam trend. Jednorazová hodnota eGFR je menej informatívna než opakované merania v čase. Ak sa pacient podľa jednej rovnice nachádza v G1 a podľa inej v G2, klinické rozhodovanie by nemalo stáť iba na hranici 90&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Rozhodujúce sú aj albuminúria, krvný tlak, glykemická kontrola, prítomnosť diabetickej retinopatie, kardiovaskulárne ochorenie, liečba inhibítorom SGLT2, blokáda systému renín-angiotenzín-aldosterón a celkový rizikový profil.</p>
 

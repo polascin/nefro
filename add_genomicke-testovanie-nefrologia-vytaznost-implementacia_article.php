@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Aká je skutočná výťažnosť</h2>
 
-<p>Najcitovanejším podkladom zostáva exómové sekvenovanie v dvoch kohortách s celkovo 3 315 pacientmi s chronickým ochorením obličiek. Z nich bolo 3 037 (91,6 %) starších než 21 rokov a 1 179 (35,6 %) nebolo európskeho pôvodu.</p>
+<p>Najcitovanejším podkladom zostáva exómové sekvenovanie v dvoch kohortách s celkovo 3&nbsp;315 pacientmi s chronickým ochorením obličiek. Z nich bolo 3&nbsp;037 (91,6 %) starších než 21&nbsp;rokov a 1&nbsp;179 (35,6 %) nebolo európskeho pôvodu.</p>
 
 <div class="table-responsive" role="region" aria-label="Diagnostická výťažnosť exómového sekvenovania pri chronickom ochorení obličiek" tabindex="0">
 <table>
@@ -41,10 +41,10 @@ $articles[] = [
     <tr><th scope="col">Skupina</th><th scope="col">Diagnostický variant</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Celá kohorta</th><td>307 z 3 315 (9,3 %)</td></tr>
+    <tr><th scope="row">Celá kohorta</th><td>307 z 3&nbsp;315 (9,3 %)</td></tr>
     <tr><th scope="row">Vrodené alebo cystické ochorenie obličiek</th><td>127 z 531 (23,9 %)</td></tr>
     <tr><th scope="row">Nefropatia neznámeho pôvodu</th><td>48 z 281 (17,1 %)</td></tr>
-    <tr><th scope="row">Medicínsky významný sekundárny nález</th><td>34 z 2 187 hodnotených (1,6 %)</td></tr>
+    <tr><th scope="row">Medicínsky významný sekundárny nález</th><td>34 z 2&nbsp;187 hodnotených (1,6 %)</td></tr>
   </tbody>
 </table>
 </div>

@@ -1,7 +1,7 @@
 <?php
 /**
  * add_tirzepatid-vs-semaglutid-ucinnost-bezpecnost-nefro_article.php
- * Idempotentny publikačný skript odborného článku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie Paccola et al. (Clinical Obesity, 2026).
  */
 
@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Čo presne hodnotila nová meta-analýza</h2>
 
-<p>Paccola a kol. zahrnuli štúdie, ktoré priamo porovnávali tirzepatid so semaglutidom u dospelých s nadváhou alebo obezitou a mali najmenej 24 týždňov sledovania. Syntéza obsahovala <strong>10 štúdií a 41 381 účastníkov</strong>. Išlo o kombináciu <strong>3 randomizovaných skúšaní a 7 retrospektívnych kohort</strong>, so sledovaním približne 24 až 72 týždňov.</p>
+<p>Paccola a kol. zahrnuli štúdie, ktoré priamo porovnávali tirzepatid so semaglutidom u dospelých s nadváhou alebo obezitou a mali najmenej 24&nbsp;týždňov sledovania. Syntéza obsahovala <strong>10 štúdií a 41&nbsp;381 účastníkov</strong>. Išlo o kombináciu <strong>3 randomizovaných skúšaní a 7 retrospektívnych kohort</strong>, so sledovaním približne 24 až 72&nbsp;týždňov.</p>
 
 <p>Primárnym ukazovateľom bola percentuálna zmena telesnej hmotnosti. Sekundárne ukazovatele zahŕňali absolútnu zmenu hmotnosti, dosiahnutie prahov úbytku hmotnosti, HbA1c, celkové a gastrointestinálne nežiaduce udalosti, prerušenie liečby pre nežiaduce udalosti a SAE.</p>
 
@@ -45,7 +45,7 @@ $articles[] = [
 
 <ul>
   <li>rozdiel v percentuálnej zmene hmotnosti: <strong>−4,28 percentuálneho bodu</strong> (95 % interval spoľahlivosti [IS] −5,28 až −3,28),</li>
-  <li>rozdiel v absolútnom úbytku: <strong>−4,43 kg</strong> (95 % IS −5,56 až −3,30),</li>
+  <li>rozdiel v absolútnom úbytku: <strong>−4,43&nbsp;kg</strong> (95 % IS −5,56 až −3,30),</li>
   <li>vyššia pravdepodobnosť dosiahnutia úbytku najmenej 10 %, 15 % a 20 %,</li>
   <li>bez významného rozdielu v dosiahnutí úbytku najmenej 5 %,</li>
   <li>väčšie zníženie HbA1c: <strong>−0,29 %</strong>; <em>P</em> = 0,0002.</li>
@@ -68,7 +68,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Absolútny úbytok hmotnosti</th>
-      <td>MD −4,43 kg</td>
+      <td>MD −4,43&nbsp;kg</td>
       <td>Závisí od vstupnej hmotnosti, dávky, adherencie a trvania liečby</td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ $articles[] = [
   <li><strong>Rôzne populácie:</strong> pacienti s obezitou bez diabetu a pacienti s diabetom nemajú rovnaké východiskové riziko ani rovnaké terapeutické ciele.</li>
   <li><strong>Rôzne dávky a titrácia:</strong> výsledok závisí od toho, či boli porovnávané maximálne tolerované dávky a ako rýchlo sa k nim pacienti dostali.</li>
   <li><strong>Zložený ukazovateľ SAE:</strong> bez podrobného rozpisu udalostí nemožno odvodiť špecifický nefrologický mechanizmus.</li>
-  <li><strong>Obmedzené trvanie:</strong> 24 až 72 týždňov nemusí zachytiť vzácne alebo neskoré komplikácie.</li>
+  <li><strong>Obmedzené trvanie:</strong> 24 až 72&nbsp;týždňov nemusí zachytiť vzácne alebo neskoré komplikácie.</li>
   <li><strong>Absolútne riziko:</strong> relatívne riziko 1,83 môže znamenať rozdiel malej alebo väčšej klinickej významnosti podľa základného rizika pacienta.</li>
 </ul>
 

@@ -35,7 +35,7 @@ $articles[] = [
 
 <h2>Čo analýza zahŕňala</h2>
 
-<p>Analýza vychádzala z údajov <strong>4 211 osôb</strong> zaradených do kohorty SHIP Trend-0. Telesné zloženie sa hodnotilo tromi spôsobmi:</p>
+<p>Analýza vychádzala z údajov <strong>4&nbsp;211 osôb</strong> zaradených do kohorty SHIP Trend-0. Telesné zloženie sa hodnotilo tromi spôsobmi:</p>
 
 <ul>
   <li><strong>klasickou antropometriou</strong> – index telesnej hmotnosti (BMI) a pomer obvodu pása a bokov,</li>

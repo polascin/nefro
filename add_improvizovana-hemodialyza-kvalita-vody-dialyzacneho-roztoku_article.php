@@ -34,7 +34,7 @@ $articles[] = [
 
 <h2>Čo je z príbehu overiteľné</h2>
 
-<p>Podľa dobových správ čínskych médií bola pacientovi diagnostikovaná urémia v roku 1993, v jeho 21 rokoch, počas posledného ročníka vysokoškolského štúdia. Šesť rokov absolvoval približne trinásť dialýz mesačne, čo vyčerpalo úspory rodiny s mesačným príjmom pod 1 500 jüanov pri cene okolo 400 jüanov za sedenie. Od roku 1996 experimentoval s vlastným riešením: kúpil použité krvné čerpadlo cez internet, dialyzačné súpravy získal cez známeho a dialyzátor stál približne 100 jüanov. Jedno sedenie ho vraj stálo okolo 60 jüanov, teda približne osminu nemocničnej ceny. Pri výkone mu asistovala matka.</p>
+<p>Podľa dobových správ čínskych médií bola pacientovi diagnostikovaná urémia v roku 1993, v jeho 21 rokoch, počas posledného ročníka vysokoškolského štúdia. Šesť rokov absolvoval približne trinásť dialýz mesačne, čo vyčerpalo úspory rodiny s mesačným príjmom pod 1&nbsp;500 jüanov pri cene okolo 400 jüanov za sedenie. Od roku 1996 experimentoval s vlastným riešením: kúpil použité krvné čerpadlo cez internet, dialyzačné súpravy získal cez známeho a dialyzátor stál približne 100 jüanov. Jedno sedenie ho vraj stálo okolo 60 jüanov, teda približne osminu nemocničnej ceny. Pri výkone mu asistovala matka.</p>
 
 <p>Rovnaké správy citujú aj stanovisko nefrológa: takýto postup ľahko vedie k infekciám a nemá sa napodobňovať. Zdravotné poistenie v tom čase pokrývalo viac než 90 % nákladov na hemodialýzu – teda hlavný dôvod improvizácie sa medzičasom zmenil.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
 
 <h2>Prečo je „len voda“ najväčší problém</h2>
 
-<p>Pri bežnom sedení s prietokom dialyzačného roztoku 500 ml/min a trvaním štyri hodiny prejde okolo membrány približne <strong>120 litrov roztoku</strong>. Pacient je od tohto objemu oddelený jedinou vrstvou – dialyzačnou membránou. Práve preto nie je kvalita vody v dialýze technická podrobnosť, ale bezpečnostný základ celej metódy.</p>
+<p>Pri bežnom sedení s prietokom dialyzačného roztoku 500&nbsp;ml/min a trvaním štyri hodiny prejde okolo membrány približne <strong>120 litrov roztoku</strong>. Pacient je od tohto objemu oddelený jedinou vrstvou – dialyzačnou membránou. Práve preto nie je kvalita vody v dialýze technická podrobnosť, ale bezpečnostný základ celej metódy.</p>
 
 <p>Medzinárodné normy radu ISO 23500 určujú limity, ktoré improvizovaná príprava nemá ako splniť ani ako overiť:</p>
 
@@ -97,7 +97,7 @@ $articles[] = [
 
 <h2>Zloženie roztoku nie je tri soli</h2>
 
-<p>Predstava, že dialyzačný roztok vznikne zmiešaním chloridu sodného, chloridu draselného a hydrogénuhličitanu sodného, je nebezpečné zjednodušenie. Roztok musí mať súčasne správnu koncentráciu sodíka (spravidla 135–140 mmol/l), draslíka (najčastejšie 2–3 mmol/l), vápnika (1,25–1,50 mmol/l), horčíka, hydrogénuhličitanu (približne 30–35 mmol/l) a pufrujúcej zložky, pričom všetky sa ovplyvňujú navzájom.</p>
+<p>Predstava, že dialyzačný roztok vznikne zmiešaním chloridu sodného, chloridu draselného a hydrogénuhličitanu sodného, je nebezpečné zjednodušenie. Roztok musí mať súčasne správnu koncentráciu sodíka (spravidla 135–140&nbsp;mmol/l), draslíka (najčastejšie 2–3&nbsp;mmol/l), vápnika (1,25–1,50&nbsp;mmol/l), horčíka, hydrogénuhličitanu (približne 30–35&nbsp;mmol/l) a pufrujúcej zložky, pričom všetky sa ovplyvňujú navzájom.</p>
 
 <p>Dôsledky chýb sú okamžité a merateľné v minútach, nie v mesiacoch:</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 <ol>
   <li><strong>Detektor vzduchu</strong> s uzáverom venóznej linky – vzduchová embólia je pri mimotelovom obehu bezprostredne smrteľná komplikácia.</li>
   <li><strong>Detektor úniku krvi</strong> do dialyzačného roztoku pri prasknutí membrány.</li>
-  <li><strong>Kontrola teploty</strong> – roztok nad približne 42 °C spôsobuje hemolýzu.</li>
+  <li><strong>Kontrola teploty</strong> – roztok nad približne 42&nbsp;°C spôsobuje hemolýzu.</li>
   <li><strong>Meranie vodivosti</strong> ako nepretržitá kontrola zloženia roztoku.</li>
   <li><strong>Objemovo riadená ultrafiltrácia</strong> – bez nej nemožno spoľahlivo určiť, koľko tekutiny sa odobralo.</li>
   <li><strong>Tlakové alarmy</strong> arteriálnej a venóznej linky, ktoré zachytia vypadnutie ihly alebo trombózu.</li>
@@ -158,7 +158,7 @@ $articles[] = [
     <tr>
       <th scope="row">Stačí „prečistená voda“</th>
       <td>Nesprávne</td>
-      <td>Bez merania mikroorganizmov a endotoxínov nie je splnenie limitov overiteľné. Pri prietoku 500 ml/min prejde za sedenie okolo 120 litrov roztoku.</td>
+      <td>Bez merania mikroorganizmov a endotoxínov nie je splnenie limitov overiteľné. Pri prietoku 500&nbsp;ml/min prejde za sedenie okolo 120 litrov roztoku.</td>
     </tr>
     <tr>
       <th scope="row">Limit endotoxínov v dialyzačnej vode je 2 EU/ml</th>

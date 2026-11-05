@@ -36,7 +36,7 @@ $articles[] = [
 
 <h3>Nedialyzovaná CKD pri stabilnom nutričnom stave</h3>
 
-<p>Tu môže byť riadené obmedzenie bielkovín súčasťou nefroprotektívnej stratégie, najmä pri CKD G3 až G5 s rizikom progresie. Cieľom je znížiť metabolickú záťaž bez zníženia príjmu energie a bez úbytku svalovej hmoty. Ide o diétu vedenú nefrológom a nutričným terapeutom, nie o samovoľné vynechávanie jedál alebo mäsa.</p>
+<p>Tu môže byť riadené obmedzenie bielkovín súčasťou nefroprotektívnej stratégie, najmä pri CKD G3 až G5&nbsp;s rizikom progresie. Cieľom je znížiť metabolickú záťaž bez zníženia príjmu energie a bez úbytku svalovej hmoty. Ide o diétu vedenú nefrológom a nutričným terapeutom, nie o samovoľné vynechávanie jedál alebo mäsa.</p>
 
 <h3>CKD s podvýživou, krehkosťou alebo katabolizmom</h3>
 
@@ -44,13 +44,13 @@ $articles[] = [
 
 <h3>Dialyzačná liečba</h3>
 
-<p>Po začatí pravidelnej dialýzy sa pravidlá menia. Pri hemodialýze a peritoneálnej dialýze dochádza k stratám aminokyselín a k ďalšiemu katabolickému stresu; režim určený pre nedialyzovanú CKD sa preto automaticky neprenáša. KDOQI u metabolicky stabilných dospelých na udržiavacej dialýze odporúča vyšší príjem, približne <strong>1,0 až 1,2 g/kg ideálnej telesnej hmotnosti/deň</strong>. Predpis „0,6 g/kg/deň pre každého s CKD“ je preto vecne nesprávny.</p>
+<p>Po začatí pravidelnej dialýzy sa pravidlá menia. Pri hemodialýze a peritoneálnej dialýze dochádza k stratám aminokyselín a k ďalšiemu katabolickému stresu; režim určený pre nedialyzovanú CKD sa preto automaticky neprenáša. KDOQI u metabolicky stabilných dospelých na udržiavacej dialýze odporúča vyšší príjem, približne <strong>1,0 až 1,2&nbsp;g/kg ideálnej telesnej hmotnosti/deň</strong>. Predpis „0,6&nbsp;g/kg/deň pre každého s CKD“ je preto vecne nesprávny.</p>
 
 <h2>Čo hovoria odporúčania a prečo sa čísla líšia</h2>
 
-<p>KDIGO 2024 odporúča u dospelých s CKD G3 až G5, ktorí nie sú na dialýze, udržiavať príjem bielkovín približne <strong>0,8 g/kg telesnej hmotnosti/deň</strong>. U osôb s rizikom progresie odporúča vyhnúť sa vysokému príjmu nad <strong>1,3 g/kg/deň</strong>. Veľmi nízkobielkovinovú diétu možno zvážiť iba u vybraných, motivovaných a metabolicky stabilných dospelých s CKD G4 až G5, s doplnením esenciálnych aminokyselín alebo ketoanalógov tak, aby celkový príjem dosiahol približne 0,6 g/kg/deň. Takýto postup patrí do špecializovaného nutričného programu.</p>
+<p>KDIGO 2024 odporúča u dospelých s CKD G3 až G5, ktorí nie sú na dialýze, udržiavať príjem bielkovín približne <strong>0,8&nbsp;g/kg telesnej hmotnosti/deň</strong>. U osôb s rizikom progresie odporúča vyhnúť sa vysokému príjmu nad <strong>1,3&nbsp;g/kg/deň</strong>. Veľmi nízkobielkovinovú diétu možno zvážiť iba u vybraných, motivovaných a metabolicky stabilných dospelých s CKD G4 až G5, s doplnením esenciálnych aminokyselín alebo ketoanalógov tak, aby celkový príjem dosiahol približne 0,6&nbsp;g/kg/deň. Takýto postup patrí do špecializovaného nutričného programu.</p>
 
-<p>KDOQI 2020 používa prísnejšie ciele pre metabolicky stabilných dospelých s nedialyzovanou CKD G3 až G5: u pacientov bez diabetu 0,55 až 0,60 g/kg <strong>ideálnej</strong> telesnej hmotnosti/deň, pri diabete 0,6 až 0,8 g/kg/deň. Rozdiel oproti KDIGO neznamená, že jedno odporúčanie je správne a druhé chybné. Odlišujú sa populáciou, hodnotením dôkazov aj tým, akú hmotnosť používajú ako menovateľa.</p>
+<p>KDOQI 2020 používa prísnejšie ciele pre metabolicky stabilných dospelých s nedialyzovanou CKD G3 až G5: u pacientov bez diabetu 0,55 až 0,60&nbsp;g/kg <strong>ideálnej</strong> telesnej hmotnosti/deň, pri diabete 0,6 až 0,8&nbsp;g/kg/deň. Rozdiel oproti KDIGO neznamená, že jedno odporúčanie je správne a druhé chybné. Odlišujú sa populáciou, hodnotením dôkazov aj tým, akú hmotnosť používajú ako menovateľa.</p>
 
 <p><strong>Praktická nuansa:</strong> zápis „g/kg/deň“ nie je plnohodnotný recept. Treba uviesť, či ide o aktuálnu, ideálnu alebo upravenú telesnú hmotnosť. Pri obezite, edémoch, amputácii alebo rýchlej zmene hmotnosti musí menovateľ určiť nutričný odborník v klinickom kontexte.</p>
 
@@ -64,15 +64,15 @@ $articles[] = [
 
 <h2>Starší pacient: nejde o jednoduchý konflikt dvoch odporúčaní</h2>
 
-<p>Geriatrické odporúčania často pracujú s príjmom nad 1,0 g/kg/deň na prevenciu podvýživy a sarkopénie. Tento cieľ však nemožno automaticky preniesť na každého staršieho pacienta s CKD. Spoločný kritický prehľad ERN-ERA a ESPEN odporúča najprv určiť naliehavejší problém: pri dobrom nutričnom stave a progredujúcej pokročilej CKD môže mať prednosť kontrolovaná reštrikcia; pri PEW, podvýžive alebo stabilnej funkcii obličiek treba reštrikciu odložiť alebo ju vôbec nezavádzať.</p>
+<p>Geriatrické odporúčania často pracujú s príjmom nad 1,0&nbsp;g/kg/deň na prevenciu podvýživy a sarkopénie. Tento cieľ však nemožno automaticky preniesť na každého staršieho pacienta s CKD. Spoločný kritický prehľad ERN-ERA a ESPEN odporúča najprv určiť naliehavejší problém: pri dobrom nutričnom stave a progredujúcej pokročilej CKD môže mať prednosť kontrolovaná reštrikcia; pri PEW, podvýžive alebo stabilnej funkcii obličiek treba reštrikciu odložiť alebo ju vôbec nezavádzať.</p>
 
-<p>V observačnej štúdii EQUAL u ľudí vo veku najmenej 65 rokov s eGFR pod 20 ml/min/1,73 m² nebola nízkobielkovinová diéta predpísaná v bežnej klinickej praxi spojená s vyššou mortalitou ani so zhoršením globálneho nutričného hodnotenia. Keďže išlo o observačné údaje, výsledok nepotvrdzuje bezpečnosť pre každého jednotlivca. Interakcie s vekom nad 75 rokov, nižším nutričným skóre a vyššou komorbiditou naopak zdôrazňujú potrebu častejšieho monitorovania.</p>
+<p>V observačnej štúdii EQUAL u ľudí vo veku najmenej 65&nbsp;rokov s eGFR pod 20&nbsp;ml/min/1,73&nbsp;m² nebola nízkobielkovinová diéta predpísaná v bežnej klinickej praxi spojená s vyššou mortalitou ani so zhoršením globálneho nutričného hodnotenia. Keďže išlo o observačné údaje, výsledok nepotvrdzuje bezpečnosť pre každého jednotlivca. Interakcie s vekom nad 75&nbsp;rokov, nižším nutričným skóre a vyššou komorbiditou naopak zdôrazňujú potrebu častejšieho monitorovania.</p>
 
 <h2>Kvalita bielkovín: rastlinné neznamená automaticky lepšie ani menej hodnotné</h2>
 
 <p>Rastlinné stravovacie vzorce môžu pri CKD zlepšiť príjem vlákniny, znížiť kyslú nálož a znížiť biologickú dostupnosť fosforu, ktorý je v mnohých rastlinných potravinách viazaný vo fytáte. Výhodou môže byť aj nižší podiel ultraprocesovaných mäsových výrobkov s fosfátovými a sodnými aditívami. Klinické výsledky však nemožno prisúdiť jednej aminokyseline alebo jednej potravine; rozhoduje celkový stravovací vzorec.</p>
 
-<p>Koncept PLADO (<em>plant-dominant low-protein diet</em>) opisuje nízkobielkovinový režim s 0,6 až 0,8 g/kg/deň, v ktorom viac než polovica bielkovín pochádza z rastlinných zdrojov. Je to užitočný model na plánovanie jedla, nie univerzálne usmernenie ani dôkaz, že hranica 50 % funguje pre každého pacienta.</p>
+<p>Koncept PLADO (<em>plant-dominant low-protein diet</em>) opisuje nízkobielkovinový režim s 0,6 až 0,8&nbsp;g/kg/deň, v ktorom viac než polovica bielkovín pochádza z rastlinných zdrojov. Je to užitočný model na plánovanie jedla, nie univerzálne usmernenie ani dôkaz, že hranica 50 % funguje pre každého pacienta.</p>
 
 <p>Rastlinné bielkoviny netreba označovať za „nekompletné“ v zmysle, že musia byť doplnené v každom jedle. Pri pestrej strave sa esenciálne aminokyseliny bežne dopĺňajú v rámci celého dňa. Pri nízkom celkovom príjme, u staršieho pacienta alebo pri prevažne vegánskej strave však treba cielene posúdiť dostatok bielkovín, energie, leucínu, vitamínu B<sub>12</sub> a ďalších rizikových živín.</p>
 
@@ -86,9 +86,9 @@ $articles[] = [
 
 <p>Ketoanalógy esenciálnych aminokyselín umožňujú znížiť dusíkovú záťaž veľmi nízkobielkovinovej diéty bez toho, aby pacientovi chýbali prekurzory esenciálnych aminokyselín. Nemajú však samostatný účinok mimo správne nastavenej diéty a bez dostatočného príjmu energie.</p>
 
-<p>Randomizovaná štúdia z roku 2016 ukázala možný prínos vegetariánskej veľmi nízkobielkovinovej diéty s ketoanalógmi u starostlivo vybraných nedialyzovaných pacientov s eGFR pod 30 ml/min/1,73 m², dobrým nutričným stavom a preukázanou adherenciou. Do randomizácie sa však dostalo iba 14 % skrínovaných osôb, čo výrazne obmedzuje prenositeľnosť výsledku do bežnej ambulancie.</p>
+<p>Randomizovaná štúdia z roku 2016 ukázala možný prínos vegetariánskej veľmi nízkobielkovinovej diéty s ketoanalógmi u starostlivo vybraných nedialyzovaných pacientov s eGFR pod 30&nbsp;ml/min/1,73&nbsp;m², dobrým nutričným stavom a preukázanou adherenciou. Do randomizácie sa však dostalo iba 14 % skrínovaných osôb, čo výrazne obmedzuje prenositeľnosť výsledku do bežnej ambulancie.</p>
 
-<p>Naopak, pragmatická randomizovaná štúdia ERIKA u 223 pacientov s CKD G4 až G5 nepriniesla pri predpísaní veľmi nízkobielkovinovej diéty s ketoanalógmi oproti štandardnej nízkobielkovinovej diéte dodatočný prínos pre prežívanie pacienta ani obličiek. Ukázala aj praktický problém: dlhodobá adherencia k prísnej reštrikcii je nízka. Meta-analýza zo 16 štúdií s 1 344 účastníkmi naznačila priaznivejší vývoj GFR a parametrov minerálového metabolizmu, ale medián sledovania bol iba 13 mesiacov a autori požadujú väčšie dlhodobé štúdie, najmä pri diabete.</p>
+<p>Naopak, pragmatická randomizovaná štúdia ERIKA u 223 pacientov s CKD G4 až G5 nepriniesla pri predpísaní veľmi nízkobielkovinovej diéty s ketoanalógmi oproti štandardnej nízkobielkovinovej diéte dodatočný prínos pre prežívanie pacienta ani obličiek. Ukázala aj praktický problém: dlhodobá adherencia k prísnej reštrikcii je nízka. Meta-analýza zo 16 štúdií s 1&nbsp;344 účastníkmi naznačila priaznivejší vývoj GFR a parametrov minerálového metabolizmu, ale medián sledovania bol iba 13&nbsp;mesiacov a autori požadujú väčšie dlhodobé štúdie, najmä pri diabete.</p>
 
 <p>Pre prax z toho vyplýva striedmy záver: ketoanalógy možno zvažovať v špecializovanom programe u vhodného a adherentného pacienta, nie ich používať ako univerzálnu náhradu kvalitnej nutričnej starostlivosti.</p>
 

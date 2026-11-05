@@ -262,7 +262,7 @@ if (!function_exists('legalNoticeSendOne')) {
 }
 
 if (!function_exists('legalNoticeRetryDelay')) {
-    /** Exponenciálny backoff v sekundách (max 1 h), rovnaký vzorec ako predtým. */
+    /** Exponenciálny backoff v sekundách (max 1 h), rovnaký vzorec ako predtým. */
     function legalNoticeRetryDelay(int $attempt): int
     {
         $attempt = max(1, $attempt);

@@ -80,11 +80,11 @@ $articles[] = [
   </table>
 </div>
 
-<p>Dve kapsuly majú obsahovať 20 mg komplexu A-9, teda približne 10 mg v jednej kapsule. Odporúčané dávkovanie distribútora je 1 až 2 kapsuly 1- až 2-krát denne počas jedla, spravidla jeden mesiac. Ako výrobca sa uvádza spoločnosť VITA Ltd. so sídlom v Petrohrade, distribútorom pre český trh je Unlimit Beauty s.r.o.<sup>[1]</sup></p>
+<p>Dve kapsuly majú obsahovať 20&nbsp;mg komplexu A-9, teda približne 10&nbsp;mg v jednej kapsule. Odporúčané dávkovanie distribútora je 1 až 2 kapsuly 1- až 2-krát denne počas jedla, spravidla jeden mesiac. Ako výrobca sa uvádza spoločnosť VITA Ltd. so sídlom v Petrohrade, distribútorom pre český trh je Unlimit Beauty s.r.o.<sup>[1]</sup></p>
 
 <h3>Dva nezhodné opisy toho istého produktu</h3>
 
-<p>Predajný a propagačný materiál v anglickom jazyku opisuje Pielotax odlišne – ako zmes nízkomolekulových peptidov s molekulovou hmotnosťou do 5 000 Da, izolovaných z obličiek teliat vo veku do 12 mesiacov.<sup>[2]</sup> Tieto dva opisy nie sú rovnocenné a nemožno ich zamieňať. Zoznam troch aminokyselín v označení produktu neurčuje:</p>
+<p>Predajný a propagačný materiál v anglickom jazyku opisuje Pielotax odlišne – ako zmes nízkomolekulových peptidov s molekulovou hmotnosťou do 5&nbsp;000 Da, izolovaných z obličiek teliat vo veku do 12&nbsp;mesiacov.<sup>[2]</sup> Tieto dva opisy nie sú rovnocenné a nemožno ich zamieňať. Zoznam troch aminokyselín v označení produktu neurčuje:</p>
 
 <ul>
   <li>konkrétne aminokyselinové sekvencie prítomných peptidov,</li>
@@ -121,7 +121,7 @@ $articles[] = [
 
 <p>Časť veľmi krátkych peptidov (di- a tripeptidov) sa síce v tenkom čreve vstrebáva prenášačovými systémami, no bez farmakokinetickej štúdie nemožno predpokladať, že neznáme peptidy komplexu A-9 prechádzajú do systémového obehu v biologicky účinnej koncentrácii. Už vôbec nemožno automaticky predpokladať ich selektívnu akumuláciu v obličkách.</p>
 
-<p>Kyselina glutámová, kyselina asparágová a alanín sú navyše bežné aminokyseliny, ktoré sa zo stravy prijímajú v množstvách rádovo v gramoch denne – teda o dva až tri rády vyšších než deklarovaných 20 mg komplexu. Ich prítomnosť preto sama osebe nevysvetľuje deklarovaný orgánovo špecifický účinok.</p>
+<p>Kyselina glutámová, kyselina asparágová a alanín sú navyše bežné aminokyseliny, ktoré sa zo stravy prijímajú v množstvách rádovo v gramoch denne – teda o dva až tri rády vyšších než deklarovaných 20&nbsp;mg komplexu. Ich prítomnosť preto sama osebe nevysvetľuje deklarovaný orgánovo špecifický účinok.</p>
 
 <h2>Pomocné látky</h2>
 
@@ -137,7 +137,7 @@ $articles[] = [
 
 <p>Karagénan (E 407) je potravinárske zahusťovadlo. Diskusia o jeho bezpečnosti sa často komplikuje zamieňaním potravinárskeho karagénanu s degradovanými formami (poligenán) používanými v experimentálnych zápalových modeloch.</p>
 
-<p>Európsky úrad pre bezpečnosť potravín (EFSA) pri prehodnotení v roku 2018 nepotvrdil nefrotoxicitu pri množstvách používaných ako prídavná látka. Skupinový prijateľný denný príjem 75 mg/kg telesnej hmotnosti/deň však označil za dočasný a upozornil na konkrétne neistoty: chýbajúcu validovanú analytickú metódu na stanovenie nízkomolekulovej frakcie pod 50 kDa, nedostatočnú charakterizáciu molekulovej hmotnosti vo väčšine toxikologických štúdií a na to, že pri modelovaní vernosti jednej značke môže expozícia v niektorých skupinách populácie prijateľný denný príjem prekročiť. Neistota sa teda týka charakterizácie látky a expozície, nie preukázaného poškodenia obličiek.<sup>[5]</sup></p>
+<p>Európsky úrad pre bezpečnosť potravín (EFSA) pri prehodnotení v roku 2018 nepotvrdil nefrotoxicitu pri množstvách používaných ako prídavná látka. Skupinový prijateľný denný príjem 75&nbsp;mg/kg telesnej hmotnosti/deň však označil za dočasný a upozornil na konkrétne neistoty: chýbajúcu validovanú analytickú metódu na stanovenie nízkomolekulovej frakcie pod 50 kDa, nedostatočnú charakterizáciu molekulovej hmotnosti vo väčšine toxikologických štúdií a na to, že pri modelovaní vernosti jednej značke môže expozícia v niektorých skupinách populácie prijateľný denný príjem prekročiť. Neistota sa teda týka charakterizácie látky a expozície, nie preukázaného poškodenia obličiek.<sup>[5]</sup></p>
 
 <h3>Octan draselný</h3>
 
@@ -152,10 +152,10 @@ $articles[] = [
 <p>Dostupná správa opisuje štúdiu vykonanú od februára do augusta 2011 v zdravotníckom centre Petrohradského inštitútu bioregulácie a gerontológie. Zaradených bolo 42 pacientov s dnavou nefropatiou:</p>
 
 <ul>
-  <li>kontrolná skupina: 15 pacientov (9 mužov, 6 žien, vek 43 až 67 rokov), ktorí dostávali len bežnú liečbu,</li>
-  <li>hlavná skupina: 27 pacientov (19 mužov, 8 žien, vek 42 až 68 rokov), ktorí popri bežnej liečbe užívali Pielotax,</li>
-  <li>sledovanie trvalo 30 dní,</li>
-  <li>dávkovanie bolo 1 až 2 kapsuly trikrát denne, 10 až 15 minút pred jedlom.<sup>[2]</sup></li>
+  <li>kontrolná skupina: 15 pacientov (9 mužov, 6 žien, vek 43 až 67&nbsp;rokov), ktorí dostávali len bežnú liečbu,</li>
+  <li>hlavná skupina: 27 pacientov (19 mužov, 8 žien, vek 42 až 68&nbsp;rokov), ktorí popri bežnej liečbe užívali Pielotax,</li>
+  <li>sledovanie trvalo 30&nbsp;dní,</li>
+  <li>dávkovanie bolo 1 až 2 kapsuly trikrát denne, 10 až 15&nbsp;minút pred jedlom.<sup>[2]</sup></li>
 </ul>
 
 <p>Autori uvádzajú ústup klinických prejavov nefropatie u 78 % liečených pacientov a pokles koncentrácie močoviny, kyseliny močovej a reziduálneho (neproteínového) dusíka. Uvádzané hodnoty zhŕňa tabuľka.</p>
@@ -234,7 +234,7 @@ $articles[] = [
   <li>rýchlosť dlhodobej straty glomerulovej filtrácie.</li>
 </ul>
 
-<p>Močovina nie je špecifickým ukazovateľom renálnej funkcie. Ovplyvňuje ju príjem bielkovín, hydratácia, katabolizmus, gastrointestinálne krvácanie, glukokortikoidy aj funkcia pečene. Pokles močoviny počas 30 dní preto nie je dôkazom regenerácie obličkového parenchýmu.</p>
+<p>Močovina nie je špecifickým ukazovateľom renálnej funkcie. Ovplyvňuje ju príjem bielkovín, hydratácia, katabolizmus, gastrointestinálne krvácanie, glukokortikoidy aj funkcia pečene. Pokles močoviny počas 30&nbsp;dní preto nie je dôkazom regenerácie obličkového parenchýmu.</p>
 
 <p>Kyselina močová je predovšetkým metabolický a terapeutický ukazovateľ dny. Jej pokles môže byť priaznivý, ale nepreukazuje zlepšenie glomerulovej filtrácie ani štruktúry obličiek.</p>
 
@@ -242,9 +242,9 @@ $articles[] = [
 
 <h3>Ani liečená skupina nedosiahla cieľovú urikémiu</h3>
 
-<p>Odborné odporúčania na liečbu dny sú v tomto bode jednoznačné. Americká reumatologická spoločnosť (ACR) v odporúčaní z roku 2020 silne odporúča stratégiu liečby k cieľu s cieľovou koncentráciou urátu pod 6 mg/dl, čo zodpovedá približne 0,36 mmol/l.<sup>[6]</sup> Európska liga proti reumatizmu (EULAR) uvádza rovnaký cieľ pod 360 µmol/l a pri ťažkej dne pod 300 µmol/l.<sup>[7]</sup></p>
+<p>Odborné odporúčania na liečbu dny sú v tomto bode jednoznačné. Americká reumatologická spoločnosť (ACR) v odporúčaní z roku 2020 silne odporúča stratégiu liečby k cieľu s cieľovou koncentráciou urátu pod 6&nbsp;mg/dl, čo zodpovedá približne 0,36&nbsp;mmol/l.<sup>[6]</sup> Európska liga proti reumatizmu (EULAR) uvádza rovnaký cieľ pod 360 µmol/l a pri ťažkej dne pod 300 µmol/l.<sup>[7]</sup></p>
 
-<p>Po 30 dňoch dosiahli muži v liečenej skupine 0,44 mmol/l (približne 7,4 mg/dl) a ženy 0,37 mmol/l (približne 6,2 mg/dl). <strong>Ani jedna skupina teda cieľovú hodnotu nedosiahla.</strong> Aj keby bol pokles reálny a spôsobil ho prípravok, výsledok by z hľadiska platných odporúčaní znamenal nedostatočne liečenú dnu.</p>
+<p>Po 30 dňoch dosiahli muži v liečenej skupine 0,44&nbsp;mmol/l (približne 7,4&nbsp;mg/dl) a ženy 0,37&nbsp;mmol/l (približne 6,2&nbsp;mg/dl). <strong>Ani jedna skupina teda cieľovú hodnotu nedosiahla.</strong> Aj keby bol pokles reálny a spôsobil ho prípravok, výsledok by z hľadiska platných odporúčaní znamenal nedostatočne liečenú dnu.</p>
 
 <h3>Štatistické nedostatky</h3>
 
@@ -265,7 +265,7 @@ $articles[] = [
 
 <p>V mechanistickej časti správy sa objavuje veta o tom, že „peptidy Cerluten regulujú metabolické procesy v bunkách obličkového tkaniva“, hoci predmetom dokumentu je Pielotax a Cerluten sa bežne propaguje ako peptidový prípravok pre nervové tkanivo. Môže ísť o chybu pri kopírovaní textu, no znižuje to dôveryhodnosť dokumentu a vyvoláva otázku, ktoré údaje sa skutočne vzťahujú na skúmaný produkt.</p>
 
-<p>Nezrovnalosť je aj v dávkovaní. Referenčná denná dávka podľa označenia produktu je 20 mg komplexu A-9 (dve kapsuly) a maximum vyplývajúce z pokynov distribútora je 40 mg (štyri kapsuly) počas jedla. V štúdii sa podávali až dve kapsuly trikrát denne, teda až 60 mg denne, a to 10 až 15 minút <em>pred</em> jedlom. Skúšaná dávka bola teda až trojnásobkom referenčnej dennej dávky a líšilo sa aj časovanie voči jedlu. Výsledky preto nemožno bez ďalších údajov prenášať na aktuálne odporúčané užívanie.</p>
+<p>Nezrovnalosť je aj v dávkovaní. Referenčná denná dávka podľa označenia produktu je 20&nbsp;mg komplexu A-9 (dve kapsuly) a maximum vyplývajúce z pokynov distribútora je 40&nbsp;mg (štyri kapsuly) počas jedla. V štúdii sa podávali až dve kapsuly trikrát denne, teda až 60&nbsp;mg denne, a to 10 až 15&nbsp;minút <em>pred</em> jedlom. Skúšaná dávka bola teda až trojnásobkom referenčnej dennej dávky a líšilo sa aj časovanie voči jedlu. Výsledky preto nemožno bez ďalších údajov prenášať na aktuálne odporúčané užívanie.</p>
 
 <h2>Širší kontext: peptidové bioregulátory</h2>
 

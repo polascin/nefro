@@ -32,17 +32,17 @@ $articles[] = [
 
 <p>Kalcifikácia koronárnych artérií (coronary artery calcification, CAC) patrí k hlavným štrukturálnym prejavom kardiovaskulárneho poškodenia pri chronickej chorobe obličiek (chronic kidney disease, CKD). Kým v bežnej populácii odráža predovšetkým aterosklerotickú záťaž intimy, u pacientov s CKD sa k nej pridáva kalcifikácia médie a aktívna osteogénna prestavba buniek hladkej svaloviny ciev (vascular smooth muscle cells, VSMC) v prostredí poruchy minerálového a kostného metabolizmu (CKD-mineral and bone disorder, CKD-MBD). Jednorazové stanovenie vápnikového skóre pritom zachytí len doterajší súčet zmien, nie aktuálne tempo, akým proces napreduje. [1,2]</p>
 
-<p>Retrospektívna longitudinálna štúdia autorov z Čchung-čchingu, publikovaná v septembri 2026 v časopise <em>Frontiers in Medicine</em> a zhrnutá aj v spravodajstve <em>Physicians Weekly</em>, sledovala trajektórie CAC u 800 pacientov so sériovými vyšetreniami hrudníka výpočtovou tomografiou (CT). Práca kvantifikovala strmý nárast ročného tempa kalcifikácie od včasných štádií CKD až po dialýzu a určila nelineárne prahy pre vstupný sérový horčík (0,82 mmol/l) a parathormón (PTH; 120 pg/ml). [1,3]</p>
+<p>Retrospektívna longitudinálna štúdia autorov z Čchung-čchingu, publikovaná v septembri 2026 v časopise <em>Frontiers in Medicine</em> a zhrnutá aj v spravodajstve <em>Physicians Weekly</em>, sledovala trajektórie CAC u 800 pacientov so sériovými vyšetreniami hrudníka výpočtovou tomografiou (CT). Práca kvantifikovala strmý nárast ročného tempa kalcifikácie od včasných štádií CKD až po dialýzu a určila nelineárne prahy pre vstupný sérový horčík (0,82&nbsp;mmol/l) a parathormón (PTH; 120&nbsp;pg/ml). [1,3]</p>
 
 <p>Text nižšie podrobne rozoberá metodiku a číselné výsledky primárnej práce, upozorňuje na dôležité podskupinové rozdiely, ktoré sekundárne zhrnutia vynechali, a konfrontuje tieto observačné nálezy s odporúčaniami KDIGO aj s výsledkami randomizovaných klinických štúdií perorálnej suplementácie horčíka.</p>
 
 <h2>Dizajn štúdie, výber súboru a hodnotenie kalcifikácie</h2>
 
-<p>Analýza zahŕňala dospelých pacientov s CKD (definovanou ako štrukturálne alebo funkčné postihnutie obličiek trvajúce dlhšie ako 3 mesiace), ktorí boli v období od januára 2017 do januára 2025 pravidelne sledovaní na Nefrologickom oddelení a v Hemodialyzačnom centre Druhej fakultnej nemocnice Čchungčchinskej lekárskej univerzity (The Second Affiliated Hospital of Chongqing Medical University). Zo 874 skrínovaných osôb so sériovými CT vyšetreniami hrudníka autori vylúčili 74 pacientov: 12 pre akútnu kardiovaskulárnu príhodu na začiatku sledovania, 14 pre primárnu hyperparatyreózu, 40 pre zmenu dlhodobej suplementácie horčíka alebo viazačov fosfátov v priebehu posledných troch mesiacov pred vstupným vyšetrením, 6 pre aktívnu malignitu alebo očakávané prežívanie kratšie než 1 rok a 2 pre tehotenstvo či dojčenie. [1]</p>
+<p>Analýza zahŕňala dospelých pacientov s CKD (definovanou ako štrukturálne alebo funkčné postihnutie obličiek trvajúce dlhšie ako 3&nbsp;mesiace), ktorí boli v období od januára 2017 do januára 2025 pravidelne sledovaní na Nefrologickom oddelení a v Hemodialyzačnom centre Druhej fakultnej nemocnice Čchungčchinskej lekárskej univerzity (The Second Affiliated Hospital of Chongqing Medical University). Zo 874 skrínovaných osôb so sériovými CT vyšetreniami hrudníka autori vylúčili 74 pacientov: 12 pre akútnu kardiovaskulárnu príhodu na začiatku sledovania, 14 pre primárnu hyperparatyreózu, 40 pre zmenu dlhodobej suplementácie horčíka alebo viazačov fosfátov v priebehu posledných troch mesiacov pred vstupným vyšetrením, 6 pre aktívnu malignitu alebo očakávané prežívanie kratšie než 1 rok a 2 pre tehotenstvo či dojčenie. [1]</p>
 
 <p>Do výslednej kohorty vstúpilo <strong>800 pacientov</strong> (482 mužov, teda 60,3 %; priemerný vek 59,2 ± 12,8 roka). Podľa vstupnej odhadovanej glomerulovej filtrácie (eGFR), ktorú autori počítali rovnicou MDRD, a podľa dialyzačnej liečby bol súbor rozdelený do štyroch skupín: štádiá CKD G1 až G2 (n = 120; 15,0 %), štádium CKD G3 (n = 100; 12,5 %), nedialyzované štádiá CKD G4 až G5 (n = 380; 47,5 %) a dialyzovaní pacienti (n = 200; 25,0 %). Pacienti s pokročilou CKD G4 až G5 a pacienti na dialýze tak tvorili spolu <strong>72,5 % celého súboru</strong> (580 z 800 osôb), čo treba mať na pamäti pri interpretácii celkových modelov. [1]</p>
 
-<p>Podmienkou zaradenia boli najmenej dve CT vyšetrenia hrudníka s vyhodnotením CAC v odstupe aspoň 6 mesiacov. Dôležitou metodickou črtou je, že CT vyšetrenia neboli vykonávané v rámci plošného skríningového protokolu, ale z klinickej indikácie ošetrujúceho lekára (podozrenie na kardiovaskulárne alebo kardiopulmonálne ochorenie, kontrola známeho nálezu alebo predoperačné posúdenie). Celkovo bolo analyzovaných 2 320 CT skenov (priemer 2,9 a medián 3 vyšetrenia na pacienta, rozsah od 2 do 5; medián odstupu medzi po sebe nasledujúcimi vyšetreniami bol 9,8 mesiaca, medzikvartilové rozpätie [IQR] 6,5 až 13,2 mesiaca). Medián celkového sledovania dosiahol <strong>20,5 mesiaca</strong> (IQR 11,0 až 32,0 mesiaca; rozsah od 6 do 36 mesiacov), pričom 112 pacientov (14,0 %) bolo sledovaných kratšie než 12 mesiacov, 328 (41,0 %) od 12 do 24 mesiacov a 360 (45,0 %) od 24 do 36 mesiacov. [1]</p>
+<p>Podmienkou zaradenia boli najmenej dve CT vyšetrenia hrudníka s vyhodnotením CAC v odstupe aspoň 6&nbsp;mesiacov. Dôležitou metodickou črtou je, že CT vyšetrenia neboli vykonávané v rámci plošného skríningového protokolu, ale z klinickej indikácie ošetrujúceho lekára (podozrenie na kardiovaskulárne alebo kardiopulmonálne ochorenie, kontrola známeho nálezu alebo predoperačné posúdenie). Celkovo bolo analyzovaných 2&nbsp;320 CT skenov (priemer 2,9 a medián 3 vyšetrenia na pacienta, rozsah od 2 do 5; medián odstupu medzi po sebe nasledujúcimi vyšetreniami bol 9,8 mesiaca, medzikvartilové rozpätie [IQR] 6,5 až 13,2 mesiaca). Medián celkového sledovania dosiahol <strong>20,5 mesiaca</strong> (IQR 11,0 až 32,0 mesiaca; rozsah od 6 do 36&nbsp;mesiacov), pričom 112 pacientov (14,0 %) bolo sledovaných kratšie než 12&nbsp;mesiacov, 328 (41,0 %) od 12 do 24&nbsp;mesiacov a 360 (45,0 %) od 24 do 36&nbsp;mesiacov. [1]</p>
 
 <p>Skóre CAC sa stanovovalo Agatstonovou metódou na multidetektorovom špirálovom CT v štyroch hlavných povodiach (pravá koronárna artéria, kmeň ľavej koronárnej artérie, ramus interventricularis anterior a ramus circumflexus). Primárnym sledovaným ukazovateľom bola <strong>rýchla progresia CAC</strong>, definovaná kombinovaným kritériom ako absolútny ročný prírastok Agatstonovho skóre najmenej o 100 jednotiek za rok alebo relatívny ročný nárast najmenej o 10 % (pričom pri východiskovom skóre CAC 100 jednotiek a menej slúžila ako menovateľ práve táto nízka vstupná hodnota, keďže v pásme nízkeho vápnikového skóre by samotný absolútny prah 100 jednotiek zachytil len extrémne zmeny). Trajektórie celkového CAC skóre v čase autori modelovali lineárnym modelom so zmiešanými efektmi po logaritmickej transformácii ln(CAC + 1), nelineárne vzťahy hodnotili obmedzenými kubickými splajnami (uzly na 5., 35., 65. a 95. percentile) v kombinácii s multivariabilnou logistickou regresiou a výber premenných do predikčného nomogramu vykonali penalizovanou regresiou LASSO. [1]</p>
 
@@ -75,7 +75,7 @@ $articles[] = [
       <td>0,002</td>
     </tr>
     <tr>
-      <th scope="row">eGFR (ml/min/1,73 m², medián, IQR)</th>
+      <th scope="row">eGFR (ml/min/1,73&nbsp;m², medián, IQR)</th>
       <td>22,5 (12,8 až 42,6)</td>
       <td>86,5 (72,5 až 102,5)</td>
       <td>48,5 (40,5 až 56,5)</td>
@@ -93,7 +93,7 @@ $articles[] = [
       <td>&lt; 0,001</td>
     </tr>
     <tr>
-      <th scope="row">Hypomagneziémia (&lt; 0,75 mmol/l), n (%)</th>
+      <th scope="row">Hypomagneziémia (&lt; 0,75&nbsp;mmol/l), n (%)</th>
       <td>168 (21,0 %)</td>
       <td>14 (11,7 %)</td>
       <td>16 (16,0 %)</td>
@@ -161,19 +161,19 @@ $articles[] = [
 
 <p>Na konci sledovania stúpol medián CAC skóre v celej kohorte z 98,6 na 156,2 Agatstonovej jednotky (IQR 32,5 až 512,6) a kritérium rýchlej progresie splnilo <strong>348 z 800 pacientov (43,5 %)</strong>. V lineárnom modeli so zmiešanými efektmi upravenom o vek, pohlavie a vstupnú anamnézu kardiovaskulárneho ochorenia rástlo skóre CAC v čase (β = 0,168; 95 % interval spoľahlivosti [IS] 0,138 až 0,198; p &lt; 0,001) s vysoko významnou interakciou medzi dĺžkou sledovania a štádiom CKD (p &lt; 0,001). Modelované mediány CAC skóre po troch rokoch sledovania rástli v štádiu CKD G1 až G2 z 35,6 na 46,2 jednotky, v štádiu G3 zo 72,5 na 105,6 jednotky, v nedialyzovaných štádiách G4 až G5 zo 132,5 na 260,5 jednotky a u dialyzovaných pacientov z 272,5 až na 629,5 jednotky. [1]</p>
 
-<p>Z klinického hľadiska sú na tejto trajektórii podstatné dva momenty. Po prvé, ročné tempo progresie u dialyzovaných pacientov (29,5 %/rok) bolo viac než trojnásobné oproti štádiu CKD G1 až G2 (8,5 %/rok). Po druhé, výrazný skok nastal už v predialyzačných štádiách CKD G4 až G5 (22,8 %/rok) – akcelerácia cievnej kalcifikácie sa teda začína dávno pred zahájením liečby nahrádzajúcej funkciu obličiek. Pozornosť si zaslúži aj údaj z plného textu, že u 112 pacientov sledovaných kratšie než 12 mesiacov bol medián anualizovanej progresie vyšší než u osôb sledovaných najmenej 24 mesiacov (20,2 %/rok oproti 16,8 %/rok). Okrem skutočnej včasnej akcelerácie to však môže odrážať aj skutočnosť, že skoršie kontrolné CT vyšetrenie podstupovali pacienti so zhoršením klinického stavu. [1]</p>
+<p>Z klinického hľadiska sú na tejto trajektórii podstatné dva momenty. Po prvé, ročné tempo progresie u dialyzovaných pacientov (29,5&nbsp;%/rok) bolo viac než trojnásobné oproti štádiu CKD G1 až G2 (8,5&nbsp;%/rok). Po druhé, výrazný skok nastal už v predialyzačných štádiách CKD G4 až G5 (22,8&nbsp;%/rok) – akcelerácia cievnej kalcifikácie sa teda začína dávno pred zahájením liečby nahrádzajúcej funkciu obličiek. Pozornosť si zaslúži aj údaj z plného textu, že u 112 pacientov sledovaných kratšie než 12&nbsp;mesiacov bol medián anualizovanej progresie vyšší než u osôb sledovaných najmenej 24&nbsp;mesiacov (20,2&nbsp;%/rok oproti 16,8&nbsp;%/rok). Okrem skutočnej včasnej akcelerácie to však môže odrážať aj skutočnosť, že skoršie kontrolné CT vyšetrenie podstupovali pacienti so zhoršením klinického stavu. [1]</p>
 
 <h2>Nelineárne prahy pre horčík a PTH: kde asociácia platí</h2>
 
 <p>Analýza obmedzenými kubickými splajnami ukázala, že vzťah sérového horčíka a PTH k rýchlej progresii CAC nie je lineárny:</p>
 
 <ul>
-  <li><strong>Sérový horčík – krivka tvaru L (p pre nelinearitu = 0,028):</strong> pri hodnotách pod bodom zlomu <strong>0,82 mmol/l</strong> pravdepodobnosť rýchlej progresie CAC s klesajúcou magneziémiou strmo rástla, zatiaľ čo nad hranicou 0,82 mmol/l sa ďalší pokles rizika stabilizoval do plató. V multivariabilnom logistickom modeli upravenom o vek, pohlavie, diabetes, hypertenziu, vstupnú eGFR, dialyzačný status, sérový vápnik, sérový fosfor a albumín bola hodnota horčíka pod 0,82 mmol/l spojená s viac než dvojnásobnou šancou rýchlej progresie CAC oproti hodnotám ≥ 0,82 mmol/l (<strong>upravený pomer šancí [OR] 2,18; 95 % IS 1,60 až 2,98; p &lt; 0,001</strong>; v jednorozmernej analýze OR 2,52; 95 % IS 1,88 až 3,38). Všimnime si prakticky dôležitý detail: identifikovaný prah 0,82 mmol/l leží nad konvenčnou laboratórnou dolnou hranicou normy (0,75 mmol/l), takže zvýšené riziko v tejto kohorte zahŕňalo aj pacientov v dolnom pásme bežného referenčného intervalu. [1]</li>
-  <li><strong>Parathormón – krivka tvaru J (p pre nelinearitu = 0,015):</strong> do koncentrácie <strong>120 pg/ml</strong> rástlo riziko pozvoľna, nad prahom 120 pg/ml sa sklon krivky prudko zvýšil; pri veľmi nízkych hodnotách PTH autori pozorovali len štatisticky nevýznamný trend k vyššiemu riziku. V plne upravenom modeli bol vstupný PTH ≥ 120 pg/ml spojený s viac než dvojnásobnou šancou rýchlej progresie CAC oproti hodnotám pod 120 pg/ml (<strong>upravený OR 2,15; 95 % IS 1,58 až 2,92; p &lt; 0,001</strong>; jednorozmerne OR 2,45; 95 % IS 1,85 až 3,25). Medzi horčíkom a PTH sa pri súčasnom zaradení do modelu nepreukázala štatisticky významná interakcia (p pre interakciu = 0,298). [1]</li>
+  <li><strong>Sérový horčík – krivka tvaru L (p pre nelinearitu = 0,028):</strong> pri hodnotách pod bodom zlomu <strong>0,82&nbsp;mmol/l</strong> pravdepodobnosť rýchlej progresie CAC s klesajúcou magneziémiou strmo rástla, zatiaľ čo nad hranicou 0,82&nbsp;mmol/l sa ďalší pokles rizika stabilizoval do plató. V multivariabilnom logistickom modeli upravenom o vek, pohlavie, diabetes, hypertenziu, vstupnú eGFR, dialyzačný status, sérový vápnik, sérový fosfor a albumín bola hodnota horčíka pod 0,82&nbsp;mmol/l spojená s viac než dvojnásobnou šancou rýchlej progresie CAC oproti hodnotám ≥ 0,82&nbsp;mmol/l (<strong>upravený pomer šancí [OR] 2,18; 95 % IS 1,60 až 2,98; p &lt; 0,001</strong>; v jednorozmernej analýze OR 2,52; 95 % IS 1,88 až 3,38). Všimnime si prakticky dôležitý detail: identifikovaný prah 0,82&nbsp;mmol/l leží nad konvenčnou laboratórnou dolnou hranicou normy (0,75&nbsp;mmol/l), takže zvýšené riziko v tejto kohorte zahŕňalo aj pacientov v dolnom pásme bežného referenčného intervalu. [1]</li>
+  <li><strong>Parathormón – krivka tvaru J (p pre nelinearitu = 0,015):</strong> do koncentrácie <strong>120&nbsp;pg/ml</strong> rástlo riziko pozvoľna, nad prahom 120&nbsp;pg/ml sa sklon krivky prudko zvýšil; pri veľmi nízkych hodnotách PTH autori pozorovali len štatisticky nevýznamný trend k vyššiemu riziku. V plne upravenom modeli bol vstupný PTH ≥ 120&nbsp;pg/ml spojený s viac než dvojnásobnou šancou rýchlej progresie CAC oproti hodnotám pod 120&nbsp;pg/ml (<strong>upravený OR 2,15; 95 % IS 1,58 až 2,92; p &lt; 0,001</strong>; jednorozmerne OR 2,45; 95 % IS 1,85 až 3,25). Medzi horčíkom a PTH sa pri súčasnom zaradení do modelu nepreukázala štatisticky významná interakcia (p pre interakciu = 0,298). [1]</li>
   <li><strong>Kyselina močová – približne lineárny vzťah (p pre nelinearitu = 0,382):</strong> každé zvýšenie o 50 µmol/l bolo v upravenom modeli spojené s hranične vyššou šancou rýchlej progresie CAC (<strong>upravený OR 1,14; 95 % IS 1,00 až 1,30; p = 0,048</strong>; jednorozmerne OR 1,20; 95 % IS 1,06 až 1,36; p = 0,005). Pri autormi deklarovanej Bonferroniho korekcii pre viacnásobné testovanie (p &lt; 0,017) však tento upravený odhad prísny prah štatistickej významnosti neprekročil. [1]</li>
 </ul>
 
-<p>Podskupinová analýza v plnom texte priniesla spresnenie, ktoré v sekundárnej správe chýba. Kým asociácia nižšieho sérového horčíka s rýchlou progresiou CAC bola konzistentná naprieč štádiami CKD (s miernym oslabením u dialyzovaných na OR 1,89), asociácia <strong>PTH ≥ 120 pg/ml bola štatisticky významná v štádiách CKD G4 až G5 a na dialýze (OR 2,62; 95 % IS 1,80 až 3,82), ale nie v štádiách CKD G1 až G3 (OR 1,42; 95 % IS 0,92 až 2,18)</strong>. Prah PTH 120 pg/ml teda v tejto práci odrážal predovšetkým metabolickú situáciu pokročilej nefropatie, kde už sekundárna hyperparatyreóza a fosfátová retencia pôsobia plnou silou. [1]</p>
+<p>Podskupinová analýza v plnom texte priniesla spresnenie, ktoré v sekundárnej správe chýba. Kým asociácia nižšieho sérového horčíka s rýchlou progresiou CAC bola konzistentná naprieč štádiami CKD (s miernym oslabením u dialyzovaných na OR 1,89), asociácia <strong>PTH ≥ 120&nbsp;pg/ml bola štatisticky významná v štádiách CKD G4 až G5 a na dialýze (OR 2,62; 95 % IS 1,80 až 3,82), ale nie v štádiách CKD G1 až G3 (OR 1,42; 95 % IS 0,92 až 2,18)</strong>. Prah PTH 120&nbsp;pg/ml teda v tejto práci odrážal predovšetkým metabolickú situáciu pokročilej nefropatie, kde už sekundárna hyperparatyreóza a fosfátová retencia pôsobia plnou silou. [1]</p>
 
 <h2>Sedemfaktorový predikčný nomogram a jeho metodické úskalia</h2>
 
@@ -194,7 +194,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Sérový horčík &lt; 0,82 mmol/l</th>
+      <th scope="row">Sérový horčík &lt; 0,82&nbsp;mmol/l</th>
       <td>0,305</td>
       <td>0,845</td>
       <td>2,33 (1,70 až 3,20)</td>
@@ -202,7 +202,7 @@ $articles[] = [
       <td>35</td>
     </tr>
     <tr>
-      <th scope="row">PTH ≥ 120 pg/ml</th>
+      <th scope="row">PTH ≥ 120&nbsp;pg/ml</th>
       <td>0,282</td>
       <td>0,778</td>
       <td>2,18 (1,60 až 2,96)</td>
@@ -234,7 +234,7 @@ $articles[] = [
       <td>16</td>
     </tr>
     <tr>
-      <th scope="row">Vek (na každých +10 rokov)</th>
+      <th scope="row">Vek (na každých +10&nbsp;rokov)</th>
       <td>0,078</td>
       <td>0,292</td>
       <td>1,34 (1,16 až 1,55)</td>
@@ -242,7 +242,7 @@ $articles[] = [
       <td>12</td>
     </tr>
     <tr>
-      <th scope="row">Vstupná eGFR (na každých +10 ml/min/1,73 m²)</th>
+      <th scope="row">Vstupná eGFR (na každých +10&nbsp;ml/min/1,73&nbsp;m²)</th>
       <td>−0,045</td>
       <td>−0,142</td>
       <td>0,87 (0,79 až 0,96)</td>
@@ -253,12 +253,12 @@ $articles[] = [
 </table>
 </div>
 
-<p>Podľa súčtu bodov autori rozdelili pacientov do troch pásiem predpokladanej pravdepodobnosti rýchlej progresie CAC: <strong>nízke riziko</strong> (&lt; 45 bodov; predpokladaná pravdepodobnosť &lt; 10 %), <strong>stredné riziko</strong> (45 až 135 bodov; pravdepodobnosť 10 až 60 %) a <strong>vysoké riziko</strong> (&gt; 135 bodov; pravdepodobnosť &gt; 60 %). Optimálny prah podľa Youdenovho indexu predstavoval <strong>90 bodov</strong> so senzitivitou 75,0 %, špecificitou 72,5 %, pozitívnou prediktívnou hodnotou 68,5 % a negatívnou prediktívnou hodnotou 78,8 %. C-štatistika modelu dosiahla 0,802 (95 % IS 0,772 až 0,832) a po internej validácii pomocou 1 000 bootstrapových výberov klesla na korigovanú hodnotu <strong>0,789</strong> so sklonom kalibračnej krivky 0,93 (Hosmerov-Lemeshowov test p = 0,385). [1]</p>
+<p>Podľa súčtu bodov autori rozdelili pacientov do troch pásiem predpokladanej pravdepodobnosti rýchlej progresie CAC: <strong>nízke riziko</strong> (&lt; 45 bodov; predpokladaná pravdepodobnosť &lt; 10 %), <strong>stredné riziko</strong> (45 až 135 bodov; pravdepodobnosť 10 až 60 %) a <strong>vysoké riziko</strong> (&gt; 135 bodov; pravdepodobnosť &gt; 60 %). Optimálny prah podľa Youdenovho indexu predstavoval <strong>90 bodov</strong> so senzitivitou 75,0 %, špecificitou 72,5 %, pozitívnou prediktívnou hodnotou 68,5 % a negatívnou prediktívnou hodnotou 78,8 %. C-štatistika modelu dosiahla 0,802 (95 % IS 0,772 až 0,832) a po internej validácii pomocou 1&nbsp;000 bootstrapových výberov klesla na korigovanú hodnotu <strong>0,789</strong> so sklonom kalibračnej krivky 0,93 (Hosmerov-Lemeshowov test p = 0,385). [1]</p>
 
 <p>Pri kritickom čítaní primárnej publikácie vystupujú do popredia tri metodické body, ktoré bránia bezprostrednému prevzatiu nomogramu do bežnej ambulantnej praxe:</p>
 
 <ol>
-  <li><strong>Nejasné dosadzovanie eGFR u dialyzovaných pacientov:</strong> vo vstupnej tabuľke autori pre skupinu dialyzovaných pacientov uvádzajú eGFR ako neaplikovateľnú (<code>NA</code>), no vo finálnom modeli figuruje súčasne binárny ukazovateľ dialýzy (+26 bodov) aj kontinuálna hodnota eGFR (−6 bodov na každých +10 ml/min/1,73 m²) bez toho, aby text spresnil, aká číselná hodnota eGFR bola pri výpočte skóre priradená dialyzovaným pacientom.</li>
+  <li><strong>Nejasné dosadzovanie eGFR u dialyzovaných pacientov:</strong> vo vstupnej tabuľke autori pre skupinu dialyzovaných pacientov uvádzajú eGFR ako neaplikovateľnú (<code>NA</code>), no vo finálnom modeli figuruje súčasne binárny ukazovateľ dialýzy (+26 bodov) aj kontinuálna hodnota eGFR (−6 bodov na každých +10&nbsp;ml/min/1,73&nbsp;m²) bez toho, aby text spresnil, aká číselná hodnota eGFR bola pri výpočte skóre priradená dialyzovaným pacientom.</li>
   <li><strong>Vyradenie vápnika a fosforu v LASSO regresii nie je biologický dôkaz:</strong> ako sami autori v diskusii pripúšťajú, nezaradenie sérového vápnika, fosforu a kyseliny močovej do finálneho nomogramu je dôsledkom štatistickej kolinearity so štádiom CKD, eGFR a PTH pri zvolenej penalizácii λ<sub>1se</sub>, nie dôkazom, že fosfátová záťaž je pri kalcifikácii nepodstatná. Práca navyše nekvantifikovala prídavnú diskriminačnú hodnotu (napríklad zmenu C-štatistiky alebo index čistej reklasifikácie) horčíka a PTH oproti štandardným parametrom CKD-MBD.</li>
   <li><strong>Absencia externej validácie:</strong> model vznikol a bol overený v jedinom centre na klinicky selektovanej čínskej populácii s opakovanými CT vyšetreniami hrudníka.</li>
 </ol>
@@ -284,17 +284,17 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Sakaguchi et al., <em>JASN</em> 2019 [5]</th>
-      <td>Otvorená RCT (2×2 faktoriálny dizajn); CKD G3 až G4 s rizikovými faktormi CAC; 125 zaradených, 96 dokončilo</td>
-      <td>Oxid horečnatý (MgO, titrovaný na sérové Mg 1,03 až 1,23 mmol/l) ± perorálny uhlíkový adsorbent AST-120 počas 2 rokov (predčasne ukončené)</td>
+      <td>Otvorená RCT (2×2 faktoriálny dizajn); CKD G3 až G4&nbsp;s rizikovými faktormi CAC; 125 zaradených, 96 dokončilo</td>
+      <td>Oxid horečnatý (MgO, titrovaný na sérové Mg 1,03 až 1,23&nbsp;mmol/l) ± perorálny uhlíkový adsorbent AST-120 počas 2&nbsp;rokov (predčasne ukončené)</td>
       <td>Menší medián relatívnej zmeny CAC skóre v skupine s MgO oproti kontrole (<strong>11,3 % oproti 39,5 %</strong>; p &lt; 0,001); podiel s ročným nárastom ≥ 15 % bol 23,9 % oproti 62,0 %</td>
       <td>Otvorený dizajn a predčasné ukončenie po priebežnej analýze; bez účinku na kalcifikáciu hrudnej aorty; vyššie prerušenie liečby pre hnačku (27 % oproti 17 %)</td>
     </tr>
     <tr>
       <th scope="row">MAGiCAL-CKD (Bressendorff et al.), <em>JASN</em> 2023 [6]</th>
-      <td>Dvojito zaslepená, placebom kontrolovaná RCT v Dánsku a Nórsku; 148 pacientov s eGFR 15 až 45 ml/min/1,73 m² (medián eGFR 25 ml/min/1,73 m²)</td>
-      <td>Pomaly sa uvoľňujúci hydroxid horečnatý 15 mmol dvakrát denne (30 mmol/deň) oproti placebu počas 12 mesiacov</td>
+      <td>Dvojito zaslepená, placebom kontrolovaná RCT v Dánsku a Nórsku; 148 pacientov s eGFR 15 až 45&nbsp;ml/min/1,73&nbsp;m² (medián eGFR 25&nbsp;ml/min/1,73&nbsp;m²)</td>
+      <td>Pomaly sa uvoľňujúci hydroxid horečnatý 15&nbsp;mmol dvakrát denne (30&nbsp;mmol/deň) oproti placebu počas 12&nbsp;mesiacov</td>
       <td>Napriek významnému vzostupu plazmatického horčíka <strong>žiadny významný rozdiel vo výslednom CAC skóre</strong> po 12 mesiacoch (vstupný medián CAC 413 v ramene s Mg a 274 v placebe)</td>
-      <td>Gastrointestinálne nežiaduce účinky u 35 zo 75 pacientov s Mg oproti 9 zo 73 s placebom; 5 úmrtí a 6 kardiovaskulárnych príhod v ramene s Mg oproti 2 úmrtiam a 0 príhodám v placebe</td>
+      <td>Gastrointestinálne nežiaduce účinky u 35 zo 75 pacientov s Mg oproti 9 zo 73&nbsp;s placebom; 5 úmrtí a 6 kardiovaskulárnych príhod v ramene s Mg oproti 2 úmrtiam a 0 príhodám v placebe</td>
     </tr>
   </tbody>
 </table>
@@ -305,9 +305,9 @@ $articles[] = [
 <h2>Čo výsledky znamenajú pre každodennú prax v kontexte KDIGO</h2>
 
 <ol>
-  <li><strong>Prah PTH ≥ 120 pg/ml nemožno mechanicky preklopiť na cieľovú hodnotu pre všetkých pacientov s CKD.</strong> Aktualizované odporúčania KDIGO pre CKD-MBD z roku 2017 zdôrazňujú, že u nedialyzovaných pacientov v štádiách CKD G3a až G5 optimálna koncentrácia intaktného PTH nie je známa; namiesto reakcie na jednu izolovanú hodnotu nad hornou hranicou normy sa má hodnotiť <strong>progresívne stúpajúci alebo trvalo zvýšený PTH</strong> a pátrať po modifikovateľných faktoroch (hyperfosfatémia, nadmerný príjem fosfátov, hypokalciémia, deficit vitamínu D), pričom rutinné podávanie kalcitriolu či analógov vitamínu D sa v predialyzačnej CKD neodporúča pre zvýšené riziko hyperkalciémie. U dialyzovaných pacientov (CKD G5D) KDIGO odporúča udržiavať iPTH v pásme približne <strong>2- až 9-násobku hornej hranice normy laboratória</strong> (približne 130 až 600 pg/ml). Prah 120 pg/ml zo štúdie Chen et al. teda u dialyzovaného pacienta leží tesne pod dolnou hranicou odporúčaného cieľového pásma. Snaha agresívne stlačiť PTH u dialyzovaného pacienta pod 120 pg/ml (napríklad vysokými dávkami kalcitriolu alebo kalciových viazačov) by hrozila navodením adynamickej kostnej choroby so zníženou schopnosťou kosti ukladať vápnik a fosfor, čo cievnu kalcifikáciu paradoxne urýchľuje. [1,7]</li>
-  <li><strong>Prítomnosť vaskulárnej kalcifikácie mení výber viazačov fosfátov.</strong> Podľa odporúčaní KDIGO 2017 patrí pacient s CKD G3a až G5D a dokázanou cievnou alebo chlopňovou kalcifikáciou do kategórie najvyššieho kardiovaskulárneho rizika, u ktorej je opodstatnené obmedziť dávku viazačov fosfátov na báze vápnika. Rýchla progresia CAC už v štádiách CKD G4 až G5 (22,8 %/rok) v čínskej kohorte podporuje včasnú kontrolu fosfátovej záťaže ešte pred zaradením do dialyzačného programu. [1,7]</li>
-  <li><strong>Sérový horčík pod 0,82 mmol/l je praktický varovný marker, nie automatická indikácia k vysokodávkovej suplementácii.</strong> Vyšetrenie magneziémie u pacienta s pokročilou CKD alebo na dialýze pomáha odhaliť nielen zjavnú hypomagneziémiu (&lt; 0,75 mmol/l), ale aj hodnoty v dolnom pásme normy, prípadne liekové vplyvy (napríklad dlhodobé užívanie inhibítorov protónovej pumpy alebo diuretík). Prípadná korekcia horčíka pri pokročilej CKD a na dialýze však vyžaduje opatrnosť, kontrolu sérových koncentrácií a zohľadnenie koncentrácie horčíka v dialyzačnom roztoku aj znášanlivosti v tráviacom trakte. [1,6]</li>
+  <li><strong>Prah PTH ≥ 120&nbsp;pg/ml nemožno mechanicky preklopiť na cieľovú hodnotu pre všetkých pacientov s CKD.</strong> Aktualizované odporúčania KDIGO pre CKD-MBD z roku 2017 zdôrazňujú, že u nedialyzovaných pacientov v štádiách CKD G3a až G5 optimálna koncentrácia intaktného PTH nie je známa; namiesto reakcie na jednu izolovanú hodnotu nad hornou hranicou normy sa má hodnotiť <strong>progresívne stúpajúci alebo trvalo zvýšený PTH</strong> a pátrať po modifikovateľných faktoroch (hyperfosfatémia, nadmerný príjem fosfátov, hypokalciémia, deficit vitamínu D), pričom rutinné podávanie kalcitriolu či analógov vitamínu D sa v predialyzačnej CKD neodporúča pre zvýšené riziko hyperkalciémie. U dialyzovaných pacientov (CKD G5D) KDIGO odporúča udržiavať iPTH v pásme približne <strong>2- až 9-násobku hornej hranice normy laboratória</strong> (približne 130 až 600&nbsp;pg/ml). Prah 120&nbsp;pg/ml zo štúdie Chen et al. teda u dialyzovaného pacienta leží tesne pod dolnou hranicou odporúčaného cieľového pásma. Snaha agresívne stlačiť PTH u dialyzovaného pacienta pod 120&nbsp;pg/ml (napríklad vysokými dávkami kalcitriolu alebo kalciových viazačov) by hrozila navodením adynamickej kostnej choroby so zníženou schopnosťou kosti ukladať vápnik a fosfor, čo cievnu kalcifikáciu paradoxne urýchľuje. [1,7]</li>
+  <li><strong>Prítomnosť vaskulárnej kalcifikácie mení výber viazačov fosfátov.</strong> Podľa odporúčaní KDIGO 2017 patrí pacient s CKD G3a až G5D a dokázanou cievnou alebo chlopňovou kalcifikáciou do kategórie najvyššieho kardiovaskulárneho rizika, u ktorej je opodstatnené obmedziť dávku viazačov fosfátov na báze vápnika. Rýchla progresia CAC už v štádiách CKD G4 až G5 (22,8&nbsp;%/rok) v čínskej kohorte podporuje včasnú kontrolu fosfátovej záťaže ešte pred zaradením do dialyzačného programu. [1,7]</li>
+  <li><strong>Sérový horčík pod 0,82&nbsp;mmol/l je praktický varovný marker, nie automatická indikácia k vysokodávkovej suplementácii.</strong> Vyšetrenie magneziémie u pacienta s pokročilou CKD alebo na dialýze pomáha odhaliť nielen zjavnú hypomagneziémiu (&lt; 0,75&nbsp;mmol/l), ale aj hodnoty v dolnom pásme normy, prípadne liekové vplyvy (napríklad dlhodobé užívanie inhibítorov protónovej pumpy alebo diuretík). Prípadná korekcia horčíka pri pokročilej CKD a na dialýze však vyžaduje opatrnosť, kontrolu sérových koncentrácií a zohľadnenie koncentrácie horčíka v dialyzačnom roztoku aj znášanlivosti v tráviacom trakte. [1,6]</li>
 </ol>
 
 <h2>Limity</h2>
@@ -315,7 +315,7 @@ $articles[] = [
 <ul>
   <li><strong>Jednocentrový retrospektívny dizajn a indikačné skreslenie:</strong> zaradenie vyžadovalo najmenej dve klinicky indikované CT vyšetrenia hrudníka. Súbor tak prednostne zachytil pacientov s vyššou kardiovaskulárnou záťažou alebo s klinickými ťažkosťami, čo obmedzuje zovšeobecnenie absolútnych mier progresie na neselektovanú ambulantnú populáciu s CKD. [1]</li>
   <li><strong>Technické obmedzenia CT protokolov:</strong> štúdia využívala klinicky indikované CT hrudníka a nešpecifikuje jednotné EKG hradlovanie (ECG-gating) pri všetkých vyšetreniach; pri nebránených skenoch hrudníka môžu pohybové artefakty zvýšiť variabilitu Agatstonovho skóre.</li>
-  <li><strong>Jednorazové meranie biomarkerov na začiatku sledovania:</strong> horčík, PTH, kyselina močová, vápnik aj fosfor boli do modelov zahrnuté iba zo vstupného odberu. Napriek vylúčeniu 40 pacientov so zmenou suplementácie horčíka alebo viazačov fosfátov v posledných troch mesiacoch pred vstupom chýbali úplné údaje o zmenách farmakoterapie počas 6 až 36 mesiacov sledovania. [1]</li>
+  <li><strong>Jednorazové meranie biomarkerov na začiatku sledovania:</strong> horčík, PTH, kyselina močová, vápnik aj fosfor boli do modelov zahrnuté iba zo vstupného odberu. Napriek vylúčeniu 40 pacientov so zmenou suplementácie horčíka alebo viazačov fosfátov v posledných troch mesiacoch pred vstupom chýbali úplné údaje o zmenách farmakoterapie počas 6 až 36&nbsp;mesiacov sledovania. [1]</li>
   <li><strong>Metodika odhadu filtrácie a špecifiká dialýzy:</strong> eGFR bola počítaná staršou rovnicou MDRD namiesto rovnice CKD-EPI a práca nerozlišuje modality dialýzy (hemodialýza oproti peritoneálnej dialýze), dĺžku dialyzačnej liečby ani koncentráciu vápnika a horčíka v dialyzačnom roztoku. [1]</li>
   <li><strong>Náhradný ukazovateľ bez hodnotenia klinických príhod:</strong> primárnym výstupom bola rádiologická progresia CAC skóre, nie výskyt infarktu myokardu, srdcového zlyhávania či kardiovaskulárnej mortality.</li>
   <li><strong>Chýbajúca externá validácia nomogramu:</strong> bodové skóre nebolo otestované v nezávislej multicentrickej ani európskej kohorte. [1]</li>
@@ -323,7 +323,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Longitudinálna štúdia 800 pacientov s CKD potvrdzuje, že progresia kalcifikácie koronárnych artérií výrazne zrýchľuje už v predialyzačných štádiách CKD G4 až G5 a vrcholí u dialyzovaných pacientov. Nízky sérový horčík pod 0,82 mmol/l a zvýšený PTH od 120 pg/ml (najmä v pokročilých štádiách G4 až G5D) identifikujú pacientov s viac než dvojnásobnou šancou rýchlej progresie CAC. Pre klinickú prax sú tieto prahy užitočným nástrojom rizikovej stratifikácie a dôvodom na dôslednú kontrolu parametrov CKD-MBD, samy osebe však nenahrádzajú cieľové pásma odporúčaní KDIGO ani nepreukazujú, že rutinná suplementácia horčíka zníži výskyt kardiovaskulárnych príhod.</p>
+<p>Longitudinálna štúdia 800 pacientov s CKD potvrdzuje, že progresia kalcifikácie koronárnych artérií výrazne zrýchľuje už v predialyzačných štádiách CKD G4 až G5 a vrcholí u dialyzovaných pacientov. Nízky sérový horčík pod 0,82&nbsp;mmol/l a zvýšený PTH od 120&nbsp;pg/ml (najmä v pokročilých štádiách G4 až G5D) identifikujú pacientov s viac než dvojnásobnou šancou rýchlej progresie CAC. Pre klinickú prax sú tieto prahy užitočným nástrojom rizikovej stratifikácie a dôvodom na dôslednú kontrolu parametrov CKD-MBD, samy osebe však nenahrádzajú cieľové pásma odporúčaní KDIGO ani nepreukazujú, že rutinná suplementácia horčíka zníži výskyt kardiovaskulárnych príhod.</p>
 
 <hr>
 
@@ -343,7 +343,7 @@ $articles[] = [
 
 <h3>Poznámka k dôkazom</h3>
 
-<p><small>Všetky číselné výsledky, štatistické odhady a vstupné charakteristiky boli overené priamo v plnom texte primárnej štúdie vo <em>Frontiers in Medicine</em> (vrátane opravy z 29. septembra 2026) a v databáze PubMed eutils k 18. októbru 2026. Oproti predlohe boli doplnené úplné autorské zoznamy všetkých citovaných prác v pôvodnom poradí, presná štruktúra kohorty (vylúčenie 74 zo 874 skrínovaných pacientov, 72,5 % zastúpenie štádií CKD G4 až G5 a dialýzy), upravené pomery šancí z multivariabilných modelov a bodové váhy všetkých siedmich prvkov nomogramu. Opravená bola nepresná formulácia predlohy o zaradení eGFR v nomograme (išlo o kontinuálnu premennú hodnotenú na každých +10 ml/min/1,73 m² so ziskom −6 bodov, nie o kategorickú premennú) a spresnený bol preklad kombinovaného kritéria rýchlej progresie CAC. Z plného textu bol doplnený kľúčový podskupinový nález, že prah PTH ≥ 120 pg/ml bol štatisticky významne spojený s rýchlou progresiou CAC iba v štádiách CKD G4 až G5 a na dialýze (OR 2,62), nie v štádiách G1 až G3 (OR 1,42). Autor projektu zároveň doplnil konfrontáciu s randomizovanými štúdiami suplementácie horčíka (Sakaguchi et al., 2019; MAGiCAL-CKD, 2023), zasadenie prahu PTH do cieľových pásiem KDIGO 2017 vrátane upozornenia na riziko adynamickej kostnej choroby a opravil chybnú pagináciu systematického prehľadu Xu et al. (2022), ktorú primárna publikácia uvádzala nesprávne ako strany 1201 až 1216 namiesto skutočných strán 1011 až 1032.</small></p>
+<p><small>Všetky číselné výsledky, štatistické odhady a vstupné charakteristiky boli overené priamo v plnom texte primárnej štúdie vo <em>Frontiers in Medicine</em> (vrátane opravy z 29. septembra 2026) a v databáze PubMed eutils k 18. októbru 2026. Oproti predlohe boli doplnené úplné autorské zoznamy všetkých citovaných prác v pôvodnom poradí, presná štruktúra kohorty (vylúčenie 74 zo 874 skrínovaných pacientov, 72,5 % zastúpenie štádií CKD G4 až G5 a dialýzy), upravené pomery šancí z multivariabilných modelov a bodové váhy všetkých siedmich prvkov nomogramu. Opravená bola nepresná formulácia predlohy o zaradení eGFR v nomograme (išlo o kontinuálnu premennú hodnotenú na každých +10&nbsp;ml/min/1,73&nbsp;m² so ziskom −6 bodov, nie o kategorickú premennú) a spresnený bol preklad kombinovaného kritéria rýchlej progresie CAC. Z plného textu bol doplnený kľúčový podskupinový nález, že prah PTH ≥ 120&nbsp;pg/ml bol štatisticky významne spojený s rýchlou progresiou CAC iba v štádiách CKD G4 až G5 a na dialýze (OR 2,62), nie v štádiách G1 až G3 (OR 1,42). Autor projektu zároveň doplnil konfrontáciu s randomizovanými štúdiami suplementácie horčíka (Sakaguchi et al., 2019; MAGiCAL-CKD, 2023), zasadenie prahu PTH do cieľových pásiem KDIGO 2017 vrátane upozornenia na riziko adynamickej kostnej choroby a opravil chybnú pagináciu systematického prehľadu Xu et al. (2022), ktorú primárna publikácia uvádzala nesprávne ako strany 1201 až 1216 namiesto skutočných strán 1011 až 1032.</small></p>
 
 <h3>Súvisiace články</h3>
 

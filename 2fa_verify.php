@@ -34,7 +34,7 @@ $errors       = [];
 $isLocalDev   = isAppLocalDev();
 $pendingUserId = (int) ($_SESSION['2fa_pending']['user_id'] ?? 0);
 
-// Rate limiting pre 2FA pokusy (max 5 pokusov, potom 15 minút blokácia)
+// Rate limiting pre 2FA pokusy (max 5 pokusov, potom 15 minút blokácia)
 $maxAttempts = 5;
 $blockSecs   = 900;
 $clientIp    = getClientIpAddress();
@@ -90,7 +90,7 @@ if ($requestMethod === 'POST') {
                 $blockedUntilTs = ipRateLimitBlockedUntil($pdo, 'totp_attempts', $clientIp);
                 if ($blockedUntilTs > 0) {
                     $ipBlocked = true;
-                    $errors[]  = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+                    $errors[]  = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
                 }
             } catch (\PDOException $e) {
                 error_log("2fa_verify: rate limit check: " . $e->getMessage());
@@ -155,7 +155,7 @@ if ($requestMethod === 'POST') {
                     );
                     $backupCodes = $storage['codes'];
 
-                    // Tolerancia ±60 s; counter musí byť vyšší než naposledy spotrebovaný.
+                    // Tolerancia ±60 s; counter musí byť vyšší než naposledy spotrebovaný.
                     $matchedCounter = verifyTotpCodeGetCounter($storage['secret'], $inputCode, 2);
                     $lastCounter = isset($lockedUser['totp_last_counter'])
                         ? (int) $lockedUser['totp_last_counter']

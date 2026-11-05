@@ -2,9 +2,9 @@
 
 /**
  * add_prijem-tekutin-funkcia-obliciek_article.php
- * Prijem tekutin a funkcia obliciek: Chen 2026 (Am J Nephrol), CKD WIT (JAMA 2018), Wu 2016 (BMJ Open), Armstrong 2024.
+ * Prijem tekutin a funkcia obličiek: Chen 2026 (Am J Nephrol), CKD WIT (JAMA 2018), Wu 2016 (BMJ Open), Armstrong 2024.
  *
- * enqueue_newsletter je zamerne false: aviza sa pri tomto clanku neposielaju.
+ * enqueue_newsletter je zamerne false: aviza sa pri tomto článku neposielaju.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -72,7 +72,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Clark a spolupracovníci, 2018</th>
-        <td>Zmena eGFR za 12 mesiacov</td>
+        <td>Zmena eGFR za 12&nbsp;mesiacov</td>
         <td>Upravený rozdiel −0,3&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> (95&nbsp;% IS od −1,8 do 1,2; p&nbsp;=&nbsp;0,74).</td>
       </tr>
       <tr>
@@ -86,7 +86,7 @@ $articles[] = [
 
 <h2>Randomizovaná skúška v 3. štádiu</h2>
 
-<p>William F. Clark a spolupracovníci publikovali v roku 2018 v JAMA skúšku CKD WIT. Deväť centier v Ontáriu randomizovalo od roku 2013 do roku 2017 631 dospelých s 3. štádiom chronickej choroby obličiek. Podmienkou bola eGFR od 30 do 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, mikroalbuminúria alebo makroalbuminúria a objem moču pod 3,0&nbsp;l za 24 hodín. Priemerný vek bol 65,0 roka, mužov bolo 63,4&nbsp;%, priemerná eGFR 43&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a medián albumínu v moči 123&nbsp;mg/deň. Skupina s hydratáciou (n&nbsp;=&nbsp;316) bola vedená k vyššiemu pitiu vody. Kontrolná skupina (n&nbsp;=&nbsp;315) mala príjem ponechať. Primárnym ukazovateľom bola zmena eGFR za 12 mesiacov. Posledný deň sledovania bol 25. máj 2017. Register je NCT01766687.<sup>2</sup></p>
+<p>William F. Clark a spolupracovníci publikovali v roku 2018 v JAMA skúšku CKD WIT. Deväť centier v Ontáriu randomizovalo od roku 2013 do roku 2017&nbsp;631 dospelých s 3. štádiom chronickej choroby obličiek. Podmienkou bola eGFR od 30 do 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, mikroalbuminúria alebo makroalbuminúria a objem moču pod 3,0&nbsp;l za 24&nbsp;hodín. Priemerný vek bol 65,0 roka, mužov bolo 63,4&nbsp;%, priemerná eGFR 43&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a medián albumínu v moči 123&nbsp;mg/deň. Skupina s hydratáciou (n&nbsp;=&nbsp;316) bola vedená k vyššiemu pitiu vody. Kontrolná skupina (n&nbsp;=&nbsp;315) mala príjem ponechať. Primárnym ukazovateľom bola zmena eGFR za 12&nbsp;mesiacov. Posledný deň sledovania bol 25. máj 2017. Register je NCT01766687.<sup>2</sup></p>
 
 <p>Z 631 ľudí zomrelo 12, päť v skupine s hydratáciou a sedem v kontrolnej. Medzi 590 ľuďmi so živým sledovaním a meraním po roku, čo je 95&nbsp;% z 619 preživších, stúpol 24-hodinový objem moču v skupine s hydratáciou o 0,6&nbsp;l/deň viac (95&nbsp;% interval spoľahlivosti od 0,5 do 0,7; p&nbsp;&lt;&nbsp;0,001). Priemerná zmena eGFR bola −2,2&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> pri vyššom pití a −1,9&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> pri doterajšom príjme. Upravený rozdiel medzi skupinami bol −0,3&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> (od −1,8 do 1,2; p&nbsp;=&nbsp;0,74). Bodový odhad teda neleží na strane pomalšieho poklesu. Interval však pripúšťa aj spomalenie približne o 1&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> za rok, aj rýchlejší pokles. Autori sami píšu, že skúška mohla mať malú silu na klinicky dôležitý rozdiel.<sup>2</sup></p>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <h2>Kohorta NHANES a rozpor v tabuľkách</h2>
 
-<p>Li-Wei Wu a spolupracovníci uverejnili v BMJ Open v roku 2016 observačnú analýzu 2&nbsp;182 dospelých starších ako 20 rokov z Third National Health and Nutrition Examination Survey (1988 až 1994). Mortalitu sledovali do 31. decembra 2006, medián 15,4 roka. Za ten čas zomrelo 1&nbsp;080 ľudí, z toho 473 na kardiovaskulárnu príčinu. Denný príjem tekutín bol jedno 24-hodinové spätné zisťovanie. Započítaná bola aj voda v jedle a iné nápoje, nielen voda z pohára. Vylúčení boli tehotné ženy, ľudia užívajúci lítium alebo diuretikum a ľudia s kongestívnym srdcovým zlyhávaním. Chronickú chorobu definovali ako eGFR najviac 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> podľa skrátenej rovnice zo štúdie MDRD, vrátane rasového koeficientu, alebo ako pomer albumínu a kreatinínu v moči najmenej 30&nbsp;mg/g. Skupina teda nie je jedno štádium v dnešnom delení a rovnica nie je tá, ktorou sa eGFR počíta dnes.<sup>3</sup></p>
+<p>Li-Wei Wu a spolupracovníci uverejnili v BMJ Open v roku 2016 observačnú analýzu 2&nbsp;182 dospelých starších ako 20&nbsp;rokov z Third National Health and Nutrition Examination Survey (1988 až 1994). Mortalitu sledovali do 31. decembra 2006, medián 15,4 roka. Za ten čas zomrelo 1&nbsp;080 ľudí, z toho 473 na kardiovaskulárnu príčinu. Denný príjem tekutín bol jedno 24-hodinové spätné zisťovanie. Započítaná bola aj voda v jedle a iné nápoje, nielen voda z pohára. Vylúčení boli tehotné ženy, ľudia užívajúci lítium alebo diuretikum a ľudia s kongestívnym srdcovým zlyhávaním. Chronickú chorobu definovali ako eGFR najviac 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> podľa skrátenej rovnice zo štúdie MDRD, vrátane rasového koeficientu, alebo ako pomer albumínu a kreatinínu v moči najmenej 30&nbsp;mg/g. Skupina teda nie je jedno štádium v dnešnom delení a rovnica nie je tá, ktorou sa eGFR počíta dnes.<sup>3</sup></p>
 
 <p>Kvartily celkového príjmu boli najviac 2,147&nbsp;l/deň, potom do 2,789&nbsp;l/deň, do 3,576&nbsp;l/deň a najmenej 3,576&nbsp;l/deň. Dolný kvartil nie je skupina ľudí, ktorí takmer nepijú. Ide o celkovú vodu vrátane jedla. Tabuľka 2 uvádza 933 ľudí s takto definovanou chorobou: priemerný vek 70,39 roka, priemerná eGFR 50,68&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, priemerný príjem 2&nbsp;865&nbsp;ml/deň. Bez choroby ich bolo 1&nbsp;249: vek 63,76 roka, eGFR 71,35, príjem 3&nbsp;049&nbsp;ml/deň.<sup>3</sup></p>
 
@@ -122,7 +122,7 @@ $articles[] = [
 
 <p>CKD WIT poznám z abstraktu, nie z protokolu ani z tabuliek plného textu. Abstrakt neudáva, o koľko litrov vody mali ľudia príjem zvýšiť, len o koľko stúpol objem moču. Jeden rok a interval, ktorý pripúšťa rozdiel približne 1&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, nechávajú otvorenú možnosť menšieho účinku, ktorý skúška nevedela preukázať. Dvanásť úmrtí nie je mortalitný výsledok.</p>
 
-<p>Wu má plný text. Práve preto je vidieť rozpor hlavičiek tabuliek 3 a 4 s tabuľkou 2 a vetu v diskusii, ktorá nezodpovedá metódam. Jedno spätné zisťovanie za 24 hodín nie je dlhodobý príjem. Zloženie tekutín práca oddeliť nevie, čo autori v závere sami píšu. Armstrongov prehľad poznám z abstraktu. Sedem chorôb s nedostatočným dôkazom abstrakt nevymenúva.</p>
+<p>Wu má plný text. Práve preto je vidieť rozpor hlavičiek tabuliek 3 a 4&nbsp;s tabuľkou 2 a vetu v diskusii, ktorá nezodpovedá metódam. Jedno spätné zisťovanie za 24&nbsp;hodín nie je dlhodobý príjem. Zloženie tekutín práca oddeliť nevie, čo autori v závere sami píšu. Armstrongov prehľad poznám z abstraktu. Sedem chorôb s nedostatočným dôkazom abstrakt nevymenúva.</p>
 
 <h2>Záver</h2>
 

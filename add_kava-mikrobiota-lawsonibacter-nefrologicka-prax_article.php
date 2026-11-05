@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: kava a crevna mikrobiota (Lawsonibacter asaccharolyticus),
+ * Odborný článok: kava a crevna mikrobiota (Lawsonibacter asaccharolyticus),
  * kriticke citanie dokazov a dosledky pre nefrologicku prax.
  *
  * Spustenie na serveri po commite:
@@ -38,9 +38,9 @@ $articles[] = [
 
 <h2>Čo výskumníci skutočne skúmali</h2>
 
-<p>Medscape predstavuje výskum ako analýzu „viac než 54 000 vzoriek stolice“ [7]. Pre interpretáciu je podstatné, čo tento počet zahŕňal. Pôvodná práca spracovala celkovo 54 198 metagenomických vzoriek z 211 kohort. Súbor však okrem zdravých dospelých obsahoval aj novorodencov a deti, 7 423 vzoriek od ľudí s jedným z 35 ochorení, komunity s netradičným (nezápadným) spôsobom života, primáty a historické vzorky [1].</p>
+<p>Medscape predstavuje výskum ako analýzu „viac než 54&nbsp;000 vzoriek stolice“ [7]. Pre interpretáciu je podstatné, čo tento počet zahŕňal. Pôvodná práca spracovala celkovo 54&nbsp;198 metagenomických vzoriek z 211 kohort. Súbor však okrem zdravých dospelých obsahoval aj novorodencov a deti, 7&nbsp;423 vzoriek od ľudí s jedným z 35 ochorení, komunity s netradičným (nezápadným) spôsobom života, primáty a historické vzorky [1].</p>
 
-<p>Podrobné potravinové frekvenčné dotazníky s viac než 150 položkami boli prepojené s 23 115 metagenomickými profilmi. Po vyradení osôb nad 99. percentilom príjmu kávy (extrémne, nepravdepodobné hodnoty) zostalo v analýze kategórií konzumácie 22 867 účastníkov zo Spojených štátov a Spojeného kráľovstva [1].</p>
+<p>Podrobné potravinové frekvenčné dotazníky s viac než 150 položkami boli prepojené s 23&nbsp;115 metagenomickými profilmi. Po vyradení osôb nad 99. percentilom príjmu kávy (extrémne, nepravdepodobné hodnoty) zostalo v analýze kategórií konzumácie 22&nbsp;867 účastníkov zo Spojených štátov a Spojeného kráľovstva [1].</p>
 
 <div class="table-responsive" role="region" aria-label="Súbory použité v štúdii Manghi et al. 2024" tabindex="0">
 <table>
@@ -54,22 +54,22 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Všetky metagenómy</th>
-      <td>54 198 vzoriek, 211 kohort</td>
+      <td>54&nbsp;198 vzoriek, 211 kohort</td>
       <td>Prevalencia <em>L. asaccharolyticus</em> v rôznych populáciách, chorobách a vekových skupinách</td>
     </tr>
     <tr>
       <th scope="row">Metagenómy s potravinovým dotazníkom</th>
-      <td>23 115 profilov</td>
+      <td>23&nbsp;115 profilov</td>
       <td>Strojové učenie: ktoré potraviny „čítať“ z mikrobioty</td>
     </tr>
     <tr>
       <th scope="row">Analýza kategórií konzumácie kávy</th>
-      <td>22 867 účastníkov</td>
+      <td>22&nbsp;867 účastníkov</td>
       <td>Porovnanie skupín bez kávy, s miernou a s vysokou konzumáciou</td>
     </tr>
     <tr>
       <th scope="row">Kofeínová a bezkofeínová káva zvlášť</th>
-      <td>12 089, resp. 6 089 účastníkov</td>
+      <td>12&nbsp;089, resp. 6&nbsp;089 účastníkov</td>
       <td>Overenie, či súvislosť nespôsobuje iba kofeín</td>
     </tr>
     <tr>
@@ -89,11 +89,11 @@ $articles[] = [
 
 <p>Tieto údaje opisujú <strong>relatívne</strong> zastúpenie baktérie v mikrobiálnom spoločenstve, nie jej absolútny počet v čreve. Vyššie relatívne zastúpenie zároveň nie je automaticky ukazovateľom lepšieho zdravotného stavu.</p>
 
-<p>Baktéria bola pri prvom opise v roku 2018 izolovaná z ľudskej stolice a charakterizovaná ako producent butyrátu [5]. To je biologicky zaujímavé, nestačí to však na záver, že pitie kávy prostredníctvom jej rastu zvyšuje tvorbu butyrátu v ľudskom čreve alebo prináša konkrétny klinický účinok. Metaanalýza prípadovo-kontrolných metagenomických súborov z 25 ochorení (5 670 chorých a 7 154 kontrol) navyše nenašla rozdiel v jej prevalencii medzi chorými a zdravými [1]. Označovať ju bez výhrad za „prospešnú baktériu“ je preto predčasné.</p>
+<p>Baktéria bola pri prvom opise v roku 2018 izolovaná z ľudskej stolice a charakterizovaná ako producent butyrátu [5]. To je biologicky zaujímavé, nestačí to však na záver, že pitie kávy prostredníctvom jej rastu zvyšuje tvorbu butyrátu v ľudskom čreve alebo prináša konkrétny klinický účinok. Metaanalýza prípadovo-kontrolných metagenomických súborov z 25 ochorení (5&nbsp;670 chorých a 7&nbsp;154 kontrol) navyše nenašla rozdiel v jej prevalencii medzi chorými a zdravými [1]. Označovať ju bez výhrad za „prospešnú baktériu“ je preto predčasné.</p>
 
 <h2>Nezávislé potvrdenie a nečakaný renálny detail</h2>
 
-<p>Dôležitým doplnkom je prierezová štúdia z izraelského projektu Human Phenotype Project (Dai et al.), publikovaná v časopise <em>Metabolism</em> [2]. Zahŕňala 8 666 prevažne zdravých dospelých z Izraela s priemerným vekom 51,8 roka. Príjem kávy sa nezisťoval dotazníkom, ale z dvojtýždňových záznamov stravy v reálnom čase. Najsilnejšie asociovaným mikrobiálnym druhom bol opäť <em>Clostridium phoceensis</em>, ktorý bol medzičasom preklasifikovaný práve na <em>L. asaccharolyticus</em>. Keď sa asociácia zopakuje v inej krajine a pri inom spôsobe zisťovania stravy, je ťažšie ju vysvetliť chybou jednej metódy.</p>
+<p>Dôležitým doplnkom je prierezová štúdia z izraelského projektu Human Phenotype Project (Dai et al.), publikovaná v časopise <em>Metabolism</em> [2]. Zahŕňala 8&nbsp;666 prevažne zdravých dospelých z Izraela s priemerným vekom 51,8 roka. Príjem kávy sa nezisťoval dotazníkom, ale z dvojtýždňových záznamov stravy v reálnom čase. Najsilnejšie asociovaným mikrobiálnym druhom bol opäť <em>Clostridium phoceensis</em>, ktorý bol medzičasom preklasifikovaný práve na <em>L. asaccharolyticus</em>. Keď sa asociácia zopakuje v inej krajine a pri inom spôsobe zisťovania stravy, je ťažšie ju vysvetliť chybou jednej metódy.</p>
 
 <p>Pre nefrológa je zaujímavejší iný nález tej istej práce. Zo štyroch sledovaných renálnych ukazovateľov (sérový kreatinín, urea, sodík a draslík) súvisela konzumácia kávy iba s <strong>vyššou koncentráciou sérového draslíka</strong> [2]. Autori v súhrne zaraďujú renálny systém medzi oblasti s „priaznivými“ asociáciami. U zdravých dospelých môže ísť o klinicky nevýznamný posun. U pacienta s pokročilou CKD, s hyperkaliémiou v anamnéze alebo s liečbou inhibítormi systému renín – angiotenzín – aldosterón (RAAS) či antagonistami mineralokortikoidových receptorov však vyšší draslík „priaznivým“ nálezom nie je. Prierezový dizajn neumožňuje určiť, či ide o účinok kávy, a z textu práce nie je zrejmé, aký veľký bol rozdiel v mmol/l. Pri pacientovi s CKD je to skôr pripomienka, že o káve rozhoduje draslík a objem nápoja, nie mikrobiota.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 
 <h2>Hranica „päť šálok“: kde sa podklady rozchádzajú</h2>
 
-<p>Správa Medscape uvádza, že viac než päť šálok kávy denne sa spája s vyšším rizikom gastroezofágovej refluxovej choroby a s progresiou Crohnovej choroby. Ako dôkaz odkazuje na prierezovú analýzu údajov NHANES z roku 2025 (Yang et al.) [7, 4]. Táto práca však šálky kávy nehodnotila: pracovala s príjmom kofeínu v miligramoch a zápalové ochorenie čreva v nej bolo definované podľa údajov samotných účastníkov. Medzi príjmom kofeínu a zápalovým ochorením čreva <strong>nenašla štatisticky významnú súvislosť</strong> [4]. Opísala iba nelineárny vzťah k chronickej zápche: pod hranicou približne 204 mg kofeínu denne bol vyšší príjem spojený s nižšou šancou zápchy, nad ňou s mierne vyššou.</p>
+<p>Správa Medscape uvádza, že viac než päť šálok kávy denne sa spája s vyšším rizikom gastroezofágovej refluxovej choroby a s progresiou Crohnovej choroby. Ako dôkaz odkazuje na prierezovú analýzu údajov NHANES z roku 2025 (Yang et al.) [7, 4]. Táto práca však šálky kávy nehodnotila: pracovala s príjmom kofeínu v miligramoch a zápalové ochorenie čreva v nej bolo definované podľa údajov samotných účastníkov. Medzi príjmom kofeínu a zápalovým ochorením čreva <strong>nenašla štatisticky významnú súvislosť</strong> [4]. Opísala iba nelineárny vzťah k chronickej zápche: pod hranicou približne 204&nbsp;mg kofeínu denne bol vyšší príjem spojený s nižšou šancou zápchy, nad ňou s mierne vyššou.</p>
 
 <p>Formulácia o „viac než piatich šálkach“ v skutočnosti pochádza zo záveru prehľadu v časopise <em>Nutrients</em> [3]. Prehľad sám zároveň uvádza, že údaje o vplyve kávy na zápalové ochorenia čreva sú rozporné a časť štúdií súvislosť nepotvrdila. Takto formulovanú hranicu preto nemožno prevziať ako všeobecné klinické pravidlo. Šálka navyše nie je štandardizovanou dávkou: líši sa objemom, spôsobom prípravy aj obsahom kofeínu.</p>
 

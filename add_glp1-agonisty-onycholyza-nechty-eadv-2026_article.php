@@ -2,7 +2,7 @@
 
 /**
  * add_glp1-agonisty-onycholyza-nechty-eadv-2026_article.php
- * GLP-1 receptorove agonisty a onycholyza - studia SCOP-GLP1 prezentovana
+ * GLP-1 receptorove agonisty a onycholyza - štúdia SCOP-GLP1 prezentovana
  * na kongrese EADV 2026 (Piraccini a spol.), s nefrologickym kontextom.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -39,7 +39,7 @@ $articles[] = [
 
 <p>Dôvod nie je v tom, že nefrológ lieči nechty. Je v tom, že nefrológ dnes GLP-1 receptorové agonisty <strong>sám indikuje</strong>.</p>
 
-<p>Randomizovaná štúdia FLOW u 3 533 pacientov s diabetom 2. typu a chronickou chorobou obličiek preukázala, že semaglutid v dávke 1,0 mg týždenne znížil riziko závažných obličkových príhod o 24 % (HR 0,76; 95 % IS 0,66 – 0,88). Priaznivé boli aj všetky potvrdzujúce sekundárne ukazovatele: ročný sklon odhadovanej glomerulovej filtrácie bol miernejší o 1,16 ml/min/1,73 m², riziko závažných kardiovaskulárnych príhod kleslo o 18 % a riziko úmrtia z akejkoľvek príčiny o 20 %. Štúdia bola predčasne ukončená na odporúčanie pri vopred plánovanej priebežnej analýze.</p>
+<p>Randomizovaná štúdia FLOW u 3&nbsp;533 pacientov s diabetom 2. typu a chronickou chorobou obličiek preukázala, že semaglutid v dávke 1,0&nbsp;mg týždenne znížil riziko závažných obličkových príhod o 24 % (HR 0,76; 95 % IS 0,66 – 0,88). Priaznivé boli aj všetky potvrdzujúce sekundárne ukazovatele: ročný sklon odhadovanej glomerulovej filtrácie bol miernejší o 1,16&nbsp;ml/min/1,73&nbsp;m², riziko závažných kardiovaskulárnych príhod kleslo o 18 % a riziko úmrtia z akejkoľvek príčiny o 20 %. Štúdia bola predčasne ukončená na odporúčanie pri vopred plánovanej priebežnej analýze.</p>
 
 <p>Z toho vyplýva praktický záver, ktorý je v tomto článku dôležitejší než samotné nechty: ak pacient s chronickou chorobou obličiek preruší liečbu pre nepríjemný, ale neškodný nechtový nález, <strong>stratí doložený obličkový a kardiovaskulárny prínos</strong>. Úlohou nefrológa preto nie je nechtovú zmenu prehliadnuť, ale ani z nej urobiť dôvod na vysadenie.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <h2>Čo štúdia zistila</h2>
 
-<p>Multinacionálna štúdia porovnala <strong>575 pacientov</strong> užívajúcich GLP-1 receptorové agonisty s <strong>1 329 kontrolami</strong> s diabetom 2. typu a/alebo obezitou, ktoré tieto lieky nikdy neužívali. Účastníci boli zaradení vo Francúzsku, Spojených štátoch, Brazílii a Mexiku. Priemerné trvanie liečby bolo 18,5 mesiaca.</p>
+<p>Multinacionálna štúdia porovnala <strong>575 pacientov</strong> užívajúcich GLP-1 receptorové agonisty s <strong>1&nbsp;329 kontrolami</strong> s diabetom 2. typu a/alebo obezitou, ktoré tieto lieky nikdy neužívali. Účastníci boli zaradení vo Francúzsku, Spojených štátoch, Brazílii a Mexiku. Priemerné trvanie liečby bolo 18,5 mesiaca.</p>
 
 <div class="table-responsive" role="region" aria-label="Prevalencia nechtových nálezov u používateľov GLP-1 receptorových agonistov a u kontrol" tabindex="0">
   <table>
@@ -55,7 +55,7 @@ $articles[] = [
       <tr>
         <th scope="col">Nález</th>
         <th scope="col">GLP-1 (n = 575)</th>
-        <th scope="col">Kontroly (n = 1 329)</th>
+        <th scope="col">Kontroly (n = 1&nbsp;329)</th>
         <th scope="col">p</th>
       </tr>
     </thead>
@@ -197,7 +197,7 @@ $articles[] = [
   <li><strong>Piaopiao Li, Jithin S. Varghese, Megha K. Shah, Rodolfo J. Galindo, Francisco J. Pasquel, Mohammed K. Ali, Hui Shao.</strong> <em>Prescribing Trends of Glucagon-Like Peptide 1 Receptor Agonists for Type 2 Diabetes or Obesity.</em> JAMA Network Open. 2025;8(10):e2540890. <a href="https://doi.org/10.1001/jamanetworkopen.2025.40890" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje o nechtových nálezoch (575 oproti 1 329 účastníkom, 18,5 mesiaca, 66,3/52,8 %, 39,3/8,7 %, 45,6/17,0 %, 58,3/51,1 %, 46,8/31,8 %, 76,3/47,3 %) boli overené proti pôvodnému spravodajstvu Medscape z prezentácie na kongrese; zaokrúhlené údaje o vlasoch a pokožke hlavy, krajiny zaradenia, údaj o polovici používateľov s nechtovými ťažkosťami pred liečbou, zachovanie dvoj- až trojnásobku po úprave, financovanie laboratóriami DUCRAY a úplný autorský zoznam oboch abstraktov pochádzajú z overenej tlačovej správy EADV. Bibliografia prác citovaných v tomto článku bola overená cez PubMed a Crossref vrátane úplných mien autorov, ročníka, čísla, strán a DOI. <strong>Opravy oproti pôvodnej predlohe:</strong> v citácii práce o onycholýze pri chorobe štítnej žľazy bolo nesprávne poradie autorov (prvým autorom je Malumani Malan, nie Zhe Dai) a chybne uvedené meno tretieho autora; ide o opis jedného prípadu, nie o štúdiu. Pri práci Singalovej a Aroru chýbal rok, ročník, číslo aj strany. Predloha uvádzala, že analýzy boli upravené na vek, pohlavie a komorbidity so zachovaním významnosti – podľa tlačovej správy sa úprava týkala aj dermatologických ochorení a nutričných deficitov a silu asociácií znížila z viac než štvornásobku na dvoj- až trojnásobok. Predloha neuvádzala, že približne polovica používateľov mala nechtové ťažkosti už pred liečbou, ani zdroj financovania štúdie a konflikty záujmov. <strong>Vlastným odborným spracovaním</strong> je prepojenie na štúdiu FLOW a na nefrologickú indikáciu GLP-1 receptorových agonistov, výhrada k označeniu dizajnu ako „case-control“, zdôraznenie anatomického rozdielu medzi poruchou adhézie a poruchou tvorby nechtovej platničky, poznámka o chýbajúcom aktívnom komparátore a celý praktický postup pre ambulanciu.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje o nechtových nálezoch (575 oproti 1&nbsp;329 účastníkom, 18,5 mesiaca, 66,3/52,8 %, 39,3/8,7 %, 45,6/17,0 %, 58,3/51,1 %, 46,8/31,8 %, 76,3/47,3 %) boli overené proti pôvodnému spravodajstvu Medscape z prezentácie na kongrese; zaokrúhlené údaje o vlasoch a pokožke hlavy, krajiny zaradenia, údaj o polovici používateľov s nechtovými ťažkosťami pred liečbou, zachovanie dvoj- až trojnásobku po úprave, financovanie laboratóriami DUCRAY a úplný autorský zoznam oboch abstraktov pochádzajú z overenej tlačovej správy EADV. Bibliografia prác citovaných v tomto článku bola overená cez PubMed a Crossref vrátane úplných mien autorov, ročníka, čísla, strán a DOI. <strong>Opravy oproti pôvodnej predlohe:</strong> v citácii práce o onycholýze pri chorobe štítnej žľazy bolo nesprávne poradie autorov (prvým autorom je Malumani Malan, nie Zhe Dai) a chybne uvedené meno tretieho autora; ide o opis jedného prípadu, nie o štúdiu. Pri práci Singalovej a Aroru chýbal rok, ročník, číslo aj strany. Predloha uvádzala, že analýzy boli upravené na vek, pohlavie a komorbidity so zachovaním významnosti – podľa tlačovej správy sa úprava týkala aj dermatologických ochorení a nutričných deficitov a silu asociácií znížila z viac než štvornásobku na dvoj- až trojnásobok. Predloha neuvádzala, že približne polovica používateľov mala nechtové ťažkosti už pred liečbou, ani zdroj financovania štúdie a konflikty záujmov. <strong>Vlastným odborným spracovaním</strong> je prepojenie na štúdiu FLOW a na nefrologickú indikáciu GLP-1 receptorových agonistov, výhrada k označeniu dizajnu ako „case-control“, zdôraznenie anatomického rozdielu medzi poruchou adhézie a poruchou tvorby nechtovej platničky, poznámka o chýbajúcom aktívnom komparátore a celý praktický postup pre ambulanciu.</em></p>
 HTML,
 ];
 

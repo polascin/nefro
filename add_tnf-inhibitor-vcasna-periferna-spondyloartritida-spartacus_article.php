@@ -64,16 +64,16 @@ $articles[] = [
   <li>97 % malo artritídu,</li>
   <li>68 % malo entezitídu,</li>
   <li>34 % malo daktylitídu,</li>
-  <li>priemerný vek bol 39 rokov,</li>
+  <li>priemerný vek bol 39&nbsp;rokov,</li>
   <li>60 % tvorili muži,</li>
   <li>45 % bolo HLA-B27 pozitívnych,</li>
   <li>51 % malo anamnézu psoriázy,</li>
   <li>priemerné trvanie príznakov bolo 5,9 mesiaca.</li>
 </ul>
 
-<p>Pacienti boli rozdelení do dvoch liečebných stratégií. Prvá skupina dostávala golimumab 50 mg subkutánne každé 4 týždne. Druhá skupina dostávala metotrexát perorálne v úvodnej dávke 15 mg týždenne, s navýšením na 20 mg týždenne po 4 týždňoch, ak bol liek tolerovaný.</p>
+<p>Pacienti boli rozdelení do dvoch liečebných stratégií. Prvá skupina dostávala golimumab 50&nbsp;mg subkutánne každé 4&nbsp;týždne. Druhá skupina dostávala metotrexát perorálne v úvodnej dávke 15&nbsp;mg týždenne, s navýšením na 20&nbsp;mg týždenne po 4 týždňoch, ak bol liek tolerovaný.</p>
 
-<p>Ak pacienti po 12 týždňoch nedosiahli remisiu a ich ťažkosti neboli dostatočne kontrolované, mohol byť do liečby pridaný sulfasalazín v dávke 2 g denne.</p>
+<p>Ak pacienti po 12 týždňoch nedosiahli remisiu a ich ťažkosti neboli dostatočne kontrolované, mohol byť do liečby pridaný sulfasalazín v dávke 2&nbsp;g denne.</p>
 
 <h2>Golimumab dosiahol vyššiu mieru remisie</h2>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <p>Podobný trend sa pozoroval aj pri hodnotení aktivity ochorenia pomocou skóre DAPSA a ASDAS-CRP. V oboch ukazovateľoch boli poklesy výraznejšie pri TNF inhibítore než pri metotrexáte.</p>
 
-<p>Zaujímavé je, že CRP sa znížilo v oboch skupinách približne podobne. Vstupne bolo zvýšené, s priemerom okolo 25 mg/l, a pri oboch liečebných stratégiách kleslo približne na 5 mg/l.</p>
+<p>Zaujímavé je, že CRP sa znížilo v oboch skupinách približne podobne. Vstupne bolo zvýšené, s priemerom okolo 25&nbsp;mg/l, a pri oboch liečebných stratégiách kleslo približne na 5&nbsp;mg/l.</p>
 
 <p>To naznačuje, že metotrexát nebol neúčinný. Aj on mal merateľný efekt, len klinická odpoveď bola pri okamžitom podaní TNF inhibítora výraznejšia.</p>
 
@@ -124,9 +124,9 @@ $articles[] = [
 
 <h2>Bez výrazného bezpečnostného signálu v prvých 24 týždňoch</h2>
 
-<p>Počas prvých 24 týždňov neboli v štúdii zaznamenané nové významné bezpečnostné signály. V skupine s TNF inhibítorom sa vyskytla jedna závažná nežiaduca udalosť: chrípkové príznaky vyžadujúce hospitalizáciu. Inak neboli hlásené závažné nežiaduce udalosti v žiadnej zo skupín.</p>
+<p>Počas prvých 24&nbsp;týždňov neboli v štúdii zaznamenané nové významné bezpečnostné signály. V skupine s TNF inhibítorom sa vyskytla jedna závažná nežiaduca udalosť: chrípkové príznaky vyžadujúce hospitalizáciu. Inak neboli hlásené závažné nežiaduce udalosti v žiadnej zo skupín.</p>
 
-<p>Pri interpretácii bezpečnosti však treba byť opatrný. Štúdia mala 97 pacientov a sledovanie v tejto analýze trvalo 24 týždňov. Takýto rozsah je užitočný na zachytenie častých problémov, ale nestačí na definitívne hodnotenie zriedkavých alebo dlhodobých rizík.</p>
+<p>Pri interpretácii bezpečnosti však treba byť opatrný. Štúdia mala 97 pacientov a sledovanie v tejto analýze trvalo 24&nbsp;týždňov. Takýto rozsah je užitočný na zachytenie častých problémov, ale nestačí na definitívne hodnotenie zriedkavých alebo dlhodobých rizík.</p>
 
 <h2>Čo to znamená pre klinickú prax</h2>
 

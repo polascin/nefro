@@ -64,7 +64,7 @@ $articles[] = [
   <li>iné známky vysokého kardiovaskulárneho rizika.</li>
 </ul>
 
-<p>Pri týchto pacientoch môže mať význam aj relatívne malý pokles krvného tlaku. Zníženie systolického tlaku o 5 až 10 mmHg nemusí vyzerať dramaticky, ale u vysokorizikového pacienta môže znamenať významné zníženie rizika závažných kardiovaskulárnych príhod.</p>
+<p>Pri týchto pacientoch môže mať význam aj relatívne malý pokles krvného tlaku. Zníženie systolického tlaku o 5 až 10&nbsp;mmHg nemusí vyzerať dramaticky, ale u vysokorizikového pacienta môže znamenať významné zníženie rizika závažných kardiovaskulárnych príhod.</p>
 
 <h2>Pred renálnou denerváciou musí prísť dôkladné vyšetrenie</h2>
 
@@ -92,7 +92,7 @@ $articles[] = [
 
 <p>Intervenčný lekár musí zhodnotiť najmä anatomické a klinické predpoklady výkonu. Dôležité je vylúčiť významné zúženie renálnych artérií pri ateroskleróze, fibromuskulárnu dyspláziu, významné aneuryzmy renálnych artérií alebo nedávne zavedenie stentu do renálnej artérie.</p>
 
-<p>Významná je aj funkcia obličiek. Neexistuje jednoznačná hranica glomerulovej filtrácie, pod ktorou by bola renálna denervácia absolútne kontraindikovaná. Treba však pripomenúť, že klinické štúdie zahŕňali len málo pacientov s eGFR približne pod 40 ml/min/1,73 m². Pri pokročilej chronickej chorobe obličiek je preto potrebná zvýšená opatrnosť.</p>
+<p>Významná je aj funkcia obličiek. Neexistuje jednoznačná hranica glomerulovej filtrácie, pod ktorou by bola renálna denervácia absolútne kontraindikovaná. Treba však pripomenúť, že klinické štúdie zahŕňali len málo pacientov s eGFR približne pod 40&nbsp;ml/min/1,73&nbsp;m². Pri pokročilej chronickej chorobe obličiek je preto potrebná zvýšená opatrnosť.</p>
 
 <h2>Ako výkon prebieha</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <p>Pacient musí byť pred výkonom realisticky informovaný. Renálna denervácia nie je „vyliečenie hypertenzie“ a väčšina pacientov bude pokračovať v antihypertenzívnej liečbe.</p>
 
-<p>Priemerný očakávaný pokles krvného tlaku býva skôr mierny. Často sa hovorí o poklese systolického tlaku približne o 5 až 10 mmHg. Klinický význam takého poklesu však netreba podceňovať, najmä u pacientov s vysokým kardiovaskulárnym rizikom.</p>
+<p>Priemerný očakávaný pokles krvného tlaku býva skôr mierny. Často sa hovorí o poklese systolického tlaku približne o 5 až 10&nbsp;mmHg. Klinický význam takého poklesu však netreba podceňovať, najmä u pacientov s vysokým kardiovaskulárnym rizikom.</p>
 
 <p>Treba tiež počítať s tým, že časť pacientov na výkon neodpovie dostatočne. Podľa odborníkov môže ísť približne o tretinu pacientov, v závislosti od použitej definície odpovede a od konkrétnych štúdií.</p>
 

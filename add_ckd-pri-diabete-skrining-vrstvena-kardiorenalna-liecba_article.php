@@ -36,7 +36,7 @@ $articles[] = [
 
 <p>ADA 2026 uvádza, že CKD sa vyskytuje približne u 20 až 40 % ľudí s diabetom. Presný podiel závisí od typu a trvania diabetu, veku, definície CKD a skúmanej populácie. Riziko nespočíva iba v progresii k zlyhaniu obličiek. CKD výrazne zvyšuje aj pravdepodobnosť aterosklerotických príhod, srdcového zlyhávania, akútneho poškodenia obličiek, hypoglykémie pri poklese eGFR, liekovej toxicity a predčasného úmrtia.</p>
 
-<p>CKD je definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má význam pre zdravie. Pri eGFR 60 ml/min/1,73 m² alebo vyššej preto diagnóza vyžaduje iný pretrvávajúci marker poškodenia obličiek, napríklad albuminúriu. Naopak, eGFR nižšia ako 60 ml/min/1,73 m² môže CKD definovať aj bez zvýšenej albuminúrie, ak je nález chronický.</p>
+<p>CKD je definovaná abnormalitou štruktúry alebo funkcie obličiek, ktorá trvá najmenej tri mesiace a má význam pre zdravie. Pri eGFR 60&nbsp;ml/min/1,73&nbsp;m² alebo vyššej preto diagnóza vyžaduje iný pretrvávajúci marker poškodenia obličiek, napríklad albuminúriu. Naopak, eGFR nižšia ako 60&nbsp;ml/min/1,73&nbsp;m² môže CKD definovať aj bez zvýšenej albuminúrie, ak je nález chronický.</p>
 
 <h2>Skríning znamená eGFR aj UACR</h2>
 
@@ -52,9 +52,9 @@ $articles[] = [
 <p>UACR sa zvyčajne hodnotí v kategóriách:</p>
 
 <ul>
-  <li><strong>A1:</strong> menej ako 3 mg/mmol, teda menej ako 30 mg/g,</li>
-  <li><strong>A2:</strong> 3 až 30 mg/mmol, teda 30 až 300 mg/g,</li>
-  <li><strong>A3:</strong> viac ako 30 mg/mmol, teda viac ako 300 mg/g.</li>
+  <li><strong>A1:</strong> menej ako 3&nbsp;mg/mmol, teda menej ako 30&nbsp;mg/g,</li>
+  <li><strong>A2:</strong> 3 až 30&nbsp;mg/mmol, teda 30 až 300&nbsp;mg/g,</li>
+  <li><strong>A3:</strong> viac ako 30&nbsp;mg/mmol, teda viac ako 300&nbsp;mg/g.</li>
 </ul>
 
 <p>Albuminúria má významnú biologickú variabilitu. Zvýšiť ju môžu intenzívna fyzická námaha, infekcia, horúčka, dekompenzované srdcové zlyhávanie, výrazná hyperglykémia alebo hypertenzia a menštruačná kontaminácia. Pri neprítomnosti urgentného klinického dôvodu sa stredne alebo výrazne zvýšená albuminúria potvrdzuje aspoň dvoma abnormálnymi výsledkami z troch vzoriek odobratých počas troch až šiestich mesiacov. Preferovaná je prvá ranná stredná vzorka moču, hoci náhodná jednorazová vzorka je v praxi prijateľná.</p>
@@ -76,13 +76,13 @@ $articles[] = [
   <li>systémových prejavoch, monoklonálnom proteíne alebo morfologickej abnormalite obličiek.</li>
 </ul>
 
-<p>Nefrologická konzultácia je potrebná aj pri neistej etiológii, ťažko zvládnuteľnej hypertenzii, elektrolytových poruchách, progresívnom raste UACR, rýchlom poklese eGFR alebo pri eGFR nižšej ako 30 ml/min/1,73 m². Podľa klinickej situácie môže nasledovať imunologická, hematologická, zobrazovacia, genetická alebo histologická diagnostika.</p>
+<p>Nefrologická konzultácia je potrebná aj pri neistej etiológii, ťažko zvládnuteľnej hypertenzii, elektrolytových poruchách, progresívnom raste UACR, rýchlom poklese eGFR alebo pri eGFR nižšej ako 30&nbsp;ml/min/1,73&nbsp;m². Podľa klinickej situácie môže nasledovať imunologická, hematologická, zobrazovacia, genetická alebo histologická diagnostika.</p>
 
 <h2>Základ liečby nie je iba farmakologický</h2>
 
 <p>Vrstvená liečba stojí na kontrole krvného tlaku a glykémie, primeranej fyzickej aktivite, individualizovanej výžive, liečbe dyslipidémie, podpore ukončenia fajčenia, očkovaní, prevencii akútneho poškodenia obličiek a revízii nefrotoxických či nevhodne dávkovaných liekov. Glykemický cieľ sa musí prispôsobiť veku, komorbiditám, riziku hypoglykémie a funkcii obličiek.</p>
 
-<p>ADA 2026 odporúča u väčšiny ľudí s diabetom a CKD tlak nižší ako 130/80 mmHg; nižší systolický cieľ možno zvážiť pri vysokom kardiovaskulárnom alebo renálnom riziku, iba ak sa tlak meria štandardizovane a pacient liečbu toleruje. Krehkosť, ortostatická hypotenzia a riziko pádov môžu viesť k menej intenzívnemu cieľu.</p>
+<p>ADA 2026 odporúča u väčšiny ľudí s diabetom a CKD tlak nižší ako 130/80&nbsp;mmHg; nižší systolický cieľ možno zvážiť pri vysokom kardiovaskulárnom alebo renálnom riziku, iba ak sa tlak meria štandardizovane a pacient liečbu toleruje. Krehkosť, ortostatická hypotenzia a riziko pádov môžu viesť k menej intenzívnemu cieľu.</p>
 
 <h2>Blokáda RAS: správna indikácia a správne monitorovanie</h2>
 
@@ -92,7 +92,7 @@ $articles[] = [
 
 <h2>Inhibítory SGLT2 chránia obličky aj mimo glykemického účinku</h2>
 
-<p>Pri diabete 2. typu a CKD ADA 2026 odporúča inhibítor SGLT2 s preukázaným prínosom začať pri eGFR najmenej 20 ml/min/1,73 m². Indikácia nie je viazaná na nedostatočne kontrolovaný HbA1c; glykemický účinok pri nižšej eGFR slabne, kardiorenálny prínos však pretrváva. Ak je liek tolerovaný, možno v ňom pokračovať aj po poklese eGFR pod iniciačný prah až do zlyhania obličiek, podľa konkrétnej registrácie a klinickej situácie.</p>
+<p>Pri diabete 2. typu a CKD ADA 2026 odporúča inhibítor SGLT2&nbsp;s preukázaným prínosom začať pri eGFR najmenej 20&nbsp;ml/min/1,73&nbsp;m². Indikácia nie je viazaná na nedostatočne kontrolovaný HbA1c; glykemický účinok pri nižšej eGFR slabne, kardiorenálny prínos však pretrváva. Ak je liek tolerovaný, možno v ňom pokračovať aj po poklese eGFR pod iniciačný prah až do zlyhania obličiek, podľa konkrétnej registrácie a klinickej situácie.</p>
 
 <p>Malý skorý pokles eGFR po začatí býva hemodynamický a reverzibilný. Sám osebe zvyčajne neznamená AKI. Treba však posúdiť hypovolémiu, tlak a dávku diuretika. Pacienta treba poučiť o genitálnych mykotických infekciách a o príznakoch ketoacidózy, ktorá môže vzniknúť aj bez výraznej hyperglykémie. Počas kritického ochorenia, dlhšieho hladovania a pred plánovanou operáciou sa inhibítor SGLT2 dočasne prerušuje podľa konkrétneho perioperačného alebo akútneho protokolu a musí existovať aj plán jeho opätovného nasadenia.</p>
 
@@ -102,27 +102,27 @@ $articles[] = [
 
 <h2>Finerenón cieli na reziduálne albuminurické riziko</h2>
 
-<p>Finerenón je nesteroidný selektívny antagonista mineralokortikoidového receptora. FIDELIO-DKD a FIGARO-DKD preukázali pri diabete 2. typu a albuminurickej CKD zníženie obličkových a kardiovaskulárnych príhod na pozadí maximálne tolerovanej RAS blokády. ADA 2026 ho odporúča u vhodných ľudí s CKD a albuminúriou pri eGFR najmenej 25 ml/min/1,73 m².</p>
+<p>Finerenón je nesteroidný selektívny antagonista mineralokortikoidového receptora. FIDELIO-DKD a FIGARO-DKD preukázali pri diabete 2. typu a albuminurickej CKD zníženie obličkových a kardiovaskulárnych príhod na pozadí maximálne tolerovanej RAS blokády. ADA 2026 ho odporúča u vhodných ľudí s CKD a albuminúriou pri eGFR najmenej 25&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Pred začatím treba poznať eGFR a sérový draslík. Kontrola sa vykonáva približne po štyroch týždňoch od začatia alebo zmeny dávky a následne periodicky podľa rizika. Hlavným limitom je hyperkaliémia. Presné iniciačné prahy, dávkovanie, interakcie a postup pri zvýšení draslíka sa musia riadiť aktuálnym súhrnom charakteristických vlastností lieku. Finerenón nie je univerzálnou náhradou spironolaktónu ani dôvodom ignorovať inú príčinu hyperaldosteronizmu či srdcového zlyhávania.</p>
 
 <h2>Agonisty receptora GLP-1 po štúdii FLOW</h2>
 
-<p>ADA 2026 odporúča pri diabete 2. typu a CKD agonistu receptora GLP-1 s preukázaným prínosom na zníženie progresie CKD a kardiovaskulárneho rizika. Najpevnejší dôkaz z cielenej obličkovej štúdie má zatiaľ subkutánny semaglutid zo štúdie FLOW. U 3 533 pacientov s diabetom 2. typu a CKD znížil riziko primárneho kompozitného výsledku závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu. Riziko obličkovo špecifického kompozitného výsledku bez kardiovaskulárneho úmrtia bolo nižšie o 21 %.</p>
+<p>ADA 2026 odporúča pri diabete 2. typu a CKD agonistu receptora GLP-1&nbsp;s preukázaným prínosom na zníženie progresie CKD a kardiovaskulárneho rizika. Najpevnejší dôkaz z cielenej obličkovej štúdie má zatiaľ subkutánny semaglutid zo štúdie FLOW. U 3&nbsp;533 pacientov s diabetom 2. typu a CKD znížil riziko primárneho kompozitného výsledku závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu. Riziko obličkovo špecifického kompozitného výsledku bez kardiovaskulárneho úmrtia bolo nižšie o 21 %.</p>
 
 <p>Tento výsledok neznamená automatický triedový účinok rovnakej veľkosti ani to, že semaglutid nahrádza inhibítor SGLT2, finerenón alebo indikovanú RAS blokádu. Výber lieku ovplyvňuje obezita, aterosklerotické riziko, glykémia, eGFR, krehkosť, gastrointestinálna tolerancia a dostupnosť. Pri nauzee, vracaní alebo hnačke hrozí dehydratácia a prerenálne akútne poškodenie obličiek, osobitne pri súčasnom diuretiku, RAS blokáde alebo inhibítore SGLT2.</p>
 
 <h2>CONFIDENCE podporuje súbežné začatie, nie automatickú štvorliečbu</h2>
 
-<p>Štúdia CONFIDENCE randomizovala 818 pacientov s diabetom 2. typu, eGFR 30 až 90 ml/min/1,73 m² a UACR 100 až menej ako 5 000 mg/g, ktorí už dostávali RAS blokádu. Po 180 dňoch klesol UACR pri súbežnom začatí finerenónu a empagliflozínu o 52 %. Redukcia bola o 29 % väčšia než pri samotnom finerenóne a o 32 % väčšia než pri samotnom empagliflozíne.</p>
+<p>Štúdia CONFIDENCE randomizovala 818 pacientov s diabetom 2. typu, eGFR 30 až 90&nbsp;ml/min/1,73&nbsp;m² a UACR 100 až menej ako 5&nbsp;000&nbsp;mg/g, ktorí už dostávali RAS blokádu. Po 180 dňoch klesol UACR pri súbežnom začatí finerenónu a empagliflozínu o 52 %. Redukcia bola o 29 % väčšia než pri samotnom finerenóne a o 32 % väčšia než pri samotnom empagliflozíne.</p>
 
-<p>Primárnym výsledkom bola albuminúria, nie zlyhanie obličiek, infarkt, hospitalizácia pre srdcové zlyhávanie alebo úmrtie. Šesťmesačné sledovanie preto nepreukazuje dlhodobú klinickú nadradenosť kombinácie. Na základe týchto údajov ADA 2026 uvádza, že súbežné začatie inhibítora SGLT2 a finerenónu <strong>možno zvážiť</strong> u dospelých s diabetom 2. typu, UACR najmenej 100 mg/g, eGFR 30 až 90 ml/min/1,73 m² a liečbou inhibítorom RAS. Ide o odporúčanie úrovne B, nie o povinný postup pre každého pacienta.</p>
+<p>Primárnym výsledkom bola albuminúria, nie zlyhanie obličiek, infarkt, hospitalizácia pre srdcové zlyhávanie alebo úmrtie. Šesťmesačné sledovanie preto nepreukazuje dlhodobú klinickú nadradenosť kombinácie. Na základe týchto údajov ADA 2026 uvádza, že súbežné začatie inhibítora SGLT2 a finerenónu <strong>možno zvážiť</strong> u dospelých s diabetom 2. typu, UACR najmenej 100&nbsp;mg/g, eGFR 30 až 90&nbsp;ml/min/1,73&nbsp;m² a liečbou inhibítorom RAS. Ide o odporúčanie úrovne B, nie o povinný postup pre každého pacienta.</p>
 
 <p>Súbežné začatie môže byť rozumné pri vysokom reziduálnom riziku a spoľahlivom následnom monitorovaní. Rýchle sekvenčné nasadenie je často prehľadnejšie pri nízkom tlaku, hraničnej kaliémii, nestabilnej eGFR, hypovolémii, krehkosti alebo rozsiahlej polyfarmácii. Podstatné je neodkladať účinnú liečbu celé mesiace bez klinického dôvodu.</p>
 
 <h2>FINE-ONE už má výsledky, ale nie tvrdé klinické ukazovatele</h2>
 
-<p>Východiskový vzdelávací program opisoval FINE-ONE ako takmer dokončenú štúdiu. To už nie je aktuálne. Výsledky štúdie 3. fázy boli publikované v marci 2026. Randomizovaných bolo 242 dospelých s diabetom 1. typu, eGFR 25 až menej ako 90 ml/min/1,73 m² a UACR 200 až menej ako 5 000 mg/g, ktorí dostávali inhibítor ACE alebo ARB.</p>
+<p>Východiskový vzdelávací program opisoval FINE-ONE ako takmer dokončenú štúdiu. To už nie je aktuálne. Výsledky štúdie 3. fázy boli publikované v marci 2026. Randomizovaných bolo 242 dospelých s diabetom 1. typu, eGFR 25 až menej ako 90&nbsp;ml/min/1,73&nbsp;m² a UACR 200 až menej ako 5&nbsp;000&nbsp;mg/g, ktorí dostávali inhibítor ACE alebo ARB.</p>
 
 <div class="pdf-avoid-break">
 <p>Za šesť mesiacov sa UACR znížil o 34 % pri finerenóne a o 12 % pri placebe; relatívny pokles bol pri finerenóne o 25 % väčší. Hyperkaliémia sa vyskytla u 10,1 % účastníkov s finerenónom a u 3,3 % s placebom, pričom 1,7 % účastníkov finerenón pre hyperkaliémiu vysadilo. Počas liečby bol pokles eGFR väčší pri finerenóne, po vymývacom období sa hodnoty približovali k východiskovým hodnotám.</p>

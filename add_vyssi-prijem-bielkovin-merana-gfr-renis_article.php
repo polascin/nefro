@@ -34,7 +34,7 @@ $articles[] = [
 
 <h2>Hlavný výsledok v jednej vete</h2>
 
-<p>U ľudí stredného a vyššieho veku z bežnej populácie, ktorí mali prevažne zachovanú funkciu obličiek, nebol vyšší obvyklý príjem bielkovín udávaný účastníkmi v pozorovanom rozmedzí spojený s rýchlejším poklesom meranej GFR (mGFR), s častejším zrýchleným poklesom GFR ani s častejším novozistením mGFR pod 60 ml/min/1,73 m².</p>
+<p>U ľudí stredného a vyššieho veku z bežnej populácie, ktorí mali prevažne zachovanú funkciu obličiek, nebol vyšší obvyklý príjem bielkovín udávaný účastníkmi v pozorovanom rozmedzí spojený s rýchlejším poklesom meranej GFR (mGFR), s častejším zrýchleným poklesom GFR ani s častejším novozistením mGFR pod 60&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Rovnako podstatné je, čo štúdia nepreukázala. Nešlo o randomizovaný pokus, nehodnotila extrémne vysoké dávky doplnkov a nebola navrhnutá na určovanie optimálneho príjmu bielkovín. Výsledky sa nemajú prenášať na pacientov s potvrdenou CKD.</p>
 
@@ -46,26 +46,26 @@ $articles[] = [
 
 <h2>Kto bol zahrnutý do kohorty RENIS</h2>
 
-<p>Analýza zahŕňala <strong>1 324 účastníkov</strong>. Priemerný vek bol 63,6 roka, ženy tvorili 50,4 % súboru a priemerná vstupná mGFR dosahovala 89,1 ml/min/1,73 m². Medián času medzi prvým a posledným meraním mGFR bol 10,0 roka.</p>
+<p>Analýza zahŕňala <strong>1&nbsp;324 účastníkov</strong>. Priemerný vek bol 63,6 roka, ženy tvorili 50,4 % súboru a priemerná vstupná mGFR dosahovala 89,1&nbsp;ml/min/1,73&nbsp;m². Medián času medzi prvým a posledným meraním mGFR bol 10,0 roka.</p>
 
-<p>Pôvodná kohorta vylučovala ľudí, ktorí sami uviedli diabetes, ochorenie obličiek alebo kardiovaskulárne ochorenie. Do času východiskového vyšetrenia pre túto analýzu však časť účastníkov tieto stavy získala. Diabetes malo 2,0 %, kardiovaskulárne ochorenie 4,1 % a mGFR pod 60 ml/min/1,73 m² 2,5 % účastníkov. Hypertenziu podľa definície štúdie malo 52,1 %, prediabetes 47,8 % a obezitu 21,7 % súboru.</p>
+<p>Pôvodná kohorta vylučovala ľudí, ktorí sami uviedli diabetes, ochorenie obličiek alebo kardiovaskulárne ochorenie. Do času východiskového vyšetrenia pre túto analýzu však časť účastníkov tieto stavy získala. Diabetes malo 2,0 %, kardiovaskulárne ochorenie 4,1 % a mGFR pod 60&nbsp;ml/min/1,73&nbsp;m² 2,5 % účastníkov. Hypertenziu podľa definície štúdie malo 52,1 %, prediabetes 47,8 % a obezitu 21,7 % súboru.</p>
 
 <p>Preto je presnejšie hovoriť o všeobecnej populácii s <strong>prevažne zachovanou funkciou obličiek</strong> než o homogénnej skupine úplne zdravých ľudí.</p>
 
 <h2>Ako sa hodnotil príjem bielkovín</h2>
 
-<p>Účastníci vyplnili validovaný dotazník frekvencie konzumácie potravín, ktorý zachytával obvyklý príjem 261 potravinových položiek počas predchádzajúceho roka. Priemerný uvádzaný príjem bielkovín bol 1,2 ± 0,5 g/kg/deň. Priemerné hodnoty v jednotlivých kvartiloch boli približne 0,8; 1,0; 1,3 a 1,8 g/kg/deň, pričom hranica najvyššieho kvartilu bola najmenej 1,4 g/kg/deň.</p>
+<p>Účastníci vyplnili validovaný dotazník frekvencie konzumácie potravín, ktorý zachytával obvyklý príjem 261 potravinových položiek počas predchádzajúceho roka. Priemerný uvádzaný príjem bielkovín bol 1,2 ± 0,5&nbsp;g/kg/deň. Priemerné hodnoty v jednotlivých kvartiloch boli približne 0,8; 1,0; 1,3 a 1,8&nbsp;g/kg/deň, pričom hranica najvyššieho kvartilu bola najmenej 1,4&nbsp;g/kg/deň.</p>
 
 <p>Dotazník sa však vypĺňal iba raz a jeho vyplnenie bolo od vstupného merania mGFR vzdialené v mediáne 20,5 mesiaca. U 233 účastníkov chýbali údaje o príjme bielkovín a energie; autori ich doplnili viacnásobnou imputáciou. Štúdia nemala 24-hodinový zber moču s dusíkom močoviny, ktorý by poskytol objektívnejšiu kontrolu príjmu, ani validované údaje o podiele živočíšnych a rastlinných bielkovín.</p>
 
 <h2>Opakované meranie GFR počas desiatich rokov</h2>
 
-<p>Zo všetkých 1 324 účastníkov malo 1 165 aspoň jedno následné meranie mGFR. Celkovo 920 účastníkov malo tri merania a 245 dve merania. Autori analyzovali tri výsledkové ukazovatele:</p>
+<p>Zo všetkých 1&nbsp;324 účastníkov malo 1&nbsp;165 aspoň jedno následné meranie mGFR. Celkovo 920 účastníkov malo tri merania a 245 dve merania. Autori analyzovali tri výsledkové ukazovatele:</p>
 
 <ol>
   <li><strong>ročnú rýchlosť zmeny mGFR,</strong></li>
-  <li><strong>zrýchlený pokles mGFR,</strong> definovaný ako 10 % najstrmších poklesov, teda menej než −2,08 ml/min/1,73 m² za rok,</li>
-  <li><strong>novozistenú mGFR pod 60 ml/min/1,73 m²</strong> u ľudí, ktorí mali na začiatku hodnotu aspoň 60.</li>
+  <li><strong>zrýchlený pokles mGFR,</strong> definovaný ako 10 % najstrmších poklesov, teda menej než −2,08&nbsp;ml/min/1,73&nbsp;m² za rok,</li>
+  <li><strong>novozistenú mGFR pod 60&nbsp;ml/min/1,73&nbsp;m²</strong> u ľudí, ktorí mali na začiatku hodnotu aspoň 60.</li>
 </ol>
 
 <p>Posledný ukazovateľ nemožno bez ďalšieho nazývať novou CKD. Diagnóza CKD vyžaduje chronickú abnormalitu trvajúcu najmenej tri mesiace alebo iný marker poškodenia obličiek; jednorazový pokles mGFR pod túto hranicu podmienku chronicity sám osebe nespĺňa.</p>
@@ -77,7 +77,7 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th scope="col">Výsledok pri zvýšení príjmu o 0,1 g/kg/deň</th>
+      <th scope="col">Výsledok pri zvýšení príjmu o 0,1&nbsp;g/kg/deň</th>
       <th scope="col">Odhad</th>
       <th scope="col">95 % interval spoľahlivosti</th>
       <th scope="col">Interpretácia</th>
@@ -86,7 +86,7 @@ $articles[] = [
   <tbody>
     <tr>
       <td>Ročná zmena mGFR</td>
-      <td>−0,01 ml/min/1,73 m² za rok</td>
+      <td>−0,01&nbsp;ml/min/1,73&nbsp;m² za rok</td>
       <td>−0,04 až 0,02</td>
       <td>Bez štatisticky významnej asociácie</td>
     </tr>
@@ -97,7 +97,7 @@ $articles[] = [
       <td>Bez štatisticky významnej asociácie</td>
     </tr>
     <tr>
-      <td>Novozistená mGFR pod 60 ml/min/1,73 m²</td>
+      <td>Novozistená mGFR pod 60&nbsp;ml/min/1,73&nbsp;m²</td>
       <td>HR 1,09</td>
       <td>0,96 až 1,21</td>
       <td>Bez štatisticky významnej asociácie</td>
@@ -109,7 +109,7 @@ $articles[] = [
 <p><em>OR označuje pomer šancí a HR pomer okamžitých rizík.</em></p>
 </div>
 
-<p>V analýze novozistenej mGFR pod 60 bolo 1 064 účastníkov s úplnými údajmi a východiskovou mGFR aspoň 60; udalosť sa zaznamenala u 118 z nich (11,1 %). Výsledky sa významne nemenili ani pri analýze kvartilov, pri použití absolútnej neindexovanej GFR, po zohľadnení východiskovej GFR alebo vo viacerých analýzach citlivosti.</p>
+<p>V analýze novozistenej mGFR pod 60 bolo 1&nbsp;064 účastníkov s úplnými údajmi a východiskovou mGFR aspoň 60; udalosť sa zaznamenala u 118 z nich (11,1 %). Výsledky sa významne nemenili ani pri analýze kvartilov, pri použití absolútnej neindexovanej GFR, po zohľadnení východiskovej GFR alebo vo viacerých analýzach citlivosti.</p>
 
 <p>Autori nezistili, že by sa asociácia štatisticky významne líšila podľa pohlavia, albuminúrie, obezity, hypertenzie ani prediabetu. Tieto podskupinové výsledky však nemajú rovnakú výpovednú silu ako samostatne navrhnuté štúdie vo vysoko rizikových populáciách.</p>
 
@@ -119,17 +119,17 @@ $articles[] = [
 
 <p>Observačná štúdia nedokáže odstrániť všetky rozdiely medzi ľuďmi s nižším a vyšším príjmom. V najvyššom kvartile boli účastníci napríklad v priemere štíhlejší a mali nižšiu prevalenciu hypertenzie a prediabetu. Štatistické modely sa tieto rozdiely snažili zohľadniť, reziduálne skreslenie však nemožno vylúčiť.</p>
 
-<p>Neistotu zvyšuje jednorazové zhodnotenie stravy dotazníkom, časový odstup od vstupnej mGFR, chýbajúca objektívna validácia príjmu a neznáme zdroje bielkovín. Kohorta pozostávala prevažne z obyvateľov nórskeho mesta Tromsø vo veku približne 55 až 70 rokov. Výsledok sa preto nemusí prenášať na iné geografické a etnické skupiny, veľmi starých ľudí, osoby s nižším počtom nefrónov alebo populácie s vyšším výskytom CKD.</p>
+<p>Neistotu zvyšuje jednorazové zhodnotenie stravy dotazníkom, časový odstup od vstupnej mGFR, chýbajúca objektívna validácia príjmu a neznáme zdroje bielkovín. Kohorta pozostávala prevažne z obyvateľov nórskeho mesta Tromsø vo veku približne 55 až 70&nbsp;rokov. Výsledok sa preto nemusí prenášať na iné geografické a etnické skupiny, veľmi starých ľudí, osoby s nižším počtom nefrónov alebo populácie s vyšším výskytom CKD.</p>
 
 <h2>Štúdia nehodnotila extrémny príjem ani doplnky</h2>
 
-<p>Najvyšší kvartil síce zahŕňal príjem najmenej 1,4 g/kg/deň a jeho priemer bol 1,8 g/kg/deň, údaje však opisovali obvyklú stravu. Autori osobitne nehodnotili bielkovinové doplnky ani veľmi vysoký príjem typický pre časť silových športovcov. Z výsledku preto nemožno stanoviť bezpečnú hornú hranicu ani tvrdiť, že dlhodobý príjem 2 až 3 g/kg/deň je bez rizika.</p>
+<p>Najvyšší kvartil síce zahŕňal príjem najmenej 1,4&nbsp;g/kg/deň a jeho priemer bol 1,8&nbsp;g/kg/deň, údaje však opisovali obvyklú stravu. Autori osobitne nehodnotili bielkovinové doplnky ani veľmi vysoký príjem typický pre časť silových športovcov. Z výsledku preto nemožno stanoviť bezpečnú hornú hranicu ani tvrdiť, že dlhodobý príjem 2 až 3&nbsp;g/kg/deň je bez rizika.</p>
 
 <p>Štúdia zároveň nerozlišovala rastlinné a živočíšne zdroje. Celková kvalita stravy môže ovplyvňovať kardiometabolické a renálne riziko nezávisle od samotného počtu gramov bielkovín. Rovnaký príjem môže byť súčasťou stravy bohatej na strukoviny, orechy, ryby a minimálne spracované potraviny alebo stravy s nadbytkom spracovaného mäsa, sodíka a ultraprocesovaných výrobkov. RENIS tieto rozdiely nevie porovnať.</p>
 
 <h2>Pre pacientov s CKD platia iné odporúčania</h2>
 
-<p>Výsledky sa nesmú preniesť na ľudí s potvrdenou chronickou chorobou obličiek. KDIGO 2024 navrhuje u dospelých s CKD G3 až G5 udržiavať príjem približne <strong>0,8 g/kg telesnej hmotnosti za deň</strong> a u pacientov s rizikom progresie sa vyhýbať vysokému príjmu nad <strong>1,3 g/kg/deň</strong>. Ide o individualizované odporúčanie, nie o dôvod na nekontrolovanú reštrikciu.</p>
+<p>Výsledky sa nesmú preniesť na ľudí s potvrdenou chronickou chorobou obličiek. KDIGO 2024 navrhuje u dospelých s CKD G3 až G5 udržiavať príjem približne <strong>0,8&nbsp;g/kg telesnej hmotnosti za deň</strong> a u pacientov s rizikom progresie sa vyhýbať vysokému príjmu nad <strong>1,3&nbsp;g/kg/deň</strong>. Ide o individualizované odporúčanie, nie o dôvod na nekontrolovanú reštrikciu.</p>
 
 <p>Pri rozhodovaní treba zohľadniť štádium a príčinu CKD, albuminúriu, rýchlosť poklesu eGFR, diabetes, vek, telesnú kompozíciu, fyzickú aktivitu, celkový energetický príjem a riziko sarkopénie alebo podvýživy. Nízko- a veľmi nízkobielkovinové režimy patria do rúk nefrológa a nutričného odborníka; KDIGO ich neodporúča metabolicky nestabilným pacientom. Pri dialýze sú potreby bielkovín zvyčajne vyššie a záver RENIS sa na túto populáciu nevzťahuje.</p>
 
@@ -145,9 +145,9 @@ $articles[] = [
 
 <h2>Ako výsledok zaradiť do doterajších dôkazov</h2>
 
-<p>Staršia metaanalýza 28 intervenčných štúdií u 1 358 dospelých bez ochorenia obličiek nezistila nepriaznivú zmenu GFR pri vyššom príjme bielkovín, hoci štúdie boli väčšinou krátke a mali metodologické obmedzenia. RENIS pridáva dlhé sledovanie a opakovanú mGFR, no zostáva observačná.</p>
+<p>Staršia metaanalýza 28 intervenčných štúdií u 1&nbsp;358 dospelých bez ochorenia obličiek nezistila nepriaznivú zmenu GFR pri vyššom príjme bielkovín, hoci štúdie boli väčšinou krátke a mali metodologické obmedzenia. RENIS pridáva dlhé sledovanie a opakovanú mGFR, no zostáva observačná.</p>
 
-<p>Naopak, u pacientov s CKD G3 až G4 novšia retrospektívna kohorta spájala mierny príjem pod 1,0 g/kg/deň s nižším rizikom nepriaznivého kompozitného výsledku, najmä začatia dialýzy. Ani táto štúdia nedokazuje kauzalitu. Zdanlivý rozpor je predovšetkým pripomienkou, že primárna prevencia u ľudí s prevažne zachovanou funkciou obličiek a manažment už prítomnej CKD sú dve odlišné klinické otázky.</p>
+<p>Naopak, u pacientov s CKD G3 až G4 novšia retrospektívna kohorta spájala mierny príjem pod 1,0&nbsp;g/kg/deň s nižším rizikom nepriaznivého kompozitného výsledku, najmä začatia dialýzy. Ani táto štúdia nedokazuje kauzalitu. Zdanlivý rozpor je predovšetkým pripomienkou, že primárna prevencia u ľudí s prevažne zachovanou funkciou obličiek a manažment už prítomnej CKD sú dve odlišné klinické otázky.</p>
 
 <div class="pdf-avoid-break">
 <h2>Záver</h2>

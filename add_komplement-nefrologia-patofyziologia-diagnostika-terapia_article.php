@@ -140,7 +140,7 @@ $articles[] = [
 
 <p>Pri inhibícii C5 (napríklad ekulizumab) je známe zvýšenie incidencie invazívneho meningokokového ochorenia. V klinickom kontexte je riziko približne 1&nbsp;000- až 2&nbsp;000-násobné v porovnaní s bežnou populáciou.<sup><a href="#ref6">6</a>,<a href="#ref7">7</a></sup></p>
 
-<p>Očkovanie proti meningokokom je odporúčané pred začiatkom liečby. CDC odporúča ideálne dokončiť alebo aktualizovať meningokokové očkovanie (MenACWY aj MenB) aspoň 2 týždne pred prvou dávkou komplementového inhibítora; ak odklad liečby nie je prijateľný, možno začať skôr, no treba počítať s antibiotickou profylaxiou do vytvorenia imunity. Ani po očkovaní riziko ochorenia nezaniká, čo dokumentujú analýzy prípadov u pacientov liečených C5 inhibítormi.<sup><a href="#ref6">6</a>,<a href="#ref7">7</a></sup></p>
+<p>Očkovanie proti meningokokom je odporúčané pred začiatkom liečby. CDC odporúča ideálne dokončiť alebo aktualizovať meningokokové očkovanie (MenACWY aj MenB) aspoň 2&nbsp;týždne pred prvou dávkou komplementového inhibítora; ak odklad liečby nie je prijateľný, možno začať skôr, no treba počítať s antibiotickou profylaxiou do vytvorenia imunity. Ani po očkovaní riziko ochorenia nezaniká, čo dokumentujú analýzy prípadov u pacientov liečených C5 inhibítormi.<sup><a href="#ref6">6</a>,<a href="#ref7">7</a></sup></p>
 
 <h3>Preventívna antibiotická profylaxia</h3>
 

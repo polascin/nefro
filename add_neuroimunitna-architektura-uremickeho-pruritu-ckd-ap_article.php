@@ -74,7 +74,7 @@ $articles[] = [
 
 <p>Uzol vychádza z dlhšie diskutovanej hypotézy o nerovnováhe opioidného systému: relatívnej prevahe aktivity μ-receptorov, ktorá svrbenie podporuje, nad aktivitou κ-receptorov, ktorá ho tlmí.</p>
 
-<p>Tento uzol je terapeuticky najlepšie doložený. <strong>Difelikefalín</strong>, periférne obmedzený agonista κ-opioidných receptorov, bol v štúdiách KALM-1 a KALM-2 podávaný intravenózne v dávke 0,5 µg/kg po každej hemodialýze počas 12 týždňov. V združenej analýze oboch štúdií dosiahlo pokles najhoršej intenzity svrbenia (WI-NRS) aspoň o 3 body <strong>51,1 % pacientov oproti 35,2 %</strong> pri placebe; pokles aspoň o 4 body dosiahlo 38,7 % oproti 23,4 %. Rozdiel je konzistentný, nápadná je však aj vysoká odpoveď v ramene s placebom. Pri subjektívnom symptóme, akým je svrbenie, ide o očakávaný jav, ktorý pripomína, aký veľký podiel má na hodnotení symptómu očakávanie pacienta.</p>
+<p>Tento uzol je terapeuticky najlepšie doložený. <strong>Difelikefalín</strong>, periférne obmedzený agonista κ-opioidných receptorov, bol v štúdiách KALM-1 a KALM-2 podávaný intravenózne v dávke 0,5 µg/kg po každej hemodialýze počas 12&nbsp;týždňov. V združenej analýze oboch štúdií dosiahlo pokles najhoršej intenzity svrbenia (WI-NRS) aspoň o 3 body <strong>51,1 % pacientov oproti 35,2 %</strong> pri placebe; pokles aspoň o 4 body dosiahlo 38,7 % oproti 23,4 %. Rozdiel je konzistentný, nápadná je však aj vysoká odpoveď v ramene s placebom. Pri subjektívnom symptóme, akým je svrbenie, ide o očakávaný jav, ktorý pripomína, aký veľký podiel má na hodnotení symptómu očakávanie pacienta.</p>
 
 <p>V Japonsku sa v rovnakej indikácii dlhodobo používa nalfurafín, ďalší agonista κ-receptorov.</p>
 
@@ -108,7 +108,7 @@ $articles[] = [
 <p>Aj bez validovanej endotypizácie z modelu vyplýva zmysluplná postupnosť krokov:</p>
 
 <ol>
-  <li><strong>Aktívne sa pýtať.</strong> Pacienti svrbenie často nespomenú, lebo ho považujú za nevyhnutnú súčasť ochorenia. Na kvantifikáciu postačí jednoduchá číselná škála najhoršej intenzity za posledných 24 hodín (WI-NRS), prípadne 5-D škála svrbenia.</li>
+  <li><strong>Aktívne sa pýtať.</strong> Pacienti svrbenie často nespomenú, lebo ho považujú za nevyhnutnú súčasť ochorenia. Na kvantifikáciu postačí jednoduchá číselná škála najhoršej intenzity za posledných 24&nbsp;hodín (WI-NRS), prípadne 5-D škála svrbenia.</li>
   <li><strong>Vylúčiť iné príčiny.</strong> Liekové exantémy, cholestáza, ochorenia štítnej žľazy, hematologické ochorenia, scabies a primárne dermatologické diagnózy sa nesmú prehliadnuť len preto, že pacient je dialyzovaný.</li>
   <li><strong>Ošetriť kožnú bariéru.</strong> Emoliens dôsledne a dlhodobo, obmedzenie horúcich sprch a dráždivých mydiel. Nízka cena a nulové riziko ospravedlňujú tento krok u každého pacienta.</li>
   <li><strong>Optimalizovať to, čo je optimalizovateľné.</strong> Dialyzačná dávka, minerálový a kostný metabolizmus a hydratácia kože patria k základu, hoci dôkazy o ich vplyve práve na svrbenie sú slabšie, než sa tradične predpokladalo.</li>

@@ -116,7 +116,7 @@ $articles[] = [
         <td>Bez významného rozdielu v 60-dňovom prežívaní v staršej ére protokolov RRT (<em>p</em> = 0,98)</td>
       </tr>
       <tr>
-        <td><strong>CONVINT (2014)</strong>: Prežívanie do 14 dní po ukončení RRT (<em>N</em> = 252)<sup>5</sup></td>
+        <td><strong>CONVINT (2014)</strong>: Prežívanie do 14&nbsp;dní po ukončení RRT (<em>N</em> = 252)<sup>5</sup></td>
         <td>39,5 %</td>
         <td>43,9 %</td>
         <td>Numericky nižšie prežívanie pri IHD, no štúdia nemala dostatočnú štatistickú silu (OR 0,84; <em>p</em> = 0,50)</td>

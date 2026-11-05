@@ -16,7 +16,7 @@ $form = [
     "weight_kg" => calculatorPostString("weight_kg"),
     "s_na" => calculatorPostString("s_na"),
     "target_na" => calculatorPostString("target_na", "140"),
-    "infusion_na" => calculatorPostString("infusion_na", "154"), // 0.9% NaCl has 154 mmol/L
+    "infusion_na" => calculatorPostString("infusion_na", "154"), // 0.9% NaCl has 154 mmol/L
     "infusion_k" => calculatorPostString("infusion_k", "0"),
     "s_glucose" => calculatorPostString("s_glucose"),
     "glucose_unit" => calculatorPostString("glucose_unit", "mmol_l"),
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "options" => ["min_range" => 18, "max_range" => 120],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $weightKg = calculatorParsePositiveFloat($form["weight_kg"]);
@@ -125,12 +125,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $correctedNaHillier = calculatorSodiumGlucoseCorrection((float) $sNa, $glucoseMgDl, 2.4);
             }
 
-            // Bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS) — strop za 24 h
+            // Bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS) — strop za 24 h
             $safeNa24h = null;
             $safeNa24hHighRisk = null;
             if ((float) $sNa < 135.0) {
-                $safeNa24h = (float) $sNa + 8.0;        // bežný limit ≤ 8 mmol/L/24 h
-                $safeNa24hHighRisk = (float) $sNa + 6.0; // vysoké riziko ODS ≤ 6 mmol/L/24 h
+                $safeNa24h = (float) $sNa + 8.0;        // bežný limit ≤ 8 mmol/L/24 h
+                $safeNa24hHighRisk = (float) $sNa + 6.0; // vysoké riziko ODS ≤ 6 mmol/L/24 h
             }
 
             $calculated = [
@@ -274,7 +274,7 @@ if (isLoggedIn()) {
                             <strong>TBW:</strong> Celková telesná voda v litroch.<br>
                             <strong>Adrogué-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku.<br>
                             <strong>Korekcia na glykémiu:</strong> hyperglykémia zrieďuje sérový sodík; korigované Na odhaduje skutočnú nátriémiu (Katz 1973 / Hillier 1999).<br>
-                            <strong>Upozornenie (ODS):</strong> pri hyponatrémii nemá rýchlosť korekcie presiahnuť <strong>≤ 8 mmol/L za 24 h</strong> (pri vysokom riziku ≤ 6), inak hrozí osmotický demyelinizačný syndróm.
+                            <strong>Upozornenie (ODS):</strong> pri hyponatrémii nemá rýchlosť korekcie presiahnuť <strong>≤ 8 mmol/L za 24 h</strong> (pri vysokom riziku ≤ 6), inak hrozí osmotický demyelinizačný syndróm.
                         </div>
                     </div>
                 </details>
@@ -408,10 +408,10 @@ if (isLoggedIn()) {
                         <?php if ($calculated["safe_na_24h"] !== null): ?>
                             <div class="info-box-green calc-result-mt8">
                                 <strong>Bezpečná korekcia hyponatrémie (prevencia ODS):</strong>
-                                S-Na by za 24 h nemal presiahnuť <strong>≈ <?= htmlspecialchars(number_format((float) $calculated["safe_na_24h"], 1, ",", " ")) ?> mmol/L</strong>
-                                (limit ≤ 8 mmol/L/24 h). Pri vysokom riziku ODS (S-Na &lt; 105, hypokaliémia, malnutrícia,
+                                S-Na by za 24 h nemal presiahnuť <strong>≈ <?= htmlspecialchars(number_format((float) $calculated["safe_na_24h"], 1, ",", " ")) ?> mmol/L</strong>
+                                (limit ≤ 8 mmol/L/24 h). Pri vysokom riziku ODS (S-Na &lt; 105, hypokaliémia, malnutrícia,
                                 alkoholizmus, pokročilé ochorenie pečene) len <strong>≈ <?= htmlspecialchars(number_format((float) $calculated["safe_na_24h_high_risk"], 1, ",", " ")) ?> mmol/L</strong>
-                                (≤ 6 mmol/L/24 h).
+                                (≤ 6 mmol/L/24 h).
                             </div>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">

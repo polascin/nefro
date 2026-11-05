@@ -57,17 +57,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "options" => ["min_range" => 18, "max_range" => 120],
         ]);
         if ($ageYears === false) {
-            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
+            $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
         $heightCm = calculatorParsePositiveFloat($form["height_cm"]);
         if ($heightCm === null || $heightCm < 100.0 || $heightCm > 230.0) {
-            $errors[] = "Výška musí byť v rozsahu 100 až 230 cm.";
+            $errors[] = "Výška musí byť v rozsahu 100 až 230 cm.";
         }
 
         $weightKg = calculatorParsePositiveFloat($form["weight_kg"]);
         if ($weightKg === null || $weightKg < 20.0 || $weightKg > 300.0) {
-            $errors[] = "Hmotnosť (suchá) musí byť v rozsahu 20 až 300 kg.";
+            $errors[] = "Hmotnosť (suchá) musí byť v rozsahu 20 až 300 kg.";
         }
 
         $ureaUnit = in_array($form["urea_unit"], ["mmol_l", "bun_mg_dl"], true)
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $hours = calculatorParsePositiveFloat($form["interdialytic_hours"]);
         if ($hours === null || $hours < 12.0 || $hours > 96.0) {
-            $errors[] = "Interdialytický interval musí byť v rozsahu 12 až 96 hodín.";
+            $errors[] = "Interdialytický interval musí byť v rozsahu 12 až 96 hodín.";
         }
 
         if (empty($errors)) {
@@ -238,7 +238,7 @@ if (isLoggedIn()) {
                     <strong>Kedy použiť:</strong> normalizovaná miera katabolizmu bielkovín
                     (nPCR ≈ nPNA) odhaduje denný príjem/obrat bielkovín u stabilného dialyzovaného
                     pacienta a dopĺňa adekvátnosť dialýzy (Kt/V). Cieľ KDOQI je spravidla
-                    <strong>≥ 1,0 až 1,2 g/kg/deň</strong>; nízke hodnoty signalizujú riziko
+                    <strong>≥ 1,0 až 1,2 g/kg/deň</strong>; nízke hodnoty signalizujú riziko
                     proteínovo-energetickej malnutrície.
                 </div>
 

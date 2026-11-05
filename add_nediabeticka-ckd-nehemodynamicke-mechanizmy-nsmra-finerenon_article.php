@@ -69,18 +69,18 @@ $articles[] = [
 
 <ul>
   <li><strong>1584 pacientov</strong> s <strong>nediabetickou</strong> CKD,</li>
-  <li>eGFR &gt; 25 a &lt; 75 ml/min/1,73 m²,</li>
-  <li>albuminúriu najmenej <strong>200 mg/g</strong>,</li>
+  <li>eGFR &gt; 25 a &lt; 75&nbsp;ml/min/1,73&nbsp;m²,</li>
+  <li>albuminúriu najmenej <strong>200&nbsp;mg/g</strong>,</li>
   <li>všetci boli liečení <strong>stabilnou inhibíciou RAAS</strong>.</li>
 </ul>
 
 <p>Randomizácia prebehla do ramena <strong>finerenón</strong> verzus <strong>placebo</strong>.</p>
 
-<p>Primárnym ukazovateľom bol <strong>celkový sklon poklesu GFR</strong> (rýchlosť poklesu GFR za 3 roky). V sekundárnych a ďalších ukazovateľoch sa sledovali aj klinicky tvrdé výsledky vrátane kombinovaných renálnych a KV udalostí.</p>
+<p>Primárnym ukazovateľom bol <strong>celkový sklon poklesu GFR</strong> (rýchlosť poklesu GFR za 3&nbsp;roky). V sekundárnych a ďalších ukazovateľoch sa sledovali aj klinicky tvrdé výsledky vrátane kombinovaných renálnych a KV udalostí.</p>
 
 <h3>3.3. Výsledky: sklon eGFR a tvrdé ukazovatele</h3>
 
-<p>Podľa zdroja pacienti v skupine placeba strácali približne <strong>4 ml/min za rok</strong>. V ramene finerenónu sa pokles zmenšil na <strong>3,3 ml/min za rok</strong>, čo predstavuje absolútny rozdiel približne <strong>0,7 ml/min za rok</strong>.</p>
+<p>Podľa zdroja pacienti v skupine placeba strácali približne <strong>4&nbsp;ml/min za rok</strong>. V ramene finerenónu sa pokles zmenšil na <strong>3,3&nbsp;ml/min za rok</strong>, čo predstavuje absolútny rozdiel približne <strong>0,7&nbsp;ml/min za rok</strong>.</p>
 
 <p>Rozdiel v sklone môže pôsobiť „mierne“, zdroj však uvádza aj klinické výsledky: pri kľúčovom sekundárnom kompozitnom ukazovateli (zahŕňajúci napr. zlyhanie obličiek alebo 57 % pokles GFR, hospitalizácie pre zlyhanie srdca a KV smrť) sa dosiahlo približne <strong>23 % relatívne zníženie rizika</strong> a výsledok bol štatisticky významný.</p>
 
@@ -105,13 +105,13 @@ $articles[] = [
 
 <h3>4.1. Renálny sklon, albuminúria a exploračné kompozity</h3>
 
-<p>Podľa zdroja bola v placebovom ramene ročná strata GFR približne <strong>4,2 ml/min za rok</strong>, zatiaľ čo v ramene finerenónu približne <strong>3,5 ml/min za rok</strong>, čím vzniká absolútny rozdiel <strong>0,7 ml/min za rok</strong>. To je konzistentné s celkovou populáciou FIND-CKD.</p>
+<p>Podľa zdroja bola v placebovom ramene ročná strata GFR približne <strong>4,2&nbsp;ml/min za rok</strong>, zatiaľ čo v ramene finerenónu približne <strong>3,5&nbsp;ml/min za rok</strong>, čím vzniká absolútny rozdiel <strong>0,7&nbsp;ml/min za rok</strong>. To je konzistentné s celkovou populáciou FIND-CKD.</p>
 
 <p>Zdroj ďalej uvádza:</p>
 
 <ul>
-  <li>lepší <strong>chronický sklon</strong> (bez akútneho poklesu) o približne <strong>1,2 ml/min za rok</strong>,</li>
-  <li>pokles albuminúrie oproti východiskovej hodnote v priebehu <strong>12 mesiacov</strong> o približne <strong>42 %</strong>,</li>
+  <li>lepší <strong>chronický sklon</strong> (bez akútneho poklesu) o približne <strong>1,2&nbsp;ml/min za rok</strong>,</li>
+  <li>pokles albuminúrie oproti východiskovej hodnote v priebehu <strong>12&nbsp;mesiacov</strong> o približne <strong>42 %</strong>,</li>
   <li>v exploračnom kompozite (zahŕňajúcom napr. zlyhanie obličiek alebo 40 % pokles GFR) relatívne zníženie rizika približne <strong>26 %</strong>.</li>
 </ul>
 

@@ -82,20 +82,20 @@ $articles[] = [
 
 <p>Pre nefrológa je podstatná praktická poznámka KDIGO 9.3.1.2: pri <strong>výrazne zníženej alebo rýchlo klesajúcej glomerulovej filtrácii (S-kreatinín &gt; 354 µmol/l)</strong> je dôkazový základ pre samotný rituximab s glukokortikoidmi <strong>obmedzený</strong> – práve títo pacienti boli v registračných štúdiách zastúpení najmenej. Do úvahy prichádza cyklofosfamid s glukokortikoidmi alebo kombinácia rituximabu s cyklofosfamidom.</p>
 
-<p>Dávkovanie cyklofosfamidu podľa KDIGO: perorálne <strong>2 mg/kg/deň</strong> počas 3 mesiacov (pri pretrvávajúcej aktivite maximálne 6 mesiacov), so znížením <strong>na 1,5 mg/kg/deň nad 60 rokov</strong> a <strong>na 1,0 mg/kg/deň nad 70 rokov</strong>, plus ďalšie zníženie o 0,5 mg/kg/deň pri GFR &lt; 30 ml/min/1,73 m². Intravenózna schéma je <strong>15 mg/kg v týždňoch 0, 2, 4, 7, 10</strong> a ďalej. Perorálna cesta sa uprednostní tam, kde je prístup do infúzneho centra ťažký a adherencia nie je problémom; intravenózna tam, kde je nižší počet leukocytov, kde môže byť adherencia problémom alebo kde je dôležitá nižšia kumulatívna dávka.</p>
+<p>Dávkovanie cyklofosfamidu podľa KDIGO: perorálne <strong>2&nbsp;mg/kg/deň</strong> počas 3&nbsp;mesiacov (pri pretrvávajúcej aktivite maximálne 6&nbsp;mesiacov), so znížením <strong>na 1,5&nbsp;mg/kg/deň nad 60&nbsp;rokov</strong> a <strong>na 1,0&nbsp;mg/kg/deň nad 70&nbsp;rokov</strong>, plus ďalšie zníženie o 0,5&nbsp;mg/kg/deň pri GFR &lt; 30&nbsp;ml/min/1,73&nbsp;m². Intravenózna schéma je <strong>15&nbsp;mg/kg v týždňoch 0, 2, 4, 7, 10</strong> a ďalej. Perorálna cesta sa uprednostní tam, kde je prístup do infúzneho centra ťažký a adherencia nie je problémom; intravenózna tam, kde je nižší počet leukocytov, kde môže byť adherencia problémom alebo kde je dôležitá nižšia kumulatívna dávka.</p>
 
 <h2>Glukokortikoidy: rýchly zostup je dnes štandardom</h2>
 
-<p>Najdôležitejšia praktická zmena posledných rokov sa netýka biologík, ale <strong>dávkovania glukokortikoidov</strong>. Štúdia <strong>PEXIVAS</strong> (704 pacientov s ťažkou AAV, teda s eGFR &lt; 50 ml/min/1,73 m² alebo s difúznym alveolárnym krvácaním) ukázala, že <strong>redukovaný režim perorálnych glukokortikoidov je non-inferiórny</strong> voči štandardnému: úmrtie z akejkoľvek príčiny alebo zlyhanie obličiek nastalo u 27,9 % vs. 25,5 % pacientov (absolútny rozdiel 2,3 percentuálneho bodu; 90 % IS −3,4 až 8,0, pri hranici non-inferiority 11 bodov). Zároveň bolo v redukovanej vetve <strong>menej závažných infekcií v prvom roku</strong> (pomer incidencií 0,69; 95 % IS 0,52–0,93).</p>
+<p>Najdôležitejšia praktická zmena posledných rokov sa netýka biologík, ale <strong>dávkovania glukokortikoidov</strong>. Štúdia <strong>PEXIVAS</strong> (704 pacientov s ťažkou AAV, teda s eGFR &lt; 50&nbsp;ml/min/1,73&nbsp;m² alebo s difúznym alveolárnym krvácaním) ukázala, že <strong>redukovaný režim perorálnych glukokortikoidov je non-inferiórny</strong> voči štandardnému: úmrtie z akejkoľvek príčiny alebo zlyhanie obličiek nastalo u 27,9 % vs. 25,5 % pacientov (absolútny rozdiel 2,3 percentuálneho bodu; 90 % IS −3,4 až 8,0, pri hranici non-inferiority 11 bodov). Zároveň bolo v redukovanej vetve <strong>menej závažných infekcií v prvom roku</strong> (pomer incidencií 0,69; 95 % IS 0,52–0,93).</p>
 
-<p>Japonská štúdia <strong>LoVAS</strong> to potvrdila aj pri rituximabovej indukcii: prednizolón 0,5 mg/kg/deň bol non-inferiórny voči 1 mg/kg/deň (remisia v 6. mesiaci 71,0 % vs. 69,2 %), pričom <strong>závažné nežiaduce udalosti nastali u 18,8 % vs. 36,9 %</strong> a závažné infekcie u 7,2 % vs. 20,0 % pacientov. Dôležitá výhrada pre nefrológiu: <strong>LoVAS zámerne vylúčila pacientov s ťažkou glomerulonefritídou a s alveolárnym krvácaním</strong>, takže na najzávažnejších pacientov ju priamo extrapolovať nemožno – pre nich je relevantný PEXIVAS.</p>
+<p>Japonská štúdia <strong>LoVAS</strong> to potvrdila aj pri rituximabovej indukcii: prednizolón 0,5&nbsp;mg/kg/deň bol non-inferiórny voči 1&nbsp;mg/kg/deň (remisia v 6. mesiaci 71,0 % vs. 69,2 %), pričom <strong>závažné nežiaduce udalosti nastali u 18,8 % vs. 36,9 %</strong> a závažné infekcie u 7,2 % vs. 20,0 % pacientov. Dôležitá výhrada pre nefrológiu: <strong>LoVAS zámerne vylúčila pacientov s ťažkou glomerulonefritídou a s alveolárnym krvácaním</strong>, takže na najzávažnejších pacientov ju priamo extrapolovať nemožno – pre nich je relevantný PEXIVAS.</p>
 
-<p>KDIGO 2024 preto ako referenčný uvádza <strong>redukovaný režim z PEXIVAS-u</strong> (nadväzuje na úvodné intravenózne pulzy metylprednizolónu podľa zvyklostí pracoviska). EULAR 2022 formuluje ten istý cieľ inak, ale zhodne: znížiť dávku na <strong>približne 5 mg prednizolónového ekvivalentu denne do 4 až 5 mesiacov</strong>.</p>
+<p>KDIGO 2024 preto ako referenčný uvádza <strong>redukovaný režim z PEXIVAS-u</strong> (nadväzuje na úvodné intravenózne pulzy metylprednizolónu podľa zvyklostí pracoviska). EULAR 2022 formuluje ten istý cieľ inak, ale zhodne: znížiť dávku na <strong>približne 5&nbsp;mg prednizolónového ekvivalentu denne do 4 až 5&nbsp;mesiacov</strong>.</p>
 
 <div class="table-responsive" role="region" aria-label="Redukovaný režim perorálneho prednizolónu podľa PEXIVAS v mg denne" tabindex="0">
 <table>
   <thead>
-    <tr><th scope="col">Týždeň</th><th scope="col">&lt; 50 kg</th><th scope="col">50–75 kg</th><th scope="col">&gt; 75 kg</th></tr>
+    <tr><th scope="col">Týždeň</th><th scope="col">&lt; 50&nbsp;kg</th><th scope="col">50–75&nbsp;kg</th><th scope="col">&gt; 75&nbsp;kg</th></tr>
   </thead>
   <tbody>
     <tr><th scope="row">1</th><td>50</td><td>60</td><td>75</td></tr>
@@ -144,13 +144,13 @@ $articles[] = [
 
 <p>Dve dávkovacie schémy podľa KDIGO:</p>
 <ul>
-  <li><strong>MAINRITSAN</strong> – 500 mg dvakrát pri dosiahnutí kompletnej remisie, potom 500 mg v 6., 12. a 18. mesiaci;</li>
-  <li><strong>RITAZAREM</strong> – 1000 mg po indukcii remisie a ďalej v 4., 8., 12. a 16. mesiaci.</li>
+  <li><strong>MAINRITSAN</strong> – 500&nbsp;mg dvakrát pri dosiahnutí kompletnej remisie, potom 500&nbsp;mg v 6., 12. a 18. mesiaci;</li>
+  <li><strong>RITAZAREM</strong> – 1000&nbsp;mg po indukcii remisie a ďalej v 4., 8., 12. a 16. mesiaci.</li>
 </ul>
 
-<p>Pri neznášanlivosti azatioprínu prichádza do úvahy mykofenolátmofetil alebo metotrexát – <strong>metotrexát sa však nemá použiť pri GFR &lt; 60 ml/min/1,73 m²</strong>, čo z neho v nefrologickej populácii robí skôr výnimku než alternatívu.</p>
+<p>Pri neznášanlivosti azatioprínu prichádza do úvahy mykofenolátmofetil alebo metotrexát – <strong>metotrexát sa však nemá použiť pri GFR &lt; 60&nbsp;ml/min/1,73&nbsp;m²</strong>, čo z neho v nefrologickej populácii robí skôr výnimku než alternatívu.</p>
 
-<p><strong>Optimálna dĺžka udržiavacej liečby je podľa KDIGO 18 mesiacov až 4 roky</strong> po indukcii remisie. Pri rozhodovaní o vysadení treba vážiť riziko relapsu – vyššie je pri GPA, PR3-ANCA fenotype, vyššom sérovom kreatiníne, rozsiahlejšom ochorení, postihnutí ORL oblasti a pri relapse v anamnéze. Post hoc analýza štúdie RITAZAREM (2026) k tomu pridáva dva ľahko dostupné markery: po ukončení liečby bola s relapsom spojená <strong>prítomnosť CD19+ B-lymfocytov</strong> (pomer šancí 2,5; 95 % IS 1,2–5,1) a <strong>opätovné objavenie sa ANCA</strong> (pomer šancí 3,2; 95 % IS 1,3–7,7). Pacient musí byť poučený, že pri návrate príznakov má prísť <strong>bezodkladne</strong>.</p>
+<p><strong>Optimálna dĺžka udržiavacej liečby je podľa KDIGO 18&nbsp;mesiacov až 4&nbsp;roky</strong> po indukcii remisie. Pri rozhodovaní o vysadení treba vážiť riziko relapsu – vyššie je pri GPA, PR3-ANCA fenotype, vyššom sérovom kreatiníne, rozsiahlejšom ochorení, postihnutí ORL oblasti a pri relapse v anamnéze. Post hoc analýza štúdie RITAZAREM (2026) k tomu pridáva dva ľahko dostupné markery: po ukončení liečby bola s relapsom spojená <strong>prítomnosť CD19+ B-lymfocytov</strong> (pomer šancí 2,5; 95 % IS 1,2–5,1) a <strong>opätovné objavenie sa ANCA</strong> (pomer šancí 3,2; 95 % IS 1,3–7,7). Pacient musí byť poučený, že pri návrate príznakov má prísť <strong>bezodkladne</strong>.</p>
 
 <h2>Špecifické nefrologické situácie</h2>
 
@@ -158,7 +158,7 @@ $articles[] = [
   <li><strong>Pacient trvale na dialýze bez mimorenálnych prejavov.</strong> KDIGO odporúča <strong>zvážiť ukončenie imunosupresie po 3 mesiacoch</strong> (praktický bod 9.3.1.5). Pokračovanie v tejto situácii prináša riziko infekcie bez zodpovedajúceho zisku.</li>
   <li><strong>Refraktérne ochorenie.</strong> Riešením je zvýšenie dávky glukokortikoidov, prechod z cyklofosfamidu na rituximab alebo naopak; plazmaferézu možno zvážiť. Pozor na diferenciálnu diagnostiku: progresia zlyhávania obličiek môže odrážať <strong>chronické poškodenie, nie aktivitu</strong> – opakovaná biopsia je legitímny krok.</li>
   <li><strong>Relaps.</strong> Život alebo orgán ohrozujúci relaps sa lieči <strong>opätovnou indukciou, prednostne rituximabom</strong>.</li>
-  <li><strong>Transplantácia obličky.</strong> Odložiť až do <strong>kompletnej klinickej remisie trvajúcej aspoň 6 mesiacov</strong>. <strong>Pretrvávajúca pozitivita ANCA nie je dôvodom na odklad</strong> – recidíva po transplantácii je zriedkavá (rádovo 0,02–0,03 na pacientorok) a nesúvisí s ANCA statusom pred transplantáciou.</li>
+  <li><strong>Transplantácia obličky.</strong> Odložiť až do <strong>kompletnej klinickej remisie trvajúcej aspoň 6&nbsp;mesiacov</strong>. <strong>Pretrvávajúca pozitivita ANCA nie je dôvodom na odklad</strong> – recidíva po transplantácii je zriedkavá (rádovo 0,02–0,03 na pacientorok) a nesúvisí s ANCA statusom pred transplantáciou.</li>
 </ul>
 
 <h2>EGPA: anti-IL-5 liečba ako samostatná vetva</h2>
@@ -181,14 +181,14 @@ $articles[] = [
   <li><strong>Kostné zdravie</strong> – aj pri redukovanom režime ide o mesiace liečby glukokortikoidmi.</li>
 </ul>
 
-<h2>Praktický algoritmus pre prvých 72 hodín</h2>
+<h2>Praktický algoritmus pre prvých 72&nbsp;hodín</h2>
 
 <ol>
   <li><strong>Posúď závažnosť.</strong> Rýchlosť poklesu eGFR, močový sediment, albuminúria, oxygenácia, systémové prejavy.</li>
   <li><strong>Zober sérológiu naraz.</strong> ANCA (MPO aj PR3) <strong>a anti-GBM</strong>, doplň diferenciálnu diagnostiku (komplement, ANA, kryoglobulíny, sérologické vyšetrenia podľa kliniky).</li>
   <li><strong>Naplánuj biopsiu – ale neodkladaj kvôli nej liečbu.</strong> Pri zodpovedajúcom obraze a pozitívnej sérológii začni imunosupresiu okamžite.</li>
   <li><strong>Začni indukciu:</strong> glukokortikoidy plus rituximab alebo cyklofosfamid; pri S-kreatiníne &gt; 354 µmol/l zváž cyklofosfamid alebo kombináciu s rituximabom.</li>
-  <li><strong>Nastav zostup glukokortikoidov hneď na začiatku</strong> podľa redukovanej schémy PEXIVAS, s cieľom približne 5 mg denne do 4 až 5 mesiacov. Nenechávaj zostupnú schému „na neskôr“.</li>
+  <li><strong>Nastav zostup glukokortikoidov hneď na začiatku</strong> podľa redukovanej schémy PEXIVAS, s cieľom približne 5&nbsp;mg denne do 4 až 5&nbsp;mesiacov. Nenechávaj zostupnú schému „na neskôr“.</li>
   <li><strong>Rozhodni o plazmaferéze podľa rizika:</strong> S-kreatinín &gt; 300 µmol/l, potreba dialýzy alebo rýchlo stúpajúci kreatinín; hypoxemické alveolárne krvácanie; <strong>vždy</strong> pri prekryve s anti-GBM.</li>
   <li><strong>Zabezpeč profylaxiu infekcií</strong> a plán monitorovania ešte pred ukončením akútnej fázy.</li>
   <li><strong>Naplánuj udržiavaciu liečbu</strong> (prednostne rituximab) a povedz pacientovi, na ktoré príznaky relapsu má reagovať okamžite.</li>

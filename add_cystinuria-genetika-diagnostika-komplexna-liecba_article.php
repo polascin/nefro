@@ -36,7 +36,7 @@ $articles[] = [
 
 <p>Cystín tvoria dve molekuly cysteínu spojené disulfidovou väzbou. V moči je málo rozpustný, najmä pri fyziologickom a kyslom pH. Riziko kryštalizácie závisí od denného vylučovania cystínu, objemu a pH moču, ďalšieho močového profilu a účinku prípadnej tiolovej liečby. Ostatné dotknuté aminokyseliny sú rozpustnejšie a porovnateľnú litiázu spravidla nespôsobujú.</p>
 
-<p>Praktický cieľ, koncentrácia cystínu pod približne 250 mg/l (asi 1 mmol/l), nie je univerzálnou hranicou pri každom pH. Rozpustnosť cystínu sa s rastúcim pH výrazne zvyšuje. [1]</p>
+<p>Praktický cieľ, koncentrácia cystínu pod približne 250&nbsp;mg/l (asi 1&nbsp;mmol/l), nie je univerzálnou hranicou pri každom pH. Rozpustnosť cystínu sa s rastúcim pH výrazne zvyšuje. [1]</p>
 
 <h3>Cystínuria nie je cystinóza</h3>
 <p>Cystinóza je odlišné lyzozómové ochorenie, ktoré môže vyvolať Fanconiho syndróm a systémové poškodenie. Cysteamín používaný pri cystinóze nie je štandardnou liečbou cystínurie. Rozdiel nie je len terminologický: obe ochorenia majú odlišnú patofyziológiu, klinický obraz aj liečbu.</p>
@@ -95,14 +95,14 @@ $articles[] = [
 <p>Pri potvrdenej cystínovej litiáze je potrebná kombinácia hydratácie, úpravy stravy a spravidla alkalizácie. Recidíva alebo rast konkrementov napriek týmto opatreniam je dôvodom na pridanie tiolového lieku. Obštrukcia, infekcia, pokles funkcie obličiek alebo veľké konkrementy vyžadujú súbežnú urologickú liečbu.</p>
 
 <h3>Hydratácia: rozhoduje objem moču</h3>
-<p>U dospelých je cieľom <strong>24-hodinový objem moču nad 3 litre</strong>, ak to klinický stav umožňuje. Potrebný príjem tekutín je vyšší a závisí od potenia, prostredia a extrarenálnych strát. Tekutiny sa rozdeľujú počas celého dňa vrátane večera; nočná koncentrácia moču je významným problémom. EAU uvádza u detí cieľ približne 1,5 l/m<sup>2</sup> telesného povrchu denne. [3]</p>
+<p>U dospelých je cieľom <strong>24-hodinový objem moču nad 3 litre</strong>, ak to klinický stav umožňuje. Potrebný príjem tekutín je vyšší a závisí od potenia, prostredia a extrarenálnych strát. Tekutiny sa rozdeľujú počas celého dňa vrátane večera; nočná koncentrácia moču je významným problémom. EAU uvádza u detí cieľ približne 1,5&nbsp;l/m<sup>2</sup> telesného povrchu denne. [3]</p>
 
 <p>Pri srdcovom zlyhávaní, oligúrii alebo pokročilej CKD sa vysoký príjem tekutín nesmie predpisovať mechanicky.</p>
 
 <h3>Strava: menej sodíka, nie podvýživa</h3>
-<p>EAU odporúča neprekračovať približne 2 g sodíka denne, teda asi 5 g kuchynskej soli. Vyšší príjem sodíka zvyšuje vylučovanie cystínu. Dôkazy o poklese cystinúrie sú presvedčivejšie než priame dôkazy o znížení klinických recidív. [1,3]</p>
+<p>EAU odporúča neprekračovať približne 2&nbsp;g sodíka denne, teda asi 5&nbsp;g kuchynskej soli. Vyšší príjem sodíka zvyšuje vylučovanie cystínu. Dôkazy o poklese cystinúrie sú presvedčivejšie než priame dôkazy o znížení klinických recidív. [1,3]</p>
 
-<p>Obmedzuje sa najmä nadmerný príjem živočíšnych bielkovín a vysokobielkovinové diéty. Metionín je prekurzorom cysteínu a živočíšne bielkoviny zvyšujú kyselinovú záťaž. GeneReviews uvádza u dospelých orientačne 0,8–1 g bielkovín/kg/deň, vždy s ohľadom na výživu, vek a funkciu obličiek. U detí reštrikcia nesmie ohroziť rast. [2]</p>
+<p>Obmedzuje sa najmä nadmerný príjem živočíšnych bielkovín a vysokobielkovinové diéty. Metionín je prekurzorom cysteínu a živočíšne bielkoviny zvyšujú kyselinovú záťaž. GeneReviews uvádza u dospelých orientačne 0,8–1&nbsp;g bielkovín/kg/deň, vždy s ohľadom na výživu, vek a funkciu obličiek. U detí reštrikcia nesmie ohroziť rast. [2]</p>
 
 <h2>Alkalizácia moču: prečo sa ciele líšia</h2>
 
@@ -121,14 +121,14 @@ $articles[] = [
 
 <p>Tiolové lieky štiepia disulfidovú väzbu cystínu a vytvárajú rozpustnejšie zmiešané disulfidy. Neopravujú transportér a ich účinok nemožno opisovať iba ako zníženie celkového vylučovania cystínu.</p>
 
-<p><strong>Tiopronín je spravidla preferovaný</strong> pre lepšiu toleranciu oproti D-penicilamínu. EAU odporúča jeho pridanie pri vylučovaní cystínu nad 3 mmol/deň alebo pri recidívach napriek ostatným opatreniam; uvádza rozsah 250–2 000 mg/deň. Americký konsenzus často začína u dospelých dávkou 600–900 mg/deň. Dávka sa musí riadiť konkrétnym prípravkom, účinkom a toleranciou. [1,3]</p>
+<p><strong>Tiopronín je spravidla preferovaný</strong> pre lepšiu toleranciu oproti D-penicilamínu. EAU odporúča jeho pridanie pri vylučovaní cystínu nad 3&nbsp;mmol/deň alebo pri recidívach napriek ostatným opatreniam; uvádza rozsah 250–2&nbsp;000&nbsp;mg/deň. Americký konsenzus často začína u dospelých dávkou 600–900&nbsp;mg/deň. Dávka sa musí riadiť konkrétnym prípravkom, účinkom a toleranciou. [1,3]</p>
 
 <p>Tiopronín môže vyvolať proteinúriu vrátane nefrotického syndrómu a membranóznej nefropatie. Proteinúria sa vyšetruje pred liečbou a počas nej; nová významná proteinúria vyžaduje bezodkladné prehodnotenie lieku.</p>
 
 <p>D-penicilamín je alternatívou pri nedostupnosti alebo nevhodnosti tiopronínu. Vyžaduje sledovanie pre cytopénie, proteinúriu a glomerulárne poškodenie, hepatotoxicitu, kožné a slizničné reakcie, autoimunitné komplikácie a gastrointestinálnu intoleranciu. Zohľadňuje sa aj riziko nedostatku pyridoxínu; suplementácia má byť súčasťou odborného plánu, nie nekontrolovaným dlhodobým užívaním vysokých dávok.</p>
 
 <h3>Meranie počas tiolovej liečby</h3>
-<p>Niektoré laboratórne metódy neodlíšia voľný cystín od liekových komplexov, a preto môžu viesť k nesprávnej titrácii. Treba poznať použitú metódu. Kapacita moču rozpúšťať cystín (<em>cystine capacity</em>) je pozitívna pri nenasýtenom moči a negatívna pri presýtení. Konsenzus uvádza ako praktický cieľ pozitívnu hodnotu, často nad 50 mg/l, ide však o ukazovateľ založený na obmedzených údajoch. Rozhodujúci zostáva aj zobrazovací vývoj. [1]</p>
+<p>Niektoré laboratórne metódy neodlíšia voľný cystín od liekových komplexov, a preto môžu viesť k nesprávnej titrácii. Treba poznať použitú metódu. Kapacita moču rozpúšťať cystín (<em>cystine capacity</em>) je pozitívna pri nenasýtenom moči a negatívna pri presýtení. Konsenzus uvádza ako praktický cieľ pozitívnu hodnotu, často nad 50&nbsp;mg/l, ide však o ukazovateľ založený na obmedzených údajoch. Rozhodujúci zostáva aj zobrazovací vývoj. [1]</p>
 
 <h2>Kaptopril a ostatné ACE inhibítory</h2>
 
@@ -146,13 +146,13 @@ $articles[] = [
 
 <h2>Dlhodobé sledovanie</h2>
 
-<p>Po zmene režimu alebo farmakoterapie sa moč kontroluje približne o 1–2 mesiace. Po stabilizácii sa interval individualizuje; GeneReviews odporúča 24-hodinový moč každé 3–6 mesiacov do stabilizácie a následne každých 6–12 mesiacov. Ultrasonografické sledovanie obličiek a močových ciest sa plánuje približne každých 6–12 mesiacov, pri aktívnom ochorení skôr. [2]</p>
+<p>Po zmene režimu alebo farmakoterapie sa moč kontroluje približne o 1–2&nbsp;mesiace. Po stabilizácii sa interval individualizuje; GeneReviews odporúča 24-hodinový moč každé 3–6&nbsp;mesiacov do stabilizácie a následne každých 6–12&nbsp;mesiacov. Ultrasonografické sledovanie obličiek a močových ciest sa plánuje približne každých 6–12&nbsp;mesiacov, pri aktívnom ochorení skôr. [2]</p>
 
 <p>Sledujú sa objem a pH moču, cystín s prihliadnutím na metódu, funkcia obličiek, elektrolyty, krvný tlak, proteinúria alebo albuminúria a podľa lieku krvný obraz či pečeňové testy. Rovnako dôležitá je uskutočniteľnosť plánu: prístup k vode a toalete, počet tabliet, tolerancia alkalizácie, pracovné podmienky a nočný režim.</p>
 
 <h2>Nové prístupy a hranice dôkazov</h2>
 
-<p>Skúmajú sa inhibítory rastu cystínových kryštálov, génová liečba, látky ovplyvňujúce objem moču a kyselina alfa-lipoová. Randomizovaná štúdia NCT02910531 s 50 účastníkmi bola ukončená v decembri 2024 a výsledky boli v registri zverejnené v apríli 2026. Register uvádza recidívu u 16 z 25 účastníkov pri kyseline alfa-lipoovej a u 23 z 25 pri placebe, neposkytuje však v zázname inferenčnú štatistiku potrebnú na definitívny klinický záver. Bez recenzovanej publikácie a začlenenia do odporúčaní nemožno túto intervenciu považovať za štandardnú liečbu. [4]</p>
+<p>Skúmajú sa inhibítory rastu cystínových kryštálov, génová liečba, látky ovplyvňujúce objem moču a kyselina alfa-lipoová. Randomizovaná štúdia NCT02910531&nbsp;s 50 účastníkmi bola ukončená v decembri 2024 a výsledky boli v registri zverejnené v apríli 2026. Register uvádza recidívu u 16 z 25 účastníkov pri kyseline alfa-lipoovej a u 23 z 25 pri placebe, neposkytuje však v zázname inferenčnú štatistiku potrebnú na definitívny klinický záver. Bez recenzovanej publikácie a začlenenia do odporúčaní nemožno túto intervenciu považovať za štandardnú liečbu. [4]</p>
 
 <p>Pri cystínurii všeobecne prevažujú menšie observačné štúdie a expertný konsenzus. Liečba môže byť klinicky nevyhnutná aj pri obmedzenej istote dôkazov, slabo doložené postupy však nemožno stavať na rovnakú úroveň ako hydratácia, alkalizácia a etablované tiolové lieky.</p>
 

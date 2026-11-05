@@ -41,15 +41,15 @@ $articles[] = [
 
 <h2>Čo výskumníci porovnávali</h2>
 
-<p>Štúdia prebiehala na Washington University School of Medicine od februára 2016 do apríla 2025. Zaradení boli dospelí vo veku 18 až 55 rokov s <strong>metabolicky nezdravou obezitou</strong>, definovanou súčasnou prítomnosťou troch podmienok:</p>
+<p>Štúdia prebiehala na Washington University School of Medicine od februára 2016 do apríla 2025. Zaradení boli dospelí vo veku 18 až 55&nbsp;rokov s <strong>metabolicky nezdravou obezitou</strong>, definovanou súčasnou prítomnosťou troch podmienok:</p>
 
 <ul>
-  <li>index telesnej hmotnosti 30,0 až 50,0 kg/m²,</li>
-  <li>prediabetes (glykémia nalačno ≥ 100 mg/dl, HbA<sub>1c</sub> ≥ 5,7 % alebo glykémia 2 hodiny po 75 g glukózy ≥ 140 mg/dl),</li>
+  <li>index telesnej hmotnosti 30,0 až 50,0&nbsp;kg/m²,</li>
+  <li>prediabetes (glykémia nalačno ≥ 100&nbsp;mg/dl, HbA<sub>1c</sub> ≥ 5,7 % alebo glykémia 2&nbsp;hodiny po 75&nbsp;g glukózy ≥ 140&nbsp;mg/dl),</li>
   <li>steatóza pečene (obsah triacylglycerolov v pečeni ≥ 5 % podľa magnetickej rezonancie).</li>
 </ul>
 
-<p>Randomizovaných bolo 55 účastníkov, analyzovaných <strong>42</strong>, ktorí štúdiu dokončili – v každej skupine zhodne 9 žien a 5 mužov. Priemerný vek bol 43,2 ± 7,5 roka a index telesnej hmotnosti 38,9 ± 4,9 kg/m².</p>
+<p>Randomizovaných bolo 55 účastníkov, analyzovaných <strong>42</strong>, ktorí štúdiu dokončili – v každej skupine zhodne 9 žien a 5 mužov. Priemerný vek bol 43,2 ± 7,5 roka a index telesnej hmotnosti 38,9 ± 4,9&nbsp;kg/m².</p>
 
 <div class="table-responsive" role="region" aria-label="Zloženie porovnávaných diét a dosiahnutý úbytok hmotnosti" tabindex="0">
 <table>
@@ -137,9 +137,9 @@ $articles[] = [
 
 <p>Remisiu prediabetu dosiahlo 50 % účastníkov ketogénnej skupiny, 29 % stredomorskej a 7 % nízkotučnej (p &lt; 0,05, chí-kvadrát test).</p>
 
-<p>Autori remisiu definovali prísne – museli byť splnené <strong>všetky tri</strong> podmienky súčasne: glykémia nalačno &lt; 100 mg/dl, glykémia 2 hodiny po 75 g glukózy &lt; 140 mg/dl a HbA<sub>1c</sub> &lt; 5,7 %.</p>
+<p>Autori remisiu definovali prísne – museli byť splnené <strong>všetky tri</strong> podmienky súčasne: glykémia nalačno &lt; 100&nbsp;mg/dl, glykémia 2&nbsp;hodiny po 75&nbsp;g glukózy &lt; 140&nbsp;mg/dl a HbA<sub>1c</sub> &lt; 5,7 %.</p>
 
-<p>Pri pohľade na jednotlivé zložky sa však ukazuje zaujímavý detail. Glykémia 2 hodiny po záťaži klesla vo všetkých skupinách <strong>bez rozdielu medzi diétami</strong>. Rozdiel v remisii teda pochádzal z glykémie nalačno a HbA<sub>1c</sub>, nie z glukózovej tolerancie. To je klinicky podstatné: ketogénna strava zlepšila predovšetkým ukazovatele odrážajúce pečeňovú produkciu glukózy a dlhodobú glykémiu, nie schopnosť spracovať sacharidovú nálož.</p>
+<p>Pri pohľade na jednotlivé zložky sa však ukazuje zaujímavý detail. Glykémia 2&nbsp;hodiny po záťaži klesla vo všetkých skupinách <strong>bez rozdielu medzi diétami</strong>. Rozdiel v remisii teda pochádzal z glykémie nalačno a HbA<sub>1c</sub>, nie z glukózovej tolerancie. To je klinicky podstatné: ketogénna strava zlepšila predovšetkým ukazovatele odrážajúce pečeňovú produkciu glukózy a dlhodobú glykémiu, nie schopnosť spracovať sacharidovú nálož.</p>
 
 <p>Pri 14 účastníkoch v skupine navyše rozdiel medzi 50 % a 29 % predstavuje tri osoby. Percentá preto nemožno prezentovať ako spoľahlivú predpoveď pravdepodobnosti úspechu pre konkrétneho pacienta.</p>
 
@@ -260,9 +260,9 @@ $articles[] = [
 
 <h2>Rozhodovanie nemá stáť na titulku</h2>
 
-<p>Štúdia je metodicky nadpriemerná: poskytované jedlo, adherencia nad 95 %, zhodný úbytok hmotnosti, klamp, magnetická rezonancia, deuterovaná voda a 26 odberov počas 24 hodín. Jej mechanistické zistenia o pečeňovom metabolizme sú vierohodné a vnútorne konzistentné.</p>
+<p>Štúdia je metodicky nadpriemerná: poskytované jedlo, adherencia nad 95 %, zhodný úbytok hmotnosti, klamp, magnetická rezonancia, deuterovaná voda a 26 odberov počas 24&nbsp;hodín. Jej mechanistické zistenia o pečeňovom metabolizme sú vierohodné a vnútorne konzistentné.</p>
 
-<p>Zároveň však ide o 42 analyzovaných účastníkov vo veku do 55 rokov, prevažne belochov, bez diabetu a bez ochorenia obličiek, sledovaných približne päť mesiacov. Jeden z dvoch hlavných cieľov bol negatívny a ostatné nálezy boli exploračné.</p>
+<p>Zároveň však ide o 42 analyzovaných účastníkov vo veku do 55&nbsp;rokov, prevažne belochov, bez diabetu a bez ochorenia obličiek, sledovaných približne päť mesiacov. Jeden z dvoch hlavných cieľov bol negatívny a ostatné nálezy boli exploračné.</p>
 
 <p>Nejde teda o dôkaz, že ketogénna diéta je najzdravším spôsobom chudnutia, že lieči fibrózu pečene alebo že je vhodná pre pacientov s chronickou chorobou obličiek. Ide o dobre podložený mechanistický poznatok: pri metabolicky nezdravej obezite so steatózou pečene prináša výrazné obmedzenie sacharidov pri rovnakom úbytku hmotnosti <strong>pečeni</strong> niečo navyše – zatiaľ čo svalu nie.</p>
 
@@ -273,7 +273,7 @@ $articles[] = [
 <ul>
   <li><a href="article.php?slug=bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek">BMI a hematokrit pri diabete 2. typu: čo skutočne hovoria o riziku zlyhania obličiek</a></li>
   <li><a href="article.php?slug=alternativne-sladidla-masld-ckd-inkretinova-liecba">Sladidlá pri MASLD, CKD a inkretínovej liečbe: dôkazy a neistoty</a></li>
-  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120 mm Hg pri chronickej chorobe obličiek sa v praxi uplatňuje len obmedzene</a></li>
+  <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak pod 120&nbsp;mm Hg pri chronickej chorobe obličiek sa v praxi uplatňuje len obmedzene</a></li>
 </ul>
 
 <hr>

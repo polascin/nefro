@@ -170,7 +170,7 @@ $articles[] = [
 <p>Po uvedení na trh sa objavili signály o zvýšenom kardiovaskulárnom riziku. Následná placebom kontrolovaná štúdia APPROVe (Adenomatous Polyp Prevention on Vioxx) bola predčasne ukončená, keď sa zistilo, že rofekoxib zdvojnásobuje riziko kardiovaskulárnych príhod vrátane infarktu myokardu a cievnej mozgovej príhody.</p>
 
 <h4>Dôkazy o kardiovaskulárnych komplikáciách a mortalite</h4>
-<p>Metaanalýzy a observačné štúdie potvrdili, že rofekoxib signifikantne zvyšoval riziko kardiovaskulárnych príhod. Odhaduje sa, že celosvetovo bolo s užívaním Vioxxu spojených 88 000 až 140 000 prípadov závažných kardiovaskulárnych ochorení, z ktorých približne 30 – 40 % bolo fatálnych.</p>
+<p>Metaanalýzy a observačné štúdie potvrdili, že rofekoxib signifikantne zvyšoval riziko kardiovaskulárnych príhod. Odhaduje sa, že celosvetovo bolo s užívaním Vioxxu spojených 88&nbsp;000 až 140&nbsp;000 prípadov závažných kardiovaskulárnych ochorení, z ktorých približne 30 – 40 % bolo fatálnych.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
 <p>Spoločnosť Merck dobrovoľne stiahla Vioxx z celosvetového trhu v septembri 2004. Toto rozhodnutie bolo prijaté po zverejnení výsledkov štúdie APPROVe. FDA následne vydala varovanie a začala preskúmavanie celej triedy COX-2 inhibítorov.</p>
@@ -286,7 +286,7 @@ $articles[] = [
 <p>FDA požiadala o stiahnutie tegaserodu z trhu v marci 2007. Liek bol odstránený z amerického trhu, no bol dostupný v rámci obmedzeného programu až do apríla 2008. V roku 2019 FDA schválila obmedzené znovuuvedenie tegaserodu pre špecifickú populáciu pacientok s IBS-C bez kardiovaskulárneho rizika.</p>
 
 <h4>Aktuálny stav</h4>
-<p>Tegaserod bol znovu uvedený na trh v roku 2019 s výrazne obmedzenými indikáciami. Prípad tegaserodu ilustruje kompromis medzi terapeutickým prínosom a bezpečnostným rizikom, ktorý môže viesť k znovuuvedeniu lieku za prísnych podmienok.</p>
+<p>Tegaserod bol znovu uvedený na trh v roku 2019&nbsp;s výrazne obmedzenými indikáciami. Prípad tegaserodu ilustruje kompromis medzi terapeutickým prínosom a bezpečnostným rizikom, ktorý môže viesť k znovuuvedeniu lieku za prísnych podmienok.</p>
 
 <p><strong>Stupeň istoty kauzality: stredný.</strong> Kauzalita je podporená metaanalýzou klinických štúdií, no nízky počet príhod znižuje štatistickú silu dôkazov.</p>
 
@@ -321,7 +321,7 @@ $articles[] = [
 <p>FDA schválila sibutramín v roku 1997, EMA v roku 1999. V čase schválenia boli známe mierne kardiovaskulárne účinky (zvýšenie krvného tlaku a srdcovej frekvencie), no tieto boli považované za klinicky akceptovateľné vzhľadom na potenciálny prínos redukcie hmotnosti.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>Po uvedení na trh sa objavili signály o zvýšenom kardiovaskulárnom riziku. Štúdia SCOUT (Sibutramine Cardiovascular OUTcomes), ktorá zahŕňala 10 744 pacientov s nadváhou alebo obezitou a s existujúcim kardiovaskulárnym ochorením alebo diabetom 2. typu, preukázala 16 % zvýšenie rizika závažných kardiovaskulárnych príhod (infarkt myokardu, cievna mozgová príhoda, resuscitovaná zástava srdca, kardiovaskulárna smrť).</p>
+<p>Po uvedení na trh sa objavili signály o zvýšenom kardiovaskulárnom riziku. Štúdia SCOUT (Sibutramine Cardiovascular OUTcomes), ktorá zahŕňala 10&nbsp;744 pacientov s nadváhou alebo obezitou a s existujúcim kardiovaskulárnym ochorením alebo diabetom 2. typu, preukázala 16 % zvýšenie rizika závažných kardiovaskulárnych príhod (infarkt myokardu, cievna mozgová príhoda, resuscitovaná zástava srdca, kardiovaskulárna smrť).</p>
 
 <h4>Dôkazy o kardiovaskulárnych príhodách a mortalite</h4>
 <p>Štúdia SCOUT (pomer rizík HR 1,16; 95 % CI 1,03 – 1,31) poskytla presvedčivé dôkazy o kardiovaskulárnom riziku sibutramínu. Vyššie riziko bolo pozorované najmä u pacientov s už existujúcim kardiovaskulárnym ochorením. Sibutramín bol stiahnutý z trhu vo viacerých krajinách vrátane Austrálie, Kanady, Číny, EÚ, Indie, Mexika, Nového Zélandu, Filipín, Thajska, Spojeného kráľovstva a USA.</p>
@@ -332,7 +332,7 @@ $articles[] = [
 <h4>Aktuálny stav</h4>
 <p>Sibutramín zostáva stiahnutý z trhu vo väčšine krajín. Prípad sibutramínu je významný, pretože kauzalita bola potvrdená rozsiahlou randomizovanou klinickou štúdiou navrhnutou špecificky na hodnotenie kardiovaskulárnej bezpečnosti.</p>
 
-<p><strong>Stupeň istoty kauzality: vysoký.</strong> Kauzalita je podporená rozsiahlou randomizovanou kontrolovanou štúdiou (SCOUT) s viac než 10 000 pacientmi.</p>
+<p><strong>Stupeň istoty kauzality: vysoký.</strong> Kauzalita je podporená rozsiahlou randomizovanou kontrolovanou štúdiou (SCOUT) s viac než 10&nbsp;000 pacientmi.</p>
 
 <h3 id="natalizumab">3.9 Natalizumab (Tysabri)</h3>
 
@@ -346,7 +346,7 @@ $articles[] = [
 <p>V priebehu prvého roka po schválení boli hlásené tri prípady PML, zriedkavej a fatálnej oportúnnej infekcie mozgu spôsobenej vírusom JC. Dva prípady sa vyskytli u pacientov s roztrúsenou sklerózou liečených natalizumabom a jeden u pacienta s Crohnovou chorobou. Všetky tri prípady boli fatálne alebo viedli k závažnému neurologickému poškodeniu.</p>
 
 <h4>Dôkazy o PML a mortalite</h4>
-<p>Kazuistiky a observačné štúdie identifikovali rizikové faktory pre rozvoj PML: pozitivita na protilátky proti vírusu JC, dĺžka liečby nad 24 mesiacov a predchádzajúca imunosupresívna liečba. Celkové riziko PML sa odhaduje na 1 : 1000 až 1 : 100 v závislosti od kombinácie rizikových faktorov.</p>
+<p>Kazuistiky a observačné štúdie identifikovali rizikové faktory pre rozvoj PML: pozitivita na protilátky proti vírusu JC, dĺžka liečby nad 24&nbsp;mesiacov a predchádzajúca imunosupresívna liečba. Celkové riziko PML sa odhaduje na 1 : 1000 až 1 : 100 v závislosti od kombinácie rizikových faktorov.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
 <p>Spoločnosti Biogen Idec a Elan 28. februára 2005 dobrovoľne pozastavili uvádzanie Tysabri na americký trh. Po analýze rizík a prínosov FDA schválila jeho obmedzené znovuuvedenie 5. júna 2006 v rámci špeciálneho programu TOUCH (Tysabri Outreach: Unified Commitment to Health), ktorý vyžaduje prísne monitorovanie a hlásenie akýchkoľvek nových neurologických symptómov.</p>
@@ -368,7 +368,7 @@ $articles[] = [
 <p>V roku 2019 nezávislé laboratórium (Valisure) zistilo, že ranitidín sa spontánne rozkladá na N-nitrózodimetylamín (NDMA), ktorý je pravdepodobným ľudským karcinogénom. NDMA vzniká pri skladovaní ranitidínu pri zvýšených teplotách a jeho koncentrácia v lieku sa časom zvyšuje. FDA potvrdila prítomnosť NDMA v rôznych šaržiach ranitidínu a iniciovala vyšetrovanie.</p>
 
 <h4>Dôkazy o karcinogenite</h4>
-<p>Analytické štúdie potvrdili, že ranitidín produkuje NDMA v koncentráciách prekračujúcich prijateľný denný príjem stanovený FDA (96 ng/deň). NDMA je klasifikovaný ako pravdepodobný ľudský karcinogén na základe štúdií na zvieratách. Dlhodobé účinky u ľudí sú ťažko kvantifikovateľné, no potenciálne riziko rakoviny bolo považované za významné.</p>
+<p>Analytické štúdie potvrdili, že ranitidín produkuje NDMA v koncentráciách prekračujúcich prijateľný denný príjem stanovený FDA (96&nbsp;ng/deň). NDMA je klasifikovaný ako pravdepodobný ľudský karcinogén na základe štúdií na zvieratách. Dlhodobé účinky u ľudí sú ťažko kvantifikovateľné, no potenciálne riziko rakoviny bolo považované za významné.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
 <p>FDA požiadala 1. apríla 2020 o stiahnutie všetkých vtedy uvádzaných liekov obsahujúcich ranitidín z amerického trhu. Výbor CHMP agentúry EMA v septembri 2020 potvrdil odporúčanie pozastaviť všetky ranitidínové lieky v EÚ a Európska komisia vydala 24. novembra 2020 záväzné rozhodnutie. Nešlo však o definitívny celosvetový zákaz účinnej látky: FDA 24. novembra 2025 schválila reformulované tablety ranitidínu po testoch stability a úpravách výroby.</p>
@@ -386,7 +386,7 @@ $articles[] = [
 <p>Z hľadiska úrovne dôkazov boli kazuistiky najčastejšie používaným dôkazom pre stiahnutie liekov, a to v 71 % všetkých prípadov. V 49 prípadoch (11 %) boli rozhodnutia o stiahnutí založené na výsledkoch štúdií na zvieratách. Frekvencia používania kazuistík ako dominantného zdroja informácií sa časom znižovala: z 85 % v 50. rokoch 20. storočia na 64 % v 90. rokoch a od roku 2000 na 35 %.</p>
 
 <h3>4.2 Časové intervaly medzi uvedením na trh a stiahnutím</h3>
-<p>Medián intervalu medzi prvým uvedením na trh a prvým stiahnutím bol 18 rokov (IQR 6 – 34) pre všetky lieky a 10 rokov pre lieky uvedené po roku 1960 (IQR 3 – 19). Medián intervalu medzi prvou hlásenou nežiaducou reakciou a rokom prvého stiahnutia bol 6 rokov (IQR 1 – 15) pre všetky lieky a 3 roky pre lieky uvedené po roku 1960 (IQR 0 – 8).</p>
+<p>Medián intervalu medzi prvým uvedením na trh a prvým stiahnutím bol 18&nbsp;rokov (IQR 6 – 34) pre všetky lieky a 10&nbsp;rokov pre lieky uvedené po roku 1960 (IQR 3 – 19). Medián intervalu medzi prvou hlásenou nežiaducou reakciou a rokom prvého stiahnutia bol 6&nbsp;rokov (IQR 1 – 15) pre všetky lieky a 3&nbsp;roky pre lieky uvedené po roku 1960 (IQR 0 – 8).</p>
 
 <p>Kohortová štúdia Yale School of Medicine zistila, že u 71 z 222 liekov schválených FDA v rokoch 2001 – 2010 došlo k bezpečnostným problémom, ktoré sa prejavili v mediáne 4,2 roka po schválení. Tieto zistenia poukazujú na to, že hoci sa interval medzi uvedením lieku na trh a prvým hlásením nežiaducej reakcie skracuje, interval medzi prvým hlásením a regulačným opatrením sa výrazne neskracuje.</p>
 
@@ -478,11 +478,11 @@ $articles[] = [
     </tr>
     <tr>
       <td><strong>Interval: uvedenie – stiahnutie</strong></td>
-      <td>Medián 18 rokov (všetky lieky), 10 rokov (po roku 1960)</td>
+      <td>Medián 18&nbsp;rokov (všetky lieky), 10&nbsp;rokov (po roku 1960)</td>
     </tr>
     <tr>
       <td><strong>Interval: prvá reakcia – stiahnutie</strong></td>
-      <td>Medián 6 rokov (všetky lieky), 3 roky (po roku 1960)</td>
+      <td>Medián 6&nbsp;rokov (všetky lieky), 3&nbsp;roky (po roku 1960)</td>
     </tr>
   </tbody>
 </table>

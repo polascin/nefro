@@ -57,13 +57,13 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Sinsky a kol., 2016<sup>9</sup></th>
-        <td>Priame pozorovanie (430 hodín, 57 lekárov, 4 odbory) a denníky mimo ordinačných hodín</td>
-        <td>27,0 % času v ordinačný deň pripadlo na priamy kontakt s pacientom, 49,2 % na dokumentáciu a kancelárske úkony. Na každú hodinu priameho kontaktu teda takmer dve hodiny dokumentácie. Navyše 1 až 2 hodiny každý večer.</td>
+        <td>Priame pozorovanie (430&nbsp;hodín, 57 lekárov, 4 odbory) a denníky mimo ordinačných hodín</td>
+        <td>27,0 % času v ordinačný deň pripadlo na priamy kontakt s pacientom, 49,2 % na dokumentáciu a kancelárske úkony. Na každú hodinu priameho kontaktu teda takmer dve hodiny dokumentácie. Navyše 1 až 2&nbsp;hodiny každý večer.</td>
       </tr>
       <tr>
         <th scope="row">Arndt a kol., 2017<sup>4</sup></th>
-        <td>Záznamy udalostí z elektronickej dokumentácie (142 lekárov, 3 roky), overené priamym pozorovaním</td>
-        <td>355 minút (5,9 hodiny) z 11,4-hodinového pracovného dňa v systéme: 269 minút počas ordinačných hodín a 86 minút (1,4 hodiny) po nich. Kancelárske a administratívne úkony tvorili 157 minút (44,2 %), vybavovanie doručenej pošty ďalších 85 minút (23,7 %).</td>
+        <td>Záznamy udalostí z elektronickej dokumentácie (142 lekárov, 3&nbsp;roky), overené priamym pozorovaním</td>
+        <td>355&nbsp;minút (5,9&nbsp;hodiny) z 11,4-hodinového pracovného dňa v systéme: 269&nbsp;minút počas ordinačných hodín a 86&nbsp;minút (1,4&nbsp;hodiny) po nich. Kancelárske a administratívne úkony tvorili 157&nbsp;minút (44,2 %), vybavovanie doručenej pošty ďalších 85&nbsp;minút (23,7 %).</td>
       </tr>
       <tr>
         <th scope="row">Toscano a kol., 2020<sup>5</sup></th>
@@ -91,7 +91,7 @@ $articles[] = [
 
 <p>Množstvo času nie je jediná veličina. Rovnako podstatné je, koľko úkonov si jedna úloha vyžiada. Melnick a kol. vyhodnotili v prierezovom prieskume medzi americkými lekármi použiteľnosť elektronickej zdravotnej dokumentácie štandardizovaným nástrojom System Usability Scale, ktorý sa bežne používa naprieč odvetviami.</p>
 
-<p>Priemerné skóre bolo <strong>45,9</strong>, čo je v spodných 9 % spomedzi viac než 1 300 predchádzajúcich hodnotení z iných odvetví a zodpovedá pásmu „neprijateľné“, známkou F. Po úprave na vek, pohlavie, odbor, typ pracoviska, počet odpracovaných hodín a počet nočných pohotovostí sa každý bod lepšieho skóre spájal s o 3 % nižšou pravdepodobnosťou vyhorenia (pomer šancí 0,97; 95 % interval spoľahlivosti 0,97 – 0,98; p &lt; 0,001).<sup>6</sup></p>
+<p>Priemerné skóre bolo <strong>45,9</strong>, čo je v spodných 9 % spomedzi viac než 1&nbsp;300 predchádzajúcich hodnotení z iných odvetví a zodpovedá pásmu „neprijateľné“, známkou F. Po úprave na vek, pohlavie, odbor, typ pracoviska, počet odpracovaných hodín a počet nočných pohotovostí sa každý bod lepšieho skóre spájal s o 3 % nižšou pravdepodobnosťou vyhorenia (pomer šancí 0,97; 95 % interval spoľahlivosti 0,97 – 0,98; p &lt; 0,001).<sup>6</sup></p>
 
 <p>Ide o prierezový prieskum s návratnosťou 17,1 %, čo pripúšťa skreslenie výberom aj obrátenú príčinnosť: vyhorený lekár môže ten istý systém hodnotiť horšie. Nález je napriek tomu prakticky použiteľný. Hovorí, že nástroj, s ktorým lekár pracuje polovicu dňa, je používateľsky hodnotený horšie než takmer všetko ostatné, čo kedy niekto takto hodnotil, a že miera tohto hodnotenia sleduje mieru vyhorenia odstupňovane.</p>
 
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>Tu sa priamočiary záver „skrátiť čas v systéme“ láme. Rotenstein a kol. spojili prevádzkové údaje o čase strávenom v elektronickej dokumentácii s ukazovateľmi kvality starostlivosti na úrovni celého zoznamu pacientov jedného lekára. Výsledok bol opačný, než by sa čakalo.</p>
 
-<p>Každých ďalších 15 minút celkového denného času v systéme sa po úprave spájalo s o 0,58 percentuálneho bodu lepšou kontrolou glykovaného hemoglobínu (95 % IS 0,32 – 0,84), o 0,52 bodu lepšou kontrolou hypertenzie (0,33 – 0,71) a o 0,28 bodu vyššou mierou skríningu karcinómu prsníka (0,05 – 0,52). Pri čase venovanom vybavovaniu doručenej pošty boli rozdiely výraznejšie: 2,26 bodu pri glykovanom hemoglobíne, 1,65 bodu pri hypertenzii a 1,26 bodu pri skríningu. Súvislosti sa sústreďovali u lekárov s úväzkom 0,5 a nižším. Pri skríningu diabetu a liečbe dyslipidémie sa žiadna súvislosť nenašla.<sup>7</sup></p>
+<p>Každých ďalších 15&nbsp;minút celkového denného času v systéme sa po úprave spájalo s o 0,58 percentuálneho bodu lepšou kontrolou glykovaného hemoglobínu (95 % IS 0,32 – 0,84), o 0,52 bodu lepšou kontrolou hypertenzie (0,33 – 0,71) a o 0,28 bodu vyššou mierou skríningu karcinómu prsníka (0,05 – 0,52). Pri čase venovanom vybavovaniu doručenej pošty boli rozdiely výraznejšie: 2,26 bodu pri glykovanom hemoglobíne, 1,65 bodu pri hypertenzii a 1,26 bodu pri skríningu. Súvislosti sa sústreďovali u lekárov s úväzkom 0,5 a nižším. Pri skríningu diabetu a liečbe dyslipidémie sa žiadna súvislosť nenašla.<sup>7</sup></p>
 
 <p>Autori to komentujú striedmo a presne: hoci sa dlhší čas v systéme spája s vyhorením, môže zároveň predstavovať mieru dôkladnosti a komunikácie, ktorá niektoré výsledky zlepšuje. Inak povedané, <strong>čas strávený dokumentáciou nie je sám osebe odpad</strong>. Časť z neho je skutočná klinická práca, ktorá sa len odohráva pri klávesnici: kontrola výsledku, odpoveď pacientovi, úprava dávky.</p>
 
@@ -109,7 +109,7 @@ $articles[] = [
 
 <p>Argument blahobytom zdravotníkov v rozpočtovom rozhovore spravidla neuspeje. Argument nákladom na náhradu lekára uspeje častejšie.</p>
 
-<p>Americká lekárska asociácia uvádza, že priame náklady organizácie na náhradu jedného lekára sa pohybujú <strong>od 500 000 do viac než 1 milióna amerických dolárov</strong>; odhad zahŕňa nábor, nástupné bonusy, výpadok vykázaných výkonov a zapracovanie nového lekára. K tomu sa pripájajú nepriame náklady: chyby v poskytovaní starostlivosti, vyššie riziko sporu o náhradu škody, nižšia spokojnosť pacientov a poškodenie dobrého mena pracoviska. Náhrada lekára stojí pracovisko spravidla dvoj- až trojnásobok jeho ročnej mzdy.<sup>3</sup></p>
+<p>Americká lekárska asociácia uvádza, že priame náklady organizácie na náhradu jedného lekára sa pohybujú <strong>od 500&nbsp;000 do viac než 1 milióna amerických dolárov</strong>; odhad zahŕňa nábor, nástupné bonusy, výpadok vykázaných výkonov a zapracovanie nového lekára. K tomu sa pripájajú nepriame náklady: chyby v poskytovaní starostlivosti, vyššie riziko sporu o náhradu škody, nižšia spokojnosť pacientov a poškodenie dobrého mena pracoviska. Náhrada lekára stojí pracovisko spravidla dvoj- až trojnásobok jeho ročnej mzdy.<sup>3</sup></p>
 
 <p>Tento odhad pochádza z roku 2018, z amerického prostredia a z nominálnych dolárov; priamy prepočet na slovenské pomery možný nie je a číslo tu neslúži ako kalkulácia, ale ako rád veličiny. Ten prenositeľný je: v odbore, kde zapracovanie nefrológa trvá roky a kde v regióne nemusí byť koho osloviť, je cena odchodu jedného lekára neporovnateľne vyššia než náklad na administratívnu podporu, ktorá by jeho odchodu predišla.</p>
 

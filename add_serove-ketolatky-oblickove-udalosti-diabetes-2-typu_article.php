@@ -35,7 +35,7 @@ $articles[] = [
 
 <h2>Dizajn a populácia</h2>
 
-<p>Analýza zahrnula <strong>1 392 klinicky stabilných pacientov s diabetom 2. typu</strong>, ktorí <strong>neboli liečení inzulínom ani tiazolidíndiónmi</strong>. Sérová koncentrácia celkových ketolátok sa merala v stabilných ambulantných podmienkach a pacienti sa rozdelili do tercilov:</p>
+<p>Analýza zahrnula <strong>1&nbsp;392 klinicky stabilných pacientov s diabetom 2. typu</strong>, ktorí <strong>neboli liečení inzulínom ani tiazolidíndiónmi</strong>. Sérová koncentrácia celkových ketolátok sa merala v stabilných ambulantných podmienkach a pacienti sa rozdelili do tercilov:</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Rozdelenie pacientov podľa koncentrácie celkových sérových ketolátok" tabindex="0">
   <table>
@@ -56,7 +56,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Najvyšší</th>
-        <td>171,0 – 1 629,6 µmol/l</td>
+        <td>171,0 – 1&nbsp;629,6 µmol/l</td>
       </tr>
     </tbody>
   </table>
@@ -87,7 +87,7 @@ $articles[] = [
         <td>0,41 – 0,98</td>
       </tr>
       <tr>
-        <th scope="row">Novovzniknutá CKD (podskupina s východiskovou eGFR ≥ 60 ml/min/1,73 m²)</th>
+        <th scope="row">Novovzniknutá CKD (podskupina s východiskovou eGFR ≥ 60&nbsp;ml/min/1,73&nbsp;m²)</th>
         <td>0,50</td>
         <td>0,31 – 0,79</td>
       </tr>

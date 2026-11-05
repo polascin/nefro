@@ -177,7 +177,7 @@ $articles[] = [
 
 <p>Najčastejší výkon je liposukcia šetriaca cievy a lymfatiká; lipektómia (excízia) a manuálna extrakcia sa používajú podľa nálezu. Ide o <strong>redukciu chorobného tkaniva</strong>, nie o estetickú liposukciu. Objemové limity kozmetickej liposukcie na lipedém nesedia. Výkon má robiť skúsený tím v nemocničnom zázemí technikou šetriacou lymfatiká (tupé kanyly primeranej šírky, longitudinálny postup pozdĺž lymfatických kolektorov). Nesprávne vykonaná liposukcia môže spôsobiť sekundárny lymfedém a iné dlhodobé komplikácie.</p>
 
-<p>Operácii má predchádzať konzervatívna liečba. V správe z ICO 2026 Max Sirota odporúčal aspoň šesť mesiacov s cieľom znížiť opuch a fibrózu, obmedziť krvácanie počas výkonu a uľahčiť zotavenie. Americký štandard cituje britské usmernenie s intervalom 6 až 12 mesiacov adherencie ku konzervatívnej liečbe; holandské usmernenie viaže indikáciu na vyčerpanie odpovede na konzervatívnu liečbu. Presný počet mesiacov teda nie je jednotný – rozhoduje dokumentovaná adherencia alebo zlyhanie konzervatívnej liečby, nie kalendár sám osebe.</p>
+<p>Operácii má predchádzať konzervatívna liečba. V správe z ICO 2026 Max Sirota odporúčal aspoň šesť mesiacov s cieľom znížiť opuch a fibrózu, obmedziť krvácanie počas výkonu a uľahčiť zotavenie. Americký štandard cituje britské usmernenie s intervalom 6 až 12&nbsp;mesiacov adherencie ku konzervatívnej liečbe; holandské usmernenie viaže indikáciu na vyčerpanie odpovede na konzervatívnu liečbu. Presný počet mesiacov teda nie je jednotný – rozhoduje dokumentovaná adherencia alebo zlyhanie konzervatívnej liečby, nie kalendár sám osebe.</p>
 
 <p>Pred výkonmi treba zhodnotiť venózny a lymfatický systém, liečiť významnú venóznu insuficienciu a pri veľkom objeme plánovať výkony <strong>etapovito</strong>. Optimálny odstup medzi etapami nie je známy. Pri lipolymfedéme má predchádzať intenzívna kompletná dekongestívna terapia.</p>
 
@@ -185,7 +185,7 @@ $articles[] = [
 
 <p>Pozorovacie série a metaanalýzy prevažne nerandomizovaných štúdií opisujú zlepšenie bolesti, hybnosti a kvality života. Dizajny sú však väčšinou retrospektívne, bez primeranej kontroly, s rôznymi technikami, štádiami a dĺžkou sledovania. Často citované percentá v kongresových správach občas <strong>zamieňajú priemerný pokles skóre bolesti s podielom pacientok</strong>. Preto ich tu neuvádzam ako klinickú konštantu. Randomizované dôkazy s dlhým sledovaním chýbajú.</p>
 
-<p>Chirurgia <strong>nie je vyliečenie</strong>. Redukuje tkanivo a môže spomaliť progresiu, ale celoživotná multidisciplinárna starostlivosť – kompresia, pohyb, výživa, lymfatická terapia, psychológia – ostáva potrebná. Pri včasných štádiách sa pooperačná kompresia nosí aspoň 2 až 3 mesiace, pri pokročilom lipedéme a lipolymfedéme často doživotne.</p>
+<p>Chirurgia <strong>nie je vyliečenie</strong>. Redukuje tkanivo a môže spomaliť progresiu, ale celoživotná multidisciplinárna starostlivosť – kompresia, pohyb, výživa, lymfatická terapia, psychológia – ostáva potrebná. Pri včasných štádiách sa pooperačná kompresia nosí aspoň 2 až 3&nbsp;mesiace, pri pokročilom lipedéme a lipolymfedéme často doživotne.</p>
 
 <h2>Poznámka pre nefrológa</h2>
 

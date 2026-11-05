@@ -48,7 +48,7 @@ $articles[] = [
   <li><strong>trojkombinácia (MTX, sulfasalazín a hydroxychlorochín)</strong>.</li>
 </ol>
 
-<p>Štúdia sa uskutočnila u pacientov s aktívnou RA z viacerých pracovísk v USA. Analyzovaný súbor tvorilo <strong>157 oprávnených účastníkov</strong>, medián veku bol <strong>58 rokov</strong> a <strong>75 % tvorili ženy</strong>.</p>
+<p>Štúdia sa uskutočnila u pacientov s aktívnou RA z viacerých pracovísk v USA. Analyzovaný súbor tvorilo <strong>157 oprávnených účastníkov</strong>, medián veku bol <strong>58&nbsp;rokov</strong> a <strong>75 % tvorili ženy</strong>.</p>
 
 <h2>Sledované ukazovatele</h2>
 
@@ -84,18 +84,18 @@ $articles[] = [
 <ul>
   <li>eGFRcys: <strong>63,3</strong>,</li>
   <li>eGFRcr: <strong>84,2</strong>,</li>
-  <li>rozdiel: <strong>−20,9 ml/min/1,73 m²</strong> (95 % interval spoľahlivosti, ďalej IS: −24,7 až −17,0).</li>
+  <li>rozdiel: <strong>−20,9&nbsp;ml/min/1,73&nbsp;m²</strong> (95 % interval spoľahlivosti, ďalej IS: −24,7 až −17,0).</li>
 </ul>
 
 <p>Tento nález naznačuje, že u pacientov s aktívnou RA môžu byť kreatinínové a cystatínové odhady systematicky odlišné už v čase zaradenia do štúdie, teda pred plným rozvinutím účinku liečby.</p>
 
-<h3>2. Zmena eGFR počas 24 týždňov</h3>
+<h3>2. Zmena eGFR počas 24&nbsp;týždňov</h3>
 
-<p>Počas <strong>24 týždňov</strong> sa v celej kohorte <strong>nezistila významná celková zmena</strong> ani pre eGFRcys, ani pre eGFRcr:</p>
+<p>Počas <strong>24&nbsp;týždňov</strong> sa v celej kohorte <strong>nezistila významná celková zmena</strong> ani pre eGFRcys, ani pre eGFRcr:</p>
 
 <ul>
-  <li>zmena eGFRcys: <strong>+1,74 ml/min/1,73 m²</strong> (95 % IS −0,77 až 4,24),</li>
-  <li>zmena eGFRcr: <strong>−0,28 ml/min/1,73 m²</strong> (95 % IS −3,71 až 3,15).</li>
+  <li>zmena eGFRcys: <strong>+1,74&nbsp;ml/min/1,73&nbsp;m²</strong> (95 % IS −0,77 až 4,24),</li>
+  <li>zmena eGFRcr: <strong>−0,28&nbsp;ml/min/1,73&nbsp;m²</strong> (95 % IS −3,71 až 3,15).</li>
 </ul>
 
 <p>Odhady funkcie obličiek sa teda na úrovni celej kohorty významne nemenili.</p>
@@ -119,7 +119,7 @@ $articles[] = [
 <p>Počas sledovania sa ukázalo, že zmeny biomarkerov nemajú rovnaký vzťah ku všetkým typom odhadov eGFR:</p>
 
 <ul>
-  <li><strong>iba zmena TNFR1</strong> (receptor I pre TNF) bola <strong>inverzne asociovaná so zmenou eGFRcys</strong> – zmena eGFRcys: <strong>−2,91 ml/min/1,73 m²</strong> (95 % IS −4,48 až −1,33),</li>
+  <li><strong>iba zmena TNFR1</strong> (receptor I pre TNF) bola <strong>inverzne asociovaná so zmenou eGFRcys</strong> – zmena eGFRcys: <strong>−2,91&nbsp;ml/min/1,73&nbsp;m²</strong> (95 % IS −4,48 až −1,33),</li>
   <li><strong>žiadna zmena biomarkerov</strong> nebola významne spojená so zmenou <strong>eGFRcr</strong>.</li>
 </ul>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <ul>
   <li><strong>GFR sa nemerala priamo</strong>, takže nevieme, či rozdiely odrážajú skutočnú zmenu filtrácie, alebo skôr vplyv zápalu, prípadne liečby na markery;</li>
-  <li><strong>sledovanie bolo relatívne krátke</strong> (24 týždňov);</li>
+  <li><strong>sledovanie bolo relatívne krátke</strong> (24&nbsp;týždňov);</li>
   <li>existuje riziko <strong>falošne pozitívnych asociácií</strong>, keďže sa hodnotilo veľké množstvo vzťahov medzi biomarkermi a eGFR.</li>
 </ul>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <ul>
   <li><strong>eGFRcys je konzistentne nižší než eGFRcr už na začiatku</strong>,</li>
-  <li><strong>počas 24 týždňov sa celkový eGFR významne nezmenil</strong>,</li>
+  <li><strong>počas 24&nbsp;týždňov sa celkový eGFR významne nezmenil</strong>,</li>
   <li>viaceré biomarkery aktivity RA boli inverzne asociované s eGFR (najmä pri vstupnom vyšetrení),</li>
   <li>v dynamike po liečbe sa pozorovala <strong>špecifická asociácia zmeny TNFR1 so zmenou eGFRcys</strong>, zatiaľ čo zmena eGFRcr takto nesúvisela.</li>
 </ul>

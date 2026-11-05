@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: vyber a kombinovanie SGLT2i, GLP-1 RA a dualnych agonistov pri kardiorenalnom riziku.
+ * Odborný článok: vyber a kombinovanie SGLT2i, GLP-1 RA a dualnych agonistov pri kardiorenalnom riziku.
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -91,7 +91,7 @@ $articles[] = [
 
 <p><strong>Inhibítory SGLT2 majú pri obličkovom výsledku najväčší a najkonzistentnejší efekt</strong>. Tri nezávislé štúdie s rôznymi molekulami a rôznymi populáciami dospeli k pomerom rizík 0,61 až 0,72. DAPA-CKD aj EMPA-KIDNEY navyše zaraďovali pacientov <em>bez</em> diabetu a účinok bol konzistentný, čo z tejto skupiny robí nefroprotektívnu liečbu, nie iba antidiabetikum.</p>
 
-<p><strong>FLOW zmenila postavenie agonistov GLP-1 pri CKD.</strong> Do jej publikovania v roku 2024 sa GLP-1 RA odporúčali najmä pre ASKVO a metabolický prínos. FLOW je prvá veľká štúdia semaglutidu v primárne obličkovej populácii s primárnym kompozitom závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin a bola ukončená predčasne pre účinnosť. Obličkovo špecifický kompozit bez kardiovaskulárneho úmrtia bol potvrdzujúcim sekundárnym výsledkom. Semaglutid znížil aj kardiovaskulárne úmrtie (0,71; 0,56–0,89), celkovú úmrtnosť o 20 % a spomalil ročný pokles eGFR o 1,16 ml/min/1,73 m².</p>
+<p><strong>FLOW zmenila postavenie agonistov GLP-1 pri CKD.</strong> Do jej publikovania v roku 2024 sa GLP-1 RA odporúčali najmä pre ASKVO a metabolický prínos. FLOW je prvá veľká štúdia semaglutidu v primárne obličkovej populácii s primárnym kompozitom závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin a bola ukončená predčasne pre účinnosť. Obličkovo špecifický kompozit bez kardiovaskulárneho úmrtia bol potvrdzujúcim sekundárnym výsledkom. Semaglutid znížil aj kardiovaskulárne úmrtie (0,71; 0,56–0,89), celkovú úmrtnosť o 20 % a spomalil ročný pokles eGFR o 1,16&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p><strong>Finerenón pôsobí v inej rovine.</strong> Nesteroidný antagonista mineralokortikoidového receptora dopĺňa blokádu systému renín-angiotenzín a inhibítory SGLT2, nie je ich náhradou. Cenou je hyperkaliémia: prerušenie liečby pre ňu bolo v FIDELIO-DKD 2,3 % oproti 0,9 % pri placebe.</p>
 </div>
@@ -123,7 +123,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">ASKVO alebo veľmi vysoké kardiovaskulárne riziko</th>
-      <td>agonista GLP-1 s doloženým kardiovaskulárnym prínosom</td>
+      <td>agonista GLP-1&nbsp;s doloženým kardiovaskulárnym prínosom</td>
       <td>pridať inhibítor SGLT2, ak je súčasne prítomné obličkové alebo srdcové riziko</td>
       <td>gastrointestinálna tolerancia; riziko dehydratácie</td>
     </tr>
@@ -236,7 +236,7 @@ $articles[] = [
   <li><strong>Medscape Education.</strong> <em>Cardioprotective Antihyperglycemic Strategies for Cardiorenal Risk in Type 2 Diabetes.</em> Medscape, 2026. Vzdelávací modul použitý ako podnet k téme; plný text nie je voľne dostupný, preto sa mu v článku nepripisujú konkrétne tvrdenia. <a href="https://www.medscape.org/viewarticle/medscape-now-cardioprotective-antihyperglycemic-strategies-2026a1000s58" target="_blank" rel="noopener noreferrer">Vzdelávací modul</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Všetky pomery rizík a intervaly spoľahlivosti boli overené priamo proti sekciám Results publikovaných abstraktov v PubMed: DAPA-CKD 0,61 (0,51–0,72) a NNT 19 (PMID 32970396); EMPA-KIDNEY 0,72 (0,64–0,82) (PMID 36331190); CREDENCE 0,70 (0,59–0,82) a renálny kompozit 0,66 (0,53–0,81) (PMID 30990260); FLOW 0,76 (0,66–0,88), obličkový kompozit 0,79 (0,66–0,94), kardiovaskulárne úmrtie 0,71 (0,56–0,89) a rozdiel v ročnom sklone eGFR 1,16 ml/min/1,73 m² (PMID 38785209); FIDELIO-DKD 0,82 (0,73–0,93) a prerušenie pre hyperkaliémiu 2,3 % oproti 0,9 % (PMID 33264825); CONFIDENCE rozdiel v poklese UACR o 29 % a 32 % (PMID 40470996). Identita všetkých šiestich štúdií bola overená cez DOI v Crossref. <strong>Kľúčové upozornenie:</strong> vyhľadávanie podľa názvu v PubMed vracalo pri každej z nich ako prvý výsledok nedávnu sekundárnu prácu, nie pôvodnú štúdiu, preto boli PMID priradené cez DOI. Hranica eGFR na začatie liečby sa v článku zámerne neuvádza číselne, pretože sa medzi molekulami líši a nebola overená proti platným súhrnom charakteristických vlastností liekov.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Všetky pomery rizík a intervaly spoľahlivosti boli overené priamo proti sekciám Results publikovaných abstraktov v PubMed: DAPA-CKD 0,61 (0,51–0,72) a NNT 19 (PMID 32970396); EMPA-KIDNEY 0,72 (0,64–0,82) (PMID 36331190); CREDENCE 0,70 (0,59–0,82) a renálny kompozit 0,66 (0,53–0,81) (PMID 30990260); FLOW 0,76 (0,66–0,88), obličkový kompozit 0,79 (0,66–0,94), kardiovaskulárne úmrtie 0,71 (0,56–0,89) a rozdiel v ročnom sklone eGFR 1,16&nbsp;ml/min/1,73&nbsp;m² (PMID 38785209); FIDELIO-DKD 0,82 (0,73–0,93) a prerušenie pre hyperkaliémiu 2,3 % oproti 0,9 % (PMID 33264825); CONFIDENCE rozdiel v poklese UACR o 29 % a 32 % (PMID 40470996). Identita všetkých šiestich štúdií bola overená cez DOI v Crossref. <strong>Kľúčové upozornenie:</strong> vyhľadávanie podľa názvu v PubMed vracalo pri každej z nich ako prvý výsledok nedávnu sekundárnu prácu, nie pôvodnú štúdiu, preto boli PMID priradené cez DOI. Hranica eGFR na začatie liečby sa v článku zámerne neuvádza číselne, pretože sa medzi molekulami líši a nebola overená proti platným súhrnom charakteristických vlastností liekov.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok je rozhodovací rámec, nie liečebný protokol. Voľba a kombinácia liečby pri diabete 2. typu s kardiorenálnymi komorbiditami patrí do rúk ošetrujúceho lekára a riadi sa platnými odporúčaniami, súhrnom charakteristických vlastností konkrétneho lieku, funkciou obličiek, komorbiditami a preferenciami pacienta. Údaje o kombináciách sa zatiaľ opierajú prevažne o náhradné ukazovatele.</em></p>
 </div>
@@ -260,9 +260,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

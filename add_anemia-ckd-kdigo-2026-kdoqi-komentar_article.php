@@ -59,7 +59,7 @@ $articles[] = [
   <li>a v prípade podozrenia aj <strong>vyšetrenie okultného krvácania</strong>.</li>
 </ul>
 
-<p>KDOQI výslovne rieši aj situáciu, keď je <strong>ferritín &lt; 45 ng/ml</strong> alebo <strong>mikrocytóza (MCV &lt; 80 fl)</strong> a príčina deficitu železa je nejasná. Vtedy treba cielene pátrať po zdroji krvácania a podľa kontextu zabezpečiť vyšetrenie u gastroenterológa, gynekológa alebo urológa.</p>
+<p>KDOQI výslovne rieši aj situáciu, keď je <strong>ferritín &lt; 45&nbsp;ng/ml</strong> alebo <strong>mikrocytóza (MCV &lt; 80 fl)</strong> a príčina deficitu železa je nejasná. Vtedy treba cielene pátrať po zdroji krvácania a podľa kontextu zabezpečiť vyšetrenie u gastroenterológa, gynekológa alebo urológa.</p>
 
 <p><strong>Klinická pointa:</strong> okrem nízkeho ferritínu sa v komentári zdôrazňuje užitočnosť aj <strong>nízkeho TSAT (&lt; 20 %)</strong> ako spúšťača vyšetrenia krvácania, pričom TSAT sa nemá interpretovať izolovane.</p>
 
@@ -74,7 +74,7 @@ $articles[] = [
 <p>Pre hemodialýzu platí návrh začať liečbu železom pri:</p>
 
 <ul>
-  <li><strong>ferritín ≤ 500 ng/ml</strong> a zároveň <strong>TSAT ≤ 30 %</strong>.</li>
+  <li><strong>ferritín ≤ 500&nbsp;ng/ml</strong> a zároveň <strong>TSAT ≤ 30 %</strong>.</li>
 </ul>
 
 <p>Pri začatí liečby železom v tejto skupine KDOQI/KDIGO uprednostňuje:</p>
@@ -90,13 +90,13 @@ $articles[] = [
 <p>KDOQI súhlasí s proaktívnym prístupom k IV železu, pričom upozorňuje na kontext dôkazov, najmä na štúdiu PIVOTAL. Komentár zdôrazňuje, že bezpečnostný horný limit v proaktívnej vysokodávkovej vetve PIVOTAL bol:</p>
 
 <ul>
-  <li><strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
+  <li><strong>ferritín &gt; 700&nbsp;ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
 <p>To podporuje odporúčanie, že je rozumné <strong>železo dočasne zadržať</strong>, ak je:</p>
 
 <ul>
-  <li><strong>ferritín &gt; 700 ng/ml</strong>, alebo</li>
+  <li><strong>ferritín &gt; 700&nbsp;ng/ml</strong>, alebo</li>
   <li><strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
@@ -107,8 +107,8 @@ $articles[] = [
 <p>U pacientov s CKD, ktorí nie sú na hemodialýze (vrátane peritoneálnej dialýzy), KDIGO/KDOQI navrhuje začať železo podľa kombinácie ferritínu a TSAT, s konkrétnymi prahmi pre ferritín:</p>
 
 <ul>
-  <li><strong>ferritín &lt; 100 ng/ml</strong> a <strong>TSAT &lt; 40 %</strong>, alebo</li>
-  <li><strong>ferritín ≥ 100 ng/ml a &lt; 300 ng/ml</strong> a <strong>TSAT &lt; 25 %</strong>.</li>
+  <li><strong>ferritín &lt; 100&nbsp;ng/ml</strong> a <strong>TSAT &lt; 40 %</strong>, alebo</li>
+  <li><strong>ferritín ≥ 100&nbsp;ng/ml a &lt; 300&nbsp;ng/ml</strong> a <strong>TSAT &lt; 25 %</strong>.</li>
 </ul>
 
 <p>Pri začatí liečby železom mimo HD sa rozhoduje individuálne podľa:</p>
@@ -124,8 +124,8 @@ $articles[] = [
 <p>KDOQI/KDIGO uvádza:</p>
 
 <ul>
-  <li>pri CKD bez dialýzy a CKD G5PD: <strong>Hb, ferritín a TSAT každé 3 mesiace</strong>,</li>
-  <li>pri CKD G5HD: <strong>každých 1 až 3 mesiace</strong>,</li>
+  <li>pri CKD bez dialýzy a CKD G5PD: <strong>Hb, ferritín a TSAT každé 3&nbsp;mesiace</strong>,</li>
+  <li>pri CKD G5HD: <strong>každých 1 až 3&nbsp;mesiace</strong>,</li>
   <li>a v niektorých situáciách aj častejšie (odkaz na tabuľku v KDIGO).</li>
 </ul>
 
@@ -168,7 +168,7 @@ $articles[] = [
 <p>Pre CKD G5D (HD alebo peritoneálna dialýza) sa navrhuje začať ESA pri:</p>
 
 <ul>
-  <li><strong>Hb ≤ 9,0 až 10,0 g/dl</strong> (≤ 90 až 100 g/l).</li>
+  <li><strong>Hb ≤ 9,0 až 10,0&nbsp;g/dl</strong> (≤ 90 až 100&nbsp;g/l).</li>
 </ul>
 
 <p>Pri CKD bez dialýzy sa iniciácia robí podľa symptómov, očakávaných benefitov vyššieho Hb a rizík spojených s transfúziami alebo ESA.</p>
@@ -176,7 +176,7 @@ $articles[] = [
 <p>Pri udržiavaní liečby ESA je cieľom:</p>
 
 <ul>
-  <li><strong>Hb pod 11,5 g/dl (115 g/l)</strong> (v texte sa spomína aj US limit 11,0 g/dl).</li>
+  <li><strong>Hb pod 11,5&nbsp;g/dl (115&nbsp;g/l)</strong> (v texte sa spomína aj US limit 11,0&nbsp;g/dl).</li>
 </ul>
 
 <h2>5) Praktická titračná stratégia pre ambulanciu alebo dialýzu</h2>

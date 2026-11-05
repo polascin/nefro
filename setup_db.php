@@ -606,7 +606,7 @@ try {
         account_age_days INT NOT NULL DEFAULT 0 COMMENT 'Vek účtu od registrácie v dňoch',
         initiated_by ENUM('user_self', 'admin') NOT NULL DEFAULT 'user_self',
         admin_actor_id INT NULL COMMENT 'ID admina pri admin-iniciovanom mazaní',
-        client_ip VARCHAR(45) NOT NULL COMMENT 'IP žiadateľa (retenčná politika: 90 dní)',
+        client_ip VARCHAR(45) NOT NULL COMMENT 'IP žiadateľa (retenčná politika: 90 dní)',
         user_agent VARCHAR(500) NULL,
         stat_calculator_results INT NOT NULL DEFAULT 0 COMMENT 'Počet vymazaných výsledkov kalkulačiek',
         stat_profile_changes INT NOT NULL DEFAULT 0 COMMENT 'Počet záznamov v profile archive',

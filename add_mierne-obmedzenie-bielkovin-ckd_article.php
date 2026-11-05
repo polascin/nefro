@@ -40,17 +40,17 @@ $articles[] = [
 
 <p>Výskumníci hodnotili dospelých pacientov s nedialyzovanou chronickou chorobou obličiek v štádiu III a IV. Do analýzy bolo zahrnutých <strong>1441 pacientov</strong>, priemerný vek bol 67,2 roka a ženy tvorili 35,2 % sledovaného súboru.</p>
 
-<p>Zo štúdie boli vylúčení pacienti s odhadovanou glomerulovou filtráciou nad 60 alebo pod 15 ml/min/1,73 m², pacienti liečení dialýzou a pacienti po transplantácii obličky.</p>
+<p>Zo štúdie boli vylúčení pacienti s odhadovanou glomerulovou filtráciou nad 60 alebo pod 15&nbsp;ml/min/1,73&nbsp;m², pacienti liečení dialýzou a pacienti po transplantácii obličky.</p>
 
 <p>Príjem bielkovín sa nehodnotil len podľa diétneho dotazníka, ale objektívnejšie – z <strong>24-hodinového vylučovania dusíka močom</strong> prepočítaného na upravenú telesnú hmotnosť. Takto vypočítaný normalizovaný denný príjem bielkovín sa označuje ako nDPI.</p>
 
-<p>Medián vstupnej hodnoty nDPI bol <strong>1,18 g/kg/deň</strong>.</p>
+<p>Medián vstupnej hodnoty nDPI bol <strong>1,18&nbsp;g/kg/deň</strong>.</p>
 
 <p>Pacienti boli rozdelení do dvoch skupín:</p>
 
 <ul>
-  <li><strong>nižší príjem bielkovín:</strong> nDPI pod 1,0 g/kg/deň,</li>
-  <li><strong>vyšší príjem bielkovín:</strong> nDPI 1,0 g/kg/deň alebo viac.</li>
+  <li><strong>nižší príjem bielkovín:</strong> nDPI pod 1,0&nbsp;g/kg/deň,</li>
+  <li><strong>vyšší príjem bielkovín:</strong> nDPI 1,0&nbsp;g/kg/deň alebo viac.</li>
 </ul>
 
 <p>Po štatistickom párovaní podľa propensity skóre bola analyzovaná porovnateľnejšia skupina <strong>530 pacientov</strong>, teda 265 pacientov v každej skupine.</p>
@@ -65,7 +65,7 @@ $articles[] = [
   <li>úmrtie z akejkoľvek príčiny.</li>
 </ul>
 
-<p>Maximálna dĺžka sledovania bola až 15 rokov, medián sledovania dosiahol 67 mesiacov.</p>
+<p>Maximálna dĺžka sledovania bola až 15&nbsp;rokov, medián sledovania dosiahol 67&nbsp;mesiacov.</p>
 
 <h2>Nižší príjem bielkovín bol spojený s nižším rizikom nepriaznivého výsledku</h2>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <p>V klinickej praxi sa odporúčania týkajúce sa príjmu bielkovín často realizujú nedôsledne. Dôvodom je neistota, obava z malnutrície, rozdielna adherencia pacientov a niekedy aj nedostatok špecializovaného nutričného poradenstva.</p>
 
-<p>Táto štúdia naznačuje, že nemusí ísť o extrémne prísnu diétu. Už <strong>mierne zníženie príjmu bielkovín pod 1,0 g/kg/deň</strong> môže byť spojené s priaznivejším priebehom ochorenia u pacientov s CKD v štádiu III a IV.</p>
+<p>Táto štúdia naznačuje, že nemusí ísť o extrémne prísnu diétu. Už <strong>mierne zníženie príjmu bielkovín pod 1,0&nbsp;g/kg/deň</strong> môže byť spojené s priaznivejším priebehom ochorenia u pacientov s CKD v štádiu III a IV.</p>
 
 <p>Autori štúdie uvádzajú, že mierna proteínová reštrikcia, dokonca aj nad tradične odporúčanými prahmi, môže v bežnej klinickej praxi poskytovať renálnu ochranu bez zhoršenia nutričného stavu.</p>
 
@@ -101,7 +101,7 @@ $articles[] = [
 
 <h2>Praktický záver pre nefrologickú starostlivosť</h2>
 
-<p>Štúdia podporuje racionálny a individualizovaný prístup k príjmu bielkovín pri chronickej chorobe obličiek. U pacientov s nedialyzovanou CKD v štádiu III a IV môže byť mierne obmedzenie príjmu bielkovín pod 1,0 g/kg/deň spojené s nižším rizikom nepriaznivých klinických výsledkov, najmä s nižšou pravdepodobnosťou začatia dialýzy.</p>
+<p>Štúdia podporuje racionálny a individualizovaný prístup k príjmu bielkovín pri chronickej chorobe obličiek. U pacientov s nedialyzovanou CKD v štádiu III a IV môže byť mierne obmedzenie príjmu bielkovín pod 1,0&nbsp;g/kg/deň spojené s nižším rizikom nepriaznivých klinických výsledkov, najmä s nižšou pravdepodobnosťou začatia dialýzy.</p>
 
 <p>Musí však ísť o <strong>kontrolovanú diétnu intervenciu</strong>, nie o neodborné hladovanie alebo neprimerané obmedzovanie stravy. Ideálne má byť súčasťou nefrologickej starostlivosti aj nutričné hodnotenie a diétne poradenstvo, zvlášť u starších pacientov a u pacientov s rizikom proteínovo-energetickej malnutrície.</p>
 

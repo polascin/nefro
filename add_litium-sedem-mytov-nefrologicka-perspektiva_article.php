@@ -37,18 +37,18 @@ $articles[] = [
 
 <p>Lítium ostáva jedným z najúčinnejších liekov v psychiatrii – a jedným z najčastejšie nepochopených. Ghaemi v komentári pre Medscape (28. 8. 2026) argumentuje, že predstavy o „povinnom“ cieľovom pásme, inherentnej nefrotoxicite, trojdávkovom režime, čisto antimanickom účinku, výlučnej indikácii pri bipolárnej poruche, nevyhnutnom náraste hmotnosti a potlačení kreativity vedú k nedostatočnému využívaniu. S týmto smerom polemiky sa dá súhlasiť. Dôsledok, ktorý z neho Ghaemi vyvodzuje na záver – že riziká sú „oveľa nižšie“ a laboratórne sledovanie „oveľa menej dôležité“, než sa predpokladá – už nefrologická prax neunesie. Monitorovanie nie je fetišom cieľovej hodnoty, ale bezpečnostným rámcom.</p>
 
-<p>Jednotky: sérová koncentrácia lítia sa v laboratóriách uvádza v mmol/l. Pre jednomocný ión Li<sup>+</sup> je 1 mmol/l numericky totožný s 1 mEq/l; v texte používame mmol/l podľa konvencie portálu.</p>
+<p>Jednotky: sérová koncentrácia lítia sa v laboratóriách uvádza v mmol/l. Pre jednomocný ión Li<sup>+</sup> je 1&nbsp;mmol/l numericky totožný s 1 mEq/l; v texte používame mmol/l podľa konvencie portálu.</p>
 
 <div class="pdf-avoid-break">
-<h2>Mýtus 1: Treba titrovať na presné pásmo 0,6–1,0 mmol/l, často na 0,8</h2>
+<h2>Mýtus 1: Treba titrovať na presné pásmo 0,6–1,0&nbsp;mmol/l, často na 0,8</h2>
 
 <p>Ghaemi má pravdu v tom, že historické „terapeutické pásmo“ vzniklo predovšetkým zo štúdií akútnej mánie a že sérová koncentrácia nie je totožná s klinickým úspechom. Pacient, ktorý má benefit pri nižšej dávke, nemusí automaticky potrebovať eskaláciu len preto, aby sa „zmestil“ do laboratórneho okienka. To však nie je návod ignorovať monitorovanie.</p>
 
-<p>Randomizovaná štúdia Gelenberga a spol. (1989) porovnala udržiavacie pásmo 0,8–1,0 mmol/l s pásmom 0,4–0,6 mmol/l: riziko relapsu bolo v nižšom pásme 2,6-násobné (38 % vs. 13 %), pri vyššom pásme však pribúdali nežiaduce účinky. Neskorší konsenzus preto hľadal stred. Pracovná skupina ISBD/IGSLI (Nolen a spol., 2019) na základe prehľadu a Delphi prieskumu odporúča pre dospelých v udržiavacej liečbe <strong>štandard 0,60–0,80 mmol/l</strong>, s možnosťou znížiť na 0,40–0,60 mmol/l pri dobrej odpovedi a zlej tolerancii, alebo zvýšiť na 0,80–1,00 mmol/l pri nedostatočnej odpovedi a dobrej tolerancii. U starších je väčšina skupiny konzervatívnejšia: zvyčajne 0,40–0,60 mmol/l, maximálne 0,70–0,80 mmol/l vo veku 65–79 rokov a maximálne 0,70 mmol/l nad 80 rokov. Odber má byť ráno, 12 ± 1 hodinu po večernej dávke.</p>
+<p>Randomizovaná štúdia Gelenberga a spol. (1989) porovnala udržiavacie pásmo 0,8–1,0&nbsp;mmol/l s pásmom 0,4–0,6&nbsp;mmol/l: riziko relapsu bolo v nižšom pásme 2,6-násobné (38 % vs. 13 %), pri vyššom pásme však pribúdali nežiaduce účinky. Neskorší konsenzus preto hľadal stred. Pracovná skupina ISBD/IGSLI (Nolen a spol., 2019) na základe prehľadu a Delphi prieskumu odporúča pre dospelých v udržiavacej liečbe <strong>štandard 0,60–0,80&nbsp;mmol/l</strong>, s možnosťou znížiť na 0,40–0,60&nbsp;mmol/l pri dobrej odpovedi a zlej tolerancii, alebo zvýšiť na 0,80–1,00&nbsp;mmol/l pri nedostatočnej odpovedi a dobrej tolerancii. U starších je väčšina skupiny konzervatívnejšia: zvyčajne 0,40–0,60&nbsp;mmol/l, maximálne 0,70–0,80&nbsp;mmol/l vo veku 65–79&nbsp;rokov a maximálne 0,70&nbsp;mmol/l nad 80&nbsp;rokov. Odber má byť ráno, 12 ± 1 hodinu po večernej dávke.</p>
 
-<p>Odporúčanie NICE (CG185) je konkrétne a zároveň opatrné: pri prvom predpise lítia udržiavať plazmatickú koncentráciu <strong>0,6–0,8 mmol/l</strong>; pásmo 0,8–1,0 mmol/l zvážiť aspoň na šesť mesiacov u tých, ktorí v minulosti počas liečby lítiom relabovali, alebo majú podprahové príznaky s funkčným obmedzením. Koncentrácia sa meria týždeň po začatí a po každej zmene dávky, potom týždenne do stabilizácie; prvý rok každé 3 mesiace, neskôr každé 6 mesiacov – a opäť každé 3 mesiace u starších, pri interakciách, pri riziku poklesu eGFR alebo tyreopatie, pri zlej adherencii a ak posledná hodnota bola ≥ 0,8 mmol/l.</p>
+<p>Odporúčanie NICE (CG185) je konkrétne a zároveň opatrné: pri prvom predpise lítia udržiavať plazmatickú koncentráciu <strong>0,6–0,8&nbsp;mmol/l</strong>; pásmo 0,8–1,0&nbsp;mmol/l zvážiť aspoň na šesť mesiacov u tých, ktorí v minulosti počas liečby lítiom relabovali, alebo majú podprahové príznaky s funkčným obmedzením. Koncentrácia sa meria týždeň po začatí a po každej zmene dávky, potom týždenne do stabilizácie; prvý rok každé 3&nbsp;mesiace, neskôr každé 6&nbsp;mesiacov – a opäť každé 3&nbsp;mesiace u starších, pri interakciách, pri riziku poklesu eGFR alebo tyreopatie, pri zlej adherencii a ak posledná hodnota bola ≥ 0,8&nbsp;mmol/l.</p>
 
-<p>Praktický princíp teda nie je „ignorovať hladinu“, ale <strong>liečiť na klinický účinok najnižšou účinnou dávkou</strong> a hladinu čítať ako ukazovateľ expozície, adherencie a toxicity – nie ako známku úspechu. U starších a pri CKD treba pásmo znížiť, nie mechanicky držať 0,8 mmol/l.</p>
+<p>Praktický princíp teda nie je „ignorovať hladinu“, ale <strong>liečiť na klinický účinok najnižšou účinnou dávkou</strong> a hladinu čítať ako ukazovateľ expozície, adherencie a toxicity – nie ako známku úspechu. U starších a pri CKD treba pásmo znížiť, nie mechanicky držať 0,8&nbsp;mmol/l.</p>
 </div>
 
 <div class="pdf-avoid-break">
@@ -72,32 +72,32 @@ $articles[] = [
     <tr>
       <th scope="row">Nefrogenný diabetes insipidus</th>
       <td>Porucha koncentračnej schopnosti zberných kanálikov (AQP2), polyúria, polydipsia, riziko dehydratácie a následnej toxicity</td>
-      <td>Boton a spol.: koncentračný defekt najmenej u 54 % z 1 105 nevybraných pacientov; zjavná polyúria u 19 %. Wallin a spol.: 49 % nekoncentrovalo nad 800 mOsm/kg</td>
+      <td>Boton a spol.: koncentračný defekt najmenej u 54 % z 1&nbsp;105 nevybraných pacientov; zjavná polyúria u 19 %. Wallin a spol.: 49 % nekoncentrovalo nad 800 mOsm/kg</td>
       <td>Bežné, nie „1–5 %“. Amilorid môže zmierniť polyúriu. NDI zvyšuje riziko toxicity cez slučku polyúria → dehydratácia → vyššia hladina</td>
     </tr>
     <tr>
       <th scope="row">Chronická tubulointersticiálna nefropatia / CKD</th>
       <td>Pomaly progredujúca intersticiálna fibróza, pokles eGFR, často s cystami v dreni</td>
-      <td>Shine a spol.: HR 1,93 (95 % IS 1,76–2,12) pre CKD 3. stupňa. Bocchetta a spol.: polovica liečených &gt; 20 rokov mala eGFR &lt; 60 ml/min/1,73 m<sup>2</sup>. Aiff a spol. 2015: asi tretina po 10–29 rokoch mala známky chronického zlyhávania, ťažká forma len u 5 %</td>
+      <td>Shine a spol.: HR 1,93 (95 % IS 1,76–2,12) pre CKD 3. stupňa. Bocchetta a spol.: polovica liečených &gt; 20&nbsp;rokov mala eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Aiff a spol. 2015: asi tretina po 10–29 rokoch mala známky chronického zlyhávania, ťažká forma len u 5 %</td>
       <td>Skutočné, expozične závislé, pomalé. Nie je to automatická kontraindikácia u každého psychiatrického pacienta, ale nie je to ani „zriedkavosť 1–5 %“</td>
     </tr>
     <tr>
       <th scope="row">Akútne poškodenie obličiek / intoxikácia</th>
       <td>Náhle zvýšenie hladiny pri dehydratácii, AKI, NSAID, ACEI/ARB, tiazidoch</td>
-      <td>U starších užívateľov je toxicita bežnejšia (ročná incidencia okolo 1,5 %); AKI v kohortách starších 1,3–4 % za 5 rokov</td>
+      <td>U starších užívateľov je toxicita bežnejšia (ročná incidencia okolo 1,5 %); AKI v kohortách starších 1,3–4 % za 5&nbsp;rokov</td>
       <td>Predovšetkým nadmerná expozícia. Lítium pri AKI a dehydratácii vysadiť, kým sa stav neupraví</td>
     </tr>
     <tr>
       <th scope="row">Terminálne zlyhanie obličiek (ESRD)</th>
       <td>Dialýza alebo transplantácia v dôsledku lítium-asociovanej nefropatie</td>
-      <td>Aiff a spol. 2014: prevalencia RRT u užívateľov lítia 15,0 ‰ (1,5 %), relatívne riziko 7,8 voči bežnej populácii. Presne a spol.: lítium-súvisiace ESRD ≈ 0,22 % všetkých príčin ESRD vo Francúzsku, priemerná latencia 20 rokov</td>
+      <td>Aiff a spol. 2014: prevalencia RRT u užívateľov lítia 15,0 ‰ (1,5 %), relatívne riziko 7,8 voči bežnej populácii. Presne a spol.: lítium-súvisiace ESRD ≈ 0,22 % všetkých príčin ESRD vo Francúzsku, priemerná latencia 20&nbsp;rokov</td>
       <td>Nebežné, ale nie raritné. Číslo „1–5 %“ je bližšie k ESRD/ťažkej CKD než k NDI</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Presne a spol. v bioptickej sérii opísali pomalú progresiu (priemerný ročný pokles klírensu kreatinínu 2,29 ml/min) a vzťah fibrózy k dĺžke liečby aj kumulatívnej dávke; približne 35 % vyšetrených malo stredne ťažkú hyperkalciémiu pri hyperparatyreóze. Shine a spol. súčasne potvrdili asociáciu lítia s hypotyreózou (HR 2,31) a so zvýšeným celkovým kalciom (HR 1,43); vyššie než mediánové koncentrácie lítia zvyšovali riziko všetkých sledovaných nežiaducich výsledkov. Bocchetta a spol. ukázali, že dĺžka liečby je rizikový faktor poklesu eGFR nezávisle od veku, ale dysfunkcia sa zvyčajne objaví až po desaťročiach a po poklese eGFR pod 45 ml/min/1,73 m<sup>2</sup> sa ďalšia progresia v ich 4-ročnom sledovaní nelíšila podľa toho, či sa lítium vysadilo.</p>
+<p>Presne a spol. v bioptickej sérii opísali pomalú progresiu (priemerný ročný pokles klírensu kreatinínu 2,29&nbsp;ml/min) a vzťah fibrózy k dĺžke liečby aj kumulatívnej dávke; približne 35 % vyšetrených malo stredne ťažkú hyperkalciémiu pri hyperparatyreóze. Shine a spol. súčasne potvrdili asociáciu lítia s hypotyreózou (HR 2,31) a so zvýšeným celkovým kalciom (HR 1,43); vyššie než mediánové koncentrácie lítia zvyšovali riziko všetkých sledovaných nežiaducich výsledkov. Bocchetta a spol. ukázali, že dĺžka liečby je rizikový faktor poklesu eGFR nezávisle od veku, ale dysfunkcia sa zvyčajne objaví až po desaťročiach a po poklese eGFR pod 45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> sa ďalšia progresia v ich 4-ročnom sledovaní nelíšila podľa toho, či sa lítium vysadilo.</p>
 
 <p>Aiffova švédska séria je dôležitá práve pre nefrológa: staršie režimy 1960.–1970. rokov niesli vyššie riziko ESRD (približne 1,5 %); v jednej analýze nikto, kto začal lítium po roku 1980, neskončil v RRT – ale v následnej práci s 630 pacientmi s najmenej 10 rokmi liečby podľa moderných princípov mala asi tretina známky chronického zlyhávania. Moderné dávkovanie riziko znižuje, neeliminuje ho.</p>
 
@@ -117,7 +117,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Mýtus 4: Účinkuje na mániu, nie na depresiu</h2>
 
-<p>Toto je azda najtrvácnejší psychiatrický omyl a tu je Ghaemi bližšie k dátam. Lítium v udržiavacej liečbe nie je „len antimanikum“. Štúdia BALANCE (Geddes a spol., Lancet 2010) randomizovala 330 pacientov s bipolárnou poruchou I. typu z 41 centier na lítium v monoterapii (plazmatická koncentrácia 0,4–1,0 mmol/l), valproát v monoterapii (750–1 250 mg) alebo kombináciu, po aktívnom úvodnom období na kombinácii. Primárnym výsledkom bolo začatie novej intervencie pre vzniknutú epizódu nálady počas až 24 mesiacov.</p>
+<p>Toto je azda najtrvácnejší psychiatrický omyl a tu je Ghaemi bližšie k dátam. Lítium v udržiavacej liečbe nie je „len antimanikum“. Štúdia BALANCE (Geddes a spol., Lancet 2010) randomizovala 330 pacientov s bipolárnou poruchou I. typu z 41 centier na lítium v monoterapii (plazmatická koncentrácia 0,4–1,0&nbsp;mmol/l), valproát v monoterapii (750–1&nbsp;250&nbsp;mg) alebo kombináciu, po aktívnom úvodnom období na kombinácii. Primárnym výsledkom bolo začatie novej intervencie pre vzniknutú epizódu nálady počas až 24&nbsp;mesiacov.</p>
 
 <p>Primárnu udalosť malo 54 % v kombinácii, 59 % pri lítiu a 69 % pri valproáte. Pomer rizík: kombinácia vs. valproát 0,59 (95 % IS 0,42–0,83; p = 0,0023); lítium vs. valproát 0,71 (0,51–1,00; p = 0,0472); kombinácia vs. lítium 0,82 (0,58–1,17; p = 0,27). Interpretácia autorov: kombinácia aj lítium v monoterapii predchádzajú relapsu spoľahlivejšie než valproát; prínos kombinácie voči samotnému lítiu štúdia nevedela spoľahlivo potvrdiť ani vyvrátiť.</p>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p>Ghaemi označuje lítium za na populačnej úrovni „hmotnostne neutrálne“ a uvádza, že nárast hmotnosti postihne približne 20 % pacientov, v menšej miere než olanzapín, kvetiapín a valproát. Odkaz smeruje na metaanalýzu Gomes-da-Costa a spol. (Neurosci Biobehav Rev 2022). Z otvoreného abstraktu tejto práce vyplýva niečo presnejšie a skromnejšie.</p>
 
-<p>Do systematického prehľadu vošlo 20 štúdií, do metaanalýzy 9. Priemerný nárast hmotnosti pri lítiu bol <strong>+0,462 kg a nebol štatisticky významný</strong> (p = 0,158). Voči placebu rozdiel nebol významný; voči aktívnym komparátorom bol nárast pri lítiu významne nižší. Kratšie trvanie liečby sa spájalo s väčším nárastom. Číslo „približne 20 %“ v abstrakte <em>nie je</em>; ako podiel pacientov s klinicky významným nárastom ho z otvoreného záznamu nevieme overiť. Overiť vieme: lítium nie je metabolicky nevinné u každého jednotlivca, ale na úrovni populácie nie je olanzapínom – a vyhýbať sa mu výhradne pre obavu z hmotnosti, kým alternatíva nesie ťažší metabolický náklad, nemá oporu v tejto metaanalýze.</p>
+<p>Do systematického prehľadu vošlo 20 štúdií, do metaanalýzy 9. Priemerný nárast hmotnosti pri lítiu bol <strong>+0,462&nbsp;kg a nebol štatisticky významný</strong> (p = 0,158). Voči placebu rozdiel nebol významný; voči aktívnym komparátorom bol nárast pri lítiu významne nižší. Kratšie trvanie liečby sa spájalo s väčším nárastom. Číslo „približne 20 %“ v abstrakte <em>nie je</em>; ako podiel pacientov s klinicky významným nárastom ho z otvoreného záznamu nevieme overiť. Overiť vieme: lítium nie je metabolicky nevinné u každého jednotlivca, ale na úrovni populácie nie je olanzapínom – a vyhýbať sa mu výhradne pre obavu z hmotnosti, kým alternatíva nesie ťažší metabolický náklad, nemá oporu v tejto metaanalýze.</p>
 
 <h2>Mýtus 7: Narušuje kreativitu a kogníciu</h2>
 
@@ -160,12 +160,12 @@ $articles[] = [
     <tr>
       <th scope="row">eGFR (a urea, kreatinín)</th>
       <td>Chronická tubulointersticiálna nefropatia; akútny pokles pri toxicite</td>
-      <td>NICE: vstupne a potom každé 6 mesiacov, častejšie pri poklese. Pokles eGFR v ≥ 2 meraniach → častejšie hladiny a zhodnotenie tempa. Pokles eGFR o &gt; 25 % alebo kreatinínu o &gt; 30 % je dôvod na revíziu, nie automatické celoživotné vysadenie</td>
+      <td>NICE: vstupne a potom každé 6&nbsp;mesiacov, častejšie pri poklese. Pokles eGFR v ≥ 2 meraniach → častejšie hladiny a zhodnotenie tempa. Pokles eGFR o &gt; 25 % alebo kreatinínu o &gt; 30 % je dôvod na revíziu, nie automatické celoživotné vysadenie</td>
     </tr>
     <tr>
-      <th scope="row">Sérové lítium (údolná hodnota po 12 h)</th>
+      <th scope="row">Sérové lítium (údolná hodnota po 12&nbsp;h)</th>
       <td>Expozícia, adherencia, toxicita</td>
-      <td>Najnižšia účinná hladina. U starších a pri CKD nižšie pásmo (často 0,4–0,6 mmol/l). Jedna hodnota &gt; 1,0 mmol/l sa spája s akútnym poklesom eGFR</td>
+      <td>Najnižšia účinná hladina. U starších a pri CKD nižšie pásmo (často 0,4–0,6&nbsp;mmol/l). Jedna hodnota &gt; 1,0&nbsp;mmol/l sa spája s akútnym poklesom eGFR</td>
     </tr>
     <tr>
       <th scope="row">Elektrolyty, hydratácia, NDI</th>
@@ -175,7 +175,7 @@ $articles[] = [
     <tr>
       <th scope="row">TSH</th>
       <td>Hypotyreóza je častá (Shine: HR 2,31)</td>
-      <td>Vstupne a každých 6 mesiacov; pri zmene nálady myslieť aj na tyreopatiu</td>
+      <td>Vstupne a každých 6&nbsp;mesiacov; pri zmene nálady myslieť aj na tyreopatiu</td>
     </tr>
     <tr>
       <th scope="row">Kalcium (a PTH pri hyperkalciémii)</th>
@@ -213,9 +213,9 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <td>Každý pacient musí mať 0,6–1,0 mmol/l, ideálne 0,8</td>
+      <td>Každý pacient musí mať 0,6–1,0&nbsp;mmol/l, ideálne 0,8</td>
       <td><strong>Zjednodušenie</strong></td>
-      <td>ISBD: štandard 0,60–0,80 mmol/l, individualizácia 0,40–1,00. NICE: 0,6–0,8 pri prvom predpise; 0,8–1,0 len vo vybraných situáciách. Hladina = expozícia, nie známka úspechu. Monitorovanie nevypínať</td>
+      <td>ISBD: štandard 0,60–0,80&nbsp;mmol/l, individualizácia 0,40–1,00. NICE: 0,6–0,8 pri prvom predpise; 0,8–1,0 len vo vybraných situáciách. Hladina = expozícia, nie známka úspechu. Monitorovanie nevypínať</td>
     </tr>
     <tr>
       <td>Chronické poškodenie obličiek u 1–5 % dlhodobých užívateľov</td>
@@ -245,7 +245,7 @@ $articles[] = [
     <tr>
       <td>Nevyhnutne výrazný nárast hmotnosti</td>
       <td><strong>Nepresné</strong></td>
-      <td>Gomes-da-Costa: +0,46 kg, NS; voči placebu bez rozdielu; voči aktívnym komparátorom menší nárast. Podiel „20 %“ z otvoreného abstraktu neoverený</td>
+      <td>Gomes-da-Costa: +0,46&nbsp;kg, NS; voči placebu bez rozdielu; voči aktívnym komparátorom menší nárast. Podiel „20 %“ z otvoreného abstraktu neoverený</td>
     </tr>
     <tr>
       <td>Narušuje kreativitu a kogníciu</td>
@@ -282,7 +282,7 @@ $articles[] = [
   <li><strong>Barroilhet SA, Ghaemi SN.</strong> <em>When and how to use lithium.</em> Acta Psychiatr Scand. 2020;142(3):161–172. doi: 10.1111/acps.13202. PMID 32526812. Naratívny prehľad, na ktorý sa Ghaemi odvoláva pri údaji 1–5 %; abstrakt toto percento neuvádza, plný text nie je v otvorenom prístupe. <a href="https://pubmed.ncbi.nlm.nih.gov/32526812/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>BALANCE investigators and collaborators, Geddes JR, Goodwin GM, Rendell J, Azorin JM, Cipriani A, Ostacher MJ, Morriss R, Alder N, Juszczak E.</strong> <em>Lithium plus valproate combination therapy versus monotherapy for relapse prevention in bipolar I disorder (BALANCE): a randomised open-label trial.</em> Lancet. 2010;375(9712):385–395. doi: 10.1016/S0140-6736(09)61828-6. PMID 20092882. <a href="https://pubmed.ncbi.nlm.nih.gov/20092882/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Nolen WA, Licht RW, Young AH, Malhi GS, Tohen M, Vieta E, Kupka RW, Zarate C, Nielsen RE, Baldessarini RJ, Severus E, ISBD/IGSLI Task Force on the treatment with lithium.</strong> <em>What is the optimal serum level for lithium in the maintenance treatment of bipolar disorder? A systematic review and recommendations from the ISBD/IGSLI Task Force on treatment with lithium.</em> Bipolar Disord. 2019;21(5):394–409. doi: 10.1111/bdi.12805. PMID 31112628. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6688930/" target="_blank" rel="noopener noreferrer">PMC</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/31112628/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
-  <li><strong>National Institute for Health and Care Excellence.</strong> <em>Bipolar disorder: assessment and management.</em> Clinical guideline CG185. Odporúčania k hladinám 0,6–0,8 mmol/l, k pásmu 0,8–1,0 mmol/l, k monitorovaniu eGFR, TSH, kalcia a k NSAID. <a href="https://www.nice.org.uk/guidance/cg185" target="_blank" rel="noopener noreferrer">NICE CG185</a>.</li>
+  <li><strong>National Institute for Health and Care Excellence.</strong> <em>Bipolar disorder: assessment and management.</em> Clinical guideline CG185. Odporúčania k hladinám 0,6–0,8&nbsp;mmol/l, k pásmu 0,8–1,0&nbsp;mmol/l, k monitorovaniu eGFR, TSH, kalcia a k NSAID. <a href="https://www.nice.org.uk/guidance/cg185" target="_blank" rel="noopener noreferrer">NICE CG185</a>.</li>
   <li><strong>Goodwin GM, Haddad PM, Ferrier IN, Aronson JK, Barnes TRH, Cipriani A, Coghill DR, Fazel S, Geddes JR, Grunze H, Holmes EA, Howes O, Hudson S, Hunt N, Jones I, Macmillan IC, McAllister-Williams H, Miklowitz DR, Morriss R, Munafò M, Paton C, Sahakian BJ, Saunders KEA, Sinclair JMA, Taylor D, Vieta E, Young AH.</strong> <em>Evidence-based guidelines for treating bipolar disorder: Revised third edition recommendations from the British Association for Psychopharmacology.</em> J Psychopharmacol. 2016;30(6):495–553. doi: 10.1177/0269881116636545. PMID 26979387. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922419/" target="_blank" rel="noopener noreferrer">PMC</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/26979387/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Gelenberg AJ, Kane JM, Keller MB, Lavori P, Rosenbaum JF, Cole K, Lavelle J.</strong> <em>Comparison of standard and low serum levels of lithium for maintenance treatment of bipolar disorder.</em> N Engl J Med. 1989;321(22):1489–1493. doi: 10.1056/NEJM198911303212201. PMID 2811970. <a href="https://pubmed.ncbi.nlm.nih.gov/2811970/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Shine B, McKnight RF, Leaver L, Geddes JR.</strong> <em>Long-term effects of lithium on renal, thyroid, and parathyroid function: a retrospective analysis of laboratory data.</em> Lancet. 2015;386(9992):461–468. doi: 10.1016/S0140-6736(14)61842-0. PMID 26003379. <a href="https://pubmed.ncbi.nlm.nih.gov/26003379/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
@@ -302,7 +302,7 @@ $articles[] = [
   <li><strong>Scott F, Hampsey E, Gnanapragasam S, Carter B, Marwood L, Taylor RW, Emre C, Korotkova L, Martín-Dombrowski J, Cleare AJ, Young AH, Strawbridge R.</strong> <em>Systematic review and meta-analysis of augmentation and combination treatments for early-stage treatment-resistant depression.</em> J Psychopharmacol. 2023;37(3):268–278. doi: 10.1177/02698811221104058. PMID 35861202. <a href="https://pubmed.ncbi.nlm.nih.gov/35861202/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Spracovaný zdroj je komentár Nassira Ghaemiho v Medscape (byline overený vo verejnej tiráži 3. 9. 2026). Autorstvo štúdií BALANCE, Shine, Aiff, Presne, Bocchetta, Gomes-da-Costa a ostatných citovaných prác sa do mapy zdrojových autorov nepridáva. Číslo 1–5 % chronického poškodenia obličiek pochádza z Ghaemiho výkladu PMID 32526812; abstrakt tohto prehľadu ho neobsahuje a plný text je za predplatným – údaj sme konfrontovali s Aiffom (ESRD ≈ 1,5 %), Presnem, Bocchettom, Shineom a Botonom (NDI). BALANCE: HR a počty z PubMed abstraktu PMID 20092882; pole-špecifické HR pre depresiu z otvoreného záznamu nevieme potvrdiť. Hmotnosť: +0,462 kg a p = 0,158 z abstraktu PMID 34265322; Ghaemiho „približne 20 %“ v ňom nie je. ISBD pásma a NICE hladiny/monitorovanie z PMC 6688930 a z verejného textu CG185. Jednotky mmol/l = mEq/l pre Li<sup>+</sup>.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Spracovaný zdroj je komentár Nassira Ghaemiho v Medscape (byline overený vo verejnej tiráži 3. 9. 2026). Autorstvo štúdií BALANCE, Shine, Aiff, Presne, Bocchetta, Gomes-da-Costa a ostatných citovaných prác sa do mapy zdrojových autorov nepridáva. Číslo 1–5 % chronického poškodenia obličiek pochádza z Ghaemiho výkladu PMID 32526812; abstrakt tohto prehľadu ho neobsahuje a plný text je za predplatným – údaj sme konfrontovali s Aiffom (ESRD ≈ 1,5 %), Presnem, Bocchettom, Shineom a Botonom (NDI). BALANCE: HR a počty z PubMed abstraktu PMID 20092882; pole-špecifické HR pre depresiu z otvoreného záznamu nevieme potvrdiť. Hmotnosť: +0,462&nbsp;kg a p = 0,158 z abstraktu PMID 34265322; Ghaemiho „približne 20 %“ v ňom nie je. ISBD pásma a NICE hladiny/monitorovanie z PMC 6688930 a z verejného textu CG185. Jednotky mmol/l = mEq/l pre Li<sup>+</sup>.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Tento článok nenahrádza psychiatrické rozhodnutie o nasadení, pokračovaní ani vysadení lítia. Dávku, cieľovú hladinu a trvanie liečby treba individualizovať podľa diagnózy, veku, eGFR, interakcií a psychiatrického prínosu. Pri poklese funkcie obličiek patrí rozhodnutie na spoločný stôl psychiatra a nefrológa.</em></p>
 </div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Odborny clanok: dapagliflozin pred kardiochirurgickou operaciou a AKI (studia MERCURI-2).
+ * Odborný článok: dapagliflozin pred kardiochirurgickou operaciou a AKI (štúdia MERCURI-2).
  *
  * Spustenie na serveri:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
@@ -76,7 +76,7 @@ $articles[] = [
     <tr><th scope="row">Pracoviská</th><td>2 univerzitné a 5 neuniverzitných nemocníc v Holandsku</td></tr>
     <tr><th scope="row">Zaraďovanie</th><td>8. jún 2023 až 27. január 2025; posledné sledovanie 16. máj 2025</td></tr>
     <tr><th scope="row">Populácia</th><td>dospelí pripravovaní na elektívnu kardiochirurgickú operáciu</td></tr>
-    <tr><th scope="row">Randomizácia</th><td>1 : 1; dapagliflozín 10 mg denne (392 pacientov) verzus placebo (392 pacientov)</td></tr>
+    <tr><th scope="row">Randomizácia</th><td>1 : 1; dapagliflozín 10&nbsp;mg denne (392 pacientov) verzus placebo (392 pacientov)</td></tr>
     <tr><th scope="row">Liečebný režim</th><td>od dňa pred operáciou do druhého pooperačného dňa, spolu 4 dávky</td></tr>
     <tr><th scope="row">Dokončené sledovanie</th><td>778 z 784 účastníkov (99 %)</td></tr>
     <tr><th scope="row">Registrácia</th><td>ClinicalTrials.gov NCT05590143</td></tr>
@@ -84,7 +84,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Základné charakteristiky súboru boli: medián veku 68 rokov (medzikvartilové rozpätie 61 až 74), 76 % mužov, 97 % osôb belošského pôvodu, medián BMI 27 kg/m² (25 až 30) a medián eGFR 80 ml/min/1,73 m² (67 až 89).</p>
+<p>Základné charakteristiky súboru boli: medián veku 68&nbsp;rokov (medzikvartilové rozpätie 61 až 74), 76 % mužov, 97 % osôb belošského pôvodu, medián BMI 27&nbsp;kg/m² (25 až 30) a medián eGFR 80&nbsp;ml/min/1,73&nbsp;m² (67 až 89).</p>
 
 <p>Nešlo teda primárne o štúdiu diabetikov, pacientov s pokročilou chronickou chorobou obličiek ani pacientov s vysokým rizikom ketoacidózy. Väčšina účastníkov mala zachovanú alebo iba mierne zníženú funkciu obličiek.</p>
 
@@ -98,13 +98,13 @@ $articles[] = [
 
 <ul>
   <li>s diabetom 1. typu,</li>
-  <li>s diabetom 2. typu, ktorí mali súčasne BMI pod 25 kg/m² <strong>a</strong> boli liečení viacnásobnými dennými injekciami inzulínu (krátko aj dlhodobo pôsobiaceho),</li>
+  <li>s diabetom 2. typu, ktorí mali súčasne BMI pod 25&nbsp;kg/m² <strong>a</strong> boli liečení viacnásobnými dennými injekciami inzulínu (krátko aj dlhodobo pôsobiaceho),</li>
   <li>s anamnézou diabetickej ketoacidózy,</li>
-  <li>so systolickým tlakom pod 100 mm Hg v čase zaradenia,</li>
-  <li>s eGFR pod 20 ml/min/1,73 m²,</li>
+  <li>so systolickým tlakom pod 100&nbsp;mm Hg v čase zaradenia,</li>
+  <li>s eGFR pod 20&nbsp;ml/min/1,73&nbsp;m²,</li>
   <li><strong>už liečení inhibítorom SGLT2</strong>,</li>
   <li>so známou alebo predpokladanou alergiou na skúšanú liečbu,</li>
-  <li>operovaní urgentne, teda do 72 hodín,</li>
+  <li>operovaní urgentne, teda do 72&nbsp;hodín,</li>
   <li>tehotné a dojčiace ženy a ženy bez primeranej antikoncepcie.</li>
 </ul>
 
@@ -120,9 +120,9 @@ $articles[] = [
 <p>Primárnym ukazovateľom bolo AKI počas prvých siedmich pooperačných dní podľa kritérií KDIGO. Stačilo splnenie aspoň jednej z podmienok:</p>
 
 <ul>
-  <li>zvýšenie kreatinínu najmenej o 0,3 mg/dl (26,5 µmol/l) do 48 hodín po operácii,</li>
+  <li>zvýšenie kreatinínu najmenej o 0,3&nbsp;mg/dl (26,5 µmol/l) do 48&nbsp;hodín po operácii,</li>
   <li>zvýšenie kreatinínu najmenej na 1,5-násobok východiskovej hodnoty do siedmich dní,</li>
-  <li>diuréza pod 0,5 ml/kg/h počas 6 až 12 hodín.</li>
+  <li>diuréza pod 0,5&nbsp;ml/kg/h počas 6 až 12&nbsp;hodín.</li>
 </ul>
 
 <p>Použitie štandardných kritérií KDIGO je metodologickou prednosťou. Zároveň však vytvára interpretačný problém, ktorý je pri tomto lieku zásadný: dapagliflozín zvyšuje glykosúriu a osmotickú diurézu. Môže preto znižovať počet prípadov definovaných oligúriou bez toho, aby v rovnakom rozsahu zabránil skutočnému poškodeniu obličiek.</p>
@@ -139,7 +139,7 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><th scope="row">AKI do 7 dní po operácii</th><td>28 %</td><td>52 %</td></tr>
+    <tr><th scope="row">AKI do 7&nbsp;dní po operácii</th><td>28 %</td><td>52 %</td></tr>
     <tr><th scope="row">Relatívne riziko (95 % IS)</th><td colspan="2">0,54 (0,45 až 0,65); P &lt; 0,001</td></tr>
     <tr><th scope="row">Absolútny rozdiel</th><td colspan="2">24 percentuálnych bodov</td></tr>
     <tr><th scope="row">NNT (orientačne)</th><td colspan="2">1 ÷ 0,24 ≈ 4,2 pacienta</td></tr>
@@ -205,7 +205,7 @@ $articles[] = [
 <ul>
   <li>dĺžke hospitalizácie,</li>
   <li>dĺžke pobytu na jednotke intenzívnej starostlivosti,</li>
-  <li>závažných kardiálnych a renálnych príhodách do 30 dní,</li>
+  <li>závažných kardiálnych a renálnych príhodách do 30&nbsp;dní,</li>
   <li>mortalite,</li>
   <li>kvalite života,</li>
   <li>pooperačnej fibrilácii predsiení,</li>
@@ -327,7 +327,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Gao a spol. (2026)</th>
-      <td>emulácia cieľovej štúdie, 2 499 pacientov s diabetom 2. typu, rôzne operácie</td>
+      <td>emulácia cieľovej štúdie, 2&nbsp;499 pacientov s diabetom 2. typu, rôzne operácie</td>
       <td>rutinne zbierané údaje</td>
       <td>18,6 % oproti 25,8 %; upravený OR 0,71 (0,56 až 0,91)</td>
     </tr>
@@ -356,7 +356,7 @@ $articles[] = [
   <li>urgentne operovaných pacientov,</li>
   <li>pacientov s dlhým hladovaním,</li>
   <li>osôb so sepsou alebo hemodynamickou nestabilitou,</li>
-  <li>pacientov s pokročilou CKD (eGFR pod 20 ml/min/1,73 m²),</li>
+  <li>pacientov s pokročilou CKD (eGFR pod 20&nbsp;ml/min/1,73&nbsp;m²),</li>
   <li>pacientov podstupujúcich nekardiochirurgické výkony.</li>
 </ul>
 
@@ -364,7 +364,7 @@ $articles[] = [
 
 <h3>Čo hovoria platné odporúčania</h3>
 
-<p>Americká FDA odporúča prerušiť liečbu inhibítorom SGLT2 pred plánovanou operáciou, a to <strong>bez ohľadu na to, či má pacient diabetes</strong>: dapagliflozín, kanagliflozín a empagliflozín najmenej 3 dni a ertugliflozín najmenej 4 dni pred výkonom. Liečbu možno obnoviť po návrate perorálneho príjmu k východiskovému stavu a po odznení ostatných rizikových faktorov ketoacidózy.</p>
+<p>Americká FDA odporúča prerušiť liečbu inhibítorom SGLT2 pred plánovanou operáciou, a to <strong>bez ohľadu na to, či má pacient diabetes</strong>: dapagliflozín, kanagliflozín a empagliflozín najmenej 3&nbsp;dni a ertugliflozín najmenej 4&nbsp;dni pred výkonom. Liečbu možno obnoviť po návrate perorálneho príjmu k východiskovému stavu a po odznení ostatných rizikových faktorov ketoacidózy.</p>
 
 <p>Multidisciplinárne konsenzuálne stanovisko SPAQI z roku 2026, publikované v <em>British Journal of Anaesthesia</em>, tento paušálny prístup posúva k <strong>individualizovanému manažmentu</strong> podľa prítomnosti diabetu a ďalších komorbidít, typu výkonu a perioperačného príjmu potravy, spolu so stratégiami monitorovania a prevencie euglykemickej ketoacidózy. Stanovisko vzniklo modifikovaným delfským procesom podporeným systematickým prehľadom literatúry.</p>
 
@@ -466,9 +466,9 @@ $articles[] = [
   <li><strong>Primárny výsledok mohol byť farmakologicky ovplyvnený.</strong> Dapagliflozín zvyšuje diurézu a mohol priamo znižovať splnenie oligurického kritéria.</li>
   <li><strong>Prevažovali mierne prípady AKI.</strong> Klinický význam krátkej oligúrie nie je rovnaký ako význam perzistentného kreatinínového AKI.</li>
   <li><strong>Bez dôkazu zlepšenia tvrdých výsledkov.</strong> Mortalita, hospitalizácia ani závažné kardiorenálne príhody sa významne nezmenili.</li>
-  <li><strong>Krátke sledovanie.</strong> Primárne sledovanie trvalo sedem dní, sekundárne prevažne 30 dní; chýbajú dlhodobé renálne výsledky.</li>
+  <li><strong>Krátke sledovanie.</strong> Primárne sledovanie trvalo sedem dní, sekundárne prevažne 30&nbsp;dní; chýbajú dlhodobé renálne výsledky.</li>
   <li><strong>Nízke zastúpenie pacientov s diabetom a srdcovým zlyhávaním.</strong> Výsledky neodpovedajú na otázky typických chronických používateľov inhibítorov SGLT2.</li>
-  <li><strong>Malé zastúpenie CKD.</strong> Medián eGFR bol 80 ml/min/1,73 m² a pacienti s eGFR pod 20 ml/min/1,73 m² boli vylúčení.</li>
+  <li><strong>Malé zastúpenie CKD.</strong> Medián eGFR bol 80&nbsp;ml/min/1,73&nbsp;m² a pacienti s eGFR pod 20&nbsp;ml/min/1,73&nbsp;m² boli vylúčení.</li>
   <li><strong>Vylúčenie doterajších používateľov inhibítora SGLT2.</strong> Štúdia neodpovedá na otázku perioperačného pokračovania chronickej liečby.</li>
   <li><strong>Selektovaná populácia s nízkym rizikom ketoacidózy.</strong> Výsledok nemôže zrušiť bezpečnostné obavy u vylúčených skupín.</li>
   <li><strong>Obmedzená etnická rozmanitosť.</strong> Až 97 % účastníkov tvorili osoby belošského pôvodu.</li>
@@ -529,7 +529,7 @@ $articles[] = [
   <li><strong>Gao FM, Kishore K, Pandey D, Jahanabadi H, Stevens M, Lecamwasam A, Churilov L, Ekinci EI.</strong> <em>Effect of preoperative SGLT2 inhibitor use on postoperative acute kidney injury in patients with type 2 diabetes undergoing surgery: A causal inference study using routinely collected data.</em> Diabetes Obes Metab. 2026;28(4):3193–3201. doi: 10.1111/dom.70509. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12992174/" target="_blank" rel="noopener noreferrer">Plný text</a>.</li>
   <li><strong>Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group.</strong> <em>KDIGO Clinical Practice Guideline for Acute Kidney Injury.</em> Kidney Int Suppl. 2012;2:1–138. Inštitucionálne skupinové autorstvo. <a href="https://kdigo.org/guidelines/acute-kidney-injury/" target="_blank" rel="noopener noreferrer">Odporúčanie KDIGO</a>.</li>
   <li><strong>Kellum JA, Lameire N; KDIGO AKI Guideline Work Group.</strong> <em>Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1).</em> Crit Care. 2013;17(1):204. doi: 10.1186/cc11454. <a href="https://doi.org/10.1186/cc11454" target="_blank" rel="noopener noreferrer">Súhrn odporúčania</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/23394211/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
-  <li><strong>U.S. Food and Drug Administration.</strong> Bezpečnostné informácie o inhibítoroch SGLT2 a ketoacidóze vrátane odporúčania prerušiť liečbu 3 až 4 dni pred plánovanou operáciou. Inštitucionálne autorstvo; americké regulačné informácie nie sú automaticky záväzné pre Slovensko. <a href="https://www.fda.gov/drugs/drug-safety-and-availability" target="_blank" rel="noopener noreferrer">Bezpečnostné oznámenia FDA</a>.</li>
+  <li><strong>U.S. Food and Drug Administration.</strong> Bezpečnostné informácie o inhibítoroch SGLT2 a ketoacidóze vrátane odporúčania prerušiť liečbu 3 až 4&nbsp;dni pred plánovanou operáciou. Inštitucionálne autorstvo; americké regulačné informácie nie sú automaticky záväzné pre Slovensko. <a href="https://www.fda.gov/drugs/drug-safety-and-availability" target="_blank" rel="noopener noreferrer">Bezpečnostné oznámenia FDA</a>.</li>
   <li><strong>European Medicines Agency.</strong> <em>SGLT2 inhibitors: PRAC recommendations to minimise risk of diabetic ketoacidosis.</em> Inštitucionálne autorstvo. <a href="https://www.ema.europa.eu/en/medicines/human/referrals/sglt2-inhibitors" target="_blank" rel="noopener noreferrer">Prehodnotenie EMA</a>; <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/forxiga" target="_blank" rel="noopener noreferrer">informácie o lieku Forxiga (dapagliflozín)</a>.</li>
   <li><strong>Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(4 Suppl):S117–S314. doi: 10.1016/j.kint.2023.10.018. <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">Odporúčania KDIGO</a>.</li>
   <li><strong>Medscape Medical News.</strong> <em>Perioperative Dapagliflozin Reduces Acute Kidney Injury After Cardiac Surgery.</em> Medscape, 2026. Sekundárny spravodajský zdroj (obsah za prihlásením). <a href="https://www.medscape.com/viewarticle/perioperative-dapagliflozin-reduces-acute-kidney-injury-2026a1000ru0" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
@@ -559,9 +559,9 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "------------------------------------------------------\n";
-    echo 'Migracia clanku: ' . $articles[0]['title'] . "\n";
+    echo 'Migrácia článku: ' . $articles[0]['title'] . "\n";
     echo "------------------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskocenych (bez zmeny):      $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {

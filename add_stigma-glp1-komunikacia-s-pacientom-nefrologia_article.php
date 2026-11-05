@@ -83,7 +83,7 @@ $articles[] = [
 
 <p>Dôvod nie je komunikačný, ale vecný. Pri pacientoch s diabetom 2. typu a chronickou chorobou obličiek už nejde o liek na chudnutie, ale o liek s doloženým obličkovým účinkom.</p>
 
-<p>Štúdia FLOW randomizovala 3 533 pacientov s diabetom 2. typu a chronickou chorobou obličiek na semaglutid 1,0 mg týždenne subkutánne alebo placebo. Po mediáne sledovania 3,4 roka, po odporúčaní predčasného ukončenia pri vopred stanovenej priebežnej analýze, bolo riziko primárneho ukazovateľa, teda zloženého ukazovateľa závažných obličkových udalostí, o <strong>24 % nižšie</strong> (331 oproti 410 prvých udalostí; HR 0,76; 95 % IS 0,66–0,88; p = 0,0003).</p>
+<p>Štúdia FLOW randomizovala 3&nbsp;533 pacientov s diabetom 2. typu a chronickou chorobou obličiek na semaglutid 1,0&nbsp;mg týždenne subkutánne alebo placebo. Po mediáne sledovania 3,4 roka, po odporúčaní predčasného ukončenia pri vopred stanovenej priebežnej analýze, bolo riziko primárneho ukazovateľa, teda zloženého ukazovateľa závažných obličkových udalostí, o <strong>24 % nižšie</strong> (331 oproti 410 prvých udalostí; HR 0,76; 95 % IS 0,66–0,88; p = 0,0003).</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky štúdie FLOW" tabindex="0">
 <table>
@@ -98,7 +98,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Priemerný ročný sklon eGFR bol v ramene so semaglutidom miernejší o 1,16 ml/min/1,73 m² (p &lt; 0,001). Závažné nežiaduce udalosti boli pritom hlásené u <em>nižšieho</em> podielu účastníkov na semaglutide než na placebe (49,6 % oproti 53,8 %).</p>
+<p>Priemerný ročný sklon eGFR bol v ramene so semaglutidom miernejší o 1,16&nbsp;ml/min/1,73&nbsp;m² (p &lt; 0,001). Závažné nežiaduce udalosti boli pritom hlásené u <em>nižšieho</em> podielu účastníkov na semaglutide než na placebe (49,6 % oproti 53,8 %).</p>
 
 <p>Toto je kvalitatívne iná situácia než liečba obezity bez komorbidity. U pacienta s diabetom 2. typu a albuminurickou chronickou chorobou obličiek nejde o estetiku ani o pohodlie, ale o oddialenie zlyhania obličiek a o zníženie kardiovaskulárnej úmrtnosti. A práve u tohto pacienta je obzvlášť nežiaduce, aby liečbu riešil mimo ambulancie, ktorá sleduje jeho eGFR a albuminúriu.</p>
 

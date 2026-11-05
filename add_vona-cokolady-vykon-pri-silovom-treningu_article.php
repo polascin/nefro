@@ -46,7 +46,7 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Výskumníci zaradili 23 zdravých, rekreačne trénovaných mužov s priemerným vekom približne 23 rokov. Každý účastník absolvoval tri experimentálne podmienky v náhodnom poradí:</p>
+<p>Výskumníci zaradili 23 zdravých, rekreačne trénovaných mužov s priemerným vekom približne 23&nbsp;rokov. Každý účastník absolvoval tri experimentálne podmienky v náhodnom poradí:</p>
 
 <ul>
   <li>vôňu horkej čokolády s obsahom 90 % kakaa,</li>

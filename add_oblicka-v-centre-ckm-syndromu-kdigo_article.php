@@ -85,7 +85,7 @@ $articles[] = [
 
 <p>Obezita, inzulínová rezistencia, hyperglykémia a artériová hypertenzia podporujú glomerulovú hyperfiltráciu, albuminúriu, glomerulosklerózu a tubulointersticiálne poškodenie. Postupujúca CKD následne potencuje hypertenziu, objemové preťaženie, aktiváciu sympatikového nervového systému a renínovo-angiotenzínového systému, endoteliálnu dysfunkciu, zápal, oxidačný stres a vaskulárnu kalcifikáciu.</p>
 
-<p>Výsledkom je samoudržiavajúci sa kruh, ktorý zvyšuje riziko progresie CKD do zlyhania obličiek, hospitalizácií pre srdcové zlyhávanie, aterosklerotických príhod, fibrilácie predsiení a predčasného úmrtia. Rozsah problému je veľký: približne 850 miliónov ľudí na svete žije s ochorením obličiek a podľa 11. vydania atlasu International Diabetes Federation malo v roku 2024 diabetes približne 589 miliónov dospelých vo veku 20 až 79 rokov. Ide o populačné odhady, ktoré závisia od definície a metodiky.</p>
+<p>Výsledkom je samoudržiavajúci sa kruh, ktorý zvyšuje riziko progresie CKD do zlyhania obličiek, hospitalizácií pre srdcové zlyhávanie, aterosklerotických príhod, fibrilácie predsiení a predčasného úmrtia. Rozsah problému je veľký: približne 850 miliónov ľudí na svete žije s ochorením obličiek a podľa 11. vydania atlasu International Diabetes Federation malo v roku 2024 diabetes približne 589 miliónov dospelých vo veku 20 až 79&nbsp;rokov. Ide o populačné odhady, ktoré závisia od definície a metodiky.</p>
 
 <h2>Včasné rozpoznanie CKD: eGFR nestačí</h2>
 
@@ -105,17 +105,17 @@ $articles[] = [
   <tbody>
     <tr>
       <td>A1</td>
-      <td>&lt;3 mg/mmol (&lt;30 mg/g)</td>
+      <td>&lt;3&nbsp;mg/mmol (&lt;30&nbsp;mg/g)</td>
       <td>Normálna až mierne zvýšená albuminúria</td>
     </tr>
     <tr>
       <td>A2</td>
-      <td>3–30 mg/mmol (30–300 mg/g)</td>
+      <td>3–30&nbsp;mg/mmol (30–300&nbsp;mg/g)</td>
       <td>Stredne zvýšená albuminúria</td>
     </tr>
     <tr>
       <td>A3</td>
-      <td>&gt;30 mg/mmol (&gt;300 mg/g)</td>
+      <td>&gt;30&nbsp;mg/mmol (&gt;300&nbsp;mg/g)</td>
       <td>Výrazne zvýšená albuminúria</td>
     </tr>
   </tbody>
@@ -142,13 +142,13 @@ $articles[] = [
 
 <h3>Krvný tlak a blokáda systému renín-angiotenzín</h3>
 
-<p>KDIGO navrhuje u dospelých s CKD a vysokým krvným tlakom cieľový systolický tlak <strong>&lt;120 mmHg, ak je tolerovaný a tlak sa meria štandardizovaným spôsobom v ambulancii</strong>. Táto hodnota sa nemá nekriticky prenášať na neštandardizované rutinné meranie. Cieľ treba individualizovať najmä pri krehkosti, symptomatickej ortostatickej hypotenzii, veľmi obmedzenej prognóze alebo riziku pádov.</p>
+<p>KDIGO navrhuje u dospelých s CKD a vysokým krvným tlakom cieľový systolický tlak <strong>&lt;120&nbsp;mmHg, ak je tolerovaný a tlak sa meria štandardizovaným spôsobom v ambulancii</strong>. Táto hodnota sa nemá nekriticky prenášať na neštandardizované rutinné meranie. Cieľ treba individualizovať najmä pri krehkosti, symptomatickej ortostatickej hypotenzii, veľmi obmedzenej prognóze alebo riziku pádov.</p>
 
 <p>Pri albuminúrii zostáva inhibítor angiotenzín konvertujúceho enzýmu (ACEi) alebo blokátor receptora AT1 pre angiotenzín II (ARB) základom nefroprotektívnej liečby. Dôležité praktické pravidlá sú:</p>
 
 <ul>
   <li>použiť najvyššiu schválenú dávku, ktorú pacient toleruje,</li>
-  <li>skontrolovať tlak, kreatinín a draslík do 2–4 týždňov po nasadení alebo zvýšení dávky,</li>
+  <li>skontrolovať tlak, kreatinín a draslík do 2–4&nbsp;týždňov po nasadení alebo zvýšení dávky,</li>
   <li>pokračovať v liečbe, ak kreatinín do štyroch týždňov nestúpne o viac ako 30 %, pričom väčšia zmena je podnetom na vyšetrenie príčiny, nie automatickým dôkazom liekovej toxicity,</li>
   <li>nekombinovať ACEi, ARB a priamy inhibítor renínu,</li>
   <li>pri hyperkaliémii najprv hľadať reverzibilné príčiny a možnosti jej liečby; dávku znížiť alebo liek vysadiť najmä pri symptomatickej hypotenzii alebo nezvládnutej hyperkaliémii napriek liečbe.</li>
@@ -163,16 +163,16 @@ $articles[] = [
 <p>Podľa KDIGO 2024 sa inhibítor SGLT2 odporúča:</p>
 
 <ul>
-  <li>pacientom s diabetes mellitus 2. typu, CKD a eGFR ≥20 ml/min/1,73 m<sup>2</sup>,</li>
-  <li>dospelým s CKD, eGFR ≥20 ml/min/1,73 m<sup>2</sup> a UACR ≥20 mg/mmol (≥200 mg/g),</li>
+  <li>pacientom s diabetes mellitus 2. typu, CKD a eGFR ≥20&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>,</li>
+  <li>dospelým s CKD, eGFR ≥20&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a UACR ≥20&nbsp;mg/mmol (≥200&nbsp;mg/g),</li>
   <li>dospelým s CKD a srdcovým zlyhávaním bez ohľadu na albuminúriu.</li>
 </ul>
 
-<p>Pri eGFR 20–45 ml/min/1,73 m<sup>2</sup> a UACR &lt;20 mg/mmol (&lt;200 mg/g) KDIGO liečbu navrhuje s nižšou silou odporúčania. Po nasadení je bežný malý, spravidla reverzibilný pokles eGFR, ktorý sám osebe nie je dôvodom na vysadenie. Ak pacient liek toleruje, možno v ňom pokračovať aj po poklese eGFR pod 20 ml/min/1,73 m<sup>2</sup>, kým sa nezačne náhrada funkcie obličiek. Liečbu je rozumné dočasne prerušiť počas dlhšieho hladovania, operácie alebo kritického ochorenia pre zvýšené riziko ketózy.</p>
+<p>Pri eGFR 20–45&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a UACR &lt;20&nbsp;mg/mmol (&lt;200&nbsp;mg/g) KDIGO liečbu navrhuje s nižšou silou odporúčania. Po nasadení je bežný malý, spravidla reverzibilný pokles eGFR, ktorý sám osebe nie je dôvodom na vysadenie. Ak pacient liek toleruje, možno v ňom pokračovať aj po poklese eGFR pod 20&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, kým sa nezačne náhrada funkcie obličiek. Liečbu je rozumné dočasne prerušiť počas dlhšieho hladovania, operácie alebo kritického ochorenia pre zvýšené riziko ketózy.</p>
 
 <h3>Finerenón: reziduálne riziko pri diabete a albuminúrii</h3>
 
-<p>Nesteroidný antagonista mineralokortikoidového receptora s preukázaným renálnym a kardiovaskulárnym prínosom má miesto u dospelých s diabetes mellitus 2. typu, eGFR &gt;25 ml/min/1,73 m<sup>2</sup>, normálnou koncentráciou draslíka a perzistujúcou albuminúriou &gt;3 mg/mmol (&gt;30 mg/g) napriek maximálnej tolerovanej dávke RAS blokády. Môže sa pridať k RAS blokáde a inhibítoru SGLT2.</p>
+<p>Nesteroidný antagonista mineralokortikoidového receptora s preukázaným renálnym a kardiovaskulárnym prínosom má miesto u dospelých s diabetes mellitus 2. typu, eGFR &gt;25&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, normálnou koncentráciou draslíka a perzistujúcou albuminúriou &gt;3&nbsp;mg/mmol (&gt;30&nbsp;mg/g) napriek maximálnej tolerovanej dávke RAS blokády. Môže sa pridať k RAS blokáde a inhibítoru SGLT2.</p>
 
 <p>Výber pacienta a pravidelné monitorovanie kaliémie sú zásadné, pretože liečba zvyšuje riziko hyperkaliémie. Steroidné antagonisty mineralokortikoidového receptora zostávajú dôležité pri srdcovom zlyhávaní, hyperaldosteronizme alebo rezistentnej hypertenzii, ich indikačný rámec však nie je totožný s finerenónom.</p>
 
@@ -186,7 +186,7 @@ $articles[] = [
 
 <h3>Dyslipidémia: rozhoduje riziko a štádium CKD</h3>
 
-<p>U dospelých vo veku ≥50 rokov s eGFR &lt;60 ml/min/1,73 m<sup>2</sup>, ktorí nie sú liečení chronickou dialýzou a nemajú transplantovanú obličku, KDIGO odporúča statín alebo kombináciu statínu s ezetimibom. Pri eGFR ≥60 ml/min/1,73 m<sup>2</sup> odporúča statín. Vo veku 18–49 rokov sa rozhoduje podľa prítomnosti koronárnej choroby, diabetu, prekonanej ischemickej cievnej mozgovej príhody a odhadovaného koronárneho rizika.</p>
+<p>U dospelých vo veku ≥50&nbsp;rokov s eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, ktorí nie sú liečení chronickou dialýzou a nemajú transplantovanú obličku, KDIGO odporúča statín alebo kombináciu statínu s ezetimibom. Pri eGFR ≥60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> odporúča statín. Vo veku 18–49&nbsp;rokov sa rozhoduje podľa prítomnosti koronárnej choroby, diabetu, prekonanej ischemickej cievnej mozgovej príhody a odhadovaného koronárneho rizika.</p>
 
 <p>Začatie hypolipidemickej liečby po vstupe do dialyzačného programu nemá rovnakú dôkazovú oporu ako jej použitie v skorších štádiách CKD. To však nie je totožné s automatickým vysadením liečby, ktorú pacient už užíva; rozhodnutie má vychádzať z klinického kontextu a platných odporúčaní.</p>
 
@@ -215,7 +215,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>Po nasadení alebo titrácii ACEi/ARB</td>
-      <td>Tlak, kreatinín a draslík o 2–4 týždne; pri vysokom riziku skôr</td>
+      <td>Tlak, kreatinín a draslík o 2–4&nbsp;týždne; pri vysokom riziku skôr</td>
       <td>Pri väčšom poklese eGFR preveriť objem, NSAID, diuretiká, AKI a stenózu renálnej artérie</td>
     </tr>
     <tr>

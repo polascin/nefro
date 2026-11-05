@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>Čo retatrutid je – a čo zatiaľ nie je</h2>
 
-<p>Retatrutid (LY3437943) je <strong>skúšaný</strong> raz týždenne podávaný <strong>trojitý agonista receptorov pre GIP, GLP-1 a glukagón</strong>. Vo fáze 2 u dospelých s obezitou viedla 48-týždňová liečba k výraznému poklesu hmotnosti: pri dávke 12 mg bol priemerný pokles <strong>24,2 %</strong> oproti <strong>2,1 %</strong> pri placebe (Jastreboff a kol., <em>N Engl J Med</em> 2023; PMID 37366315). To je kontext účinnosti, nie dôvod predpisovať liek mimo schválenia. Retatrutid <strong>nemá</strong> v čase písania tohto textu schválenie FDA ani EMA na žiadnu indikáciu. Fáza 3 (programy TRIUMPH a TRANSCEND) prebieha; renálne ukazovatele v uvedenej fáze 2 <strong>neboli primárnym cieľom</strong> a tento článok z nich nevyvodzuje benefit pre chronickú chorobu obličiek (CKD).</p>
+<p>Retatrutid (LY3437943) je <strong>skúšaný</strong> raz týždenne podávaný <strong>trojitý agonista receptorov pre GIP, GLP-1 a glukagón</strong>. Vo fáze 2 u dospelých s obezitou viedla 48-týždňová liečba k výraznému poklesu hmotnosti: pri dávke 12&nbsp;mg bol priemerný pokles <strong>24,2 %</strong> oproti <strong>2,1 %</strong> pri placebe (Jastreboff a kol., <em>N Engl J Med</em> 2023; PMID 37366315). To je kontext účinnosti, nie dôvod predpisovať liek mimo schválenia. Retatrutid <strong>nemá</strong> v čase písania tohto textu schválenie FDA ani EMA na žiadnu indikáciu. Fáza 3 (programy TRIUMPH a TRANSCEND) prebieha; renálne ukazovatele v uvedenej fáze 2 <strong>neboli primárnym cieľom</strong> a tento článok z nich nevyvodzuje benefit pre chronickú chorobu obličiek (CKD).</p>
 
 <p>Výrobca vo verejných materiáloch uvádza, že pre obmedzený počet pacientov, ktorí spĺňajú medicínske kritériá a nemôžu vstúpiť do klinického skúšania, považuje za medicínsky primerané sprístupniť autentický retatrutid pred schválením FDA, v súlade s usmernením úradu. To je východisko komentára Medscape. Otázka nie je, či molekula „funguje“, ale <strong>ako sa k nej pacient vôbec môže dostať</strong>.</p>
 
@@ -56,7 +56,7 @@ $articles[] = [
   <li><strong>Informovaný súhlas</strong> pacienta alebo zákonného zástupcu podľa 21 CFR časť 50, na formulári schválenom IRB.</li>
 </ol>
 
-<p>Liečbu pri individuálnom IND mimo naliehavej situácie spravidla nemožno začať skôr, ako uplynie <strong>30 dní</strong> od doručenia podania FDA (alebo kým FDA skôr oznámi, že podanie nezdrží) <strong>a</strong> kým je k dispozícii súhlas IRB. FDA <strong>nemôže prinútiť</strong> výrobcu, aby liek dodal. Ochota výrobcu je preto praktickým predpokladom, nie formalitou. Toto uvádza priamo úrad, nie je to interpretácia komentára.</p>
+<p>Liečbu pri individuálnom IND mimo naliehavej situácie spravidla nemožno začať skôr, ako uplynie <strong>30&nbsp;dní</strong> od doručenia podania FDA (alebo kým FDA skôr oznámi, že podanie nezdrží) <strong>a</strong> kým je k dispozícii súhlas IRB. FDA <strong>nemôže prinútiť</strong> výrobcu, aby liek dodal. Ochota výrobcu je preto praktickým predpokladom, nie formalitou. Toto uvádza priamo úrad, nie je to interpretácia komentára.</p>
 
 <h2>Fakty: kto podľa Lilly a ClinicalTrials.gov spĺňa kritériá</h2>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <ul>
   <li>vek <strong>≥ 18</strong> rokov;</li>
-  <li><strong>refraktérna obezita</strong> definovaná ako BMI <strong>≥ 35 kg/m²</strong> napriek dodržiavaniu a znášanlivosti liečby <strong>najvyššou dostupnou dávkou</strong> schválenej terapie chronického manažmentu hmotnosti;</li>
+  <li><strong>refraktérna obezita</strong> definovaná ako BMI <strong>≥ 35&nbsp;kg/m²</strong> napriek dodržiavaniu a znášanlivosti liečby <strong>najvyššou dostupnou dávkou</strong> schválenej terapie chronického manažmentu hmotnosti;</li>
   <li><strong>dve alebo viac</strong> závažných alebo život ohrozujúcich komplikácií obezity, pre ktoré pacient <strong>aktuálne dostáva štandardnú starostlivosť</strong>;</li>
   <li><strong>nemožnosť</strong> účasti v prebiehajúcom klinickom skúšaní retatrutidu alebo porovnateľného skúšaného lieku (vstupné kritériá alebo chýbajúce primerane dostupné centrum);</li>
   <li>s pacientom boli v rámci spoločného rozhodovania prebraté <strong>všetky štandardné možnosti</strong> vrátane <strong>bariatrickej chirurgie</strong>.</li>
@@ -122,7 +122,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Podmienka „nie je iná liečba“</th>
-        <td>Kritériá 21 CFR 312.305; pri retatrutide navyše úzke sitá výrobcu (BMI ≥ 35 kg/m², dve závažné komplikácie, zlyhanie max. dávky schválenej liečby)</td>
+        <td>Kritériá 21 CFR 312.305; pri retatrutide navyše úzke sitá výrobcu (BMI ≥ 35&nbsp;kg/m², dve závažné komplikácie, zlyhanie max. dávky schválenej liečby)</td>
         <td>§ 46 ods. 4: povoliť možno, ak nie je dostupný porovnateľný registrovaný humánny liek</td>
       </tr>
       <tr>

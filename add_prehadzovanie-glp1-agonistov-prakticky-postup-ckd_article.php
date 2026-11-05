@@ -4,7 +4,7 @@
  * ════════════════════════════════════════════════════════════════════════════
  * Vloženie odborného článku: prechod medzi agonistami GLP-1 receptorov
  * (switching) — načasovanie, titrácia, prečo neexistuje prepočet dávok,
- * manažment rizika hypoglykémie a nefrologická bezpečnosť (objemová deplécia,
+ * manažment riziká hypoglykémie a nefrologická bezpečnosť (objemová deplécia,
  * AKI, rozdiel medzi humánnymi a exendínovými analógmi).
  *
  * Autor projektu: MUDr. Ľubomír Polaščín. Odborné zhrnutie viacerých zdrojov
@@ -56,19 +56,19 @@ $articles[] = [
     <tr><th scope="col">Liečivo</th><th scope="col">Pôvod</th><th scope="col">Polčas</th><th scope="col">Frekvencia</th><th scope="col">Podmienky podania</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Exenatid</th><td>zvierací (exendín)</td><td>2,4 h</td><td>2× denne</td><td>do 1 hodiny pred dvoma hlavnými jedlami</td></tr>
-    <tr><th scope="row">Lixisenatid</th><td>zvierací (exendín)</td><td>asi 3 h</td><td>1× denne</td><td>do 1 hodiny pred prvým jedlom dňa</td></tr>
-    <tr><th scope="row">Liraglutid</th><td>humánny analóg</td><td>asi 13 h</td><td>1× denne</td><td>kedykoľvek počas dňa</td></tr>
-    <tr><th scope="row">Exenatid s predĺženým uvoľňovaním</th><td>zvierací (exendín)</td><td>7 – 14 dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
-    <tr><th scope="row">Dulaglutid</th><td>humánny analóg</td><td>asi 5 dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
-    <tr><th scope="row">Semaglutid subkutánne</th><td>humánny analóg</td><td>asi 7 dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
-    <tr><th scope="row">Semaglutid perorálne</th><td>humánny analóg</td><td>asi 7 dní</td><td>1× denne</td><td>nalačno, max. 120 ml vody, ≥ 30 min pred jedlom, nápojom aj inými liekmi</td></tr>
+    <tr><th scope="row">Exenatid</th><td>zvierací (exendín)</td><td>2,4&nbsp;h</td><td>2× denne</td><td>do 1&nbsp;hodiny pred dvoma hlavnými jedlami</td></tr>
+    <tr><th scope="row">Lixisenatid</th><td>zvierací (exendín)</td><td>asi 3&nbsp;h</td><td>1× denne</td><td>do 1&nbsp;hodiny pred prvým jedlom dňa</td></tr>
+    <tr><th scope="row">Liraglutid</th><td>humánny analóg</td><td>asi 13&nbsp;h</td><td>1× denne</td><td>kedykoľvek počas dňa</td></tr>
+    <tr><th scope="row">Exenatid s predĺženým uvoľňovaním</th><td>zvierací (exendín)</td><td>7 – 14&nbsp;dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
+    <tr><th scope="row">Dulaglutid</th><td>humánny analóg</td><td>asi 5&nbsp;dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
+    <tr><th scope="row">Semaglutid subkutánne</th><td>humánny analóg</td><td>asi 7&nbsp;dní</td><td>1× týždenne</td><td>kedykoľvek, s jedlom aj bez</td></tr>
+    <tr><th scope="row">Semaglutid perorálne</th><td>humánny analóg</td><td>asi 7&nbsp;dní</td><td>1× denne</td><td>nalačno, max. 120&nbsp;ml vody, ≥ 30&nbsp;min pred jedlom, nápojom aj inými liekmi</td></tr>
   </tbody>
 </table>
 <p><em>Podľa Almandoz JP a kol., Clinical Diabetes 2020;38(4):390–402. Dostupnosť jednotlivých prípravkov a ich schválené indikácie sa medzi krajinami líšia – vždy overte v aktuálnom SPC.</em></p>
 </div>
 
-<p>Rozdiely nie sú kozmetické. V štúdiách priameho porovnania bol subkutánny semaglutid 1,0 mg týždenne v znížení HbA1c aj hmotnosti <strong>lepší</strong> než liraglutid 1,2 mg denne, exenatid 2 mg týždenne aj dulaglutid 1,5 mg týždenne. Naopak liraglutid 1,8 mg denne bol porovnateľný s dulaglutidom 1,5 mg týždenne a lepší než exenatid 2 mg týždenne – <strong>frekvencia podávania teda nie je jediným určujúcim faktorom účinnosti</strong>. Pre nefrológa je ešte podstatnejší rozdiel v kardiovaskulárnych výsledkoch: prínos preukázali liraglutid, dulaglutid a subkutánny semaglutid, zatiaľ čo pri lixisenatide a týždennom exenatide sa významné zlepšenie nepreukázalo.</p>
+<p>Rozdiely nie sú kozmetické. V štúdiách priameho porovnania bol subkutánny semaglutid 1,0&nbsp;mg týždenne v znížení HbA1c aj hmotnosti <strong>lepší</strong> než liraglutid 1,2&nbsp;mg denne, exenatid 2&nbsp;mg týždenne aj dulaglutid 1,5&nbsp;mg týždenne. Naopak liraglutid 1,8&nbsp;mg denne bol porovnateľný s dulaglutidom 1,5&nbsp;mg týždenne a lepší než exenatid 2&nbsp;mg týždenne – <strong>frekvencia podávania teda nie je jediným určujúcim faktorom účinnosti</strong>. Pre nefrológa je ešte podstatnejší rozdiel v kardiovaskulárnych výsledkoch: prínos preukázali liraglutid, dulaglutid a subkutánny semaglutid, zatiaľ čo pri lixisenatide a týždennom exenatide sa významné zlepšenie nepreukázalo.</p>
 
 <h2>Načasovanie: kedy začať nový liek</h2>
 
@@ -80,11 +80,11 @@ $articles[] = [
     <tr><th scope="col">Situácia</th><th scope="col">Kedy začať nový liek</th><th scope="col">V akej dávke</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Denný → týždenný, pacient toleruje maximálnu dávku</th><td><strong>Deň po poslednej dávke</strong> denného prípravku</td><td>Dulaglutid 1,5 mg alebo exenatid 2 mg rovno v maximálnej dávke; semaglutid radšej cez medzistupeň 0,5 mg týždenne počas 4 týždňov</td></tr>
-    <tr><th scope="row">Týždenný → týždenný, pacient toleruje maximálnu dávku</th><td><strong>Týždeň po poslednej dávke</strong>, v ten istý deň v týždni</td><td>Dulaglutid 1,5 mg alebo exenatid 2 mg v maximálnej dávke; semaglutid cez 0,5 mg týždenne</td></tr>
+    <tr><th scope="row">Denný → týždenný, pacient toleruje maximálnu dávku</th><td><strong>Deň po poslednej dávke</strong> denného prípravku</td><td>Dulaglutid 1,5&nbsp;mg alebo exenatid 2&nbsp;mg rovno v maximálnej dávke; semaglutid radšej cez medzistupeň 0,5&nbsp;mg týždenne počas 4&nbsp;týždňov</td></tr>
+    <tr><th scope="row">Týždenný → týždenný, pacient toleruje maximálnu dávku</th><td><strong>Týždeň po poslednej dávke</strong>, v ten istý deň v týždni</td><td>Dulaglutid 1,5&nbsp;mg alebo exenatid 2&nbsp;mg v maximálnej dávke; semaglutid cez 0,5&nbsp;mg týždenne</td></tr>
     <tr><th scope="row">Prepínanie <em>pre gastrointestinálnu neznášanlivosť</em> alebo pri netolerovaní maximálnej dávky</th><td><strong>Pôvodný liek zastaviť a počkať, kým príznaky neodznejú</strong></td><td>Začať <strong>najnižšou</strong> dávkou nového prípravku a zvážiť aj nižšiu udržiavaciu dávku</td></tr>
-    <tr><th scope="row">Subkutánny semaglutid 0,5 mg týždenne → perorálny semaglutid</th><td>1 až 7 dní po poslednej injekcii</td><td>7 mg alebo 14 mg denne</td></tr>
-    <tr><th scope="row">Perorálny semaglutid 14 mg denne → subkutánny</th><td>Deň po poslednej perorálnej dávke</td><td>0,5 mg týždenne</td></tr>
+    <tr><th scope="row">Subkutánny semaglutid 0,5&nbsp;mg týždenne → perorálny semaglutid</th><td>1 až 7&nbsp;dní po poslednej injekcii</td><td>7&nbsp;mg alebo 14&nbsp;mg denne</td></tr>
+    <tr><th scope="row">Perorálny semaglutid 14&nbsp;mg denne → subkutánny</th><td>Deň po poslednej perorálnej dávke</td><td>0,5&nbsp;mg týždenne</td></tr>
   </tbody>
 </table>
 <p><em>Podľa Almandoz 2020. Odporúčania pre injekčné prípravky sa opierajú prevažne o klinickú skúsenosť autorov, odporúčania pre perorálny semaglutid o údaje v preskripčných informáciách.</em></p>
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Prechodné zhoršenie glykémie: očakávaný jav, nie zlyhanie</h2>
 
-<p>Pri prechode z krátkodobo pôsobiaceho na dlhodobo pôsobiaci prípravok môže nastať <strong>malý prechodný vzostup glykémie nalačno</strong>. Modelovanie expozície a odpovede tiež naznačuje, že pri prechode z dulaglutidu 1,5 mg alebo liraglutidu 1,2 až 1,8 mg na <em>úvodnú</em> dávku semaglutidu 0,25 mg týždenne môže HbA1c spočiatku stúpnuť – s tým, že po tomto prechodnom zhoršení nasleduje ďalšie zlepšenie nad rámec pôvodnej liečby.</p>
+<p>Pri prechode z krátkodobo pôsobiaceho na dlhodobo pôsobiaci prípravok môže nastať <strong>malý prechodný vzostup glykémie nalačno</strong>. Modelovanie expozície a odpovede tiež naznačuje, že pri prechode z dulaglutidu 1,5&nbsp;mg alebo liraglutidu 1,2 až 1,8&nbsp;mg na <em>úvodnú</em> dávku semaglutidu 0,25&nbsp;mg týždenne môže HbA1c spočiatku stúpnuť – s tým, že po tomto prechodnom zhoršení nasleduje ďalšie zlepšenie nad rámec pôvodnej liečby.</p>
 
 <p>Prakticky to znamená dve veci. Po prvé, <strong>pacienta na to treba pripraviť</strong>, najmä ak si sám meria glykémie – inak zmenu vyhodnotí ako zlyhanie a liečbu vysadí. Po druhé, <strong>úvodnú dávku nového prípravku možno prispôsobiť</strong>, aby sa tento efekt zmiernil; práve preto sa pri dobre tolerovanej maximálnej dávke odporúča nezačínať od najnižšieho stupňa.</p>
 
@@ -137,7 +137,7 @@ $articles[] = [
 <p>Riziko nie je rovnomerné. Zvýšenú pozornosť si zaslúžia pacienti s:</p>
 
 <ul>
-  <li>eGFR pod 45 ml/min/1,73 m² a najmä CKD G4 a vyššie,</li>
+  <li>eGFR pod 45&nbsp;ml/min/1,73&nbsp;m² a najmä CKD G4 a vyššie,</li>
   <li>súbežnou liečbou diuretikom, ACE-inhibítorom alebo sartanom, prípadne inhibítorom SGLT2,</li>
   <li>krehkosťou, vyšším vekom a nízkou telesnou hmotnosťou,</li>
   <li>anamnézou predchádzajúceho AKI.</li>
@@ -149,13 +149,13 @@ $articles[] = [
 
 <h2>Prečo to celé stojí za námahu: FLOW</h2>
 
-<p>Opatrnosť uvedená vyššie neznamená zdržanlivosť v indikácii. Štúdia <strong>FLOW</strong> (<em>New England Journal of Medicine</em>, 2024) zaradila <strong>3533 pacientov</strong> s diabetom 2. typu a chronickou chorobou obličiek (eGFR 50 – 75 ml/min/1,73 m² s UACR 300 – 5000, alebo eGFR 25 – &lt; 50 s UACR 100 – 5000) a randomizovala ich na subkutánny semaglutid 1,0 mg týždenne alebo placebo. Pri mediáne sledovania 3,4 roka – štúdia bola predčasne ukončená na odporúčanie po vopred plánovanej priebežnej analýze:</p>
+<p>Opatrnosť uvedená vyššie neznamená zdržanlivosť v indikácii. Štúdia <strong>FLOW</strong> (<em>New England Journal of Medicine</em>, 2024) zaradila <strong>3533 pacientov</strong> s diabetom 2. typu a chronickou chorobou obličiek (eGFR 50 – 75&nbsp;ml/min/1,73&nbsp;m² s UACR 300 – 5000, alebo eGFR 25 – &lt; 50&nbsp;s UACR 100 – 5000) a randomizovala ich na subkutánny semaglutid 1,0&nbsp;mg týždenne alebo placebo. Pri mediáne sledovania 3,4 roka – štúdia bola predčasne ukončená na odporúčanie po vopred plánovanej priebežnej analýze:</p>
 
 <ul>
   <li><strong>Primárny ukazovateľ</strong> (zlyhanie obličiek, pokles eGFR o ≥ 50 % alebo úmrtie z renálnej či kardiovaskulárnej príčiny) bol o <strong>24 % nižší</strong> – 331 oproti 410 prvým udalostiam; pomer rizík 0,76 (95 % IS 0,66 – 0,88); p = 0,0003.</li>
   <li><strong>Renálne zložky</strong> samostatne: pomer rizík 0,79 (95 % IS 0,66 – 0,94).</li>
   <li><strong>Kardiovaskulárne úmrtie</strong>: pomer rizík 0,71 (95 % IS 0,56 – 0,89).</li>
-  <li><strong>Ročný sklon eGFR</strong> bol miernejší o 1,16 ml/min/1,73 m² (p &lt; 0,001).</li>
+  <li><strong>Ročný sklon eGFR</strong> bol miernejší o 1,16&nbsp;ml/min/1,73&nbsp;m² (p &lt; 0,001).</li>
   <li><strong>Veľké kardiovaskulárne príhody</strong> o 18 % nižšie (0,82; 0,68 – 0,98), <strong>úmrtie z akejkoľvek príčiny</strong> o 20 % nižšie (0,80; 0,67 – 0,95).</li>
   <li><strong>Závažné nežiaduce udalosti boli menej časté</strong> v semaglutidovej vetve: 49,6 % oproti 53,8 %.</li>
 </ul>
@@ -169,10 +169,10 @@ $articles[] = [
   <li><strong>Zvoľte načasovanie</strong> podľa tabuľky vyššie – bez medzery pri dobre tolerovanej maximálnej dávke, s medzerou a od najnižšej dávky pri neznášanlivosti.</li>
   <li><strong>Pripravte plán pre inzulín a sulfonylmočovinu</strong>, ak ich pacient užíva, vrátane prahov na zníženie dávky.</li>
   <li><strong>Dajte pacientovi „pravidlo chorého dňa“</strong>: pri výraznej nevoľnosti, opakovanom vracaní, dlhšie trvajúcej hnačke alebo zjavne zníženom príjme tekutín sa má ozvať a dočasne prerušiť diuretikum, blokádu RAAS a inhibítor SGLT2 podľa dohodnutého plánu – a dať si skontrolovať kreatinín a ionogram.</li>
-  <li><strong>Kontrola do 2 až 3 mesiacov</strong> od prepnutia: primeranosť titrácie, nežiaduce účinky, potreba úpravy ostatných liekov a dosiahnutie terapeutických cieľov. Pri gastrointestinálnych príznakoch, poklese hmotnosti alebo hypotenzii skôr.</li>
+  <li><strong>Kontrola do 2 až 3&nbsp;mesiacov</strong> od prepnutia: primeranosť titrácie, nežiaduce účinky, potreba úpravy ostatných liekov a dosiahnutie terapeutických cieľov. Pri gastrointestinálnych príznakoch, poklese hmotnosti alebo hypotenzii skôr.</li>
 </ol>
 
-<p>Dve poznámky k očakávaniam, ktoré šetria zbytočné zmeny liečby: titrácia subkutánneho semaglutidu na 1 mg môže trvať <strong>3 mesiace</strong>, takže maximálny glykemický prínos sa nemusí prejaviť skôr než <strong>6 mesiacov</strong> po prepnutí; úbytok hmotnosti podľa klinickej skúsenosti autorov zvyčajne pokračuje <strong>9 až 12 mesiacov</strong>. Výrazná zmena hmotnosti si navyše môže vyžiadať úpravu antihypertenzív aj substitúcie hormónov štítnej žľazy.</p>
+<p>Dve poznámky k očakávaniam, ktoré šetria zbytočné zmeny liečby: titrácia subkutánneho semaglutidu na 1&nbsp;mg môže trvať <strong>3&nbsp;mesiace</strong>, takže maximálny glykemický prínos sa nemusí prejaviť skôr než <strong>6&nbsp;mesiacov</strong> po prepnutí; úbytok hmotnosti podľa klinickej skúsenosti autorov zvyčajne pokračuje <strong>9 až 12&nbsp;mesiacov</strong>. Výrazná zmena hmotnosti si navyše môže vyžiadať úpravu antihypertenzív aj substitúcie hormónov štítnej žľazy.</p>
 
 <h2>Čo z toho platí a čo je názor</h2>
 

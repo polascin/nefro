@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>1. Najprv určiť, čo sa má liečiť</h2>
 <p>Pri podozrení na LN treba vyšetriť sérový kreatinín a odhadovanú glomerulárnu filtráciu (eGFR), močový sediment, kvantifikovať proteinúriu a posúdiť protilátky proti dvojvláknovej DNA (anti-dsDNA) aj zložky komplementu C3 a C4. Klinické rozhodovanie dopĺňajú krvný tlak, opuchy, sérový albumín a extrarenálna aktivita SLE. Izolovaná sérologická odchýlka sama osebe neurčuje potrebu eskalácie renálnej imunosupresie. [1]</p>
-<p>KDIGO uvádza <strong>proteinúriu ≥ 500 mg/24 h ako podnet na zváženie biopsie</strong>. Nejde o hranicu, pod ktorou je závažná nefritída vylúčená. Aktívny sediment alebo nevysvetlené zhoršovanie funkcie obličiek môžu odôvodniť biopsiu aj pri nižšej proteinúrii. Pri rýchlo progredujúcom priebehu je potrebné urgentné odborné zhodnotenie. [1]</p>
+<p>KDIGO uvádza <strong>proteinúriu ≥ 500&nbsp;mg/24&nbsp;h ako podnet na zváženie biopsie</strong>. Nejde o hranicu, pod ktorou je závažná nefritída vylúčená. Aktívny sediment alebo nevysvetlené zhoršovanie funkcie obličiek môžu odôvodniť biopsiu aj pri nižšej proteinúrii. Pri rýchlo progredujúcom priebehu je potrebné urgentné odborné zhodnotenie. [1]</p>
 <p>Bioptický nález má okrem triedy podľa ISN/RPS opísať aktivitu, chronicitu a tubulointersticiálne či cievne poškodenie. Aktívny zápal a jazvovité poškodenie nemajú rovnakú liečebnú ovplyvniteľnosť. Praktické rozlíšenie je nasledovné:</p>
 <ul>
 <li><strong>Trieda I alebo II:</strong> imunosupresiu spravidla určujú extrarenálne prejavy. Pri nefrotickom syndróme treba myslieť na lupusovú podocytopatiu a zhodnotiť elektrónovú mikroskopiu.</li>
@@ -61,7 +61,7 @@ $articles[] = [
 <thead><tr><th scope="col">Režim popri glukokortikoidoch</th><th scope="col">Praktické rozhodovanie</th></tr></thead>
 <tbody>
 <tr><th scope="row">MPAA</th><td>Štandardná možnosť (1B). Vhodná najmä pri snahe vyhnúť sa gonadotoxicite cyklofosfamidu; treba posúdiť toleranciu, adherenciu a reprodukčné plány.</td></tr>
-<tr><th scope="row">Nízkodávkovaný intravenózny cyklofosfamid</th><td>Štandardná možnosť (1B). Režim Euro-Lupus používa 500 mg každé dva týždne, spolu šesť dávok. Intravenózne podanie môže pomôcť pri problémoch s pravidelným užívaním perorálnej liečby.</td></tr>
+<tr><th scope="row">Nízkodávkovaný intravenózny cyklofosfamid</th><td>Štandardná možnosť (1B). Režim Euro-Lupus používa 500&nbsp;mg každé dva týždne, spolu šesť dávok. Intravenózne podanie môže pomôcť pri problémoch s pravidelným užívaním perorálnej liečby.</td></tr>
 <tr><th scope="row">Belimumab + MPAA alebo nízkodávkovaný intravenózny cyklofosfamid</th><td>Možnosť úvodnej trojkombinácie (1B). KDIGO ju osobitne zvažuje pri opakovaných renálnych vzplanutiach alebo vysokom riziku progresie.</td></tr>
 <tr><th scope="row">MPAA + inhibítor kalcineurínu (CNI)</th><td>Možnosť úvodnej trojkombinácie (1B), ak funkcia obličiek nie je závažne znížená. Výhodná môže byť pri nefrotickej proteinúrii a relatívne zachovanej eGFR; vyžaduje kontrolu nefrotoxicity a interakcií.</td></tr>
 </tbody>
@@ -75,19 +75,19 @@ $articles[] = [
 <p>Tieto percentá sa nemajú používať na priame poradie účinnosti belimumabu a voklosporínu: štúdie sa líšili populáciou, trvaním aj definíciami odpovede. Pokles proteinúrie pri CNI navyše zahŕňa aj účinky na podocyty a glomerulárnu hemodynamiku; sám osebe nedokazuje ústup histologickej aktivity. [1–3]</p>
 
 <h3>Voklosporín: dôležité rozlíšenie odporúčania a SPC</h3>
-<p>KDIGO 2024 upozorňuje na hranicu eGFR približne <strong>45 ml/min/1,73 m²</strong> pri výbere režimu s CNI; pacienti s eGFR ≤ 45 ml/min/1,73 m² neboli zaradení do kľúčových štúdií voklosporínu. Nejde však o univerzálnu absolútnu kontraindikáciu všetkých CNI. Aktuálne európske SPC pri eGFR 30 až &lt; 45 ml/min/1,73 m² pripúšťa voklosporín iba po zvážení prevahy prínosu nad rizikom. Odporúčanie, študijné kritérium a regulačné podmienky nie sú totožné. [1,4]</p>
+<p>KDIGO 2024 upozorňuje na hranicu eGFR približne <strong>45&nbsp;ml/min/1,73&nbsp;m²</strong> pri výbere režimu s CNI; pacienti s eGFR ≤ 45&nbsp;ml/min/1,73&nbsp;m² neboli zaradení do kľúčových štúdií voklosporínu. Nejde však o univerzálnu absolútnu kontraindikáciu všetkých CNI. Aktuálne európske SPC pri eGFR 30 až &lt; 45&nbsp;ml/min/1,73&nbsp;m² pripúšťa voklosporín iba po zvážení prevahy prínosu nad rizikom. Odporúčanie, študijné kritérium a regulačné podmienky nie sú totožné. [1,4]</p>
 <p>SPC odporúča vyšetriť eGFR pred začatím liečby, potom každé dva týždne počas prvého mesiaca a následne každé štyri týždne. Pri potvrdenom poklese funkcie obličiek sa dávka upravuje alebo liečba prerušuje podľa algoritmu SPC. Sleduje sa tiež krvný tlak, kaliémia a liekové interakcie; súbežné podávanie silných inhibítorov CYP3A4 je kontraindikované. [4]</p>
 
 <h2>4. Znižovanie glukokortikoidov naplánovať od začiatku</h2>
-<p>KDIGO umožňuje po krátkej liečbe intravenóznym metylprednizolónom použiť režim s nižšími dávkami perorálnych glukokortikoidov, ak sa renálne aj extrarenálne prejavy primerane zlepšujú. Uvádza viacero príkladov dávkovania, nie jedinú povinnú schému. V príklade redukovaného režimu klesá prednizón alebo jeho ekvivalent na 5 mg/deň v 11. až 12. týždni a na 2,5 mg/deň v 13. až 14. týždni. Takéto tempo treba prispôsobiť klinickej odpovedi. [1]</p>
+<p>KDIGO umožňuje po krátkej liečbe intravenóznym metylprednizolónom použiť režim s nižšími dávkami perorálnych glukokortikoidov, ak sa renálne aj extrarenálne prejavy primerane zlepšujú. Uvádza viacero príkladov dávkovania, nie jedinú povinnú schému. V príklade redukovaného režimu klesá prednizón alebo jeho ekvivalent na 5&nbsp;mg/deň v 11. až 12. týždni a na 2,5&nbsp;mg/deň v 13. až 14. týždni. Takéto tempo treba prispôsobiť klinickej odpovedi. [1]</p>
 <p>Pri každej kontrole má byť zrejmá aktuálna dávka, ďalší plán redukcie a dôvod prípadného spomalenia. Znižovanie expozície glukokortikoidom neznamená tolerovať pretrvávajúci aktívny zápal ani nahradiť hodnotenie ochorenia samotnou snahou dosiahnuť nízku dávku.</p>
 
 <h2>5. Odpoveď hodnotiť číslami aj v čase</h2>
-<p>Na sledovanie treba používať konzistentnú metódu kvantifikácie proteinúrie a vždy uvádzať jednotky. Pomer bielkovín ku kreatinínu v moči (UPCR) v g/g nie je totožný údaj s denným vylučovaním bielkovín v g/24 h. Nasledujúce definície vychádzajú z prehľadu bežne používaných kritérií v KDIGO; jednotlivé štúdie sa v detailoch líšia. [1]</p>
+<p>Na sledovanie treba používať konzistentnú metódu kvantifikácie proteinúrie a vždy uvádzať jednotky. Pomer bielkovín ku kreatinínu v moči (UPCR) v g/g nie je totožný údaj s denným vylučovaním bielkovín v g/24&nbsp;h. Nasledujúce definície vychádzajú z prehľadu bežne používaných kritérií v KDIGO; jednotlivé štúdie sa v detailoch líšia. [1]</p>
 <ul>
-<li><strong>Čiastočná odpoveď:</strong> pokles proteinúrie aspoň o 50 % a UPCR &lt; 3 g/g, spolu so stabilizáciou alebo zlepšením funkcie obličiek, obvykle do 6 až 12 mesiacov.</li>
-<li><strong>Úplná odpoveď:</strong> UPCR &lt; 0,5 g/g a stabilizácia alebo zlepšenie funkcie obličiek; často do 6 až 12 mesiacov, niekedy neskôr. KDIGO pri stabilite funkcie uvádza rozmedzie približne ±10 až 15 % východiskovej hodnoty.</li>
-<li><strong>Vývoj je dôležitejší než izolovaná kontrola:</strong> pri sústavnom zlepšovaní môže byť primerané umožniť dosiahnutie úplnej odpovede v priebehu 18 až 24 mesiacov. Tento postup sa nevzťahuje na pacienta, ktorého stav stagnuje alebo sa zhoršuje. [1]</li>
+<li><strong>Čiastočná odpoveď:</strong> pokles proteinúrie aspoň o 50 % a UPCR &lt; 3&nbsp;g/g, spolu so stabilizáciou alebo zlepšením funkcie obličiek, obvykle do 6 až 12&nbsp;mesiacov.</li>
+<li><strong>Úplná odpoveď:</strong> UPCR &lt; 0,5&nbsp;g/g a stabilizácia alebo zlepšenie funkcie obličiek; často do 6 až 12&nbsp;mesiacov, niekedy neskôr. KDIGO pri stabilite funkcie uvádza rozmedzie približne ±10 až 15 % východiskovej hodnoty.</li>
+<li><strong>Vývoj je dôležitejší než izolovaná kontrola:</strong> pri sústavnom zlepšovaní môže byť primerané umožniť dosiahnutie úplnej odpovede v priebehu 18 až 24&nbsp;mesiacov. Tento postup sa nevzťahuje na pacienta, ktorého stav stagnuje alebo sa zhoršuje. [1]</li>
 </ul>
 <p>Sérológia, sediment, albumín, opuchy a extrarenálna aktivita dopĺňajú hodnotenie. Pretrvávanie anti-dsDNA alebo nízkeho komplementu môže sprevádzať aj klinické zlepšenie. Naopak, klinická odpoveď nevylučuje reziduálnu histologickú aktivitu. Pri zásadných rozhodnutiach môže preto pomôcť opakovaná biopsia. [1]</p>
 
@@ -102,7 +102,7 @@ $articles[] = [
 </ol>
 
 <h2>7. Udržiavacia liečba a čistá trieda V</h2>
-<p>Po úvodnej liečbe proliferatívnej LN KDIGO odporúča MPAA na udržiavanie odpovede (1B). Azatioprín je alternatívou pri intolerancii, nedostupnosti MPAA alebo plánovaní gravidity. Úvodná a udržiavacia imunosupresia majú spolu trvať <strong>najmenej 36 mesiacov</strong>; ide o minimálny rámec, nie o automatický termín vysadenia. V účinnej trojkombinácii s belimumabom alebo CNI možno pokračovať aj v udržiavacej fáze podľa prínosu a rizika. [1]</p>
+<p>Po úvodnej liečbe proliferatívnej LN KDIGO odporúča MPAA na udržiavanie odpovede (1B). Azatioprín je alternatívou pri intolerancii, nedostupnosti MPAA alebo plánovaní gravidity. Úvodná a udržiavacia imunosupresia majú spolu trvať <strong>najmenej 36&nbsp;mesiacov</strong>; ide o minimálny rámec, nie o automatický termín vysadenia. V účinnej trojkombinácii s belimumabom alebo CNI možno pokračovať aj v udržiavacej fáze podľa prínosu a rizika. [1]</p>
 <p>Glukokortikoidy sa znižujú na najnižšiu potrebnú dávku. Ich vysadenie možno zvážiť po najmenej 12 mesiacoch udržanej úplnej klinickej renálnej odpovede, ak ich nevyžaduje extrarenálna aktivita. To neznamená súčasné vysadenie celej imunosupresie. [1]</p>
 <p>Pri <strong>čistej triede V s nízkou proteinúriou</strong> sa uplatňuje podporná liečba, hydroxychlorochín a sledovanie; imunosupresiu môžu určovať extrarenálne prejavy. Pri nefrotickej proteinúrii alebo jej komplikáciách sa zvažuje glukokortikoid s ďalším imunosupresívom. Rozhodovanie ovplyvňujú opuchy, dyslipidémia a trombotické riziko. Dôkazy pre jednotlivé kombinácie sú pri čistej triede V menej presvedčivé než pri proliferatívnej LN. [1]</p>
 

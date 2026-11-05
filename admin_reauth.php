@@ -39,7 +39,7 @@ if ($requestMethod === 'POST') {
                     exit;
                 }
                 if ($reauth['blocked']) {
-                    $errors[] = 'Príliš veľa nesprávnych pokusov. Skúste to znova o 15 minút.';
+                    $errors[] = 'Príliš veľa nesprávnych pokusov. Skúste to znova o 15 minút.';
                 } else {
                     $errors[] = 'Zadané heslo nie je správne.';
                 }

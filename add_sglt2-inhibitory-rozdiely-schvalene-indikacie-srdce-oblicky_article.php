@@ -106,7 +106,7 @@ $articles[] = [
       <tr>
         <th scope="row">Kanagliflozín (Invokana)</th>
         <td>Registrovaný od 15. novembra 2013</td>
-        <td>Iba nedostatočne kontrolovaný diabetes 2. typu (dospelí a deti od 10 rokov). <strong>Samostatnú indikáciu pre srdcové zlyhávanie ani pre chronickú chorobu obličiek v EÚ nemá</strong>, hoci nefroprotektívny účinok bol v štúdiách preukázaný.</td>
+        <td>Iba nedostatočne kontrolovaný diabetes 2. typu (dospelí a deti od 10&nbsp;rokov). <strong>Samostatnú indikáciu pre srdcové zlyhávanie ani pre chronickú chorobu obličiek v EÚ nemá</strong>, hoci nefroprotektívny účinok bol v štúdiách preukázaný.</td>
       </tr>
       <tr>
         <th scope="row">Ertugliflozín (Steglatro)</th>
@@ -136,7 +136,7 @@ $articles[] = [
 <p>Na kanagliflozíne vidno, prečo sa oplatí čítať aktuálnu verziu informácie o lieku:</p>
 
 <ul>
-  <li>V programe CANVAS (10 142 účastníkov s diabetom 2. typu a vysokým kardiovaskulárnym rizikom) sa pri kanagliflozíne pozoroval <strong>zvýšený výskyt amputácií: 6,3 oproti 3,4 na 1 000 pacientorokov, pomer rizík 1,97 (95 % IS 1,41 – 2,75)</strong>, prevažne na úrovni prsta alebo metatarzu.</li>
+  <li>V programe CANVAS (10&nbsp;142 účastníkov s diabetom 2. typu a vysokým kardiovaskulárnym rizikom) sa pri kanagliflozíne pozoroval <strong>zvýšený výskyt amputácií: 6,3 oproti 3,4 na 1&nbsp;000 pacientorokov, pomer rizík 1,97 (95 % IS 1,41 – 2,75)</strong>, prevažne na úrovni prsta alebo metatarzu.</li>
   <li>Na tomto podklade FDA v roku 2017 zaviedla pre kanagliflozín <strong>rámčekové varovanie</strong> (boxed warning).</li>
   <li><strong>26. augusta 2020</strong> FDA rámčekové varovanie <strong>odstránila</strong> po posúdení údajov z troch klinických štúdií a po pribudnutí kardiálnych a obličkových indikácií, ktoré zmenili pomer prínosu a rizika.</li>
   <li><strong>Riziko však nezmizlo.</strong> FDA výslovne uvádza, že riziko amputácie pri kanagliflozíne pretrváva a naďalej je opísané v časti <em>Upozornenia a opatrenia</em>. Odporúčanie venovať pozornosť preventívnej starostlivosti o nohy a sledovať novú bolesť, defekty a infekcie na dolných končatinách zostáva v platnosti.</li>

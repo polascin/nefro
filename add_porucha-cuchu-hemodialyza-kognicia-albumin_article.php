@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Hodnota 91 % (súčet hyposmie a anosmie) závisí od definícií použitých autormi a nemožno ju bez ďalšej validácie brať ako presný odhad prevalencie klinicky diagnostikovanej čuchovej poruchy. Rád veličiny je však konzistentný s inými prácami: v talianskej prierezovej štúdii malo poruchu čuchu 75,5 % hemodialyzovaných a 93,3 % pacientov na peritoneálnej dialýze.</p>
 
-<p>Pozoruhodné je, že aj <strong>44,2 % zdravých kontrolných osôb</strong> bolo zaradených ako hyposmické alebo anosmické. To nie je nutne chyba: v bežnej populácii má poruchu čuchu vyše 50 % ľudí vo veku 65 až 80 rokov a približne 75 % ľudí nad 80 rokov. Pri strednom veku okolo 57 rokov je 44 % stále vysoké číslo, ktoré skôr naznačuje prísne kategorizačné hranice alebo obmedzenú kultúrnu rozpoznateľnosť použitých pachov. Klinicky to znamená, že rozdiel medzi skupinami je dôveryhodnejší než absolútna prevalencia.</p>
+<p>Pozoruhodné je, že aj <strong>44,2 % zdravých kontrolných osôb</strong> bolo zaradených ako hyposmické alebo anosmické. To nie je nutne chyba: v bežnej populácii má poruchu čuchu vyše 50 % ľudí vo veku 65 až 80&nbsp;rokov a približne 75 % ľudí nad 80&nbsp;rokov. Pri strednom veku okolo 57&nbsp;rokov je 44 % stále vysoké číslo, ktoré skôr naznačuje prísne kategorizačné hranice alebo obmedzenú kultúrnu rozpoznateľnosť použitých pachov. Klinicky to znamená, že rozdiel medzi skupinami je dôveryhodnejší než absolútna prevalencia.</p>
 
 <h2>Súvislosť s kognitívnymi funkciami</h2>
 
@@ -191,17 +191,17 @@ $articles[] = [
 
 <h3>Čuchový tréning</h3>
 
-<p>Ide o najsľubnejšiu nefarmakologickú možnosť a jedinú s hodnotením strednej istoty. V randomizovanej štúdii z Iránu pacienti počas 12 týždňov vdychovali <strong>štyri známe pachy (levanduľu, citrón, škoricu a eukalyptus), vždy 20 sekúnd, dvakrát denne</strong>. Objektívne skóre identifikácie sa zlepšilo z 15,3 na 18,8 bodu (P = 0,001), dotazník ťažkostí z 19,0 na 12,2 bodu (P = 0,003) a sebahodnotenie zo 6,8 na 8,2 bodu (P = 0,027). Normosmiu dosiahlo <strong>36,8 % pacientov</strong> oproti nikomu na začiatku.</p>
+<p>Ide o najsľubnejšiu nefarmakologickú možnosť a jedinú s hodnotením strednej istoty. V randomizovanej štúdii z Iránu pacienti počas 12&nbsp;týždňov vdychovali <strong>štyri známe pachy (levanduľu, citrón, škoricu a eukalyptus), vždy 20 sekúnd, dvakrát denne</strong>. Objektívne skóre identifikácie sa zlepšilo z 15,3 na 18,8 bodu (P = 0,001), dotazník ťažkostí z 19,0 na 12,2 bodu (P = 0,003) a sebahodnotenie zo 6,8 na 8,2 bodu (P = 0,027). Normosmiu dosiahlo <strong>36,8 % pacientov</strong> oproti nikomu na začiatku.</p>
 
 <p>Postup je lacný, neinvazívny a bezpečný. Napriek tomu ide o jedinú štúdiu s 19 pacientmi v tréningovej vetve, takže čuchový tréning zatiaľ nemožno označiť za štandardnú nefrologickú liečbu s preukázaným vplyvom na výživu alebo klinické výsledky.</p>
 
 <h3>Kurkumín</h3>
 
-<p>V tej istej randomizovanej štúdii kurkumín v dávke 500 mg dvakrát denne počas 12 týždňov zlepšil dotazníkové a sebahodnotiace skóre (P = 0,045, resp. 0,047), <strong>objektívne skóre identifikácie sa však významne nezlepšilo</strong> (P = 0,066). Normosmiu dosiahlo 20 % pacientov. Čuchový tréning bol účinnejší.</p>
+<p>V tej istej randomizovanej štúdii kurkumín v dávke 500&nbsp;mg dvakrát denne počas 12&nbsp;týždňov zlepšil dotazníkové a sebahodnotiace skóre (P = 0,045, resp. 0,047), <strong>objektívne skóre identifikácie sa však významne nezlepšilo</strong> (P = 0,066). Normosmiu dosiahlo 20 % pacientov. Čuchový tréning bol účinnejší.</p>
 
 <h3>Intranazálny teofylín</h3>
 
-<p>V nekontrolovanej pilotnej štúdii so siedmimi pacientmi zlepšilo podávanie 20 mg denne do každej nosovej dierky počas šiestich týždňov identifikáciu pachov u piatich z nich (71 %), pričom traja sa posunuli o jednu kategóriu. Liečba bola dobre tolerovaná bez nežiaducich udalostí. Takýto dôkaz s istotou hodnotenou ako veľmi nízka nestačí na rutinné používanie.</p>
+<p>V nekontrolovanej pilotnej štúdii so siedmimi pacientmi zlepšilo podávanie 20&nbsp;mg denne do každej nosovej dierky počas šiestich týždňov identifikáciu pachov u piatich z nich (71 %), pričom traja sa posunuli o jednu kategóriu. Liečba bola dobre tolerovaná bez nežiaducich udalostí. Takýto dôkaz s istotou hodnotenou ako veľmi nízka nestačí na rutinné používanie.</p>
 
 <h3>Zinok a ďalšie doplnky</h3>
 

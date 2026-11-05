@@ -89,7 +89,7 @@ $articles[] = [
   <li>všeobecná informácia: „dávky lizinoprilu sa niekedy zvyšujú, ak tlak zostáva nad liečebným cieľom“,</li>
   <li>prepojenie na situáciu používateľa: „v podobných situáciách lekári často zvyšujú dávku lizinoprilu“,</li>
   <li>podpora konkrétneho konania: „odporúčam zvýšiť dávku lizinoprilu“,</li>
-  <li>konkrétny pokyn: „zvýšte lizinopril z 10 mg na 20 mg denne“.</li>
+  <li>konkrétny pokyn: „zvýšte lizinopril z 10&nbsp;mg na 20&nbsp;mg denne“.</li>
 </ol>
 
 <p>Podstatné je, že miera direktívnosti podľa CDRH závisí <strong>od obsahu a kontextu výstupu, nie iba od toho, či zaznie slovo „odporúčam“, „mali by ste“ alebo „zvážte“</strong>. Úrad zároveň zvažuje, či doložka „poraďte sa so svojím lekárom“ alebo „nie som zdravotnícky pracovník“ vôbec robí výstup menej direktívnym.</p>

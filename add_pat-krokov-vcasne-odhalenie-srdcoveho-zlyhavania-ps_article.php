@@ -75,33 +75,33 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Chronické / ambulantné podozrenie (ESC 2021)</th>
-      <td>&lt;35 pg/ml robí HF nepravdepodobným</td>
-      <td>&lt;125 pg/ml robí HF nepravdepodobným</td>
+      <td>&lt;35&nbsp;pg/ml robí HF nepravdepodobným</td>
+      <td>&lt;125&nbsp;pg/ml robí HF nepravdepodobným</td>
       <td>Nízky prah na <strong>vylúčenie</strong>; hodnoty nad prahom sú dôvod na echokardiografiu, nie na automatickú diagnózu</td>
     </tr>
     <tr>
       <th scope="row">Akútne / dekompenzácia (ESC 2021)</th>
-      <td>&lt;100 pg/ml</td>
-      <td>&lt;300 pg/ml</td>
-      <td>Ak je dostupný aj midregionálny pro-atriálny natriuretický peptid (MR-proANP), prah na vylúčenie je &lt;120 pg/ml. Akútne prahy sú vyššie ako ambulantné – nesmú sa zamieňať</td>
+      <td>&lt;100&nbsp;pg/ml</td>
+      <td>&lt;300&nbsp;pg/ml</td>
+      <td>Ak je dostupný aj midregionálny pro-atriálny natriuretický peptid (MR-proANP), prah na vylúčenie je &lt;120&nbsp;pg/ml. Akútne prahy sú vyššie ako ambulantné – nesmú sa zamieňať</td>
     </tr>
     <tr>
       <th scope="row">HFpEF: sínusový rytmus vs. fibrilácia predsiení (ESC 2021)</th>
-      <td>&gt;35 pg/ml (sínus) alebo &gt;105 pg/ml (AF)</td>
-      <td>&gt;125 pg/ml (sínus) alebo &gt;365 pg/ml (AF)</td>
-      <td>Doplnkové kritérium pri podozrení na HFpEF, nie náhrada jednoduchého vylučovacieho prahu 35 / 125 pg/ml. Až približne 20 % pacientov s invazívne potvrdeným HFpEF má hodnoty pod diagnostickými prahmi, najmä pri obezite</td>
+      <td>&gt;35&nbsp;pg/ml (sínus) alebo &gt;105&nbsp;pg/ml (AF)</td>
+      <td>&gt;125&nbsp;pg/ml (sínus) alebo &gt;365&nbsp;pg/ml (AF)</td>
+      <td>Doplnkové kritérium pri podozrení na HFpEF, nie náhrada jednoduchého vylučovacieho prahu 35 / 125&nbsp;pg/ml. Až približne 20 % pacientov s invazívne potvrdeným HFpEF má hodnoty pod diagnostickými prahmi, najmä pri obezite</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Jednotka pg/ml je pri týchto peptidoch totožná s ng/l. Britské usmernenie NICE pre chronické HF používa vyšší odosielací prah NT-proBNP (≥400 ng/l) – to nie je prah ESC a na Slovensku sa ním neriadime ako náhradou ESC 2021.</p>
+<p>Jednotka pg/ml je pri týchto peptidoch totožná s ng/l. Britské usmernenie NICE pre chronické HF používa vyšší odosielací prah NT-proBNP (≥400&nbsp;ng/l) – to nie je prah ESC a na Slovensku sa ním neriadime ako náhradou ESC 2021.</p>
 
-<p>Konsenzus HFA ESC z roku 2023 (Bayes-Genis a spol.), na ktorý odkazuje aj spracovaný článok Medscape, navrhuje v ambulancii <strong>vekovo prispôsobené prahy na „rule-in“</strong> NT-proBNP: ≥125 pg/ml pred 50. rokom, ≥250 pg/ml vo veku 50–75 rokov a ≥500 pg/ml nad 75 rokov. Tieto čísla <strong>neznižujú</strong> klasický vylučovací prah 125 pg/ml u mladších; pri starších zvyšujú špecificitu za cenu citlivosti. Pri obezite HFA navrhuje <strong>znížiť</strong> prah NT-proBNP o približne 25 % pri indexe telesnej hmotnosti (BMI) 30,0–34,9 kg/m<sup>2</sup>, o 30 % pri 35,0–39,9 kg/m<sup>2</sup> a o 40 % pri BMI ≥40 kg/m<sup>2</sup>. Presné číselné korekcie pre renálnu insuficienciu a fibriláciu predsiení v tomto konsenze tu neuvádzame, ak nie sú v otvorenom texte jednoznačne tabulované – HFA ich však explicitne žiada zohľadniť.</p>
+<p>Konsenzus HFA ESC z roku 2023 (Bayes-Genis a spol.), na ktorý odkazuje aj spracovaný článok Medscape, navrhuje v ambulancii <strong>vekovo prispôsobené prahy na „rule-in“</strong> NT-proBNP: ≥125&nbsp;pg/ml pred 50. rokom, ≥250&nbsp;pg/ml vo veku 50–75&nbsp;rokov a ≥500&nbsp;pg/ml nad 75&nbsp;rokov. Tieto čísla <strong>neznižujú</strong> klasický vylučovací prah 125&nbsp;pg/ml u mladších; pri starších zvyšujú špecificitu za cenu citlivosti. Pri obezite HFA navrhuje <strong>znížiť</strong> prah NT-proBNP o približne 25 % pri indexe telesnej hmotnosti (BMI) 30,0–34,9&nbsp;kg/m<sup>2</sup>, o 30 % pri 35,0–39,9&nbsp;kg/m<sup>2</sup> a o 40 % pri BMI ≥40&nbsp;kg/m<sup>2</sup>. Presné číselné korekcie pre renálnu insuficienciu a fibriláciu predsiení v tomto konsenze tu neuvádzame, ak nie sú v otvorenom texte jednoznačne tabulované – HFA ich však explicitne žiada zohľadniť.</p>
 
 <h3>Prečo pri CKD nestačí jeden univerzálny prah</h3>
 
-<p>Pre nefrologickú ambulanciu je to kľúčová výhrada. CKD natriuretické peptidy <strong>zvyšuje</strong>: znížený renálny klírens, retencia sodíka a vody a časté sprievodné faktory (hypertenzia, diabetes, objemové preťaženie). Všeobecné ambulantné prahy 35 / 125 pg/ml <strong>nie sú CKD-špecifické</strong>. Konferencia KDIGO o chorobe obličiek a srdcovom zlyhávaní preto žiada prahy prispôsobené CKD. Prakticky:</p>
+<p>Pre nefrologickú ambulanciu je to kľúčová výhrada. CKD natriuretické peptidy <strong>zvyšuje</strong>: znížený renálny klírens, retencia sodíka a vody a časté sprievodné faktory (hypertenzia, diabetes, objemové preťaženie). Všeobecné ambulantné prahy 35 / 125&nbsp;pg/ml <strong>nie sú CKD-špecifické</strong>. Konferencia KDIGO o chorobe obličiek a srdcovom zlyhávaní preto žiada prahy prispôsobené CKD. Prakticky:</p>
 
 <ul>
   <li>skutočne nízka hodnota stále pomáha HF <strong>vylúčiť</strong> – aj pri CKD;</li>
@@ -141,7 +141,7 @@ $articles[] = [
     <tr>
       <th scope="row">Obezita</th>
       <td>Zníženie („deficit BNP“)</td>
-      <td>Klasický prah 125 pg/ml môže HF prehliadnuť; zvážiť zníženie prahu podľa HFA a nenechať sa odradiť „normálnym“ výsledkom pri typickej klinike</td>
+      <td>Klasický prah 125&nbsp;pg/ml môže HF prehliadnuť; zvážiť zníženie prahu podľa HFA a nenechať sa odradiť „normálnym“ výsledkom pri typickej klinike</td>
     </tr>
     <tr>
       <th scope="row">HFpEF</th>
@@ -231,7 +231,7 @@ $articles[] = [
   <li><strong>Damman K, Ter Maaten JM, Mayne KJ, et al.</strong> <em>2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA).</em> Eur Heart J. 2026. doi: 10.1093/eurheartj/ehag098. PMID 42661426. Súbežné usmernenie ESC/ERA z 28. augusta 2026; nie je spracovaným zdrojom tohto článku. <a href="https://doi.org/10.1093/eurheartj/ehag098" target="_blank" rel="noopener noreferrer">DOI</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/42661426/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Päť krokov (cielená anamnéza vrátane námahovej a nočnej dýchavice, ortopnoe, únavy, opuchov členkov, nevysvetleného nárastu hmotnosti a opakovaných respiračných infekcií; natriuretické peptidy; rizikové skupiny; včasná echokardiografia; komorbidity) je spracovaním verejne dostupného textu Medscape (autor Michael van den Heuvel). Autori ESC task force nie sú autormi spracovaného zdroja a vo widgete „Zúčastnení autori“ sa neuvádzajú. Ambulantné prahy BNP &lt;35 pg/ml a NT-proBNP &lt;125 pg/ml a akútne prahy BNP &lt;100 pg/ml a NT-proBNP &lt;300 pg/ml sú z ESC 2021 a zhodne ich cituje PMC11881534. Doplnkové prahy pri HFpEF podľa rytmu (125 / 365 a 35 / 105 pg/ml) sú z ESC 2021. Vekové prahy 125 / 250 / 500 pg/ml a percentuálne zníženie prahu pri obezite sú z konsenzu HFA 2023 (PMID 37712339) a z otvorenej validačnej práce Taylorovej a spol. Analýza TOPCAT (PMID 30140899) je prognostická, nie diagnostická. Plný text ESC 2026 (PMID 42661420) nebol pri príprave čítaný ako otvorený dokument – preto sa z neho neodvádzajú nové prahy.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Päť krokov (cielená anamnéza vrátane námahovej a nočnej dýchavice, ortopnoe, únavy, opuchov členkov, nevysvetleného nárastu hmotnosti a opakovaných respiračných infekcií; natriuretické peptidy; rizikové skupiny; včasná echokardiografia; komorbidity) je spracovaním verejne dostupného textu Medscape (autor Michael van den Heuvel). Autori ESC task force nie sú autormi spracovaného zdroja a vo widgete „Zúčastnení autori“ sa neuvádzajú. Ambulantné prahy BNP &lt;35&nbsp;pg/ml a NT-proBNP &lt;125&nbsp;pg/ml a akútne prahy BNP &lt;100&nbsp;pg/ml a NT-proBNP &lt;300&nbsp;pg/ml sú z ESC 2021 a zhodne ich cituje PMC11881534. Doplnkové prahy pri HFpEF podľa rytmu (125 / 365 a 35 / 105&nbsp;pg/ml) sú z ESC 2021. Vekové prahy 125 / 250 / 500&nbsp;pg/ml a percentuálne zníženie prahu pri obezite sú z konsenzu HFA 2023 (PMID 37712339) a z otvorenej validačnej práce Taylorovej a spol. Analýza TOPCAT (PMID 30140899) je prognostická, nie diagnostická. Plný text ESC 2026 (PMID 42661420) nebol pri príprave čítaný ako otvorený dokument – preto sa z neho neodvádzajú nové prahy.</em></p>
 HTML,
 ];
 

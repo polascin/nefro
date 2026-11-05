@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Prvá transplantácia obličky v Írsku bola vykonaná v roku 1964. Autori sa zamerali na pacientov, ktorí podstúpili transplantáciu obličky od 1. januára 1970 do 31. marca 1983. Následné sledovanie bolo vedené až do 31. marca 2023.</p>
 
-<p>Cieľom bolo zistiť, koľko transplantátov prežilo viac ako 40 rokov, aké klinické charakteristiky mali títo pacienti a ktoré faktory boli spojené s ultra-dlhodobým prežívaním štepu.</p>
+<p>Cieľom bolo zistiť, koľko transplantátov prežilo viac ako 40&nbsp;rokov, aké klinické charakteristiky mali títo pacienti a ktoré faktory boli spojené s ultra-dlhodobým prežívaním štepu.</p>
 
 <p>Takýto časový horizont je vzácny. Moderné transplantologické kohorty majú lepšiu diagnostiku, inú imunosupresiu a pokročilejšiu infekčnú profylaxiu, ale ešte nemusia mať dostatočne dlhé sledovanie na odpoveď, čo sa deje po štyroch desaťročiach.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <h2>Čo z toho vyplýva pre nefrologickú prax</h2>
 
-<p>Štúdia prináša niekoľko praktických odkazov. Po prvé, prežívanie štepu viac ako 40 rokov je reálne. Nejde iba o izolované kazuistiky, ale o identifikovateľnú skupinu pacientov v národnom registri.</p>
+<p>Štúdia prináša niekoľko praktických odkazov. Po prvé, prežívanie štepu viac ako 40&nbsp;rokov je reálne. Nejde iba o izolované kazuistiky, ale o identifikovateľnú skupinu pacientov v národnom registri.</p>
 
 <p>Po druhé, živé darcovstvo má jasný dlhodobý význam a má byť systematicky podporované tam, kde je bezpečné a eticky vhodné. Po tretie, pacient po transplantácii potrebuje celoživotnú špecializovanú starostlivosť, aj keď má dlhodobo stabilnú funkciu štepu.</p>
 
@@ -135,7 +135,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Írska kohorta pacientov s transplantovanou obličkou fungujúcou viac ako 40 rokov ukazuje, že ultra-dlhodobé prežívanie štepu je možné. Najvýznamnejším faktorom spojeným s takýmto výsledkom bola transplantácia od živého darcu. U pacientov s dlhodobo funkčným štepom bola funkcia obličky často veľmi dobrá, najmä pri nízkej, individualizovanej udržiavacej imunosupresii.</p>
+<p>Írska kohorta pacientov s transplantovanou obličkou fungujúcou viac ako 40&nbsp;rokov ukazuje, že ultra-dlhodobé prežívanie štepu je možné. Najvýznamnejším faktorom spojeným s takýmto výsledkom bola transplantácia od živého darcu. U pacientov s dlhodobo funkčným štepom bola funkcia obličky často veľmi dobrá, najmä pri nízkej, individualizovanej udržiavacej imunosupresii.</p>
 
 <p>Zároveň štúdia pripomína cenu dlhodobého úspechu: vysoké riziko nemelanómových kožných nádorov a potrebu celoživotnej komplexnej starostlivosti. Pre nefrológa je hlavným posolstvom rovnováha medzi ochranou štepu, prevenciou komplikácií a kvalitou života pacienta.</p>
 

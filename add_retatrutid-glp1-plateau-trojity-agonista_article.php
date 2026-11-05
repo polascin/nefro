@@ -89,7 +89,7 @@ $articles[] = [
 
 <p>Retatrutid nemá žiadne publikované obličkové výsledky. Program TRIUMPH obličkové ukazovatele nesledoval a akékoľvek tvrdenie o nefroprotektívnom potenciáli by bolo prenesením očakávania z inej triedy.</p>
 
-<p>Pre porovnanie stojí za to pripomenúť, aký vyzerá skutočný obličkový dôkaz. Štúdia FLOW randomizovala 3 533 pacientov s diabetom 2. typu a chronickou chorobou obličiek na semaglutid alebo placebo a po mediáne sledovania 3,4 roka znížila riziko závažných obličkových udalostí o 24 % (HR 0,76; 95 % IS 0,66–0,88), riziko úmrtia z kardiovaskulárnych príčin o 29 % (HR 0,71; 95 % IS 0,56–0,89) a spomalila ročný pokles eGFR o 1,16 ml/min/1,73 m². To je úroveň dôkazu, pri ktorej možno hovoriť o obličkovom prínose. Pri retatrutide taký dôkaz zatiaľ neexistuje.</p>
+<p>Pre porovnanie stojí za to pripomenúť, aký vyzerá skutočný obličkový dôkaz. Štúdia FLOW randomizovala 3&nbsp;533 pacientov s diabetom 2. typu a chronickou chorobou obličiek na semaglutid alebo placebo a po mediáne sledovania 3,4 roka znížila riziko závažných obličkových udalostí o 24 % (HR 0,76; 95 % IS 0,66–0,88), riziko úmrtia z kardiovaskulárnych príčin o 29 % (HR 0,71; 95 % IS 0,56–0,89) a spomalila ročný pokles eGFR o 1,16&nbsp;ml/min/1,73&nbsp;m². To je úroveň dôkazu, pri ktorej možno hovoriť o obličkovom prínose. Pri retatrutide taký dôkaz zatiaľ neexistuje.</p>
 
 <p>Z praktického hľadiska je pri pacientovi s chronickou chorobou obličiek podstatnejšia bezpečnosť než percentá úbytku:</p>
 

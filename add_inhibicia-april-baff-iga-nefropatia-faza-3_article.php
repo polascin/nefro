@@ -35,7 +35,7 @@ $articles[] = [
 
 <p>IgA nefropatia (IgAN) je najčastejšie primárne glomerulové ochorenie a u podstatnej časti pacientov vedie k postupnému zhoršovaniu funkcie obličiek až k zlyhaniu obličiek. Podporná liečba a nefroprotektívne postupy prognózu zlepšili, no u časti pacientov ochorenie progreduje aj pri optimálnej štandardnej liečbe.</p>
 
-<p>Na Kidney Week 2026 boli predstavené dvojročné údaje troch samostatných štúdií fázy 3 s liekmi, ktoré tlmi APRIL, a pri dvoch z nich aj BAFF. Kongresová správa Nancy A. Melvilleovej na Medscape tieto výsledky zhrnula a označila spoločný mechanizmus ako zásah do jadra patogenézy IgAN na úrovni B-buniek.<sup>1</sup> Nižšie uvádzam čísla podľa primárnych publikácií v <em>New England Journal of Medicine</em>, kde sú dostupné, a podľa FDA, kde ide o regulačný status.</p>
+<p>Na Kidney Week 2026 boli predstavené dvojročné údaje troch samostatných štúdií fázy 3&nbsp;s liekmi, ktoré tlmi APRIL, a pri dvoch z nich aj BAFF. Kongresová správa Nancy A. Melvilleovej na Medscape tieto výsledky zhrnula a označila spoločný mechanizmus ako zásah do jadra patogenézy IgAN na úrovni B-buniek.<sup>1</sup> Nižšie uvádzam čísla podľa primárnych publikácií v <em>New England Journal of Medicine</em>, kde sú dostupné, a podľa FDA, kde ide o regulačný status.</p>
 
 <h2>Patogenetické východisko: BAFF a APRIL</h2>
 
@@ -45,27 +45,27 @@ $articles[] = [
 
 <h2>VISIONARY: sibeprenlimab (inhibítor APRIL)</h2>
 
-<p>VISIONARY je randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3 u dospelých s biopticky potvrdenou IgAN. Zaradených bolo 510 pacientov, randomizácia 1 : 1 na sibeprenlimab 400 mg alebo placebo subkutánne každé 4 týždne.<sup>3,4</sup></p>
+<p>VISIONARY je randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia fázy 3 u dospelých s biopticky potvrdenou IgAN. Zaradených bolo 510 pacientov, randomizácia 1 : 1 na sibeprenlimab 400&nbsp;mg alebo placebo subkutánne každé 4&nbsp;týždne.<sup>3,4</sup></p>
 
 <p>Predšpecifikovaná interim analýza prvých 320 pacientov, ktorí mohli dosiahnuť 9. mesiac, ukázala významné zníženie 24-hodinového pomeru bielkovín ku kreatinínu: pri sibeprenlimabe −50,2 %, pri placebe +2,1 %, čo zodpovedalo placebom upravenému zníženiu o 51,2 % (96,5 % CI 42,9 až 58,2; p &lt; 0,001).<sup>3</sup> Na základe týchto proteinúrických údajov FDA 25. novembra 2025 udelila zrýchlené schválenie lieku Voyxact (sibeprenlimab-szsi) na zníženie proteinúrie u dospelých s primárnou IgAN s rizikom progresie. Schválenie je podmienené potvrdením dlhodobého prínosu pre funkciu obličiek v pokračujúcej štúdii VISIONARY.<sup>5</sup></p>
 
-<p>Finálna 24-mesačná analýza, publikovaná 22. októbra 2026, priniesla kľúčový sekundárny ukazovateľ: annualizovaný sklon eGFR bol 0,3 ml/min/1,73 m² za rok (95 % CI −0,4 až 0,9) pri sibeprenlimabe a −4,2 (95 % CI −4,9 až −3,6) pri placebe; rozdiel medzi skupinami 4,5 ml/min/1,73 m² za rok (95 % CI 3,6 až 5,4; p &lt; 0,001).<sup>4</sup> Zložený ukazovateľ poklesu funkcie obličiek alebo zlyhania sa vyskytol u 1 pacienta (0,4 %) v skupine sibeprenlimabu a u 28 pacientov (11,2 %) pri placebe (HR 0,029; 95 % CI 0,004 až 0,214; p &lt; 0,001).<sup>4</sup> Nežiaduce udalosti boli celkovo porovnateľné; závažné infekcie sa vyskytli u 1,9 % oproti 4,0 % pri placebe. Úmrtia neboli hlásené.<sup>4</sup></p>
+<p>Finálna 24-mesačná analýza, publikovaná 22. októbra 2026, priniesla kľúčový sekundárny ukazovateľ: annualizovaný sklon eGFR bol 0,3&nbsp;ml/min/1,73&nbsp;m² za rok (95 % CI −0,4 až 0,9) pri sibeprenlimabe a −4,2 (95 % CI −4,9 až −3,6) pri placebe; rozdiel medzi skupinami 4,5&nbsp;ml/min/1,73&nbsp;m² za rok (95 % CI 3,6 až 5,4; p &lt; 0,001).<sup>4</sup> Zložený ukazovateľ poklesu funkcie obličiek alebo zlyhania sa vyskytol u 1 pacienta (0,4 %) v skupine sibeprenlimabu a u 28 pacientov (11,2 %) pri placebe (HR 0,029; 95 % CI 0,004 až 0,214; p &lt; 0,001).<sup>4</sup> Nežiaduce udalosti boli celkovo porovnateľné; závažné infekcie sa vyskytli u 1,9 % oproti 4,0 % pri placebe. Úmrtia neboli hlásené.<sup>4</sup></p>
 
 <h2>ORIGIN 3: atacicept (duálna inhibícia BAFF a APRIL)</h2>
 
-<p>ORIGIN 3 randomizovala dospelých s biopticky potvrdenou IgAN v pomere 1 : 1 na atacicept 150 mg alebo placebo, podávané subkutánne raz týždenne. Liečbu dostalo 428 pacientov (214 v každej skupine).<sup>6,7</sup></p>
+<p>ORIGIN 3 randomizovala dospelých s biopticky potvrdenou IgAN v pomere 1 : 1 na atacicept 150&nbsp;mg alebo placebo, podávané subkutánne raz týždenne. Liečbu dostalo 428 pacientov (214 v každej skupine).<sup>6,7</sup></p>
 
 <p>Interim analýza pri 36. týždni ukázala zníženie 24-hodinového UPCR o 45,7 % pri atacicepte oproti 6,8 % pri placebe (geometrický priemer rozdielu 41,8 percentuálneho bodu; 95 % CI 28,9 až 52,3; p &lt; 0,001).<sup>6</sup></p>
 
-<p>Finálna účinnostná analýza pri 52 a 104 týždňoch: priemerná zmena eGFR v 52. týždni bola −0,11 ml/min/1,73 m² pri atacicepte a −5,69 pri placebe (rozdiel 5,58; 95 % CI 3,68 až 7,48; p &lt; 0,001). Annualizovaný sklon eGFR do 104. týždňa bol −0,60 oproti −5,60 ml/min/1,73 m² za rok (rozdiel 5,00; 95 % CI 3,55 až 6,45; p &lt; 0,001).<sup>7</sup> Zložená progresia ochorenia obličiek nastala u 5,1 % oproti 17,8 % (HR 0,24; 95 % CI 0,12 až 0,48; p &lt; 0,001). V skupine ataciceptu nebola dialýza, transplantácia ani úmrtie; v placebovej skupine sa dialýza, transplantácia alebo úmrtie vyskytli u 7 pacientov. Závažné nežiaduce udalosti: 7,0 % oproti 15,4 %.<sup>7</sup></p>
+<p>Finálna účinnostná analýza pri 52 a 104 týždňoch: priemerná zmena eGFR v 52. týždni bola −0,11&nbsp;ml/min/1,73&nbsp;m² pri atacicepte a −5,69 pri placebe (rozdiel 5,58; 95 % CI 3,68 až 7,48; p &lt; 0,001). Annualizovaný sklon eGFR do 104. týždňa bol −0,60 oproti −5,60&nbsp;ml/min/1,73&nbsp;m² za rok (rozdiel 5,00; 95 % CI 3,55 až 6,45; p &lt; 0,001).<sup>7</sup> Zložená progresia ochorenia obličiek nastala u 5,1 % oproti 17,8 % (HR 0,24; 95 % CI 0,12 až 0,48; p &lt; 0,001). V skupine ataciceptu nebola dialýza, transplantácia ani úmrtie; v placebovej skupine sa dialýza, transplantácia alebo úmrtie vyskytli u 7 pacientov. Závažné nežiaduce udalosti: 7,0 % oproti 15,4 %.<sup>7</sup></p>
 
 <h2>TELIGAN: telitacicept (duálna inhibícia BAFF a APRIL)</h2>
 
-<p>TELIGAN je multicentrická štúdia fázy 3 v Číne u 318 dospelých s biopticky potvrdenou IgAN a perzistujúcou proteinúriou najmenej 1,0 g denne. Randomizácia 1 : 1 na telitacicept 240 mg alebo placebo subkutánne; do 39. týždňa raz týždenne, potom udržiavací režim každé 2 týždne do 104. týždňa.<sup>1,8</sup></p>
+<p>TELIGAN je multicentrická štúdia fázy 3 v Číne u 318 dospelých s biopticky potvrdenou IgAN a perzistujúcou proteinúriou najmenej 1,0&nbsp;g denne. Randomizácia 1 : 1 na telitacicept 240&nbsp;mg alebo placebo subkutánne; do 39. týždňa raz týždenne, potom udržiavací režim každé 2&nbsp;týždne do 104. týždňa.<sup>1,8</sup></p>
 
 <p>Interim analýza v 39. týždni (NEJM): zmena 24-hodinového UPCR −58,9 % pri telitacicepte oproti −8,8 % pri placebe; relatívny rozdiel −55,0 % (95 % CI −61,3 až −47,6; p &lt; 0,001). Zmena eGFR od východiskovej hodnoty: −1,0 % oproti −7,7 %.<sup>8</sup> Nežiaduce udalosti boli častejšie pri telitacicepte (89,3 % oproti 78,6 %), závažné nežiaduce udalosti menej časté (2,5 % oproti 8,2 %).<sup>8</sup></p>
 
-<p>Dvojročné údaje predstavené na Kidney Week 2026 a zhrnuté Melvilleovou uvádzajú annualizovaný sklon eGFR −0,6 oproti −5,7 ml/min/1,73 m² za rok (rozdiel približne 5,1; p &lt; 0,001), menej pacientov s poklesom eGFR o 30 % a o 40 % (HR 0,11 a 0,19) a žiadne zložené udalosti zlyhania obličiek v aktívnej skupine oproti 3,1 % pri placebe.<sup>1</sup> Tieto 104-týždňové čísla zatiaľ nemajú samostatný peer-reviewed DOI; v článku ich preto uvádzam ako kongresové a sekundárne hlásené výsledky, nie ako plne bibliograficky uzavretú NEJM analýzu.</p>
+<p>Dvojročné údaje predstavené na Kidney Week 2026 a zhrnuté Melvilleovou uvádzajú annualizovaný sklon eGFR −0,6 oproti −5,7&nbsp;ml/min/1,73&nbsp;m² za rok (rozdiel približne 5,1; p &lt; 0,001), menej pacientov s poklesom eGFR o 30 % a o 40 % (HR 0,11 a 0,19) a žiadne zložené udalosti zlyhania obličiek v aktívnej skupine oproti 3,1 % pri placebe.<sup>1</sup> Tieto 104-týždňové čísla zatiaľ nemajú samostatný peer-reviewed DOI; v článku ich preto uvádzam ako kongresové a sekundárne hlásené výsledky, nie ako plne bibliograficky uzavretú NEJM analýzu.</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Prehľad sklonu eGFR v troch štúdiách fázy 3" tabindex="0">
   <table>
@@ -84,8 +84,8 @@ $articles[] = [
         <th scope="row">VISIONARY / sibeprenlimab<sup>4</sup></th>
         <td>APRIL</td>
         <td>510</td>
-        <td>24 mesiacov</td>
-        <td>0,3 vs −4,2 ml/min/1,73 m²/rok</td>
+        <td>24&nbsp;mesiacov</td>
+        <td>0,3 vs −4,2&nbsp;ml/min/1,73&nbsp;m²/rok</td>
         <td>4,5</td>
       </tr>
       <tr>
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h2>Klinické implikácie</h2>
 
-<p>Tri odlišné molekuly so spoločným zásahom do osi APRIL (a pri atacicepte s telitaciceptom aj BAFF) konzistentne ukázali veľký rozdiel v sklone eGFR oproti placebu, rádovo okolo 4,5 až 5 ml/min/1,73 m² za rok, a menej zložených progresívnych udalostí. To je v súlade s hypotézou, že modulácia B-buniek zasahuje patogenézu IgAN bližšie k zdroju než samotná hemodynamická nefroprotekcia.<sup>1,2</sup></p>
+<p>Tri odlišné molekuly so spoločným zásahom do osi APRIL (a pri atacicepte s telitaciceptom aj BAFF) konzistentne ukázali veľký rozdiel v sklone eGFR oproti placebu, rádovo okolo 4,5 až 5&nbsp;ml/min/1,73&nbsp;m² za rok, a menej zložených progresívnych udalostí. To je v súlade s hypotézou, že modulácia B-buniek zasahuje patogenézu IgAN bližšie k zdroju než samotná hemodynamická nefroprotekcia.<sup>1,2</sup></p>
 
 <p>Sibeprenlimab je v USA dostupný v režime zrýchleného schválenia na redukciu proteinúrie; potvrdenie dlhodobého prínosu pre eGFR je predmetom dokončenia VISIONARY a regulačného sledovania.<sup>5</sup> Atacicept a telitacicept v čase písania tohto textu nemajú rovnaké FDA schválenie pre IgAN; ich použitie mimo schválených indikácií treba viazať na lokálnu dostupnosť a regulačný rámec.</p>
 
@@ -120,7 +120,7 @@ $articles[] = [
 
 <ul>
   <li>Finálne 104-týždňové údaje TELIGAN sú zatiaľ dostupné predovšetkým ako kongresové a sekundárne hlásenie; peer-reviewed finálna publikácia s DOI ešte nie je v tom istom rozsahu ako VISIONARY a ORIGIN 3.<sup>1</sup></li>
-  <li>Populácie mali relatívne zachovanú východiskovú eGFR (okolo 65 až 75 ml/min/1,73 m²). Platnosť pri eGFR pod 40 alebo 30 ml/min/1,73 m² nie je z týchto dát overená.<sup>1</sup></li>
+  <li>Populácie mali relatívne zachovanú východiskovú eGFR (okolo 65 až 75&nbsp;ml/min/1,73&nbsp;m²). Platnosť pri eGFR pod 40 alebo 30&nbsp;ml/min/1,73&nbsp;m² nie je z týchto dát overená.<sup>1</sup></li>
   <li>TELIGAN prebiehala v Číne; vonkajšia platnosť pre iné populácie si vyžaduje opatrnosť.</li>
   <li>Zrýchlené schválenie sibeprenlimabu stojí na proteinúrii; spomalenie poklesu eGFR je podporené finálnou VISIONARY analýzou, ale regulačné potvrdenie dlhodobého prínosu ostáva podmienkou ďalšieho sledovania.<sup>4,5</sup></li>
   <li>Bezpečnosť pri dlhodobej modulácii B-buniek, najmä infekcie a hypogamaglobulinémia, treba sledovať aj mimo rámca štúdií.</li>

@@ -43,7 +43,7 @@ $articles[] = [
 
 <h3>Definícia rozhoduje o tom, čo štúdia vlastne merala</h3>
 
-<p>Samotný pokles systolického tlaku o najmenej 20 mmHg nemusí znamenať symptomatickú hypotenziu ani potrebu zásahu. Pokles zo 170 na 145 mmHg nie je klinicky rovnocenný poklesu zo 105 na 80 mmHg.</p>
+<p>Samotný pokles systolického tlaku o najmenej 20&nbsp;mmHg nemusí znamenať symptomatickú hypotenziu ani potrebu zásahu. Pokles zo 170 na 145&nbsp;mmHg nie je klinicky rovnocenný poklesu zo 105 na 80&nbsp;mmHg.</p>
 
 <div class="table-responsive" role="region" aria-label="Porovnanie definícií intradialyzačnej hypotenzie v odporúčaniach" tabindex="0">
 <table>
@@ -57,12 +57,12 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">KDOQI 2005</th>
-      <td>Pokles systolického tlaku ≥ 20 mmHg alebo stredného tlaku ≥ 10 mmHg</td>
+      <td>Pokles systolického tlaku ≥ 20&nbsp;mmHg alebo stredného tlaku ≥ 10&nbsp;mmHg</td>
       <td>Áno – príznaky</td>
     </tr>
     <tr>
       <th scope="row">EBPG 2007</th>
-      <td>Pokles systolického tlaku ≥ 20 mmHg alebo stredného tlaku ≥ 10 mmHg</td>
+      <td>Pokles systolického tlaku ≥ 20&nbsp;mmHg alebo stredného tlaku ≥ 10&nbsp;mmHg</td>
       <td>Áno – príznaky aj zásah</td>
     </tr>
     <tr>
@@ -72,25 +72,25 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Japonská spoločnosť pre dialyzačnú liečbu 2012</th>
-      <td>Pokles systolického tlaku ≥ 30 mmHg</td>
+      <td>Pokles systolického tlaku ≥ 30&nbsp;mmHg</td>
       <td>Áno – príznaky</td>
     </tr>
     <tr>
       <th scope="row">Veľké epidemiologické kohorty</th>
-      <td>Najnižšia hodnota systolického tlaku pod 90 alebo 100 mmHg</td>
+      <td>Najnižšia hodnota systolického tlaku pod 90 alebo 100&nbsp;mmHg</td>
       <td>Nie</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Rozdiel nie je formálny. Pri porovnaní definícií v kohortách HEMO a veľkej dialyzačnej organizácie mala najsilnejší vzťah k mortalite <strong>absolútna najnižšia hodnota</strong> systolického tlaku – pod 90 mmHg u pacientov s predialyzačným tlakom pod 160 mmHg a pod 100 mmHg u pacientov s vyšším predialyzačným tlakom. Definície založené na príznakoch, na zásahu alebo na samotnom poklese tlaku počas výkonu s mortalitou spojené neboli. [3]</p>
+<p>Rozdiel nie je formálny. Pri porovnaní definícií v kohortách HEMO a veľkej dialyzačnej organizácie mala najsilnejší vzťah k mortalite <strong>absolútna najnižšia hodnota</strong> systolického tlaku – pod 90&nbsp;mmHg u pacientov s predialyzačným tlakom pod 160&nbsp;mmHg a pod 100&nbsp;mmHg u pacientov s vyšším predialyzačným tlakom. Definície založené na príznakoch, na zásahu alebo na samotnom poklese tlaku počas výkonu s mortalitou spojené neboli. [3]</p>
 
-<p>Táto okolnosť je kľúčová pri hodnotení manitolu. V hlavnej randomizovanej štúdii bola IDH definovaná poklesom systolického tlaku o najmenej 20 mmHg oproti hodnote pred dialýzou. Definícia nevyžadovala príznaky ani terapeutickú intervenciu a autori výslovne uvádzajú, že čas vzniku intradialyzačných príznakov sa nezaznamenával, takže symptomatické a asymptomatické epizódy nebolo možné oddeliť. [1]</p>
+<p>Táto okolnosť je kľúčová pri hodnotení manitolu. V hlavnej randomizovanej štúdii bola IDH definovaná poklesom systolického tlaku o najmenej 20&nbsp;mmHg oproti hodnote pred dialýzou. Definícia nevyžadovala príznaky ani terapeutickú intervenciu a autori výslovne uvádzajú, že čas vzniku intradialyzačných príznakov sa nezaznamenával, takže symptomatické a asymptomatické epizódy nebolo možné oddeliť. [1]</p>
 
 <h2>Ako môže manitol ovplyvniť toleranciu dialýzy</h2>
 
-<p>Dvadsaťpercentný roztok obsahuje 200 mg manitolu v 1 ml, teda 20 g v 100 ml. Pri molárnej hmotnosti 182,2 g/mol zodpovedá teoretickej osmolarite približne 1 100 mOsm/l.</p>
+<p>Dvadsaťpercentný roztok obsahuje 200&nbsp;mg manitolu v 1&nbsp;ml, teda 20&nbsp;g v 100&nbsp;ml. Pri molárnej hmotnosti 182,2&nbsp;g/mol zodpovedá teoretickej osmolarite približne 1&nbsp;100 mOsm/l.</p>
 
 <p>Treba rozlišovať dva pojmy: <strong>osmolarita</strong> vyjadruje množstvo osmoticky aktívnych častíc na liter roztoku, kým <strong>osmolalita</strong> ich vyjadruje na kilogram rozpúšťadla. Pri charakteristike infúzneho roztoku sa spravidla uvádza osmolarita, pri laboratórnom hodnotení plazmy osmolalita.</p>
 
@@ -108,13 +108,13 @@ $articles[] = [
 
 <p>Práca Mc Causlanda a spoluautorov z roku 2012 zahrnula 102 po sebe idúcich pacientov vyžadujúcich začatie náhrady funkcie obličiek v dvoch veľkých fakultných nemocniciach. Rutinné podávanie manitolu sa medzi pracoviskami líšilo podľa inštitucionálnych protokolov, čo umožnilo skúmať ho ako hlavnú expozíciu. [2]</p>
 
-<p>V upravených modeloch sa podávanie manitolu spájalo s približne 5,4 mmHg vyššou najnižšou hodnotou systolického tlaku, s asi 25 % menším poklesom tlaku a s približne polovičnou šancou hypotenznej príhody (pomer šancí 0,50; 95 % interval spoľahlivosti od 0,29 do 0,83). Účinok sa nemenil podľa prítomnosti diabetu ani podľa toho, či išlo o akútne alebo chronické ochorenie obličiek. [2, 3]</p>
+<p>V upravených modeloch sa podávanie manitolu spájalo s približne 5,4&nbsp;mmHg vyššou najnižšou hodnotou systolického tlaku, s asi 25 % menším poklesom tlaku a s približne polovičnou šancou hypotenznej príhody (pomer šancí 0,50; 95 % interval spoľahlivosti od 0,29 do 0,83). Účinok sa nemenil podľa prítomnosti diabetu ani podľa toho, či išlo o akútne alebo chronické ochorenie obličiek. [2, 3]</p>
 
 <p>Keďže nešlo o randomizované porovnanie, výsledok mohli ovplyvniť rozdiely medzi pacientmi, pracoviskami a dialyzačnými predpismi. Takáto štúdia podporuje hypotézu, ale nepreukazuje príčinný účinok lieku. Následná randomizovaná štúdia tej istej skupiny mala túto neistotu zmenšiť.</p>
 
 <h3>Randomizovaná štúdia: primárny výsledok nebol štatisticky významný</h3>
 
-<p>Dvojito zaslepená, placebom kontrolovaná jednocentrová pilotná štúdia (ClinicalTrials.gov NCT01520207) zaradila medzi augustom 2012 a marcom 2016 celkovo 52 pacientov pri začatí hemodialýzy pre akútne poškodenie obličiek alebo progresiu chronickej choroby obličiek. Priemerný vek bol 56 ± 16 rokov, polovicu tvorili ženy, 46 % malo diabetes mellitus a 87 % začínalo dialýzu pre progresiu CKD. Hodnotili sa prvé tri dialyzačné výkony, spolu 156 procedúr. [1]</p>
+<p>Dvojito zaslepená, placebom kontrolovaná jednocentrová pilotná štúdia (ClinicalTrials.gov NCT01520207) zaradila medzi augustom 2012 a marcom 2016 celkovo 52 pacientov pri začatí hemodialýzy pre akútne poškodenie obličiek alebo progresiu chronickej choroby obličiek. Priemerný vek bol 56 ± 16&nbsp;rokov, polovicu tvorili ženy, 46 % malo diabetes mellitus a 87 % začínalo dialýzu pre progresiu CKD. Hodnotili sa prvé tri dialyzačné výkony, spolu 156 procedúr. [1]</p>
 
 <div class="table-responsive" role="region" aria-label="Usporiadanie a výsledky randomizovanej štúdie hypertonického manitolu" tabindex="0">
 <table>
@@ -127,23 +127,23 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Skúšaná intervencia</th>
-      <td>20 % manitol v dávke 0,25 g/kg/h, najviac 75 g na dialyzačný výkon</td>
+      <td>20 % manitol v dávke 0,25&nbsp;g/kg/h, najviac 75&nbsp;g na dialyzačný výkon</td>
     </tr>
     <tr>
       <th scope="row">Kontrolná intervencia</th>
-      <td>Objemovo porovnateľné podanie 0,9 % roztoku NaCl (375 ml)</td>
+      <td>Objemovo porovnateľné podanie 0,9 % roztoku NaCl (375&nbsp;ml)</td>
     </tr>
     <tr>
       <th scope="row">Načasovanie</th>
-      <td>Infúzia sa ukončovala 30 minút pred koncom dialýzy</td>
+      <td>Infúzia sa ukončovala 30&nbsp;minút pred koncom dialýzy</td>
     </tr>
     <tr>
       <th scope="row">Primárny výsledok</th>
-      <td>Priemerný pokles systolického tlaku 15 ± 11 mmHg pri manitole oproti 19 ± 16 mmHg pri placebe; p = 0,3</td>
+      <td>Priemerný pokles systolického tlaku 15 ± 11&nbsp;mmHg pri manitole oproti 19 ± 16&nbsp;mmHg pri placebe; p = 0,3</td>
     </tr>
     <tr>
       <th scope="row">Primárny výsledok – modelový odhad</th>
-      <td>O 3,9 mmHg menší pokles (p = 0,3); po úprave o predialyzačný tlak a dusík močoviny o 4,3 mmHg (p = 0,3)</td>
+      <td>O 3,9&nbsp;mmHg menší pokles (p = 0,3); po úprave o predialyzačný tlak a dusík močoviny o 4,3&nbsp;mmHg (p = 0,3)</td>
     </tr>
     <tr>
       <th scope="row">Sekundárny výsledok</th>
@@ -173,15 +173,15 @@ $articles[] = [
 
 <h3>Štúdia bola na svoj primárny cieľ výrazne poddimenzovaná</h3>
 
-<p>Veľkosť súboru bola plánovaná tak, aby zachytila rozdiel v poklese systolického tlaku o 11 mmHg. Pozorovaný rozdiel bol však približne trikrát menší. Autori sami prepočítali, že na preukázanie rozdielu takejto veľkosti by bolo potrebných približne <strong>194 účastníkov v každej skupine</strong>, teda zhruba osemnásobok zaradeného súboru. [1]</p>
+<p>Veľkosť súboru bola plánovaná tak, aby zachytila rozdiel v poklese systolického tlaku o 11&nbsp;mmHg. Pozorovaný rozdiel bol však približne trikrát menší. Autori sami prepočítali, že na preukázanie rozdielu takejto veľkosti by bolo potrebných približne <strong>194 účastníkov v každej skupine</strong>, teda zhruba osemnásobok zaradeného súboru. [1]</p>
 
 <p>Negatívny primárny výsledok preto nepreukazuje neúčinnosť – preukazuje, že na túto otázku štúdia nemala dostatočnú výpovednú silu. To je argument pre väčšiu multicentrickú štúdiu, nie pre zmenu klinickej praxe v ktoromkoľvek smere.</p>
 
 <h3>Biomarkery a nežiaduce udalosti</h3>
 
-<p>Väčšina účastníkov mala už pred prvou dialýzou výrazne zvýšené koncentrácie vysokosenzitívneho troponínu T (medián 79 ng/l) a NT-proBNP (medián 5 136 pg/ml). Medzi prvým a tretím výkonom sa zmeny týchto ukazovateľov podľa randomizácie nelíšili, čo autori hodnotia ako upokojujúci signál vo vzťahu k obávanému objemovému preťaženiu. [1]</p>
+<p>Väčšina účastníkov mala už pred prvou dialýzou výrazne zvýšené koncentrácie vysokosenzitívneho troponínu T (medián 79&nbsp;ng/l) a NT-proBNP (medián 5&nbsp;136&nbsp;pg/ml). Medzi prvým a tretím výkonom sa zmeny týchto ukazovateľov podľa randomizácie nelíšili, čo autori hodnotia ako upokojujúci signál vo vzťahu k obávanému objemovému preťaženiu. [1]</p>
 
-<p>Exploratívne stanovenia biomarkerov poškodenia obličiek v moči a plazme boli dostupné len u podskupiny 32 posledných zaradených pacientov, neboli upravené o viacnásobné testovanie a nepriniesli konzistentný signál. Nežiaduce udalosti sa vyskytli u 17 pacientov v skupine s manitolom (68 %) a u 18 pacientov v skupine s placebom (66,7 %); najčastejšie išlo o hypertenziu nad 180 mmHg a nevoľnosť. [1]</p>
+<p>Exploratívne stanovenia biomarkerov poškodenia obličiek v moči a plazme boli dostupné len u podskupiny 32 posledných zaradených pacientov, neboli upravené o viacnásobné testovanie a nepriniesli konzistentný signál. Nežiaduce udalosti sa vyskytli u 17 pacientov v skupine s manitolom (68 %) a u 18 pacientov v skupine s placebom (66,7 %); najčastejšie išlo o hypertenziu nad 180&nbsp;mmHg a nevoľnosť. [1]</p>
 
 <h3>Čo zo štúdie nemožno odvodiť</h3>
 
@@ -195,25 +195,25 @@ $articles[] = [
   <li>optimálnu dávku a načasovanie pre bežnú dialyzačnú prax.</li>
 </ul>
 
-<p>Zo štúdie boli vylúčení pacienti so závažným objemovým preťažením, s predialyzačnou koncentráciou sodíka pod 130 mmol/l, s infarktom myokardu, cievnou mozgovou príhodou alebo záchvatom v posledných siedmich dňoch, s nestabilnou komorovou arytmiou, s nestabilnou angínou, po transplantácii srdca a pacienti užívajúci vazopresory alebo midodrín. [1] Podobná frekvencia nežiaducich udalostí medzi skupinami preto neoprávňuje vyhlásiť manitol za všeobecne bezpečný pre rizikovú dialyzačnú populáciu – práve najrizikovejší pacienti v súbore neboli.</p>
+<p>Zo štúdie boli vylúčení pacienti so závažným objemovým preťažením, s predialyzačnou koncentráciou sodíka pod 130&nbsp;mmol/l, s infarktom myokardu, cievnou mozgovou príhodou alebo záchvatom v posledných siedmich dňoch, s nestabilnou komorovou arytmiou, s nestabilnou angínou, po transplantácii srdca a pacienti užívajúci vazopresory alebo midodrín. [1] Podobná frekvencia nežiaducich udalostí medzi skupinami preto neoprávňuje vyhlásiť manitol za všeobecne bezpečný pre rizikovú dialyzačnú populáciu – práve najrizikovejší pacienti v súbore neboli.</p>
 
 <p>Štúdia tiež nemerala koncentrácie manitolu ani intradialyzačnú osmolalitu plazmy, takže skutočne dodaná osmotická dávka zostáva nepriamym odhadom. [1]</p>
 
 <h2>Dávkovanie: výskumný režim nie je univerzálny protokol</h2>
 
-<p>V klinických prehľadoch a lokálnych postupoch sa možno stretnúť s rôznymi dávkami manitolu. Bez konkrétneho zdroja však nemožno tvrdiť, že 50 až 100 ml 20 % roztoku predstavuje overenú štandardnú dávku na liečbu IDH.</p>
+<p>V klinických prehľadoch a lokálnych postupoch sa možno stretnúť s rôznymi dávkami manitolu. Bez konkrétneho zdroja však nemožno tvrdiť, že 50 až 100&nbsp;ml 20 % roztoku predstavuje overenú štandardnú dávku na liečbu IDH.</p>
 
 <p>Pri prepočte treba byť presný:</p>
 
 <ul>
-  <li>50 ml 20 % roztoku obsahuje 10 g manitolu;</li>
-  <li>100 ml obsahuje 20 g;</li>
-  <li>dávka 0,25 až 0,5 g/kg zodpovedá pri hmotnosti 70 kg množstvu 17,5 až 35 g, teda 87,5 až 175 ml 20 % roztoku.</li>
+  <li>50&nbsp;ml 20 % roztoku obsahuje 10&nbsp;g manitolu;</li>
+  <li>100&nbsp;ml obsahuje 20&nbsp;g;</li>
+  <li>dávka 0,25 až 0,5&nbsp;g/kg zodpovedá pri hmotnosti 70&nbsp;kg množstvu 17,5 až 35&nbsp;g, teda 87,5 až 175&nbsp;ml 20 % roztoku.</li>
 </ul>
 
 <p>Tieto rozsahy nie sú vzájomne ekvivalentné.</p>
 
-<p>Randomizovaná štúdia používala <strong>0,25 g/kg za hodinu</strong>, nie jednorazovú dávku 0,25 g/kg. Išlo o infúzny výskumný režim počas prvých troch hemodialýz, s maximom 75 g na výkon a ukončením infúzie 30 minút pred koncom procedúry. Tento režim nemožno bez ďalšieho preniesť na rýchly záchranný bolus. [1]</p>
+<p>Randomizovaná štúdia používala <strong>0,25&nbsp;g/kg za hodinu</strong>, nie jednorazovú dávku 0,25&nbsp;g/kg. Išlo o infúzny výskumný režim počas prvých troch hemodialýz, s maximom 75&nbsp;g na výkon a ukončením infúzie 30&nbsp;minút pred koncom procedúry. Tento režim nemožno bez ďalšieho preniesť na rýchly záchranný bolus. [1]</p>
 
 <p>Manitol má molekulovú hmotnosť 182 daltonov a je dobre dialyzovateľný. Jeho výsledná koncentrácia preto závisí od dávky, rýchlosti podávania, zvyškovej funkcie obličiek a dialyzačného klírensu. Ukončenie infúzie pred koncom výkonu malo v štúdii umožniť ďalšie odstránenie cirkulujúceho manitolu; podporuje to aj podobná poexpozičná osmolalita plazmy v oboch skupinách. [1] Neznamená to však, že existuje univerzálne overené pravidlo podávať ho v prvej alebo strednej tretine každej dialýzy.</p>
 
@@ -235,7 +235,7 @@ $articles[] = [
 
 <p>Tento zoznam má pre dialyzačnú prax priamy dosah. Značná časť pacientov na udržiavacej hemodialýze je anurická a nezriedka aj objemovo preťažená. U takého pacienta nejde len o použitie mimo schválenej indikácie, ale o podanie napriek výslovne uvedenej kontraindikácii. To je kvalitatívne iná situácia a vyžaduje individuálne odôvodnené a zdokumentované lekárske rozhodnutie.</p>
 
-<p>Dokumentácia ďalej vyžaduje pozorné sledovanie výdaja moču, bilancie tekutín, centrálneho venózneho tlaku a elektrolytov, ako aj sledovanie rozdielov v osmolarite séra spolu s funkciou obličiek. Pri poklese výdaja moču počas infúzie sa má podávanie zastaviť a náhla expanzia mimobunkovej tekutiny môže viesť k náhlemu kongestívnemu zlyhávaniu srdca. Odporúčané denné dávky pri schválených indikáciách sú 250 až 1 000 ml 20 % roztoku, teda 50 až 200 g manitolu. [6]</p>
+<p>Dokumentácia ďalej vyžaduje pozorné sledovanie výdaja moču, bilancie tekutín, centrálneho venózneho tlaku a elektrolytov, ako aj sledovanie rozdielov v osmolarite séra spolu s funkciou obličiek. Pri poklese výdaja moču počas infúzie sa má podávanie zastaviť a náhla expanzia mimobunkovej tekutiny môže viesť k náhlemu kongestívnemu zlyhávaniu srdca. Odporúčané denné dávky pri schválených indikáciách sú 250 až 1&nbsp;000&nbsp;ml 20 % roztoku, teda 50 až 200&nbsp;g manitolu. [6]</p>
 
 <p>Konkrétnu dávku, spôsob podania a podmienky prípadného použitia musí určovať individuálne lekárske rozhodnutie, príslušný režim pracoviska a aktuálne SPC použitého prípravku. Lokálny protokol sám osebe nenahrádza posúdenie kontraindikácií ani odborných a právnych náležitostí použitia mimo schválenej indikácie.</p>
 
@@ -263,7 +263,7 @@ $articles[] = [
 
 <p>Ak sa o manitole individuálne uvažuje, bezpečnostné hodnotenie má zahŕňať najmä krvný tlak, klinické známky perfúzie a kongescie, bilanciu tekutín, elektrolyty a podľa situácie meranú osmolalitu. Pri opakovanom podávaní je dôležité posúdiť možnú akumuláciu.</p>
 
-<p>Koncentrovaný manitol pri nízkych teplotách kryštalizuje. Roztok s viditeľnými časticami sa nesmie podať. Podľa dokumentácie sa kryštáliky rozpúšťajú zahriatím roztoku až do 37 °C, pred podaním sa roztok ochladí na 37 °C a <strong>súprava na podávanie má obsahovať filter</strong>. [6] Všeobecný pokyn „zohriať na telesnú teplotu“ teda nie je dostatočný a požiadavka na filter sa v praxi neraz prehliada.</p>
+<p>Koncentrovaný manitol pri nízkych teplotách kryštalizuje. Roztok s viditeľnými časticami sa nesmie podať. Podľa dokumentácie sa kryštáliky rozpúšťajú zahriatím roztoku až do 37&nbsp;°C, pred podaním sa roztok ochladí na 37&nbsp;°C a <strong>súprava na podávanie má obsahovať filter</strong>. [6] Všeobecný pokyn „zohriať na telesnú teplotu“ teda nie je dostatočný a požiadavka na filter sa v praxi neraz prehliada.</p>
 
 <h2>IDH a dialyzačný dysekvilibračný syndróm treba odlišovať</h2>
 
@@ -271,7 +271,7 @@ $articles[] = [
 
 <p>Pri dysekvilibračnom syndróme dominujú neurologické prejavy spojené s rýchlymi zmenami medzi krvou a centrálnym nervovým systémom. Pri IDH je rozhodujúca hemodynamická nestabilita a riziko nedostatočnej orgánovej perfúzie. Obe komplikácie sa môžu vyskytnúť súčasne, ale každá vyžaduje vlastné klinické posúdenie. Podrobnejšie sa téme venuje článok <a href="article.php?slug=dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy">Dialyzačný dysekvilibračný syndróm</a>.</p>
 
-<p>Fyziologické zdôvodnenie manitolu pri osmotických zmenách ani jeho historické použitie pri dysekvilibračných príznakoch nepreukazujú účinnosť pri akútnej IDH. U pacienta s vysokým rizikom dysekvilibrácie nemožno manitolom nahrádzať opatrne zvolený úvodný dialyzačný predpis – v citovanej štúdii práve toto odstupňovanie, teda postupný vzostup prietoku krvi z 200 na 400 ml/min a predĺženie výkonu z dvoch na 3,5 až 4 hodiny, tvorilo základ protokolu v oboch skupinách. [1] Randomizovaná štúdia z roku 2019 nebola dôkazom prevencie závažného neurologického dysekvilibračného syndrómu.</p>
+<p>Fyziologické zdôvodnenie manitolu pri osmotických zmenách ani jeho historické použitie pri dysekvilibračných príznakoch nepreukazujú účinnosť pri akútnej IDH. U pacienta s vysokým rizikom dysekvilibrácie nemožno manitolom nahrádzať opatrne zvolený úvodný dialyzačný predpis – v citovanej štúdii práve toto odstupňovanie, teda postupný vzostup prietoku krvi z 200 na 400&nbsp;ml/min a predĺženie výkonu z dvoch na 3,5 až 4&nbsp;hodiny, tvorilo základ protokolu v oboch skupinách. [1] Randomizovaná štúdia z roku 2019 nebola dôkazom prevencie závažného neurologického dysekvilibračného syndrómu.</p>
 
 <h2>Čo má pri IDH pevnejší dôkazový základ ako manitol</h2>
 
@@ -288,13 +288,13 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Chladnejší dialyzát (35 až 36 °C)</th>
-      <td>Metaanalýza 26 štúdií so 484 pacientmi: zníženie výskytu IDH o 70 % (95 % IS 49 až 89) a vzostup intradialyzačného tlaku o 12 mmHg (95 % IS 8 až 16) bez zhoršenia adekvátnosti dialýzy</td>
+      <th scope="row">Chladnejší dialyzát (35 až 36&nbsp;°C)</th>
+      <td>Metaanalýza 26 štúdií so 484 pacientmi: zníženie výskytu IDH o 70 % (95 % IS 49 až 89) a vzostup intradialyzačného tlaku o 12&nbsp;mmHg (95 % IS 8 až 16) bez zhoršenia adekvátnosti dialýzy</td>
       <td>Prvá voľba podľa EBPG; bez nákladov, limitom je tolerancia chladu</td>
     </tr>
     <tr>
-      <th scope="row">Zníženie rýchlosti ultrafiltrácie pod 10 ml/h/kg</th>
-      <td>Konzistentné observačné údaje; v registri DOPPS pomer šancí 1,30 pre IDH pri rýchlosti nad 10 ml/h/kg</td>
+      <th scope="row">Zníženie rýchlosti ultrafiltrácie pod 10&nbsp;ml/h/kg</th>
+      <td>Konzistentné observačné údaje; v registri DOPPS pomer šancí 1,30 pre IDH pri rýchlosti nad 10&nbsp;ml/h/kg</td>
       <td>Vyžaduje dlhší alebo častejší výkon</td>
     </tr>
     <tr>
@@ -315,12 +315,12 @@ $articles[] = [
     <tr>
       <th scope="row">Sodíkové profilovanie</th>
       <td>Zníženie počtu epizód pri stupňovitom profile</td>
-      <td><strong>Bezpečnostný signál:</strong> v kohorte DOPPS (10 250 pacientov) vyššia celková (HR 1,36) aj kardiovaskulárna mortalita (HR 1,34); EBPG neodporúča</td>
+      <td><strong>Bezpečnostný signál:</strong> v kohorte DOPPS (10&nbsp;250 pacientov) vyššia celková (HR 1,36) aj kardiovaskulárna mortalita (HR 1,34); EBPG neodporúča</td>
     </tr>
     <tr>
       <th scope="row">Midodrín</th>
-      <td>Metaanalýza 10 štúdií (117 pacientov): vyššia najnižšia hodnota systolického tlaku o 13,3 mmHg (95 % IS 8,6 až 18,0)</td>
-      <td><strong>Bezpečnostný signál:</strong> v retrospektívnej štúdii (1 046 oproti 2 037 pacientom) vyšší pomer incidencie mortality 1,37 (95 % IS 1,15 až 1,62)</td>
+      <td>Metaanalýza 10 štúdií (117 pacientov): vyššia najnižšia hodnota systolického tlaku o 13,3&nbsp;mmHg (95 % IS 8,6 až 18,0)</td>
+      <td><strong>Bezpečnostný signál:</strong> v retrospektívnej štúdii (1&nbsp;046 oproti 2&nbsp;037 pacientom) vyšší pomer incidencie mortality 1,37 (95 % IS 1,15 až 1,62)</td>
     </tr>
     <tr>
       <th scope="row">L-karnitín</th>

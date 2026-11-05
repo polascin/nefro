@@ -61,7 +61,7 @@ $articles[] = [
 
 <p>Medián východiskového HbA1c bol približne 7,3 až 7,4 %. Štúdia mala 12-týždňovú fázu optimalizácie dávok a následne 13-týždňovú udržiavaciu fázu.</p>
 
-<p>Primárny cieľ bol pomerne ambiciózny. Zahŕňal noninferioritu v HbA1c a zároveň lepšie výsledky v parametroch hypoglykémie, najmä pri nočnej hypoglykémii pod 54 mg/dl (3,0 mmol/l).</p>
+<p>Primárny cieľ bol pomerne ambiciózny. Zahŕňal noninferioritu v HbA1c a zároveň lepšie výsledky v parametroch hypoglykémie, najmä pri nočnej hypoglykémii pod 54&nbsp;mg/dl (3,0&nbsp;mmol/l).</p>
 
 <h2>Glykemická kontrola sa nezhoršila</h2>
 
@@ -78,10 +78,10 @@ $articles[] = [
 <p>Zaujímavejšie boli výsledky v udržiavacej fáze. HDV-lispro dosiahol štatisticky významne lepšie výsledky vo viacerých sekundárnych ukazovateľoch:</p>
 
 <ul>
-  <li>28 % zníženie 24-hodinových epizód hypoglykémie 2. stupňa pod 54 mg/dl (3,0 mmol/l),</li>
+  <li>28 % zníženie 24-hodinových epizód hypoglykémie 2. stupňa pod 54&nbsp;mg/dl (3,0&nbsp;mmol/l),</li>
   <li>33 % zníženie denných epizód hypoglykémie 2. stupňa,</li>
-  <li>28 % zníženie času stráveného pod 54 mg/dl (3,0 mmol/l) počas 24 hodín,</li>
-  <li>32 % zníženie denného času pod 54 mg/dl (3,0 mmol/l),</li>
+  <li>28 % zníženie času stráveného pod 54&nbsp;mg/dl (3,0&nbsp;mmol/l) počas 24&nbsp;hodín,</li>
+  <li>32 % zníženie denného času pod 54&nbsp;mg/dl (3,0&nbsp;mmol/l),</li>
   <li>36 % zníženie predĺžených hypoglykemických epizód.</li>
 </ul>
 

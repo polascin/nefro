@@ -51,7 +51,7 @@ $articles[] = [
 
 <h2>Dizajn štúdie MARY-JANE</h2>
 
-<p>MARY-JANE je skratka z angl. <em>Marijuana and Acute Risk of Arrhythmia – Joint Abstinence and Exposure</em>. Primárna publikácia ju opisuje ako prospektívnu randomizovanú kríženú (crossover) štúdiu: ten istý účastník strieda dni s inhaláciou a dni s abstinenciou, takže slúži ako vlastná kontrola. Sledovanie trvalo 14 dní. Pridelenie dňa (inhalovať, alebo abstinovať) dostávali účastníci textovou správou.</p>
+<p>MARY-JANE je skratka z angl. <em>Marijuana and Acute Risk of Arrhythmia – Joint Abstinence and Exposure</em>. Primárna publikácia ju opisuje ako prospektívnu randomizovanú kríženú (crossover) štúdiu: ten istý účastník strieda dni s inhaláciou a dni s abstinenciou, takže slúži ako vlastná kontrola. Sledovanie trvalo 14&nbsp;dní. Pridelenie dňa (inhalovať, alebo abstinovať) dostávali účastníci textovou správou.</p>
 
 <p>Podľa registra ClinicalTrials.gov išlo o dizajn s dvojdennými blokmi (začať dňom s kanabisom, alebo dňom bez neho). Účastníci mali v dňoch s inštrukciou konzumovať kanabis <strong>(fajčiť alebo vapovať) aspoň raz</strong>. Kanabis si obstarávali sami; štúdia teda nepodávala štandardizovaný produkt s určeným obsahom tetrahydrokanabinolu (THC). Sledovanie prebiehalo na Kalifornskej univerzite v San Franciscu (UCSF).</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Priemerný vek</th>
-      <td>32 ± 10 rokov</td>
+      <td>32 ± 10&nbsp;rokov</td>
     </tr>
     <tr>
       <th scope="row">Pohlavie a etnicita</th>
@@ -78,11 +78,11 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Dni v analýze</th>
-      <td>713 dní randomizovaných k inhalácii, 616 dní k abstinencii</td>
+      <td>713&nbsp;dní randomizovaných k inhalácii, 616&nbsp;dní k abstinencii</td>
     </tr>
     <tr>
       <th scope="row">Trvanie</th>
-      <td>14 dní; centrum UCSF (San Francisco)</td>
+      <td>14&nbsp;dní; centrum UCSF (San Francisco)</td>
     </tr>
     <tr>
       <th scope="row">Primárny ukazovateľ</th>
@@ -104,7 +104,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Zaradenie podľa registra: vek aspoň 21 rokov, inhalovaný kanabis v uplynulom mesiaci a aspoň v štyroch rôznych dňoch toho istého týždňa v uplynulom roku, ochota striedať konzumáciu a abstinenciu podľa inštrukcií (najviac dva po sebe nasledujúce dni v danom režime), vlastný kanabis a miesto, kde inhalácia nie je v rozpore s právom.</p>
+<p>Zaradenie podľa registra: vek aspoň 21&nbsp;rokov, inhalovaný kanabis v uplynulom mesiaci a aspoň v štyroch rôznych dňoch toho istého týždňa v uplynulom roku, ochota striedať konzumáciu a abstinenciu podľa inštrukcií (najviac dva po sebe nasledujúce dni v danom režime), vlastný kanabis a miesto, kde inhalácia nie je v rozpore s právom.</p>
 
 <p>Vylúčení boli podľa registra okrem iného tehotné ženy, osoby s medicínskym dôvodom vyhnúť sa kanabisu, osoby na antiarytmikách, s anamnézou fibrilácie predsiení alebo srdcového zlyhávania, s vrodenou srdcovou chybou, s implantabilným kardioverterom-defibrilátorom alebo kardiostimulátorom, po predchádzajúcej srdcovej ablácii a osoby na inzulíne. Súbor teda nie je obrazom typického pacienta s chronickou chorobou obličiek (CKD), dialýzou ani s už známou arytmiou.</p>
 
@@ -159,7 +159,7 @@ $articles[] = [
 
 <h2>Čo z toho plynie pri CKD a dialýze</h2>
 
-<p>Pacienti s CKD a najmä s dialýzou majú vysoké kardiovaskulárne riziko, častejšiu fibriláciu predsiení, objemové a elektrolytové výkyvy a často pokročilý vek. MARY-JANE takúto populáciu neskúmala: priemerný vek 32 rokov, bez známej arytmie, bez antiarytmík, bez srdcového zlyhávania a bez inzulínu. <strong>Výsledky sa na CKD a dialýzu extrapolovať nedajú.</strong></p>
+<p>Pacienti s CKD a najmä s dialýzou majú vysoké kardiovaskulárne riziko, častejšiu fibriláciu predsiení, objemové a elektrolytové výkyvy a často pokročilý vek. MARY-JANE takúto populáciu neskúmala: priemerný vek 32&nbsp;rokov, bez známej arytmie, bez antiarytmík, bez srdcového zlyhávania a bez inzulínu. <strong>Výsledky sa na CKD a dialýzu extrapolovať nedajú.</strong></p>
 
 <p>V ambulancii a na dialyzačnej sále má zmysel pýtať sa na užívanie kanabisu <strong>bez odsudzovania</strong> – rovnako ako na alkohol, tabak a iné inhalované látky. Dôvodom nie je moralizovanie, ale kardiovaskulárne riziko, možné liekové interakcie (polyfarmácia, imunosupresia po transplantácii obličky), sedácia, kolísanie krvného tlaku a adherencia k liečbe. Otázka v anamnéze nie je súhlas s fajčením ako liečbou.</p>
 

@@ -53,8 +53,8 @@ hodnotila, či liečba finerenónom prináša konzistentný prínos naprieč CKM
 <ul>
   <li>Ide o <strong>post-hoc združenú (pooled) analýzu dvoch fáz 3 randomizovaných, dvojito zaslepených, placebom
       kontrolovaných štúdií FIDELITY</strong>.</li>
-  <li>Zaradených bolo <strong>12 990 pacientov</strong> (priemerný vek 64,8 roka; 70 % mužov), so sérovým
-      <strong>K+ ≤ 4,8 mmol/l</strong> a liečených <strong>maximálne tolerovanou inhibíciou RAAS</strong>.</li>
+  <li>Zaradených bolo <strong>12&nbsp;990 pacientov</strong> (priemerný vek 64,8 roka; 70 % mužov), so sérovým
+      <strong>K+ ≤ 4,8&nbsp;mmol/l</strong> a liečených <strong>maximálne tolerovanou inhibíciou RAAS</strong>.</li>
   <li>Pacienti so symptomatickým <strong>HFrEF</strong> boli zo štúdií vylúčení.</li>
   <li>Pacienti boli podľa <strong>CKM štádia východiskovo</strong> rozdelení na:
     <ul>
@@ -71,7 +71,7 @@ hodnotila, či liečba finerenónom prináša konzistentný prínos naprieč CKM
           východisku po ≥ 4 týždňoch alebo smrť z renálneho zlyhania)</li>
     </ul>
   </li>
-  <li>Medián sledovania bol <strong>3 roky</strong>.</li>
+  <li>Medián sledovania bol <strong>3&nbsp;roky</strong>.</li>
 </ul>
 
 <h2>Kľúčové výsledky</h2>

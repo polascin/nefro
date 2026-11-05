@@ -2,7 +2,7 @@
 
 /**
  * add_zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky_article.php
- * Zapal ako terapeuticky ciel pri CKD - spracovanie prehladu
+ * Zapal ako terapeutický cieľ pri CKD - spracovanie prehladu
  * Nature Reviews Nephrology 2026, doi 10.1038/s41581-026-01117-6.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
@@ -169,20 +169,20 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Kanakinumab (IL-1β)</th>
-        <td>CANTOS, 10 061 pacientov po infarkte</td>
-        <td>MACE HR 0,85 (95 % IS 0,74–0,98) pri dávke 150 mg; hsCRP nižší o 37 percentuálnych bodov</td>
+        <td>CANTOS, 10&nbsp;061 pacientov po infarkte</td>
+        <td>MACE HR 0,85 (95 % IS 0,74–0,98) pri dávke 150&nbsp;mg; hsCRP nižší o 37 percentuálnych bodov</td>
         <td>Vyšší výskyt fatálnych infekcií; celková mortalita bez zmeny</td>
       </tr>
       <tr>
         <th scope="row">Bardoxolónmetyl (Nrf2)</th>
-        <td>BEACON, 2 185 pacientov, T2D + CKD G4</td>
+        <td>BEACON, 2&nbsp;185 pacientov, T2D + CKD G4</td>
         <td>Bez účinku na ESRD/KV úmrtie: HR 0,98 (0,70–1,37); eGFR aj UACR <strong>stúpli</strong></td>
         <td>Predčasné ukončenie; srdcové zlyhávanie HR 1,83 (1,32–2,55)</td>
       </tr>
       <tr>
         <th scope="row">Selonsertib (ASK1)</th>
         <td>MOSAIC, 310 pacientov, T2D + CKD</td>
-        <td>Rozdiel sklonu eGFR 1,20 ml/min/1,73 m²/rok (−0,41 až 2,81; p = 0,14)</td>
+        <td>Rozdiel sklonu eGFR 1,20&nbsp;ml/min/1,73&nbsp;m²/rok (−0,41 až 2,81; p = 0,14)</td>
         <td>Viac renálnych príhod (17 % oproti 12 %) a viac AKI</td>
       </tr>
       <tr>
@@ -194,12 +194,12 @@ $articles[] = [
       <tr>
         <th scope="row">Pentoxifylín (PDE)</th>
         <td>PREDIAN, 169 pacientov, T2D + CKD G3–4</td>
-        <td>Pokles eGFR 2,1 oproti 6,5 ml/min/1,73 m² za 2 roky (rozdiel 4,3; p &lt; 0,001)</td>
+        <td>Pokles eGFR 2,1 oproti 6,5&nbsp;ml/min/1,73&nbsp;m² za 2&nbsp;roky (rozdiel 4,3; p &lt; 0,001)</td>
         <td>Otvorený dizajn, malý súbor, bez tvrdých ukazovateľov</td>
       </tr>
       <tr>
         <th scope="row">Ziltivekimab (IL-6)</th>
-        <td>ZEUS, 6 376 pacientov, ASCVD + CKD + hsCRP ≥ 2 mg/l</td>
+        <td>ZEUS, 6&nbsp;376 pacientov, ASCVD + CKD + hsCRP ≥ 2&nbsp;mg/l</td>
         <td>Podľa predbežných výsledkov bez zníženia MACE: HR 0,99 (0,88–1,11), napriek poklesu voľného IL-6 a hsCRP</td>
         <td>Závažné infekcie častejšie; úplné recenzované výsledky zatiaľ nepublikované</td>
       </tr>
@@ -209,7 +209,7 @@ $articles[] = [
 
 <h3>Inhibícia interleukínu 1β</h3>
 
-<p>Interleukín 1β patrí medzi kľúčové cytokíny vrodenej imunity. Štúdia CANTOS zaradila 10 061 pacientov po infarkte myokardu s hsCRP najmenej 2 mg/l. Kanakinumab v dávke 150 mg podkožne každé tri mesiace znížil výskyt primárneho kardiovaskulárneho ukazovateľa: HR 0,85 (95 % IS 0,74–0,98; p = 0,021). Dávka 50 mg účinok nemala.</p>
+<p>Interleukín 1β patrí medzi kľúčové cytokíny vrodenej imunity. Štúdia CANTOS zaradila 10&nbsp;061 pacientov po infarkte myokardu s hsCRP najmenej 2&nbsp;mg/l. Kanakinumab v dávke 150&nbsp;mg podkožne každé tri mesiace znížil výskyt primárneho kardiovaskulárneho ukazovateľa: HR 0,85 (95 % IS 0,74–0,98; p = 0,021). Dávka 50&nbsp;mg účinok nemala.</p>
 
 <p>Dva detaily robia z tejto štúdie dôležitú oporu zápalovej hypotézy aterotrombózy. Po prvé, kanakinumab <strong>neznížil koncentrácie lipidov</strong>, takže výsledok podporuje prínos cieleného ovplyvnenia zápalovej dráhy nezávisle od znižovania lipidov. Po druhé, hsCRP klesol dávkovo závisle o 26, 37 a 41 percentuálnych bodov oproti placebu, čo dokladá zásah do cieľovej dráhy.</p>
 
@@ -221,7 +221,7 @@ $articles[] = [
 
 <p>Monoklonálne protilátky proti IL-6 alebo jeho receptoru dokážu výrazne znížiť hsCRP. To však ešte nedokazuje priaznivý účinok na klinické príhody. Navyše, blokáda dráhy IL-6 môže tlmiť tvorbu CRP aj počas infekcie, takže nízke CRP pri takejto liečbe nemôže samo osebe vylúčiť závažnú infekciu.</p>
 
-<p>Štúdia ZEUS (NCT05021835) zaradila 6 376 pacientov s aterosklerotickým kardiovaskulárnym ochorením, CKD a hsCRP najmenej 2 mg/l. Účastníci dostávali ziltivekimab 15 mg podkožne raz mesačne alebo placebo. Priemerný vek bol 69,5 roka, priemerná eGFR 44,5 ml/min/1,73 m², medián hsCRP 4,5 mg/l; diabetes malo 65,7 % a srdcové zlyhávanie 41,3 % účastníkov. Primárnym ukazovateľom bol trojzložkový MACE – kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda. Vopred určený sekundárny renálny ukazovateľ zahŕňal pokles eGFR o viac než 40 %, eGFR pod 15 ml/min/1,73 m², dialýzu, transplantáciu alebo úmrtie z renálnej či kardiovaskulárnej príčiny.</p>
+<p>Štúdia ZEUS (NCT05021835) zaradila 6&nbsp;376 pacientov s aterosklerotickým kardiovaskulárnym ochorením, CKD a hsCRP najmenej 2&nbsp;mg/l. Účastníci dostávali ziltivekimab 15&nbsp;mg podkožne raz mesačne alebo placebo. Priemerný vek bol 69,5 roka, priemerná eGFR 44,5&nbsp;ml/min/1,73&nbsp;m², medián hsCRP 4,5&nbsp;mg/l; diabetes malo 65,7 % a srdcové zlyhávanie 41,3 % účastníkov. Primárnym ukazovateľom bol trojzložkový MACE – kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda. Vopred určený sekundárny renálny ukazovateľ zahŕňal pokles eGFR o viac než 40 %, eGFR pod 15&nbsp;ml/min/1,73&nbsp;m², dialýzu, transplantáciu alebo úmrtie z renálnej či kardiovaskulárnej príčiny.</p>
 
 <p><strong>Výsledok už poznáme aspoň na úrovni oficiálne oznámených hlavných údajov.</strong> Dňa 31. júla 2026 spoločnosť Novo Nordisk uviedla, že ziltivekimab dosiahol očakávané zníženie voľného IL-6 a hsCRP, no neznížil výskyt MACE oproti placebu: HR 0,99 (95 % IS 0,88–1,11). Celkový výskyt nežiaducich a závažných nežiaducich udalostí bol podobný, závažné infekcie však boli pri ziltivekimabe častejšie; celková mortalita sa nelíšila.</p>
 
@@ -229,17 +229,17 @@ $articles[] = [
 
 <h3>Baricitinib a inhibícia JAK1/JAK2</h3>
 
-<p>Signalizácia JAK-STAT sprostredkúva účinky viacerých cytokínov. V randomizovanej štúdii fázy 2 u 129 pacientov s diabetom 2. typu a diabetickou chorobou obličiek znížil baricitinib 4 mg denne pomer albumínu ku kreatinínu v moči o 41 % po 24 týždňoch (pomer k východiskovej hodnote 0,59; 95 % IS 0,38–0,93; p = 0,022) a znížil aj viaceré zápalové biomarkery.</p>
+<p>Signalizácia JAK-STAT sprostredkúva účinky viacerých cytokínov. V randomizovanej štúdii fázy 2 u 129 pacientov s diabetom 2. typu a diabetickou chorobou obličiek znížil baricitinib 4&nbsp;mg denne pomer albumínu ku kreatinínu v moči o 41 % po 24 týždňoch (pomer k východiskovej hodnote 0,59; 95 % IS 0,38–0,93; p = 0,022) a znížil aj viaceré zápalové biomarkery.</p>
 
-<p>Pokles albuminúrie je klinicky relevantný, no v 24-týždňovej štúdii nepredstavuje dôkaz spomalenia zlyhania obličiek. Jedinou nežiaducou udalosťou s rozdielnym výskytom medzi skupinami bola <strong>anémia: 32,0 % pri dávke 4 mg oproti 3,7 % pri placebe</strong>. Pri populácii už ohrozenej anémiou je to dôležitý bezpečnostný signál. Inhibítory JAK majú navyše triedové riziká vrátane infekcií, cytopénií a tromboembolických komplikácií. Baricitinib nie je rutinnou liečbou CKD.</p>
+<p>Pokles albuminúrie je klinicky relevantný, no v 24-týždňovej štúdii nepredstavuje dôkaz spomalenia zlyhania obličiek. Jedinou nežiaducou udalosťou s rozdielnym výskytom medzi skupinami bola <strong>anémia: 32,0 % pri dávke 4&nbsp;mg oproti 3,7 % pri placebe</strong>. Pri populácii už ohrozenej anémiou je to dôležitý bezpečnostný signál. Inhibítory JAK majú navyše triedové riziká vrátane infekcií, cytopénií a tromboembolických komplikácií. Baricitinib nie je rutinnou liečbou CKD.</p>
 
 <h3>Selonsertib a inhibícia ASK1</h3>
 
-<p>ASK1 sa aktivuje pri oxidačnom strese a podieľa sa na zápale, apoptóze a fibróze. Štúdia MOSAIC fázy 2b zaradila 310 pacientov s diabetom 2. typu, eGFR 20–59 ml/min/1,73 m² a albuminúriou 150–5 000 mg/g.</p>
+<p>ASK1 sa aktivuje pri oxidačnom strese a podieľa sa na zápale, apoptóze a fibróze. Štúdia MOSAIC fázy 2b zaradila 310 pacientov s diabetom 2. typu, eGFR 20–59&nbsp;ml/min/1,73&nbsp;m² a albuminúriou 150–5&nbsp;000&nbsp;mg/g.</p>
 
 <p>Dizajn štúdie zohľadnil, že selonsertib môže inhibíciou tubulárnej sekrécie kreatinínu vyvolať akútny pokles eGFR vypočítanej z kreatinínu bez zodpovedajúcej zmeny skutočnej filtrácie. Preto bol zaradený štvortýždňový úvodný liečebný beh a východisková hodnota pre analýzu sklonu eGFR sa stanovila počas liečby.</p>
 
-<p>Výsledok bol rozporný. Rozdiel v sklone eGFR po 84 týždňoch predstavoval 1,20 ml/min/1,73 m² za rok (95 % IS −0,41 až 2,81; p = 0,14). Protokol použil pre primárny ukazovateľ neobvykle vysokú, vopred určenú obojstrannú hladinu významnosti 0,30, primeranú skôr exploračnému rozhodovaniu vo fáze 2 než potvrdeniu účinnosti. Zároveň <strong>renálne klinické príhody nastali u 17 % pacientov na selonsertibe oproti 12 % na placebe</strong> a incidencia hláseného akútneho poškodenia obličiek bola numericky vyššia (11,0 oproti 5,9 na 100 pacientorokov).</p>
+<p>Výsledok bol rozporný. Rozdiel v sklone eGFR po 84 týždňoch predstavoval 1,20&nbsp;ml/min/1,73&nbsp;m² za rok (95 % IS −0,41 až 2,81; p = 0,14). Protokol použil pre primárny ukazovateľ neobvykle vysokú, vopred určenú obojstrannú hladinu významnosti 0,30, primeranú skôr exploračnému rozhodovaniu vo fáze 2 než potvrdeniu účinnosti. Zároveň <strong>renálne klinické príhody nastali u 17 % pacientov na selonsertibe oproti 12 % na placebe</strong> a incidencia hláseného akútneho poškodenia obličiek bola numericky vyššia (11,0 oproti 5,9 na 100 pacientorokov).</p>
 
 <p>Selonsertib je tak príkladom rozporu medzi náhradným a klinickým ukazovateľom: sklon eGFR sa zlepšil, tvrdé renálne príhody nie. Označiť výsledok jednoducho za „negatívnu štúdiu“ by bolo zjednodušením; presnejšie je povedať, že nepriniesla dostatočne presvedčivý dôkaz čistého klinického prínosu a upozornila na možné riziko.</p>
 
@@ -251,13 +251,13 @@ $articles[] = [
 
 <p>Bardoxolón aktivuje transkripčný faktor Nrf2 a inhibuje niektoré prozápalové signálne dráhy. V skorších štúdiách zvyšoval eGFR, čo sa vtedy vykladalo ako nefroprotekcia.</p>
 
-<p>Štúdia BEACON zaradila 2 185 pacientov s diabetom 2. typu a CKD kategórie G4 (eGFR 15–29 ml/min/1,73 m²). Bola predčasne ukončená na odporúčanie nezávislej komisie po mediáne sledovania 9 mesiacov. Primárny zložený ukazovateľ (zlyhanie obličiek alebo kardiovaskulárne úmrtie) sa vyskytol u 6 % v oboch ramenách: HR 0,98 (95 % IS 0,70–1,37; p = 0,92). Hospitalizácia pre srdcové zlyhávanie alebo úmrtie na srdcové zlyhávanie však nastali u 96 oproti 55 pacientov: <strong>HR 1,83 (95 % IS 1,32–2,55; p &lt; 0,001)</strong>.</p>
+<p>Štúdia BEACON zaradila 2&nbsp;185 pacientov s diabetom 2. typu a CKD kategórie G4 (eGFR 15–29&nbsp;ml/min/1,73&nbsp;m²). Bola predčasne ukončená na odporúčanie nezávislej komisie po mediáne sledovania 9&nbsp;mesiacov. Primárny zložený ukazovateľ (zlyhanie obličiek alebo kardiovaskulárne úmrtie) sa vyskytol u 6 % v oboch ramenách: HR 0,98 (95 % IS 0,70–1,37; p = 0,92). Hospitalizácia pre srdcové zlyhávanie alebo úmrtie na srdcové zlyhávanie však nastali u 96 oproti 55 pacientov: <strong>HR 1,83 (95 % IS 1,32–2,55; p &lt; 0,001)</strong>.</p>
 
 <p>Rozhodujúci detail sa často prehliada: pri bardoxolóne stúpla nielen eGFR, ale <strong>aj albuminúria a krvný tlak</strong>. Vzostup eGFR preto nemožno bez ďalších dôkazov stotožniť so zachovaním nefrónov; môže odrážať hemodynamickú zmenu a meraná GFR v neskoršej štúdii TSUBAKI skutočne stúpla. BEACON zostáva varovaním, že priaznivá zmena fyziologického alebo laboratórneho ukazovateľa nezaručuje klinický prínos a môže sprevádzať závažné riziko.</p>
 
 <h3>Pentoxifylín</h3>
 
-<p>Pentoxifylín inhibuje fosfodiesterázu a môže tlmiť tvorbu niektorých cytokínov. Otvorená randomizovaná štúdia PREDIAN zaradila 169 pacientov s diabetom 2. typu a CKD kategórie G3–G4, ktorí už užívali blokádu systému renín-angiotenzín. Po dvoch rokoch klesla eGFR o 2,1 ± 0,4 ml/min/1,73 m² v skupine s pentoxifylínom oproti 6,5 ± 0,4 v kontrolnej skupine (rozdiel 4,3; 95 % IS 3,1–5,5; p &lt; 0,001). Albuminúria klesla o 14,9 %, kým v kontrolnej skupine stúpla o 5,7 %.</p>
+<p>Pentoxifylín inhibuje fosfodiesterázu a môže tlmiť tvorbu niektorých cytokínov. Otvorená randomizovaná štúdia PREDIAN zaradila 169 pacientov s diabetom 2. typu a CKD kategórie G3–G4, ktorí už užívali blokádu systému renín-angiotenzín. Po dvoch rokoch klesla eGFR o 2,1 ± 0,4&nbsp;ml/min/1,73&nbsp;m² v skupine s pentoxifylínom oproti 6,5 ± 0,4 v kontrolnej skupine (rozdiel 4,3; 95 % IS 3,1–5,5; p &lt; 0,001). Albuminúria klesla o 14,9 %, kým v kontrolnej skupine stúpla o 5,7 %.</p>
 
 <p>Rozsah účinku je pozoruhodný, ale dôkazová sila nie. Išlo o otvorenú štúdiu jedného pracoviska so 169 účastníkmi a bez tvrdých klinických ukazovateľov. Pentoxifylín preto nemožno považovať za náhradu štandardnej nefroprotektívnej liečby; je to skôr nezodpovedaná otázka než hotová odpoveď.</p>
 
@@ -360,7 +360,7 @@ $articles[] = [
 
 <p>Chronický zápal je dôležitou súčasťou patofyziológie chronickej choroby obličiek a jej kardiovaskulárnych komplikácií. Jeho prognostický význam je dobre doložený, ale prechod od biomarkera k bezpečnému terapeutickému cieľu zostáva náročný.</p>
 
-<p>Doterajšie pokusy ukazujú, prečo sa biologický účinok nesmie zamieňať s klinickým prínosom. Bardoxolón zvýšil eGFR, no nezlepšil primárny klinický výsledok a zvýšil riziko srdcového zlyhávania. Selonsertib priaznivo ovplyvnil sklon eGFR pri exploračnom štatistickom prahu, ale renálne príhody aj hlásené AKI boli numericky častejšie. Baricitinib znížil albuminúriu, no anémia bola pri dávke 4 mg podstatne častejšia. Kanakinumab naopak preukázal mierne zníženie aterosklerotických príhod bez poklesu celkovej mortality a s vyšším výskytom fatálnych infekcií. Ziltivekimab znížil voľný IL-6 a hsCRP, ale podľa hlavných výsledkov ZEUS neznížil MACE.</p>
+<p>Doterajšie pokusy ukazujú, prečo sa biologický účinok nesmie zamieňať s klinickým prínosom. Bardoxolón zvýšil eGFR, no nezlepšil primárny klinický výsledok a zvýšil riziko srdcového zlyhávania. Selonsertib priaznivo ovplyvnil sklon eGFR pri exploračnom štatistickom prahu, ale renálne príhody aj hlásené AKI boli numericky častejšie. Baricitinib znížil albuminúriu, no anémia bola pri dávke 4&nbsp;mg podstatne častejšia. Kanakinumab naopak preukázal mierne zníženie aterosklerotických príhod bez poklesu celkovej mortality a s vyšším výskytom fatálnych infekcií. Ziltivekimab znížil voľný IL-6 a hsCRP, ale podľa hlavných výsledkov ZEUS neznížil MACE.</p>
 
 <p>Najsilnejšie klinické dôkazy zostávajú pri liekoch, ktoré primárne nepovažujeme za protizápalové, ale popri hemodynamických a metabolických účinkoch tlmia aj zápal a fibrózu: blokátory systému renín-angiotenzín-aldosterón, inhibítory SGLT2, agonisty receptora GLP-1 a finerenón.</p>
 

@@ -70,7 +70,7 @@ include 'legal_head.php';
                 <!-- 2. SPÔSOBILOSŤ -->
                 <h3>2. Spôsobilosť</h3>
                 <p>
-                    Musíte mať aspoň 16 rokov; ak právo vašej krajiny vyžaduje vyšší minimálny
+                    Musíte mať aspoň 16 rokov; ak právo vašej krajiny vyžaduje vyšší minimálny
                     vek, musíte dosiahnuť tento vyšší vek. Zároveň musíte byť spôsobilí uzavrieť
                     záväznú zmluvu. Ak Službu používate za
                     organizáciu, potvrdzujete, že ste oprávnení ju zaviazať.

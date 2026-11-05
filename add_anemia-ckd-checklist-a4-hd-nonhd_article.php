@@ -60,8 +60,8 @@ $articles[] = [
 <h3>A) CKD G5HD (hemodialýza)</h3>
 
 <ul>
-  <li>☐ Pri <strong>ferritíne ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> začať <strong>IV železo</strong></li>
-  <li>☐ Bezpečnostná hranica: zadržať rutinné železo, ak <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong></li>
+  <li>☐ Pri <strong>ferritíne ≤ 500&nbsp;ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> začať <strong>IV železo</strong></li>
+  <li>☐ Bezpečnostná hranica: zadržať rutinné železo, ak <strong>ferritín &gt; 700&nbsp;ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong></li>
   <li>☐ Typ IV železa a dávkovací plán: ____________________</li>
 </ul>
 
@@ -87,16 +87,16 @@ $articles[] = [
   <li>☐ Pred nasadením sú riešené korektibilné príčiny, najmä deficit železa</li>
   <li>☐ Zdieľané rozhodovanie s pacientom: benefit vs riziká vrátane transfúzie</li>
   <li>☐ Typ terapie: ESA / HIF-PHI / zatiaľ nie</li>
-  <li>☐ Pri CKD G5D zvážiť ESA typicky pri <strong>Hb ~ ≤ 9,0 až 10,0 g/dl</strong> podľa symptómov a trendu</li>
-  <li>☐ Pri udržiavaní držať <strong>Hb pod hornou hranicou ~ 11,5 g/dl</strong></li>
+  <li>☐ Pri CKD G5D zvážiť ESA typicky pri <strong>Hb ~ ≤ 9,0 až 10,0&nbsp;g/dl</strong> podľa symptómov a trendu</li>
+  <li>☐ Pri udržiavaní držať <strong>Hb pod hornou hranicou ~ 11,5&nbsp;g/dl</strong></li>
 </ul>
 
 <h2>6) Monitoring a kontrolné intervaly</h2>
 
 <ul>
   <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong></li>
-  <li>☐ Non-HD a CKD G5PD: <strong>každé 3 mesiace</strong></li>
-  <li>☐ CKD G5HD: <strong>každých 1 až 3 mesiace</strong></li>
+  <li>☐ Non-HD a CKD G5PD: <strong>každé 3&nbsp;mesiace</strong></li>
+  <li>☐ CKD G5HD: <strong>každých 1 až 3&nbsp;mesiace</strong></li>
   <li>☐ Prehodnotenie pri zmene klinického stavu: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb</li>
   <li>☐ Návrh ďalšej kontroly: [DD.MM.RRRR]</li>
 </ul>

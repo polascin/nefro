@@ -1,8 +1,8 @@
 <?php
 /**
  * add_psychicka-tiesen-dusevna-porucha-nefrologia_article.php
- * Odborny clanok o rozliseni psychickej tiesne a dusevnej poruchy
- * v nefrologickej praxi, spracovany z komentara Medscape a nefrologickych studii.
+ * Odborný článok o rozliseni psychickej tiesne a dusevnej poruchy
+ * v nefrologickej praxi, spracovany z komentara Medscape a nefrologickych štúdií.
  */
 
 // Ochrana – len admin alebo CLI
@@ -94,7 +94,7 @@ $articles[] = [
 
 <p>Pri potvrdenej duševnej poruche sa liečba individualizuje podľa diagnózy, závažnosti, preferencií pacienta a somatického stavu. Presná diagnóza je dôležitá aj preto, že dôkazový základ farmakoterapie depresie pri chronickej chorobe obličiek je obmedzený.</p>
 
-<p>V dvojito zaslepenej randomizovanej štúdii CAST s 201 pacientmi s chronickou chorobou obličiek G3–G5 bez dialýzy a s veľkou depresívnou poruchou potvrdenou štruktúrovaným rozhovorom nezlepšil sertralín počas 12 týždňov depresívne príznaky v porovnaní s placebom (zmena skóre QIDS-C16 −4,1 oproti −4,2; rozdiel 0,1; 95&nbsp;% CI −1,1 až 1,3). Nevoľnosť či vracanie (22,7&nbsp;% oproti 10,4&nbsp;%) a hnačka (13,4&nbsp;% oproti 3,1&nbsp;%) boli pri sertralíne častejšie. [5]</p>
+<p>V dvojito zaslepenej randomizovanej štúdii CAST s 201 pacientmi s chronickou chorobou obličiek G3–G5 bez dialýzy a s veľkou depresívnou poruchou potvrdenou štruktúrovaným rozhovorom nezlepšil sertralín počas 12&nbsp;týždňov depresívne príznaky v porovnaní s placebom (zmena skóre QIDS-C16 −4,1 oproti −4,2; rozdiel 0,1; 95&nbsp;% CI −1,1 až 1,3). Nevoľnosť či vracanie (22,7&nbsp;% oproti 10,4&nbsp;%) a hnačka (13,4&nbsp;% oproti 3,1&nbsp;%) boli pri sertralíne častejšie. [5]</p>
 
 <p>V otvorenej randomizovanej štúdii ASCEND u 120 hemodialyzovaných pacientov s veľkou depresívnou poruchou alebo dystýmiou viedol sertralín po 12 týždňoch k mierne nižšiemu skóre depresie než kognitívno-behaviorálna terapia poskytovaná priamo v dialyzačnom stredisku (rozdiel −1,84 bodu QIDS-C; 95&nbsp;% CI −3,54 až −0,13), za cenu častejších nežiaducich udalostí. Pozitívny skríning (BDI-II ≥&nbsp;15) na zaradenie do štúdie nestačil: diagnózu bolo potrebné potvrdiť štruktúrovaným rozhovorom MINI podľa kritérií DSM-IV. [6, 7] Štúdia nemala placebovú ani neliečenú kontrolnú skupinu a nehodnotila pretrvávanie účinku. [6]</p>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Bezpečnosť má prednosť pred diskusiou o diagnostických hraniciach</h2>
 
-<p>Úvaha o nadmernej medikalizácii nesmie oddialiť pomoc pri samovražednom riziku, psychóze, mánii, delíriu alebo závažnom zanedbávaní základných potrieb. V americkom registri pacientov, ktorí začali dialýzu v rokoch 1995 až 2000, bol výskyt samovrážd o 84&nbsp;% vyšší než v celkovej populácii (štandardizovaný pomer incidencie 1,84; 95&nbsp;% CI 1,50–2,27). Nezávislými prediktormi boli okrem iného vek ≥&nbsp;75 rokov, mužské pohlavie, závislosť od alkoholu alebo drog a nedávna hospitalizácia pre duševnú poruchu. [8]</p>
+<p>Úvaha o nadmernej medikalizácii nesmie oddialiť pomoc pri samovražednom riziku, psychóze, mánii, delíriu alebo závažnom zanedbávaní základných potrieb. V americkom registri pacientov, ktorí začali dialýzu v rokoch 1995 až 2000, bol výskyt samovrážd o 84&nbsp;% vyšší než v celkovej populácii (štandardizovaný pomer incidencie 1,84; 95&nbsp;% CI 1,50–2,27). Nezávislými prediktormi boli okrem iného vek ≥&nbsp;75&nbsp;rokov, mužské pohlavie, závislosť od alkoholu alebo drog a nedávna hospitalizácia pre duševnú poruchu. [8]</p>
 
 <p>Vyjadrenia o smrti treba preskúmať priamo a citlivo. U dialyzovaného pacienta je potrebné rozlišovať samovražedný úmysel, depresívnu beznádej, vyčerpanie z liečby a informované rozhodovanie o cieľoch starostlivosti vrátane ukončenia dialýzy. Rozlíšenie si môže vyžadovať spoluprácu nefrológa, psychiatra, psychológa a paliatívneho tímu.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h2>Limity</h2>
 
-<p>Východiskový text je názorový komentár psychiatra, nie systematický prehľad ani odporúčanie odbornej spoločnosti, a nezaoberá sa nefrológiou. Nefrologické údaje o prevalencii pochádzajú prevažne z observačných štúdií s rozdielnymi nástrojmi a populáciami. Validačné štúdie skríningových škál boli jednocentrové a s obmedzeným počtom pacientov. Liečebné štúdie CAST a ASCEND boli krátke (12 týždňov) a ASCEND nemal placebovú vetvu. Údaje o samovraždách pochádzajú z amerického registra spred viac ako dvoch desaťročí a ich prenos do súčasnej slovenskej praxe je len orientačný.</p>
+<p>Východiskový text je názorový komentár psychiatra, nie systematický prehľad ani odporúčanie odbornej spoločnosti, a nezaoberá sa nefrológiou. Nefrologické údaje o prevalencii pochádzajú prevažne z observačných štúdií s rozdielnymi nástrojmi a populáciami. Validačné štúdie skríningových škál boli jednocentrové a s obmedzeným počtom pacientov. Liečebné štúdie CAST a ASCEND boli krátke (12&nbsp;týždňov) a ASCEND nemal placebovú vetvu. Údaje o samovraždách pochádzajú z amerického registra spred viac ako dvoch desaťročí a ich prenos do súčasnej slovenskej praxe je len orientačný.</p>
 
 <h2>Záver</h2>
 

@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Označenie „nízkoriziková“ alebo „mierna“ konzumácia neznamená bezpečnosť ani zdravotný prínos. Vyjadruje iba nižšie riziko v porovnaní s vyššou spotrebou. Ak človek alkohol nepije, nie je medicínsky dôvod odporúčať mu, aby začal. Ak pije, znižovanie množstva a vynechanie nárazového pitia riziko znižujú.</p>
 
-<p>Pri anamnéze treba myslieť aj na to, že „štandardný nápoj“ nemá všade rovnakú definíciu. V rôznych krajinách a štúdiách môže predstavovať približne 10 až 14 g čistého etanolu. Presnejšie než počet pohárov je preto zisťovať typ nápoja, objem, koncentráciu alkoholu, frekvenciu a maximálnu dávku pri jednej príležitosti.</p>
+<p>Pri anamnéze treba myslieť aj na to, že „štandardný nápoj“ nemá všade rovnakú definíciu. V rôznych krajinách a štúdiách môže predstavovať približne 10 až 14&nbsp;g čistého etanolu. Presnejšie než počet pohárov je preto zisťovať typ nápoja, objem, koncentráciu alkoholu, frekvenciu a maximálnu dávku pri jednej príležitosti.</p>
 
 <h2>Alkohol a onkologické riziko</h2>
 

@@ -35,19 +35,19 @@ $articles[] = [
 
 <p>Perkutánna biopsia natívnej obličky ostáva základnou diagnostickou metódou pri mnohých ochoreniach obličiek. Histologické vyšetrenie môže upresniť diagnózu, prognózu a liečbu. V praxi však pretrváva opatrnosť, najmä u pacientov so zvýšeným rizikom krvácania: vyšším vekom, zhoršenou funkciou obličiek, obezitou, anatomickými abnormalitami, antitrombotickou liečbou alebo poruchou hemostázy.</p>
 
-<p>Na Kidney Week 2026 bola predstavená prospektívna validácia štandardizovaného protokolu ROCKY (<em>Renal-biopsy Optimized Care and Knowledge Yielding safety</em>). V skupine 1 096 vysokorizikových výkonov bola miera závažných komplikácií 0,8 %, bez štatisticky významného rozdielu medzi hospitalizovanými a ambulantnými pacientmi.<sup>1,2</sup> Kongresová správa Nancy A. Melvilleovej na Medscape tieto výsledky zhrnula a doplnila komentár moderátora k bežnému používaniu desmopresínu v skúmanom centre.<sup>1</sup></p>
+<p>Na Kidney Week 2026 bola predstavená prospektívna validácia štandardizovaného protokolu ROCKY (<em>Renal-biopsy Optimized Care and Knowledge Yielding safety</em>). V skupine 1&nbsp;096 vysokorizikových výkonov bola miera závažných komplikácií 0,8 %, bez štatisticky významného rozdielu medzi hospitalizovanými a ambulantnými pacientmi.<sup>1,2</sup> Kongresová správa Nancy A. Melvilleovej na Medscape tieto výsledky zhrnula a doplnila komentár moderátora k bežnému používaniu desmopresínu v skúmanom centre.<sup>1</sup></p>
 
 <h2>Čo štúdia ROCKY skúmala</h2>
 
-<p>Išlo o prospektívnu monocentrickú observačnú štúdiu. Od januára 2014 do júna 2024 vykonali 1 937 po sebe nasledujúcich perkutánnych biopsií natívnej obličky podľa jednotnej bezpečnostnej cesty ROCKY. Protokol zahŕňal predprocedurálne skríningové hodnotenie, manažment antitrombotickej liečby, navigáciu ultrazvukom v reálnom čase a štruktúrované sledovanie po výkone.<sup>2</sup></p>
+<p>Išlo o prospektívnu monocentrickú observačnú štúdiu. Od januára 2014 do júna 2024 vykonali 1&nbsp;937 po sebe nasledujúcich perkutánnych biopsií natívnej obličky podľa jednotnej bezpečnostnej cesty ROCKY. Protokol zahŕňal predprocedurálne skríningové hodnotenie, manažment antitrombotickej liečby, navigáciu ultrazvukom v reálnom čase a štruktúrované sledovanie po výkone.<sup>2</sup></p>
 
-<p>Do analýzy vysokého rizika zaradili 1 096 biopsií u 801 pacientov s aspoň jedným preddefinovaným rizikovým znakom. To bolo 56,6 % všetkých výkonov; 26,9 % tvorili opakované biopsie. Hospitalizovaní pacienti predstavovali 842 výkonov (76,8 %), ambulantní 254 (23,2 %).<sup>2</sup></p>
+<p>Do analýzy vysokého rizika zaradili 1&nbsp;096 biopsií u 801 pacientov s aspoň jedným preddefinovaným rizikovým znakom. To bolo 56,6 % všetkých výkonov; 26,9 % tvorili opakované biopsie. Hospitalizovaní pacienti predstavovali 842 výkonov (76,8 %), ambulantní 254 (23,2 %).<sup>2</sup></p>
 
 <h2>Závažné komplikácie: 0,8 %</h2>
 
 <p>Závažné komplikácie vznikli v 9 prípadoch (0,8 %). Medzi hospitalizovanými a ambulantnými výkonmi nebol štatisticky významný rozdiel: 6 z 842 oproti 3 z 254 (p = 0,45).<sup>2</sup> V tlačovej správe ASN k prezentácii autori uviedli, že nedošlo k nefektómii ani k úmrtiu súvisiacemu s výkonom.<sup>3</sup></p>
 
-<p>V skúmaných premenných sa nezistila nezávislá asociácia so závažnými komplikáciami. Uvádza sa vek (OR 1,01 na rok, p = 0,54), pohlavie (OR 0,98 pre mužov, p = 0,89), sérový kreatinín (OR 1,007 na mg/dl, p = 0,47), odhadovaná glomerulová filtrácia (eGFR; OR 0,99 ml/min/1,73 m², p = 0,61), antiagregačná liečba (OR 1,05, p = 0,77) aj antikoagulácia (OR 0,95, p = 0,84).<sup>2</sup></p>
+<p>V skúmaných premenných sa nezistila nezávislá asociácia so závažnými komplikáciami. Uvádza sa vek (OR 1,01 na rok, p = 0,54), pohlavie (OR 0,98 pre mužov, p = 0,89), sérový kreatinín (OR 1,007 na mg/dl, p = 0,47), odhadovaná glomerulová filtrácia (eGFR; OR 0,99&nbsp;ml/min/1,73&nbsp;m², p = 0,61), antiagregačná liečba (OR 1,05, p = 0,77) aj antikoagulácia (OR 0,95, p = 0,84).<sup>2</sup></p>
 
 <div class="table-responsive" role="region" aria-label="Závažné komplikácie podľa nastavenia biopsie v kohorte ROCKY" tabindex="0">
 <table>
@@ -61,7 +61,7 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Vysokorizikové biopsie spolu</th>
-      <td>1 096</td>
+      <td>1&nbsp;096</td>
       <td>9 (0,8 %)</td>
     </tr>
     <tr>
@@ -97,15 +97,15 @@ $articles[] = [
 
 <p>Krvácanie ostáva najčastejšou komplikáciou biopsie. V prehľade Brachemiovej a Bolléeho sa uvádza, že závažné krvácanie vyžadujúce invazívnu hemostázu alebo chirurgický zákrok je v súčasnosti zriedkavé, najmä pri automatických zariadeniach a ultrazvukovom navádzaní.<sup>4</sup></p>
 
-<p>Odporúčania KHA-CARI pre renálnu biopsiu sú s týmto rámcom konzistentné. Pred výkonom sa rutinne hodnotí hemoglobín, počet trombocytov, INR a aktivovaný parciálny tromboplastínový čas (aPTT). Riziko krvácania sa znižuje úpravou antiagregačnej a antikoagulačnej liečby. U nízkorizikových pacientov sa považuje za prijateľné krátke pozorovanie, typicky 6 až 8 hodín s prepustením v ten istý deň (1B); u pacientov s najvyšším rizikom sa odporúča predĺžená hospitalizácia, často až do 24 hodín.<sup>5</sup></p>
+<p>Odporúčania KHA-CARI pre renálnu biopsiu sú s týmto rámcom konzistentné. Pred výkonom sa rutinne hodnotí hemoglobín, počet trombocytov, INR a aktivovaný parciálny tromboplastínový čas (aPTT). Riziko krvácania sa znižuje úpravou antiagregačnej a antikoagulačnej liečby. U nízkorizikových pacientov sa považuje za prijateľné krátke pozorovanie, typicky 6 až 8&nbsp;hodín s prepustením v ten istý deň (1B); u pacientov s najvyšším rizikom sa odporúča predĺžená hospitalizácia, často až do 24&nbsp;hodín.<sup>5</sup></p>
 
-<p>K desmopresínu (DDAVP) KHA-CARI neuvádza formálne odporúčanie pre nedostatok dôkazov. V negraduovaných poznámkach k starostlivosti sa uvádza, že jednotky môžu pokračovať v doterajšej praxi, pričom sa má zvážiť najmä u pacientov od štádia CKD 3b vyššie, s dôslednou kontrolou bilancie tekutín a vyhýbaním sa nadmernému príjmu tekutín počas 6 až 8 hodín po podaní; u pacientov s významnou okluzívnou kardiovaskulárnou chorobou, vrátane cievneho stentu, sa desmopresín neodporúča.<sup>5</sup></p>
+<p>K desmopresínu (DDAVP) KHA-CARI neuvádza formálne odporúčanie pre nedostatok dôkazov. V negraduovaných poznámkach k starostlivosti sa uvádza, že jednotky môžu pokračovať v doterajšej praxi, pričom sa má zvážiť najmä u pacientov od štádia CKD 3b vyššie, s dôslednou kontrolou bilancie tekutín a vyhýbaním sa nadmernému príjmu tekutín počas 6 až 8&nbsp;hodín po podaní; u pacientov s významnou okluzívnou kardiovaskulárnou chorobou, vrátane cievneho stentu, sa desmopresín neodporúča.<sup>5</sup></p>
 
 <h2>Desmopresín: súčasť lokálnej praxe, nie dokázaná príčina výsledku</h2>
 
 <p>V komentári k ROCKY Laith Al-Rabadi, M.D., upozornil, že autori rutinne používali desmopresín na prevenciu krvácania. Z dizajnu štúdie však nemožno uzavrieť, že práve desmopresín bol hlavnou príčinou nízkej miery závažných komplikácií. Zároveň zdôraznil, že závažné krvácanie sa aj napriek priaznivým číslam vyskytlo a že vysoké riziko nemá automaticky vylúčiť biopsiu, ak môže zmeniť liečbu.<sup>1</sup></p>
 
-<p>Retrospektívna kohorta Leclerca a kol. (413 biopsií natívnej obličky) ukázala, že pacienti, ktorí dostali desmopresín, mali horšiu funkciu obličiek (eGFR 28 oproti 45 ml/min/1,73 m²) a častejšie boli hospitalizovaní, no výskyt symptomatických hematómov bol porovnateľný (OR 0,39; 95 % CI 0,13 až 1,14) a potreba urgentného zobrazovania bola nižšia (OR 0,33; 95 % CI 0,11 až 0,98). Autori sami upozorňujú na limitačné dôsledky retrospektívneho dizajnu a indikácie liečby.<sup>6</sup></p>
+<p>Retrospektívna kohorta Leclerca a kol. (413 biopsií natívnej obličky) ukázala, že pacienti, ktorí dostali desmopresín, mali horšiu funkciu obličiek (eGFR 28 oproti 45&nbsp;ml/min/1,73&nbsp;m²) a častejšie boli hospitalizovaní, no výskyt symptomatických hematómov bol porovnateľný (OR 0,39; 95 % CI 0,13 až 1,14) a potreba urgentného zobrazovania bola nižšia (OR 0,33; 95 % CI 0,11 až 0,98). Autori sami upozorňujú na limitačné dôsledky retrospektívneho dizajnu a indikácie liečby.<sup>6</sup></p>
 
 <p>V praxi to znamená: desmopresín môže byť súčasťou lokálnej preventívnej schémy, no široká atribúcia efektu samotnému DDAVP nie je správna. Bez prospektívneho dizajnu zameraného na účinok desmopresínu v presne definovaných vysokorizikových skupinách ostáva jeho prínos neistý, čo je v súlade aj s postojom KHA-CARI.<sup>5,6</sup></p>
 
@@ -146,7 +146,7 @@ $articles[] = [
   <li>Leclerc S, Nadeau-Fredette AC, Elftouh N, Lafrance JP, Pichette V, Laurin LP. <em>Use of Desmopressin Prior to Kidney Biopsy in Patients With High Bleeding Risk.</em> Kidney International Reports. 2020;5(8):1180-1187. doi: <a href="https://doi.org/10.1016/j.ekir.2020.05.006" target="_blank" rel="noopener noreferrer">10.1016/j.ekir.2020.05.006</a>. PMID <a href="https://pubmed.ncbi.nlm.nih.gov/32775817/" target="_blank" rel="noopener noreferrer">32775817</a>, PMCID <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7403497/" target="_blank" rel="noopener noreferrer">PMC7403497</a>.</li>
 </ol>
 
-<p><small><em><strong>Poznámka k dôkazom:</strong> Hlavné počty (1 937 / 1 096 / 801; 56,6 %; 26,9 % opakovaných; 842 vs. 254; 9/0,8 %; p = 0,45) a OR pre vek, pohlavie, kreatinín, eGFR, antiagregáciu a antikoaguláciu boli overené v oficiálnom abstrakte ASN TH-OR001. Údaje o absencii nefektómie a úmrtia súvisiaceho s výkonom pochádzajú z tlačovej správy ASN (Newswise). Autorský zoznam KHA-CARI a Leclerca bol overený cez PubMed eutils a Crossref; Brachemi/Bollée cez PubMed (PMID 25374824). Byline Medscape (Nancy A. Melville) a komentár k desmopresínu (Al-Rabadi) boli overené z verejne dostupného textu Medscape. Peer-reviewed plný text ROCKY v čase písania nebol k dispozícii. Vlastný prínos: slovenská syntéza, oddelenie abstraktu od tlačovej správy a Medscape komentára, kalibrácia istoty k desmopresínu a limity monocentrického observačného dizajnu.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazom:</strong> Hlavné počty (1&nbsp;937 / 1&nbsp;096 / 801; 56,6 %; 26,9 % opakovaných; 842 vs. 254; 9/0,8 %; p = 0,45) a OR pre vek, pohlavie, kreatinín, eGFR, antiagregáciu a antikoaguláciu boli overené v oficiálnom abstrakte ASN TH-OR001. Údaje o absencii nefektómie a úmrtia súvisiaceho s výkonom pochádzajú z tlačovej správy ASN (Newswise). Autorský zoznam KHA-CARI a Leclerca bol overený cez PubMed eutils a Crossref; Brachemi/Bollée cez PubMed (PMID 25374824). Byline Medscape (Nancy A. Melville) a komentár k desmopresínu (Al-Rabadi) boli overené z verejne dostupného textu Medscape. Peer-reviewed plný text ROCKY v čase písania nebol k dispozícii. Vlastný prínos: slovenská syntéza, oddelenie abstraktu od tlačovej správy a Medscape komentára, kalibrácia istoty k desmopresínu a limity monocentrického observačného dizajnu.</em></small></p>
 
 <h3>Súvisiace články</h3>
 

@@ -86,8 +86,8 @@ zaužívanom režime – spravidla trikrát týždenne – len na inom mieste. D
 (Na vrátkach 2/A). Termín závisí od voľnej kapacity, preto sa ozvite vopred.</p>
 
 <ul>
-  <li>Dialyzačná sála: <a href="tel:+421947900202">0947 900 202</a></li>
-  <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940 609 480</a></li>
+  <li>Dialyzačná sála: <a href="tel:+421947900202">0947&nbsp;900&nbsp;202</a></li>
+  <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940&nbsp;609&nbsp;480</a></li>
   <li>E-mail: <a href="mailto:medimpax@impax.sk">medimpax@impax.sk</a></li>
 </ul>
 

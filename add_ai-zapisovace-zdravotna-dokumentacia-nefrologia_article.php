@@ -27,7 +27,7 @@ $articles[] = [
   <figcaption>Ilustračná poloschematická scéna. Nejde o zobrazenie konkrétneho softvéru ani reálneho záznamu.</figcaption>
 </figure>
 
-<p>Kanadská národná agentúra Canada Health Infoway spustila v júni 2025 program pre nasadenie takzvaných AI zapisovačov v primárnej starostlivosti. Do februára 2026 sa doň zapojilo viac než 12 000 lekárov primárnej starostlivosti a počet mesačne podporených stretnutí vzrástol z 244 631 na viac než 1,22 milióna. Ide o jeden z mála programov, ktorý nasadenie takéhoto nástroja aj systematicky vyhodnotil.</p>
+<p>Kanadská národná agentúra Canada Health Infoway spustila v júni 2025 program pre nasadenie takzvaných AI zapisovačov v primárnej starostlivosti. Do februára 2026 sa doň zapojilo viac než 12&nbsp;000 lekárov primárnej starostlivosti a počet mesačne podporených stretnutí vzrástol z 244&nbsp;631 na viac než 1,22 milióna. Ide o jeden z mála programov, ktorý nasadenie takéhoto nástroja aj systematicky vyhodnotil.</p>
 
 <p>Výsledky hodnotenia sú zmiešané spôsobom, ktorý stojí za pozornosť aj v slovenskom prostredí, kde tieto nástroje prichádzajú bez porovnateľného rámca. Najzaujímavejší údaj z celého hodnotenia sa pritom netýka presnosti zápisu, ale toho, kam sa ušetrený čas v skutočnosti presunul.</p>
 
@@ -48,7 +48,7 @@ $articles[] = [
     <tr><th scope="row">Väčšie zapojenie počas návštevy</th><td>viac než 80 %</td></tr>
     <tr><th scope="row">Vnímané zlepšenie kvality starostlivosti</th><td>60 %</td></tr>
     <tr><th scope="row">Dokončenie záznamu v ten istý deň</th><td>z 55,9 % na takmer 75 %</td></tr>
-    <tr><th scope="row">Ušetrený čas po 6 mesiacoch</th><td>1,11 hodiny týždenne počas pracovného času a takmer 1 hodina mimo neho</td></tr>
+    <tr><th scope="row">Ušetrený čas po 6 mesiacoch</th><td>1,11&nbsp;hodiny týždenne počas pracovného času a takmer 1 hodina mimo neho</td></tr>
   </tbody>
 </table>
 </div>

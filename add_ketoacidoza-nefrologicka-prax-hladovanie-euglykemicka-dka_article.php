@@ -75,13 +75,13 @@ $articles[] = [
   <li>hyperglykémia, osmotická diuréza, hypovolémia a celkový deficit elektrolytov.</li>
 </ul>
 
-<p>Podľa medzinárodného konsenzu z roku 2024 vyžaduje diagnóza DKA tri súčasné zložky: diabetes alebo hyperglykémiu, ketonémiu a metabolickú acidózu. Priame stanovenie β-hydroxybutyrátu v koncentrácii najmenej 3,0 mmol/l má vysokú diagnostickú presnosť.</p>
+<p>Podľa medzinárodného konsenzu z roku 2024 vyžaduje diagnóza DKA tri súčasné zložky: diabetes alebo hyperglykémiu, ketonémiu a metabolickú acidózu. Priame stanovenie β-hydroxybutyrátu v koncentrácii najmenej 3,0&nbsp;mmol/l má vysokú diagnostickú presnosť.</p>
 
 <p>Najčastejšími precipitujúcimi faktormi sú infekcia a vynechanie alebo nedostatočná aplikácia inzulínu. Dôležité sú aj infarkt myokardu, cievna mozgová príhoda, pankreatitída, trauma, chirurgický výkon, alkohol, psychické a sociálne faktory, glukokortikoidy, antipsychotiká a inhibítory imunitných kontrolných bodov.</p>
 
 <h2>Euglykemická DKA a inhibítory SGLT2</h2>
 
-<p>Euglykemická DKA je ketoacidóza s normálnou alebo len mierne zvýšenou glykémiou, zvyčajne pod 11,1 mmol/l. Diagnostické oneskorenie hrozí práve preto, že klinik môže pri normálnej glykémii ketoacidózu nesprávne vylúčiť.</p>
+<p>Euglykemická DKA je ketoacidóza s normálnou alebo len mierne zvýšenou glykémiou, zvyčajne pod 11,1&nbsp;mmol/l. Diagnostické oneskorenie hrozí práve preto, že klinik môže pri normálnej glykémii ketoacidózu nesprávne vylúčiť.</p>
 
 <p>V súčasnosti je významným rizikovým faktorom liečba inhibítorom SGLT2. Tieto lieky majú preukázaný kardiovaskulárny a nefroprotektívny prínos pri diabete, srdcovom zlyhávaní a CKD, no môžu zvýšiť riziko ketoacidózy, najmä pri relatívnom nedostatku inzulínu.</p>
 
@@ -97,13 +97,13 @@ $articles[] = [
   <li>predtým nerozpoznaný autoimunitný diabetes.</li>
 </ul>
 
-<p>Pri plánovaných operáciách sa preto inhibítor SGLT2 zvyčajne vysadzuje niekoľko dní vopred (podľa odporúčaní spravidla 3–4 dni). U pacienta liečeného inhibítorom SGLT2 s nauzeou, vracaním, bolesťou brucha, tachypnoe, malátnosťou alebo nevysvetliteľnou metabolickou acidózou treba vyšetriť β-hydroxybutyrát aj pri glykémii, ktorá nevyzerá alarmujúco.</p>
+<p>Pri plánovaných operáciách sa preto inhibítor SGLT2 zvyčajne vysadzuje niekoľko dní vopred (podľa odporúčaní spravidla 3–4&nbsp;dni). U pacienta liečeného inhibítorom SGLT2&nbsp;s nauzeou, vracaním, bolesťou brucha, tachypnoe, malátnosťou alebo nevysvetliteľnou metabolickou acidózou treba vyšetriť β-hydroxybutyrát aj pri glykémii, ktorá nevyzerá alarmujúco.</p>
 
 <h2>Kaliémia: sérová hodnota môže byť klamlivá</h2>
 
 <p>V DKA býva sérová koncentrácia draslíka normálna alebo zvýšená napriek významnému celkovému deficitu draslíka. Hlavnými mechanizmami sú nedostatok inzulínu, hypertonicita a renálne straty draslíka pri osmotickej diuréze a sekundárnom hyperaldosteronizme.</p>
 
-<p>Po začatí inzulínovej liečby sa draslík presúva do buniek a môže rýchlo vzniknúť život ohrozujúca hypokaliémia. Kaliémiu preto treba opakovane sledovať a substitúciu individualizovať. Podľa medzinárodného konsenzu z roku 2024 sa má podanie inzulínu odložiť, ak je sérový draslík pod 3,5 mmol/l (staršie odporúčania uvádzali hranicu 3,3 mmol/l), a to až do jeho doplnenia. Substitúciu draslíka treba pritom začať už vtedy, keď kaliémia klesne do horného pásma normy (približne pod 5,0–5,3 mmol/l), za priebežného monitorovania.</p>
+<p>Po začatí inzulínovej liečby sa draslík presúva do buniek a môže rýchlo vzniknúť život ohrozujúca hypokaliémia. Kaliémiu preto treba opakovane sledovať a substitúciu individualizovať. Podľa medzinárodného konsenzu z roku 2024 sa má podanie inzulínu odložiť, ak je sérový draslík pod 3,5&nbsp;mmol/l (staršie odporúčania uvádzali hranicu 3,3&nbsp;mmol/l), a to až do jeho doplnenia. Substitúciu draslíka treba pritom začať už vtedy, keď kaliémia klesne do horného pásma normy (približne pod 5,0–5,3&nbsp;mmol/l), za priebežného monitorovania.</p>
 
 <p>Hyperkaliémia pri DKA neznamená, že pacient má nadbytok draslíka. Naopak, pri rozvinutej osmotickej diuréze môže byť celkový deficit výrazný.</p>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <p><strong>Aniónový rozdiel = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong></p>
 
-<p>Normálny aniónový rozdiel je približne 8–12 mmol/l (závisí od laboratória). Pri hypoalbuminémii, ktorá je pri malnutrícii, alkoholovej ketoacidóze aj v kritickom stave bežná, býva nameraný aniónový rozdiel falošne nízky; za každých 10 g/l poklesu albumínu pod normu treba k nameranej hodnote pripočítať približne 2,5 mmol/l, inak sa zvýšený rozdiel môže prehliadnuť.</p>
+<p>Normálny aniónový rozdiel je približne 8–12&nbsp;mmol/l (závisí od laboratória). Pri hypoalbuminémii, ktorá je pri malnutrícii, alkoholovej ketoacidóze aj v kritickom stave bežná, býva nameraný aniónový rozdiel falošne nízky; za každých 10&nbsp;g/l poklesu albumínu pod normu treba k nameranej hodnote pripočítať približne 2,5&nbsp;mmol/l, inak sa zvýšený rozdiel môže prehliadnuť.</p>
 
 <p>Treba však myslieť aj na zmiešané poruchy. Pomôckou je porovnanie vzostupu aniónového rozdielu s poklesom bikarbonátu (tzv. delta pomer): ak je vzostup aniónového rozdielu výrazne menší než pokles bikarbonátu, ide o kombináciu s hyperchloremickou acidózou; ak je pokles bikarbonátu menší než vzostup rozdielu, treba pomyslieť na súčasnú metabolickú alkalózu. Vracanie tak môže vyvolať metabolickú alkalózu, hyperventilácia respiračnú alkalózu a následná liečba väčším objemom roztokov s vysokým obsahom chloridov môže viesť k hyperchloremickej metabolickej acidóze s normálnym aniónovým rozdielom.</p>
 

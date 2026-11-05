@@ -32,7 +32,7 @@ $articles[] = [
 
 <p>Pacient dnes môže prísť do ambulancie nielen so zoznamom príznakov a výsledkov, ale aj s ucelenou „diagnózou“, prognózou alebo návrhom liečby vytvoreným generatívnou umelou inteligenciou. Takýto výstup môže obsahovať užitočné všeobecné informácie, no môže byť aj nepresný, neaktuálny alebo neprimerane sebavedomý. Pre lekára preto nie je správnou reakciou ani automatické odmietnutie, ani nekritické potvrdenie.</p>
 
-<p>V nefrológii je riziko nesprávnej interpretácie osobitne vysoké. Jednorazová eGFR, kreatinín, albuminúria, proteinúria alebo sonografický opis nemajú spoľahlivý význam bez časového vývoja, klinického stavu, liekov, hydratácie a ďalších nálezov. Chatbot môže z hodnoty eGFR 52 ml/min/1,73 m² vytvoriť záver o „zlyhávaní obličiek“, hoci ešte nie je potvrdená chronicita; rovnako môže podceniť význam pretrvávajúcej albuminúrie pri relatívne zachovanej eGFR.</p>
+<p>V nefrológii je riziko nesprávnej interpretácie osobitne vysoké. Jednorazová eGFR, kreatinín, albuminúria, proteinúria alebo sonografický opis nemajú spoľahlivý význam bez časového vývoja, klinického stavu, liekov, hydratácie a ďalších nálezov. Chatbot môže z hodnoty eGFR 52&nbsp;ml/min/1,73&nbsp;m² vytvoriť záver o „zlyhávaní obličiek“, hoci ešte nie je potvrdená chronicita; rovnako môže podceniť význam pretrvávajúcej albuminúrie pri relatívne zachovanej eGFR.</p>
 
 <p>Úlohou nefrológa nie je súťažiť s chatbotom o autoritu. Úlohou je zistiť, čo pacient čítal, čo z toho je správne, čo chýba a či výstup neviedol k nebezpečnému rozhodnutiu. Neoverenú informáciu treba premeniť na bezpečný diagnostický a komunikačný plán.</p>
 

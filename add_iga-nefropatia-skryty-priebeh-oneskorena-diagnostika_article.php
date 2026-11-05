@@ -60,7 +60,7 @@ $articles[] = [
 
 <h2>Koľko oneskorenie stojí: údaje z registra RaDaR</h2>
 
-<p>Rozsah problému dobre vyjadruje analýza britského Národného registra zriedkavých ochorení obličiek (RaDaR). Zahrnula 2 299 dospelých a 140 detí s bioptickou diagnózou IgA nefropatie a s proteinúriou nad 0,5 g/deň alebo eGFR pod 60 ml/min/1,73 m².</p>
+<p>Rozsah problému dobre vyjadruje analýza britského Národného registra zriedkavých ochorení obličiek (RaDaR). Zahrnula 2&nbsp;299 dospelých a 140 detí s bioptickou diagnózou IgA nefropatie a s proteinúriou nad 0,5&nbsp;g/deň alebo eGFR pod 60&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné výsledky kohorty RaDaR pri IgA nefropatii" tabindex="0">
 <table>
@@ -69,16 +69,16 @@ $articles[] = [
     <tr><th scope="row">Medián sledovania</th><td>5,9 roka (Q1–Q3: 3,0–10,5)</td></tr>
     <tr><th scope="row">Zlyhanie obličiek alebo úmrtie počas sledovania</th><td>50 % pacientov</td></tr>
     <tr><th scope="row">Medián prežívania obličky</th><td>11,4 roka (95 % IS 10,5–12,5)</td></tr>
-    <tr><th scope="row">Priemerný vek pri zlyhaní obličiek alebo úmrtí</th><td>48 rokov</td></tr>
-    <tr><th scope="row">Zlyhanie do 10 rokov pri časovo priemernej proteinúrii 0,44–&lt;0,88 g/g</th><td>30 %</td></tr>
-    <tr><th scope="row">Zlyhanie do 10 rokov pri časovo priemernej proteinúrii &lt;0,44 g/g</th><td>približne 20 %</td></tr>
+    <tr><th scope="row">Priemerný vek pri zlyhaní obličiek alebo úmrtí</th><td>48&nbsp;rokov</td></tr>
+    <tr><th scope="row">Zlyhanie do 10&nbsp;rokov pri časovo priemernej proteinúrii 0,44–&lt;0,88&nbsp;g/g</th><td>30 %</td></tr>
+    <tr><th scope="row">Zlyhanie do 10&nbsp;rokov pri časovo priemernej proteinúrii &lt;0,44&nbsp;g/g</th><td>približne 20 %</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Dve zistenia sú pre prax rozhodujúce. Po prvé: podľa eGFR a veku pri diagnóze bola takmer u všetkých pacientov očakávaná progresia do zlyhania obličiek počas ich života, pokiaľ sa nepodarilo udržať ročný pokles eGFR na hodnote najviac 1 ml/min/1,73 m². Po druhé: <strong>pacienti, ktorých sme tradične považovali za málo rizikových</strong> — s proteinúriou pod 0,88 g/g, teda pod 100 mg/mmol — <strong>mali vysoký podiel zlyhania obličiek do desiatich rokov</strong>. Každý 10 % pokles časovo priemernej proteinúrie oproti východiskovej hodnote bol v populácii zodpovedajúcej klinickému skúšaniu spojený s pomerom rizika zlyhania obličiek alebo úmrtia 0,89 (95 % IS 0,87–0,92).</p>
+<p>Dve zistenia sú pre prax rozhodujúce. Po prvé: podľa eGFR a veku pri diagnóze bola takmer u všetkých pacientov očakávaná progresia do zlyhania obličiek počas ich života, pokiaľ sa nepodarilo udržať ročný pokles eGFR na hodnote najviac 1&nbsp;ml/min/1,73&nbsp;m². Po druhé: <strong>pacienti, ktorých sme tradične považovali za málo rizikových</strong> — s proteinúriou pod 0,88&nbsp;g/g, teda pod 100&nbsp;mg/mmol — <strong>mali vysoký podiel zlyhania obličiek do desiatich rokov</strong>. Každý 10 % pokles časovo priemernej proteinúrie oproti východiskovej hodnote bol v populácii zodpovedajúcej klinickému skúšaniu spojený s pomerom rizika zlyhania obličiek alebo úmrtia 0,89 (95 % IS 0,87–0,92).</p>
 
-<p>Pri výklade treba mať na pamäti vstupné kritérium registra: zaradení boli len pacienti s proteinúriou nad 0,5 g/deň alebo so zníženou eGFR. Ide teda o kohortu s už vyjadreným ochorením, nie o celé spektrum IgA nefropatie, a absolútne čísla nemožno preniesť na náhodne zachytenú izolovanú mikroskopickú hematúriu. Smer zistenia je však jednoznačný a je priamym protiargumentom voči predstave, že nízka proteinúria znamená bezpečnú chorobu.</p>
+<p>Pri výklade treba mať na pamäti vstupné kritérium registra: zaradení boli len pacienti s proteinúriou nad 0,5&nbsp;g/deň alebo so zníženou eGFR. Ide teda o kohortu s už vyjadreným ochorením, nie o celé spektrum IgA nefropatie, a absolútne čísla nemožno preniesť na náhodne zachytenú izolovanú mikroskopickú hematúriu. Smer zistenia je však jednoznačný a je priamym protiargumentom voči predstave, že nízka proteinúria znamená bezpečnú chorobu.</p>
 
 <h2>Čo prináša KDIGO 2025</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Voľnejší prístup k bioptickému vyšetreniu obličky.</strong> Odporúčanie podporuje skoršiu indikáciu biopsie, čo priamo adresuje oneskorené rozpoznanie.</li>
-  <li><strong>Prísnejší cieľ proteinúrie.</strong> Odporúča sa smerovať pod 0,5 g/deň, ideálne pod 0,3 g/deň, pri súčasne stabilnej eGFR. Údaje z RaDaR tento posun priamo podopierajú.</li>
+  <li><strong>Prísnejší cieľ proteinúrie.</strong> Odporúča sa smerovať pod 0,5&nbsp;g/deň, ideálne pod 0,3&nbsp;g/deň, pri súčasne stabilnej eGFR. Údaje z RaDaR tento posun priamo podopierajú.</li>
   <li><strong>Dvojzložková liečebná stratégia.</strong> Nový koncept spája liečbu, ktorá bráni tvorbe patogénneho IgA a vzniku imunokomplexov IgA/IgA a IgA/IgG, s liečbou dôsledkov už vzniknutej straty nefrónov.</li>
 </ul>
 
@@ -140,7 +140,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>IgA nefropatia je nebezpečná práve tým, že je ticho. Patogenéza beží roky, klinický prejav býva nenápadný a diagnóza prichádza často až vtedy, keď je prítomné významné štrukturálne poškodenie. Údaje z registra RaDaR ukazujú, akú cenu to má: medián prežívania obličky 11,4 roka, priemerný vek pri zlyhaní obličiek alebo úmrtí 48 rokov a vysoký podiel zlyhania do desiatich rokov aj u pacientov s nízkou proteinúriou.</p>
+<p>IgA nefropatia je nebezpečná práve tým, že je ticho. Patogenéza beží roky, klinický prejav býva nenápadný a diagnóza prichádza často až vtedy, keď je prítomné významné štrukturálne poškodenie. Údaje z registra RaDaR ukazujú, akú cenu to má: medián prežívania obličky 11,4 roka, priemerný vek pri zlyhaní obličiek alebo úmrtí 48&nbsp;rokov a vysoký podiel zlyhania do desiatich rokov aj u pacientov s nízkou proteinúriou.</p>
 
 <p>KDIGO 2025 na to odpovedá voľnejšou indikáciou biopsie, prísnejším cieľom proteinúrie a dvojzložkovou liečebnou stratégiou. Rozhodujúce však ostáva to, čo sa deje pred nefrológom: aby sa opakovaný patologický močový nález, mierny vzostup kreatinínu a skorá hypertenzia nebrali ako bezvýznamná odchýlka.</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
 
 <ul>
   <li><a href="article.php?slug=iga-nefropatia-kdigo-2025-kdoqi">IgA nefropatia podľa KDIGO 2025 a KDOQI US Commentary: od biopsie po cielenejšiu liečbu</a></li>
-  <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Praktická príloha: Algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 s ohľadom na KDOQI US Commentary</a></li>
+  <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Praktická príloha: Algoritmus manažmentu IgA nefropatie podľa KDIGO 2025&nbsp;s ohľadom na KDOQI US Commentary</a></li>
   <li><a href="article.php?slug=komplement-oblicky-iga-nefropatia-inhibicia-klinik">Komplement v nefrológii: diagnostika, infekčné riziko a cielená inhibícia pri IgA nefropatii</a></li>
   <li><a href="article.php?slug=kompletna-remisia-proteinurie-igan-protect-post-hoc">Kompletná remisia proteinúrie pri IgA nefropatii súvisí s pomalším poklesom glomerulovej filtrácie</a></li>
   <li><a href="article.php?slug=sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect">Sparsentan s inhibítorom SGLT2 pri IgA nefropatii: SPARTACUS a PROTECT OLE</a></li>

@@ -41,7 +41,7 @@ $articles[] = [
 
 <h3>1) FIND-CKD: nediabetické CKD</h3>
 
-<p>V štúdii <strong>FIND-CKD</strong> (1 584 účastníkov, 24 krajín) finerenón pridaný k štandardnej liečbe:</p>
+<p>V štúdii <strong>FIND-CKD</strong> (1&nbsp;584 účastníkov, 24 krajín) finerenón pridaný k štandardnej liečbe:</p>
 
 <ul>
   <li><strong>spomalil pokles funkcie obličiek</strong>,</li>
@@ -59,7 +59,7 @@ $articles[] = [
 
 <h3>3) Súhrnná analýza naprieč diabetickým aj nediabetickým CKD (The Lancet)</h3>
 
-<p>Súhrnná (pooled) analýza zahrnula <strong>14 574 účastníkov</strong> a finerenón v nej:</p>
+<p>Súhrnná (pooled) analýza zahrnula <strong>14&nbsp;574 účastníkov</strong> a finerenón v nej:</p>
 
 <ul>
   <li>znížil riziko <strong>zlyhania obličiek alebo progresie CKD</strong> o <strong>24 %</strong>,</li>

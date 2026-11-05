@@ -37,17 +37,17 @@ $articles[] = [
 
 <p class="article-dek"><em>Agonisty receptora glukagónu podobného peptidu 1 (GLP-1) majú pri chronickej chorobe obličiek (CKD) doložený obličkový a srdcovocievny prínos v randomizovaných štúdiách, predovšetkým mimo dialýzy. Čo sa deje so zápalom a anémiou po ich začatí už pri hemodialýze, doteraz nebolo v prospektívnej štúdii overené. Nová retrospektívna práca v časopise Kidney Medicine prináša veľkú kohortu z reálnej praxe – a zároveň jasnú hranicu: ide o asociáciu, nie o dôkaz, že agonista GLP-1 „lieči anémiu“.</em></p>
 
-<p>Lama a spoluautori porovnali dospelých so <strong>zlyhaním obličiek s náhradou funkcie (KFRT)</strong> na hemodialýze v sieti Fresenius Kidney Care v Spojených štátoch, u ktorých sa v období od 1. januára 2023 do 1. novembra 2024 začala liečba agonistom receptora GLP-1, s párovanými pacientmi bez tejto liečby. Sledovanie trvalo 12 mesiacov. Autori výslovne uvádzajú, že z observačného dizajnu <strong>nemožno odvodiť kauzalitu</strong>.</p>
+<p>Lama a spoluautori porovnali dospelých so <strong>zlyhaním obličiek s náhradou funkcie (KFRT)</strong> na hemodialýze v sieti Fresenius Kidney Care v Spojených štátoch, u ktorých sa v období od 1. januára 2023 do 1. novembra 2024 začala liečba agonistom receptora GLP-1, s párovanými pacientmi bez tejto liečby. Sledovanie trvalo 12&nbsp;mesiacov. Autori výslovne uvádzajú, že z observačného dizajnu <strong>nemožno odvodiť kauzalitu</strong>.</p>
 
 <p>Tento článok je slovenské spracovanie uvedenej primárnej práce. Čísla sú overené proti otvorenému plnému textu v <em>Kidney Medicine</em> (článok 101476, doi 10.1016/j.xkme.2026.101476). Do praxe ich treba čítať popri platnom algoritme anémie podľa KDIGO 2026, nie namiesto neho.</p>
 
 <h2>Čo štúdia skutočne porovnávala</h2>
 
-<p>Z 76 011 dospelých na hemodialýze identifikovali 2 683 (3,5 %) pacientov so začatím agonistu GLP-1. Do analýzy vstúpilo <strong>2 468 párov</strong> po párovaní 1 : 1 podľa propensity skóre (skóre pravdepodobnosti začatia liečby) na základe demografických údajov, komorbidít a vstupných laboratórnych hodnôt. Ďalších 215 pacientov so začatím liečby (8,0 %) sa nepodarilo spárovať: išlo o klinicky odľahlých pacientov s vyšším indexom telesnej hmotnosti (BMI 42,4 oproti 28,4 kg/m² v dostupnej kontrolnej skupine), mladším vekom a kratším dialyzačným vekom. Zistenia teda neplatia automaticky pre najťažšiu obezitu na dialýze.</p>
+<p>Z 76&nbsp;011 dospelých na hemodialýze identifikovali 2&nbsp;683 (3,5 %) pacientov so začatím agonistu GLP-1. Do analýzy vstúpilo <strong>2&nbsp;468 párov</strong> po párovaní 1 : 1 podľa propensity skóre (skóre pravdepodobnosti začatia liečby) na základe demografických údajov, komorbidít a vstupných laboratórnych hodnôt. Ďalších 215 pacientov so začatím liečby (8,0 %) sa nepodarilo spárovať: išlo o klinicky odľahlých pacientov s vyšším indexom telesnej hmotnosti (BMI 42,4 oproti 28,4&nbsp;kg/m² v dostupnej kontrolnej skupine), mladším vekom a kratším dialyzačným vekom. Zistenia teda neplatia automaticky pre najťažšiu obezitu na dialýze.</p>
 
-<p>Analýza bola <strong>podľa protokolu</strong>: vyžadovala neprerušenú hemodialýzu v stredisku počas 12 mesiacov od indexového dátumu a v liečenej skupine aj setrvanie na agoniste GLP-1 celých 365 dní. Vylúčení boli pacienti s neúplným sledovaním, zmenou modality, prerušením liečby, úmrtím alebo transplantáciou obličky. U liečených bol indexový dátum definovaný ako prvé zaznamenané podanie agonistu GLP-1; u kontrol bol index priradený tak, aby rozloženie dátumov zodpovedalo liečenej skupine.</p>
+<p>Analýza bola <strong>podľa protokolu</strong>: vyžadovala neprerušenú hemodialýzu v stredisku počas 12&nbsp;mesiacov od indexového dátumu a v liečenej skupine aj setrvanie na agoniste GLP-1 celých 365&nbsp;dní. Vylúčení boli pacienti s neúplným sledovaním, zmenou modality, prerušením liečby, úmrtím alebo transplantáciou obličky. U liečených bol indexový dátum definovaný ako prvé zaznamenané podanie agonistu GLP-1; u kontrol bol index priradený tak, aby rozloženie dátumov zodpovedalo liečenej skupine.</p>
 
-<p>Po párovaní boli skupiny vyvážené (absolútny štandardizovaný rozdiel &lt; 0,1). V spárovanej liečenej skupine bol vek 61,3 ± 11,9 roka, podiel žien 46,5 %, BMI 34,8 ± 8,2 kg/m² a diabetes 82,5 %. U párovaných nepoužívateľov vek 61,2 ± 13,1 roka, 46,6 % žien, BMI 35,3 ± 10,1 kg/m² a diabetes 85,6 %. Dialyzačný vek bol približne 2,5 roka. Trajektórie sa hodnotili lineárnymi zmiešanými modelmi s korekciou Bonferroniho.</p>
+<p>Po párovaní boli skupiny vyvážené (absolútny štandardizovaný rozdiel &lt; 0,1). V spárovanej liečenej skupine bol vek 61,3 ± 11,9 roka, podiel žien 46,5 %, BMI 34,8 ± 8,2&nbsp;kg/m² a diabetes 82,5 %. U párovaných nepoužívateľov vek 61,2 ± 13,1 roka, 46,6 % žien, BMI 35,3 ± 10,1&nbsp;kg/m² a diabetes 85,6 %. Dialyzačný vek bol približne 2,5 roka. Trajektórie sa hodnotili lineárnymi zmiešanými modelmi s korekciou Bonferroniho.</p>
 
 <h3>Ktoré látky vstúpili do kohorty</h3>
 
@@ -111,9 +111,9 @@ $articles[] = [
       <td>−2,20 (−3,87 až −0,53)</td>
     </tr>
     <tr>
-      <th scope="row">Kumulatívna dávka ESA za 12 mesiacov (µg)</th>
-      <td>1 881,9</td>
-      <td>2 005,8</td>
+      <th scope="row">Kumulatívna dávka ESA za 12&nbsp;mesiacov (µg)</th>
+      <td>1&nbsp;881,9</td>
+      <td>2&nbsp;005,8</td>
       <td>−123,9 (−201,7 až −46,1)</td>
     </tr>
     <tr>
@@ -149,7 +149,7 @@ $articles[] = [
 <ul>
   <li><strong>Agonista GLP-1 nie je liekom na anémiu pri KFRT.</strong> Štúdia nemerala tvrdé klinické ukazovatele anémie (transfúzie, hospitalizácie, kvalitu života) a hemoglobín sa v 12. mesiaci nelíšil.</li>
   <li><strong>ESA a železo ostávajú štandardom.</strong> Nižšia bodová a kumulatívna dávka ESA nie je dôvodom na vysadenie ani na odklon od algoritmu KDIGO 2026. Rozhodovanie o železe, ESA a inhibítoroch HIF-prolylhydroxylázy sa riadi diagnostikou, bezpečnosťou a zdieľaným rozhodovaním – nie predpisom agonistu GLP-1.</li>
-  <li><strong>Ferritín nie je čistý ukazovateľ zásob železa.</strong> Pri hemodialýze je súčasne reaktantom akútnej fázy. V 12. mesiaci bol ferritín v oboch skupinách nad 800 ng/ml (887,4 oproti 846,9 ng/ml), teda v pásme, v ktorom sa podľa KDIGO/KDOQI pri HD rutinné podávanie železa pri ferritíne &gt; 700 ng/ml spravidla pozastavuje. Saturácia transferínu ostala pod 40 % (34,0 % oproti 32,3 %). Vyšší ferritín tu nemožno čítať ako „lepšie zásoby“, ktoré treba ešte dopĺňať.</li>
+  <li><strong>Ferritín nie je čistý ukazovateľ zásob železa.</strong> Pri hemodialýze je súčasne reaktantom akútnej fázy. V 12. mesiaci bol ferritín v oboch skupinách nad 800&nbsp;ng/ml (887,4 oproti 846,9&nbsp;ng/ml), teda v pásme, v ktorom sa podľa KDIGO/KDOQI pri HD rutinné podávanie železa pri ferritíne &gt; 700&nbsp;ng/ml spravidla pozastavuje. Saturácia transferínu ostala pod 40 % (34,0 % oproti 32,3 %). Vyšší ferritín tu nemožno čítať ako „lepšie zásoby“, ktoré treba ešte dopĺňať.</li>
   <li><strong>Chýba hs-CRP.</strong> Vysoko citlivý C-reaktívny proteín (hs-CRP) sa v americkej dialyzačnej populácii bežne nemeria. Bez neho nemožno oddeliť zmenu metabolizmu železa od zmeny zápalu. NLR a počet leukocytov sú len náhradné ukazovatele.</li>
   <li><strong>Porovnanie je voči nepoužívateľom, nie voči inému antidiabetiku.</strong> Používanie inhibítorov DPP-4 bolo približne vyvážené (11,1 % oproti 9,8 %), aktívny komparátor však chýba. Časť rozdielu môže odrážať výber pacientov na agonistu GLP-1, nie účinok lieku.</li>
 </ul>
@@ -160,7 +160,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Zvyškové skreslenie</strong> napriek párovaniu podľa propensity skóre. Do modelu vstúpili aj laboratórne premenné, ktoré môžu ležať na kauzálnej dráhe medzi zápalom a spotrebou ESA – to môže asociáciu zoslabiť.</li>
-  <li><strong>Skreslenie prežitím:</strong> 12 mesiacov neprerušeného sledovania a vylúčenie úmrtí, transplantácií, zmeny modality aj prerušenia liečby vyberá pacientov, ktorí liečbu aj dialýzu „vydržali“.</li>
+  <li><strong>Skreslenie prežitím:</strong> 12&nbsp;mesiacov neprerušeného sledovania a vylúčenie úmrtí, transplantácií, zmeny modality aj prerušenia liečby vyberá pacientov, ktorí liečbu aj dialýzu „vydržali“.</li>
   <li><strong>Skreslenie zdravého používateľa</strong> a výberu liečby: hľadanie zdravotnej starostlivosti, predpisovacie zvyky a socioekonomické rozdiely sa plne zachytiť nedajú. Používatelia agonistu GLP-1 môžu byť relatívne zdravšou skupinou.</li>
   <li><strong>Chýbajú údaje pred KFRT</strong> o type, dávke, indikácii a trvaní agonistu GLP-1; adherenciu v priebehu roka súbor neumožnil hodnotiť. Medzi molekulami a dávkami autori nerozlišovali, hoci prevažoval semaglutid.</li>
   <li>Domáce lieky v dialyzačnej ambulancii nie sú vždy spoľahlivo zachytené. Diferenciálny krvný obraz sa nemeria každý mesiac, preto mesačné priemery NLR môžu kolísať.</li>
@@ -177,7 +177,7 @@ $articles[] = [
 
 <p><strong>Ak pacient agonistu GLP-1 nemá</strong>, anémia sa naďalej rieši podľa KDIGO 2026: potvrdenie anémie, hľadanie reverzibilných príčin, železo podľa ferritínu a saturácie transferínu s bezpečnostnými hranicami pri HD, potom ESA alebo HIF-PHI so zdieľaným rozhodovaním. Nižší ERI v observačnej kohorte tento algoritmus nemení.</p>
 
-<p>Pri už prebiehajúcej liečbe agonistom GLP-1 na dialýze ostáva v popredí bezpečnosť: gastrointestinálna znášanlivosť, príjem bielkovín a energie, riziko úbytku svalovej hmoty, objem a glykémia. Protokolu tejto štúdie zodpovedá práve pacient, ktorý liek 12 mesiacov neprerušil – nie ten, kto ho pre neznášanlivosť vysadil.</p>
+<p>Pri už prebiehajúcej liečbe agonistom GLP-1 na dialýze ostáva v popredí bezpečnosť: gastrointestinálna znášanlivosť, príjem bielkovín a energie, riziko úbytku svalovej hmoty, objem a glykémia. Protokolu tejto štúdie zodpovedá práve pacient, ktorý liek 12&nbsp;mesiacov neprerušil – nie ten, kto ho pre neznášanlivosť vysadil.</p>
 
 <p>Obličkový prínos semaglutidu pri CKD mimo dialýzy (štúdia FLOW) a údaje z reálnej praxe pri už prebiehajúcej hemodialýze sú <strong>dve rôzne roviny dôkazu</strong>. FLOW nemerala hs-CRP a nebola štúdiou anémie pri KFRT. Túto prácu preto nemožno čítať ako „FLOW pre dialýzu“, ani ako dôkaz, že nižší zápal vysvetľuje obličkový alebo srdcovocievny účinok.</p>
 
@@ -208,7 +208,7 @@ $articles[] = [
 
 <p><em><strong>Zdroj:</strong> Lama S, Chaudhuri S, Blankenship D, Nandorine Ban A, Usvyat L, Pecoits-Filho R, Hippen BE. Real-World Evidence for Improvements in Inflammation and Anemia Biomarkers After the Initiation of GLP-1RA in Patients on Hemodialysis. <em>Kidney Medicine</em> (2026). <a href="https://www.kidneymedicinejournal.org/article/S2590-0595(26)00238-4/fulltext" target="_blank" rel="noopener noreferrer">kidneymedicinejournal.org</a>.</em></p>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Primárnym zdrojom je otvorený plný text v <em>Kidney Medicine</em> (doi 10.1016/j.xkme.2026.101476, PII S2590-0595(26)00238-4). Autorstvo siedmich osôb overené cez Crossref 2026-09-03 (given/family: Suman Lama, Sheetal Chaudhuri, Derek Blankenship, Andrea Nandorine Ban, Len Usvyat, Roberto Pecoits-Filho, Benjamin E. Hippen) a zhoduje sa so sekciou Authors’ Full Names v plnom texte. K 3. septembru 2026 ešte nebolo PMID v PubMed ani v Europe PMC (in-press / journal pre-proof). Kumulatívna dávka ESA je v naratíve výsledkov 1 881,9 oproti 2 005,8 µg (stredný rozdiel −123,9 µg; 95 % CI −201,7 až −46,1); tabuľka 3 uvádza zaokrúhlenie 1 882,00 oproti 2 005,80 µg a −123,80 (−201,70 až −45,90). V článku používame naratívne čísla autorov. Medscape (editor Javed Choudhury) nie je spracovaný zdroj – k autorom widgetu sa nepridáva. Vek 61,3 roka a 46,5 % žien patrí spárovanej liečenej skupine v tabuľke 1, nie celej nespárovanej kohorte iniciátorov (2 683).</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Primárnym zdrojom je otvorený plný text v <em>Kidney Medicine</em> (doi 10.1016/j.xkme.2026.101476, PII S2590-0595(26)00238-4). Autorstvo siedmich osôb overené cez Crossref 2026-09-03 (given/family: Suman Lama, Sheetal Chaudhuri, Derek Blankenship, Andrea Nandorine Ban, Len Usvyat, Roberto Pecoits-Filho, Benjamin E. Hippen) a zhoduje sa so sekciou Authors’ Full Names v plnom texte. K 3. septembru 2026 ešte nebolo PMID v PubMed ani v Europe PMC (in-press / journal pre-proof). Kumulatívna dávka ESA je v naratíve výsledkov 1&nbsp;881,9 oproti 2&nbsp;005,8 µg (stredný rozdiel −123,9 µg; 95 % CI −201,7 až −46,1); tabuľka 3 uvádza zaokrúhlenie 1&nbsp;882,00 oproti 2&nbsp;005,80 µg a −123,80 (−201,70 až −45,90). V článku používame naratívne čísla autorov. Medscape (editor Javed Choudhury) nie je spracovaný zdroj – k autorom widgetu sa nepridáva. Vek 61,3 roka a 46,5 % žien patrí spárovanej liečenej skupine v tabuľke 1, nie celej nespárovanej kohorte iniciátorov (2&nbsp;683).</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok je odborné spracovanie observačnej asociácie, nie liečebný protokol ani indikačné rozšírenie agonistov GLP-1 o anémiu. Štandardom anémie pri CKD ostáva KDIGO 2026. Voľba agonistu GLP-1 pri hemodialýze patrí ošetrujúcemu lekárovi podľa schválenej indikácie, súhrnu charakteristických vlastností lieku, nutrície, znášanlivosti a komorbidít.</em></p>
 </div>

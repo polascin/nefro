@@ -72,7 +72,7 @@ $articles[] = [
 <p>U pacientov na hemodialýze je praktickým cieľom rýchla korekcia deficitu, pretože perorálne železo býva menej účinné a jeho efekt sa horšie riadi. Komentár podporuje proaktívnejší intravenózny prístup, pričom ako praktický spúšťač uvádza kombináciu:</p>
 
 <ul>
-  <li><strong>ferritín ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong>.</li>
+  <li><strong>ferritín ≤ 500&nbsp;ng/ml</strong> a <strong>TSAT ≤ 30 %</strong>.</li>
 </ul>
 
 <p>Ak má pacient na HD nízky TSAT a nie je výrazne „nasýtený“ železom, je racionálne siahnuť po IV železe namiesto čakania na efekt ESA.</p>
@@ -82,7 +82,7 @@ $articles[] = [
 <p>Komentár určuje aj hranicu, pri ktorej je rozumné železo dočasne zadržať. Rutinné podávanie železa sa odporúča prerušiť, ak je:</p>
 
 <ul>
-  <li><strong>ferritín &gt; 700 ng/ml</strong> alebo</li>
+  <li><strong>ferritín &gt; 700&nbsp;ng/ml</strong> alebo</li>
   <li><strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
@@ -131,12 +131,12 @@ $articles[] = [
 <p>Pre CKD G5D komentár uvádza praktickú iniciáciu pri:</p>
 
 <ul>
-  <li><strong>Hb približne ≤ 9,0 až 10,0 g/dl</strong>.</li>
+  <li><strong>Hb približne ≤ 9,0 až 10,0&nbsp;g/dl</strong>.</li>
 </ul>
 
 <h3>4.3 Kam cieliť pri udržiavaní</h3>
 
-<p>Pri udržiavacej liečbe sa odporúča držať <strong>Hb pod hornou hranicou približne 11,5 g/dl</strong>.</p>
+<p>Pri udržiavacej liečbe sa odporúča držať <strong>Hb pod hornou hranicou približne 11,5&nbsp;g/dl</strong>.</p>
 
 <p>Ak Hb rastie príliš vysoko, ESA treba upraviť a zároveň znovu skontrolovať, či sa neprehliadla iná príčina anémie.</p>
 
@@ -153,7 +153,7 @@ $articles[] = [
   <li><strong>Železo:</strong> pri HD je racionálne IV železo pri ferritíne ≤ 500 a TSAT ≤ 30; rutinné železo zadržať pri ferritíne &gt; 700 alebo TSAT ≥ 40.</li>
   <li><strong>FCM používaj opatrne</strong> a pri príznakoch alebo opakovanom podávaní sleduj fosfát.</li>
   <li><strong>Až potom ESA alebo HIF-PHI</strong>, vždy v zdieľanom rozhodovaní.</li>
-  <li><strong>Hb drž pod hornou hranicou približne 11,5 g/dl</strong> a dávkovanie upravuj podľa trendu a symptómov.</li>
+  <li><strong>Hb drž pod hornou hranicou približne 11,5&nbsp;g/dl</strong> a dávkovanie upravuj podľa trendu a symptómov.</li>
 </ol>
 
 <h2>Záver</h2>

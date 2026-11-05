@@ -33,11 +33,11 @@ $articles[] = [
 
 <h2>Ako bola štúdia postavená</h2>
 
-<p>Ide o prierezovú analytickú štúdiu z jedného pracoviska – oddelenia vnútorného lekárstva Bangabandhu Sheikh Mujib Medical University v Dháke. Zaradených bolo <strong>88 dospelých vo veku od 40 rokov</strong>: 59 s diabetom 2. typu a 29 zdravých kontrol z radov personálu a sprevádzajúcich príbuzných. Nábor prebiehal od 25. marca 2023 do 3. augusta 2024.</p>
+<p>Ide o prierezovú analytickú štúdiu z jedného pracoviska – oddelenia vnútorného lekárstva Bangabandhu Sheikh Mujib Medical University v Dháke. Zaradených bolo <strong>88 dospelých vo veku od 40&nbsp;rokov</strong>: 59&nbsp;s diabetom 2. typu a 29 zdravých kontrol z radov personálu a sprevádzajúcich príbuzných. Nábor prebiehal od 25. marca 2023 do 3. augusta 2024.</p>
 
-<p>Diabetici boli podľa pomeru albumínu ku kreatinínu (uACR) z jednorazovej vzorky moču rozdelení podľa KDIGO na normoalbuminúriu (&lt; 30 mg/g; 29 osôb), mikroalbuminúriu (30–300 mg/g; 15 osôb) a makroalbuminúriu (&gt; 300 mg/g; 15 osôb). Pre analýzu diagnostickej výkonnosti sa mikroalbuminúria a makroalbuminúria zlúčili ako <em>diabetická nefropatia</em> (30 osôb) a normoalbuminurickí diabetici spolu s kontrolami ako skupina bez nej.</p>
+<p>Diabetici boli podľa pomeru albumínu ku kreatinínu (uACR) z jednorazovej vzorky moču rozdelení podľa KDIGO na normoalbuminúriu (&lt; 30&nbsp;mg/g; 29 osôb), mikroalbuminúriu (30–300&nbsp;mg/g; 15 osôb) a makroalbuminúriu (&gt; 300&nbsp;mg/g; 15 osôb). Pre analýzu diagnostickej výkonnosti sa mikroalbuminúria a makroalbuminúria zlúčili ako <em>diabetická nefropatia</em> (30 osôb) a normoalbuminurickí diabetici spolu s kontrolami ako skupina bez nej.</p>
 
-<p>Podocalyxín sa meral nepriamou kompetitívnou metódou ELISA (Exocell) z 10 ml stredného prúdu moču, v riedení 1 : 2 a v duplikátoch; variačný koeficient v rámci aj medzi meraniami bol pod 8 %. Vzorky sa centrifugovali a skladovali pri −80 °C.</p>
+<p>Podocalyxín sa meral nepriamou kompetitívnou metódou ELISA (Exocell) z 10&nbsp;ml stredného prúdu moču, v riedení 1 : 2 a v duplikátoch; variačný koeficient v rámci aj medzi meraniami bol pod 8 %. Vzorky sa centrifugovali a skladovali pri −80&nbsp;°C.</p>
 
 <p>Kľúčové vylučovacie kritérium je pritom v podklade často opomínané: <strong>zo štúdie boli vylúčení všetci pacienti liečení inhibítormi angiotenzín konvertujúceho enzýmu, sartanmi aj blokátormi kalciových kanálov spomaľujúcimi frekvenciu</strong>. Autori výslovne uvádzajú, že preto nebolo potrebné žiadne vymývacie obdobie – nikto z účastníkov tieto lieky neužíval.</p>
 
@@ -89,25 +89,25 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Kontroly verzus diabetici bez albuminúrie</th>
-      <td>0,80 ng/ml</td>
+      <td>0,80&nbsp;ng/ml</td>
       <td>100,0 % / 96,4 %</td>
       <td>0,989</td>
     </tr>
     <tr>
       <th scope="row">Bez albuminúrie verzus mikroalbuminúria</th>
-      <td>1,60 ng/ml</td>
+      <td>1,60&nbsp;ng/ml</td>
       <td>86,7 % / 93,1 %</td>
       <td>0,918</td>
     </tr>
     <tr>
       <th scope="row">Mikroalbuminúria verzus makroalbuminúria</th>
-      <td>5,51 ng/ml</td>
+      <td>5,51&nbsp;ng/ml</td>
       <td>86,7 % / 93,3 %</td>
       <td>0,893</td>
     </tr>
     <tr>
       <th scope="row">Celková diskriminácia nefropatie</th>
-      <td>2,92 ng/ml</td>
+      <td>2,92&nbsp;ng/ml</td>
       <td>86,7 % / 100,0 %</td>
       <td>0,96 (95 % IS 0,90–1,00)</td>
     </tr>
@@ -115,18 +115,18 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pri prahu 2,92 ng/ml práca uvádza pozitívnu prediktívnu hodnotu 100,0 %, negatívnu 89,9 % a presnosť 93,2 %. Vo Firthovej penalizovanej logistickej regresii – použitej pre kvázi úplnú separáciu skupín – bolo každé zvýšenie o 1 ng/ml spojené s upraveným pomerom šancí 22,67 (95 % IS 2,47–208,09; p = 0,006) po úprave na vek, pohlavie, trvanie diabetu a systolický tlak. Sami autori tento odhad pre extrémne široký interval označujú za exploračný.</p>
+<p>Pri prahu 2,92&nbsp;ng/ml práca uvádza pozitívnu prediktívnu hodnotu 100,0 %, negatívnu 89,9 % a presnosť 93,2 %. Vo Firthovej penalizovanej logistickej regresii – použitej pre kvázi úplnú separáciu skupín – bolo každé zvýšenie o 1&nbsp;ng/ml spojené s upraveným pomerom šancí 22,67 (95 % IS 2,47–208,09; p = 0,006) po úprave na vek, pohlavie, trvanie diabetu a systolický tlak. Sami autori tento odhad pre extrémne široký interval označujú za exploračný.</p>
 
 <h2>Prečo tieto čísla nemožno čítať ako diagnostickú validáciu</h2>
 
 <ol>
   <li><strong>Referenčný štandard je totožný s tým, čo sa má predpovedať.</strong> Diabetická nefropatia tu nebola potvrdená biopsiou ani dlhodobým priebehom – bola <em>definovaná</em> hodnotou uACR. Podocalyxín teda nepredpovedá ochorenie, ale zaraďuje pacienta do kategórie albuminúrie. Plocha pod krivkou 0,96 hovorí o zhode dvoch ukazovateľov poškodenia glomerulu meraných v tej istej vzorke moču v ten istý deň.</li>
-  <li><strong>Prahy pochádzajú z toho istého súboru, v ktorom sa aj testovali.</strong> Bootstrapová korekcia optimizmu s 2 000 opakovaniami je správny krok a ukázala minimálny optimizmus, no ide stále o <em>internú</em> validáciu. Externú validáciu v nezávislej kohorte autori sami označujú za podmienku klinického použitia.</li>
+  <li><strong>Prahy pochádzajú z toho istého súboru, v ktorom sa aj testovali.</strong> Bootstrapová korekcia optimizmu s 2&nbsp;000 opakovaniami je správny krok a ukázala minimálny optimizmus, no ide stále o <em>internú</em> validáciu. Externú validáciu v nezávislej kohorte autori sami označujú za podmienku klinického použitia.</li>
   <li><strong>Označenie „skorý biomarker“ ide nad rámec dizajnu.</strong> Prierezová štúdia nevie ukázať, že marker stúpa <em>skôr</em> než albuminúria – na to treba longitudinálne sledovanie normoalbuminurických diabetikov až po vznik albuminúrie alebo po pokles filtrácie.</li>
   <li><strong>Vylúčenie blokády RAAS zásadne obmedzuje prenositeľnosť.</strong> V bežnej nefrologickej ambulancii je pacient s diabetom 2. typu a albuminúriou takmer vždy liečený sartanom alebo ACE inhibítorom, čoraz častejšie aj inhibítorom SGLT2 alebo finerenónom. Presne táto populácia v štúdii chýba, pričom všetky uvedené lieky albuminúriu znižujú a s ňou pravdepodobne aj koncentráciu podocytárnych fragmentov.</li>
   <li><strong>Prediktívne hodnoty závisia od prevalencie.</strong> Pozitívna prediktívna hodnota 100 % vyplýva z toho, že v súbore nebol ani jeden falošne pozitívny výsledok (špecificita 29/29). Pri <em>bodovej</em> špecificite presne 100 % by nižšia prevalencia sama osebe PPV nezmenila, lebo bez falošne pozitívnych výsledkov je PPV 100 % pri akejkoľvek prevalencii. Rozhodujúca je <strong>neistota</strong> tohto odhadu: 29 z 29 zodpovedá 95 % intervalu spoľahlivosti približne 88 – 100 % (Clopper-Pearson). Len čo je skutočná špecificita čo i len o niekoľko percent nižšia, PPV pri zriedkavejšej albuminúrii klesá podstatne. Preto sú potrebné externá validácia a odhad špecificity s intervalom, nie bodová hodnota.</li>
-  <li><strong>Drobná nezrovnalosť v samotnej práci.</strong> Pri uvádzaných počtoch správne klasifikovaných (26 z 30 s nefropatiou a 29 z 29 bez nej) vychádza negatívna prediktívna hodnota približne 88 %, nie 89,9 %. Senzitivita, špecificita, pozitívna prediktívna hodnota aj presnosť 93,2 % sedia. Ide zjavne o preklep, ktorý však prevzali aj sekundárne správy.</li>
-  <li><strong>Súbor je malý a jednocentrický.</strong> Osemdesiatosem ľudí, z toho 30 s cieľovým stavom, je rozsah vhodný na prieskumnú prácu, nie na stanovenie prahov pre prax.</li>
+  <li><strong>Drobná nezrovnalosť v samotnej práci.</strong> Pri uvádzaných počtoch správne klasifikovaných (26 z 30&nbsp;s nefropatiou a 29 z 29 bez nej) vychádza negatívna prediktívna hodnota približne 88 %, nie 89,9 %. Senzitivita, špecificita, pozitívna prediktívna hodnota aj presnosť 93,2 % sedia. Ide zjavne o preklep, ktorý však prevzali aj sekundárne správy.</li>
+  <li><strong>Súbor je malý a jednocentrický.</strong> Osemdesiatosem ľudí, z toho 30&nbsp;s cieľovým stavom, je rozsah vhodný na prieskumnú prácu, nie na stanovenie prahov pre prax.</li>
 </ol>
 
 <h2>Vecná kontrola tvrdení</h2>
@@ -144,7 +144,7 @@ $articles[] = [
     <tr>
       <th scope="row">Podocalyxín v moči stúpa s narastajúcou albuminúriou</th>
       <td>Potvrdené</td>
-      <td>Z 1,16 ± 0,39 na 7,28 ± 2,05 ng/ml; p &lt; 0,001 pre trend.</td>
+      <td>Z 1,16 ± 0,39 na 7,28 ± 2,05&nbsp;ng/ml; p &lt; 0,001 pre trend.</td>
     </tr>
     <tr>
       <th scope="row">Koreluje s uACR (r = 0,79) a nepriamo s eGFR (r = −0,51)</th>

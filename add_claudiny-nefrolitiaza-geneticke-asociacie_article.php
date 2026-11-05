@@ -30,7 +30,7 @@ $articles[] = [
 
 <p>Genetická predispozícia k nefrolitiáze zahŕňa zriedkavé monogénové ochorenia aj početné varianty s menším účinkom na riziko tvorby konkrementov. Medzi týmito skupinami však nemusí existovať ostrá hranica. Gény zodpovedné za závažné dedičné tubulopatie môžu obsahovať aj varianty, ktoré ovplyvňujú náchylnosť na nefrolitiázu bez rozvoja úplného syndrómu.</p>
 
-<p>Štúdia Iris Y. Liuovej a spoluautorov publikovaná v časopise <em>Clinical Kidney Journal</em> skúmala túto možnosť v rodine génov kódujúcich klaudíny. Analýza 415 237 účastníkov UK Biobank identifikovala nové asociácie medzi genetickými variantmi a nefrolitiázou vrátane vzácnych heterozygotných variantov génu <em>CLDN16</em>. Výsledky rozširujú poznatky o genetickej predispozícii, zatiaľ však neposkytujú podklad na plošný genetický skríning ani na liečbu riadenú konkrétnym klaudínovým variantom. [1]</p>
+<p>Štúdia Iris Y. Liuovej a spoluautorov publikovaná v časopise <em>Clinical Kidney Journal</em> skúmala túto možnosť v rodine génov kódujúcich klaudíny. Analýza 415&nbsp;237 účastníkov UK Biobank identifikovala nové asociácie medzi genetickými variantmi a nefrolitiázou vrátane vzácnych heterozygotných variantov génu <em>CLDN16</em>. Výsledky rozširujú poznatky o genetickej predispozícii, zatiaľ však neposkytujú podklad na plošný genetický skríning ani na liečbu riadenú konkrétnym klaudínovým variantom. [1]</p>
 
 <h2>Klaudíny regulujú transport medzi bunkami nefrónu</h2>
 
@@ -46,9 +46,9 @@ $articles[] = [
 
 <p>Hlavná analýza zahŕňala nepríbuzných účastníkov európskeho genetického pôvodu:</p>
 <ul>
-  <li>9 009 osôb s evidovanou nefrolitiázou,</li>
-  <li>406 228 kontrol,</li>
-  <li>spolu 415 237 účastníkov.</li>
+  <li>9&nbsp;009 osôb s evidovanou nefrolitiázou,</li>
+  <li>406&nbsp;228 kontrol,</li>
+  <li>spolu 415&nbsp;237 účastníkov.</li>
 </ul>
 
 <p>Prípady boli identifikované prostredníctvom diagnostických a výkonových kódov. Kontrolnú skupinu teda tvorili osoby bez takto zaznamenanej nefrolitiázy, nie osoby s celoživotne spoľahlivo vylúčenou tvorbou konkrementov. Takáto klasifikácia môže prehliadnuť epizódy ošetrené mimo nemocnice alebo klinicky nemé konkrementy.</p>
@@ -65,13 +65,13 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Variant</th><th scope="col">Identifikátor</th><th scope="col">Pomer šancí</th><th scope="col">Nositelia medzi prípadmi a kontrolami</th></tr></thead>
   <tbody>
-    <tr><th scope="row"><em>CLDN16</em> p.Gly57Arg</th><td>rs747654138</td><td>42,2</td><td>4 z 9 009 a 5 z 406 208</td></tr>
-    <tr><th scope="row"><em>CLDN16</em> p.Arg146His</th><td>rs772241737</td><td>60,5</td><td>2 z 9 009 a 1 z 406 213</td></tr>
+    <tr><th scope="row"><em>CLDN16</em> p.Gly57Arg</th><td>rs747654138</td><td>42,2</td><td>4 z 9&nbsp;009 a 5 z 406&nbsp;208</td></tr>
+    <tr><th scope="row"><em>CLDN16</em> p.Arg146His</th><td>rs772241737</td><td>60,5</td><td>2 z 9&nbsp;009 a 1 z 406&nbsp;213</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Pre p.Gly57Arg autori uvádzajú <em>P</em> = 9,5 × 10<sup>−8</sup>. Asociácia pretrvala aj pri 1 000 permutáciách s empirickou hodnotou <em>P</em> = 0,009. Pri variante p.Arg146His bola hodnota <em>P</em> = 8,12 × 10<sup>−4</sup>. Mierne odlišné počty kontrol pri jednotlivých variantoch vyplývajú z dostupnosti kvalitného genotypu pre daný variant. [1]</p>
+<p>Pre p.Gly57Arg autori uvádzajú <em>P</em> = 9,5 × 10<sup>−8</sup>. Asociácia pretrvala aj pri 1&nbsp;000 permutáciách s empirickou hodnotou <em>P</em> = 0,009. Pri variante p.Arg146His bola hodnota <em>P</em> = 8,12 × 10<sup>−4</sup>. Mierne odlišné počty kontrol pri jednotlivých variantoch vyplývajú z dostupnosti kvalitného genotypu pre daný variant. [1]</p>
 
 <p><strong>Vysoké pomery šancí treba posudzovať spolu s veľmi malým počtom nositeľov.</strong> Odhad založený na troch nositeľoch je mimoriadne neistý a jeho veľkosť môže podstatne zmeniť jediný ďalší prípad alebo kontrola. Navyše ide o pomer šancí, nie o absolútne ani celoživotné riziko.</p>
 
@@ -96,7 +96,7 @@ $articles[] = [
 <h2>Hranice dôkazov</h2>
 
 <h3>Externá replikácia kľúčových vzácnych variantov chýba</h3>
-<p>Významné výsledky autori preverovali aj u 7 140 účastníkov juhoázijského a 7 278 účastníkov afrického genetického pôvodu, stále však v rámci UK Biobank. Pri známom variante <em>CLDN14</em> zaznamenali v skupine afrického pôvodu nominálne významný výsledok s rovnakým smerom účinku. Nemožno z toho vyvodiť, že sa všetky nové asociácie potvrdili vo všetkých populačných skupinách.</p>
+<p>Významné výsledky autori preverovali aj u 7&nbsp;140 účastníkov juhoázijského a 7&nbsp;278 účastníkov afrického genetického pôvodu, stále však v rámci UK Biobank. Pri známom variante <em>CLDN14</em> zaznamenali v skupine afrického pôvodu nominálne významný výsledok s rovnakým smerom účinku. Nemožno z toho vyvodiť, že sa všetky nové asociácie potvrdili vo všetkých populačných skupinách.</p>
 
 <h3>Chýbajú rozhodujúce metabolické údaje</h3>
 <p>UK Biobank nemala k dispozícii 24-hodinové vylučovanie vápnika a fosfátov močom. Štúdia preto nedokáže priamo preukázať, že konkrétny variant zvyšuje riziko prostredníctvom hyperkalciúrie alebo zmenenej fosfatúrie. Výsledky nemožno bez ďalších údajov priradiť ku konkrétnemu chemickému zloženiu konkrementov.</p>
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Štúdia podporuje dôsledné zvažovanie genetickej etiológie pri neobvyklom alebo závažnom priebehu nefrolitiázy. Sama však nevytvára nový klinický algoritmus.</p>
 
-<p>Naratívny prehľad Geraghtyho a spoluautorov odporúča zvažovať panelové genetické vyšetrenie u detí, dospelých mladších ako 25 rokov a starších pacientov s charakteristikami vysokorizikového ochorenia, vždy v rámci širšieho metabolického vyšetrenia. Ide o odporúčanie autorov prehľadu, nie o výsledok intervenčnej štúdie ani automaticky záväzný univerzálny štandard. [2]</p>
+<p>Naratívny prehľad Geraghtyho a spoluautorov odporúča zvažovať panelové genetické vyšetrenie u detí, dospelých mladších ako 25&nbsp;rokov a starších pacientov s charakteristikami vysokorizikového ochorenia, vždy v rámci širšieho metabolického vyšetrenia. Ide o odporúčanie autorov prehľadu, nie o výsledok intervenčnej štúdie ani automaticky záväzný univerzálny štandard. [2]</p>
 
 <p>Klinické podozrenie na dedičnú tubulopatiu zvyšuje najmä kombinácia skorého začiatku, opakovanej alebo obojstrannej tvorby konkrementov, nefrokalcinózy, rodinnej záťaže, chronickej choroby obličiek a nevysvetlenej poruchy minerálového metabolizmu. Pri podozrení na FHHNC má osobitný význam spoločné hodnotenie magneziémie, kalciúrie, funkcie obličiek a zobrazovacieho nálezu. Genetika nenahrádza analýzu konkrementu ani metabolické vyšetrenie; dopĺňa ich.</p>
 

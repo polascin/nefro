@@ -94,7 +94,7 @@ if (isLoggedIn() && calculatorIsHistoryLoadRequest()) {
         }
         $form["max_row"] = (string)max(EGFR_SLOPE_MIN_ROWS, $pCount);
         $maxRow = (int)$form["max_row"];
-        // Uložené hodnoty sú vždy v kanonických ml/min/1,73 m².
+        // Uložené hodnoty sú vždy v kanonických ml/min/1,73 m².
         $form["egfr_unit"] = EGFR_UNIT_ML_MIN;
         $messages[] = "Údaje z histórie boli načítané do formulára.";
     }
@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         $newMax = max(EGFR_SLOPE_MIN_ROWS, count($history));
                         $form["max_row"] = (string)$newMax;
                         $maxRow = $newMax;
-                        // Hodnoty z histórie sú v kanonických ml/min/1,73 m².
+                        // Hodnoty z histórie sú v kanonických ml/min/1,73 m².
                         $form["egfr_unit"] = EGFR_UNIT_ML_MIN;
                         $messages[] = "Načítaných " . count($history) . " meraní eGFR z histórie pacienta. Môžete pridať ďalšie hodnoty a vypočítať trend.";
                     }
@@ -170,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($e !== null) {
                 $e = calculatorEgfrToMlMin($e, $form["egfr_unit"]);
                 if ($e > 200.0) {
-                    $errors[] = "eGFR v riadku $i je mimo realistického rozsahu (0–200 ml/min/1,73 m²).";
+                    $errors[] = "eGFR v riadku $i je mimo realistického rozsahu (0–200 ml/min/1,73 m²).";
                     $e = null;
                 }
             }
@@ -269,7 +269,7 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Rýchlosť poklesu eGFR (Slope)</h2>
-                <p class="auth-subtitle">KDIGO 2024 zdôrazňuje potrebu identifikovať tzv. "fast progressors" (pokles eGFR &gt; 5 ml/min/rok).</p>
+                <p class="auth-subtitle">KDIGO 2024 zdôrazňuje potrebu identifikovať tzv. "fast progressors" (pokles eGFR &gt; 5 ml/min/rok).</p>
 
                 <details open class="calc-formula-box">
                     <summary>Vzorec: rýchlosť poklesu eGFR (lineárna regresia)</summary>
@@ -277,8 +277,8 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \text{Slope} = \frac{\sum_i (x_i - \bar{x})(y_i - \bar{y})}{\sum_i (x_i - \bar{x})^2} \]</div>
                         <div class="calc-formula-vars">
                             $x_i$ = čas od prvého merania (roky) &bull;
-                            $y_i$ = eGFR (ml/min/1,73 m²) &bull;
-                            výstup v ml/min/1,73 m² za rok
+                            $y_i$ = eGFR (ml/min/1,73 m²) &bull;
+                            výstup v ml/min/1,73 m² za rok
                         </div>
                     </div>
                 </details>
@@ -414,7 +414,7 @@ if (isLoggedIn()) {
             return unitSelect ? unitSelect.value : '<?= EGFR_UNIT_ML_MIN ?>';
         }
         function currentUnitLabel() {
-            return currentUnit() === '<?= EGFR_UNIT_ML_S ?>' ? 'ml/s/1,73 m²' : 'ml/min/1,73 m²';
+            return currentUnit() === '<?= EGFR_UNIT_ML_S ?>' ? 'ml/s/1,73 m²' : 'ml/min/1,73 m²';
         }
         function currentUnitPlaceholder() {
             return currentUnit() === '<?= EGFR_UNIT_ML_S ?>' ? 'napr. 0,75' : 'napr. 45,2';

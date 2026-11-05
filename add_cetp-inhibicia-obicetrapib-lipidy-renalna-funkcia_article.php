@@ -44,15 +44,15 @@ $articles[] = [
 
 <p>Dejiny triedy sa často zhrnú do vety „CETP inhibítory zlyhali“. Toto zhrnutie je nepresné a pre pochopenie súčasnej situácie zavádzajúce.</p>
 
-<p><strong>Torcetrapib</strong> v štúdii ILLUMINATE u 15 067 vysokorizikových pacientov zvýšil HDL-C o 72,1 % a znížil LDL-C o 24,9 %. Súčasne však zvýšil systolický tlak o 5,4 mm Hg, znížil kálium a zvýšil sodík, bikarbonát a aldosterón. Štúdiu ukončili predčasne pre zvýšené riziko kardiovaskulárnych príhod (pomer rizík 1,25; 95 % IS 1,09–1,44; p = 0,001) a úmrtia z akejkoľvek príčiny (pomer rizík 1,58; 95 % IS 1,14–2,19; p = 0,006). Autori už vtedy upozornili na dôkazy o mimocieľovom (off-target) mineralokortikoidnom účinku, pričom nevylúčili ani podiel samotnej inhibície CETP.</p>
+<p><strong>Torcetrapib</strong> v štúdii ILLUMINATE u 15&nbsp;067 vysokorizikových pacientov zvýšil HDL-C o 72,1 % a znížil LDL-C o 24,9 %. Súčasne však zvýšil systolický tlak o 5,4&nbsp;mm Hg, znížil kálium a zvýšil sodík, bikarbonát a aldosterón. Štúdiu ukončili predčasne pre zvýšené riziko kardiovaskulárnych príhod (pomer rizík 1,25; 95 % IS 1,09–1,44; p = 0,001) a úmrtia z akejkoľvek príčiny (pomer rizík 1,58; 95 % IS 1,14–2,19; p = 0,006). Autori už vtedy upozornili na dôkazy o mimocieľovom (off-target) mineralokortikoidnom účinku, pričom nevylúčili ani podiel samotnej inhibície CETP.</p>
 
-<p><strong>Anacetrapib</strong> v štúdii REVEAL u 30 449 pacientov s aterosklerotickým cievnym ochorením na intenzívnej liečbe atorvastatínom priniesol opačný výsledok. Počas mediánu sledovania 4,1 roka sa primárny ukazovateľ – prvá veľká koronárna príhoda – vyskytol u 10,8 % oproti 11,8 % pacientov (pomer početností 0,91; 95 % IS 0,85–0,97; p = 0,004). Non-HDL cholesterol klesol o 18 %. Rozdiely v riziku úmrtia, nádorov ani iných závažných nežiaducich udalostí neboli významné.</p>
+<p><strong>Anacetrapib</strong> v štúdii REVEAL u 30&nbsp;449 pacientov s aterosklerotickým cievnym ochorením na intenzívnej liečbe atorvastatínom priniesol opačný výsledok. Počas mediánu sledovania 4,1 roka sa primárny ukazovateľ – prvá veľká koronárna príhoda – vyskytol u 10,8 % oproti 11,8 % pacientov (pomer početností 0,91; 95 % IS 0,85–0,97; p = 0,004). Non-HDL cholesterol klesol o 18 %. Rozdiely v riziku úmrtia, nádorov ani iných závažných nežiaducich udalostí neboli významné.</p>
 
 <p>Poučenie preto neznie „inhibícia CETP škodí“, ale presnejšie: <strong>problém torcetrapibu bol mimocieľový, nie triedny</strong>, a REVEAL ukázal, že inhibícia CETP dokáže znížiť počet koronárnych príhod – úmerne tomu, o koľko zníži aterogénnu záťaž. Anacetrapib sa ďalej nevyvíjal pre nepriaznivé farmakokinetické vlastnosti (hromadenie v tukovom tkanive), nie pre nedostatok účinnosti. Dalcetrapib a evacetrapib zlyhali vo výsledkových štúdiách, obe však mali len malý alebo žiadny vplyv na LDL-C a apoB – čo je s predchádzajúcim vysvetlením v súlade.</p>
 
 <h2>Obicetrapib: čo je doložené zo štúdií fázy 3</h2>
 
-<p>Obicetrapib je vysoko selektívny hydrofilný inhibítor CETP v dávke 10 mg denne. Tri dokončené štúdie fázy 3 mali zhodne za primárny ukazovateľ percentuálnu zmenu LDL-C, nie klinické príhody.</p>
+<p>Obicetrapib je vysoko selektívny hydrofilný inhibítor CETP v dávke 10&nbsp;mg denne. Tri dokončené štúdie fázy 3 mali zhodne za primárny ukazovateľ percentuálnu zmenu LDL-C, nie klinické príhody.</p>
 
 <div class="table-responsive" role="region" aria-label="Prehľad dokončených štúdií fázy 3 s obicetrapibom" tabindex="0">
 <table>
@@ -66,17 +66,17 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">BROOKLYN</th>
-      <td>354 pacientov s heterozygotnou familiárnou hypercholesterolémiou a LDL-C ≥ 1,8 mmol/l (70 mg/dl) napriek maximálne tolerovanej liečbe; 87 % na statíne; randomizácia 2 : 1 na 365 dní</td>
+      <td>354 pacientov s heterozygotnou familiárnou hypercholesterolémiou a LDL-C ≥ 1,8&nbsp;mmol/l (70&nbsp;mg/dl) napriek maximálne tolerovanej liečbe; 87 % na statíne; randomizácia 2 : 1 na 365&nbsp;dní</td>
       <td>LDL-C oproti placebu −36,3 % (95 % IS −42,2 až −30,4; p &lt; 0,0001); apoB −24,4 %; non-HDL-C −34,5 %; Lp(a) −45,9 %; HDL-C +138,7 %</td>
     </tr>
     <tr>
       <th scope="row">BROADWAY</th>
-      <td>2 530 pacientov s heterozygotnou familiárnou hypercholesterolémiou alebo anamnézou ASCVD na maximálne tolerovanej liečbe; priemerný vek 65 rokov, 34 % žien, vstupný LDL-C 98 mg/dl; randomizácia 2 : 1 na 365 dní</td>
+      <td>2&nbsp;530 pacientov s heterozygotnou familiárnou hypercholesterolémiou alebo anamnézou ASCVD na maximálne tolerovanej liečbe; priemerný vek 65&nbsp;rokov, 34 % žien, vstupný LDL-C 98&nbsp;mg/dl; randomizácia 2 : 1 na 365&nbsp;dní</td>
       <td>LDL-C −29,9 % (95 % IS −32,1 až −27,8) oproti +2,7 % pri placebe; rozdiel medzi skupinami −32,6 percentuálneho bodu (95 % IS −35,8 až −29,5; p &lt; 0,001)</td>
     </tr>
     <tr>
       <th scope="row">TANDEM</th>
-      <td>407 pacientov s ASCVD alebo vysokým rizikom, prípadne so statínovou intoleranciou; štyri ramená 1 : 1 : 1 : 1 (fixná kombinácia, obicetrapib, ezetimib, placebo) na 84 dní</td>
+      <td>407 pacientov s ASCVD alebo vysokým rizikom, prípadne so statínovou intoleranciou; štyri ramená 1 : 1 : 1 : 1 (fixná kombinácia, obicetrapib, ezetimib, placebo) na 84&nbsp;dní</td>
       <td>Fixná kombinácia oproti placebu −48,6 % (95 % IS −58,3 až −38,9), oproti ezetimibu −27,9 %, oproti samotnému obicetrapibu −16,8 %; samotný obicetrapib oproti placebu −31,9 %</td>
     </tr>
   </tbody>
@@ -91,11 +91,11 @@ $articles[] = [
 
 <p>Najzaujímavejšou časťou pre nefrológa je združená post hoc analýza štúdií BROADWAY a BROOKLYN, ktorú publikovala skupina na čele s Liffertom Vogtom. Vychádzala z hypotézy, že nízky alebo dysfunkčný HDL prispieva k progresívnemu zhoršovaniu obličkových funkcií.</p>
 
-<p>Do analýzy eGFR vstúpilo 2 832 a do analýzy pomeru albumín/kreatinín v moči (UACR) 1 897 randomizovaných účastníkov. Výsledky:</p>
+<p>Do analýzy eGFR vstúpilo 2&nbsp;832 a do analýzy pomeru albumín/kreatinín v moči (UACR) 1&nbsp;897 randomizovaných účastníkov. Výsledky:</p>
 
 <ul>
-  <li>Obicetrapib spomalil pokles obličkových funkcií oproti placebu – priemerný rozdiel <strong>0,67 ml/min/1,73 m²</strong> (nominálne p = 0,02); v analýze podľa skutočného užívania liečby 0,82 ml/min/1,73 m² (nominálne p = 0,0139).</li>
-  <li>Pokles eGFR pod 15 ml/min/1,73 m²: 0 oproti 0,2 %. Pokles eGFR o ≥ 40 %: 1,3 oproti 1,9 %.</li>
+  <li>Obicetrapib spomalil pokles obličkových funkcií oproti placebu – priemerný rozdiel <strong>0,67&nbsp;ml/min/1,73&nbsp;m²</strong> (nominálne p = 0,02); v analýze podľa skutočného užívania liečby 0,82&nbsp;ml/min/1,73&nbsp;m² (nominálne p = 0,0139).</li>
+  <li>Pokles eGFR pod 15&nbsp;ml/min/1,73&nbsp;m²: 0 oproti 0,2 %. Pokles eGFR o ≥ 40 %: 1,3 oproti 1,9 %.</li>
   <li>Zložený obličkový ukazovateľ: 1,9 oproti 3,0 %; pomer rizík 0,64, <strong>nominálne p = 0,08 – teda bez štatistickej významnosti</strong>.</li>
   <li>Vyšší dosiahnutý HDL-C sa spájal s nižším rizikom zloženého obličkového ukazovateľa (nominálne p &lt; 0,0001 v splajnovej analýze), nezávisle od vstupného HDL-C a eGFR.</li>
   <li><strong>Ročná percentuálna zmena UACR sa medzi skupinami významne nelíšila.</strong></li>
@@ -105,9 +105,9 @@ $articles[] = [
 
 <p>Pri čítaní týchto výsledkov treba mať na pamäti štyri obmedzenia, ktoré ich pre nefrologickú prax zásadne ohraničujú.</p>
 
-<p><strong>Populácia nemala chorobu obličiek.</strong> Priemerná vstupná eGFR bola 84,4 ± 17,9 ml/min/1,73 m² v štúdii BROADWAY a 91,8 ± 17,8 v štúdii BROOKLYN. Medián UACR bol 11,0 a 8,0 mg/g, teda v pásme normoalbuminúrie. Išlo o pacientov s prakticky zachovanou funkciou obličiek, nie o populáciu s CKD. Dialyzovaní ani transplantovaní pacienti zaradení neboli.</p>
+<p><strong>Populácia nemala chorobu obličiek.</strong> Priemerná vstupná eGFR bola 84,4 ± 17,9&nbsp;ml/min/1,73&nbsp;m² v štúdii BROADWAY a 91,8 ± 17,8 v štúdii BROOKLYN. Medián UACR bol 11,0 a 8,0&nbsp;mg/g, teda v pásme normoalbuminúrie. Išlo o pacientov s prakticky zachovanou funkciou obličiek, nie o populáciu s CKD. Dialyzovaní ani transplantovaní pacienti zaradení neboli.</p>
 
-<p><strong>Veľkosť účinku je malá a jej klinický význam neznámy.</strong> Rozdiel 0,67 ml/min/1,73 m² za jeden rok sa pohybuje na hranici biologickej variability merania a ani zďaleka nedosahuje prahy, ktoré sa uznávajú ako náhradné ukazovatele progresie CKD.</p>
+<p><strong>Veľkosť účinku je malá a jej klinický význam neznámy.</strong> Rozdiel 0,67&nbsp;ml/min/1,73&nbsp;m² za jeden rok sa pohybuje na hranici biologickej variability merania a ani zďaleka nedosahuje prahy, ktoré sa uznávajú ako náhradné ukazovatele progresie CKD.</p>
 
 <p><strong>Všetky hodnoty p sú nominálne a analýza je post hoc.</strong> Nebola korigovaná na mnohonásobné porovnávanie. Zložený obličkový ukazovateľ – teda jediný výstup, ktorý by sa priblížil klinickej príhode – významnosť nedosiahol.</p>
 
@@ -117,7 +117,7 @@ $articles[] = [
 
 <h2>Registračný stav v Európskej únii</h2>
 
-<p>Na rozdiel od stavu, ktorý sa často uvádza, obicetrapib už nie je iba skúmanou látkou. Výbor CHMP Európskej liekovej agentúry prijal 23. júla 2026 kladné stanovisko a liek je centralizovane registrovaný v dvoch podobách: <strong>Ubeslo</strong> (obicetrapib 10 mg) a <strong>Evlarco</strong> (fixná kombinácia obicetrapib/ezetimib). Držiteľom registrácie je A. Menarini International Licensing S.A.</p>
+<p>Na rozdiel od stavu, ktorý sa často uvádza, obicetrapib už nie je iba skúmanou látkou. Výbor CHMP Európskej liekovej agentúry prijal 23. júla 2026 kladné stanovisko a liek je centralizovane registrovaný v dvoch podobách: <strong>Ubeslo</strong> (obicetrapib 10&nbsp;mg) a <strong>Evlarco</strong> (fixná kombinácia obicetrapib/ezetimib). Držiteľom registrácie je A. Menarini International Licensing S.A.</p>
 
 <p>Schválená indikácia znie: liečba primárnej hypercholesterolémie alebo zmiešanej dyslipidémie u dospelých ako doplnok k diéte – v kombinácii so statínom u pacientov, ktorí nedosahujú cieľové hodnoty LDL-C, alebo samostatne či s inou liečbou u pacientov netolerujúcich statíny.</p>
 
@@ -125,7 +125,7 @@ $articles[] = [
 
 <h2>Čo chýba a kedy to budeme vedieť</h2>
 
-<p>Klinický prínos obicetrapibu zatiaľ nie je preukázaný na úrovni príhod. Odpoveď má priniesť výsledková štúdia <strong>PREVAIL</strong> (NCT05202509) u 9 541 pacientov s ASCVD, ktorej primárne ukončenie je naplánované na november 2026. Dovtedy je každé tvrdenie o kardiovaskulárnom prínose extrapoláciou z náhradných ukazovateľov.</p>
+<p>Klinický prínos obicetrapibu zatiaľ nie je preukázaný na úrovni príhod. Odpoveď má priniesť výsledková štúdia <strong>PREVAIL</strong> (NCT05202509) u 9&nbsp;541 pacientov s ASCVD, ktorej primárne ukončenie je naplánované na november 2026. Dovtedy je každé tvrdenie o kardiovaskulárnom prínose extrapoláciou z náhradných ukazovateľov.</p>
 
 <p>Pre nefrologickú populáciu je dôležité, že ani PREVAIL nebude štúdiou pri CKD. Ďalší vývoj zahŕňa štúdiu REMBRANDT (zobrazovanie koronárneho plaku) a RUBENS u pacientov s diabetom 2. typu alebo metabolickým syndrómom – tá sa kardiometabolickému prekryvu približuje najviac, no s primárnym ukončením až v roku 2028 a s počtom 300 účastníkov.</p>
 
@@ -141,7 +141,7 @@ $articles[] = [
 
 <h2>Limity</h2>
 
-<p>Tento text je syntézou primárnej literatúry, nie systematickým prehľadom. Všetky tri štúdie fázy 3 financovala spoločnosť NewAmsterdam Pharma a väčšina autorov vrátane autorov obličkovej analýzy má k zadávateľovi vzťah – viacerí sú jeho zamestnancami. Primárne ukazovatele boli náhradné (zmena LDL-C), nie klinické. Dĺžka sledovania 84 dní pre primárny ukazovateľ a 365 dní celkovo je pre posúdenie aterosklerotického prínosu aj dlhodobej bezpečnosti krátka.</p>
+<p>Tento text je syntézou primárnej literatúry, nie systematickým prehľadom. Všetky tri štúdie fázy 3 financovala spoločnosť NewAmsterdam Pharma a väčšina autorov vrátane autorov obličkovej analýzy má k zadávateľovi vzťah – viacerí sú jeho zamestnancami. Primárne ukazovatele boli náhradné (zmena LDL-C), nie klinické. Dĺžka sledovania 84&nbsp;dní pre primárny ukazovateľ a 365&nbsp;dní celkovo je pre posúdenie aterosklerotického prínosu aj dlhodobej bezpečnosti krátka.</p>
 
 <p>Obličková analýza je post hoc, združená z dvoch štúdií s odlišnými populáciami, bez korekcie na mnohonásobné porovnávanie a v kohorte bez CKD. Registračný stav sa môže meniť; uvedené údaje zodpovedajú stavu k 17. októbru 2026 a pred predpisovaním treba overiť aktuálny súhrn charakteristických vlastností lieku a úhradové podmienky.</p>
 
@@ -168,7 +168,7 @@ $articles[] = [
 
   <li>Európska lieková agentúra. Ubeslo (obicetrapib) – súhrn EPAR. Kladné stanovisko výboru CHMP z 23. júla 2026. <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/ubeslo" target="_blank" rel="noopener noreferrer">EMA</a>. Evlarco (obicetrapib/ezetimib): <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/evlarco" target="_blank" rel="noopener noreferrer">EMA</a>.</li>
 
-  <li>ClinicalTrials.gov. PREVAIL: cardiovascular outcome study to evaluate the effect of obicetrapib in participants with ASCVD (NCT05202509); 9 541 účastníkov, primárne ukončenie november 2026. <a href="https://clinicaltrials.gov/study/NCT05202509" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
+  <li>ClinicalTrials.gov. PREVAIL: cardiovascular outcome study to evaluate the effect of obicetrapib in participants with ASCVD (NCT05202509); 9&nbsp;541 účastníkov, primárne ukončenie november 2026. <a href="https://clinicaltrials.gov/study/NCT05202509" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
 </ol>
 
 <h3>Poznámka k dôkazom</h3>

@@ -203,7 +203,7 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Klasifikácia: KDIGO 2024 (G a A kategórie)</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ \begin{aligned} &\text{G1: eGFR} \ge 90 \quad \text{G2: } 60\text{--}89 \quad \text{G3a: } 45\text{--}59 \\ &\text{G3b: } 30\text{--}44 \quad \text{G4: } 15\text{--}29 \quad \text{G5: eGFR} \lt 15 \\ &\text{(ml/min/1{,}73 m}^2\text{)} \\ &\text{A1: } \lt 30\text{ mg/g alebo } \lt 3\text{ mg/mmol} \\ &\text{A2: } 30\text{--}300\text{ mg/g alebo } 3\text{--}30\text{ mg/mmol} \\ &\text{A3: } \gt 300\text{ mg/g alebo } \gt 30\text{ mg/mmol} \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} &\text{G1: eGFR} \ge 90 \quad \text{G2: } 60\text{--}89 \quad \text{G3a: } 45\text{--}59 \\ &\text{G3b: } 30\text{--}44 \quad \text{G4: } 15\text{--}29 \quad \text{G5: eGFR} \lt 15 \\ &\text{(ml/min/1{,}73 m}^2\text{)} \\ &\text{A1: } \lt 30\text{ mg/g alebo } \lt 3\text{ mg/mmol} \\ &\text{A2: } 30\text{--}300\text{ mg/g alebo } 3\text{--}30\text{ mg/mmol} \\ &\text{A3: } \gt 300\text{ mg/g alebo } \gt 30\text{ mg/mmol} \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             Kategória A podľa prahov v zadanej jednotke. Prepočet ×8,84 je len ekvivalent v mg/g na zobrazenie.&ensp;&bull;&ensp;

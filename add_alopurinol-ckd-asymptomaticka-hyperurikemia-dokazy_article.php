@@ -46,21 +46,21 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">CKD-FIX (2020)</th>
-      <td>369 dospelých s CKD G3–G4 bez dny, s albuminúriou alebo poklesom eGFR ≥ 3 ml/min/1,73 m² za predchádzajúci rok; priemerná eGFR 31,7; priemerný urát 8,2 mg/dl (približne 488 µmol/l)</td>
-      <td>Zmena eGFR za 104 týždňov</td>
-      <td>−3,33 (95 % IS −4,11 až −2,55) oproti −3,23 (−3,98 až −2,47) ml/min/1,73 m² za rok; rozdiel −0,10 (−1,18 až 0,97); p = 0,85. Závažné nežiaduce udalosti 46 % oproti 44 %.</td>
+      <td>369 dospelých s CKD G3–G4 bez dny, s albuminúriou alebo poklesom eGFR ≥ 3&nbsp;ml/min/1,73&nbsp;m² za predchádzajúci rok; priemerná eGFR 31,7; priemerný urát 8,2&nbsp;mg/dl (približne 488 µmol/l)</td>
+      <td>Zmena eGFR za 104&nbsp;týždňov</td>
+      <td>−3,33 (95 % IS −4,11 až −2,55) oproti −3,23 (−3,98 až −2,47) ml/min/1,73&nbsp;m² za rok; rozdiel −0,10 (−1,18 až 0,97); p = 0,85. Závažné nežiaduce udalosti 46 % oproti 44 %.</td>
     </tr>
     <tr>
       <th scope="row">PERL (2020)</th>
       <td>530 dospelých s diabetom 1. typu a skorou až stredne pokročilou diabetickou chorobou obličiek</td>
       <td>Iohexolom meraná GFR po 3 rokoch a dvojmesačnom vymývaní</td>
-      <td>Rozdiel medzi skupinami 0,001 ml/min/1,73 m² (−1,9 až 1,9); p = 0,99. Ročný pokles −3,0 oproti −2,5 (rozdiel −0,6; −1,5 až 0,4). Vylučovanie albumínu bolo pri alopurinole o <strong>40 %</strong> (0 až 80) <strong>vyššie</strong>.</td>
+      <td>Rozdiel medzi skupinami 0,001&nbsp;ml/min/1,73&nbsp;m² (−1,9 až 1,9); p = 0,99. Ročný pokles −3,0 oproti −2,5 (rozdiel −0,6; −1,5 až 0,4). Vylučovanie albumínu bolo pri alopurinole o <strong>40 %</strong> (0 až 80) <strong>vyššie</strong>.</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Dve poznámky, ktoré sa pri citovaní týchto štúdií často vynechávajú. Po prvé, <strong>zníženie urátu sa v oboch podarilo</strong> – v štúdii PERL klesol z 6,1 na 3,9 mg/dl (približne 363 na 232 µmol/l), zatiaľ čo pri placebe zostal nezmenený. Nešlo teda o zlyhanie liečby, ale o zlyhanie hypotézy. Po druhé, PERL použila <strong>meranú</strong> GFR pomocou iohexolu, takže výsledok nemožno vysvetliť artefaktom odhadu z kreatinínu. Nález vyššieho vylučovania albumínu pri alopurinole je navyše presným opakom očakávaného nefroprotektívneho účinku.</p>
+<p>Dve poznámky, ktoré sa pri citovaní týchto štúdií často vynechávajú. Po prvé, <strong>zníženie urátu sa v oboch podarilo</strong> – v štúdii PERL klesol z 6,1 na 3,9&nbsp;mg/dl (približne 363 na 232 µmol/l), zatiaľ čo pri placebe zostal nezmenený. Nešlo teda o zlyhanie liečby, ale o zlyhanie hypotézy. Po druhé, PERL použila <strong>meranú</strong> GFR pomocou iohexolu, takže výsledok nemožno vysvetliť artefaktom odhadu z kreatinínu. Nález vyššieho vylučovania albumínu pri alopurinole je navyše presným opakom očakávaného nefroprotektívneho účinku.</p>
 
 <p>CKD-FIX bola predčasne ukončená pre pomalý nábor po zaradení 369 zo zamýšľaných 620 pacientov, čo znižuje jej silu. Interval spoľahlivosti rozdielu (−1,18 až 0,97) však vylučuje klinicky významný rozdiel v ktoromkoľvek smere, takže výsledok nie je iba „nepreukázané pre malý súbor“.</p>
 
@@ -70,14 +70,14 @@ $articles[] = [
 
 <h2>Retrospektívna kohorta, ktorá tvrdí opak</h2>
 
-<p>Editoriál komentuje retrospektívnu kohortovú štúdiu z jedného špecializovaného pracoviska, ktorá čerpala zo zdravotnej dokumentácie z rokov 2006 až 2020. Zaradila <strong>80 pacientov</strong> s CKD G3–G4 a asymptomatickou hyperurikémiou, rozdelených na 40 liečených alopurinolom a 40 neliečených, so sledovaním 24 mesiacov a štyrmi kontrolami. Porovnávala sa priemerná hodnota urátu a eGFR podľa CKD-EPI, štatistickou analýzou rozptylu.</p>
+<p>Editoriál komentuje retrospektívnu kohortovú štúdiu z jedného špecializovaného pracoviska, ktorá čerpala zo zdravotnej dokumentácie z rokov 2006 až 2020. Zaradila <strong>80 pacientov</strong> s CKD G3–G4 a asymptomatickou hyperurikémiou, rozdelených na 40 liečených alopurinolom a 40 neliečených, so sledovaním 24&nbsp;mesiacov a štyrmi kontrolami. Porovnávala sa priemerná hodnota urátu a eGFR podľa CKD-EPI, štatistickou analýzou rozptylu.</p>
 
-<p>Výsledky sú pozoruhodné: v skupine s alopurinolom urát klesol pri každej kontrole a priemerná eGFR <strong>významne stúpla</strong> (p &lt; 0,001), zatiaľ čo v kontrolnej skupine sa funkcia zhoršovala. Do zlyhania obličiek počas 24 mesiacov neprešiel nikto z liečených oproti štyrom neliečeným pacientom.</p>
+<p>Výsledky sú pozoruhodné: v skupine s alopurinolom urát klesol pri každej kontrole a priemerná eGFR <strong>významne stúpla</strong> (p &lt; 0,001), zatiaľ čo v kontrolnej skupine sa funkcia zhoršovala. Do zlyhania obličiek počas 24&nbsp;mesiacov neprešiel nikto z liečených oproti štyrom neliečeným pacientom.</p>
 
 <h2>Prečo tento výsledok nemožno prijať ako dôkaz účinku</h2>
 
 <ol>
-  <li><strong>Veľkosť „účinku“ je fyziologicky nepravdepodobná.</strong> Vzostup priemernej eGFR z hodnôt okolo 35 na približne 47 ml/min/1,73 m² počas dvoch rokov nie je pri CKD G3–G4 obraz spomalenia progresie, ale obraz <em>uzdravenia</em>. Žiadna randomizovaná štúdia so žiadnym nefroprotektívnym liekom taký priemerný vzostup nedosiahla. Keď intervencia v observačných dátach prevýši všetko, čo dokázali randomizované štúdie, prvým podozrivým nie je liek, ale dizajn.</li>
+  <li><strong>Veľkosť „účinku“ je fyziologicky nepravdepodobná.</strong> Vzostup priemernej eGFR z hodnôt okolo 35 na približne 47&nbsp;ml/min/1,73&nbsp;m² počas dvoch rokov nie je pri CKD G3–G4 obraz spomalenia progresie, ale obraz <em>uzdravenia</em>. Žiadna randomizovaná štúdia so žiadnym nefroprotektívnym liekom taký priemerný vzostup nedosiahla. Keď intervencia v observačných dátach prevýši všetko, čo dokázali randomizované štúdie, prvým podozrivým nie je liek, ale dizajn.</li>
   <li><strong>Zaraďovanie do liečby určoval ošetrujúci tím.</strong> Ide o učebnicové skreslenie indikáciou. Alopurinol dostal ten, u koho ho lekár považoval za vhodný – teda spravidla stabilnejší pacient s menším počtom kontraindikácií a lepšou spoluprácou.</li>
   <li><strong>Návrat k priemeru.</strong> Ak sa liečba začína po zachytení vyššej hodnoty urátu a horšej filtrácie, časť neskoršieho „zlepšenia“ vznikne aj bez akéhokoľvek zásahu – najmä ak bol pokles eGFR spôsobený prechodnou príčinou, ako je dehydratácia, nesteroidové antiflogistikum alebo dekompenzácia srdcového zlyhávania.</li>
   <li><strong>Analýza bez adjustácie.</strong> Použitá bola analýza rozptylu bez viacrozmerného modelu a bez zohľadnenia sklonu k liečbe. Rozdiely v krvnom tlaku, blokáde renín-angiotenzínového systému, kompenzácii diabetu, príjme bielkovín či užívaní diuretík zostali neošetrené.</li>
@@ -107,7 +107,7 @@ $articles[] = [
     <tr>
       <th scope="row">CKD-FIX a PERL nepreukázali spomalenie poklesu filtrácie</th>
       <td>Potvrdené</td>
-      <td>Rozdiel −0,10 ml/min/1,73 m²/rok (p = 0,85), respektíve 0,001 ml/min/1,73 m² pri meranej GFR (p = 0,99).</td>
+      <td>Rozdiel −0,10&nbsp;ml/min/1,73&nbsp;m²/rok (p = 0,85), respektíve 0,001&nbsp;ml/min/1,73&nbsp;m² pri meranej GFR (p = 0,99).</td>
     </tr>
     <tr>
       <th scope="row">Alopurinol nedokázal znížiť urikémiu</th>
@@ -152,8 +152,8 @@ $articles[] = [
 <p>Ak je indikácia daná, na dávkovaní záleží viac než pri normálnej funkcii obličiek:</p>
 
 <ol>
-  <li><strong>Začať nízkou dávkou a titrovať.</strong> Pri pokročilej CKD sa začína dávkou 50 mg denne alebo aj obdeň a zvyšuje sa postupne podľa dosiahnutej urikémie, nie podľa vopred určenej cieľovej dávky.</li>
-  <li><strong>Cieľom je urikémia, nie dávka.</strong> Pri dne sa spravidla mieri pod 360 µmol/l (6 mg/dl), pri tofóznom ochorení nižšie.</li>
+  <li><strong>Začať nízkou dávkou a titrovať.</strong> Pri pokročilej CKD sa začína dávkou 50&nbsp;mg denne alebo aj obdeň a zvyšuje sa postupne podľa dosiahnutej urikémie, nie podľa vopred určenej cieľovej dávky.</li>
+  <li><strong>Cieľom je urikémia, nie dávka.</strong> Pri dne sa spravidla mieri pod 360 µmol/l (6&nbsp;mg/dl), pri tofóznom ochorení nižšie.</li>
   <li><strong>Zvážiť vyšetrenie HLA-B*58:01</strong> u osôb juhovýchodoázijského alebo afrického pôvodu pred začatím liečby; alela výrazne zvyšuje riziko závažnej kožnej reakcie a CKD toto riziko ďalej zosilňuje.</li>
   <li><strong>Poznať interakcie.</strong> Súbežné podanie s azatioprínom alebo 6-merkaptopurínom je nebezpečné pre blokádu xantínoxidázy a hrozbu ťažkej myelosupresie.</li>
   <li><strong>Nepodceňovať oneskorenú reakciu.</strong> Hypersenzitívny syndróm sa môže prejaviť aj týždne po začatí a jeho renálnym obrazom býva granulomatózna intersticiálna nefritída.</li>

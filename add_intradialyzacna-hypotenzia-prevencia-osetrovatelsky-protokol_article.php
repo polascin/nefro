@@ -39,17 +39,17 @@ $articles[] = [
 
 <h2>Kedy ide o klinicky významnú hypotenziu</h2>
 
-<p>Jednotná definícia IDH sa nepoužíva. Historická definícia KDOQI vychádza z poklesu systolického krvného tlaku najmenej o 20 mmHg alebo stredného arteriálneho tlaku najmenej o 10 mmHg, spojeného s príznakmi. Novšie prehľady dopĺňajú podmienku, že pokles vedie k orgánovej ischémii a vyžaduje protiopatrenia, napríklad zníženie ultrafiltrácie alebo infúziu fyziologického roztoku. Iné definície zohľadňujú najnižší dosiahnutý tlak alebo potrebu terapeutického zásahu. Rozdiely medzi definíciami vysvetľujú časť rozdielov v uvádzanej frekvencii IDH, ktorá sa pohybuje približne od 5 do 40 %. [1]</p>
+<p>Jednotná definícia IDH sa nepoužíva. Historická definícia KDOQI vychádza z poklesu systolického krvného tlaku najmenej o 20&nbsp;mmHg alebo stredného arteriálneho tlaku najmenej o 10&nbsp;mmHg, spojeného s príznakmi. Novšie prehľady dopĺňajú podmienku, že pokles vedie k orgánovej ischémii a vyžaduje protiopatrenia, napríklad zníženie ultrafiltrácie alebo infúziu fyziologického roztoku. Iné definície zohľadňujú najnižší dosiahnutý tlak alebo potrebu terapeutického zásahu. Rozdiely medzi definíciami vysvetľujú časť rozdielov v uvádzanej frekvencii IDH, ktorá sa pohybuje približne od 5 do 40 %. [1]</p>
 
-<p>Pre klinickú prax sú podstatné tri údaje: <strong>absolútna hodnota tlaku, veľkosť a rýchlosť jeho poklesu a stav pacienta</strong>. Pokles systolického tlaku zo 170 na 145 mmHg nie je rovnakou situáciou ako pokles zo 105 na 80 mmHg.</p>
+<p>Pre klinickú prax sú podstatné tri údaje: <strong>absolútna hodnota tlaku, veľkosť a rýchlosť jeho poklesu a stav pacienta</strong>. Pokles systolického tlaku zo 170 na 145&nbsp;mmHg nie je rovnakou situáciou ako pokles zo 105 na 80&nbsp;mmHg.</p>
 
 <h3>Súvislosť medzi tlakom a príznakmi je slabá</h3>
 
 <p>Pre tvorbu protokolu je to najdôležitejšie zistenie – a zároveň najčastejšie prehliadané. Korelácia medzi zmenami krvného tlaku a klinickými príznakmi je <strong>slabá</strong>. Niektorí pacienti vykazujú známky intravaskulárnej hypovolémie <em>bez</em> toho, aby pokles tlaku splnil ktorúkoľvek číselnú definíciu. Pri výraznej kompenzačnej odpovedi sa môže objaviť dokonca paradoxný vzostup tlaku. [1]</p>
 
-<p>Analýza Flytheovej a spoluautorov porovnala bežne používané definície IDH v kohorte 1 409 pacientov zo štúdie HEMO a 10 392 pacientov veľkej dialyzačnej organizácie. S mortalitou najsilnejšie súvisel <strong>absolútny najnižší systolický tlak pod 90 mmHg</strong>, a to celkovo aj v podskupinách s predialyzačným tlakom pod 120 a 120 až 159 mmHg; pri predialyzačnom tlaku 160 mmHg a viac to bola hranica pod 100 mmHg. Definície, ktoré vychádzali z príznakov, z vykonaných zásahov alebo zo samotného poklesu tlaku počas výkonu, s mortalitou spojené neboli. Pridanie kritéria príznakov či intervencie k hodnote najnižšieho tlaku súvislosť nijako nezosilnilo. [2]</p>
+<p>Analýza Flytheovej a spoluautorov porovnala bežne používané definície IDH v kohorte 1&nbsp;409 pacientov zo štúdie HEMO a 10&nbsp;392 pacientov veľkej dialyzačnej organizácie. S mortalitou najsilnejšie súvisel <strong>absolútny najnižší systolický tlak pod 90&nbsp;mmHg</strong>, a to celkovo aj v podskupinách s predialyzačným tlakom pod 120 a 120 až 159&nbsp;mmHg; pri predialyzačnom tlaku 160&nbsp;mmHg a viac to bola hranica pod 100&nbsp;mmHg. Definície, ktoré vychádzali z príznakov, z vykonaných zásahov alebo zo samotného poklesu tlaku počas výkonu, s mortalitou spojené neboli. Pridanie kritéria príznakov či intervencie k hodnote najnižšieho tlaku súvislosť nijako nezosilnilo. [2]</p>
 
-<p>Systolický tlak pod 90 mmHg je teda významným varovným nálezom. Nie je však jediným spúšťačom intervencie. Pacient s chronickou hypertenziou môže mať príznaky nedostatočnej perfúzie aj pri vyššom tlaku. Naopak, neprítomnosť príznakov nezaručuje, že výrazný pokles tlaku je neškodný – aj nenápadné asymptomatické poklesy sa spájajú s orgánovou ischémiou. [1]</p>
+<p>Systolický tlak pod 90&nbsp;mmHg je teda významným varovným nálezom. Nie je však jediným spúšťačom intervencie. Pacient s chronickou hypertenziou môže mať príznaky nedostatočnej perfúzie aj pri vyššom tlaku. Naopak, neprítomnosť príznakov nezaručuje, že výrazný pokles tlaku je neškodný – aj nenápadné asymptomatické poklesy sa spájajú s orgánovou ischémiou. [1]</p>
 
 <p>Protokol preto nemá vyžadovať súčasné splnenie všetkých číselných kritérií pred začatím pomoci. Porucha vedomia, bolesť na hrudníku alebo známky obehového zlyhávania vyžadujú okamžitú reakciu bez čakania na ďalšie plánované meranie.</p>
 
@@ -77,11 +77,11 @@ $articles[] = [
 
 <p><strong>UFR [ml/kg/h] = objem ultrafiltrácie [ml] ÷ (referenčná hmotnosť [kg] × čas [h])</strong></p>
 
-<p>Príklad: ultrafiltrácia 2 800 ml u pacienta s referenčnou hmotnosťou 70 kg počas 4 hodín zodpovedá 2 800 ÷ (70 × 4) = 10 ml/kg/h.</p>
+<p>Príklad: ultrafiltrácia 2&nbsp;800&nbsp;ml u pacienta s referenčnou hmotnosťou 70&nbsp;kg počas 4&nbsp;hodín zodpovedá 2&nbsp;800 ÷ (70 × 4) = 10&nbsp;ml/kg/h.</p>
 
 <p>Pri porovnávaní údajov treba používať jednotnú referenčnú hmotnosť a rozlišovať plánovanú, skutočne dosiahnutú a okamžitú rýchlosť ultrafiltrácie.</p>
 
-<p>Hodnota nad 13 ml/kg/h je známy rizikový ukazovateľ z observačných štúdií, <strong>nie hranica, pod ktorou je ultrafiltrácia automaticky bezpečná</strong>. Riziko začína narastať už nad 10 ml/kg/h. Hypotenzia môže vzniknúť aj pri podstatne nižšej rýchlosti, najmä pri diabete, srdcovom ochorení, autonómnej dysfunkcii alebo pomalom dopĺňaní plazmatického objemu. [1]</p>
+<p>Hodnota nad 13&nbsp;ml/kg/h je známy rizikový ukazovateľ z observačných štúdií, <strong>nie hranica, pod ktorou je ultrafiltrácia automaticky bezpečná</strong>. Riziko začína narastať už nad 10&nbsp;ml/kg/h. Hypotenzia môže vzniknúť aj pri podstatne nižšej rýchlosti, najmä pri diabete, srdcovom ochorení, autonómnej dysfunkcii alebo pomalom dopĺňaní plazmatického objemu. [1]</p>
 
 <p>Upozornenie na vysokú UFR má viesť k prehodnoteniu objemového cieľa a dĺžky výkonu. Samotné obmedzenie ultrafiltrácie bez ďalšieho plánu môže zanechať pacienta dlhodobo preťaženého tekutinou.</p>
 
@@ -118,7 +118,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Teplota dialyzátu a prostredia</th>
-      <td>Teplota 37 °C a viac znižuje periférnu cievnu rezistenciu a presúva objem do rozšírených kožných ciev</td>
+      <td>Teplota 37&nbsp;°C a viac znižuje periférnu cievnu rezistenciu a presúva objem do rozšírených kožných ciev</td>
     </tr>
     <tr>
       <th scope="row">Prekorigovanie acidózy</th>
@@ -150,7 +150,7 @@ $articles[] = [
 
 <h2>Monitorovanie počas výkonu</h2>
 
-<p>Meranie krvného tlaku každých 30 minút u stabilného pacienta a každých 15 minút u rizikového pacienta možno použiť ako organizačný rámec pracoviska. Tieto intervaly však nemožno prezentovať ako univerzálne optimálne intervaly pre všetkých pacientov.</p>
+<p>Meranie krvného tlaku každých 30&nbsp;minút u stabilného pacienta a každých 15&nbsp;minút u rizikového pacienta možno použiť ako organizačný rámec pracoviska. Tieto intervaly však nemožno prezentovať ako univerzálne optimálne intervaly pre všetkých pacientov.</p>
 
 <p>Pri nových príznakoch sa tlak meria bezodkladne. Po intervencii sa kontroluje v krátkych intervaloch podľa závažnosti stavu, nie až pri ďalšom plánovanom meraní.</p>
 

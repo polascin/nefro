@@ -68,14 +68,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($urineVolume === null) {
             $errors[] = "Objem moču musí byť kladné číslo (mL).";
         } elseif ($urineVolume < 100.0 || $urineVolume > 15000.0) {
-            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
+            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
         }
 
         $collectionHours = calculatorParsePositiveFloat($form["collection_hours"]);
         if ($collectionHours === null) {
             $errors[] = "Čas zberu musí byť kladné číslo (hodiny).";
         } elseif ($collectionHours < 1.0 || $collectionHours > 48.0) {
-            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
+            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
         }
 
         // Voliteľná BSA normalizácia — výška aj hmotnosť musia byť obe alebo žiadna
@@ -87,11 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $heightCm = calculatorParsePositiveFloat($form["height_cm"]);
             $weightKg = calculatorParsePositiveFloat($form["weight_kg"]);
             if ($heightCm === null || $weightKg === null) {
-                $errors[] = "Pre normalizáciu na 1,73 m² zadajte výšku aj hmotnosť (kladné čísla).";
+                $errors[] = "Pre normalizáciu na 1,73 m² zadajte výšku aj hmotnosť (kladné čísla).";
             } elseif ($heightCm < 100.0 || $heightCm > 230.0) {
-                $errors[] = "Výška mimo očakávaného rozsahu (100 až 230 cm).";
+                $errors[] = "Výška mimo očakávaného rozsahu (100 až 230 cm).";
             } elseif ($weightKg < 20.0 || $weightKg > 300.0) {
-                $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
+                $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
             }
         }
 
@@ -198,7 +198,7 @@ if (isLoggedIn()) {
   $pageTitle = "24-h klírens kreatinínu (meraný CrCl) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_crcl_24h.php";
   $seoDescription =
-      "Nefrologická kalkulačka meraného 24-hodinového klírensu kreatinínu z moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²) podľa Du Bois. Pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka meraného 24-hodinového klírensu kreatinínu z moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²) podľa Du Bois. Pre lekárov na Slovensku.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -338,11 +338,11 @@ if (isLoggedIn()) {
                                 <input type="text" id="collection_hours" name="collection_hours" required class="form-control" value="<?= htmlspecialchars($form["collection_hours"]) ?>" placeholder="24">
                             </div>
                             <div class="form-group">
-                                <label for="height_cm">Výška (cm) <span class="optional">(pre 1,73 m²)</span></label>
+                                <label for="height_cm">Výška (cm) <span class="optional">(pre 1,73 m²)</span></label>
                                 <input type="text" id="height_cm" name="height_cm" class="form-control" value="<?= htmlspecialchars($form["height_cm"]) ?>" placeholder="voliteľné">
                             </div>
                             <div class="form-group">
-                                <label for="weight_kg">Hmotnosť (kg) <span class="optional">(pre 1,73 m²)</span></label>
+                                <label for="weight_kg">Hmotnosť (kg) <span class="optional">(pre 1,73 m²)</span></label>
                                 <input type="text" id="weight_kg" name="weight_kg" class="form-control" value="<?= htmlspecialchars($form["weight_kg"]) ?>" placeholder="voliteľné">
                             </div>
                         </div>
@@ -378,9 +378,9 @@ if (isLoggedIn()) {
                         <div class="calc-risk-bar-wrap"
                              data-risk-value="<?= (float)$barValue ?>"
                              data-risk-max="120"
-                             data-risk-label="CrCl (1,73 m²)"></div>
+                             data-risk-label="CrCl (1,73 m²)"></div>
                         <p class="calc-result-detail"><strong>Normalizovaný klírens:</strong>
-                            <?= htmlspecialchars(number_format((float)$calculated["crcl_norm"], 1, ",", " ")) ?> mL/min/1,73 m²
+                            <?= htmlspecialchars(number_format((float)$calculated["crcl_norm"], 1, ",", " ")) ?> mL/min/1,73 m²
                             &ensp;&bull;&ensp;<strong>BSA (Du Bois):</strong>
                             <?= htmlspecialchars(number_format((float)$calculated["bsa"], 2, ",", " ")) ?> m²
                         </p>
@@ -412,7 +412,7 @@ if (isLoggedIn()) {
                     $category = (string) ($result['g_category'] ?? '');
                     echo htmlspecialchars(number_format($crcl, 1, ',', ' ')) . ' mL/min';
                     if ($norm !== null) {
-                        echo ' (' . htmlspecialchars(number_format((float) $norm, 1, ',', ' ')) . ' /1,73 m²';
+                        echo ' (' . htmlspecialchars(number_format((float) $norm, 1, ',', ' ')) . ' /1,73 m²';
                         if ($category !== '') {
                             echo ', ' . htmlspecialchars($category);
                         }

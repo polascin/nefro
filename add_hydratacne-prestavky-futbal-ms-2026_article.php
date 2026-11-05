@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Majstrovstvá sveta 2026 sa hrajú v Kanade, Mexiku a Spojených štátoch amerických. Hostiteľské mestá sú rozložené na veľkej geografickej ploche a jednotlivé zápasy sa môžu líšiť teplotou, vlhkosťou, nadmorskou výškou, znečistením ovzdušia, alergénmi aj cestovnou záťažou.</p>
 
-<p>Prehľad v časopise <em>Sports Medicine</em> upozorňuje, že tento turnaj predstavuje mimoriadnu kombináciu environmentálnych faktorov. Historické hodnoty indexu WBGT v čase turnaja sa v hostiteľských mestách pohybujú od približne 18,8 °C do 29,4 °C, pričom maximá môžu dosahovať približne 21 °C až 35 °C. Štrnásť zo šestnástich hostiteľských miest máva v júni a júli dni, ktoré presahujú 28 °C WBGT.</p>
+<p>Prehľad v časopise <em>Sports Medicine</em> upozorňuje, že tento turnaj predstavuje mimoriadnu kombináciu environmentálnych faktorov. Historické hodnoty indexu WBGT v čase turnaja sa v hostiteľských mestách pohybujú od približne 18,8&nbsp;°C do 29,4&nbsp;°C, pričom maximá môžu dosahovať približne 21&nbsp;°C až 35&nbsp;°C. Štrnásť zo šestnástich hostiteľských miest máva v júni a júli dni, ktoré presahujú 28&nbsp;°C WBGT.</p>
 
 <p>WBGT, teda <em>wet-bulb globe temperature</em>, je pre šport praktickejší ukazovateľ než samotná teplota vzduchu. Zohľadňuje teplotu, vlhkosť, sálavé teplo zo slnka a prúdenie vzduchu. Preto lepšie odráža skutočnú tepelnú záťaž organizmu.</p>
 
@@ -122,7 +122,7 @@ $articles[] = [
 
 <h2>Nadmorská výška, cestovanie a ďalšie faktory</h2>
 
-<p>Environmentálne riziko MS 2026 nevytvára iba horúčava. Zápasy v Guadalajare a Mexico City prebiehajú v nadmorskej výške približne 1566 m a 2240 m. Takéto podmienky môžu ovplyvniť ventiláciu, hydratáciu, výkon pri opakovaných šprintoch a regeneráciu.</p>
+<p>Environmentálne riziko MS 2026 nevytvára iba horúčava. Zápasy v Guadalajare a Mexico City prebiehajú v nadmorskej výške približne 1566&nbsp;m a 2240&nbsp;m. Takéto podmienky môžu ovplyvniť ventiláciu, hydratáciu, výkon pri opakovaných šprintoch a regeneráciu.</p>
 
 <p>Do celkovej záťaže sa pridáva cestovanie, časové posuny, únava, rozdielne klimatické prostredie, sezónne alergény a kvalita ovzdušia. Tieto faktory môžu samostatne znížiť výkonnosť, ale najväčší problém vzniká pri ich kumulácii.</p>
 

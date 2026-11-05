@@ -53,15 +53,15 @@ $articles[] = [
 
 <p>Predklinické dáta podporujú kauzalitu: zmena TRPC6 sa spája s FSGS fenotypom, podocytovo špecifická expresia môže navodiť experimentálne ochorenie a naopak, genetická deplécia TRPC6 je v modeloch poškodenia glomerulov protektívna.</p>
 
-<h2>Čo testovala štúdia: fáza 2 s liekom BI 764198 (inhibítor TRPC6)</h2>
+<h2>Čo testovala štúdia: fáza 2&nbsp;s liekom BI 764198 (inhibítor TRPC6)</h2>
 
 <p>Štúdia fázy 2 skúšala <strong>BI 764198</strong> – perorálny <strong>selektívny inhibítor TRPC6 podávaný 1× denne</strong>. Bola <strong>randomizovaná a placebom kontrolovaná</strong>.</p>
 
 <h3>Dizajn a populácia</h3>
 
 <ul>
-  <li><strong>Dávky:</strong> 20 mg, 40 mg, 80 mg oproti placebu.</li>
-  <li><strong>Trvanie:</strong> 12 týždňov.</li>
+  <li><strong>Dávky:</strong> 20&nbsp;mg, 40&nbsp;mg, 80&nbsp;mg oproti placebu.</li>
+  <li><strong>Trvanie:</strong> 12&nbsp;týždňov.</li>
   <li><strong>Populácia:</strong> 62 pacientov s FSGS potvrdenou biopsiou.</li>
   <li><strong>Zahrnutí:</strong> pacienti s <strong>primárnou FSGS</strong> (definovanou skôr neprítomnosťou klinických dôkazov sekundárnej príčiny než „klasickým“ imunologickým kontextom KDIGO) alebo s <strong>genetickou FSGS</strong> podmienenou patogénnym variantom TRPC6.</li>
   <li><strong>Vylúčení:</strong> pacienti s histologickými alebo klinickými znakmi sekundárnej FSGS, prípadne s monogénnymi príčinami inými než TRPC6.</li>
@@ -82,7 +82,7 @@ $articles[] = [
   <li>v placebe <strong>7 %</strong>.</li>
 </ul>
 
-<p>Od placeba sa liečba oddelila už za relatívne krátkych 12 týždňov. Pre fázu 2 je to klinicky relevantný signál, hoci miera odpovede v celom súbore nie je vysoká.</p>
+<p>Od placeba sa liečba oddelila už za relatívne krátkych 12&nbsp;týždňov. Pre fázu 2 je to klinicky relevantný signál, hoci miera odpovede v celom súbore nie je vysoká.</p>
 
 <h3>Presná odpoveď pri patogénnych variantoch TRPC6</h3>
 
@@ -101,7 +101,7 @@ $articles[] = [
 
 <h3>Dávkovo závislý efekt, ktorý môže naznačovať plató</h3>
 
-<p>Najvýraznejší antiproteinurický efekt sa zaznamenal v skupine <strong>20 mg</strong>:</p>
+<p>Najvýraznejší antiproteinurický efekt sa zaznamenal v skupine <strong>20&nbsp;mg</strong>:</p>
 
 <ul>
   <li>odpoveď <strong>44 %</strong>,</li>
@@ -139,7 +139,7 @@ $articles[] = [
 <p>Odpoveď 35 % v celom súbore môže na prvý pohľad pôsobiť skromne. Viacero okolností však ukazuje, že nejde o „márny“ výsledok:</p>
 
 <ul>
-  <li>ide o 12-týždňovú fázu 2 s konzervatívnym prahom odpovede,</li>
+  <li>ide o 12-týždňovú fázu 2&nbsp;s konzervatívnym prahom odpovede,</li>
   <li>oddelenie od placeba je výrazné (7 % oproti 35 %) a konzistentné v sekundárnych analýzach,</li>
   <li>bezpečnostný profil je priaznivý,</li>
   <li>geneticky obohatená podskupina (varianty TRPC6) má 100 % odpoveď, čo podporuje koncept presného mechanizmu.</li>
@@ -155,13 +155,13 @@ $articles[] = [
 
 <ul>
   <li>malý počet účastníkov a podskupín,</li>
-  <li>krátke sledovanie (12 týždňov), takže nevieme, ako sa to premieta do dlhodobého renálneho prežívania,</li>
+  <li>krátke sledovanie (12&nbsp;týždňov), takže nevieme, ako sa to premieta do dlhodobého renálneho prežívania,</li>
   <li>nejasná hranica, kto z pacientov bez variantov TRPC6 bude mať klinicky významnú odpoveď (hoci aj v populácii „bez variantu“ sa zníženie proteinúrie pozorovalo).</li>
 </ul>
 
 <h2>Záver</h2>
 
-<p>FSGS je ochorenie s rôznymi príčinami, ale spoločným dôsledkom je dysfunkcia podocytovej filtračnej bariéry. Mechanistická racionalita a výsledky fázy 2 s <strong>BI 764198</strong> ukazujú:</p>
+<p>FSGS je ochorenie s rôznymi príčinami, ale spoločným dôsledkom je dysfunkcia podocytovej filtračnej bariéry. Mechanistická racionalita a výsledky fázy 2&nbsp;s <strong>BI 764198</strong> ukazujú:</p>
 
 <ul>
   <li><strong>placebom korigovaný signál</strong> zníženia proteinúrie v 12. týždni,</li>

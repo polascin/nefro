@@ -145,16 +145,16 @@ $baseUrl = "https://nefro.polascin.net/";
                             <tr><th scope="col">Kategória</th><th scope="col">Bielkoviny</th><th scope="col">Energia</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">CKD G3 až G5 ND, bez diabetu</th><td>0,55 až 0,60 g/kg/deň</td><td rowspan="4">25 až 35 kcal/kg/deň</td></tr>
-                            <tr><th scope="row">CKD G3 až G5 ND, s diabetom</th><td>0,60 až 0,80 g/kg/deň</td></tr>
-                            <tr><th scope="row">Hemodialýza</th><td>1,0 až 1,2 g/kg/deň</td></tr>
-                            <tr><th scope="row">Peritoneálna dialýza</th><td>1,0 až 1,2 g/kg/deň</td></tr>
+                            <tr><th scope="row">CKD G3 až G5 ND, bez diabetu</th><td>0,55 až 0,60 g/kg/deň</td><td rowspan="4">25 až 35 kcal/kg/deň</td></tr>
+                            <tr><th scope="row">CKD G3 až G5 ND, s diabetom</th><td>0,60 až 0,80 g/kg/deň</td></tr>
+                            <tr><th scope="row">Hemodialýza</th><td>1,0 až 1,2 g/kg/deň</td></tr>
+                            <tr><th scope="row">Peritoneálna dialýza</th><td>1,0 až 1,2 g/kg/deň</td></tr>
                         </tbody>
                     </table>
                     <div class="info-box-blue">
-                        <strong>Spoločné ciele:</strong> sodík &lt; 2 300 mg/deň (&lt; 100 mmol; ≈ &lt; 5 až 6 g soli);
-                        fosfor ≈ 800 až 1 000 mg/deň (prednostne obmedziť anorganické aditíva); draslík
-                        individualizovať podľa kalémie (pri hyperkaliémii ≈ 2 000 až 3 000 mg/deň).
+                        <strong>Spoločné ciele:</strong> sodík &lt; 2 300 mg/deň (&lt; 100 mmol; ≈ &lt; 5 až 6 g soli);
+                        fosfor ≈ 800 až 1 000 mg/deň (prednostne obmedziť anorganické aditíva); draslík
+                        individualizovať podľa kalémie (pri hyperkaliémii ≈ 2 000 až 3 000 mg/deň).
                     </div>
                     <div class="info-box-green">
                         <strong>Dôležité:</strong> dostatočný energetický príjem je nevyhnutný na prevenciu

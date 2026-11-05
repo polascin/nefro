@@ -45,17 +45,17 @@ $articles[] = [
 <p>Do štúdie bolo zaradených <strong>406</strong> pacientov s diabetom 2. typu. Randomizácia zahŕňala:</p>
 
 <ul>
-  <li>perorálne dávky elekoglipronu <strong>5 mg, 15 mg alebo 25 mg</strong> raz denne,</li>
+  <li>perorálne dávky elekoglipronu <strong>5&nbsp;mg, 15&nbsp;mg alebo 25&nbsp;mg</strong> raz denne,</li>
   <li>rôzne schémy titrácie (vrátane cieľových dávok a eskalácie),</li>
   <li>placebo,</li>
-  <li>a exploratórnu skupinu s perorálnym semaglutidom titrovaným na 14 mg.</li>
+  <li>a exploratórnu skupinu s perorálnym semaglutidom titrovaným na 14&nbsp;mg.</li>
 </ul>
 
-<h3>Výsledky za 26 týždňov</h3>
+<h3>Výsledky za 26&nbsp;týždňov</h3>
 
 <ul>
-  <li><strong>HbA1c klesalo dávkovo závisle</strong> a pri všetkých dávkach bolo zníženie väčšie ako pri placebe, približne od <strong>0,91 %</strong> pri 5 mg po <strong>1,88 %</strong> pri najvyššej dávke v schéme eskalácie.</li>
-  <li><strong>Hmotnosť klesala</strong> tiež v závislosti od dávky, približne od <strong>2,54 %</strong> (5 mg) po <strong>7,61 %</strong> pri najvyššej dávke pri eskalácii každé 2 týždne.</li>
+  <li><strong>HbA1c klesalo dávkovo závisle</strong> a pri všetkých dávkach bolo zníženie väčšie ako pri placebe, približne od <strong>0,91 %</strong> pri 5&nbsp;mg po <strong>1,88 %</strong> pri najvyššej dávke v schéme eskalácie.</li>
+  <li><strong>Hmotnosť klesala</strong> tiež v závislosti od dávky, približne od <strong>2,54 %</strong> (5&nbsp;mg) po <strong>7,61 %</strong> pri najvyššej dávke pri eskalácii každé 2&nbsp;týždne.</li>
   <li>Pri schéme s najvyššou dávkou dosiahol <strong>väčší podiel pacientov aspoň 5 % redukciu hmotnosti</strong> oproti placebu.</li>
   <li>Zaznamenané boli aj zlepšenia niektorých <strong>markerov krvného tlaku a pečeňových biomarkerov</strong>.</li>
 </ul>
@@ -76,16 +76,16 @@ $articles[] = [
 
 <ul>
   <li>týždenné titrovanie elekoglipronu v rôznych dávkach,</li>
-  <li>vrátane režimu s titráciou každé 2 týždne (pri 75 mg),</li>
+  <li>vrátane režimu s titráciou každé 2&nbsp;týždne (pri 75&nbsp;mg),</li>
   <li>placebo.</li>
 </ul>
 
-<h3>Výsledky za 26 týždňov</h3>
+<h3>Výsledky za 26&nbsp;týždňov</h3>
 
 <ul>
   <li>Priemerná redukcia telesnej hmotnosti sa pohybovala približne od <strong>2,6 %</strong> (najnižšia dávka) po <strong>10,5 %</strong> (najvyššia týždenná titrácia) oproti <strong>0,6 %</strong> v skupine placeba.</li>
   <li>Koprimárny cieľ, teda redukciu hmotnosti aspoň o 5 %, dosiahlo <strong>88,8 %</strong> účastníkov v skupine s elekoglipronom oproti <strong>15,6 %</strong> na placebe.</li>
-  <li>Pri predĺžení na <strong>36 týždňov</strong> sa pri niektorých ukazovateľoch redukcia hmotnosti ďalej zväčšovala, takže po 26 týždňoch ešte nebolo zjavné plató.</li>
+  <li>Pri predĺžení na <strong>36&nbsp;týždňov</strong> sa pri niektorých ukazovateľoch redukcia hmotnosti ďalej zväčšovala, takže po 26 týždňoch ešte nebolo zjavné plató.</li>
 </ul>
 
 <h3>Bezpečnosť</h3>

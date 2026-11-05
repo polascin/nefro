@@ -1,7 +1,7 @@
 <?php
 /**
  * add_xylitol-kardiovaskularne-riziko-nefrologicka-prax_article.php
- * Idempotentny publikacny skript odborneho clanku.
+ * Idempotentný publikačný skript odborného článku.
  * Spracovanie: ESC Congress 2026 (Zheng et al., CLSA + EPIC-Norfolk)
  * a Witkowski et al. (European Heart Journal, 2024).
  */
@@ -53,13 +53,13 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Počet účastníkov</th>
-      <td>1 157 (objavná kohorta) + 2 149 (validačná kohorta)</td>
-      <td>17 710 spolu (CLSA 7 651; EPIC-Norfolk 10 059)</td>
+      <td>1&nbsp;157 (objavná kohorta) + 2&nbsp;149 (validačná kohorta)</td>
+      <td>17&nbsp;710 spolu (CLSA 7&nbsp;651; EPIC-Norfolk 10&nbsp;059)</td>
     </tr>
     <tr>
       <th scope="row">Sledovanie</th>
-      <td>3 roky</td>
-      <td>6 rokov (CLSA); 30 rokov (EPIC-Norfolk)</td>
+      <td>3&nbsp;roky</td>
+      <td>6&nbsp;rokov (CLSA); 30&nbsp;rokov (EPIC-Norfolk)</td>
     </tr>
     <tr>
       <th scope="row">Rozdelenie expozície</th>
@@ -80,7 +80,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Rozlíšenie nie je akademická pedantéria. Hodnota <strong>HR 1,57</strong> pochádza z práce z roku 2024, z <em>tercilového</em> porovnania u <em>vysokorizikových</em> pacientov počas <em>3 rokov</em>. Ak sa táto hodnota uvádza ako výsledok kohorty CLSA, ide o zámenu.</p>
+<p>Rozlíšenie nie je akademická pedantéria. Hodnota <strong>HR 1,57</strong> pochádza z práce z roku 2024, z <em>tercilového</em> porovnania u <em>vysokorizikových</em> pacientov počas <em>3&nbsp;rokov</em>. Ak sa táto hodnota uvádza ako výsledok kohorty CLSA, ide o zámenu.</p>
 
 <h2>Nezrovnalosť v číslach, ktorú treba priznať</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Bez plného textu abstraktu alebo recenzovanej publikácie nemožno rozhodnúť, ktorá hodnota pre kohortu CLSA je správna. Je pravdepodobné, že ide o prenos čísla 1,57 z práce z roku 2024. Do času, kým bude práca publikovaná v plnom znení, je preto vecne správne uvádzať <strong>rádovo 45 – 60 % relatívne zvýšenie v kohorte CLSA</strong> a výslovne označiť tento údaj za predbežný.</p>
 
-<p>Na doplnenie kontextu: v kohorte CLSA bolo zaznamenaných 2 950 udalostí MACE, v kohorte EPIC-Norfolk 5 670. Kompozitný ukazovateľ MACE bol definovaný ako <strong>úmrtie, infarkt myokardu alebo cievna mozgová príhoda</strong>. Zahrnutie celkovej mortality do kompozitu je metodicky podstatné – časť signálu môže pochádzať z nekardiovaskulárnych úmrtí.</p>
+<p>Na doplnenie kontextu: v kohorte CLSA bolo zaznamenaných 2&nbsp;950 udalostí MACE, v kohorte EPIC-Norfolk 5&nbsp;670. Kompozitný ukazovateľ MACE bol definovaný ako <strong>úmrtie, infarkt myokardu alebo cievna mozgová príhoda</strong>. Zahrnutie celkovej mortality do kompozitu je metodicky podstatné – časť signálu môže pochádzať z nekardiovaskulárnych úmrtí.</p>
 
 <h2>Prečo „veľká nemecká štúdia“ nie je presné označenie</h2>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <h2>Kľúčové obmedzenie, ktoré sa v zhrnutiach stráca</h2>
 
-<p>Xylitol vzniká aj <strong>endogénne</strong> – podľa pôvodnej práce však v koncentráciách viac než <strong>1 000-násobne nižších</strong>, než aké sa dosahujú po konzumácii xylitolu ako náhrady cukru. Z toho vyplýva zásadná interpretačná otázka: <strong>čo vlastne nameraná hladina v krvi odráža?</strong></p>
+<p>Xylitol vzniká aj <strong>endogénne</strong> – podľa pôvodnej práce však v koncentráciách viac než <strong>1&nbsp;000-násobne nižších</strong>, než aké sa dosahujú po konzumácii xylitolu ako náhrady cukru. Z toho vyplýva zásadná interpretačná otázka: <strong>čo vlastne nameraná hladina v krvi odráža?</strong></p>
 
 <ul>
   <li>Môže ísť o <strong>marker expozície</strong>, teda o skutočnú konzumáciu xylitolu v strave.</li>
@@ -129,7 +129,7 @@ $articles[] = [
 <p>Xylitol sa v minulosti používal ako náhrada glukózy v parenterálnej výžive. Jeho metabolizmus vedie k tvorbe <strong>oxalátu</strong> a pri vyšších dávkach k sekundárnej oxalóze s ukladaním kryštálov oxalátu vápenatého v obličkových tubuloch:</p>
 
 <ul>
-  <li>Opísaný je prípad 61-ročného muža, u ktorého po pooperačnom podaní parenterálneho xylitolu (kumulatívna dávka 1 560 g) vzniklo akútne poškodenie obličiek vyžadujúce opakovanú hemodialýzu, s biopticky potvrdenou renálnou oxalózou a s epileptickým záchvatom pri cerebrovaskulárnych depozitoch oxalátu.</li>
+  <li>Opísaný je prípad 61-ročného muža, u ktorého po pooperačnom podaní parenterálneho xylitolu (kumulatívna dávka 1&nbsp;560&nbsp;g) vzniklo akútne poškodenie obličiek vyžadujúce opakovanú hemodialýzu, s biopticky potvrdenou renálnou oxalózou a s epileptickým záchvatom pri cerebrovaskulárnych depozitoch oxalátu.</li>
   <li>Opísané je aj <strong>smrteľné cerebro-renálne oxalózne postihnutie</strong> u 24-ročného muža po apendektómii, dva dni po prvej infúzii xylitolu.</li>
   <li>Samostatnou situáciou je podanie xylitolu pacientovi s dovtedy nerozpoznanou <strong>primárnou hyperoxalúriou 1. typu</strong>, kde infúzia odmaskovala základné ochorenie a viedla k trvalej dialyzačnej liečbe.</li>
 </ul>

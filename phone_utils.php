@@ -5,7 +5,7 @@ declare(strict_types=1);
 if (!function_exists('normalizeUserMobilePhone')) {
     /**
      * Normalizuje a validuje mobilné tel. číslo používateľa v medzinárodnom formáte.
-     * Akceptované príklady: +421901234567, +421 901 234 567.
+     * Akceptované príklady: +421901234567, +421 901 234 567.
      * Vráti normalizovaný formát +421XXXXXXXXX alebo null pre prázdnu hodnotu.
      */
     function normalizeUserMobilePhone(?string $rawPhone)

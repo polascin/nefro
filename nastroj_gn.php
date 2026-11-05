@@ -113,7 +113,7 @@ $baseUrl = "https://nefro.polascin.net/";
                             <tr><th scope="col">Znak</th><th scope="col">Nefritický</th><th scope="col">Nefrotický</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">Proteinúria</th><td>zvyčajne &lt; 3,5 g/deň</td><td>≥ 3,5 g/deň</td></tr>
+                            <tr><th scope="row">Proteinúria</th><td>zvyčajne &lt; 3,5 g/deň</td><td>≥ 3,5 g/deň</td></tr>
                             <tr><th scope="row">Sediment</th><td>aktívny: dysmorfné ERY, ERY valce</td><td>neaktívny („bland“), tukové telieska</td></tr>
                             <tr><th scope="row">Hematúria</th><td>výrazná (glomerulárna)</td><td>mierna alebo žiadna</td></tr>
                             <tr><th scope="row">Hypertenzia / pokles GFR</th><td>časté</td><td>premenlivé</td></tr>
@@ -143,7 +143,7 @@ $baseUrl = "https://nefro.polascin.net/";
                 <section class="form-section" aria-labelledby="algo-heading">
                     <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
-                        <li><strong>Zaradiť obraz</strong>: nefritický (aktívny sediment) vs nefrotický (proteinúria ≥ 3,5 g, hypoalbuminémia).</li>
+                        <li><strong>Zaradiť obraz</strong>: nefritický (aktívny sediment) vs nefrotický (proteinúria ≥ 3,5 g, hypoalbuminémia).</li>
                         <li><strong>Posúdiť tempo.</strong> Rýchly vzostup kreatinínu (dni až týždne) = RPGN: urgentná imunológia a biopsia.</li>
                         <li><strong>RPGN podľa imunológie</strong>: pauci-imunitná (ANCA), anti-GBM (lineárny IF), imunokomplexová (granulárny IF).</li>
                         <li><strong>Stabilná nefritída podľa komplementu</strong>: nízky vs normálny zužuje diferenciál (pozri tabuľku).</li>

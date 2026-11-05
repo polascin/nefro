@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $bmi = ckmParseNonNeg($form["bmi"]);
         if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
-            $errors[] = "BMI musí byť 10 až 80 kg/m².";
+            $errors[] = "BMI musí byť 10 až 80 kg/m².";
         }
 
         $isAsian = $form["ancestry"] === "asian";
@@ -338,11 +338,11 @@ if (isLoggedIn()) {
                         <fieldset class="form-fieldset">
                             <legend>Adipozita a metabolické rizikové faktory</legend>
                             <div class="form-check-grid">
-                                <label class="form-check"><input type="checkbox" name="waist" value="1" <?= $form["waist"] === "1" ? "checked" : "" ?>> Zvýšený obvod pása (≥ 102 cm M / ≥ 88 cm Ž; nižšie pri ázijskom pôvode) <span class="form-check-pts">(adipozita)</span></label>
+                                <label class="form-check"><input type="checkbox" name="waist" value="1" <?= $form["waist"] === "1" ? "checked" : "" ?>> Zvýšený obvod pása (≥ 102 cm M / ≥ 88 cm Ž; nižšie pri ázijskom pôvode) <span class="form-check-pts">(adipozita)</span></label>
                                 <label class="form-check"><input type="checkbox" name="prediabetes" value="1" <?= $form["prediabetes"] === "1" ? "checked" : "" ?>> Prediabetes / porucha glukózovej tolerancie <span class="form-check-pts">(dysfunkčná adipozita)</span></label>
                                 <label class="form-check"><input type="checkbox" name="hypertension" value="1" <?= $form["hypertension"] === "1" ? "checked" : "" ?>> Hypertenzia <span class="form-check-pts">(metabolický RF)</span></label>
                                 <label class="form-check"><input type="checkbox" name="diabetes" value="1" <?= $form["diabetes"] === "1" ? "checked" : "" ?>> Diabetes mellitus <span class="form-check-pts">(metabolický RF)</span></label>
-                                <label class="form-check"><input type="checkbox" name="hypertriglyceridemia" value="1" <?= $form["hypertriglyceridemia"] === "1" ? "checked" : "" ?>> Hypertriglyceridémia (≥ 1,5 mmol/L) <span class="form-check-pts">(metabolický RF)</span></label>
+                                <label class="form-check"><input type="checkbox" name="hypertriglyceridemia" value="1" <?= $form["hypertriglyceridemia"] === "1" ? "checked" : "" ?>> Hypertriglyceridémia (≥ 1,5 mmol/L) <span class="form-check-pts">(metabolický RF)</span></label>
                                 <label class="form-check"><input type="checkbox" name="metabolic_syndrome" value="1" <?= $form["metabolic_syndrome"] === "1" ? "checked" : "" ?>> Metabolický syndróm <span class="form-check-pts">(metabolický RF)</span></label>
                             </div>
                         </fieldset>

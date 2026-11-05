@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>Čo skúmala analýza SMART</h2>
 
-<p>Išlo o vopred plánovanú analýzu randomizovanej, dvojito zaslepenej, placebom kontrolovanej štúdie u 101 dospelých s CKD, nadváhou alebo obezitou a bez diabetu. Účastníci mali BMI ≥27 kg/m<sup>2</sup>, eGFR ≥25 ml/min/1,73 m<sup>2</sup> a pomer albumínu ku kreatinínu v moči 30–3 500 mg/g. Semaglutid dostávalo 51 účastníkov a placebo 50. Dávka sa titrovala na 2,4 mg podkožne raz týždenne a liečba trvala 24 týždňov. [1]</p>
+<p>Išlo o vopred plánovanú analýzu randomizovanej, dvojito zaslepenej, placebom kontrolovanej štúdie u 101 dospelých s CKD, nadváhou alebo obezitou a bez diabetu. Účastníci mali BMI ≥27&nbsp;kg/m<sup>2</sup>, eGFR ≥25&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> a pomer albumínu ku kreatinínu v moči 30–3&nbsp;500&nbsp;mg/g. Semaglutid dostávalo 51 účastníkov a placebo 50. Dávka sa titrovala na 2,4&nbsp;mg podkožne raz týždenne a liečba trvala 24&nbsp;týždňov. [1]</p>
 
 <p>Výskumníci hodnotili kreatinínovú eGFR, cystatínovú eGFR, telesné zloženie pomocou bioimpedančnej spektroskopie a meranú GFR pomocou plazmatického klírensu iohexolu. <strong>Meraná GFR bola dostupná iba v podskupine 47 účastníkov</strong>, čo výrazne obmedzuje istotu záverov o individuálnej presnosti odhadových rovníc. [1]</p>
 
@@ -49,11 +49,11 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Parameter</th><th scope="col">Rozdiel v zmene medzi skupinami</th><th scope="col">95 % interval spoľahlivosti</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Telesná hmotnosť</th><td>−9,1 kg</td><td>−11,0 až −7,2 kg</td></tr>
-    <tr><th scope="row">Beztuková hmota</th><td>−2,5 kg</td><td>−6,6 až 1,6 kg</td></tr>
-    <tr><th scope="row">Tuková hmota</th><td>−3,9 kg</td><td>−7,8 až 0,0 kg</td></tr>
-    <tr><th scope="row">Extracelulárna voda</th><td>−0,9 l</td><td>−1,6 až −0,1 l</td></tr>
-    <tr><th scope="row">Systolický krvný tlak</th><td>−6,3 mmHg</td><td>−10,9 až −1,7 mmHg</td></tr>
+    <tr><th scope="row">Telesná hmotnosť</th><td>−9,1&nbsp;kg</td><td>−11,0 až −7,2&nbsp;kg</td></tr>
+    <tr><th scope="row">Beztuková hmota</th><td>−2,5&nbsp;kg</td><td>−6,6 až 1,6&nbsp;kg</td></tr>
+    <tr><th scope="row">Tuková hmota</th><td>−3,9&nbsp;kg</td><td>−7,8 až 0,0&nbsp;kg</td></tr>
+    <tr><th scope="row">Extracelulárna voda</th><td>−0,9&nbsp;l</td><td>−1,6 až −0,1&nbsp;l</td></tr>
+    <tr><th scope="row">Systolický krvný tlak</th><td>−6,3&nbsp;mmHg</td><td>−10,9 až −1,7&nbsp;mmHg</td></tr>
   </tbody>
 </table>
 </div>
@@ -80,11 +80,11 @@ $articles[] = [
 
 <h3>Rozsah a trvanie boli obmedzené</h3>
 
-<p>Sledovanie trvalo 24 týždňov a populácia nezahŕňala pacientov s diabetom. Výsledky nemožno bez ďalších údajov prenášať na podstatne väčší alebo rýchlejší úbytok hmotnosti, dlhodobú liečbu, bariatrickú chirurgiu, iné inkretínové lieky ani na krehkých či výrazne sarkopenických pacientov.</p>
+<p>Sledovanie trvalo 24&nbsp;týždňov a populácia nezahŕňala pacientov s diabetom. Výsledky nemožno bez ďalších údajov prenášať na podstatne väčší alebo rýchlejší úbytok hmotnosti, dlhodobú liečbu, bariatrickú chirurgiu, iné inkretínové lieky ani na krehkých či výrazne sarkopenických pacientov.</p>
 
 <h2>Vyššia eGFR nemusí znamenať ústup CKD</h2>
 
-<p>Prekročenie hranice 60 ml/min/1,73 m<sup>2</sup> samo osebe nepreukazuje vymiznutie chronickej choroby obličiek. Pri pretrvávajúcej albuminúrii, štruktúrnom náleze alebo inom dôkaze chronického poškodenia môže pacient naďalej spĺňať kritériá CKD. Hodnotiť treba príčinu, kategóriu GFR, kategóriu albuminúrie a trvanie nálezu. [2]</p>
+<p>Prekročenie hranice 60&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> samo osebe nepreukazuje vymiznutie chronickej choroby obličiek. Pri pretrvávajúcej albuminúrii, štruktúrnom náleze alebo inom dôkaze chronického poškodenia môže pacient naďalej spĺňať kritériá CKD. Hodnotiť treba príčinu, kategóriu GFR, kategóriu albuminúrie a trvanie nálezu. [2]</p>
 
 <p>Rovnako nemožno vzostup eGFR automaticky považovať za pravdivé zlepšenie len preto, že semaglutid má v určitých populáciách preukázané priaznivé obličkové účinky. Účinnosť lieku na klinické výsledky a presnosť konkrétneho laboratórneho odhadu sú dve odlišné otázky.</p>
 
@@ -115,9 +115,9 @@ $articles[] = [
 
 <h2>Dávkovanie liekov: indexovaná a absolútna hodnota</h2>
 
-<p>Laboratórna eGFR sa štandardne uvádza v ml/min/1,73 m<sup>2</sup>. Niektoré dávkovacie rozhodnutia však vychádzajú z absolútnej GFR v ml/min alebo z kreatinínového klírensu podľa konkrétneho registračného dokumentu. Pri výraznej zmene telesnej veľkosti možno indexovanú hodnotu prepočítať:</p>
+<p>Laboratórna eGFR sa štandardne uvádza v ml/min/1,73&nbsp;m<sup>2</sup>. Niektoré dávkovacie rozhodnutia však vychádzajú z absolútnej GFR v ml/min alebo z kreatinínového klírensu podľa konkrétneho registračného dokumentu. Pri výraznej zmene telesnej veľkosti možno indexovanú hodnotu prepočítať:</p>
 
-<p><strong>GFR v ml/min = eGFR v ml/min/1,73 m<sup>2</sup> × povrch tela / 1,73.</strong></p>
+<p><strong>GFR v ml/min = eGFR v ml/min/1,73&nbsp;m<sup>2</sup> × povrch tela / 1,73.</strong></p>
 
 <p>Deindexácia však neopraví chybu samotného filtračného markera a pri extrémnej obezite môže priniesť ďalšiu neistotu. Pri dávkovaní sa treba riadiť aktuálnym súhrnom charakteristických vlastností konkrétneho lieku; kreatinínový klírens podľa Cockcrofta a Gaulta nie je totožný s laboratórnou eGFR.</p>
 

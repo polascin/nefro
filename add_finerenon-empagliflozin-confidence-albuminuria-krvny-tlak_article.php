@@ -37,19 +37,19 @@ $articles[] = [
 
 <h2>Čo štúdia CONFIDENCE skutočne testovala</h2>
 
-<p>CONFIDENCE bola randomizovaná, dvojito zaslepená, trojramenná štúdia fázy 2 s aktívnymi porovnávacími ramenami a s dvojitou simuláciou liečby (<span lang="en">double-dummy</span>). Randomizovaných bolo 818 dospelých; úplný súbor analýzy účinnosti tvorilo 800 a bezpečnostný súbor 798 účastníkov.</p>
+<p>CONFIDENCE bola randomizovaná, dvojito zaslepená, trojramenná štúdia fázy 2&nbsp;s aktívnymi porovnávacími ramenami a s dvojitou simuláciou liečby (<span lang="en">double-dummy</span>). Randomizovaných bolo 818 dospelých; úplný súbor analýzy účinnosti tvorilo 800 a bezpečnostný súbor 798 účastníkov.</p>
 
-<p>Zaradení pacienti mali diabetes 2. typu, CHO s eGFR 30–90 ml/min/1,73 m² a UACR 100–5 000 mg/g. Najvyššiu schválenú tolerovanú dávku inhibítora angiotenzín konvertujúceho enzýmu alebo blokátora receptora AT1 mali užívať dlhšie než mesiac; pri randomizácii blokádu RAS reálne užívalo 98,4 % účastníkov. Označenie „CHO pri diabete 2. typu“ je presnejšie než automatické pripísanie diabetickej etiológie ochorenia obličiek každému pacientovi.</p>
+<p>Zaradení pacienti mali diabetes 2. typu, CHO s eGFR 30–90&nbsp;ml/min/1,73&nbsp;m² a UACR 100–5&nbsp;000&nbsp;mg/g. Najvyššiu schválenú tolerovanú dávku inhibítora angiotenzín konvertujúceho enzýmu alebo blokátora receptora AT1 mali užívať dlhšie než mesiac; pri randomizácii blokádu RAS reálne užívalo 98,4 % účastníkov. Označenie „CHO pri diabete 2. typu“ je presnejšie než automatické pripísanie diabetickej etiológie ochorenia obličiek každému pacientovi.</p>
 
 <p>Účastníci boli v pomere 1 : 1 : 1 zaradení do troch skupín:</p>
 
 <ul>
-  <li>finerenón 10 alebo 20 mg denne podľa vstupnej eGFR,</li>
-  <li>empagliflozín 10 mg denne,</li>
+  <li>finerenón 10 alebo 20&nbsp;mg denne podľa vstupnej eGFR,</li>
+  <li>empagliflozín 10&nbsp;mg denne,</li>
   <li>kombinácia oboch liekov v rovnakých dávkach.</li>
 </ul>
 
-<p>Štúdia nemala rameno so samotnou základnou liečbou alebo s dvojitým placebom. Primárnym ukazovateľom bola relatívna zmena logaritmicky transformovaného priemerného UACR od východiskovej hodnoty do 180. dňa. Na začiatku bola priemerná eGFR 54,2 ± 17,1 ml/min/1,73 m² a medián UACR 579 mg/g (medzikvartilové rozpätie 292–1 092 mg/g).</p>
+<p>Štúdia nemala rameno so samotnou základnou liečbou alebo s dvojitým placebom. Primárnym ukazovateľom bola relatívna zmena logaritmicky transformovaného priemerného UACR od východiskovej hodnoty do 180. dňa. Na začiatku bola priemerná eGFR 54,2 ± 17,1&nbsp;ml/min/1,73&nbsp;m² a medián UACR 579&nbsp;mg/g (medzikvartilové rozpätie 292–1&nbsp;092&nbsp;mg/g).</p>
 
 <h2>Výsledok: výraznejší pokles UACR, nie zatiaľ menej zlyhaní obličiek</h2>
 
@@ -94,15 +94,15 @@ $articles[] = [
 
 <h2>Prečo editorial upriamil pozornosť na krvný tlak</h2>
 
-<p>Pri kombinovanej liečbe sa systolický krvný tlak do 30. dňa znížil približne o 7,4 mmHg. Medzi 180. a 210. dňom, teda po vysadení skúšanej liečby, opäť vzrástol približne o 7,5 mmHg. Súčasne sa zvýšil UACR: pomer hodnoty po vysadení k hodnote v 180. deň bol 1,63 pri kombinácii, 1,45 pri finerenóne a 1,44 pri empagliflozíne. UACR však zostal v 210. deň numericky pod východiskovou hodnotou.</p>
+<p>Pri kombinovanej liečbe sa systolický krvný tlak do 30. dňa znížil približne o 7,4&nbsp;mmHg. Medzi 180. a 210. dňom, teda po vysadení skúšanej liečby, opäť vzrástol približne o 7,5&nbsp;mmHg. Súčasne sa zvýšil UACR: pomer hodnoty po vysadení k hodnote v 180. deň bol 1,63 pri kombinácii, 1,45 pri finerenóne a 1,44 pri empagliflozíne. UACR však zostal v 210. deň numericky pod východiskovou hodnotou.</p>
 
-<p>Podobne sa v 30. deň znížila eGFR priemerne o 5,6 ml/min/1,73 m² pri kombinácii, o 2,0 pri finerenóne a o 3,8 pri empagliflozíne; po vysadení sa veľká časť poklesu upravila. Skoré zníženie eGFR pri týchto liekoch môže predstavovať očakávanú farmakodynamickú odpoveď a samo osebe nie je dôkazom poškodenia obličiek.</p>
+<p>Podobne sa v 30. deň znížila eGFR priemerne o 5,6&nbsp;ml/min/1,73&nbsp;m² pri kombinácii, o 2,0 pri finerenóne a o 3,8 pri empagliflozíne; po vysadení sa veľká časť poklesu upravila. Skoré zníženie eGFR pri týchto liekoch môže predstavovať očakávanú farmakodynamickú odpoveď a samo osebe nie je dôkazom poškodenia obličiek.</p>
 
 <p>Súbežný časový priebeh STK, UACR a eGFR je zlučiteľný s významnou úlohou systémovej a vnútroobličkovej hemodynamiky. Časová zhoda však sama osebe neurčuje kauzalitu ani veľkosť sprostredkovaného účinku. Intraglomerulový tlak sa v CONFIDENCE priamo nemeral a zmena systémového krvného tlaku nie je jeho úplnou náhradou.</p>
 
 <h2>Novšia analýza hypotézu „iba krvný tlak“ skôr nepodporila</h2>
 
-<p>Dňa 5. júna 2026 bola v časopise <em>Hypertension</em> publikovaná sekundárna analýza 800 účastníkov CONFIDENCE. Vstupný STK najmenej 130 mmHg malo 532 pacientov (66 %). Kombinácia zvýšila pravdepodobnosť poklesu STK aspoň o 10 mmHg oproti finerenónu (OR 1,83; 95 % IS 1,21–2,76; p = 0,004). Oproti empagliflozínu výsledok nedosiahol konvenčnú hranicu štatistickej významnosti (OR 1,45; 95 % IS 0,97–2,17; p = 0,07). Najsilnejším prediktorom tlakovej odpovede bol vyšší vstupný STK.</p>
+<p>Dňa 5. júna 2026 bola v časopise <em>Hypertension</em> publikovaná sekundárna analýza 800 účastníkov CONFIDENCE. Vstupný STK najmenej 130&nbsp;mmHg malo 532 pacientov (66 %). Kombinácia zvýšila pravdepodobnosť poklesu STK aspoň o 10&nbsp;mmHg oproti finerenónu (OR 1,83; 95 % IS 1,21–2,76; p = 0,004). Oproti empagliflozínu výsledok nedosiahol konvenčnú hranicu štatistickej významnosti (OR 1,45; 95 % IS 0,97–2,17; p = 0,07). Najsilnejším prediktorom tlakovej odpovede bol vyšší vstupný STK.</p>
 
 <p>Rozhodujúca exploratívna kauzálna mediačná analýza odhadla, že zmena STK do 30. dňa sprostredkovala <strong>menej než 10 %</strong> celkového poklesu UACR v 180. deň. Pokles albuminúrie sa teda v tejto analýze javil prevažne nezávislý od skorej zmeny klinicky meraného STK.</p>
 
@@ -117,9 +117,9 @@ $articles[] = [
 <h2>Štyri otázky editorialu v primeranom kontexte</h2>
 
 <ol>
-  <li><strong>Bol krvný tlak na začiatku optimálne liečený?</strong> Priemerný vstupný STK bol približne 135 ± 13 mmHg a diuretikum užívalo 36 % účastníkov. To otvára otázku objemového a tlakového manažmentu, ale nedokazuje nedostatočnú liečbu. Cieľ STK pod 120 mmHg podľa <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024</a> sa týka dospelých s vysokým tlakom a CHO, ak je tolerovaný, pri štandardizovanom ambulantnom meraní a s individualizáciou. Nemožno ho mechanicky preniesť na každú rutinnú hodnotu ani na každého pacienta.</li>
+  <li><strong>Bol krvný tlak na začiatku optimálne liečený?</strong> Priemerný vstupný STK bol približne 135 ± 13&nbsp;mmHg a diuretikum užívalo 36 % účastníkov. To otvára otázku objemového a tlakového manažmentu, ale nedokazuje nedostatočnú liečbu. Cieľ STK pod 120&nbsp;mmHg podľa <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024</a> sa týka dospelých s vysokým tlakom a CHO, ak je tolerovaný, pri štandardizovanom ambulantnom meraní a s individualizáciou. Nemožno ho mechanicky preniesť na každú rutinnú hodnotu ani na každého pacienta.</li>
   <li><strong>Chýbali údaje o sodíku.</strong> Štúdia neuviedla príjem sodíka ani jeho vylučovanie močom. To obmedzuje vysvetlenie mechanizmu, keďže sodík, objemový stav, tlak a albuminúria spolu úzko súvisia. Neznamená to však, že zahrnutie jednej tlakovej premennej by nevyhnutne odstránilo účinok kombinácie.</li>
-  <li><strong>Aká bola východisková albuminúria?</strong> Medián UACR 579 mg/g nie je klinicky „nízky“; patrí do kategórie A3, teda závažne zvýšenej albuminúrie. Bol však nižší než v historických štúdiách s výraznou proteinúriou a približne štvrtina účastníkov mala UACR pod 300 mg/g. Rovnaký relatívny pokles znamená pri nižšej východiskovej hodnote menší absolútny rozdiel a CONFIDENCE priamo neoverila jeho dlhodobý klinický prínos.</li>
+  <li><strong>Aká bola východisková albuminúria?</strong> Medián UACR 579&nbsp;mg/g nie je klinicky „nízky“; patrí do kategórie A3, teda závažne zvýšenej albuminúrie. Bol však nižší než v historických štúdiách s výraznou proteinúriou a približne štvrtina účastníkov mala UACR pod 300&nbsp;mg/g. Rovnaký relatívny pokles znamená pri nižšej východiskovej hodnote menší absolútny rozdiel a CONFIDENCE priamo neoverila jeho dlhodobý klinický prínos.</li>
   <li><strong>Bola blokáda RAS dostatočne stabilná?</strong> Požadovaná stabilizácia dlhšia než jeden mesiac mohla byť u časti pacientov krátka a doznievajúci účinok nedávno nasadeného ACE inhibítora alebo ARB mohol prispieť k poklesu UACR vo všetkých ramenách. Randomizácia by však mala tento vplyv v priemere vyvážiť, preto sám osebe presvedčivo nevysvetľuje rozdiel kombinácie oproti monoterapiám.</li>
 </ol>
 
@@ -133,9 +133,9 @@ $articles[] = [
 
 <h2>Náklady a chlórtalidón: užitočná pripomienka, nie rovnocenná náhrada</h2>
 
-<p>Editorial použil americké ceny presahujúce 1 000 USD mesačne za kombináciu a približne 8 USD za mesačnú liečbu chlórtalidónom. Ide o dobovú ilustráciu amerického trhu, nie o výsledok CONFIDENCE ani o údaje prenositeľné na Slovensko. Reálne náklady závisia od cien, úhrad, zliav a konkrétneho zdravotného systému.</p>
+<p>Editorial použil americké ceny presahujúce 1&nbsp;000 USD mesačne za kombináciu a približne 8 USD za mesačnú liečbu chlórtalidónom. Ide o dobovú ilustráciu amerického trhu, nie o výsledok CONFIDENCE ani o údaje prenositeľné na Slovensko. Reálne náklady závisia od cien, úhrad, zliav a konkrétneho zdravotného systému.</p>
 
-<p>V štúdii CLICK u 160 pacientov s CHO kategórie G4 a nedostatočne kontrolovanou hypertenziou znížil chlórtalidón po 12 týždňoch 24-hodinový STK oproti placebu približne o 10,5 mmHg a výrazne znížil UACR. Častejšie sa však vyskytli hypokaliémia, reverzibilný vzostup kreatinínu, hyperglykémia, závraty a hyperurikémia. Chlórtalidón je účinnou možnosťou pri vhodne indikovanom manažmente hypertenzie a objemovej expanzie, ale CLICK nepreukázala jeho vplyv na zlyhanie obličiek a nerobí z neho náhradu liekov s osobitne preukázaným kardiorenálnym prínosom.</p>
+<p>V štúdii CLICK u 160 pacientov s CHO kategórie G4 a nedostatočne kontrolovanou hypertenziou znížil chlórtalidón po 12 týždňoch 24-hodinový STK oproti placebu približne o 10,5&nbsp;mmHg a výrazne znížil UACR. Častejšie sa však vyskytli hypokaliémia, reverzibilný vzostup kreatinínu, hyperglykémia, závraty a hyperurikémia. Chlórtalidón je účinnou možnosťou pri vhodne indikovanom manažmente hypertenzie a objemovej expanzie, ale CLICK nepreukázala jeho vplyv na zlyhanie obličiek a nerobí z neho náhradu liekov s osobitne preukázaným kardiorenálnym prínosom.</p>
 
 <h2>Bezpečnosť: priaznivý 180-dňový obraz, nie dôvod poľaviť v monitorovaní</h2>
 
@@ -163,7 +163,7 @@ $articles[] = [
       <td>3,8 %</td>
     </tr>
     <tr>
-      <td>Laboratórna hodnota K<sup>+</sup> &gt;5,5 mmol/l</td>
+      <td>Laboratórna hodnota K<sup>+</sup> &gt;5,5&nbsp;mmol/l</td>
       <td>15,3 %</td>
       <td>18,6 %</td>
       <td>9,7 %</td>
@@ -184,11 +184,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pre hyperkaliémiu natrvalo ukončil liečbu jeden pacient v každej skupine. Kombinácia teda počas 180 dní neodhalila neočakávaný bezpečnostný signál, ale riziko hyperkaliémie neodstránila. Výsledky navyše nemožno bezvýhradne preniesť na pacientov so vstupnou koncentráciou draslíka nad 4,8 mmol/l, symptomatickým srdcovým zlyhávaním so zníženou ejekčnou frakciou alebo nedávnou závažnou kardiovaskulárnou príhodou, pretože takíto pacienti boli zo štúdie vylúčení.</p>
+<p>Pre hyperkaliémiu natrvalo ukončil liečbu jeden pacient v každej skupine. Kombinácia teda počas 180&nbsp;dní neodhalila neočakávaný bezpečnostný signál, ale riziko hyperkaliémie neodstránila. Výsledky navyše nemožno bezvýhradne preniesť na pacientov so vstupnou koncentráciou draslíka nad 4,8&nbsp;mmol/l, symptomatickým srdcovým zlyhávaním so zníženou ejekčnou frakciou alebo nedávnou závažnou kardiovaskulárnou príhodou, pretože takíto pacienti boli zo štúdie vylúčení.</p>
 
 <h2>Čo z toho vyplýva pre klinickú prax</h2>
 
-<p><a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy starostlivosti ADA 2026</a> uvádzajú, že súčasné začatie inhibítora SGLT2 a finerenónu možno zvážiť u dospelých s diabetom 2. typu, UACR najmenej 100 mg/g, eGFR 30–90 ml/min/1,73 m² a liečbou inhibítorom RAS, a to na základe údajov o bezpečnosti a priaznivom účinku na albuminúriu. Formulácia „možno zvážiť“ nie je univerzálnym odporúčaním pre každého pacienta ani dôkazom dlhodobého výsledkového prínosu konkrétnej kombinácie.</p>
+<p><a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy starostlivosti ADA 2026</a> uvádzajú, že súčasné začatie inhibítora SGLT2 a finerenónu možno zvážiť u dospelých s diabetom 2. typu, UACR najmenej 100&nbsp;mg/g, eGFR 30–90&nbsp;ml/min/1,73&nbsp;m² a liečbou inhibítorom RAS, a to na základe údajov o bezpečnosti a priaznivom účinku na albuminúriu. Formulácia „možno zvážiť“ nie je univerzálnym odporúčaním pre každého pacienta ani dôkazom dlhodobého výsledkového prínosu konkrétnej kombinácie.</p>
 
 <p>Praktický postup má zostať individualizovaný:</p>
 

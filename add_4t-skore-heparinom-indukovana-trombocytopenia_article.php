@@ -120,7 +120,7 @@ $articles[] = [
 
 <h2>Časovanie: rozhoduje anamnéza heparínu</h2>
 
-<p>Klasická HIT sa objavuje najčastejšie medzi 5. až 10. dňom po začatí heparínu. Pri predchádzajúcej expozícii v posledných týždňoch môže vzniknúť rýchlejšie, niekedy už v priebehu 24 hodín. V praxi je preto nevyhnutné zistiť nielen aktuálne podanie heparínu, ale aj nedávnu hospitalizáciu, operáciu, dialýzu, preplach katétra alebo profylaktickú antikoaguláciu.</p>
+<p>Klasická HIT sa objavuje najčastejšie medzi 5. až 10. dňom po začatí heparínu. Pri predchádzajúcej expozícii v posledných týždňoch môže vzniknúť rýchlejšie, niekedy už v priebehu 24&nbsp;hodín. V praxi je preto nevyhnutné zistiť nielen aktuálne podanie heparínu, ale aj nedávnu hospitalizáciu, operáciu, dialýzu, preplach katétra alebo profylaktickú antikoaguláciu.</p>
 
 <p>Ak časová súvislosť nesedí, pravdepodobnosť HIT klesá. Práve tento bod často odlíši skutočné podozrenie od situácie, v ktorej je trombocytopénia iba náhodne prítomná u pacienta, ktorý niekedy dostal heparín.</p>
 

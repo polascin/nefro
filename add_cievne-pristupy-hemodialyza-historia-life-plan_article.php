@@ -88,7 +88,7 @@ $articles[] = [
 
 <h2>Endovaskulárne vytvorená fistula</h2>
 
-<p>Od druhej dekády tohto storočia je možné arteriovenóznu anastomózu vytvoriť katétrom, bez otvorenej operácie. Prospektívna multicentrická štúdia NEAT hodnotila endovaskulárnu fistulu v proximálnom predlaktí u 80 pacientov v deviatich centrách v Kanade, Austrálii a na Novom Zélande. Fistula sa podarila u 98 % účastníkov, závažná udalosť súvisiaca s výkonom nastala u 8 % (súvisiaca s pomôckou u 2 %) a fyziologicky vhodných na dialýzu bolo v priebehu troch mesiacov 87 % fistúl, pri priemernom prietoku brachiálnou tepnou 918 ml/min.</p>
+<p>Od druhej dekády tohto storočia je možné arteriovenóznu anastomózu vytvoriť katétrom, bez otvorenej operácie. Prospektívna multicentrická štúdia NEAT hodnotila endovaskulárnu fistulu v proximálnom predlaktí u 80 pacientov v deviatich centrách v Kanade, Austrálii a na Novom Zélande. Fistula sa podarila u 98 % účastníkov, závažná udalosť súvisiaca s výkonom nastala u 8 % (súvisiaca s pomôckou u 2 %) a fyziologicky vhodných na dialýzu bolo v priebehu troch mesiacov 87 % fistúl, pri priemernom prietoku brachiálnou tepnou 918&nbsp;ml/min.</p>
 
 <p>Ide o jednoramennú štúdiu bez kontrolnej skupiny, takže priame porovnanie s chirurgicky vytvorenou fistulou z nej vyvodiť nemožno. Metóda má navyše úzke anatomické kritériá a nenahrádza chirurgiu plošne.</p>
 

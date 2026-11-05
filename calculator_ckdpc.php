@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ]);
         if ($ageYears === false) {
             $errors[] =
-                "Vek musí byť celé číslo od 20 do 80 rokov (validačný rozsah modelu).";
+                "Vek musí byť celé číslo od 20 do 80 rokov (validačný rozsah modelu).";
         }
 
         // Pohlavie
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Vyberte pohlavie.";
         }
 
-        // eGFR (prijíma ml/min/1,73 m² aj ml/s/1,73 m²)
+        // eGFR (prijíma ml/min/1,73 m² aj ml/s/1,73 m²)
         $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
         $egfr = calculatorParseEgfrToMlMin(
             $form["egfr"],
@@ -151,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // SBP
         $sbp = calculatorParsePositiveFloat($form["sbp"]);
         if ($sbp === null || $sbp < 70 || $sbp > 250) {
-            $errors[] = "Systolický TK musí byť číslo v rozsahu 70–250 mmHg.";
+            $errors[] = "Systolický TK musí byť číslo v rozsahu 70–250 mmHg.";
         }
 
         // Booleany
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // BMI
         $bmi = calculatorParsePositiveFloat($form["bmi"]);
         if ($bmi === null || $bmi < 10 || $bmi > 80) {
-            $errors[] = "BMI musí byť číslo v rozsahu 10–80 kg/m².";
+            $errors[] = "BMI musí byť číslo v rozsahu 10–80 kg/m².";
         }
 
         // Fajčenie

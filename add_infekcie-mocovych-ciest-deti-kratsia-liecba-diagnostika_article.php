@@ -19,7 +19,7 @@ $articles[] = [
     'is_top' => 0,
     'excerpt' => 'Odporúčanie AAP z roku 2026 podporuje najviac sedemdňovú antibiotickú liečbu u väčšiny malých detí s IMC. Bezpečné skrátenie však závisí od veku, diagnózy a rizika komplikácií.',
     'content' => <<<'HTML'
-<p>Aktualizované odporúčanie Americkej pediatrickej akadémie (AAP) mení diagnostiku a liečbu infekcií močových ciest u detí vo veku od 8 dní do 5 rokov. U väčšiny detí podporuje antibiotickú liečbu trvajúcu najviac sedem dní. Nejde však o plošné pravidlo. Dĺžka a spôsob liečby závisia od veku, klinického obrazu, predpokladaného miesta infekcie, bakteriémie, anatomických pomerov a odpovede na liečbu. [1]</p>
+<p>Aktualizované odporúčanie Americkej pediatrickej akadémie (AAP) mení diagnostiku a liečbu infekcií močových ciest u detí vo veku od 8&nbsp;dní do 5&nbsp;rokov. U väčšiny detí podporuje antibiotickú liečbu trvajúcu najviac sedem dní. Nejde však o plošné pravidlo. Dĺžka a spôsob liečby závisia od veku, klinického obrazu, predpokladaného miesta infekcie, bakteriémie, anatomických pomerov a odpovede na liečbu. [1]</p>
 
 <p>Odporúčanie je určené najmä deťom s nízkou medicínskou komplexnosťou. Nevzťahuje sa priamo na deti s neurogénnym močovým mechúrom, imunokompromitáciou, extrémnou prematuritou, známymi vrodenými chybami obličiek a močových ciest ani s iným závažným chronickým ochorením. Tie vyžadujú individuálny a spravidla špecializovaný postup. [1]</p>
 
@@ -39,10 +39,10 @@ $articles[] = [
 <table>
   <thead><tr><th scope="col">Klinická skupina</th><th scope="col">Trvanie podľa AAP</th><th scope="col">Podstatná podmienka</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Deti vo veku od 2 do 5 rokov s nefebrilnou cystitídou</th><td>3 až 5 dní</td><td>Bez známej anatomickej abnormality močových ciest; prítomné typické príznaky dolných močových ciest</td></tr>
-    <tr><th scope="row">Deti vo veku od 2 do 24 mesiacov</th><td>5 až 7 dní</td><td>Potvrdená infekcia močových ciest</td></tr>
-    <tr><th scope="row">Deti vo veku od 2 do 5 rokov s príznakmi pyelonefritídy</th><td>5 až 7 dní</td><td>Bez známej anatomickej abnormality močových ciest</td></tr>
-    <tr><th scope="row">Dojčatá vo veku od 8 dní do 2 mesiacov alebo deti s vyšším rizikom</th><td>Môže byť potrebných viac ako 7 dní</td><td>Anatomická abnormalita, bakteriémia alebo nedostatočná klinická odpoveď patria medzi dôvody na dlhší režim</td></tr>
+    <tr><th scope="row">Deti vo veku od 2 do 5&nbsp;rokov s nefebrilnou cystitídou</th><td>3 až 5&nbsp;dní</td><td>Bez známej anatomickej abnormality močových ciest; prítomné typické príznaky dolných močových ciest</td></tr>
+    <tr><th scope="row">Deti vo veku od 2 do 24&nbsp;mesiacov</th><td>5 až 7&nbsp;dní</td><td>Potvrdená infekcia močových ciest</td></tr>
+    <tr><th scope="row">Deti vo veku od 2 do 5&nbsp;rokov s príznakmi pyelonefritídy</th><td>5 až 7&nbsp;dní</td><td>Bez známej anatomickej abnormality močových ciest</td></tr>
+    <tr><th scope="row">Dojčatá vo veku od 8&nbsp;dní do 2&nbsp;mesiacov alebo deti s vyšším rizikom</th><td>Môže byť potrebných viac ako 7&nbsp;dní</td><td>Anatomická abnormalita, bakteriémia alebo nedostatočná klinická odpoveď patria medzi dôvody na dlhší režim</td></tr>
   </tbody>
 </table>
 </div>
@@ -53,23 +53,23 @@ $articles[] = [
 
 <h2>Perorálna liečba má širšie miesto</h2>
 
-<p>U detí starších ako 28 dní a mladších ako 5 rokov AAP silno odporúča perorálne antibiotiká namiesto parenterálnej alebo sekvenčnej liečby vyžadujúcej hospitalizáciu. Istota dôkazov je však veľmi nízka. Odporúčanie sa týka detí, ktoré nie sú kriticky choré, nemajú pridruženú bakteriémiu a dokážu perorálny liek prijať a udržať. [1]</p>
+<p>U detí starších ako 28&nbsp;dní a mladších ako 5&nbsp;rokov AAP silno odporúča perorálne antibiotiká namiesto parenterálnej alebo sekvenčnej liečby vyžadujúcej hospitalizáciu. Istota dôkazov je však veľmi nízka. Odporúčanie sa týka detí, ktoré nie sú kriticky choré, nemajú pridruženú bakteriémiu a dokážu perorálny liek prijať a udržať. [1]</p>
 
-<p>U dojčiat vo veku od 8 do 28 dní panel podmienečne odporúča začať parenterálnu liečbu a po klinickom zlepšení včas prejsť na perorálnu. To nemožno interpretovať ako podporu ambulantného začatia liečby novorodenca bez zodpovedajúceho vyšetrenia. [1]</p>
+<p>U dojčiat vo veku od 8 do 28&nbsp;dní panel podmienečne odporúča začať parenterálnu liečbu a po klinickom zlepšení včas prejsť na perorálnu. To nemožno interpretovať ako podporu ambulantného začatia liečby novorodenca bez zodpovedajúceho vyšetrenia. [1]</p>
 
 <h2>Diagnóza nie je iba pozitívna kultivácia</h2>
 
 <p>Technický report AAP definuje infekciu pomocou kombinácie zápalového nálezu v moči, rastu jedného uropatogénu a spôsobu odberu. Pozitívna kultivácia sama osebe môže predstavovať skutočnú infekciu, asymptomatickú bakteriúriu alebo kontamináciu. [2]</p>
 
-<p>Ak je výsledok kultivácie k dispozícii, u dojčiat mladších ako dva mesiace podporuje vysokú pravdepodobnosť infekcie nález najmenej 5 leukocytov v zornom poli pri veľkom zväčšení alebo aspoň stopovej leukocytovej esterázy. U detí od dvoch mesiacov do piatich rokov je hranicou najmenej 5 leukocytov v zornom poli alebo leukocytová esteráza najmenej 1+. Súčasne sa vyžaduje rast jedného patogénu najmenej 10 000 CFU/ml z katetrizovaného moču alebo suprapubickej aspirácie, prípadne najmenej 100 000 CFU/ml zo správne odobratého stredného prúdu moču. [2]</p>
+<p>Ak je výsledok kultivácie k dispozícii, u dojčiat mladších ako dva mesiace podporuje vysokú pravdepodobnosť infekcie nález najmenej 5 leukocytov v zornom poli pri veľkom zväčšení alebo aspoň stopovej leukocytovej esterázy. U detí od dvoch mesiacov do piatich rokov je hranicou najmenej 5 leukocytov v zornom poli alebo leukocytová esteráza najmenej 1+. Súčasne sa vyžaduje rast jedného patogénu najmenej 10&nbsp;000 CFU/ml z katetrizovaného moču alebo suprapubickej aspirácie, prípadne najmenej 100&nbsp;000 CFU/ml zo správne odobratého stredného prúdu moču. [2]</p>
 
 <p>Kým výsledok kultivácie nie je známy, AAP pri rozhodovaní o pravdepodobnej infekcii používa citlivejšie vekovo špecifické prahy. U detí od dvoch mesiacov ide o najmenej 10 leukocytov v zornom poli alebo leukocytovú esterázu 2+. Výsledok treba interpretovať spolu s klinickou pravdepodobnosťou a technikou laboratórneho vyšetrenia. [2]</p>
 
 <p>Moč zo zberného vrecka sa nemá používať na kultivačné potvrdenie infekcie u dieťaťa, ktoré nedokáže poskytnúť čistý stredný prúd. Negatívny skríningový nález môže pomôcť vyhnúť sa katetrizácii, pozitívny nález z vrecka však vyžaduje vhodne odobratú vzorku na kultiváciu. [2]</p>
 
-<h2>Vyšetrenie do 72 hodín nie je pokyn čakať</h2>
+<h2>Vyšetrenie do 72&nbsp;hodín nie je pokyn čakať</h2>
 
-<p>U medicínsky nekomplexných detí vo veku od 2 do 24 mesiacov s horúčkou bez známeho zdroja a u detí od 2 do 5 rokov s príznakmi infekcie močových ciest AAP podmienečne odporúča lekárske vyšetrenie do 72 hodín od začiatku príznakov namiesto dlhšieho pozorovania. Istota dôkazov je nízka. [1]</p>
+<p>U medicínsky nekomplexných detí vo veku od 2 do 24&nbsp;mesiacov s horúčkou bez známeho zdroja a u detí od 2 do 5&nbsp;rokov s príznakmi infekcie močových ciest AAP podmienečne odporúča lekárske vyšetrenie do 72&nbsp;hodín od začiatku príznakov namiesto dlhšieho pozorovania. Istota dôkazov je nízka. [1]</p>
 
 <p>Tento časový rámec neznamená, že je bezpečné tri dni vyčkávať pri závažnom stave. Vyšetrenie treba urýchliť pri známej urologickej abnormalite, predchádzajúcej febrilnej infekcii, bolesti v boku alebo iných príznakoch pyelonefritídy. Novorodenec s horúčkou, dieťa s poruchou vedomia, výraznou apatiou, nedostatočným príjmom tekutín, obehovou nestabilitou alebo podozrením na sepsu potrebuje bezodkladné posúdenie.</p>
 

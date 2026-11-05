@@ -5,10 +5,10 @@
  * Reforma zdravotnictva a kontinuita nefrologickej starostlivosti.
  * Ramec: DGIM Talk "Die Zukunft der Inneren Medizin - zwischen Reform und
  * Verantwortung" (STREAMED UP, livestream 16. 10. 2026).
- * Vecny obsah: KDIGO 2024, Cochrane prehlad o vcasnom odoslani, Nicoll a spol.
+ * Vecny obsah: KDIGO 2024, Cochrane prehľad o vcasnom odoslani, Nicoll a spol.
  *
- * Zdroj je programove oznamenie podujatia, nie publikovana praca - do
- * source_authors.php sa preto nic nedoplna (nejde o autorov clanku).
+ * Zdroj je programove oznamenie podujatia, nie publikovaná praca - do
+ * source_authors.php sa preto nic nedoplna (nejde o autorov článku).
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -40,7 +40,7 @@ $articles[] = [
 
 <h2>O čom debata je</h2>
 
-<p>Podujatie trvá 90 minút, je certifikované Lekárskou komorou spolkovej krajiny Hesensko dvoma kreditmi kategórie A a podľa platformy nie je sponzorované. Vedecké vedenie majú Petra-Maria Schumm-Draeger a Dirk Müller-Wieland. Program tvoria tri vystúpenia:</p>
+<p>Podujatie trvá 90&nbsp;minút, je certifikované Lekárskou komorou spolkovej krajiny Hesensko dvoma kreditmi kategórie A a podľa platformy nie je sponzorované. Vedecké vedenie majú Petra-Maria Schumm-Draeger a Dirk Müller-Wieland. Program tvoria tri vystúpenia:</p>
 
 <div class="table-responsive" role="region" aria-label="Program podujatia DGIM Talk o budúcnosti internej medicíny" tabindex="0">
   <table>
@@ -91,17 +91,17 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">2.2.1</th>
-        <td>3 – 5 % počas 5 rokov</td>
+        <td>3 – 5 % počas 5&nbsp;rokov</td>
         <td>Potrebu odoslania do špecializovanej nefrologickej starostlivosti</td>
       </tr>
       <tr>
         <th scope="row">2.2.2</th>
-        <td>Viac než 10 % počas 2 rokov</td>
+        <td>Viac než 10 % počas 2&nbsp;rokov</td>
         <td>Načasovanie multidisciplinárnej starostlivosti</td>
       </tr>
       <tr>
         <th scope="row">2.2.3</th>
-        <td>Viac než 40 % počas 2 rokov</td>
+        <td>Viac než 40 % počas 2&nbsp;rokov</td>
         <td>Edukáciu o modalitách, prípravu na náhradu funkcie obličiek vrátane plánovania cievneho prístupu a odoslanie na transplantačné vyšetrenie</td>
       </tr>
     </tbody>
@@ -116,7 +116,7 @@ $articles[] = [
 
 <h2>Pre včasné odoslanie má nefrológia najsilnejšie čísla</h2>
 
-<p>Cochranov systematický prehľad zahrnul 40 longitudinálnych kohortových štúdií so 63 887 účastníkmi, z ktorých 43 209 (68 %) bolo odoslaných k nefrológovi včas a 20 678 (32 %) neskoro. Rozdiel medzi skupinami bol konzistentný naprieč ukazovateľmi:</p>
+<p>Cochranov systematický prehľad zahrnul 40 longitudinálnych kohortových štúdií so 63&nbsp;887 účastníkmi, z ktorých 43&nbsp;209 (68 %) bolo odoslaných k nefrológovi včas a 20&nbsp;678 (32 %) neskoro. Rozdiel medzi skupinami bol konzistentný naprieč ukazovateľmi:</p>
 
 <ul>
   <li><strong>Úmrtnosť</strong> – relatívne riziko 0,61 (95 % IS 0,55 – 0,67) po 3 mesiacoch a 0,66 (0,60 – 0,71) po 5 rokoch v prospech včasného odoslania.</li>
@@ -144,7 +144,7 @@ $articles[] = [
 
 <p>Debata o fragmentácii nemusí zostať abstraktná. Údaje Národného centra zdravotníckych informácií za rok 2025 ukazujú, že do pravidelnej dialyzačnej liečby bolo prijatých 151 pacientov, ktorí dovtedy neboli sledovaní pre zlyhanie obličiek, 534 z vlastnej nefrologickej ambulancie a 149 z inej nefrologickej ambulancie. Približne <strong>18 % novoprijatých teda prichádzalo bez predchádzajúceho nefrologického sledovania</strong> pre zlyhanie obličiek.</p>
 
-<p>Druhý údaj dopĺňa obraz. Peritoneálnou dialýzou bolo na Slovensku ku koncu roka 2025 liečených 103 pacientov z celkovo 3 433 dialyzovaných, teda približne 3 %. Cochranov prehľad pritom zistil, že včas odoslaní pacienti začínajú peritoneálnou dialýzou výrazne častejšie. Nízky podiel domácej metódy a nezanedbateľný podiel neplánovaných začiatkov sú zlučiteľné s rovnakou príčinou: s tým, že časť pacientov sa k rozhodovaniu o modalite dostane neskoro alebo vôbec.</p>
+<p>Druhý údaj dopĺňa obraz. Peritoneálnou dialýzou bolo na Slovensku ku koncu roka 2025 liečených 103 pacientov z celkovo 3&nbsp;433 dialyzovaných, teda približne 3 %. Cochranov prehľad pritom zistil, že včas odoslaní pacienti začínajú peritoneálnou dialýzou výrazne častejšie. Nízky podiel domácej metódy a nezanedbateľný podiel neplánovaných začiatkov sú zlučiteľné s rovnakou príčinou: s tým, že časť pacientov sa k rozhodovaniu o modalite dostane neskoro alebo vôbec.</p>
 
 <p>Pripomeňme však, čo výkaz neumožňuje. Neuvádza, či išlo o neskorý záchyt, o akútny priebeh, alebo o pacientov sledovaných inde, a nemožno z neho tieto situácie rozlíšiť. Je to signál, nie meranie kvality.</p>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Riziko počítajte, neodhadujte.</strong> U pacienta s CKD G3 – G5 použite externe validovanú rovnicu rizika zlyhania obličiek; ide o odporúčanie úrovne 1A.</li>
-  <li><strong>Naviažte na prahy konkrétne kroky:</strong> 3 – 5 % za 5 rokov na odoslanie, nad 10 % za 2 roky na zapojenie tímu, nad 40 % za 2 roky na edukáciu o modalitách, plánovanie cievneho prístupu a transplantačné vyšetrenie.</li>
+  <li><strong>Naviažte na prahy konkrétne kroky:</strong> 3 – 5 % za 5&nbsp;rokov na odoslanie, nad 10 % za 2&nbsp;roky na zapojenie tímu, nad 40 % za 2&nbsp;roky na edukáciu o modalitách, plánovanie cievneho prístupu a transplantačné vyšetrenie.</li>
   <li><strong>Sledujte cievny prístup ako ukazovateľ kvality procesu,</strong> nie ako technický detail. Podiel pacientov začínajúcich dialýzu s katétrom hovorí o organizácii starostlivosti viac než väčšina iných čísel.</li>
   <li><strong>Odoslanie nie je prevzatie.</strong> Pri každom odoslaní musí byť zrejmé, kto pacienta ďalej vedie a kedy je ďalšia kontrola.</li>
   <li><strong>Pri reformných zmenách žiadajte údaje o procese,</strong> nie len o počte výkonov: podiel neplánovaných začiatkov, podiel trvalých cievnych prístupov, čas od odoslania po prvé nefrologické vyšetrenie.</li>
@@ -199,7 +199,7 @@ $articles[] = [
   <li><strong>Národné centrum zdravotníckych informácií.</strong> <em>Nefrologická starostlivosť a liečba nahrádzajúca funkciu obličiek v Slovenskej republike 2025.</em> Bratislava: NCZI; publikované august 2026. <a href="https://data.nczisk.sk/statisticke_vystupy/Nefrologia/Nefrologia_v_SR_2025.pdf" target="_blank" rel="noopener noreferrer">Správa (PDF)</a>; <a href="https://data.nczisk.sk/statisticke_vystupy/Nefrologia/Nefrologia_v_SR_2025.xlsx" target="_blank" rel="noopener noreferrer">tabuľkové výstupy (XLSX)</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Údaje o podujatí – dátum vysielania, dĺžka, dva kredity kategórie A, certifikácia Lekárskou komorou spolkovej krajiny Hesensko, vyhlásenie o nesponzorovaní, mená vedeckého vedenia aj prednášajúcich a názvy troch tém – boli prevzaté z verejne dostupnej stránky podujatia a overené v jej plnom znení. Obsah prednášok nebol v čase prípravy článku dostupný a článok z neho nevyvodzuje žiadne tvrdenia. Odporúčanie 2.2.1 a praktické body 2.2.1 až 2.2.5, ako aj znenie kapitoly 5 o optimálnych modeloch starostlivosti, boli prevzaté z doslovného znenia odporúčania KDIGO 2024. Číselné údaje Cochranovho prehľadu (40 štúdií, 63 887 účastníkov, 43 209 oproti 20 678, RR 0,61 a 0,66, rozdiel 9,12 dňa, RR 1,74, 0,47 a 3,22, hodnotenie kvality Newcastle-Ottawskou škálou, I² 82 – 97 %) a systematického prehľadu modelov starostlivosti (deväť článkov zo siedmich štúdií, obdobie 1992 – 2016, štyri modely, vysoké riziko skreslenia) boli overené proti ich abstraktom v databáze PubMed. Slovenské údaje (151, 534 a 149 prijatých pacientov; 103 pacientov na peritoneálnej dialýze z 3 433) pochádzajú z tabuliek T 7 a T 8 primárneho výstupu NCZI. Bibliografia bola overená cez PubMed a Crossref vrátane úplných mien autorov. <strong>Rozdiely oproti pôvodnej predlohe:</strong> predloha uvádzala, že nedokázala overiť autorstvo zdrojov ani získať znenie odporúčaní, a tvrdenia preto formulovala všeobecne; všetky tieto overenia boli pre tento článok vykonané a hedging bol nahradený konkrétnymi údajmi. Predloha tiež uvádzala, že systematické prehľady podporujú prínos multidisciplinárnych modelov starostlivosti – overený prehľad randomizovaných štúdií dospel k opatrnejšiemu záveru, že publikovaných dôkazov je málo a všetky zahrnuté štúdie mali vysoké riziko skreslenia. <strong>Vlastným odborným spracovaním</strong> je prepojenie reformnej témy s prahmi rizika podľa KDIGO, rozlíšenie medzi silou dôkazu pre včasné odoslanie a pre organizačné modely, argument o cievnom prístupe ako priehľadnej kauzálnej reťazi, prepojenie na slovenské údaje a celé zhrnutie pre prax.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Údaje o podujatí – dátum vysielania, dĺžka, dva kredity kategórie A, certifikácia Lekárskou komorou spolkovej krajiny Hesensko, vyhlásenie o nesponzorovaní, mená vedeckého vedenia aj prednášajúcich a názvy troch tém – boli prevzaté z verejne dostupnej stránky podujatia a overené v jej plnom znení. Obsah prednášok nebol v čase prípravy článku dostupný a článok z neho nevyvodzuje žiadne tvrdenia. Odporúčanie 2.2.1 a praktické body 2.2.1 až 2.2.5, ako aj znenie kapitoly 5 o optimálnych modeloch starostlivosti, boli prevzaté z doslovného znenia odporúčania KDIGO 2024. Číselné údaje Cochranovho prehľadu (40 štúdií, 63&nbsp;887 účastníkov, 43&nbsp;209 oproti 20&nbsp;678, RR 0,61 a 0,66, rozdiel 9,12 dňa, RR 1,74, 0,47 a 3,22, hodnotenie kvality Newcastle-Ottawskou škálou, I² 82 – 97 %) a systematického prehľadu modelov starostlivosti (deväť článkov zo siedmich štúdií, obdobie 1992 – 2016, štyri modely, vysoké riziko skreslenia) boli overené proti ich abstraktom v databáze PubMed. Slovenské údaje (151, 534 a 149 prijatých pacientov; 103 pacientov na peritoneálnej dialýze z 3&nbsp;433) pochádzajú z tabuliek T 7 a T 8 primárneho výstupu NCZI. Bibliografia bola overená cez PubMed a Crossref vrátane úplných mien autorov. <strong>Rozdiely oproti pôvodnej predlohe:</strong> predloha uvádzala, že nedokázala overiť autorstvo zdrojov ani získať znenie odporúčaní, a tvrdenia preto formulovala všeobecne; všetky tieto overenia boli pre tento článok vykonané a hedging bol nahradený konkrétnymi údajmi. Predloha tiež uvádzala, že systematické prehľady podporujú prínos multidisciplinárnych modelov starostlivosti – overený prehľad randomizovaných štúdií dospel k opatrnejšiemu záveru, že publikovaných dôkazov je málo a všetky zahrnuté štúdie mali vysoké riziko skreslenia. <strong>Vlastným odborným spracovaním</strong> je prepojenie reformnej témy s prahmi rizika podľa KDIGO, rozlíšenie medzi silou dôkazu pre včasné odoslanie a pre organizačné modely, argument o cievnom prístupe ako priehľadnej kauzálnej reťazi, prepojenie na slovenské údaje a celé zhrnutie pre prax.</em></p>
 HTML,
 ];
 

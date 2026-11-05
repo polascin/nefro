@@ -44,7 +44,7 @@ $articles[] = [
 
 <p>Odporúčanie Endocrine Society z roku 2024 je zamerané na <strong>prevenciu ochorení u osôb bez inej stanovenej indikácie</strong> na liečbu alebo vyšetrovanie. Empirickú suplementáciu definuje ako príjem nad referenčný nutričný príjem bez predchádzajúceho stanovenia 25(OH)D. Nejde o univerzálny návod na diagnostiku a liečbu osteomalácie, rachitídy, hypokalciémie, osteoporózy, hypoparatyreózy, malabsorpcie ani CKD-MBD.</p>
 
-<p>Následná oprava odporúčania spresnila dve dôležité formulácie. Zdravým dospelým mladším ako 75 rokov sa neodporúča empirická suplementácia <strong>nad referenčný nutričný príjem</strong> na prevenciu ochorení. Nejde teda o zákaz vitamínu D v strave alebo o popretie bežnej nutričnej potreby. Odporúčanie z roku 2024 zároveň nahrádza staršie odporúčanie Endocrine Society z roku 2011; pôvodné prahy sa nemajú automaticky prenášať do populačnej prevencie.</p>
+<p>Následná oprava odporúčania spresnila dve dôležité formulácie. Zdravým dospelým mladším ako 75&nbsp;rokov sa neodporúča empirická suplementácia <strong>nad referenčný nutričný príjem</strong> na prevenciu ochorení. Nejde teda o zákaz vitamínu D v strave alebo o popretie bežnej nutričnej potreby. Odporúčanie z roku 2024 zároveň nahrádza staršie odporúčanie Endocrine Society z roku 2011; pôvodné prahy sa nemajú automaticky prenášať do populačnej prevencie.</p>
 
 <h2>Rutinný skríning zdravých ľudí nemá preukázaný prínos</h2>
 
@@ -86,7 +86,7 @@ $articles[] = [
 
 <p>Odporúčania Endocrine Society sú prevažne podmienené a optimálna dávka pre jednotlivé preventívne indikácie zostáva neistá. Výsledky štúdií preto nemožno premeniť na pravidlo „jedna dávka pre každého“.</p>
 
-<h3>Deti a dospievajúci vo veku 1 až 18 rokov</h3>
+<h3>Deti a dospievajúci vo veku 1 až 18&nbsp;rokov</h3>
 
 <p>Panel navrhuje empirickú suplementáciu na prevenciu nutričnej rachitídy a pre možnosť zníženia rizika infekcií dýchacích ciest. Istota dôkazov pre jednotlivé výsledky nie je rovnaká a presná optimálna dávka nebola určená. Dojčatá mladšie ako jeden rok majú samostatné zavedené pediatrické odporúčania, ktoré odporúčanie z roku 2024 nenahrádza.</p>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <p>Panel navrhuje empirickú suplementáciu pre možný priaznivý vplyv na riziko preeklampsie, vnútromaternicového úmrtia, predčasného pôrodu, narodenia dieťaťa malého vzhľadom na gestačný vek a novorodeneckej mortality. Štúdie používali rozdielne denné aj týždenné režimy a nepodporujú svojvoľné vysoké dávky. Rutinné testovanie 25(OH)D u inak zdravých tehotných žien sa nenavrhuje.</p>
 
-<h3>Osoby vo veku 75 rokov a viac</h3>
+<h3>Osoby vo veku 75&nbsp;rokov a viac</h3>
 
 <p>Empirická suplementácia sa navrhuje pre možný mierny pokles mortality. Ide o podmienené odporúčanie, nie o dôkaz výrazného predĺženia života. Denný ekvivalent dávok v analyzovaných štúdiách sa pohyboval od 400 do 3&nbsp;333&nbsp;IU a vážený priemer bol približne 900&nbsp;IU. Tento priemer opisuje štúdie, nie individuálne predpísanú cieľovú dávku.</p>
 
@@ -102,9 +102,9 @@ $articles[] = [
 
 <p>Vitamín D možno zvážiť ako doplnok, nie náhradu intenzívnych režimových opatrení. Metaanalýza individuálnych údajov z troch randomizovaných štúdií zistila približne 15-percentné relatívne zníženie rizika progresie do diabetu a absolútne zníženie o 3,3 percentuálneho bodu počas troch rokov. Výsledok sa týka osôb s prediabetom, nie zdravej normoglykemickej populácie, a štúdie neumožňujú stanoviť jednu optimálnu dávku ani cieľovú koncentráciu.</p>
 
-<h2>Zdraví dospelí mladší ako 75 rokov</h2>
+<h2>Zdraví dospelí mladší ako 75&nbsp;rokov</h2>
 
-<p>U zdravých dospelých mladších ako 75 rokov sa neodporúča empirická suplementácia nad referenčný nutričný príjem iba na prevenciu kardiovaskulárnych, nádorových, metabolických alebo renálnych ochorení. Veľká štúdia VITAL nepreukázala pri dávke 2&nbsp;000&nbsp;IU cholekalciferolu denne nižší výskyt invazívnych nádorov ani závažných kardiovaskulárnych príhod oproti placebu.</p>
+<p>U zdravých dospelých mladších ako 75&nbsp;rokov sa neodporúča empirická suplementácia nad referenčný nutričný príjem iba na prevenciu kardiovaskulárnych, nádorových, metabolických alebo renálnych ochorení. Veľká štúdia VITAL nepreukázala pri dávke 2&nbsp;000&nbsp;IU cholekalciferolu denne nižší výskyt invazívnych nádorov ani závažných kardiovaskulárnych príhod oproti placebu.</p>
 
 <p>Treba rozlišovať medzi:</p>
 
@@ -118,9 +118,9 @@ $articles[] = [
 
 <h2>Denné dávkovanie je spravidla vhodnejšie než veľké bolusy</h2>
 
-<p>U netehotných osôb vo veku 50 rokov a viac, ktoré majú indikáciu na suplementáciu alebo liečbu, Endocrine Society navrhuje nižšie denné dávky namiesto vysokých dávok podávaných v dlhších intervaloch. Odporúčanie je podmienené a nevylučuje každý týždenný či mesačný režim. Upozorňuje však, že pohodlnejší bolus nemusí znamenať lepší klinický výsledok.</p>
+<p>U netehotných osôb vo veku 50&nbsp;rokov a viac, ktoré majú indikáciu na suplementáciu alebo liečbu, Endocrine Society navrhuje nižšie denné dávky namiesto vysokých dávok podávaných v dlhších intervaloch. Odporúčanie je podmienené a nevylučuje každý týždenný či mesačný režim. Upozorňuje však, že pohodlnejší bolus nemusí znamenať lepší klinický výsledok.</p>
 
-<p>V randomizovanej štúdii u 2&nbsp;256 komunitne žijúcich žien vo veku najmenej 70 rokov zvýšila jednorazová ročná dávka 500&nbsp;000&nbsp;IU cholekalciferolu výskyt pádov aj zlomenín. Tento výsledok nemožno prenášať na každý nedenný režim, jednoznačne však vyvracia predstavu, že čím vyššia jednorazová dávka, tým väčší úžitok.</p>
+<p>V randomizovanej štúdii u 2&nbsp;256 komunitne žijúcich žien vo veku najmenej 70&nbsp;rokov zvýšila jednorazová ročná dávka 500&nbsp;000&nbsp;IU cholekalciferolu výskyt pádov aj zlomenín. Tento výsledok nemožno prenášať na každý nedenný režim, jednoznačne však vyvracia predstavu, že čím vyššia jednorazová dávka, tým väčší úžitok.</p>
 
 <p>Konkrétny liečebný režim musí zohľadniť závažnosť deficitu, vek, absorpciu, schopnosť dodržiavať liečbu, telesné zloženie, funkciu pečene a obličiek, riziko hyperkalciémie a použitý prípravok. Krátkodobá liečebná dávka pod odborným dohľadom nie je to isté ako dlhodobé nekontrolované užívanie rovnakej dávky.</p>
 
@@ -194,7 +194,7 @@ $articles[] = [
 
 <p>Vitamín D zostáva nenahraditeľnou súčasťou kostného a minerálového metabolizmu, ale jeho široké biologické pôsobenie nie je dôkazom univerzálneho preventívneho účinku. U zdravých asymptomatických dospelých sa rutinný skríning 25(OH)D neodporúča a dávky nad referenčný nutričný príjem nemajú slúžiť ako všeobecná prevencia chronických ochorení.</p>
 
-<p>Empirická suplementácia má podľa Endocrine Society najlepšie odôvodnenie u detí a dospievajúcich vo veku 1 až 18 rokov, počas tehotenstva, vo veku 75 rokov a viac a ako doplnok režimových opatrení pri vysokorizikovom prediabete. Všetky tieto odporúčania treba čítať s vedomím neistoty optimálnej dávky.</p>
+<p>Empirická suplementácia má podľa Endocrine Society najlepšie odôvodnenie u detí a dospievajúcich vo veku 1 až 18&nbsp;rokov, počas tehotenstva, vo veku 75&nbsp;rokov a viac a ako doplnok režimových opatrení pri vysokorizikovom prediabete. Všetky tieto odporúčania treba čítať s vedomím neistoty optimálnej dávky.</p>
 
 <p>Pri chronickej chorobe obličiek treba dôsledne rozlišovať medzi dopĺňaním nutričného vitamínu D a liečbou kalcitriolom alebo jeho analógmi. Rozhodovanie má vychádzať z trendov celého súboru parametrov CKD-MBD a z rizika hyperkalciémie, nie z jedinej hodnoty 25(OH)D.</p>
 

@@ -21,7 +21,7 @@ $articles[] = [
     'content' => <<<'HTML'
 <p>Starší človek s pokročilou chronickou chorobou obličiek (CKD) skôr či neskôr stojí pred voľbou, či pri zlyhaní obličiek začať dialýzu, alebo zostať pri podpornej starostlivosti bez nej. Rozhodnutie mení každodenný život. V ambulancii pritom často chýba súvislý záznam o tom, že sa o voľbe vôbec hovorilo.</p>
 
-<p>Randomizovaná štúdia VIDEO-KD skúšala, či dvanásťminútová video pomôcka o troch možnostiach liečby spolu s vyhlásením, ktoré pacient nahrá alebo napíše sám, zvýši podiel ľudí s dokumentovaným plánovaním starostlivosti vopred. U 453 pacientov vo veku najmenej 65 rokov, s odhadovanou glomerulovou filtráciou (eGFR) najviac 30 ml/min/1,73 m<sup>2</sup>, taký záznam do 12 mesiacov alebo do úmrtia vznikol u 129 z 228 ľudí v intervenčnej skupine (56,6 %) a u 90 z 225 v kontrolnej skupine (40,0 %). Rozdiel 16,6 percentuálneho bodu je štatisticky významný (95 % interval spoľahlivosti od 7,5 do 25,7; P &lt; 0,001). Štúdia nemerala, či sa podľa tohto záznamu aj liečilo.<sup>1</sup></p>
+<p>Randomizovaná štúdia VIDEO-KD skúšala, či dvanásťminútová video pomôcka o troch možnostiach liečby spolu s vyhlásením, ktoré pacient nahrá alebo napíše sám, zvýši podiel ľudí s dokumentovaným plánovaním starostlivosti vopred. U 453 pacientov vo veku najmenej 65&nbsp;rokov, s odhadovanou glomerulovou filtráciou (eGFR) najviac 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>, taký záznam do 12&nbsp;mesiacov alebo do úmrtia vznikol u 129 z 228 ľudí v intervenčnej skupine (56,6 %) a u 90 z 225 v kontrolnej skupine (40,0 %). Rozdiel 16,6 percentuálneho bodu je štatisticky významný (95 % interval spoľahlivosti od 7,5 do 25,7; P &lt; 0,001). Štúdia nemerala, či sa podľa tohto záznamu aj liečilo.<sup>1</sup></p>
 
 <figure>
   <picture>
@@ -33,11 +33,11 @@ $articles[] = [
 
 <h2>Ako bola štúdia postavená a koho zaradila</h2>
 
-<p>Išlo o multicentrickú štúdiu s dvoma paralelnými skupinami v 12 ambulanciách v Spojených štátoch, z toho v 11 nefrologických a v jednej všeobecnej. Nábor prebiehal od júna 2021 do marca 2025 a sledovanie trvalo 12 mesiacov. Údaje sa analyzovali v apríli 2026. Priradenie bolo 1 : 1, v permutovaných blokoch podľa pracoviska, s utajením poradia v systéme REDCap. Hodnotitelia výsledkov skupinu nepoznali. Účastníci zaslepení neboli.<sup>1</sup></p>
+<p>Išlo o multicentrickú štúdiu s dvoma paralelnými skupinami v 12 ambulanciách v Spojených štátoch, z toho v 11 nefrologických a v jednej všeobecnej. Nábor prebiehal od júna 2021 do marca 2025 a sledovanie trvalo 12&nbsp;mesiacov. Údaje sa analyzovali v apríli 2026. Priradenie bolo 1 : 1, v permutovaných blokoch podľa pracoviska, s utajením poradia v systéme REDCap. Hodnotitelia výsledkov skupinu nepoznali. Účastníci zaslepení neboli.<sup>1</sup></p>
 
-<p>Pokročilá CKD znamenala eGFR najviac 30 ml/min/1,73 m<sup>2</sup>. Rovnicu, ktorou sa filtrácia počítala, práca neuvádza. Vylúčení boli pacienti na dialýze, po transplantácii obličky a tí, ktorí už mali lekársky príkaz k rozsahu život zachraňujúcej liečby. Vylúčení boli aj ľudia neschopní informovaného súhlasu, s iným hovorovým jazykom než angličtina alebo španielčina a s kognitívnou poruchou, ktorá by účasť znemožnila.</p>
+<p>Pokročilá CKD znamenala eGFR najviac 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup>. Rovnicu, ktorou sa filtrácia počítala, práca neuvádza. Vylúčení boli pacienti na dialýze, po transplantácii obličky a tí, ktorí už mali lekársky príkaz k rozsahu život zachraňujúcej liečby. Vylúčení boli aj ľudia neschopní informovaného súhlasu, s iným hovorovým jazykom než angličtina alebo španielčina a s kognitívnou poruchou, ktorá by účasť znemožnila.</p>
 
-<p>Z 8 077 pacientov vytipovaných z dokumentácie ošetrujúci lekári vyradili 727 a spôsobilých ostalo 7 350. Po kognitívnom skríningu a overení, že uchádzač rozumie súhlasu, bolo oslovených a naďalej spôsobilých 2 000. Súhlas dalo 456 ľudí. Troch autori po súhlase vyradili, dôvod práca neudáva. Do analýzy vstúpilo 453 pacientov, 228 do intervencie a 225 do kontroly.</p>
+<p>Z 8&nbsp;077 pacientov vytipovaných z dokumentácie ošetrujúci lekári vyradili 727 a spôsobilých ostalo 7&nbsp;350. Po kognitívnom skríningu a overení, že uchádzač rozumie súhlasu, bolo oslovených a naďalej spôsobilých 2&nbsp;000. Súhlas dalo 456 ľudí. Troch autori po súhlase vyradili, dôvod práca neudáva. Do analýzy vstúpilo 453 pacientov, 228 do intervencie a 225 do kontroly.</p>
 
 <p>Priemerný vek bol 78,8 roka (smerodajná odchýlka 6,4) a žien bolo 190 (41,9 %). Rasu a etnicitu uviedli účastníci sami. Bielej rasy bolo 375 (82,8 %), čiernej 38 (8,4 %), inej alebo zmiešanej 21 (4,6 %), ázijskej 8 (1,8 %), amerických Indiánov alebo pôvodných obyvateľov Aljašky 5 (1,1 %) a pôvodných obyvateľov Havaja alebo iných tichomorských ostrovov 3 (0,7 %). Rasa chýbala u troch ľudí. Hispánsky alebo latinskoamerický pôvod uviedlo 35 ľudí (7,7 %). Ide o etnicitu, ktorá sa s rasou prekrýva, nie o ďalšiu rasovú kategóriu. V kontrolnej skupine bolo viac ľudí čiernej rasy (25 z 225, teda 11,1 %) než v intervenčnej (13 z 228, teda 5,7 %). Nábor bol sústredený. Z Massachusetts General Hospital, ktorá do štúdie prispela nefrologickou aj všeobecnou ambulanciou, pochádzalo 117 pacientov (25,8 %), z Geisinger Health System 75 (16,6 %) a z University of Pennsylvania jeden.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <h2>Čo sa počítalo ako výsledok</h2>
 
-<p>Primárnym ukazovateľom bola akákoľvek dokumentácia plánovania starostlivosti vopred v elektronickej zdravotnej dokumentácii do 12 mesiacov od zaradenia alebo do úmrtia, podľa toho, čo nastalo skôr. Patrí sem rozhovor o cieľoch starostlivosti, obmedzenie život zachraňujúcej liečby, paliatívna starostlivosť, hospic, určenie osoby, ktorá má rozhodovať namiesto pacienta, aj diskusia o možnostiach liečby. Softvér ClinicalRegex najprv označil úseky ambulantných textov. Zaslepení pracovníci ich potom posúdili.</p>
+<p>Primárnym ukazovateľom bola akákoľvek dokumentácia plánovania starostlivosti vopred v elektronickej zdravotnej dokumentácii do 12&nbsp;mesiacov od zaradenia alebo do úmrtia, podľa toho, čo nastalo skôr. Patrí sem rozhovor o cieľoch starostlivosti, obmedzenie život zachraňujúcej liečby, paliatívna starostlivosť, hospic, určenie osoby, ktorá má rozhodovať namiesto pacienta, aj diskusia o možnostiach liečby. Softvér ClinicalRegex najprv označil úseky ambulantných textov. Zaslepení pracovníci ich potom posúdili.</p>
 
 <p>Vopred určené sekundárne ukazovatele boli dokumentovaná diskusia o možnostiach liečby zlyhania obličiek, jednotlivé zložky plánovania vopred, vyslovená preferencia liečby, vedomosť o možnostiach a istota rozhodnutia. Analýza rešpektovala pôvodné zaradenie. Rozdiely podielov sú neupravené. Hodnoty P pri dokumentácii pochádzajú z logistickej regresie upravenej na pracovisko. Pri sekundárnych ukazovateľoch ich nemožno brať ako potvrdenie účinku, lebo chýba úprava na viacnásobné testovanie. Rozdelenie preferencií sa porovnávalo Fisherovým exaktným testom.</p>
 
@@ -63,7 +63,7 @@ $articles[] = [
 
 <h2>Čo sa v dokumentácii zmenilo a čo nie</h2>
 
-<p>Do 12 mesiacov mala dokumentáciu plánovania vopred väčšia časť intervenčnej skupiny. Z neupraveného rozdielu 16,6 percentuálneho bodu vychádza orientačný počet: aby pribudol jeden taký záznam, treba intervencii vystaviť približne 6 pacientov, s hranicami približne od 4 do 13. Je to dopočet z rozdielu podielov za horizont 12 mesiacov. Nehovorí, koľko ľudí treba liečiť, aby sa predišlo úmrtiu alebo hospitalizácii.</p>
+<p>Do 12&nbsp;mesiacov mala dokumentáciu plánovania vopred väčšia časť intervenčnej skupiny. Z neupraveného rozdielu 16,6 percentuálneho bodu vychádza orientačný počet: aby pribudol jeden taký záznam, treba intervencii vystaviť približne 6 pacientov, s hranicami približne od 4 do 13. Je to dopočet z rozdielu podielov za horizont 12&nbsp;mesiacov. Nehovorí, koľko ľudí treba liečiť, aby sa predišlo úmrtiu alebo hospitalizácii.</p>
 
 <div class="table-responsive" role="region" aria-label="Dokumentácia plánovania starostlivosti vopred do 12 mesiacov alebo do úmrtia" tabindex="0">
 <table>
@@ -198,7 +198,7 @@ $articles[] = [
 
 <p>Prenos na slovenské ambulancie naráža na jazyk, na zloženie súboru a na to, čo sa nemeralo. Video bolo po anglicky a po španielsky. Súbor bol prevažne bielej rasy. Najmenej bakalársky titul uviedlo 222 z 453 ľudí (49,0 %) a nábor išiel najmä z akademických pracovísk. Slovenská verzia by musela vzniknúť nanovo. Ani potom by nárast záznamu v dokumentácii neznamenal, že zvolená liečba je pre daného človeka lepšia.</p>
 
-<p>Dve zistenia sa rozišli a práve ich rozdiel je pre prax dôležitý. Hneď po videu uviedla konzervatívny manažment ako svoju voľbu polovica intervenčnej skupiny. V dokumentácii za 12 mesiacov sa konzervatívny manažment objavil približne u desatiny pacientov v oboch skupinách. Podiel vyslovenej preferencie a podiel neskoršieho záznamu sa výrazne líšia. Autori nezistili, či lekár vyhlásenie otvoril a či sa podľa neho pri začatí dialýzy postupovalo. Starostlivosť v súlade s cieľmi pacienta štúdia nehodnotila.</p>
+<p>Dve zistenia sa rozišli a práve ich rozdiel je pre prax dôležitý. Hneď po videu uviedla konzervatívny manažment ako svoju voľbu polovica intervenčnej skupiny. V dokumentácii za 12&nbsp;mesiacov sa konzervatívny manažment objavil približne u desatiny pacientov v oboch skupinách. Podiel vyslovenej preferencie a podiel neskoršieho záznamu sa výrazne líšia. Autori nezistili, či lekár vyhlásenie otvoril a či sa podľa neho pri začatí dialýzy postupovalo. Starostlivosť v súlade s cieľmi pacienta štúdia nehodnotila.</p>
 
 <h2>Limity</h2>
 
@@ -213,7 +213,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>U starších pacientov s eGFR najviac 30 ml/min/1,73 m<sup>2</sup> video o troch možnostiach liečby spolu s vlastným vyhlásením pacienta zvýšilo dokumentáciu plánovania starostlivosti vopred, predovšetkým záznam o diskusii možností, a v deň zaradenia znížilo podiel nerozhodnutých. Podiel tých, ktorí chceli hemodialýzu, sa nezmenil. Či sa podľa vyhlásenia neskôr aj postupovalo, štúdia nevie.</p>
+<p>U starších pacientov s eGFR najviac 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> video o troch možnostiach liečby spolu s vlastným vyhlásením pacienta zvýšilo dokumentáciu plánovania starostlivosti vopred, predovšetkým záznam o diskusii možností, a v deň zaradenia znížilo podiel nerozhodnutých. Podiel tých, ktorí chceli hemodialýzu, sa nezmenil. Či sa podľa vyhlásenia neskôr aj postupovalo, štúdia nevie.</p>
 
 <hr>
 <p><em><strong>Upozornenie:</strong> Text je určený zdravotníckym pracovníkom. Nenahrádza rozhovor s konkrétnym pacientom ani rozhodnutie o začatí dialýzy alebo o podpornej starostlivosti bez nej.</em></p>

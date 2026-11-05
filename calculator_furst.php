@@ -49,17 +49,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $uNa = furstParseNonNeg($form["u_na"]);
         if ($uNa === null || $uNa > 400.0) {
-            $errors[] = "Sodík v moči musí byť 0 až 400 mmol/L.";
+            $errors[] = "Sodík v moči musí byť 0 až 400 mmol/L.";
         }
         $uK = furstParseNonNeg($form["u_k"]);
         if ($uK === null || $uK > 300.0) {
-            $errors[] = "Draslík v moči musí byť 0 až 300 mmol/L.";
+            $errors[] = "Draslík v moči musí byť 0 až 300 mmol/L.";
         }
         $sNa = calculatorParsePositiveFloat($form["s_na"]);
         if ($sNa === null) {
             $errors[] = "Sérový sodík musí byť kladné číslo (mmol/L).";
         } elseif ($sNa < 100.0 || $sNa > 180.0) {
-            $errors[] = "Sérový sodík mimo očakávaného rozsahu (100 až 180 mmol/L).";
+            $errors[] = "Sérový sodík mimo očakávaného rozsahu (100 až 180 mmol/L).";
         }
 
         if (empty($errors)) {

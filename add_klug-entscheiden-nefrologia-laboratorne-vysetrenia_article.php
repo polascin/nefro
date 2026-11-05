@@ -73,11 +73,11 @@ $articles[] = [
   <li><strong>močový status</strong> (orientačný záchyt abnormalít v moči).</li>
 </ul>
 
-<p>Intervaly sledovania závisia od rizikovej skupiny; dokument pri rizikových skupinách uvádza kontrolu raz za 1 – 2 roky.</p>
+<p>Intervaly sledovania závisia od rizikovej skupiny; dokument pri rizikových skupinách uvádza kontrolu raz za 1 – 2&nbsp;roky.</p>
 
 <h3>P2. Stratifikácia rizika pri CKD: eGFR + kvantifikácia proteinúrie/albuminúrie</h3>
 
-<p>Ak ide o <strong>CKD s eGFR &lt; 60 ml/min/1,73 m²</strong>, odporúča sa popri eGFR aj:</p>
+<p>Ak ide o <strong>CKD s eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m²</strong>, odporúča sa popri eGFR aj:</p>
 <ul>
   <li><strong>kvantitatívne stanovenie proteinúrie/albuminúrie</strong>, napríklad ako <strong>albumín-kreatinínový pomer (ACR)</strong> v spontánnom alebo zbernom moči.</li>
 </ul>
@@ -86,7 +86,7 @@ $articles[] = [
 
 <h3>P3. Minerálovo-kostný metabolizmus pri pokročilejšej CKD: Ca, P, iPTH, 25-OH vitamín D</h3>
 
-<p>Pri <strong>CKD a eGFR &lt; 45 ml/min/1,73 m²</strong> sa odporúča aspoň raz doplniť a pri patologických nálezoch následne sledovať:</p>
+<p>Pri <strong>CKD a eGFR &lt; 45&nbsp;ml/min/1,73&nbsp;m²</strong> sa odporúča aspoň raz doplniť a pri patologických nálezoch následne sledovať:</p>
 <ul>
   <li><strong>sérové kalcium (Ca)</strong>,</li>
   <li><strong>sérový fosfor (P)</strong>,</li>
@@ -98,7 +98,7 @@ $articles[] = [
 
 <h3>P4. Laboratórium ako súčasť rozhodovania o kontraste: racionálne zvažovanie rizika</h3>
 
-<p>Toto odporúčanie sa netýka len laboratória. Podstatou je, že pri <strong>vyššom stupni poruchy funkcie obličiek (CKD 4 – 5; eGFR &lt; 30 ml/min/1,73 m²)</strong> treba zvážiť diagnostický prínos kontrastného vyšetrenia oproti potenciálnym rizikám tak, aby nevznikalo <strong>systematické poddiagnostikovanie</strong>.</p>
+<p>Toto odporúčanie sa netýka len laboratória. Podstatou je, že pri <strong>vyššom stupni poruchy funkcie obličiek (CKD 4 – 5; eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m²)</strong> treba zvážiť diagnostický prínos kontrastného vyšetrenia oproti potenciálnym rizikám tak, aby nevznikalo <strong>systematické poddiagnostikovanie</strong>.</p>
 
 <p>eGFR tu slúži ako jeden zo vstupov do rozhodnutia, nie ako „automatický reflex“ pred každým vyšetrením.</p>
 

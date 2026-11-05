@@ -36,27 +36,27 @@ $articles[] = [
 
 <h2>Čo ukázala štokholmská kohorta</h2>
 
-<p>Jennifer H. Yo a spolupracovníci analyzovali údaje zdravotníckeho registra regiónu Štokholm. Do kohorty zaradili všetky prvorodičky (nulipary), ktorých tehotenstvo sa medzi 1. januárom 2006 a 31. decembrom 2020 skončilo živonarodeným alebo mŕtvonarodeným dieťaťom – spolu <strong>171&nbsp;693 tehotenstiev u 170&nbsp;192 žien</strong> s priemerným vekom 29 rokov. Preeklampsia komplikovala <strong>6 % tehotenstiev</strong> (n = 10&nbsp;538).</p>
+<p>Jennifer H. Yo a spolupracovníci analyzovali údaje zdravotníckeho registra regiónu Štokholm. Do kohorty zaradili všetky prvorodičky (nulipary), ktorých tehotenstvo sa medzi 1. januárom 2006 a 31. decembrom 2020 skončilo živonarodeným alebo mŕtvonarodeným dieťaťom – spolu <strong>171&nbsp;693 tehotenstiev u 170&nbsp;192 žien</strong> s priemerným vekom 29&nbsp;rokov. Preeklampsia komplikovala <strong>6 % tehotenstiev</strong> (n = 10&nbsp;538).</p>
 
 <p>Sledované boli tri cieľové ukazovatele definované laboratórne, nie diagnostickým kódom:</p>
 
 <ul>
-  <li>albuminúria s pomerom albumínu ku kreatinínu v moči (UACR) nad 300 mg/g,</li>
-  <li>eGFR pod 60 ml/min/1,73 m²,</li>
+  <li>albuminúria s pomerom albumínu ku kreatinínu v moči (UACR) nad 300&nbsp;mg/g,</li>
+  <li>eGFR pod 60&nbsp;ml/min/1,73&nbsp;m²,</li>
   <li>kompozit oboch predchádzajúcich.</li>
 </ul>
 
-<p>Počas mediánu sledovania <strong>7 rokov</strong> boli incidencie na 1000 osoborokov po preeklampsii konzistentne vyššie než bez nej:</p>
+<p>Počas mediánu sledovania <strong>7&nbsp;rokov</strong> boli incidencie na 1000 osoborokov po preeklampsii konzistentne vyššie než bez nej:</p>
 
 <ul>
-  <li>albuminúria &gt; 300 mg/g: <strong>1,53</strong> oproti 0,57,</li>
-  <li>eGFR &lt; 60 ml/min/1,73 m²: <strong>0,52</strong> oproti 0,18,</li>
+  <li>albuminúria &gt; 300&nbsp;mg/g: <strong>1,53</strong> oproti 0,57,</li>
+  <li>eGFR &lt; 60&nbsp;ml/min/1,73&nbsp;m²: <strong>0,52</strong> oproti 0,18,</li>
   <li>kompozit: <strong>2,00</strong> oproti 0,73.</li>
 </ul>
 
 <p>Vážené pomery rizík (HR) boli 2,53 (95 % IS 2,04–3,13) pre albuminúriu, 2,18 (95 % IS 1,49–3,19) pre pokles eGFR a 2,43 (95 % IS 2,01–2,95) pre kompozit. Relatívne riziko je teda po preeklampsii <strong>viac než dvojnásobné</strong> a odhad je pomerne presný.</p>
 
-<p>Absolútne počty však pôsobia nenápadne: albuminúriu nad 300 mg/g malo 775 tehotenstiev (0,5 %), pokles eGFR 248 (0,1 %) a kompozitný ukazovateľ 985 (0,6 %). Práve tento kontrast – vysoké relatívne, nízke absolútne riziko – sa stal jadrom následnej diskusie.</p>
+<p>Absolútne počty však pôsobia nenápadne: albuminúriu nad 300&nbsp;mg/g malo 775 tehotenstiev (0,5 %), pokles eGFR 248 (0,1 %) a kompozitný ukazovateľ 985 (0,6 %). Práve tento kontrast – vysoké relatívne, nízke absolútne riziko – sa stal jadrom následnej diskusie.</p>
 
 <h2>Nízke riziko, alebo nízka detekcia?</h2>
 
@@ -70,11 +70,11 @@ $articles[] = [
 
 <p>Laboratórne definovaný cieľový ukazovateľ je pritom možné zaznamenať len u ženy, ktorej sa laboratórne vyšetrenie skutočne urobilo. Ak sa deväť z desiatich žien po pôrode nikdy netestuje na albuminúriu, incidencia albuminúrie nemôže byť vysoká – bez ohľadu na to, koľko žien ju v skutočnosti má. Kohorta v takom prípade nemeria prevalenciu poškodenia obličiek, ale <strong>prienik poškodenia a vyšetrovacej praxe</strong>.</p>
 
-<h2>Prah 300 mg/g vynecháva skorý fenotyp</h2>
+<h2>Prah 300&nbsp;mg/g vynecháva skorý fenotyp</h2>
 
-<p>Druhá výhrada sa týkala definície cieľového ukazovateľa. Hranica UACR nad 300 mg/g zodpovedá v klasifikácii KDIGO kategórii <strong>A3</strong>, teda výrazne zvýšenej albuminúrii. Vynecháva celú kategóriu <strong>A2</strong> (30–300 mg/g), ktorá je pritom prognosticky významná a zároveň predstavuje okno, v ktorom je liečebný zásah najúčinnejší.</p>
+<p>Druhá výhrada sa týkala definície cieľového ukazovateľa. Hranica UACR nad 300&nbsp;mg/g zodpovedá v klasifikácii KDIGO kategórii <strong>A3</strong>, teda výrazne zvýšenej albuminúrii. Vynecháva celú kategóriu <strong>A2</strong> (30–300&nbsp;mg/g), ktorá je pritom prognosticky významná a zároveň predstavuje okno, v ktorom je liečebný zásah najúčinnejší.</p>
 
-<p>Autorky a autori pôvodnej práce túto námietku v odpovedi neodmietli – naopak, dáta prepočítali. Pri posunutí prahu na UACR nad 30 mg/g stúpol počet zachytených príhod:</p>
+<p>Autorky a autori pôvodnej práce túto námietku v odpovedi neodmietli – naopak, dáta prepočítali. Pri posunutí prahu na UACR nad 30&nbsp;mg/g stúpol počet zachytených príhod:</p>
 
 <ul>
   <li>po preeklampsii zo <strong>113 na 428</strong>,</li>
@@ -91,7 +91,7 @@ $articles[] = [
 
 <p>Renálnym korelátom preeklampsie je <strong>glomerulárna endotelióza</strong>: opuch endotelových buniek glomerulárnych kapilár s obliteráciou fenestrácií, podmienený nerovnováhou angiogénnych faktorov (nadbytok sFlt-1 viažuceho VEGF a PlGF). Endotelióza po pôrode väčšinou ustúpi. Sprievodná strata podocytov je však problematickejšia – podocyty sú terminálne diferencované bunky s minimálnou schopnosťou proliferácie, takže ich úbytok je do značnej miery nezvratný.</p>
 
-<p>Výsledkom je poškodenie <strong>filtračnej bariéry</strong> skôr než úbytok funkčnej masy nefrónov. Albuminúria je preto citlivejším a skorším signálom. Glomerulová filtrácia zostáva vďaka funkčnej rezerve a kompenzačnej hyperfiltrácii zvyšných nefrónov dlho normálna a k poklesu eGFR pod 60 ml/min/1,73 m² dochádza až pri pokročilejšej strate. Sledovanie postavené na samotnom kreatiníne teda nielenže zachytáva menej – zachytáva <strong>neskôr</strong>.</p>
+<p>Výsledkom je poškodenie <strong>filtračnej bariéry</strong> skôr než úbytok funkčnej masy nefrónov. Albuminúria je preto citlivejším a skorším signálom. Glomerulová filtrácia zostáva vďaka funkčnej rezerve a kompenzačnej hyperfiltrácii zvyšných nefrónov dlho normálna a k poklesu eGFR pod 60&nbsp;ml/min/1,73&nbsp;m² dochádza až pri pokročilejšej strate. Sledovanie postavené na samotnom kreatiníne teda nielenže zachytáva menej – zachytáva <strong>neskôr</strong>.</p>
 
 <h2>Metodická poznámka: detekčné skreslenie pôsobí oboma smermi</h2>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Vyšetrenie UACR, nie iba kreatinínu.</strong> Samotný kreatinín pri tomto fenotype zachytáva neskoré štádium a väčšinu skorých prípadov prehliadne.</li>
-  <li><strong>Hodnotenie od hranice 30 mg/g.</strong> Kategória A2 je prognosticky významná a je práve tým pásmom, v ktorom má intervencia najväčší zmysel.</li>
+  <li><strong>Hodnotenie od hranice 30&nbsp;mg/g.</strong> Kategória A2 je prognosticky významná a je práve tým pásmom, v ktorom má intervencia najväčší zmysel.</li>
   <li><strong>Preeklampsia v anamnéze ako trvalý údaj, nie epizóda.</strong> Informácia musí prejsť z pôrodníckej dokumentácie do dokumentácie všeobecného lekára, inak sa po niekoľkých rokoch stratí.</li>
 </ol>
 
@@ -128,7 +128,7 @@ $articles[] = [
 <ul>
   <li>ide o observačnú, nie intervenčnú štúdiu – dokladá asociáciu, nie kauzalitu, hoci časová následnosť a biologická vierohodnosť ju podporujú;</li>
   <li>zahrnuté boli len prvorodičky, čo zlepšuje vnútornú konzistentnosť, ale obmedzuje prenositeľnosť na viacrodičky;</li>
-  <li>medián sledovania 7 rokov je pre ochorenie s desaťročiami trvajúcou latenciou krátky – dlhodobé riziko je pravdepodobne vyššie;</li>
+  <li>medián sledovania 7&nbsp;rokov je pre ochorenie s desaťročiami trvajúcou latenciou krátky – dlhodobé riziko je pravdepodobne vyššie;</li>
   <li>populácia jedného švédskeho regiónu nemusí zodpovedať krajinám s odlišnou dostupnosťou popôrodnej starostlivosti;</li>
   <li>neúplné testovanie ovplyvňuje odhady tak, ako je rozobrané vyššie.</li>
 </ul>
@@ -138,7 +138,7 @@ $articles[] = [
 <ol>
   <li><strong>Po preeklampsii pretrváva viac než dvojnásobné riziko laboratórnych známok CKD</strong> aj po zohľadnení sledovaných zmätočných faktorov.</li>
   <li><strong>Absolútne riziko je nízke, ale podhodnotené.</strong> Vyplýva to z veľmi nízkej miery popôrodného testovania – 20 % pre kreatinín, 10 % pre albuminúriu, 5 % pre obidve.</li>
-  <li><strong>Prah 300 mg/g nie je vhodný na skríning.</strong> Posun na 30 mg/g zvýšil počet zachytených príhod približne 4,5-násobne.</li>
+  <li><strong>Prah 300&nbsp;mg/g nie je vhodný na skríning.</strong> Posun na 30&nbsp;mg/g zvýšil počet zachytených príhod približne 4,5-násobne.</li>
   <li><strong>Albuminúria predbieha pokles eGFR</strong>, čo zodpovedá poškodeniu filtračnej bariéry a strate podocytov skôr než úbytku nefrónov. Sledovanie postavené na kreatiníne prichádza neskoro.</li>
   <li><strong>Odhady rizika treba interpretovať s ohľadom na to, ako sa vyšetrovalo.</strong> „Koľko“ rizika štúdia nájde, závisí od toho, koho testuje, čím ho testuje a aký prah označí za príhodu.</li>
 </ol>
@@ -147,7 +147,7 @@ $articles[] = [
 
 <p>Výmena názorov okolo štokholmskej kohorty je dobrou ukážkou toho, ako sa epidemiologický odhad mení podľa metodických rozhodnutí. Nízke absolútne odhady renálneho rizika po preeklampsii sú sčasti dôsledkom neúplnej detekcie a reštriktívnej definície cieľového ukazovateľa. Bremeno, ktoré takto zostáva neviditeľné, nie je hypotetické – pri miernejšom prahe albuminúrie sa v tých istých dátach ukázalo približne štyri a pol razy väčšie.</p>
 
-<p>Pre nefrológa z toho plynie konkrétny záver: popôrodné hodnotenie po preeklampsii má stáť na vyšetrení albuminúrie a má sa hodnotiť od hranice 30 mg/g. Nie preto, že by každá takáto žena mala ochorenie obličiek, ale preto, že práve v tomto pásme má sledovanie ešte čo ponúknuť.</p>
+<p>Pre nefrológa z toho plynie konkrétny záver: popôrodné hodnotenie po preeklampsii má stáť na vyšetrení albuminúrie a má sa hodnotiť od hranice 30&nbsp;mg/g. Nie preto, že by každá takáto žena mala ochorenie obličiek, ale preto, že práve v tomto pásme má sledovanie ešte čo ponúknuť.</p>
 
 <h3>Súvisiace články</h3>
 
@@ -170,7 +170,7 @@ $articles[] = [
   <li><strong>Healio Nephrology.</strong> <em>Laboratory signs show early CKD risks for women with preeclampsia.</em> 4. februára 2026. <a href="https://www.healio.com/news/nephrology/20260204/laboratory-signs-show-early-ckd-risks-for-women-with-preeclampsia" target="_blank" rel="noopener noreferrer">Healio</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje všetkých troch príspevkov z <em>JASN</em> (list, odpoveď autorov aj pôvodná práca) boli overené v PubMed a Europe PMC. Číselné údaje pôvodnej kohorty – veľkosť súboru, 6 % podiel preeklampsie, medián sledovania 7 rokov, incidencie na 1000 osoborokov, pomery rizík s intervalmi spoľahlivosti a miery popôrodného testovania (20 %, 10 %, 5 %) – pochádzajú z abstraktu práce a z odbornej tlače, ktorá ju referovala. Prepočet pri prahu UACR nad 30 mg/g (428 oproti 113 a 3025 oproti 662 príhod) uvádzajú autori v publikovanej odpovedi na list; súčet 113 a 662 zodpovedá 775 príhodám albuminúrie v pôvodnej práci. Plné texty listu aj odpovede sú za platobnou bariérou vydavateľa a neboli sprístupnené. Sekcia o mechanizme (glomerulárna endotelióza, strata podocytov) a metodická poznámka o obojsmernom detekčnom skreslení sú <strong>vlastným odborným komentárom</strong>, nie tvrdením citovaných prác.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje všetkých troch príspevkov z <em>JASN</em> (list, odpoveď autorov aj pôvodná práca) boli overené v PubMed a Europe PMC. Číselné údaje pôvodnej kohorty – veľkosť súboru, 6 % podiel preeklampsie, medián sledovania 7&nbsp;rokov, incidencie na 1000 osoborokov, pomery rizík s intervalmi spoľahlivosti a miery popôrodného testovania (20 %, 10 %, 5 %) – pochádzajú z abstraktu práce a z odbornej tlače, ktorá ju referovala. Prepočet pri prahu UACR nad 30&nbsp;mg/g (428 oproti 113 a 3025 oproti 662 príhod) uvádzajú autori v publikovanej odpovedi na list; súčet 113 a 662 zodpovedá 775 príhodám albuminúrie v pôvodnej práci. Plné texty listu aj odpovede sú za platobnou bariérou vydavateľa a neboli sprístupnené. Sekcia o mechanizme (glomerulárna endotelióza, strata podocytov) a metodická poznámka o obojsmernom detekčnom skreslení sú <strong>vlastným odborným komentárom</strong>, nie tvrdením citovaných prác.</em></p>
 HTML,
 ];
 

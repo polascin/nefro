@@ -85,8 +85,8 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><th scope="row">Aortomezenterický uhol</th><td>38° – 65° (na CT/MR angiografii sa uvádza aj 45° – 90°)</td><td>pod 25° – 35°</td></tr>
-    <tr><th scope="row">Aortomezenterická vzdialenosť</th><td>4 – 18 mm</td><td>≤ 3 – 5 mm</td></tr>
-    <tr><th scope="row">Tlakový gradient ľavá renálna véna – dolná dutá žila</th><td>&lt; 1 mmHg</td><td>u symptomatických spravidla ≥ 3 mmHg (často 4 – 15 mmHg)</td></tr>
+    <tr><th scope="row">Aortomezenterická vzdialenosť</th><td>4 – 18&nbsp;mm</td><td>≤ 3 – 5&nbsp;mm</td></tr>
+    <tr><th scope="row">Tlakový gradient ľavá renálna véna – dolná dutá žila</th><td>&lt; 1&nbsp;mmHg</td><td>u symptomatických spravidla ≥ 3&nbsp;mmHg (často 4 – 15&nbsp;mmHg)</td></tr>
   </tbody>
 </table>
 <p><em>Podľa prehľadu Mačionienė a kol., Clinical Kidney Journal 2026. Pozor: ide o orientačné hodnoty – konsenzus o hraničných hodnotách neexistuje.</em></p>
@@ -123,7 +123,7 @@ $articles[] = [
 
 <h2>Diagnostika: postupnosť, nie jeden test</h2>
 
-<p>Diagnóza stojí na stupňovitom postupe: <strong>klinické podozrenie trvajúce viac než 6 mesiacov</strong>, vylúčenie iných príčin a až potom zobrazovanie.</p>
+<p>Diagnóza stojí na stupňovitom postupe: <strong>klinické podozrenie trvajúce viac než 6&nbsp;mesiacov</strong>, vylúčenie iných príčin a až potom zobrazovanie.</p>
 
 <h3>1) Dopplerovská sonografia – prvá voľba, nikdy nie jediná</h3>
 
@@ -140,8 +140,8 @@ $articles[] = [
 <p>Niektorí autori ich považujú za zlatý štandard, ale ani tu nie je zhoda. Kontrastná venografia sa robí s meraním renokaválneho gradientu pri spätnom ťahu katétra:</p>
 
 <ul>
-  <li>gradient <strong>≥ 1 mmHg</strong> diagnózu <em>podporuje</em>,</li>
-  <li>časť autorov používa prah <strong>≥ 2 mmHg</strong>, iní <strong>≥ 3 mmHg</strong>,</li>
+  <li>gradient <strong>≥ 1&nbsp;mmHg</strong> diagnózu <em>podporuje</em>,</li>
+  <li>časť autorov používa prah <strong>≥ 2&nbsp;mmHg</strong>, iní <strong>≥ 3&nbsp;mmHg</strong>,</li>
   <li><strong>normálne hodnoty diagnózu nevylučujú</strong> – výsledok ovplyvňuje poloha pacienta, hydratácia aj rozvoj kolaterál.</li>
 </ul>
 
@@ -166,7 +166,7 @@ $articles[] = [
 
 <h3>Konzervatívny postup</h3>
 
-<p>Je prvou voľbou najmä u osôb <strong>mladších než 18 rokov</strong>, pri dobre tolerovaných, miernych alebo nešpecifických príznakoch a u pacientov, ktorí nespĺňajú dostatočné diagnostické kritériá. Cieľom je rozšírenie aortomezenterického uhla – najčastejšie priberaním a prírastkom viscerálneho tuku – alebo rozvoj venóznych kolaterál.</p>
+<p>Je prvou voľbou najmä u osôb <strong>mladších než 18&nbsp;rokov</strong>, pri dobre tolerovaných, miernych alebo nešpecifických príznakoch a u pacientov, ktorí nespĺňajú dostatočné diagnostické kritériá. Cieľom je rozšírenie aortomezenterického uhla – najčastejšie priberaním a prírastkom viscerálneho tuku – alebo rozvoj venóznych kolaterál.</p>
 
 <p>Z liekov sa uvádzajú <strong>inhibítory systému renín-angiotenzín-aldosterón</strong> (na kontrolu artériovej hypertenzie a na zníženie ortostatickej proteinúrie) a <strong>kyselina acetylsalicylová</strong> (na zlepšenie renálnej perfúzie). U mnohých detí a mladých dospelých ortostatická proteinúria pri liečbe ACE-inhibítorom alebo sartanom úplne ustúpi.</p>
 
@@ -198,7 +198,7 @@ $articles[] = [
 <h2>Praktický postup pre nefrologickú ambulanciu</h2>
 
 <ol>
-  <li><strong>Vzbudenie podozrenia.</strong> Hematúria alebo ortostatická proteinúria, typicky u mladšieho, štíhleho pacienta, s ľavostrannými alebo panvovými prejavmi, trvajúce viac než 6 mesiacov.</li>
+  <li><strong>Vzbudenie podozrenia.</strong> Hematúria alebo ortostatická proteinúria, typicky u mladšieho, štíhleho pacienta, s ľavostrannými alebo panvovými prejavmi, trvajúce viac než 6&nbsp;mesiacov.</li>
   <li><strong>Vylúčenie bežných príčin.</strong> Infekcia, urolitiáza, nádor, malformácia – a glomerulové ochorenia: sediment moču, dysmorfné erytrocyty, valce, trend eGFR, kvantifikácia proteinúrie vrátane ortostatického testu.</li>
   <li><strong>Dopplerovská sonografia</strong> za štandardizovaných podmienok, s vedomím, že ide o skríning, nie o potvrdenie.</li>
   <li><strong>Prierezové zobrazenie</strong> (CT alebo MR angiografia) na posúdenie anatómie a kolaterál.</li>

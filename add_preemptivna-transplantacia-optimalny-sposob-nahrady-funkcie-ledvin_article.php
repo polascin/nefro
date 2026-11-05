@@ -39,9 +39,9 @@ $articles[] = [
 
 <p>Viaceré rozsiahle observačné štúdie a registrové analýzy identifikovali dĺžku dialyzačnej liečby pred transplantáciou ako významný rizikový faktor zvýšenej mortality a zlyhania štepu – a to pri transplantácii od živého aj zosnulého darcu.</p>
 
-<p>Súhrnne platí, že preemptívna transplantácia je asociovaná s <strong>nižšou mortalitou a lepším prežívaním štepu</strong> v porovnaní s transplantáciou vykonanou po začatí dialýzy. Ukazujú to dve novšie metaanalýzy aj jednotlivé registrové štúdie z USA, Francúzska a ďalších krajín. Napríklad vo francúzskom registri (viac ako 20 000 pacientov) bolo desaťročné prežívanie štepu pri preemptívnej transplantácii 80 % oproti 61 % pri transplantácii po začatí dialýzy; významný rozdiel sa pritom ukázal aj pri veľmi krátkom trvaní dialýzy (menej ako 6 mesiacov).</p>
+<p>Súhrnne platí, že preemptívna transplantácia je asociovaná s <strong>nižšou mortalitou a lepším prežívaním štepu</strong> v porovnaní s transplantáciou vykonanou po začatí dialýzy. Ukazujú to dve novšie metaanalýzy aj jednotlivé registrové štúdie z USA, Francúzska a ďalších krajín. Napríklad vo francúzskom registri (viac ako 20&nbsp;000 pacientov) bolo desaťročné prežívanie štepu pri preemptívnej transplantácii 80 % oproti 61 % pri transplantácii po začatí dialýzy; významný rozdiel sa pritom ukázal aj pri veľmi krátkom trvaní dialýzy (menej ako 6&nbsp;mesiacov).</p>
 
-<p>Podobné výhody boli pozorované aj pri <strong>preemptívnej retransplantácii</strong>: novšie registrové analýzy z USA a Francúzska ukazujú nižšiu mortalitu a lepšie prežívanie štepu v porovnaní s retransplantáciou po dialýze, aj keď staršie práce prinášali nejednoznačné výsledky, najmä pri skorom (do 12 mesiacov) zlyhaní prvého štepu.</p>
+<p>Podobné výhody boli pozorované aj pri <strong>preemptívnej retransplantácii</strong>: novšie registrové analýzy z USA a Francúzska ukazujú nižšiu mortalitu a lepšie prežívanie štepu v porovnaní s retransplantáciou po dialýze, aj keď staršie práce prinášali nejednoznačné výsledky, najmä pri skorom (do 12&nbsp;mesiacov) zlyhaní prvého štepu.</p>
 
 <p>V súlade s týmito údajmi KDIGO odporúčajú preemptívnu transplantáciu (prednostne od živého darcu) ako silné odporúčanie s vysokou kvalitou dôkazov (stupeň 1A).</p>
 
@@ -70,9 +70,9 @@ $articles[] = [
 
 <h2>Načasovanie preemptívnej transplantácie</h2>
 
-<p>KDIGO odporúčajú preemptívnu transplantáciu pri <strong>eGFR &lt; 10 ml/min/1,73 m²</strong>, prípadne skôr pri prítomnosti symptómov terminálneho zlyhania obličiek. Zodpovedá to odporúčaniam Českej transplantačnej spoločnosti.</p>
+<p>KDIGO odporúčajú preemptívnu transplantáciu pri <strong>eGFR &lt; 10&nbsp;ml/min/1,73&nbsp;m²</strong>, prípadne skôr pri prítomnosti symptómov terminálneho zlyhania obličiek. Zodpovedá to odporúčaniam Českej transplantačnej spoločnosti.</p>
 
-<p>Transplantácia pri vyššej reziduálnej funkcii (eGFR &gt; 10–20 ml/min/1,73 m²) nevedie k ďalšiemu zlepšeniu výsledkov – prežívanie štepu aj mortalita sú porovnateľné v pomerne širokom rozsahu eGFR pri preemptívnej transplantácii (&lt; 10 ml/min/1,73 m² až &gt; 20 ml/min/1,73 m²). Príliš skoré začatie náhrady funkcie obličiek (vrátane transplantácie) nie je odôvodnené – randomizovaná štúdia IDEAL nepreukázala benefit skorého začatia hemodialýzy.</p>
+<p>Transplantácia pri vyššej reziduálnej funkcii (eGFR &gt; 10–20&nbsp;ml/min/1,73&nbsp;m²) nevedie k ďalšiemu zlepšeniu výsledkov – prežívanie štepu aj mortalita sú porovnateľné v pomerne širokom rozsahu eGFR pri preemptívnej transplantácii (&lt; 10&nbsp;ml/min/1,73&nbsp;m² až &gt; 20&nbsp;ml/min/1,73&nbsp;m²). Príliš skoré začatie náhrady funkcie obličiek (vrátane transplantácie) nie je odôvodnené – randomizovaná štúdia IDEAL nepreukázala benefit skorého začatia hemodialýzy.</p>
 
 <h2>Zastúpenie preemptívnych transplantácií v praxi</h2>
 
@@ -81,20 +81,20 @@ $articles[] = [
 <ul>
   <li>V USA: okolo 9 % pri transplantáciách od zosnulého darcu a 33 % od živého darcu; tento podiel stagnuje.</li>
   <li>V Európe (ERA register, 2023): preemptívnou transplantáciou začalo náhradu funkcie obličiek len 6 % pacientov (19 % zo všetkých transplantácií), s výraznými rozdielmi medzi krajinami. V rokoch 2000–2019 bol v Európe zrejmý rastúci trend (zo 7 % na 18 %).</li>
-  <li>V Českej republike: podmienky sú teoreticky priaznivé vďaka krátkej čakacej dobe (medián 5 mesiacov v roku 2024). Napriek tomu zaostáva preemptívne zaradenie pacientov na čakaciu listinu – iba v niektorých centrách je preemptívne zaradených aspoň 30 % pacientov. Dlhodobé skúsenosti transplantačného centra FN Plzeň ukazujú, že systematickou edukáciou a spoluprácou s dialyzačnými strediskami možno dosiahnuť preemptívne zastúpenie presahujúce 25 %.</li>
+  <li>V Českej republike: podmienky sú teoreticky priaznivé vďaka krátkej čakacej dobe (medián 5&nbsp;mesiacov v roku 2024). Napriek tomu zaostáva preemptívne zaradenie pacientov na čakaciu listinu – iba v niektorých centrách je preemptívne zaradených aspoň 30 % pacientov. Dlhodobé skúsenosti transplantačného centra FN Plzeň ukazujú, že systematickou edukáciou a spoluprácou s dialyzačnými strediskami možno dosiahnuť preemptívne zastúpenie presahujúce 25 %.</li>
 </ul>
 
 <h2>Prekážky a cesty k zvýšeniu počtu preemptívnych transplantácií</h2>
 
 <p>Kľúčovými prekážkami sú nedostatočná a príliš neskorá edukácia pacientov a ich ošetrujúcich lekárov. K ďalším bariéram patrí neskoré odoslanie pacienta do transplantačného centra, dlhé čakacie doby (tam, kde existujú), zdĺhavé vyšetrovanie živých darcov a nedostatok orgánov od zosnulých darcov.</p>
 
-<p>Edukáciu sa odporúča začať pri eGFR &lt; 30 ml/min/1,73 m² a metódu náhrady funkcie obličiek vybrať pri eGFR &lt; 20 ml/min/1,73 m². V malej randomizovanej štúdii viedla posilnená starostlivosť stredného zdravotníckeho personálu, zameraná na opakovanú edukáciu, k vyššiemu počtu preemptívnych transplantácií aj peritoneálnych dialýz.</p>
+<p>Edukáciu sa odporúča začať pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m² a metódu náhrady funkcie obličiek vybrať pri eGFR &lt; 20&nbsp;ml/min/1,73&nbsp;m². V malej randomizovanej štúdii viedla posilnená starostlivosť stredného zdravotníckeho personálu, zameraná na opakovanú edukáciu, k vyššiemu počtu preemptívnych transplantácií aj peritoneálnych dialýz.</p>
 
 <h2>Záver</h2>
 
 <p>Preemptívna transplantácia – od živého aj zosnulého darcu – je asociovaná s nižšou mortalitou a lepším prežívaním štepu v porovnaní s transplantáciou vykonanou po začatí dialýzy. Tento záver sa konzistentne opakuje v rozsiahlych observačných štúdiách aj v dvoch metaanalýzach a KDIGO ho hodnotia ako silné odporúčanie s vysokou kvalitou dôkazov (1A).</p>
 
-<p>Ide však o observačné údaje so všetkými obmedzeniami, ktoré k nim patria, vrátane lead-time bias a selekčného skreslenia. Optimálne načasovanie je pri eGFR &lt; 10 ml/min/1,73 m² – transplantácia pri vyššej reziduálnej funkcii neprináša ďalší benefit. Zvýšenie podielu preemptívnych transplantácií vyžaduje systematickú a včasnú edukáciu pacientov aj lekárov primárnej a sekundárnej starostlivosti.</p>
+<p>Ide však o observačné údaje so všetkými obmedzeniami, ktoré k nim patria, vrátane lead-time bias a selekčného skreslenia. Optimálne načasovanie je pri eGFR &lt; 10&nbsp;ml/min/1,73&nbsp;m² – transplantácia pri vyššej reziduálnej funkcii neprináša ďalší benefit. Zvýšenie podielu preemptívnych transplantácií vyžaduje systematickú a včasnú edukáciu pacientov aj lekárov primárnej a sekundárnej starostlivosti.</p>
 
 <hr>
 

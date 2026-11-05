@@ -89,7 +89,7 @@ $articles[] = [
 
 <p class="pdf-avoid-break"><strong>FIB-4 = vek &times; AST / (počet trombocytov &times; &radic;ALT)</strong></p>
 
-<p>Vek sa zadáva v rokoch, AST a ALT v U/l a počet trombocytov v 10<sup>9</sup>/l. U dospelých vo veku do 65 rokov vrátane sa prakticky používa:</p>
+<p>Vek sa zadáva v rokoch, AST a ALT v U/l a počet trombocytov v 10<sup>9</sup>/l. U dospelých vo veku do 65&nbsp;rokov vrátane sa prakticky používa:</p>
 
 <ul>
   <li><strong>FIB-4 &lt; 1,3:</strong> nízke riziko pokročilej fibrózy; pri pretrvávajúcom riziku sa skóre opakuje,</li>
@@ -97,7 +97,7 @@ $articles[] = [
   <li><strong>FIB-4 &gt; 2,67:</strong> vysoké riziko a dôvod na hepatologické posúdenie.</li>
 </ul>
 
-<p>U osôb starších ako 65 rokov sa ako spodná hranica zvýšeného rizika používa 2,0, pretože vek zvyšuje počet falošne pozitívnych výsledkov. U ľudí mladších ako 35 rokov má FIB-4 nízku presnosť. Skóre sa nemá interpretovať počas akútneho ochorenia alebo pri výraznom prechodnom vzostupe aminotransferáz a jeho výsledok môžu skresliť hematologické ochorenia či trombocytopénia iného pôvodu.</p>
+<p>U osôb starších ako 65&nbsp;rokov sa ako spodná hranica zvýšeného rizika používa 2,0, pretože vek zvyšuje počet falošne pozitívnych výsledkov. U ľudí mladších ako 35&nbsp;rokov má FIB-4 nízku presnosť. Skóre sa nemá interpretovať počas akútneho ochorenia alebo pri výraznom prechodnom vzostupe aminotransferáz a jeho výsledok môžu skresliť hematologické ochorenia či trombocytopénia iného pôvodu.</p>
 
 <p>Nízky FIB-4 je vhodnejší na vylúčenie pokročilej fibrózy než vysoký FIB-4 na jej potvrdenie. Ani nízky výsledok nie je absolútnou zárukou; algoritmus EASL upozorňuje, že môže prehliadnuť približne desatinu pacientov s pokročilou fibrózou.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
   <li>zintenzívniť liečbu metabolických faktorov a zopakovať FIB-4 najneskôr o rok; pri pretrvávajúcej hodnote najmenej 1,3 doplniť elastografiu.</li>
 </ol>
 
-<p>Pri prechodnej elastografii hodnota tuhosti pečene pod 8 kPa podporuje nízke riziko pokročilej fibrózy. Hodnota najmenej 8 kPa nie je sama osebe histologickou diagnózou, ale vyžaduje ďalšie zhodnotenie. Meranie môžu zvýšiť akútny zápal, cholestáza, venózna kongescia a nedávne jedlo; technickú úspešnosť znižuje výrazná obezita.</p>
+<p>Pri prechodnej elastografii hodnota tuhosti pečene pod 8&nbsp;kPa podporuje nízke riziko pokročilej fibrózy. Hodnota najmenej 8&nbsp;kPa nie je sama osebe histologickou diagnózou, ale vyžaduje ďalšie zhodnotenie. Meranie môžu zvýšiť akútny zápal, cholestáza, venózna kongescia a nedávne jedlo; technickú úspešnosť znižuje výrazná obezita.</p>
 
 <p>Test ELF, ktorý kombinuje tri markery metabolizmu extracelulárnej matrix, môže byť alternatívou alebo doplnkom elastografie. Prahy sa nesmú nekriticky prenášať medzi rôznymi algoritmami. Hodnota 10,51 pochádza zo staršieho špecifického postupu NICE a nie je univerzálnym prahom pre každý klinický kontext.</p>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <p>Vhodný je dlhodobo udržateľný model podobný stredomorskej strave s vyšším zastúpením zeleniny, strukovín, celozrnných potravín, orechov, rýb a nenasýtených tukov. Obmedziť treba sladené nápoje, ultraspracované potraviny, nadbytok nasýtených tukov a energeticky koncentrovanú stravu.</p>
 
-<p>Pohybová aktivita má byť prispôsobená možnostiam pacienta, prednostne viac ako 150 minút stredne intenzívnej alebo 75 minút intenzívnej aktivity týždenne, doplnenej odporovým cvičením. Znižuje steatózu aj bez výrazného poklesu hmotnosti; dôkazy o priamej regresii pokročilej fibrózy sú slabšie než dôkazy o kardiometabolickom prínose.</p>
+<p>Pohybová aktivita má byť prispôsobená možnostiam pacienta, prednostne viac ako 150&nbsp;minút stredne intenzívnej alebo 75&nbsp;minút intenzívnej aktivity týždenne, doplnenej odporovým cvičením. Znižuje steatózu aj bez výrazného poklesu hmotnosti; dôkazy o priamej regresii pokročilej fibrózy sú slabšie než dôkazy o kardiometabolickom prínose.</p>
 
 <h2>Farmakologická liečba v roku 2026</h2>
 
@@ -164,8 +164,8 @@ $articles[] = [
 <h3>Čo je dôležité pre nefrológa</h3>
 
 <ul>
-  <li>Pri resmetirome európska informácia o lieku nevyžaduje úpravu dávky pri eGFR 15 až 89 ml/min, treba však skontrolovať interakcie s inhibítormi CYP2C8 a limitovanie dávok niektorých statínov.</li>
-  <li>Pri Kayshilde sa dávka pri miernom ani stredne závažnom poškodení funkcie obličiek neupravuje, liek sa však pre obmedzené skúsenosti neodporúča pri eGFR &lt; 30 ml/min/1,73 m<sup>2</sup> ani pri zlyhaní obličiek.</li>
+  <li>Pri resmetirome európska informácia o lieku nevyžaduje úpravu dávky pri eGFR 15 až 89&nbsp;ml/min, treba však skontrolovať interakcie s inhibítormi CYP2C8 a limitovanie dávok niektorých statínov.</li>
+  <li>Pri Kayshilde sa dávka pri miernom ani stredne závažnom poškodení funkcie obličiek neupravuje, liek sa však pre obmedzené skúsenosti neodporúča pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m<sup>2</sup> ani pri zlyhaní obličiek.</li>
   <li>Nauzea, vracanie a hnačka pri semaglutide môžu viesť k dehydratácii a zhoršeniu funkcie obličiek; rizikový pacient potrebuje poučenie a plán kontroly.</li>
   <li>Pri dialýze alebo nestabilnej funkcii obličiek sa výber cielenej liečby musí opierať o aktuálny súhrn charakteristických vlastností lieku a multidisciplinárne rozhodnutie.</li>
 </ul>
@@ -204,7 +204,7 @@ $articles[] = [
 
 <h2>Monitorovanie a odoslanie k hepatológovi</h2>
 
-<p>Pri FIB-4 pod 1,3 odporúča EASL opakovanie približne každé 1 až 3 roky podľa rizika. AASLD spresňuje interval na 1 až 2 roky pri prediabete, diabete 2. typu alebo najmenej dvoch metabolických rizikových faktoroch a na 2 až 3 roky pri nižšom riziku. Kontrola má byť skoršia pri zmene klinického stavu alebo laboratórnych výsledkov.</p>
+<p>Pri FIB-4 pod 1,3 odporúča EASL opakovanie približne každé 1 až 3&nbsp;roky podľa rizika. AASLD spresňuje interval na 1 až 2&nbsp;roky pri prediabete, diabete 2. typu alebo najmenej dvoch metabolických rizikových faktoroch a na 2 až 3&nbsp;roky pri nižšom riziku. Kontrola má byť skoršia pri zmene klinického stavu alebo laboratórnych výsledkov.</p>
 
 <p>Hepatologické vyšetrenie je vhodné najmä pri FIB-4 nad 2,67, zvýšenej tuhosti pečene, rozporných neinvazívnych testoch, známkach portálnej hypertenzie, poruche syntetickej funkcie pečene alebo podozrení na inú chorobu pečene.</p>
 

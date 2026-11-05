@@ -27,7 +27,7 @@ $articles[] = [
   <figcaption>Ilustračná poloschematická scéna slizničného hojenia pri ulceróznej kolitíde. Nejde o endoskopický nález ani o zobrazenie konkrétneho pacienta.</figcaption>
 </figure>
 
-<p>Na kongrese UEG Week 2026 v Barcelone boli 20. októbra prezentované udržiavacie výsledky programu ABTECT s obefazimodom, perorálnou molekulou, ktorá zvyšuje expresiu mikroRNA-124. Prezentované čísla pôsobia mimoriadne priaznivo: klinická remisia v 44. týždni u 51,3 % pacientov pri dávke 50 mg oproti 10,4 % pri placebe, a účinnosť zachovaná aj u pacientov, ktorí predtým zlyhali na štyroch a viacerých pokročilých liečbach.</p>
+<p>Na kongrese UEG Week 2026 v Barcelone boli 20. októbra prezentované udržiavacie výsledky programu ABTECT s obefazimodom, perorálnou molekulou, ktorá zvyšuje expresiu mikroRNA-124. Prezentované čísla pôsobia mimoriadne priaznivo: klinická remisia v 44. týždni u 51,3 % pacientov pri dávke 50&nbsp;mg oproti 10,4 % pri placebe, a účinnosť zachovaná aj u pacientov, ktorí predtým zlyhali na štyroch a viacerých pokročilých liečbach.</p>
 
 <p>Dizajn, ktorý tieto čísla vyprodukoval, je však randomizované vysadenie liečby u obohatenej populácie. To mení ich význam natoľko, že rozdiel oproti placebu nemožno čítať ako obvyklý rozdiel oproti placebu. Pre nefrológa má téma navyše konkrétnu, nie len všeobecnú relevanciu: ulcerózna kolitída má doložené obličkové prejavy a jeden z jej základných liekov je doloženou príčinou chronickej tubulointersticiálnej nefritídy.</p>
 
@@ -39,9 +39,9 @@ $articles[] = [
 
 <h2>Dizajn programu ABTECT a prečo na ňom záleží</h2>
 
-<p>Do randomizovanej, dvojito zaslepenej, placebom kontrolovanej indukčnej časti bolo zaradených 1 272 pacientov so stredne ťažkou až ťažkou ulceróznou kolitídou, ktorí mali nedostatočnú odpoveď, stratu odpovede alebo neznášanlivosť aspoň jednej predchádzajúcej liečby, bez hornej hranice počtu. Pacienti boli priradení v pomere 2 : 1 : 1 k obefazimodu 50 mg, obefazimodu 25 mg alebo placebu raz denne na osem týždňov.</p>
+<p>Do randomizovanej, dvojito zaslepenej, placebom kontrolovanej indukčnej časti bolo zaradených 1&nbsp;272 pacientov so stredne ťažkou až ťažkou ulceróznou kolitídou, ktorí mali nedostatočnú odpoveď, stratu odpovede alebo neznášanlivosť aspoň jednej predchádzajúcej liečby, bez hornej hranice počtu. Pacienti boli priradení v pomere 2 : 1 : 1 k obefazimodu 50&nbsp;mg, obefazimodu 25&nbsp;mg alebo placebu raz denne na osem týždňov.</p>
 
-<p>Do 44-týždňovej udržiavacej časti vstúpilo <strong>580 pacientov, ktorí na obefazimod v indukcii odpovedali</strong>. Títo boli znovu randomizovaní na obefazimod 25 mg, obefazimod 50 mg alebo placebo.</p>
+<p>Do 44-týždňovej udržiavacej časti vstúpilo <strong>580 pacientov, ktorí na obefazimod v indukcii odpovedali</strong>. Títo boli znovu randomizovaní na obefazimod 25&nbsp;mg, obefazimod 50&nbsp;mg alebo placebo.</p>
 
 <p>Toto je kľúčový bod celej analýzy. Nejde o porovnanie lieku s placebom u neselektovaných pacientov. Ide o <strong>randomizované vysadenie liečby</strong> u ľudí, ktorí na ňu preukázateľne reagovali. Pacient priradený do placebového ramena nedostáva placebo namiesto liečby; dostáva ho namiesto účinnej liečby, ktorú mu práve odobrali.</p>
 
@@ -53,7 +53,7 @@ $articles[] = [
 
 <div class="table-responsive" role="region" aria-label="Výsledky v 44. týždni udržiavacej liečby podľa predchádzajúcej expozície pokročilej liečbe" tabindex="0">
 <table>
-  <thead><tr><th scope="col">Ukazovateľ v 44. týždni</th><th scope="col">25 mg</th><th scope="col">50 mg</th><th scope="col">Placebo</th></tr></thead>
+  <thead><tr><th scope="col">Ukazovateľ v 44. týždni</th><th scope="col">25&nbsp;mg</th><th scope="col">50&nbsp;mg</th><th scope="col">Placebo</th></tr></thead>
   <tbody>
     <tr><th scope="row">Klinická remisia, po zlyhaní pokročilej liečby</th><td>34,2 %</td><td>42,2 %</td><td>6,9 %</td></tr>
     <tr><th scope="row">Klinická remisia, bez predchádzajúcej pokročilej liečby</th><td>61,5 %</td><td>59,0 %</td><td>12,5 %</td></tr>
@@ -65,15 +65,15 @@ $articles[] = [
 </table>
 </div>
 
-<p>Celková populácia dosiahla primárny ukazovateľ: klinická remisia v 44. týždni bola 51,3 % pri 50 mg, 50,8 % pri 25 mg a 10,4 % pri placebe.</p>
+<p>Celková populácia dosiahla primárny ukazovateľ: klinická remisia v 44. týždni bola 51,3 % pri 50&nbsp;mg, 50,8 % pri 25&nbsp;mg a 10,4 % pri placebe.</p>
 
-<p>V skupine po zlyhaní pokročilej liečby boli rozdiely oproti placebu 28,0 percentuálneho bodu pri 25 mg a 33,1 percentuálneho bodu pri 50 mg. Všetky uvádzané hodnoty p sú <strong>nominálne</strong>, teda bez korekcie na mnohonásobné testovanie v rámci podskupín. Formálne ide o generovanie hypotéz, nie o potvrdené podskupinové závery.</p>
+<p>V skupine po zlyhaní pokročilej liečby boli rozdiely oproti placebu 28,0 percentuálneho bodu pri 25&nbsp;mg a 33,1 percentuálneho bodu pri 50&nbsp;mg. Všetky uvádzané hodnoty p sú <strong>nominálne</strong>, teda bez korekcie na mnohonásobné testovanie v rámci podskupín. Formálne ide o generovanie hypotéz, nie o potvrdené podskupinové závery.</p>
 
 <p>Vzorec, ktorý z tabuľky vystupuje, má klinickú logiku. U pacientov bez predchádzajúcej pokročilej liečby sú obe dávky rovnocenné. U ťažšie liečiteľných pacientov po zlyhaní pokročilej liečby je vyššia dávka číselne lepšia pri každom ukazovateli, a rozdiel medzi dávkami je najväčší práve pri prísnejších endoskopických a histologických ukazovateľoch. Prezentujúci autor to pripísal tomu, že ide o ťažšie liečiteľnú populáciu. Ide však o číselný rozdiel v rámci podskupín, nie o formálne preukázanú prevahu vyššej dávky.</p>
 
 <h2>Účinnosť po viacnásobnom zlyhaní</h2>
 
-<p>U pacientov, ktorí neodpovedali na štyri a viac pokročilých liečb, dosiahlo klinickú remisiu 27,3 % pri 25 mg a 33,3 % pri 50 mg, oproti nikomu v placebovom ramene. Pri predchádzajúcom zlyhaní inhibítora JAK to bolo 28,6 % a 33,3 % oproti 0 %.</p>
+<p>U pacientov, ktorí neodpovedali na štyri a viac pokročilých liečb, dosiahlo klinickú remisiu 27,3 % pri 25&nbsp;mg a 33,3 % pri 50&nbsp;mg, oproti nikomu v placebovom ramene. Pri predchádzajúcom zlyhaní inhibítora JAK to bolo 28,6 % a 33,3 % oproti 0 %.</p>
 
 <p>Sú to zaujímavé čísla, ale treba ich čítať opatrne z troch dôvodov naraz. Podskupiny sú malé a s rastúcim počtom predchádzajúcich línií sa zmenšujú. Nulová hodnota v placebovom ramene je pri malom počte pacientov štatisticky krehká a robí relatívny rozdiel opticky dramatickejším, než je. A predovšetkým: aj títo pacienti museli najprv na obefazimod odpovedať v indukcii, inak by sa do udržiavacej fázy nedostali. Údaj teda nehovorí, aká časť pacientov po štyroch zlyhaniach bude na obefazimod reagovať, ale aká časť tých, ktorí už reagovali, si odpoveď udrží.</p>
 
@@ -81,7 +81,7 @@ $articles[] = [
 
 <div class="table-responsive" role="region" aria-label="Bezpečnostné údaje udržiavacej fázy" tabindex="0">
 <table>
-  <thead><tr><th scope="col">Udalosť</th><th scope="col">Placebo</th><th scope="col">25 mg</th><th scope="col">50 mg</th></tr></thead>
+  <thead><tr><th scope="col">Udalosť</th><th scope="col">Placebo</th><th scope="col">25&nbsp;mg</th><th scope="col">50&nbsp;mg</th></tr></thead>
   <tbody>
     <tr><th scope="row">Nežiaduca udalosť vzniknutá počas liečby</th><td>50,0 %</td><td>58,0 %</td><td>71,8 %</td></tr>
     <tr><th scope="row">Ukončenie liečby pre nežiaducu udalosť</th><td>6,8 %</td><td>2,6 %</td><td>4,6 %</td></tr>
@@ -91,13 +91,13 @@ $articles[] = [
 
 <p>Závažné nežiaduce udalosti vzniknuté počas liečby boli zriedkavé: jedna u pacienta na placebe a žiadna u pacientov na obefazimode. Výskyt závažných alebo ťažkých infekcií a oportúnnych infekcií bol nízky vo všetkých ramenách.</p>
 
-<p>Pri dávke 50 mg boli hlásené po jednom prípade karcinómu prsníka a karcinómu prostaty a malý počet nemelanómových kožných nádorov. Pri 44-týždňovom sledovaní a tomto počte pacientov z toho nemožno vyvodiť nič o onkologickom riziku v oboch smeroch; ide o údaj, ktorý sa má sledovať v dlhodobých predĺženiach, nie o signál ani o uistenie.</p>
+<p>Pri dávke 50&nbsp;mg boli hlásené po jednom prípade karcinómu prsníka a karcinómu prostaty a malý počet nemelanómových kožných nádorov. Pri 44-týždňovom sledovaní a tomto počte pacientov z toho nemožno vyvodiť nič o onkologickom riziku v oboch smeroch; ide o údaj, ktorý sa má sledovať v dlhodobých predĺženiach, nie o signál ani o uistenie.</p>
 
-<p>Číselne vyšší výskyt nežiaducich udalostí pri 50 mg je protiváhou číselne lepšej účinnosti tej istej dávky. Pomer prínosu a rizika medzi dávkami tak zostáva otvorený a bude sa pravdepodobne líšiť podľa toho, ako ťažko liečiteľný pacient je.</p>
+<p>Číselne vyšší výskyt nežiaducich udalostí pri 50&nbsp;mg je protiváhou číselne lepšej účinnosti tej istej dávky. Pomer prínosu a rizika medzi dávkami tak zostáva otvorený a bude sa pravdepodobne líšiť podľa toho, ako ťažko liečiteľný pacient je.</p>
 
 <h2>Nefrologický pohľad: v čom je ulcerózna kolitída obličkovou témou</h2>
 
-<p>Súvislosť nie je hypotetická. V tureckej kohorte 1 874 pacientov s nešpecifickým zápalovým ochorením čreva, z toho 1 055 s ulceróznou kolitídou a 819 s Crohnovou chorobou, sa obličkové prejavy vyskytli u 105 pacientov, teda u <strong>5,6 %</strong>. Pri Crohnovej chorobe to bolo 6,7 % a pri ulceróznej kolitíde 4,7 %. Najčastejším prejavom pri oboch diagnózach bola nefrolitiáza a výskyt obličkových prejavov súvisel s aktivitou črevného ochorenia.</p>
+<p>Súvislosť nie je hypotetická. V tureckej kohorte 1&nbsp;874 pacientov s nešpecifickým zápalovým ochorením čreva, z toho 1&nbsp;055&nbsp;s ulceróznou kolitídou a 819&nbsp;s Crohnovou chorobou, sa obličkové prejavy vyskytli u 105 pacientov, teda u <strong>5,6 %</strong>. Pri Crohnovej chorobe to bolo 6,7 % a pri ulceróznej kolitíde 4,7 %. Najčastejším prejavom pri oboch diagnózach bola nefrolitiáza a výskyt obličkových prejavov súvisel s aktivitou črevného ochorenia.</p>
 
 <p>Okrem nefrolitiázy sa opisujú tubulointersticiálna nefritída, glomerulonefritídy vrátane IgA nefropatie v rámci konceptu osi črevo a oblička, a sekundárna amyloidóza typu AA pri dlhodobo nekontrolovanom zápale.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 
 <p>Obefazimod zatiaľ nemá registráciu a prezentované údaje neprešli recenzným konaním. Ide o konferenčnú prezentáciu sponzorovanú výrobcom, s podskupinovými analýzami bez korekcie na mnohonásobné testovanie. Zaradenie do liečebných algoritmov si vyžaduje publikáciu plných výsledkov v recenzovanom časopise.</p>
 
-<p>Pri tejto rezerve zostáva, že udržiavacia liečba obefazimodom udržala klinickú, endoskopickú aj histologicko-endoskopickú odpoveď počas 44 týždňov vrátane pacientov po zlyhaní viacerých mechanisticky odlišných tried, a že bezpečnostný profil v tomto časovom horizonte nepriniesol neočakávané nálezy. Pre populáciu s ulceróznou kolitídou odolnou voči viacerým liekom je to vecne dobrá správa.</p>
+<p>Pri tejto rezerve zostáva, že udržiavacia liečba obefazimodom udržala klinickú, endoskopickú aj histologicko-endoskopickú odpoveď počas 44&nbsp;týždňov vrátane pacientov po zlyhaní viacerých mechanisticky odlišných tried, a že bezpečnostný profil v tomto časovom horizonte nepriniesol neočakávané nálezy. Pre populáciu s ulceróznou kolitídou odolnou voči viacerým liekom je to vecne dobrá správa.</p>
 
 <p>Pre nefrologickú ambulanciu z toho priamo nevyplýva nič nové v liečbe. Vyplýva z toho však pripomienka, že u pacienta s ulceróznou kolitídou treba sledovať kreatinín a močový nález, poznať riziko mesalazínovej intersticiálnej nefritídy a pri obličkových prejavoch úzko spolupracovať s gastroenterológom. Pri každej novej udržiavacej liečbe je rozumné mať východiskovú hodnotu kreatinínu a odhadnutej glomerulárnej filtrácie, aj keď pre daný liek nefrotoxický signál neexistuje. Bez východiskovej hodnoty sa neskorší pokles nedá interpretovať.</p>
 

@@ -39,16 +39,16 @@ $articles[] = [
 
 <h2>Čo ukázala medzinárodná kohortová štúdia</h2>
 
-<p>Retrospektívna medzinárodná štúdia analyzovala údaje z registra EuCliD spoločnosti Fresenius Medical Care. Zahŕňala <strong>18 515 dospelých incidentných dialyzovaných pacientov</strong>, ktorí začali náhradu funkcie obličiek v rokoch 2019 až 2022 v centrách NephroCare v Európe, na Blízkom východe a v Afrike.</p>
+<p>Retrospektívna medzinárodná štúdia analyzovala údaje z registra EuCliD spoločnosti Fresenius Medical Care. Zahŕňala <strong>18&nbsp;515 dospelých incidentných dialyzovaných pacientov</strong>, ktorí začali náhradu funkcie obličiek v rokoch 2019 až 2022 v centrách NephroCare v Európe, na Blízkom východe a v Afrike.</p>
 
 <p>Za incidentných sa považovali pacienti s trvaním dialyzačnej liečby kratším ako tri mesiace. Podľa prevažujúcej modality počas prvého roka boli rozdelení na:</p>
 
 <ul>
-  <li><strong>10 149 pacientov</strong> liečených konvenčnou hemodialýzou,</li>
-  <li><strong>8 366 pacientov</strong> liečených online hemodiafiltráciou.</li>
+  <li><strong>10&nbsp;149 pacientov</strong> liečených konvenčnou hemodialýzou,</li>
+  <li><strong>8&nbsp;366 pacientov</strong> liečených online hemodiafiltráciou.</li>
 </ul>
 
-<p>Na zaradenie do príslušnej skupiny musel pacient absolvovať danou modalitou najmenej <strong>75 % dialyzačných procedúr</strong>. Hemodiafiltrácia sa vykonávala výlučne v postdilučnom režime – predilučná HDF bola vyraďovacím kritériom – s priemerným konvekčným objemom <strong>24,9 litra na procedúru</strong> (medián 25,1 l; medzikvartilové rozpätie 23,1 – 27,2 l). Ide teda skutočne o vysokoobjemovú HDF v zmysle prahu 23 l na procedúru, ktorý používajú randomizované štúdie.</p>
+<p>Na zaradenie do príslušnej skupiny musel pacient absolvovať danou modalitou najmenej <strong>75 % dialyzačných procedúr</strong>. Hemodiafiltrácia sa vykonávala výlučne v postdilučnom režime – predilučná HDF bola vyraďovacím kritériom – s priemerným konvekčným objemom <strong>24,9 litra na procedúru</strong> (medián 25,1&nbsp;l; medzikvartilové rozpätie 23,1 – 27,2&nbsp;l). Ide teda skutočne o vysokoobjemovú HDF v zmysle prahu 23&nbsp;l na procedúru, ktorý používajú randomizované štúdie.</p>
 
 <p>Medián sledovania bol <strong>15,7 mesiaca</strong> (medzikvartilové rozpätie 6,4 – 24,0 mesiaca); sledovanie bolo zámerne ohraničené dvoma rokmi.</p>
 
@@ -98,7 +98,7 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Populácia</th>
-        <td>Incidentní (dialýza &lt; 3 mesiace)</td>
+        <td>Incidentní (dialýza &lt; 3&nbsp;mesiace)</td>
         <td>Sledovanie začína 91. deň po začatí dialýzy</td>
       </tr>
       <tr>
@@ -113,8 +113,8 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Počet pacientov</th>
-        <td>18 515</td>
-        <td>19 539 (vážená pseudopopulácia 19 758)</td>
+        <td>18&nbsp;515</td>
+        <td>19&nbsp;539 (vážená pseudopopulácia 19&nbsp;758)</td>
       </tr>
       <tr>
         <th scope="row">Definícia expozície</th>
@@ -129,7 +129,7 @@ $articles[] = [
       <tr>
         <th scope="row">Medián sledovania</th>
         <td>15,7 mesiaca</td>
-        <td>16 mesiacov</td>
+        <td>16&nbsp;mesiacov</td>
       </tr>
       <tr>
         <th scope="row">Celková mortalita</th>
@@ -139,7 +139,7 @@ $articles[] = [
       <tr>
         <th scope="row">Absolútny rozdiel</th>
         <td>Hrubý rozdiel 3,9 úmrtia na 100 osoborokov</td>
-        <td>20,6 % oproti 22,3 % za 2 roky = 1,7 percentuálneho bodu</td>
+        <td>20,6 % oproti 22,3 % za 2&nbsp;roky = 1,7 percentuálneho bodu</td>
       </tr>
     </tbody>
   </table>
@@ -166,8 +166,8 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">CONVINCE (2023)</th>
-        <td>1 360 (683 HDF / 677 HD)</td>
-        <td>priemerne 25,3 l na procedúru</td>
+        <td>1&nbsp;360 (683 HDF / 677 HD)</td>
+        <td>priemerne 25,3&nbsp;l na procedúru</td>
         <td>17,3 % oproti 21,9 %; HR 0,77 (95 % IS 0,65–0,93)</td>
       </tr>
       <tr>
@@ -180,7 +180,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Randomizovaná štúdia CONVINCE zaradila pacientov, ktorí už boli aspoň tri mesiace na vysokoprietokovej hemodialýze a boli považovaní za vhodných na dosiahnutie konvekčného objemu aspoň 23 l. Aj tu teda ide o <strong>prevalentnú, vopred vyselektovanú populáciu</strong>. Práve preto je nová kohorta doplnkom, nie duplikátom: pýta sa na obdobie, ktoré randomizované štúdie nepokrývajú.</p>
+<p>Randomizovaná štúdia CONVINCE zaradila pacientov, ktorí už boli aspoň tri mesiace na vysokoprietokovej hemodialýze a boli považovaní za vhodných na dosiahnutie konvekčného objemu aspoň 23&nbsp;l. Aj tu teda ide o <strong>prevalentnú, vopred vyselektovanú populáciu</strong>. Práve preto je nová kohorta doplnkom, nie duplikátom: pýta sa na obdobie, ktoré randomizované štúdie nepokrývajú.</p>
 
 <p>Zároveň je upokojujúce, že odhad z incidentnej kohorty (HR 0,80) leží veľmi blízko randomizovaného odhadu z CONVINCE (HR 0,77). Zhoda observačného a randomizovaného výsledku síce kauzalitu nedokazuje, ale výrazne znižuje pravdepodobnosť, že celý pozorovaný rozdiel je artefaktom výberu pacientov.</p>
 
@@ -335,7 +335,7 @@ $articles[] = [
   <li><strong>Fresenius Medical Care.</strong> <em>Fresenius Medical Care Announces Publication of a Multinational Real-World Evidence Study Associating High-Volume Hemodiafiltration with Lower Mortality Risk Than Conventional Hemodialysis.</em> Firemná tlačová správa, 27. augusta 2026. <a href="https://freseniusmedicalcare.com/en/media/newsroom/multinational-real-world-evidence-study-associating-high-volume-hemodiafiltration-with-lower-mortality-risk-than-conventional-hemodialysis/" target="_blank" rel="noopener noreferrer">Tlačová správa</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje pripísané incidentnej kohorte – 18 515 pacientov (10 149 hemodialýza, 8 366 hemodiafiltrácia), roky 2019 – 2022, prah 75 % procedúr, konvekčný objem 24,9 l (medián 25,1; MKR 23,1 – 27,2), medián sledovania 15,7 mesiaca (MKR 6,4 – 24,0), 11,7 oproti 15,6 a 4,1 oproti 6,7 úmrtia na 100 osoborokov, HR 0,80 (0,75–0,86), HR 0,82 (0,77–0,88), HR 0,88 (0,82–0,95), HR 0,71 (0,63–0,80), 93,4 % úmrtí so známou príčinou, vstupné rozdiely vo veku (64,5 ± 14,5 oproti 62,0 ± 15,1), fistule (28 % oproti 40 %), diabete (38 % oproti 34 %) a pohlaví (54 % oproti 58 % mužov), ako aj vyraďovacie kritériá vrátane predilučnej HDF a Kt/V pod 1,2 – boli overené proti abstraktu v zázname PubMed a plnému textu v PMC. Údaje o štúdii JASN (19 539 pacientov, vážená pseudopopulácia 19 758, osem krajín, 2014 – 2019, prah 90 %, HR 0,72 [0,67–0,77], kumulatívna incidencia 20,6 % oproti 22,3 %) pochádzajú z jej záznamu v PubMed; údaje o CONVINCE (1 360 pacientov, 25,3 l, 17,3 % oproti 21,9 %, HR 0,77 [0,65–0,93]) rovnako. Bibliografia bola overená cez Crossref a PubMed. <strong>Upozornenie na rozdiel oproti pôvodnému spracovaniu:</strong> údaj 28 % z tlačovej správy nie je alternatívnym odhadom tej istej analýzy – vzťahuje sa na inú, samostatne publikovanú prácu, ktorá bola pre potreby tohto článku dohľadaná a odcitovaná. Porovnanie oboch štúdií, prepojenie na randomizované dôkazy a metodologické komentáre sú <strong>vlastným odborným hodnotením</strong>, nie závermi pôvodných autorov.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje pripísané incidentnej kohorte – 18&nbsp;515 pacientov (10&nbsp;149 hemodialýza, 8&nbsp;366 hemodiafiltrácia), roky 2019 – 2022, prah 75 % procedúr, konvekčný objem 24,9&nbsp;l (medián 25,1; MKR 23,1 – 27,2), medián sledovania 15,7 mesiaca (MKR 6,4 – 24,0), 11,7 oproti 15,6 a 4,1 oproti 6,7 úmrtia na 100 osoborokov, HR 0,80 (0,75–0,86), HR 0,82 (0,77–0,88), HR 0,88 (0,82–0,95), HR 0,71 (0,63–0,80), 93,4 % úmrtí so známou príčinou, vstupné rozdiely vo veku (64,5 ± 14,5 oproti 62,0 ± 15,1), fistule (28 % oproti 40 %), diabete (38 % oproti 34 %) a pohlaví (54 % oproti 58 % mužov), ako aj vyraďovacie kritériá vrátane predilučnej HDF a Kt/V pod 1,2 – boli overené proti abstraktu v zázname PubMed a plnému textu v PMC. Údaje o štúdii JASN (19&nbsp;539 pacientov, vážená pseudopopulácia 19&nbsp;758, osem krajín, 2014 – 2019, prah 90 %, HR 0,72 [0,67–0,77], kumulatívna incidencia 20,6 % oproti 22,3 %) pochádzajú z jej záznamu v PubMed; údaje o CONVINCE (1&nbsp;360 pacientov, 25,3&nbsp;l, 17,3 % oproti 21,9 %, HR 0,77 [0,65–0,93]) rovnako. Bibliografia bola overená cez Crossref a PubMed. <strong>Upozornenie na rozdiel oproti pôvodnému spracovaniu:</strong> údaj 28 % z tlačovej správy nie je alternatívnym odhadom tej istej analýzy – vzťahuje sa na inú, samostatne publikovanú prácu, ktorá bola pre potreby tohto článku dohľadaná a odcitovaná. Porovnanie oboch štúdií, prepojenie na randomizované dôkazy a metodologické komentáre sú <strong>vlastným odborným hodnotením</strong>, nie závermi pôvodných autorov.</em></p>
 HTML,
 ];
 

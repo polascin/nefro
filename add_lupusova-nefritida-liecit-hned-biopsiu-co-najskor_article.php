@@ -42,7 +42,7 @@ $articles[] = [
 
 <p>Prognóza je pritom silne viazaná na <strong>rýchlosť a úplnosť odpovede</strong> na úvodnú liečbu. V dlhodobo sledovanej hongkonskej kohorte 176 pacientov s biopsiou potvrdenou LN (priemerné sledovanie 15,3 roka) dosiahlo 43,8 % pacientov modifikovanú kompletnú renálnu odpoveď (mCRR) dva roky po biopsii – a práve táto skupina mala výrazne lepšie dlhodobé prežívanie obličiek (92,2 % oproti 71,7 % u nerespondérov). Dosiahnutie mCRR bolo spojené s <strong>86 % znížením</strong> upraveného rizika zlyhania obličiek.</p>
 
-<p>Zároveň platí, že benígny priebeh je skôr výnimkou. V torontskej kohorte 374 pacientov s LN malo <strong>len 25,7 %</strong> tzv. responzívny monofázický priebeh (úplná úprava proteinúrie do 1 roka, resp. do 2 rokov pri nefrotickej proteinúrii, bez následného renálneho relapsu) – a aj z nich 18,8 % napokon zaznamenalo nepriaznivú dlhodobú udalosť. Predpovedať na začiatku, ktorý pacient bude mať priaznivý priebeh, je teda prakticky nemožné.</p>
+<p>Zároveň platí, že benígny priebeh je skôr výnimkou. V torontskej kohorte 374 pacientov s LN malo <strong>len 25,7 %</strong> tzv. responzívny monofázický priebeh (úplná úprava proteinúrie do 1 roka, resp. do 2&nbsp;rokov pri nefrotickej proteinúrii, bez následného renálneho relapsu) – a aj z nich 18,8 % napokon zaznamenalo nepriaznivú dlhodobú udalosť. Predpovedať na začiatku, ktorý pacient bude mať priaznivý priebeh, je teda prakticky nemožné.</p>
 
 <h2>Biopsia obličky: nenahraditeľná, ale nie za cenu odkladu liečby</h2>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <p>Nejde o názor jednotlivcov. <strong>II. konsenzus Brazílskej reumatologickej spoločnosti pre LN</strong> (2024), na ktorom sa obaja diskutujúci autorsky podieľali, uvádza priamo, že biopsia je zlatým štandardom diagnostiky, ale <strong>ak nie je dostupná alebo je kontraindikovaná, terapeutické rozhodnutie sa má oprieť o klinické a laboratórne parametre</strong>. Podobne ACR aj KDIGO pripúšťajú podanie pulzných glukokortikoidov na potlačenie akútneho zápalu už pri dôvodnom podozrení na LN, teda ešte pred histologickým potvrdením.</p>
 
-<p><strong>Praktický dôsledok:</strong> podozrenie na LN (novovzniknutá proteinúria ≥ 0,5 g/g kreatinínu, aktívny močový sediment alebo nevysvetlený pokles eGFR u pacienta s SLE) je dôvodom na <strong>urgentné objednanie biopsie a súčasné začatie liečby</strong>, nie na sekvenčný postup. Biopsia následne určí, či a ako sa v imunosupresii pokračuje.</p>
+<p><strong>Praktický dôsledok:</strong> podozrenie na LN (novovzniknutá proteinúria ≥ 0,5&nbsp;g/g kreatinínu, aktívny močový sediment alebo nevysvetlený pokles eGFR u pacienta s SLE) je dôvodom na <strong>urgentné objednanie biopsie a súčasné začatie liečby</strong>, nie na sekvenčný postup. Biopsia následne určí, či a ako sa v imunosupresii pokračuje.</p>
 
 <h2>Klinické markery a ich limity</h2>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <p>Proteinúria, močový sediment, hladiny komplementu (C3, C4) a protilátky proti dvojvláknovej DNA (anti-dsDNA) majú z konvenčných markerov najsilnejší dôkazový základ. Ich rozlišovacia schopnosť voči histológii je však obmedzená.</p>
 
-<p>Systematický prehľad, ktorý pripravoval podklad pre aktualizáciu odporúčaní EULAR, to formuluje jednoznačne: pacienti s SLE a <strong>nízkostupňovou proteinúriou (&lt; 500 – 1000 mg/deň) a/alebo hematúriou môžu mať histologicky aktívne ochorenie</strong> (dôkazy strednej kvality). Inými slovami – „normálne“ laboratórium nevylučuje aktívnu nefritídu.</p>
+<p>Systematický prehľad, ktorý pripravoval podklad pre aktualizáciu odporúčaní EULAR, to formuluje jednoznačne: pacienti s SLE a <strong>nízkostupňovou proteinúriou (&lt; 500 – 1000&nbsp;mg/deň) a/alebo hematúriou môžu mať histologicky aktívne ochorenie</strong> (dôkazy strednej kvality). Inými slovami – „normálne“ laboratórium nevylučuje aktívnu nefritídu.</p>
 
 <p>Rovnaký nesúlad potvrdila aj pediatrická kohorta 30 detí s proliferatívnou LN a sériovými biopsiami: rok po iniciálnej biopsii malo <strong>pretrvávajúcu proliferatívnu nefritídu 11 z 18 detí v kompletnej renálnej odpovedi</strong> (a 11 z 12 detí v inkompletnej odpovedi). Výsledok biopsie priamo zmenil rozhodnutie u 7 z 18 pacientov v kompletnej odpovedi – buď sa liečba eskalovala, alebo sa nepristúpilo k plánovanej redukcii.</p>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>Sérová proteomika identifikovala <strong>ICAM2 (CD102)</strong> ako nádejný marker proliferatívnej LN: v nezávislej validačnej kohorte dosiahol pri odlíšení LN od zdravých kontrol plochu pod krivkou (AUC) <strong>0,92</strong> a koreloval s indexom aktivity, proteinúriou, albumínom a hladinou anti-dsDNA. V odlíšení proliferatívnej od neproliferatívnej LN prekonal konvenčné parametre a jeho expresia bola zvýšená aj v renálnom tkanive.</p>
 
-<p>Z talianskej štúdie Zeus vychádza iná dvojica kandidátov – <strong>anti-ENO1</strong> (proti α-enoláze) a <strong>anti-H2A</strong> (proti histónu 2A) v triede IgG2. Ich hladiny kopírovali proteinúriu (vysoké pri nástupe renálnych príznakov, normalizované po <strong>12 mesiacoch</strong> liečby), zatiaľ čo anti-dsDNA a anti-C1q IgG2 zostávali zvýšené počas celého obdobia sledovania. Obe protilátky boli asociované s proteinúriou &gt; 1 g aj s poklesom eGFR pod 60 ml/min/1,73 m².</p>
+<p>Z talianskej štúdie Zeus vychádza iná dvojica kandidátov – <strong>anti-ENO1</strong> (proti α-enoláze) a <strong>anti-H2A</strong> (proti histónu 2A) v triede IgG2. Ich hladiny kopírovali proteinúriu (vysoké pri nástupe renálnych príznakov, normalizované po <strong>12 mesiacoch</strong> liečby), zatiaľ čo anti-dsDNA a anti-C1q IgG2 zostávali zvýšené počas celého obdobia sledovania. Obe protilátky boli asociované s proteinúriou &gt; 1&nbsp;g aj s poklesom eGFR pod 60&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Žiadny z týchto markerov zatiaľ biopsiu nenahrádza. Ich reálnou perspektívou je skôr <strong>neinvazívne sledovanie</strong> – teda rozhodovanie o tom, kedy biopsiu zopakovať.</p>
 
@@ -135,7 +135,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Trvanie</th>
-      <td><strong>3 – 5 rokov</strong> pri dosiahnutí kompletnej renálnej odpovede</td>
+      <td><strong>3 – 5&nbsp;rokov</strong> pri dosiahnutí kompletnej renálnej odpovede</td>
       <td>Individualizované; vysadenie je spojené s rizikom relapsu</td>
       <td>Individualizované podľa rizikového profilu</td>
     </tr>
@@ -169,7 +169,7 @@ $articles[] = [
 
 <ul>
   <li>Pri dôvodnom podozrení na LN <strong>začni liečbu a súčasne urgentne objednaj biopsiu</strong> – nie sekvenčne.</li>
-  <li><strong>Normálne laboratórium nevylučuje aktívnu nefritídu</strong>: histologicky aktívne ochorenie sa vyskytuje aj pri proteinúrii pod 0,5 – 1 g/deň.</li>
+  <li><strong>Normálne laboratórium nevylučuje aktívnu nefritídu</strong>: histologicky aktívne ochorenie sa vyskytuje aj pri proteinúrii pod 0,5 – 1&nbsp;g/deň.</li>
   <li>Odpoveď v prvých <strong>6 – 24 mesiacoch</strong> je najsilnejším modifikovateľným prediktorom dlhodobého prežívania obličiek – oplatí sa o ňu bojovať intenzívne a včas.</li>
   <li>Pri pretrvávajúcej či zhoršujúcej sa proteinúrii po <strong>≥ 6 mesiacoch</strong> adekvátnej liečby, pri podozrení na relaps alebo pri refraktérnosti zváž <strong>rebiopsiu</strong> – mení liečbu vo väčšine prípadov a niekedy odhalí inú diagnózu.</li>
   <li>Kombinovaná imunosupresia je dnes štandardom pri proliferatívnej LN, <strong>voľba konkrétneho režimu však patrí individualizácii</strong> – podľa závažnosti, komorbidít, reprodukčných plánov, dostupnosti liekov a preferencií pacienta.</li>

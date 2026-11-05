@@ -35,7 +35,7 @@ $articles[] = [
 
 <h2>Údaje zo šiestich pacientov a dve oddelené výmeny</h2>
 
-<p>Autori použili skôr získané fyziologické údaje, ktoré boli v agregovanej podobe čiastočne publikované už v roku 2003. Pôvodne bolo zaradených sedem pacientov; jeden bol z analýzy vylúčený pre nedostatočné vypustenie pred jednou výmenou a zvyškový intraperitoneálny objem väčší ako 1 liter. Model sa preto prispôsoboval údajom šiestich pacientov, z toho dvoch žien, s priemernou telesnou hmotnosťou 74,8 ± 15,3 kg. Podrobnejšia charakteristika veku, základných ochorení a hepatálnych alebo respiračných komorbidít v článku uvedená nie je.</p>
+<p>Autori použili skôr získané fyziologické údaje, ktoré boli v agregovanej podobe čiastočne publikované už v roku 2003. Pôvodne bolo zaradených sedem pacientov; jeden bol z analýzy vylúčený pre nedostatočné vypustenie pred jednou výmenou a zvyškový intraperitoneálny objem väčší ako 1 liter. Model sa preto prispôsoboval údajom šiestich pacientov, z toho dvoch žien, s priemernou telesnou hmotnosťou 74,8 ± 15,3&nbsp;kg. Podrobnejšia charakteristika veku, základných ochorení a hepatálnych alebo respiračných komorbidít v článku uvedená nie je.</p>
 
 <p>Každý pacient absolvoval v dvoch po sebe nasledujúcich týždňoch dve samostatné 4-hodinové výmeny s 2 litrami roztoku obsahujúceho 3,86 % glukózy:</p>
 
@@ -60,24 +60,24 @@ $articles[] = [
   <tbody>
     <tr>
       <td>Laktát</td>
-      <td>15,2 ± 0,4 mmol/l</td>
-      <td>38,1 ± 1,5 mmol/l</td>
+      <td>15,2 ± 0,4&nbsp;mmol/l</td>
+      <td>38,1 ± 1,5&nbsp;mmol/l</td>
     </tr>
     <tr>
       <td>Bikarbonát</td>
-      <td>25,4 ± 1,1 mmol/l</td>
-      <td>3,4 ± 1,1 mmol/l</td>
+      <td>25,4 ± 1,1&nbsp;mmol/l</td>
+      <td>3,4 ± 1,1&nbsp;mmol/l</td>
     </tr>
     <tr>
       <td>Rozpustený CO₂</td>
-      <td>1,30 ± 0,08 mmol/l</td>
-      <td>0,34 ± 0,04 mmol/l</td>
+      <td>1,30 ± 0,08&nbsp;mmol/l</td>
+      <td>0,34 ± 0,04&nbsp;mmol/l</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Rozdiely v týchto troch tlmivých zložkách boli očakávané a všetky boli štatisticky významné (p &lt; 0,05). Z ostatných meraných zložiek sa na začiatku líšil iba sodík, ktorého koncentrácia bola pri PD4 o 1,3 % vyššia. Rýchlosť peritoneálnej absorpcie dosiahla 3,66 ± 1,48 ml/min pri B/L a 2,79 ± 1,02 ml/min pri PD4; rozdiel nebol štatisticky významný (p = 0,11).</p>
+<p>Rozdiely v týchto troch tlmivých zložkách boli očakávané a všetky boli štatisticky významné (p &lt; 0,05). Z ostatných meraných zložiek sa na začiatku líšil iba sodík, ktorého koncentrácia bola pri PD4 o 1,3 % vyššia. Rýchlosť peritoneálnej absorpcie dosiahla 3,66 ± 1,48&nbsp;ml/min pri B/L a 2,79 ± 1,02&nbsp;ml/min pri PD4; rozdiel nebol štatisticky významný (p = 0,11).</p>
 
 <p>Zvyškový objem pred výmenou bol 466 ± 160 mL pri B/L a 316 ± 74 mL pri PD4; tento rozdiel nebol štatisticky významný. Napustené objemy sa v priemere líšili o 30 mL a kinetika intraperitoneálneho objemu bola medzi roztokmi odlišná do 25. minúty. Autori ju pripisujú skôr malým rozdielom v zvyškovom a napustenom objeme než tlmivému zloženiu. Podľa pomeru kreatinínu v dialyzáte a plazme po štyroch hodinách bol jeden pacient vysoký, traja stredne vysokí a dvaja stredne nízki transportéri. Rozdiel v kinetike laktátu alebo bikarbonátu podľa transportného typu sa neukázal, ale šesť pacientov neposkytuje dostatočnú silu na spoľahlivú podskupinovú analýzu.</p>
 
@@ -85,7 +85,7 @@ $articles[] = [
 
 <p>Trojpórový model opisuje prestup vody a rozpustených látok cez veľké, malé a ultramalé póry, pričom ultramalé póry reprezentujú najmä akvaporíny. Tok vody určujú hydrostatické, onkotické a osmotické gradienty; rozpustené látky sa prenášajú difúziou a konvekciou. Acidobázická časť modelu zahŕňa pľúcne kapiláry a alveoly, arteriálnu a zmiešanú venóznu krv, interstícium a intracelulárny priestor. Do tohto celotelového systému vstupujú modelované transperitoneálne toky bikarbonátu, laktátu a rozpusteného CO₂.</p>
 
-<p>Model odhadoval hydraulickú vodivosť membrány, podiel ultramalých pórov a súčin permeability a plochy (PS) pre desať rozpustených látok. Peritoneálna perfúzia bola pevne nastavená na 55 ml/min a absorpcia sa pre každú výmenu zadala podľa údajov RISA. Pri viacerých neacidobázických látkach sa plazmatické koncentrácie považovali za známe vstupy a medzi odbermi sa lineárne interpolovali.</p>
+<p>Model odhadoval hydraulickú vodivosť membrány, podiel ultramalých pórov a súčin permeability a plochy (PS) pre desať rozpustených látok. Peritoneálna perfúzia bola pevne nastavená na 55&nbsp;ml/min a absorpcia sa pre každú výmenu zadala podľa údajov RISA. Pri viacerých neacidobázických látkach sa plazmatické koncentrácie považovali za známe vstupy a medzi odbermi sa lineárne interpolovali.</p>
 
 <div class="table-responsive" role="region" aria-label="Čo spája model 3PM/ABE" tabindex="0">
 <table>
@@ -124,7 +124,7 @@ $articles[] = [
 
 <h2>Odlišná kinetika bikarbonátu a laktátu</h2>
 
-<p>Pri nízkej počiatočnej koncentrácii bikarbonátu v PD4 vznikol veľký koncentračný gradient z krvi do peritoneálnej dutiny a prestup bol prevažne difúzny. Model odhadol 65,7 ± 10,8 mmol bikarbonátu preneseného z krvi do peritoneálnej tekutiny pri PD4 a 23,1 ± 6,8 mmol pri B/L. Autori pri tomto výpočte výslovne vylúčili množstvo znovu získané absorpciou do tkaniva. Hodnoty preto nemožno označiť za priamo nameranú čistú systémovú stratu bikarbonátu.</p>
+<p>Pri nízkej počiatočnej koncentrácii bikarbonátu v PD4 vznikol veľký koncentračný gradient z krvi do peritoneálnej dutiny a prestup bol prevažne difúzny. Model odhadol 65,7 ± 10,8&nbsp;mmol bikarbonátu preneseného z krvi do peritoneálnej tekutiny pri PD4 a 23,1 ± 6,8&nbsp;mmol pri B/L. Autori pri tomto výpočte výslovne vylúčili množstvo znovu získané absorpciou do tkaniva. Hodnoty preto nemožno označiť za priamo nameranú čistú systémovú stratu bikarbonátu.</p>
 
 <p>Laktát sa pri oboch roztokoch prenášal z peritoneálnej tekutiny do krvi, pri PD4 však vo väčšom množstve pre vyššiu počiatočnú koncentráciu. Plazmatická koncentrácia bikarbonátu napriek rozdielnej transperitoneálnej kinetike zostávala počas výmeny takmer konštantná a model tento priebeh reprodukoval. Kľúčom je však jeho predpoklad, že každý absorbovaný mol laktátu sa okamžite zmení na jeden mol bikarbonátu. Štúdia rýchlosť ani miesto tejto konverzie priamo nemerala; model nemá samostatný realistický pečeňový kompartment a nezachytáva oneskorenie metabolizmu. Stabilný plazmatický bikarbonát teda svedčí o zhode modelu s údajmi, nie je dôkazom úplnej a okamžitej metabolickej kompenzácie u každého pacienta.</p>
 
@@ -216,7 +216,7 @@ $articles[] = [
 
 <p><strong>Poznámka k označeniu roztokov:</strong> v jednej úvodnej vete diskusie originálneho článku sú skratky B/L a PD4 zjavne zamenené. Abstrakt, metodika, výsledky, obrázky aj názvy produktov konzistentne definujú B/L ako bikarbonátovo-laktátový Physioneal a PD4 ako laktátový Dianeal PD4; týmto definíciám sa riadi aj naše spracovanie.</p>
 
-<p><strong>Poznámka k jednotke rozpustnosti CO₂:</strong> hlavný text uvádza 0,23 mmol/l/mmHg, kým doplnkový matematický materiál pracuje s pCO₂ v kPa. Fyzikálne konzistentná jednotka je 0,23 mmol/l/kPa, približne 0,031 mmol/l/mmHg. Chybnú jednotku z hlavného textu preto v našich výpočtoch ani záveroch nepreberáme.</p>
+<p><strong>Poznámka k jednotke rozpustnosti CO₂:</strong> hlavný text uvádza 0,23&nbsp;mmol/l/mmHg, kým doplnkový matematický materiál pracuje s pCO₂ v kPa. Fyzikálne konzistentná jednotka je 0,23&nbsp;mmol/l/kPa, približne 0,031&nbsp;mmol/l/mmHg. Chybnú jednotku z hlavného textu preto v našich výpočtoch ani záveroch nepreberáme.</p>
 
 <h2>Záver</h2>
 

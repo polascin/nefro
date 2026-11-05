@@ -34,7 +34,7 @@ $articles[] = [
 
 <p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne inkretínové látky) v klinických štúdiách opakovane chránia obličky – nielen pri diabete 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
 
-<p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaraďuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24 mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, o ktorých treba v liečbe CKD uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>
+<p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaraďuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24&nbsp;mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, o ktorých treba v liečbe CKD uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>
 
 <p>Nižšie zhrnieme štyri kľúčové klinické scenáre, navrhnuté mechanizmy a praktické body pre ambulanciu. Dôraz je na presných formuláciách: randomizovaný dôkaz nie je to isté ako kauzalita v reálnom svete a pokles UACR nie je ekvivalentom tvrdého renálneho endpointu.</p>
 
@@ -71,14 +71,14 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Diabetes 2. typu + CKD</th>
-      <td>FLOW (semaglutid 1,0 mg týždenne)</td>
-      <td>Primárny renálny kompozit −24 % (HR 0,76); pomalší pokles eGFR o 1,16 ml/min/1,73 m² ročne; celková mortalita −20 %</td>
+      <td>FLOW (semaglutid 1,0&nbsp;mg týždenne)</td>
+      <td>Primárny renálny kompozit −24 % (HR 0,76); pomalší pokles eGFR o 1,16&nbsp;ml/min/1,73&nbsp;m² ročne; celková mortalita −20 %</td>
       <td>Randomizovaná renálna štúdia, tvrdé endpointy</td>
     </tr>
     <tr>
       <th scope="row">Bez diabetu, nadváha/obezita + ASCVD</th>
-      <td>SELECT – renálna analýza (semaglutid 2,4 mg)</td>
-      <td>Renálny kompozit HR 0,78; pri eGFR &lt;60 ml/min/1,73 m² rozdiel eGFR o 2,19 ml/min/1,73 m² v prospech semaglutidu</td>
+      <td>SELECT – renálna analýza (semaglutid 2,4&nbsp;mg)</td>
+      <td>Renálny kompozit HR 0,78; pri eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m² rozdiel eGFR o 2,19&nbsp;ml/min/1,73&nbsp;m² v prospech semaglutidu</td>
       <td>Predšpecifikovaná analýza, tvrdé endpointy</td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@ $articles[] = [
     <tr>
       <th scope="row">Bez východiskovej CKD</th>
       <td>SURMOUNT-1/‑2 – tirzepatid</td>
-      <td>Pokles UACR; pri východiskovom UACR ≥30 mg/g placebo‑korigovaná redukcia ~42 % (SURMOUNT‑1) a ~55 % (SURMOUNT‑2) po 72 týždňoch</td>
+      <td>Pokles UACR; pri východiskovom UACR ≥30&nbsp;mg/g placebo‑korigovaná redukcia ~42 % (SURMOUNT‑1) a ~55 % (SURMOUNT‑2) po 72 týždňoch</td>
       <td>Biomarker, post hoc analýza</td>
     </tr>
   </tbody>
@@ -99,13 +99,13 @@ $articles[] = [
 
 <h3>1. Diabetes 2. typu a CKD: štúdia FLOW</h3>
 
-<p>Štúdia FLOW randomizovala 3 533 pacientov s diabetom 2. typu a CKD definovanou podľa eGFR a UACR na subkutánny semaglutid 1,0 mg týždenne alebo placebo. Po mediáne 3,4 roka sledovania riziko primárneho kompozitu (zlyhanie obličiek, pokles eGFR ≥50 %, úmrtie z obličkových alebo kardiovaskulárnych príčin) kleslo o 24 % (HR 0,76; 95 % CI 0,66–0,88). Priaznivý bol aj kompozit pozostávajúci iba z obličkových zložiek (HR 0,79; 95 % CI 0,66–0,94).</p>
+<p>Štúdia FLOW randomizovala 3&nbsp;533 pacientov s diabetom 2. typu a CKD definovanou podľa eGFR a UACR na subkutánny semaglutid 1,0&nbsp;mg týždenne alebo placebo. Po mediáne 3,4 roka sledovania riziko primárneho kompozitu (zlyhanie obličiek, pokles eGFR ≥50 %, úmrtie z obličkových alebo kardiovaskulárnych príčin) kleslo o 24 % (HR 0,76; 95 % CI 0,66–0,88). Priaznivý bol aj kompozit pozostávajúci iba z obličkových zložiek (HR 0,79; 95 % CI 0,66–0,94).</p>
 
-<p>Ročný sklon eGFR bol v prospech semaglutidu o 1,16 ml/min/1,73 m². Riziko úmrtia z akejkoľvek príčiny sa znížilo o 20 % (HR 0,80; 95 % CI 0,67–0,95) a závažné nežiaduce udalosti boli častejšie v placebovej skupine (53,8 % vs 49,6 %). Ide o vysoko klinicky relevantný dôkaz v populácii, ktorú nefrológovia pravidelne vidia v ambulancii.</p>
+<p>Ročný sklon eGFR bol v prospech semaglutidu o 1,16&nbsp;ml/min/1,73&nbsp;m². Riziko úmrtia z akejkoľvek príčiny sa znížilo o 20 % (HR 0,80; 95 % CI 0,67–0,95) a závažné nežiaduce udalosti boli častejšie v placebovej skupine (53,8 % vs 49,6 %). Ide o vysoko klinicky relevantný dôkaz v populácii, ktorú nefrológovia pravidelne vidia v ambulancii.</p>
 
 <h3>2. Bez diabetu: renálna analýza SELECT</h3>
 
-<p>Štúdia SELECT skúmala semaglutid 2,4 mg u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu. Predšpecifikovaná renálna analýza ukázala nižší výskyt hlavného obličkového kompozitu (1,8 % vs 2,2 %; HR 0,78; 95 % CI 0,63–0,96). Po 104 týždňoch bol rozdiel eGFR v prospech semaglutidu 0,75 ml/min/1,73 m² celkovo a 2,19 ml/min/1,73 m² u pacientov s východiskovým eGFR &lt;60 ml/min/1,73 m².</p>
+<p>Štúdia SELECT skúmala semaglutid 2,4&nbsp;mg u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu. Predšpecifikovaná renálna analýza ukázala nižší výskyt hlavného obličkového kompozitu (1,8 % vs 2,2 %; HR 0,78; 95 % CI 0,63–0,96). Po 104 týždňoch bol rozdiel eGFR v prospech semaglutidu 0,75&nbsp;ml/min/1,73&nbsp;m² celkovo a 2,19&nbsp;ml/min/1,73&nbsp;m² u pacientov s východiskovým eGFR &lt;60&nbsp;ml/min/1,73&nbsp;m².</p>
 
 <p>Renálny prínos teda nebol obmedzený na diabetickú populáciu. Neznamená to však, že každý pacient bez diabetu získa rovnaký prínos – rozhoduje indikácia, absolútne riziko, tolerancia a celkový klinický kontext.</p>
 
@@ -117,7 +117,7 @@ $articles[] = [
 
 <h3>4. Bez východiskovej CKD: biomarkerový signál tirzepatidu</h3>
 
-<p>Spoločná (pooled) post hoc analýza SURMOUNT‑1 a SURMOUNT‑2 ukázala, že tirzepatid znižoval UACR u osôb s nadváhou alebo obezitou s diabetom aj bez neho. Pri východiskovom UACR ≥30 mg/g boli placebo‑korigované redukcie po 72 týždňoch približne 42 % v SURMOUNT‑1 a 55 % v SURMOUNT‑2.</p>
+<p>Spoločná (pooled) post hoc analýza SURMOUNT‑1 a SURMOUNT‑2 ukázala, že tirzepatid znižoval UACR u osôb s nadváhou alebo obezitou s diabetom aj bez neho. Pri východiskovom UACR ≥30&nbsp;mg/g boli placebo‑korigované redukcie po 72 týždňoch približne 42 % v SURMOUNT‑1 a 55 % v SURMOUNT‑2.</p>
 
 <p>UACR je dôležitý prognostický biomarker, ale nie je to rovnaký typ dôkazu ako zlyhanie obličiek alebo trvalý pokles eGFR ≥50 %. Signál je biologicky a rizikovo priaznivý, no neumožňuje tvrdiť, že tirzepatid u každého pacienta bez CKD „zaručene zabráni“ vzniku CKD.</p>
 

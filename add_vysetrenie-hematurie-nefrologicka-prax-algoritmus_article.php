@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Odborne a jazykovo revidovany clanok o vysetreni hematurie.
+ * Odborne a jazykovo revidovany článok o vysetreni hematurie.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -91,9 +91,9 @@ $articles[] = [
 <table>
 <thead><tr><th scope="col">Kategória</th><th scope="col">Kritériá</th><th scope="col">Odporúčaný postup</th></tr></thead>
 <tbody>
-<tr><th scope="row">Nízke alebo zanedbateľné riziko</th><td>Musia byť splnené všetky: 3–10 RBC/HPF; žena &lt; 60 rokov alebo muž &lt; 40 rokov; nikdy nefajčil/a alebo &lt; 10 balíčkorokov; bez ďalších rizikových faktorov</td><td>Kontrolná analýza moču do 6 mesiacov, nie okamžitá cystoskopia ani zobrazovanie</td></tr>
-<tr><th scope="row">Stredné riziko</th><td>Aspoň jedno: 11–25 RBC/HPF; pretrvávanie 3–25 RBC/HPF po pôvodne nízkom riziku; žena ≥ 60 rokov; muž 40–59 rokov; 10–30 balíčkorokov; ďalší rizikový faktor</td><td>Cystoskopia a ultrasonografia obličiek a močového mechúra</td></tr>
-<tr><th scope="row">Vysoké riziko</th><td>Aspoň jeden vysoko rizikový znak: &gt; 25 RBC/HPF, anamnéza makroskopickej hematúrie, muž ≥ 60 rokov, &gt; 30 balíčkorokov alebo vysoko riziková expozícia; žena sa nesmie zaradiť do vysokého rizika iba podľa veku</td><td>Cystoskopia a axiálne zobrazenie horných močových ciest</td></tr>
+<tr><th scope="row">Nízke alebo zanedbateľné riziko</th><td>Musia byť splnené všetky: 3–10 RBC/HPF; žena &lt; 60&nbsp;rokov alebo muž &lt; 40&nbsp;rokov; nikdy nefajčil/a alebo &lt; 10 balíčkorokov; bez ďalších rizikových faktorov</td><td>Kontrolná analýza moču do 6&nbsp;mesiacov, nie okamžitá cystoskopia ani zobrazovanie</td></tr>
+<tr><th scope="row">Stredné riziko</th><td>Aspoň jedno: 11–25 RBC/HPF; pretrvávanie 3–25 RBC/HPF po pôvodne nízkom riziku; žena ≥ 60&nbsp;rokov; muž 40–59&nbsp;rokov; 10–30 balíčkorokov; ďalší rizikový faktor</td><td>Cystoskopia a ultrasonografia obličiek a močového mechúra</td></tr>
+<tr><th scope="row">Vysoké riziko</th><td>Aspoň jeden vysoko rizikový znak: &gt; 25 RBC/HPF, anamnéza makroskopickej hematúrie, muž ≥ 60&nbsp;rokov, &gt; 30 balíčkorokov alebo vysoko riziková expozícia; žena sa nesmie zaradiť do vysokého rizika iba podľa veku</td><td>Cystoskopia a axiálne zobrazenie horných močových ciest</td></tr>
 </tbody>
 </table>
 </div>

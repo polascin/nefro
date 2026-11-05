@@ -57,13 +57,13 @@ $articles[] = [
     <tr><th scope="col">Liek</th><th scope="col">Ekvivalentná dávka</th><th scope="col">Biologická dostupnosť (p.o.)</th></tr>
   </thead>
   <tbody>
-    <tr><td>Furosemid</td><td>40 mg</td><td>~50 % (kolísavá, pri edéme čreva ↓)</td></tr>
-    <tr><td>Torasemid</td><td>10–20 mg</td><td>~80–100 % (stabilná)</td></tr>
-    <tr><td>Bumetanid</td><td>1 mg</td><td>~80–100 %</td></tr>
+    <tr><td>Furosemid</td><td>40&nbsp;mg</td><td>~50 % (kolísavá, pri edéme čreva ↓)</td></tr>
+    <tr><td>Torasemid</td><td>10–20&nbsp;mg</td><td>~80–100 % (stabilná)</td></tr>
+    <tr><td>Bumetanid</td><td>1&nbsp;mg</td><td>~80–100 %</td></tr>
   </tbody>
 </table>
 </div>
-<p><strong>Furosemid p.o. : i.v. = 2 : 1</strong> (40 mg p.o. ≈ 20 mg i.v.). Pri kolísavej absorpcii uprednostni torasemid alebo i.v. podanie.</p>
+<p><strong>Furosemid p.o. : i.v. = 2 : 1</strong> (40&nbsp;mg p.o. ≈ 20&nbsp;mg i.v.). Pri kolísavej absorpcii uprednostni torasemid alebo i.v. podanie.</p>
 
 <h2>Dávkové ekvivalencie – tiazidy a MRA</h2>
 <div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie – tiazidy a MRA" tabindex="0">
@@ -72,10 +72,10 @@ $articles[] = [
     <tr><th scope="col">Liek</th><th scope="col">Približná ekvivalencia / poznámka</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hydrochlorotiazid 25 mg</td><td>Referenčná dávka</td></tr>
-    <tr><td>Chlortalidón 12,5–25 mg</td><td>Účinnejší a dlhšie pôsobiaci (~1,5–2×), výhodný pri hypertenzii</td></tr>
-    <tr><td>Indapamid 1,5–2,5 mg</td><td>Metabolicky neutrálnejší</td></tr>
-    <tr><td>Spironolaktón 25–50 mg</td><td>≈ eplerenón 50 mg; spironolaktón má antiandrogénne NÚ (gynekomastia)</td></tr>
+    <tr><td>Hydrochlorotiazid 25&nbsp;mg</td><td>Referenčná dávka</td></tr>
+    <tr><td>Chlortalidón 12,5–25&nbsp;mg</td><td>Účinnejší a dlhšie pôsobiaci (~1,5–2×), výhodný pri hypertenzii</td></tr>
+    <tr><td>Indapamid 1,5–2,5&nbsp;mg</td><td>Metabolicky neutrálnejší</td></tr>
+    <tr><td>Spironolaktón 25–50&nbsp;mg</td><td>≈ eplerenón 50&nbsp;mg; spironolaktón má antiandrogénne NÚ (gynekomastia)</td></tr>
   </tbody>
 </table>
 </div>
@@ -84,7 +84,7 @@ $articles[] = [
 <ul>
   <li><strong>Prekročiť prah:</strong> slučkové diuretiká majú prahovú dávku – poddávkovanie je neúčinné. Pri CKD/srdcovom zlyhaní treba vyššiu jednorazovú dávku.</li>
   <li><strong>Sekvenčná blokáda nefrónu:</strong> pridaj tiazid (napr. metolazón alebo chlortalidón) k slučkovému diuretiku pri rezistencii.</li>
-  <li><strong>Tiazidy pri nízkom eGFR:</strong> tradične menej účinné pri eGFR &lt; 30 ml/min/1,73 m²; metolazón a chlortalidón si časť účinku zachovávajú, využívajú sa v kombinácii.</li>
+  <li><strong>Tiazidy pri nízkom eGFR:</strong> tradične menej účinné pri eGFR &lt; 30&nbsp;ml/min/1,73&nbsp;m²; metolazón a chlortalidón si časť účinku zachovávajú, využívajú sa v kombinácii.</li>
   <li><strong>Kontinuálna infúzia</strong> slučkového diuretika môže byť účinnejšia než bolusy pri ťažkom edéme.</li>
   <li>Pri hypoalbuminémii a nefrotickom syndróme je odpoveď znížená – rieš aj základnú príčinu.</li>
 </ul>

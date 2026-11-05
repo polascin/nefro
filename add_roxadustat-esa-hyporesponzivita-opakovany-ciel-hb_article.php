@@ -32,7 +32,7 @@ $articles[] = [
 
 <p>Hyporesponzivita na erytropoézu stimulujúce látky (ESA) je pri udržiavacej hemodialýze klinickým signálom, nie samostatnou diagnózou. Môže sprevádzať deficit železa, zápal, chronické straty krvi, nedostatočnú dialýzu, malnutríciu, hyperparatyreózu, hematologické ochorenie alebo iný korigovateľný problém. Zvyšovanie dávky ESA bez hľadania príčiny môže zvýšiť liekovú záťaž bez primeraného hematologického účinku.</p>
 
-<p>Demir a spoluautori publikovali sekundárnu analýzu multicentrickej retrospektívnej kohorty, v ktorej porovnali roxadustat s pokračovaním ESA u hemodialyzovaných pacientov s hyporesponzívnou anémiou. Roxadustat bol spojený s vyššou upravenou pravdepodobnosťou opakovaného dosiahnutia hemoglobínu (Hb) ≥10 g/dl, ale nepreukázal štatisticky významné zníženie medzimesačnej variability Hb.</p>
+<p>Demir a spoluautori publikovali sekundárnu analýzu multicentrickej retrospektívnej kohorty, v ktorej porovnali roxadustat s pokračovaním ESA u hemodialyzovaných pacientov s hyporesponzívnou anémiou. Roxadustat bol spojený s vyššou upravenou pravdepodobnosťou opakovaného dosiahnutia hemoglobínu (Hb) ≥10&nbsp;g/dl, ale nepreukázal štatisticky významné zníženie medzimesačnej variability Hb.</p>
 
 <p>Práca je klinicky podnetná, no nie je randomizovaným dôkazom superiority. Jej výsledok treba čítať spolu s odporúčaniami KDIGO 2026, ktoré naďalej uprednostňujú ESA pred inhibítormi prolylhydroxylázy hypoxiou indukovateľného faktora (HIF-PHI) ako liečbu prvej voľby po odstránení korigovateľných príčin anémie.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <p>Do sekundárnej analýzy bolo zaradených 108 dospelých na udržiavacej hemodialýze s kompletnými mesačnými hodnotami Hb počas šiestich mesiacov. Roxadustat dostávalo 78 pacientov a 30 pokračovalo v liečbe ESA. Výber liečby nebol randomizovaný.</p>
 
-<p>Autori definovali „sustained target achievement“ ako Hb ≥10 g/dl aspoň v troch zo šiestich sledovaných mesiacov. Tieto mesiace nemuseli nasledovať bezprostredne po sebe. Výsledok preto treba chápať skôr ako opakované dosiahnutie prahovej hodnoty, nie ako nepretržite stabilný Hb.</p>
+<p>Autori definovali „sustained target achievement“ ako Hb ≥10&nbsp;g/dl aspoň v troch zo šiestich sledovaných mesiacov. Tieto mesiace nemuseli nasledovať bezprostredne po sebe. Výsledok preto treba chápať skôr ako opakované dosiahnutie prahovej hodnoty, nie ako nepretržite stabilný Hb.</p>
 
 <p>Variabilitu Hb hodnotili viacerými ukazovateľmi: vnútroindividuálnou štandardnou odchýlkou, variačným koeficientom, rozsahom hodnôt, priemernou absolútnou mesačnou zmenou a maximálnou absolútnou zmenou.</p>
 
@@ -67,17 +67,17 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <td>Hb ≥10 g/dl aspoň v 3 zo 6 mesiacov</td>
+      <td>Hb ≥10&nbsp;g/dl aspoň v 3 zo 6&nbsp;mesiacov</td>
       <td>52 zo 108 pacientov; roxadustat oproti ESA: upravený OR 4,44 (95 % CI 1,24–15,84; p = 0,022)</td>
       <td>Asociácia po štatistickej úprave; široký interval spoľahlivosti vyjadruje značnú neistotu veľkosti účinku</td>
     </tr>
     <tr>
       <td>Východiskový Hb</td>
-      <td>Upravený OR 2,95 na každý vzostup Hb o 1 g/dl (95 % CI 1,57–5,55; p &lt;0,001)</td>
+      <td>Upravený OR 2,95 na každý vzostup Hb o 1&nbsp;g/dl (95 % CI 1,57–5,55; p &lt;0,001)</td>
       <td>Počiatočná závažnosť anémie bola silným prediktorom dosiahnutia prahu</td>
     </tr>
     <tr>
-      <td>Hb ≥10 g/dl v 6. mesiaci</td>
+      <td>Hb ≥10&nbsp;g/dl v 6. mesiaci</td>
       <td>50,0 % pri roxadustate a 33,3 % pri pokračovaní ESA</td>
       <td>Opisný výsledok jedného časového bodu; sám osebe nedokazuje kauzálnu superioritu</td>
     </tr>
@@ -100,9 +100,9 @@ $articles[] = [
 
 <p>KDIGO 2026 po odstránení korigovateľných príčin anémie navrhuje ESA namiesto HIF-PHI ako liečbu prvej voľby (odporúčanie 2D). Pacient s hyporesponzivitou môže po individuálnom zvážení podstúpiť skúšobnú liečbu HIF-PHI, ale samotné odporúčanie výslovne hodnotí dôkazy pre túto situáciu ako slabé.</p>
 
-<p>KDIGO zároveň uvádza, že ESA a HIF-PHI sa nemajú kombinovať. Pri HIF-PHI odporúča používať najnižšiu účinnú dávku, kontrolovať Hb 2–4 týždne po začatí alebo zmene dávky a potom každé štyri týždne. Pri roxadustate odporúča počas prvých troch mesiacov periodicky sledovať funkciu štítnej žľazy a liečbu prerušiť pri nedostatočnej erytropoetickej odpovedi podľa odporúčaného časového rámca.</p>
+<p>KDIGO zároveň uvádza, že ESA a HIF-PHI sa nemajú kombinovať. Pri HIF-PHI odporúča používať najnižšiu účinnú dávku, kontrolovať Hb 2–4&nbsp;týždne po začatí alebo zmene dávky a potom každé štyri týždne. Pri roxadustate odporúča počas prvých troch mesiacov periodicky sledovať funkciu štítnej žľazy a liečbu prerušiť pri nedostatočnej erytropoetickej odpovedi podľa odporúčaného časového rámca.</p>
 
-<p>Evrenzo je v Európskej únii autorizované na liečbu symptomatickej anémie spojenej s CKD u dospelých. Podľa EMA sa dávka upravuje na Hb 10–12 g/dl a stabilný pacient na ESA sa nemá meniť na roxadustat bez klinického odôvodnenia a očakávaného prínosu. Európska autorizácia však sama osebe neurčuje úhradu ani dostupnosť na Slovensku; tie treba overiť podľa aktuálnej kategorizácie a miestnych pravidiel.</p>
+<p>Evrenzo je v Európskej únii autorizované na liečbu symptomatickej anémie spojenej s CKD u dospelých. Podľa EMA sa dávka upravuje na Hb 10–12&nbsp;g/dl a stabilný pacient na ESA sa nemá meniť na roxadustat bez klinického odôvodnenia a očakávaného prínosu. Európska autorizácia však sama osebe neurčuje úhradu ani dostupnosť na Slovensku; tie treba overiť podľa aktuálnej kategorizácie a miestnych pravidiel.</p>
 
 <h2>Bezpečnosť nemožno odvodiť z tejto analýzy</h2>
 
@@ -133,7 +133,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V sekundárnej retrospektívnej analýze bol roxadustat spojený s vyššou upravenou pravdepodobnosťou, že hemodialyzovaný pacient s hyporesponzivitou na ESA dosiahne Hb ≥10 g/dl aspoň v troch zo šiestich mesiacov. Štúdia však nepreukázala štatisticky významne nižšiu medzimesačnú variabilitu Hb ani lepšie klinické výsledky.</p>
+<p>V sekundárnej retrospektívnej analýze bol roxadustat spojený s vyššou upravenou pravdepodobnosťou, že hemodialyzovaný pacient s hyporesponzivitou na ESA dosiahne Hb ≥10&nbsp;g/dl aspoň v troch zo šiestich mesiacov. Štúdia však nepreukázala štatisticky významne nižšiu medzimesačnú variabilitu Hb ani lepšie klinické výsledky.</p>
 
 <p>Najpraktickejším záverom nie je automatický prechod z ESA na roxadustat. Rozhodujúce zostáva dôsledné hľadanie príčiny hyporesponzivity, rešpektovanie preferencie ESA ako prvej voľby podľa KDIGO 2026 a individuálne zváženie skúšobnej liečby HIF-PHI u vhodne vybraného pacienta.</p>
 

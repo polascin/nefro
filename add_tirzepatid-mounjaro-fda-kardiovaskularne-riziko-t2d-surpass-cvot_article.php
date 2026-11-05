@@ -3,7 +3,7 @@
  * add_tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot_article.php
  * ════════════════════════════════════════════════════════════════════════════
  * Odborný článok: FDA indikačný rámec tirzepatidu (Mounjaro) na zníženie
- * kardiovaskulárneho rizika pri diabete 2. typu (SURPASS-CVOT).
+ * kardiovaskulárneho riziká pri diabete 2. typu (SURPASS-CVOT).
  *
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
@@ -47,19 +47,19 @@ $articles[] = [
 <p>Verejný americký súhrn údajov o lieku (USPI, revízia 08/2026) uvádza dve indikácie Mounjaro:</p>
 
 <ul>
-  <li>ako doplnok k diéte a cvičeniu na zlepšenie glykemickej kontroly u dospelých a pediatrických pacientov od 10 rokov s diabetom 2. typu;</li>
+  <li>ako doplnok k diéte a cvičeniu na zlepšenie glykemickej kontroly u dospelých a pediatrických pacientov od 10&nbsp;rokov s diabetom 2. typu;</li>
   <li>na zníženie rizika závažných nežiaducich kardiovaskulárnych príhod – kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda – <strong>u dospelých s diabetom 2. typu, ktorí sú na tieto príhody vo vysokom riziku</strong>.</li>
 </ul>
 
 <p>Označenie teda <strong>nevyžaduje výslovne už prítomné aterosklerotické kardiovaskulárne ochorenie (ASKVO)</strong>. Štúdia SURPASS-CVOT, o ktorú sa indikácia opiera, však randomizovala práve dospelých s diabetom 2. typu a <strong>už etablovaným ASKVO</strong>. Na tento rozdiel medzi znením indikačného textu a skúšanou populáciou treba pri čítaní súhrnu pamätať.</p>
 
-<p>Indikácia sa týka značky <strong>Mounjaro</strong>, nie značky Zepbound. V USA je Zepbound samostatný prípravok s tou istou účinnou látkou na dlhodobú redukciu hmotnosti a na stredne ťažké až ťažké obštrukčné spánkové apnoe u dospelých s obezitou. Tieto označenia sa nesmú miešať s kardiovaskulárnou indikáciou Mounjaro. Pediatrické použitie od 10 rokov platí pre glykemickú indikáciu, nie pre MACE.</p>
+<p>Indikácia sa týka značky <strong>Mounjaro</strong>, nie značky Zepbound. V USA je Zepbound samostatný prípravok s tou istou účinnou látkou na dlhodobú redukciu hmotnosti a na stredne ťažké až ťažké obštrukčné spánkové apnoe u dospelých s obezitou. Tieto označenia sa nesmú miešať s kardiovaskulárnou indikáciou Mounjaro. Pediatrické použitie od 10&nbsp;rokov platí pre glykemickú indikáciu, nie pre MACE.</p>
 
 <h2>SURPASS-CVOT: aktívny komparátor, nie placebo</h2>
 
-<p>Primárna publikácia v <em>New England Journal of Medicine</em> (PMID 41406444, doi 10.1056/NEJMoa2505928) opisuje SURPASS-CVOT (NCT04255433) ako aktívne kontrolovanú, dvojito zaslepenú, paralelne usporiadanú štúdiu fázy 3 s testom neinferiority. Pacienti s diabetom 2. typu a ASKVO boli v pomere 1 : 1 randomizovaní na podkožný tirzepatid raz týždenne (až 15 mg, alebo maximálna tolerovaná dávka) alebo na dulaglutid 1,5 mg raz týždenne. Dulaglutid je agonista receptora GLP-1 s už preukázaným znížením kardiovaskulárnych príhod; porovnanie teda nie je voči placebu.</p>
+<p>Primárna publikácia v <em>New England Journal of Medicine</em> (PMID 41406444, doi 10.1056/NEJMoa2505928) opisuje SURPASS-CVOT (NCT04255433) ako aktívne kontrolovanú, dvojito zaslepenú, paralelne usporiadanú štúdiu fázy 3&nbsp;s testom neinferiority. Pacienti s diabetom 2. typu a ASKVO boli v pomere 1 : 1 randomizovaní na podkožný tirzepatid raz týždenne (až 15&nbsp;mg, alebo maximálna tolerovaná dávka) alebo na dulaglutid 1,5&nbsp;mg raz týždenne. Dulaglutid je agonista receptora GLP-1&nbsp;s už preukázaným znížením kardiovaskulárnych príhod; porovnanie teda nie je voči placebu.</p>
 
-<p>Randomizovaných bolo 13 299 pacientov; 134 bolo následne vylúčených, lebo nespĺňali vstupné kritériá. Modifikovaná populácia podľa úmyslu liečiť (mITT) mala 6 586 pacientov v skupine s tirzepatidom a 6 579 v skupine s dulaglutidom. Priemerný vek bol 64,1 ± 8,8 roka, ženy tvorili 29,0 %, priemerný index telesnej hmotnosti 32,6 ± 5,5, priemerný HbA1c 8,4 ± 0,9 % a priemerné trvanie diabetu 14,7 ± 8,8 roka.</p>
+<p>Randomizovaných bolo 13&nbsp;299 pacientov; 134 bolo následne vylúčených, lebo nespĺňali vstupné kritériá. Modifikovaná populácia podľa úmyslu liečiť (mITT) mala 6&nbsp;586 pacientov v skupine s tirzepatidom a 6&nbsp;579 v skupine s dulaglutidom. Priemerný vek bol 64,1 ± 8,8 roka, ženy tvorili 29,0 %, priemerný index telesnej hmotnosti 32,6 ± 5,5, priemerný HbA1c 8,4 ± 0,9 % a priemerné trvanie diabetu 14,7 ± 8,8 roka.</p>
 
 <p>Americký súhrn údajov uvádza medián sledovania 210,1 týždňa (približne štyri roky) v súbore všetkých randomizovaných a liečených účastníkov. Štúdia bola udalosťami riadená a trvala približne päť rokov; medián sledovania nie je totožný s dĺžkou účasti každého pacienta.</p>
 
@@ -74,7 +74,7 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Dizajn</th>
-      <td>aktívne kontrolovaná, dvojito zaslepená, paralelná štúdia fázy 3 s testom neinferiority, pomer 1 : 1</td>
+      <td>aktívne kontrolovaná, dvojito zaslepená, paralelná štúdia fázy 3&nbsp;s testom neinferiority, pomer 1 : 1</td>
     </tr>
     <tr>
       <th scope="row">Populácia</th>
@@ -82,11 +82,11 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Liečba</th>
-      <td>tirzepatid podkožne raz týždenne až 15 mg oproti dulaglutidu 1,5 mg raz týždenne</td>
+      <td>tirzepatid podkožne raz týždenne až 15&nbsp;mg oproti dulaglutidu 1,5&nbsp;mg raz týždenne</td>
     </tr>
     <tr>
       <th scope="row">Randomizovaní / mITT</th>
-      <td>13 299 randomizovaných; 134 vylúčených; mITT 6 586 oproti 6 579</td>
+      <td>13&nbsp;299 randomizovaných; 134 vylúčených; mITT 6&nbsp;586 oproti 6&nbsp;579</td>
     </tr>
     <tr>
       <th scope="row">Primárny ukazovateľ</th>
@@ -113,8 +113,8 @@ $articles[] = [
   <thead>
     <tr>
       <th scope="col">Ukazovateľ</th>
-      <th scope="col">Tirzepatid (n = 6 586)</th>
-      <th scope="col">Dulaglutid (n = 6 579)</th>
+      <th scope="col">Tirzepatid (n = 6&nbsp;586)</th>
+      <th scope="col">Dulaglutid (n = 6&nbsp;579)</th>
       <th scope="col">Pomer rizík (95,3 % IS)</th>
     </tr>
   </thead>
@@ -129,7 +129,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Americký súhrn údajov uvádza v súbore všetkých randomizovaných a liečených (po 6 647 v ramene) výskyt 12,1 % oproti 13,0 % pri rovnakom pomere rizík 0,92 (0,83–1,01). Rozdiel voči 12,2 % a 13,1 % vyplýva z inej analytickej populácie, nie z iného záveru štúdie.</p>
+<p>Americký súhrn údajov uvádza v súbore všetkých randomizovaných a liečených (po 6&nbsp;647 v ramene) výskyt 12,1 % oproti 13,0 % pri rovnakom pomere rizík 0,92 (0,83–1,01). Rozdiel voči 12,2 % a 13,1 % vyplýva z inej analytickej populácie, nie z iného záveru štúdie.</p>
 
 <h2>Bezpečnosť</h2>
 
@@ -147,13 +147,13 @@ $articles[] = [
 
 <p>Výbor pre humánne lieky (CHMP) na zasadnutí 22.–25. júna 2026 uzavrel posúdenie žiadosti o rozšírenie použitia Mounjaro na zníženie rizika závažných kardiovaskulárnych príhod u dospelých s diabetom 2. typu a už prítomným kardiovaskulárnym ochorením. <strong>Novú indikáciu neodporučil.</strong> Dohodol sa na uvedení predložených údajov v informáciách o lieku, aby mali zdravotnícki pracovníci k dispozícii aktuálne dáta, bez zmeny indikačného bodu.</p>
 
-<p>Platná indikácia EMA pre Mounjaro ostáva liečba nedostatočne kontrolovaného diabetu 2. typu od 10 rokov ako doplnok k diéte a cvičeniu a manažment hmotnosti u dospelých s obezitou alebo nadváhou a pridruženými ochoreniami. V EÚ teda Mounjaro pokrýva aj hmotnosť; značka Zepbound sa v tomto rámci nepoužíva. Rozhodnutie FDA samo osebe <strong>neopravňuje predpisovať tirzepatid na Slovensku na zníženie MACE</strong>. Úhradový a indikačný rámec určuje ŠÚKL a platný súhrn charakteristických vlastností lieku.</p>
+<p>Platná indikácia EMA pre Mounjaro ostáva liečba nedostatočne kontrolovaného diabetu 2. typu od 10&nbsp;rokov ako doplnok k diéte a cvičeniu a manažment hmotnosti u dospelých s obezitou alebo nadváhou a pridruženými ochoreniami. V EÚ teda Mounjaro pokrýva aj hmotnosť; značka Zepbound sa v tomto rámci nepoužíva. Rozhodnutie FDA samo osebe <strong>neopravňuje predpisovať tirzepatid na Slovensku na zníženie MACE</strong>. Úhradový a indikačný rámec určuje ŠÚKL a platný súhrn charakteristických vlastností lieku.</p>
 
 <h2>Čo z toho vyplýva v ambulancii</h2>
 
-<p>Pre pacienta s diabetom 2. typu a ASKVO, ktorý už má alebo zvažuje inkretínovú liečbu, SURPASS-CVOT hovorí predovšetkým toto: tirzepatid v priamom porovnaní s dulaglutidom 1,5 mg nebol horší v kompozite MACE-3 a metabolicky ostáva veľmi účinný. Nehovorí, že má nahradiť dulaglutid, semaglutid alebo inhibítor SGLT2 „pretože je kardiovaskulárne lepší“. Superiorita v MACE-3 preukázaná nebola.</p>
+<p>Pre pacienta s diabetom 2. typu a ASKVO, ktorý už má alebo zvažuje inkretínovú liečbu, SURPASS-CVOT hovorí predovšetkým toto: tirzepatid v priamom porovnaní s dulaglutidom 1,5&nbsp;mg nebol horší v kompozite MACE-3 a metabolicky ostáva veľmi účinný. Nehovorí, že má nahradiť dulaglutid, semaglutid alebo inhibítor SGLT2 „pretože je kardiovaskulárne lepší“. Superiorita v MACE-3 preukázaná nebola.</p>
 
-<p>Výber ostáva fenotypový: glykémia, hmotnosť, ASKVO, srdcové zlyhávanie, CKD, tolerancia, dostupnosť a – na Slovensku – indikačné obmedzenie a úhrada. Inhibítor SGLT2 s obličkovým alebo srdcovým dôkazom sa kardiovaskulárnym označením tirzepatidu v USA nestráca. Rovnako sa nestráca dôkaz FLOW pre semaglutid pri CKD.</p>
+<p>Výber ostáva fenotypový: glykémia, hmotnosť, ASKVO, srdcové zlyhávanie, CKD, tolerancia, dostupnosť a – na Slovensku – indikačné obmedzenie a úhrada. Inhibítor SGLT2&nbsp;s obličkovým alebo srdcovým dôkazom sa kardiovaskulárnym označením tirzepatidu v USA nestráca. Rovnako sa nestráca dôkaz FLOW pre semaglutid pri CKD.</p>
 
 <p>Ak sa liečba začína alebo tituje, treba vopred hovoriť o gastrointestinálnej tolerancii, o riziku objemovej deplecie a o tom, že americká MACE indikácia zatiaľ nie je európskym indikačným textom.</p>
 

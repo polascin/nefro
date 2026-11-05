@@ -2,7 +2,7 @@
 
 /**
  * add_domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja_article.php
- * Domaca hemodialyza: sprava KDIGO z workshopu vo vychodnej Azii a co k tomu hovoria randomizovane data.
+ * Domaca hemodialýza: správa KDIGO z workshopu vo vychodnej Azii a co k tomu hovoria randomizovane data.
  *
  * Povodni autori spracovaneho zdroja su uvedeni v source_authors.php.
  */
@@ -78,7 +78,7 @@ $articles[] = [
 
 <h3>FHN Daily Trial – šesťkrát týždenne, ale v stredisku</h3>
 
-<p>Štúdia randomizovala 245 pacientov na hemodialýzu šesťkrát týždenne (125 osôb) alebo trikrát týždenne (120 osôb) počas 12 mesiacov. Častejšia dialýza priniesla významný prínos v oboch spoločných primárnych ukazovateľoch: pomer rizík pre úmrtie alebo nárast hmotnosti ľavej komory bol 0,61 (95 % IS 0,46–0,82) a pre úmrtie alebo zhoršenie zložky telesného zdravia 0,70 (95 % IS 0,53–0,92).</p>
+<p>Štúdia randomizovala 245 pacientov na hemodialýzu šesťkrát týždenne (125 osôb) alebo trikrát týždenne (120 osôb) počas 12&nbsp;mesiacov. Častejšia dialýza priniesla významný prínos v oboch spoločných primárnych ukazovateľoch: pomer rizík pre úmrtie alebo nárast hmotnosti ľavej komory bol 0,61 (95 % IS 0,46–0,82) a pre úmrtie alebo zhoršenie zložky telesného zdravia 0,70 (95 % IS 0,53–0,92).</p>
 
 <p><strong>Táto štúdia však prebiehala v dialyzačnom stredisku, nie doma.</strong> Ide teda o dôkaz o účinku vyššej frekvencie dialýzy, nie o dôkaz o prínose domáceho prostredia.</p>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <h3>ACTIVE Dialysis – predĺžené hodiny bez zlepšenia kvality života</h3>
 
-<p>Štúdia ACTIVE randomizovala 200 pacientov zo strediskových aj domácich programov na predĺženú (≥ 24 hodín týždenne) alebo štandardnú dialýzu (cieľ 12–15 hodín, maximum 18) počas 12 mesiacov. Primárny ukazovateľ – zmena kvality života podľa dotazníka EQ-5D – sa medzi skupinami nelíšil (priemerný rozdiel 0,04; 95 % IS −0,03 až 0,11; p = 0,29).</p>
+<p>Štúdia ACTIVE randomizovala 200 pacientov zo strediskových aj domácich programov na predĺženú (≥ 24&nbsp;hodín týždenne) alebo štandardnú dialýzu (cieľ 12–15&nbsp;hodín, maximum 18) počas 12&nbsp;mesiacov. Primárny ukazovateľ – zmena kvality života podľa dotazníka EQ-5D – sa medzi skupinami nelíšil (priemerný rozdiel 0,04; 95 % IS −0,03 až 0,11; p = 0,29).</p>
 
 <p>Predĺžená dialýza viedla k nižšej fosfatémii a kaliémii, vyššiemu hemoglobínu a menšej potrebe antihypertenzív a viazačov fosfátov. Hmotnostný index ľavej komory sa v podštúdii (95 pacientov) medzi skupinami významne nelíšil.</p>
 

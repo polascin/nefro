@@ -119,13 +119,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($uprotGDay === null) {
             $errors[] = "Proteinúria musí byť kladné číslo (napr. 1.5).";
         } elseif ($uprotGDay > 30) {
-            $errors[] = "Proteinúria musí byť ≤ 30 g/deň.";
+            $errors[] = "Proteinúria musí byť ≤ 30 g/deň.";
         }
 
         if ($mapMmhg === null) {
             $errors[] = "Stredný arteriálny tlak (MAP) musí byť kladné číslo.";
         } elseif ($mapMmhg < 50 || $mapMmhg > 200) {
-            $errors[] = "MAP musí byť v rozsahu 50–200 mmHg.";
+            $errors[] = "MAP musí byť v rozsahu 50–200 mmHg.";
         }
 
         if (empty($errors)) {

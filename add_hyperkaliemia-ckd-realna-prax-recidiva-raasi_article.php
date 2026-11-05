@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Súbor a dizajn</h2>
 
-<p>Išlo o prospektívnu multicentrickú observačnú štúdiu; zaraďovali sa pacienti so sérovým káliom nad 5,5 mmol/l a údaje sa zbierali počas dvoch rokov. Súbor bol starý a komorbídny: priemerný vek 71,5 roka, 71,3 % mužov, 88,6 % s hypertenziou a 55,9 % s diabetom. Stredne ťažkú hyperkaliémiu malo 19,1 % a ťažkú 3,7 % pacientov; podiel miernej práca neuvádza.</p>
+<p>Išlo o prospektívnu multicentrickú observačnú štúdiu; zaraďovali sa pacienti so sérovým káliom nad 5,5&nbsp;mmol/l a údaje sa zbierali počas dvoch rokov. Súbor bol starý a komorbídny: priemerný vek 71,5 roka, 71,3 % mužov, 88,6 % s hypertenziou a 55,9 % s diabetom. Stredne ťažkú hyperkaliémiu malo 19,1 % a ťažkú 3,7 % pacientov; podiel miernej práca neuvádza.</p>
 
 <h2>Ako prax na epizódu zareagovala</h2>
 
@@ -111,8 +111,8 @@ $articles[] = [
 
 <ul>
   <li>Recidíva hyperkaliémie nastala u <strong>43,8 %</strong> pacientov.</li>
-  <li>Pri vstupnej odhadovanej filtrácii pod 30 ml/min bola častejšia: <strong>49,1 % oproti 38,8 %</strong> (p = 0,03).</li>
-  <li>Recidíva sa spájala s rýchlejším poklesom filtrácie – uvádza sa <strong>−2,4 ml/min za rok</strong> (p &lt; 0,001).</li>
+  <li>Pri vstupnej odhadovanej filtrácii pod 30&nbsp;ml/min bola častejšia: <strong>49,1 % oproti 38,8 %</strong> (p = 0,03).</li>
+  <li>Recidíva sa spájala s rýchlejším poklesom filtrácie – uvádza sa <strong>−2,4&nbsp;ml/min za rok</strong> (p &lt; 0,001).</li>
   <li>Kaplanova–Meierova analýza nepreukázala rozdiel v celkovom prežívaní podľa toho, či recidíva nastala.</li>
   <li>Medzi modernými viažucimi látkami a živicami sa nezistil významný rozdiel v účinnosti meranej výskytom recidívy.</li>
 </ul>
@@ -122,7 +122,7 @@ $articles[] = [
 <ol>
   <li><strong>Uvádzajú sa výhradne neupravené podiely a hodnoty p.</strong> Chýbajú pomery rizík, intervaly spoľahlivosti aj akýkoľvek viacrozmerný model. Nedá sa preto tvrdiť, že recidíva je <em>nezávisle</em> spojená s rýchlejším poklesom filtrácie – rovnako dobre môže byť len ukazovateľom pokročilejšieho a nestabilnejšieho ochorenia. Autori sami uvádzajú, že príčinná súvislosť je nejasná.</li>
   <li><strong>Recidíva vzniká až počas sledovania.</strong> Publikovaný súhrn neuvádza časový začiatok sledovania, landmark analýzu ani to, či sa recidíva modelovala ako časovo závislá premenná. <em>Ak</em> sa analyzovala ako vstupná vlastnosť, vzniká skreslenie nesmrteľného času: pacient musí prežiť dosť dlho na to, aby sa recidívy vôbec dožil. Z dostupného abstraktu to nemožno potvrdiť ani vylúčiť; rovnaká výhrada sa týka výpočtu ročného sklonu filtrácie.</li>
-  <li><strong>Chýba definícia recidívy.</strong> Nie je uvedený prah kália, časové okno, minimálny odstup medzi epizódami ani predpísaná frekvencia odberov. Pri observačnom zbere pritom zachytenie recidívy priamo závisí od intenzity monitorovania – a pacienti s filtráciou pod 30 ml/min sa kontrolujú častejšie. Časť rozdielu 49,1 oproti 38,8 % teda môže byť len rozdielom v tom, ako často odoberáme krv.</li>
+  <li><strong>Chýba definícia recidívy.</strong> Nie je uvedený prah kália, časové okno, minimálny odstup medzi epizódami ani predpísaná frekvencia odberov. Pri observačnom zbere pritom zachytenie recidívy priamo závisí od intenzity monitorovania – a pacienti s filtráciou pod 30&nbsp;ml/min sa kontrolujú častejšie. Časť rozdielu 49,1 oproti 38,8 % teda môže byť len rozdielom v tom, ako často odoberáme krv.</li>
   <li><strong>„Žiadny významný rozdiel“ nie je dôkaz rovnocennosti.</strong> Porovnanie viažucich látok so živicami bolo nerandomizované, bez uvedenia veľkostí podskupín, intervalu spoľahlivosti ani sily testu. O liečbe rozhodoval ošetrujúci nefrológ, takže hrozí skreslenie indikáciou.</li>
   <li><strong>Záver ide nad rámec dát.</strong> Odporúčanie zaraďovať viažuce látky do liečebných stratégií nemá v tejto práci oporu – chýba kontrolná skupina bez viažucej látky aj výsledky o dosiahnutých hladinách kália. Dvaja zo šestnástich autorov vrátane prvej autorky navyše deklarujú konzultačné väzby na výrobcov, medzi nimi aj na výrobcu jednej z viažucich látok.</li>
   <li><strong>Abstrakt si protirečí.</strong> Výsledky uvádzajú, že rozdiel v prežívaní nie je, no záver hovorí, že „rozdiel v mortalite si vyžaduje ďalšie skúmanie“. Počet úmrtí ani hodnota log-rank testu nie sú uvedené.</li>
@@ -145,7 +145,7 @@ $articles[] = [
     <tr>
       <th scope="row">Recidíva hyperkaliémie postihla 43,8 % pacientov</th>
       <td>Potvrdené</td>
-      <td>Platí pre populáciu v nefrologickej ambulancii so vstupným káliom nad 5,5 mmol/l; definícia recidívy nie je uvedená.</td>
+      <td>Platí pre populáciu v nefrologickej ambulancii so vstupným káliom nad 5,5&nbsp;mmol/l; definícia recidívy nie je uvedená.</td>
     </tr>
     <tr>
       <th scope="row">Antagonisty mineralokortikoidného receptora sa vysadzujú najčastejšie</th>
@@ -190,11 +190,11 @@ $articles[] = [
 <h2>Praktický postup</h2>
 
 <ol>
-  <li><strong>Pred zásahom overiť hodnotu.</strong> Pseudohyperkaliémia z hemolýzy, oneskoreného spracovania vzorky alebo trombocytózy je pri prahu 5,5 mmol/l častou príčinou zbytočného vysadenia liečby.</li>
+  <li><strong>Pred zásahom overiť hodnotu.</strong> Pseudohyperkaliémia z hemolýzy, oneskoreného spracovania vzorky alebo trombocytózy je pri prahu 5,5&nbsp;mmol/l častou príčinou zbytočného vysadenia liečby.</li>
   <li><strong>Prejsť odstrániteľné príčiny.</strong> Metabolickú acidózu, zápchu, dehydratáciu, nesteroidové antiflogistiká, trimetoprim, heparín, príjem náhrad soli s obsahom draslíka a nedávnu zmenu dávky diuretika.</li>
   <li><strong>Vysadenie brať ako poslednú možnosť, nie prvú.</strong> Poradie zásahov: korekcia acidózy a objemu, diétna úprava, kľučkové diuretikum, viažuca látka – a až potom zníženie dávky.</li>
   <li><strong>Ak sa dávka zníži, naplánovať návrat.</strong> Vysadenie „dočasne“ sa bez konkrétneho termínu kontroly a plánu opätovného nasadenia mení na trvalé.</li>
-  <li><strong>Počítať s recidívou.</strong> Takmer polovica pacientov ju zopakuje, pri filtrácii pod 30 ml/min ešte častejšie. Jednorazové riešenie preto neexistuje – ide o chronický proces s naplánovanými kontrolami kália.</li>
+  <li><strong>Počítať s recidívou.</strong> Takmer polovica pacientov ju zopakuje, pri filtrácii pod 30&nbsp;ml/min ešte častejšie. Jednorazové riešenie preto neexistuje – ide o chronický proces s naplánovanými kontrolami kália.</li>
   <li><strong>Zaznamenať dôvod zásahu.</strong> Bez poznámky, prečo sa dávka znížila, nikto neskôr nevie, či je dôvod ešte platný.</li>
 </ol>
 

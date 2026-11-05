@@ -26,7 +26,7 @@ if ($requestMethod === 'GET' && isset($_SESSION['resend_verification_flash'])) {
 // Konštanty rate limitingu
 const RESEND_MAX_ATTEMPTS  = 5;    // max pokusov per IP
 const RESEND_WINDOW_SECS   = 3600; // okno 1 hodina
-const RESEND_COOLDOWN_SECS = 300;  // 5 minút medzi jednotlivými odoslaniami
+const RESEND_COOLDOWN_SECS = 300;  // 5 minút medzi jednotlivými odoslaniami
 
 if ($requestMethod === 'POST') {
     requestRequireScalarPost();
