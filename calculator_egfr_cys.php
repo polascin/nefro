@@ -5,41 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-function egfrCysCategory(float $egfr): string
-{
-    if ($egfr >= 90.0) {
-        return "G1";
-    }
-    if ($egfr >= 60.0) {
-        return "G2";
-    }
-    if ($egfr >= 45.0) {
-        return "G3a";
-    }
-    if ($egfr >= 30.0) {
-        return "G3b";
-    }
-    if ($egfr >= 15.0) {
-        return "G4";
-    }
-
-    return "G5";
-}
-
-function egfrCysCategoryDescription(string $category): string
-{
-    $map = [
-        "G1" => "normálna alebo vysoká filtrácia",
-        "G2" => "mierne znížená filtrácia",
-        "G3a" => "mierne až stredne znížená filtrácia",
-        "G3b" => "stredne až výrazne znížená filtrácia",
-        "G4" => "výrazne znížená filtrácia",
-        "G5" => "zlyhanie obličiek",
-    ];
-
-    return $map[$category] ?? "";
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -132,27 +97,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $scys = (float) $cystatinValue;
 
             // CKD-EPI 2021 kreatinín–cystatín C (Inker et al., NEJM 2021), bez rasy
-            $kappa = $sex === "female" ? 0.7 : 0.9;
-            $alpha = $sex === "female" ? -0.219 : -0.144;
-
-            $crRatio = $creatinineMgDl / $kappa;
-            $cysRatio = $scys / 0.8;
-
-            $egfr =
-                135 *
-                pow(min($crRatio, 1), $alpha) *
-                pow(max($crRatio, 1), -0.544) *
-                pow(min($cysRatio, 1), -0.323) *
-                pow(max($cysRatio, 1), -0.778) *
-                pow(0.9961, (int) $ageYears);
-
-            if ($sex === "female") {
-                $egfr *= 0.963;
-            }
+            $egfr = calculatorCkdEpi2021FromCreatinineCystatinMgDl(
+                $creatinineMgDl,
+                $scys,
+                (int) $ageYears,
+                $sex,
+            );
 
             $egfrRounded = round($egfr, 1);
-            $gCategory = egfrCysCategory($egfrRounded);
-            $gDescription = egfrCysCategoryDescription($gCategory);
+            $gCategory = ckdGCategory($egfrRounded);
+            $gDescription = ckdGCategoryDescription($gCategory);
 
             $calculated = [
                 "egfr" => $egfrRounded,

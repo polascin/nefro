@@ -1862,6 +1862,37 @@ function calculatorCkdEpi2021FromCreatinineMgDl(float $creatinineMgDl, int $ageY
     return $egfr;
 }
 
+/**
+ * CKD-EPI 2021 (kreatinín + cystatín C, bez rasy) — spoločný vzorec pre calculator_egfr_cys.php.
+ * Vstup: Scr v mg/dL, Scys v mg/L, vek v celých rokoch, sex `female`|`male`.
+ * Zdroj: Inker LA et al., N Engl J Med 2021;385(19):1737–1749, PMID 34554658.
+ */
+function calculatorCkdEpi2021FromCreatinineCystatinMgDl(
+    float $creatinineMgDl,
+    float $cystatinMgL,
+    int $ageYears,
+    string $sex
+): float {
+    $sexNorm = $sex === 'female' ? 'female' : 'male';
+    $kappa = $sexNorm === 'female' ? 0.7 : 0.9;
+    $alpha = $sexNorm === 'female' ? -0.219 : -0.144;
+    $crRatio = $creatinineMgDl / $kappa;
+    $cysRatio = $cystatinMgL / 0.8;
+
+    $egfr = 135.0
+        * (min($crRatio, 1.0) ** $alpha)
+        * (max($crRatio, 1.0) ** -0.544)
+        * (min($cysRatio, 1.0) ** -0.323)
+        * (max($cysRatio, 1.0) ** -0.778)
+        * (0.9961 ** $ageYears);
+
+    if ($sexNorm === 'female') {
+        $egfr *= 0.963;
+    }
+
+    return $egfr;
+}
+
 /** Vráti platnú jednotku eGFR; pri neznámej hodnote kanonickú ml/min/1,73 m². */
 function calculatorNormalizeEgfrUnit(string $unit): string
 {
