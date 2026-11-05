@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery fosfát mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `b576b78f`; feature `b576b78f`)
-- Runtime / `DEPLOY_COMMIT`: `b576b78f`
+- Vetva: `main` (HEAD `b2bc1e21`; feature `b576b78f`)
+- Runtime / `DEPLOY_COMMIT`: `b576b78f` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
