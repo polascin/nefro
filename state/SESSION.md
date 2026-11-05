@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery glukóza mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e34dc727`)
-- Runtime / `DEPLOY_COMMIT`: `e34dc727`
+- Vetva: `main` (HEAD `c7c587bb`; feature `e34dc727`)
+- Runtime / `DEPLOY_COMMIT`: `e34dc727` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
