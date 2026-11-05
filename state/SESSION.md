@@ -9,7 +9,7 @@ Beh: referenčné testy MGRS + KDRI/OPTN. Handoff:
 
 ## Stav repozitára
 
-- Vetva: `main`
+- Vetva: `main` (HEAD docs `d846c5aa`; nasaditeľný kód `a6c6b4b1`)
 - Runtime / `DEPLOY_COMMIT`: `a6c6b4b1`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
