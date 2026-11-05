@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery vápnik mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `55f1d254`)
-- Runtime / `DEPLOY_COMMIT`: `55f1d254`
+- Vetva: `main` (HEAD `e82e4433`; feature `55f1d254`)
+- Runtime / `DEPLOY_COMMIT`: `55f1d254` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
