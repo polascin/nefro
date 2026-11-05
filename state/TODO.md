@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. `php tools/phpstan.phar analyse --memory-limit=1G --no-progress` (alebo prvý FAIL); live smoke / produkčný ops; ďalšia bezpečná položka mimo „Čaká na majiteľa“.
+1. `php ops_health.php` (alebo prvý FAIL); PHPStan new; ďalšia bezpečná položka mimo „Čaká na majiteľa“ (napr. prevodník jednotiek).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-f (Mehran)
+
+- [x] `mehranScore` v calculators_common + test 24 PASS; citácia PMID 15464318; deploy `a9e99f84`
 
 ## Hotové: slučka 2026-11-05-e (alkalóza)
 
