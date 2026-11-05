@@ -420,6 +420,19 @@ const CALCIUM_MGDL_TO_MMOLL = 0.2495;
  */
 const CALCIUM_MMOLL_TO_MGDL = 4.008;
 
+/**
+ * Fosfát (P) mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 10 / 30,974).
+ * Približne reciproký k PHOSPHATE_MMOLL_TO_MGDL (MW P ≈ 30,974 / 10).
+ */
+const PHOSPHATE_MGDL_TO_MMOLL = 0.3229;
+
+/**
+ * Fosfát (P) mmol/L → mg/dL (≈ MW fosforu / 10 = 3,097).
+ * Nie je odvodený ako 1/0,3229: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 0,3229; TLS prahy Cairo–Bishop 4,5 / 6,5 mg/dL ÷ 3,097).
+ */
+const PHOSPHATE_MMOLL_TO_MGDL = 3.097;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1380,6 +1393,18 @@ function calciumMmolLToMgDl(float $mmolL): float
     return $mmolL * CALCIUM_MMOLL_TO_MGDL;
 }
 
+/** Fosfát (P) mg/dL → mmol/L. */
+function phosphateMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * PHOSPHATE_MGDL_TO_MMOLL;
+}
+
+/** Fosfát (P) mmol/L → mg/dL. */
+function phosphateMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * PHOSPHATE_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1730,7 +1755,7 @@ function calculatorUnitConversionRows(): array
         ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', BUN_MGDL_TO_UREA_MMOLL, 1, 1],
         ['Glukóza', 'mg/dL', 'mmol/L', GLUCOSE_MGDL_TO_MMOLL, 0, 1],
         ['Vápnik', 'mg/dL', 'mmol/L', CALCIUM_MGDL_TO_MMOLL, 1, 2],
-        ['Fosfát (P)', 'mg/dL', 'mmol/L', 0.3229, 1, 2],
+        ['Fosfát (P)', 'mg/dL', 'mmol/L', PHOSPHATE_MGDL_TO_MMOLL, 1, 2],
         ['Magnézium', 'mg/dL', 'mmol/L', 0.4114, 1, 2],
         ['Kyselina močová', 'mg/dL', 'µmol/L', 59.48, 1, 0],
         ['Cholesterol', 'mg/dL', 'mmol/L', 0.02586, 0, 2],

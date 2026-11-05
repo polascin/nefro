@@ -50,11 +50,11 @@ scoresRefTest(plasmicRiskClass(6) === 'risk-high' && plasmicRiskClass(7) === 'ri
 scoresRefTest(str_contains(plasmicRiskLabel(6), '62 až 82'), 'Štítok vysokého rizika PLASMIC.');
 
 // ─── Cairo–Bishop TLS ───
-// Prepočty prahov: kyselina močová 8 mg/dL · 59,48 = 476; P 4,5 mg/dL / 3,097 = 1,45;
-// P 6,5 mg/dL / 3,097 = 2,10; Ca 7 mg/dL / 4,008 = 1,75 mmol/L
+// Prepočty prahov: kyselina močová 8 mg/dL · 59,48 = 476; P 4,5 / 6,5 mg/dL ÷ PHOSPHATE_MMOLL_TO_MGDL;
+// Ca 7 mg/dL / CALCIUM_MMOLL_TO_MGDL = 1,75 mmol/L
 scoresRefApprox(8.0 * 59.48, TLS_URIC_ACID, 0.5, 'Prah kyseliny močovej 476 µmol/L.');
-scoresRefApprox(4.5 / 3.097, TLS_PHOS_ADULT, 0.01, 'Prah fosfátu dospelí 1,45 mmol/L.');
-scoresRefApprox(6.5 / 3.097, TLS_PHOS_CHILD, 0.01, 'Prah fosfátu deti 2,1 mmol/L.');
+scoresRefApprox(4.5 / PHOSPHATE_MMOLL_TO_MGDL, TLS_PHOS_ADULT, 0.01, 'Prah fosfátu dospelí 1,45 mmol/L.');
+scoresRefApprox(6.5 / PHOSPHATE_MMOLL_TO_MGDL, TLS_PHOS_CHILD, 0.01, 'Prah fosfátu deti 2,1 mmol/L.');
 scoresRefApprox(7.0 / CALCIUM_MMOLL_TO_MGDL, TLS_CALCIUM, 0.01, 'Prah vápnika 1,75 mmol/L.');
 // Hranice sú neostré (≥ / ≤)
 $tlsEdges = tlsCairoBishop(476.0, 6.0, 1.45, 1.75, false, false, false, false);

@@ -51,7 +51,9 @@ unitsRefApprox(18.0182, GLUCOSE_MMOLL_TO_MGDL, 0.0, 'GLUCOSE_MMOLL_TO_MGDL = 18,
 unitsRefApprox(CALCIUM_MGDL_TO_MMOLL, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor z konštanty');
 unitsRefApprox(0.2495, CALCIUM_MGDL_TO_MMOLL, 0.0, 'CALCIUM_MGDL_TO_MMOLL = 0,2495');
 unitsRefApprox(4.008, CALCIUM_MMOLL_TO_MGDL, 0.0, 'CALCIUM_MMOLL_TO_MGDL = 4,008');
-unitsRefApprox(0.3229, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor 0,3229');
+unitsRefApprox(PHOSPHATE_MGDL_TO_MMOLL, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor z konštanty');
+unitsRefApprox(0.3229, PHOSPHATE_MGDL_TO_MMOLL, 0.0, 'PHOSPHATE_MGDL_TO_MMOLL = 0,3229');
+unitsRefApprox(3.097, PHOSPHATE_MMOLL_TO_MGDL, 0.0, 'PHOSPHATE_MMOLL_TO_MGDL = 3,097');
 unitsRefApprox(0.4114, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor 0,4114');
 unitsRefApprox(59.48, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor 59,48');
 unitsRefApprox(0.02586, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor 0,02586');
@@ -137,6 +139,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(10.0, CALCIUM_MGDL_TO_MMOLL),
     0.0,
     'calcium helper = prevodník s CALCIUM_MGDL_TO_MMOLL',
+);
+
+$phosSi = calculatorConvertConventionalToSi(4.5, (float) $byName['Fosfát (P)'][3]);
+unitsRefApprox(1.45305, $phosSi, 1e-9, 'Fosfát 4,5 mg/dL → 1,45305 mmol/L');
+unitsRefApprox(1.45305, phosphateMgDlToMmolL(4.5), 1e-9, 'phosphateMgDlToMmolL(4,5)');
+unitsRefApprox(30.97, phosphateMmolLToMgDl(10.0), 1e-9, 'phosphateMmolLToMgDl(10)');
+unitsRefApprox(
+    phosphateMgDlToMmolL(4.5),
+    calculatorConvertConventionalToSi(4.5, PHOSPHATE_MGDL_TO_MMOLL),
+    0.0,
+    'phosphate helper = prevodník s PHOSPHATE_MGDL_TO_MMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -267,6 +280,20 @@ unitsRefTest(
     !preg_match("/['\"]Vápnik['\"].*0\.2495/", $commonSrc)
         && !preg_match('/\*\s*4\.008\b/', $commonSrc),
     'calculators_common bez literálu 0,2495 v prevodníku a bez inline × 4,008',
+);
+
+// Fosfát mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.3229 / 3.097 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'PHOSPHATE_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'PHOSPHATE_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'phosphateMgDlToMmolL')
+        && str_contains($commonSrc, 'phosphateMmolLToMgDl'),
+    'calculators_common má fosfátové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Fosfát \(P\)['\"].*0\.3229/", $commonSrc)
+        && !preg_match('/\*\s*3\.097\b/', $commonSrc),
+    'calculators_common bez literálu 0,3229 v prevodníku a bez inline × 3,097',
 );
 
 echo "Clinical references (units): $checks PASS\n";
