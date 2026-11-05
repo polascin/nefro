@@ -5,8 +5,8 @@
 - Generated At: 2026-11-06T00:54:11+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: 33814da9
-- Runtime / DEPLOY_COMMIT: 33814da9 (SSH grep deploy_info.php)
+- Head Commit: ef5457cc (feature 33814da9)
+- Runtime / DEPLOY_COMMIT: 33814da9 (SSH grep deploy_info.php; docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
@@ -62,11 +62,11 @@ Hotové. `TRIGLYCERIDES_MGDL_TO_MMOLL = 0.01129`, `TRIGLYCERIDES_MMOLL_TO_MGDL =
 
 ## Recent Commits
 
+- ef5457cc docs(state): handoff spolocnych helperov prevodu triglyceridov
 - 33814da9 feat(kalkulacky): spolocne konstanty a helpery prevodu triglyceridov
 - cf2ece6d docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 - b4f88e21 docs(state): handoff spolocnych helperov prevodu cholesterolu
 - 64712578 feat(kalkulacky): spolocne konstanty a helpery prevodu cholesterolu
-- 202a6bb4 docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 
 ## Modified Files
 

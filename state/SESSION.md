@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery triglyceridov mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `33814da9`)
-- Runtime / `DEPLOY_COMMIT`: `33814da9`
+- Vetva: `main` (HEAD `ef5457cc`; feature `33814da9`)
+- Runtime / `DEPLOY_COMMIT`: `33814da9` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
