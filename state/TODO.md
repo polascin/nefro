@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Zjednotiť inline prevody `× 88,4` / `0,0884` na spoločné helpery, alebo P1 pokrytie ďalšej stránky mimo „Čaká na majiteľa“ (KDIGO G×A / AKI FENa interpretácie).
+1. Zjednotiť `× 8,84` (UACR mg/mmol ↔ mg/g) na odvodenú konštantu z kreatinínu, alebo P1 mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-h (kreatinín helpery)
+
+- [x] `CREATININE_UMOL_PER_MGDL` + MgDl⇄Umol/Mmol helpery; 7 kalkulačiek; test 69 PASS; deploy `61b09a7f`
 
 ## Hotové: slučka 2026-11-05-g (prevodník)
 
