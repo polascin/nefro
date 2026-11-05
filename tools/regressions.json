@@ -52,4 +52,6 @@
   "tools/test_clinical_references_trend_calcium.php",
   "tools/test_clinical_references_urine_indices.php",
   "tools/test_clinical_references_sodium.php"
+,
+  "tools/test_clinical_references_acidbase.php"
 ]

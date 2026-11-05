@@ -954,6 +954,86 @@ function calculatorCorrectedCalcium(float $calciumMmolL, float $albuminGL): floa
     return $calciumMmolL + 0.02 * (40.0 - $albuminGL);
 }
 
+/** Referenčná AG (mmol/L) pre ΔAG vo výpočte Δ/Δ pomeru. */
+const ACIDBASE_NORMAL_AG = 12.0;
+/** Referenčný HCO₃ (mmol/L) pre ΔHCO₃. */
+const ACIDBASE_NORMAL_HCO3 = 24.0;
+/** Normálny albumín (g/L) vo Figgeho korekcii. */
+const ACIDBASE_NORMAL_ALBUMIN_GL = 40.0;
+/** Figge: +0,25 mmol/L AG na každý g/L poklesu albumínu (PMID 9824071). */
+const ACIDBASE_ALBUMIN_CORR_PER_GL = 0.25;
+/** Minimálna |ΔHCO₃| pre spoľahlivý Δ/Δ pomer. */
+const ACIDBASE_DELTA_HCO3_MIN = 0.5;
+
+/**
+ * Aniónová medzera, korekcia na albumín a Δ/Δ pomer.
+ *
+ * AG = Na − (Cl + HCO₃). Korekcia: AG + 0,25 · (40 − albumín g/L)
+ * (Figge J a kol., Crit Care Med 1998;26(11):1807–1810, PMID 9824071).
+ * Δ-ratio = (AG_korig − 12) / (24 − HCO₃); pásma < 0,4 / < 0,8 / < 2,0 sú
+ * výučbová konvencia (Rastegar A, J Am Soc Nephrol 2007;18(9):2429–2431,
+ * PMID 17656477, upozorňuje na široký individuálny rozptyl).
+ *
+ * @return array{
+ *   ag: float,
+ *   corrected_ag: float,
+ *   delta_ratio: ?float,
+ *   interpretation: string,
+ *   na: float,
+ *   cl: float,
+ *   hco3: float,
+ *   alb: float
+ * }
+ */
+function calculatorAnionGapAnalysis(
+    float $na,
+    float $cl,
+    float $hco3,
+    float $albuminGL = ACIDBASE_NORMAL_ALBUMIN_GL
+): array {
+    $ag = $na - ($cl + $hco3);
+    $correctedAg = $ag + ACIDBASE_ALBUMIN_CORR_PER_GL * (ACIDBASE_NORMAL_ALBUMIN_GL - $albuminGL);
+    $deltaGap = $correctedAg - ACIDBASE_NORMAL_AG;
+    $deltaHco3 = ACIDBASE_NORMAL_HCO3 - $hco3;
+
+    $deltaRatio = null;
+    $interpretation = '';
+
+    if (abs($deltaHco3) > ACIDBASE_DELTA_HCO3_MIN) {
+        $deltaRatio = $deltaGap / $deltaHco3;
+        $interpretation = calculatorAnionGapDeltaInterpretation($deltaRatio);
+    } else {
+        $interpretation = 'Delta HCO3 je príliš blízko nule pre výpočet Delta pomeru.';
+    }
+
+    return [
+        'ag' => round($ag, 1),
+        'corrected_ag' => round($correctedAg, 1),
+        'delta_ratio' => $deltaRatio !== null ? round($deltaRatio, 2) : null,
+        'interpretation' => $interpretation,
+        'na' => round($na, 1),
+        'cl' => round($cl, 1),
+        'hco3' => round($hco3, 1),
+        'alb' => round($albuminGL, 1),
+    ];
+}
+
+/** Slovná interpretácia Δ/Δ pomeru podľa výučbových pásiem. */
+function calculatorAnionGapDeltaInterpretation(float $deltaRatio): string
+{
+    if ($deltaRatio < 0.4) {
+        return 'Hyperchloremická (normálna AG) metabolická acidóza.';
+    }
+    if ($deltaRatio < 0.8) {
+        return 'Zmiešaná high-AG a normálna-AG metabolická acidóza.';
+    }
+    if ($deltaRatio < 2.0) {
+        return 'Čistá high-AG metabolická acidóza.';
+    }
+
+    return 'High-AG metabolická acidóza + súbežná metabolická alkalóza alebo chronická respiračná acidóza.';
+}
+
 /**
  * Sklon lineárnej regresie metódou najmenších štvorcov (y na x).
  * Null pri menej ako 2 bodoch alebo nulovom rozptyle x.

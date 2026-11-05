@@ -56,45 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $ag = $na - ($cl + $hco3);
-            $correctedAg = $ag + 0.25 * (40.0 - $alb);
-            $deltaGap = $correctedAg - 12.0;
-            $deltaHco3 = 24.0 - $hco3;
-
-            $deltaRatio = null;
-            $interpretation = "";
-
-            if (abs($deltaHco3) > 0.5) {
-                $deltaRatio = $deltaGap / $deltaHco3;
-
-                if ($deltaRatio < 0.4) {
-                    $interpretation =
-                        "Hyperchloremická (normálna AG) metabolická acidóza.";
-                } elseif ($deltaRatio < 0.8) {
-                    $interpretation =
-                        "Zmiešaná high-AG a normálna-AG metabolická acidóza.";
-                } elseif ($deltaRatio < 2.0) {
-                    $interpretation = "Čistá high-AG metabolická acidóza.";
-                } else {
-                    $interpretation =
-                        "High-AG metabolická acidóza + súbežná metabolická alkalóza alebo chronická respiračná acidóza.";
-                }
-            } else {
-                $interpretation =
-                    "Delta HCO3 je príliš blízko nule pre výpočet Delta pomeru.";
-            }
-
-            $calculated = [
-                "ag" => round($ag, 1),
-                "corrected_ag" => round($correctedAg, 1),
-                "delta_ratio" =>
-                    $deltaRatio !== null ? round($deltaRatio, 2) : null,
-                "interpretation" => $interpretation,
-                "na" => round($na, 1),
-                "cl" => round($cl, 1),
-                "hco3" => round($hco3, 1),
-                "alb" => round($alb, 1),
-            ];
+            $calculated = calculatorAnionGapAnalysis($na, $cl, $hco3, $alb);
 
             if ($action === "save") {
                 if (!isLoggedIn()) {
@@ -212,7 +174,10 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \Delta\text{-Ratio} = \frac{\text{AG}_{\text{korig}} - 12}{24 - \text{HCO}_3} \]</div>
                         <div class="calc-formula-vars">
                             Normálna aniónová medzera je cca 10-14 mmol/L.<br>
-                            U pacientov s hypoalbuminémiou (časté pri nefrotickom syndróme, závažnom CKD) musí byť AG korigovaná, inak sa falošne podhodnotí.
+                            U pacientov s hypoalbuminémiou (časté pri nefrotickom syndróme, závažnom CKD) musí byť AG korigovaná, inak sa falošne podhodnotí.<br>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/9824071/" target="_blank" rel="noopener noreferrer">Figge J. et&nbsp;al., Crit Care Med 1998;26(11):1807–10</a>
+                            &ensp;&bull;&ensp;
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/17656477/" target="_blank" rel="noopener noreferrer">Rastegar A., J Am Soc Nephrol 2007;18(9):2429–31</a>
                         </div>
                     </div>
                 </details>
