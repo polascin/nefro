@@ -23,7 +23,7 @@ Zavedený postup pre `category = 'odborne'`. Pre články v sekcii „Pre pacien
    (nie `nefro.sk`) + `DEPLOY_COMMIT` vs. `git rev-parse --short HEAD`.
 7. **Sociálne siete len na výslovnú žiadosť v tej istej úlohe:** SK + EN zhrnutie,
    iná ilustrácia bez textu, kópia na Google Disk
-   (`G:\Môj disk\polascin.net – obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
+   (`G:\Môj disk\polascin.net obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
    Threads. Ak MCP konektor chýba, povedz to rovno a nepredstieraj zverejnenie.
 
 ---
@@ -109,6 +109,13 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
    16:10. Výstup môže mať iný rozmer: orež na presný pomer 1,6 a zmeň na 1600 × 1000
    (PIL, `LANCZOS`), potom pokračuj krokom 5. Nástroj, ktorým obrázok vznikol, v článku
    ani v poznámke neuvádzaj.
+   **Ak ani Canva MCP, ani `experimental_image_generate` v session nie sú, ale je pripojený
+   konektor Figma** (overené 5. 11. 2026): `whoami` → `planKey` → `create_new_file` (editorType
+   `design`) → `create_session` (sessionId) → `generate_image` (fileKey, sessionId, width 1600,
+   height 1000, rovnaký vizuálny jazyk + „no text, no letters, no words, no logos, no watermark,
+   no faces“). Výstup stiahni cez `curl` z `image.url` (URL exspiruje) a orež na pomer 1,6 na
+   1600 × 1000 — na Windows v PHP/GD použi cestu `D:/...`, nie `/d/...` (PHP `/d/...` nepozná).
+   Potom pokračuj krokom 5 (watermark + WebP).
 2. Canva design **`DAHWYJ0SGc0`**, strana s rozmermi **1600×1000** (napr. page_index 3,
    `PBSj9SXGdtl93QnB`). Postup:
    - `read-design` s `open_transaction: true` → vráti `transaction_id` a `locator_id`
@@ -298,7 +305,7 @@ Keď požiada, platia tieto body:
    priamo do lokálnej synchronizovanej zložky**:
 
    ```
-   G:\Môj disk\polascin.net – obálky blogu\<RRRR-MM-DD>-<slug>.png
+   G:\Môj disk\polascin.net obálky blogu\<RRRR-MM-DD>-<slug>.png
    ```
 
    `G:\Môj disk` je koreň Disku účtu polascin@gmail.com (overené cez konektor,
@@ -309,13 +316,15 @@ Keď požiada, platia tieto body:
    `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia). **Ak konektor v session nie je**,
    ulož ich priamo do koreňa `G:\Môj disk` ako `.docx` s tým istým názvom; súbor sa
    zosynchronizuje rovnako, len nebude natívnym Dokumentom Google. Priečinok s obrázkami
-   sa volá presne `polascin.net – obálky blogu` (pomlčka je en dash, nie spojovník).
+   sa volá `polascin.net obálky blogu` (medzery; overené cez konektor 5. 11. 2026 —
+   id `1a_g8vTcMH3hIA2rECaV0aRVoPp3xfwFC`, vlastník polascin@gmail.com).
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené 1. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je pripojený
-   žiadny MCP konektor** (dostupné sú Gmail, Google Drive/Docs/Calendar, Canva, Notion,
-   Slack, Figma, Tavily a odborné databázy). Agent teda **nedokáže príspevok zverejniť
+   ⚠️ **Overené 1. 11. 2026 a znova 5. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je
+   pripojený žiadny MCP konektor** (5. 11. 2026 boli pripojené PubMed, Google Drive, Gmail,
+   Figma, Tavily, web_search, Slack, Teams, Notion, Box, SharePoint, Stripe, GitHub, Outlook —
+   žiadna sociálna sieť; zoznam sa medzi session mení, vždy over). Agent teda **nedokáže príspevok zverejniť
    cez MCP**. V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku
    na Disku a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
    Prehliadačová automatizácia nie je náhradou za chýbajúci konektor, pokiaľ používateľ
