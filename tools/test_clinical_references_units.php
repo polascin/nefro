@@ -74,6 +74,15 @@ unitsRefApprox(1.0, crclCreatinineToMgDl(0.0884, 'mmol_l'), 1e-12, 'crclCreatini
 unitsRefApprox(1.25, crclCreatinineToMgDl(1.25, 'mg_dl'), 0.0, 'crclCreatinineToMgDl mg_dl');
 unitsRefApprox(2.0 * CREATININE_UMOL_PER_MGDL, PLASMIC_CREA_UMOL, 1e-12, 'PLASMIC prah = 2 mg/dL');
 
+// UACR mg/mmol ↔ mg/g (odvodené z kreatinínu / 10)
+unitsRefApprox(CREATININE_UMOL_PER_MGDL / 10.0, UACR_MG_G_PER_MG_MMOL, 0.0, 'UACR_MG_G_PER_MG_MMOL = 88,4/10');
+unitsRefApprox(8.84, UACR_MG_G_PER_MG_MMOL, 1e-12, 'UACR_MG_G_PER_MG_MMOL = 8,84');
+unitsRefApprox(88.4, uacrMgMmolToMgG(10.0), 1e-12, 'uacrMgMmolToMgG(10)');
+unitsRefApprox(10.0, uacrMgGToMgMmol(88.4), 1e-12, 'uacrMgGToMgMmol(88,4)');
+unitsRefApprox(300.0, uacrToMgG(300.0, 'mg_g'), 0.0, 'uacrToMgG už v mg/g');
+unitsRefApprox(88.4, uacrToMgG(10.0, 'mg_mmol'), 1e-12, 'uacrToMgG z mg/mmol');
+unitsRefApprox(300.0, uacrMgMmolToMgG(uacrMgGToMgMmol(300.0)), 1e-9, 'UACR round-trip 300 mg/g');
+
 $bunSi = calculatorConvertConventionalToSi(28.0, (float) $byName['Urea (BUN)'][3]);
 unitsRefApprox(10.0, $bunSi, 0.01, 'BUN 28 mg/dL → ≈ 10 mmol/L urea');
 
@@ -122,5 +131,22 @@ unitsRefTest(
     !preg_match('/EKFC_CREATININE_UMOL_PER_MGDL|=\s*88\.4/', $ekfcLogic),
     'calculator_ekfc_logic.php nemá vlastný faktor 88,4',
 );
+
+// Kalkulačky s UACR vstupom: helper uacrToMgG, bez inline × 8,84 vo výpočte
+$uacrPages = [
+    'calculator_kfre.php',
+    'calculator_kdigo_risk.php',
+    'calculator_ckdpc.php',
+    'calculator_prevent.php',
+    'calculator_ambulatory_logic.php',
+];
+foreach ($uacrPages as $file) {
+    $src = (string) file_get_contents($root . '/' . $file);
+    unitsRefTest(
+        str_contains($src, 'uacrToMgG')
+            && !preg_match('/\*\s*8\.84|\/\s*8\.84/', $src),
+        $file . ' používa uacrToMgG bez inline 8,84',
+    );
+}
 
 echo "Clinical references (units): $checks PASS\n";

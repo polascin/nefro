@@ -369,6 +369,13 @@ const CREATININE_UMOL_PER_MGDL = 88.4;
 // Prah kreatinínu: 2,0 mg/dL × CREATININE_UMOL_PER_MGDL.
 const PLASMIC_CREA_UMOL = 2.0 * CREATININE_UMOL_PER_MGDL;
 
+/**
+ * UACR: 1 mg/mmol ≈ 8,84 mg/g (= CREATININE_UMOL_PER_MGDL / 10).
+ * Len na prevod hodnoty UACR medzi jednotkami; prahy KDIGO A1/A2/A3
+ * (30/300 mg/g vs 3/30 mg/mmol) sa nesmú odvodzovať týmto faktorom.
+ */
+const UACR_MG_G_PER_MG_MMOL = CREATININE_UMOL_PER_MGDL / 10.0;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1285,6 +1292,27 @@ function creatinineUmolLToMgDl(float $umolL): float
 function creatinineMgDlToMmolL(float $mgDl): float
 {
     return $mgDl * CREATININE_UMOL_PER_MGDL / 1000.0;
+}
+
+/** UACR mg/mmol → mg/g. */
+function uacrMgMmolToMgG(float $mgMmol): float
+{
+    return $mgMmol * UACR_MG_G_PER_MG_MMOL;
+}
+
+/** UACR mg/g → mg/mmol. */
+function uacrMgGToMgMmol(float $mgG): float
+{
+    return $mgG / UACR_MG_G_PER_MG_MMOL;
+}
+
+/**
+ * UACR na kanonické mg/g podľa jednotky vstupu.
+ * Jednotky: mg_mmol, mg_g (iné → bez prepočtu, ako doteraz).
+ */
+function uacrToMgG(float $value, string $unit): float
+{
+    return $unit === 'mg_mmol' ? uacrMgMmolToMgG($value) : $value;
 }
 
 /**

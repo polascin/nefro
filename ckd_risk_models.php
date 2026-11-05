@@ -24,8 +24,9 @@ declare(strict_types=1);
  *
  * Prahy sú definované v oboch jednotkách samostatne (A1 <30 mg/g / <3 mg/mmol;
  * A2 30–300 mg/g / 3–30 mg/mmol; A3 >300 mg/g / >30 mg/mmol). Nesmú sa
- * odvodiť prepočtom ×8,84 — ten posúva hranice (napr. 3 mg/mmol = 26,5 mg/g
- * by omylom ostalo A1; 31 mg/mmol = 274 mg/g by ostalo A2 namiesto A3).
+ * odvodiť prepočtom UACR_MG_G_PER_MG_MMOL (8,84) — ten posúva hranice
+ * (napr. 3 mg/mmol = 26,5 mg/g by omylom ostalo A1; 31 mg/mmol = 274 mg/g
+ * by ostalo A2 namiesto A3).
  *
  * @param float  $uacr uACR v jednotke $unit
  * @param string $unit 'mg_g' alebo 'mg_mmol'

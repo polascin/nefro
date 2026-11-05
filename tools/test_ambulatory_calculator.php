@@ -266,11 +266,11 @@ testSame('A2', kdigoACategory(30.0), 'A2 na prahu 30 mg/g');
 testSame('A2', kdigoACategory(300.0), 'A2 na prahu 300 mg/g');
 testSame('A3', kdigoACategory(300.1), 'A3 tesne nad 300 mg/g');
 testSame('A1', kdigoACategory(2.9, 'mg_mmol'), 'A1 tesne pod 3 mg/mmol');
-testSame('A2', kdigoACategory(3.0, 'mg_mmol'), 'A2 na prahu 3 mg/mmol — bez prepočtu ×8,84');
-testSame('A1', kdigoACategory(3.2 * 8.84), 'regresia: 3,2 mg/mmol ×8,84 ostáva pod 30 mg/g');
+testSame('A2', kdigoACategory(3.0, 'mg_mmol'), 'A2 na prahu 3 mg/mmol — bez prepočtu UACR_MG_G_PER_MG_MMOL');
+testSame('A1', kdigoACategory(uacrMgMmolToMgG(3.2)), 'regresia: 3,2 mg/mmol ×8,84 ostáva pod 30 mg/g');
 testSame('A2', kdigoACategory(3.2, 'mg_mmol'), 'A2 pri 3,2 mg/mmol (×8,84 ≈ 28,3 mg/g by omylom bolo A1)');
 testSame('A2', kdigoACategory(30.0, 'mg_mmol'), 'A2 na prahu 30 mg/mmol');
-testSame('A3', kdigoACategory(30.1, 'mg_mmol'), 'A3 tesne nad 30 mg/mmol — bez prepočtu ×8,84');
+testSame('A3', kdigoACategory(30.1, 'mg_mmol'), 'A3 tesne nad 30 mg/mmol — bez prepočtu UACR_MG_G_PER_MG_MMOL');
 testSame('A3', kdigoACategory(31.0, 'mg_mmol'), 'A3 pri 31 mg/mmol (274 mg/g by omylom ostalo A2)');
 
 $siBoundary = ambulatoryComputeReport(ambulatoryTestInput([

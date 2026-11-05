@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($uacrVal === null) {
                 $errors[] = 'UACR musí byť kladné číslo.';
             } else {
-                $uacrMgG = $uacrUnit === 'mg_mmol' ? $uacrVal * 8.84 : $uacrVal;
+                $uacrMgG = uacrToMgG($uacrVal, $uacrUnit);
                 if ($uacrMgG < 0.1 || $uacrMgG > 25000) {
                     $errors[] = 'UACR mimo realistického rozsahu (0,1–25000 mg/g).';
                 }

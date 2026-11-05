@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $uacrMgG = $uacrUnit === "mg_mmol" ? $uacrValue * 8.84 : $uacrValue;
+            $uacrMgG = uacrToMgG($uacrValue, $uacrUnit);
             if ($uacrMgG < 0.5 || !is_finite($uacrMgG)) {
                 $errors[] =
                     "Hodnota UACR je príliš nízka alebo neplatná po konverzii.";

@@ -52,8 +52,8 @@ foreach ($kfreCases as $i => [$age, $sex, $egfr, $uacr, $isNa, $r2, $r5]) {
     clinicalRefApprox($r5, $result['risk_5yr'], 0.05, 'KFRE #' . ($i + 1) . ' 5yr');
 }
 
-// UACR vstup v mg/mmol: prevod × 8,84 → mg/g pred modelom (rovnako ako ambulantná).
-$fromMmol = kfreRisk(60, 'male', 25.0, 300.0 / 8.84 * 8.84, false);
+// UACR vstup v mg/mmol: prevod UACR_MG_G_PER_MG_MMOL → mg/g pred modelom.
+$fromMmol = kfreRisk(60, 'male', 25.0, uacrMgMmolToMgG(uacrMgGToMgMmol(300.0)), false);
 clinicalRefApprox(10.0, $fromMmol['risk_2yr'], 0.05, 'KFRE UACR mg/g konzistencia');
 
 // ─── EKFC Q plateau a polynóm ───
@@ -94,7 +94,7 @@ clinicalRefApprox(6.0, calculatorUacrMgMmol(30.0, 5.0), 1e-9, 'UACR 30/5 mg/mmol
 clinicalRefApprox(53.04, round(calculatorUacrMgG(30.0, 5.0), 2), 0.005, 'UACR 30/5 mg/g');
 
 // 100 mg/g pri kreatiníne 8,84 mmol/L ≈ albumín 100 mg/L
-clinicalRefApprox(100.0, round(calculatorUacrMgG(100.0, 8.84), 2), 0.05, 'UACR ≈100 mg/g');
+clinicalRefApprox(100.0, round(calculatorUacrMgG(100.0, UACR_MG_G_PER_MG_MMOL), 2), 0.05, 'UACR ≈100 mg/g');
 
 $a1 = calculatorUacrACategory(1.0);
 $a2 = calculatorUacrACategory(6.0);
@@ -109,7 +109,7 @@ clinicalRefTest($a3['stage'] === 'A3', 'UACR A3');
 $albMgL = 3.0 * 10; // 3 mg/dL
 $crMmol = creatinineMgDlToMmolL(100.0); // 100 mg/dL
 $fromUnits = calculatorUacrMgMmol($albMgL, $crMmol);
-clinicalRefApprox(30.0 / 8.84, $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
+clinicalRefApprox(uacrMgGToMgMmol(30.0), $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
 
 // ─── KDIGO G kategórie ───
 // Páry [eGFR, kategória]: float kľúče v asociatívnom poli PHPStan odmieta (array.invalidKey).

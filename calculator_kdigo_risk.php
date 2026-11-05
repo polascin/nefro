@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $uacrInput = (float) $uacr;
             // Prepočet UACR na mg/g je len pre zobrazenie. Kategóriu A určujú
             // KDIGO prahy v pôvodnej jednotke, nie ×8,84.
-            $uacrMgG = $uacrUnit === "mg_mmol" ? $uacrInput * 8.84 : $uacrInput;
+            $uacrMgG = uacrToMgG($uacrInput, $uacrUnit);
             $gCategory = ckdGCategory($egfrValue);
             $aCategory = kdigoACategory($uacrInput, $uacrUnit);
             $riskInfo = kdigoRisk($gCategory, $aCategory);

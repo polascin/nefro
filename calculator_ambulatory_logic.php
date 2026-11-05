@@ -464,7 +464,7 @@ function ambulatoryComputeReport(array $input): array
     $uacrUnit = $input['uacr_unit'];
     $uacrMgG = null;
     if ($uacrValue !== null && $uacrUnit !== null) {
-        $uacrMgG = $uacrUnit === 'mg_mmol' ? $uacrValue * 8.84 : $uacrValue;
+        $uacrMgG = uacrToMgG($uacrValue, $uacrUnit);
     }
 
     $gCategory = $egfr !== null ? ckdGCategory($egfr) : null;
