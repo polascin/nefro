@@ -9,8 +9,8 @@ Beh: spoločné helpery prevodu kreatinínu. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `61b09a7f`)
-- Runtime / `DEPLOY_COMMIT`: `61b09a7f`
+- Vetva: `main` (HEAD `4153ad83`; feature `61b09a7f`)
+- Runtime / `DEPLOY_COMMIT`: `61b09a7f` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
