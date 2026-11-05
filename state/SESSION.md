@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery cholesterol mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `64712578`)
-- Runtime / `DEPLOY_COMMIT`: `64712578`
+- Vetva: `main` (HEAD `b4f88e21`; feature `64712578`)
+- Runtime / `DEPLOY_COMMIT`: `64712578` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

@@ -5,8 +5,8 @@
 - Generated At: 2026-11-06T00:34:30+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: 64712578
-- Runtime / DEPLOY_COMMIT: 64712578 (SSH grep deploy_info.php)
+- Head Commit: b4f88e21 (feature 64712578)
+- Runtime / DEPLOY_COMMIT: 64712578 (SSH grep deploy_info.php; docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
@@ -66,11 +66,11 @@ Hotové. `CHOLESTEROL_MGDL_TO_MMOLL = 0.02586`, `CHOLESTEROL_MMOLL_TO_MGDL = 38.
 
 ## Recent Commits
 
+- b4f88e21 docs(state): handoff spolocnych helperov prevodu cholesterolu
 - 64712578 feat(kalkulacky): spolocne konstanty a helpery prevodu cholesterolu
 - 202a6bb4 docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 - 139e40ec docs(state): handoff spolocnych helperov prevodu kyseliny mocovej
 - 2f5ea0cb feat(kalkulacky): spolocne konstanty a helpery prevodu kyseliny mocovej
-- 7192c315 docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 
 ## Modified Files
 
