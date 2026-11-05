@@ -446,6 +446,19 @@ const MAGNESIUM_MGDL_TO_MMOLL = 0.4114;
  */
 const MAGNESIUM_MMOLL_TO_MGDL = 2.4305;
 
+/**
+ * Kyselina močová mg/dL → µmol/L (konvenčný faktor prevodníka; ≈ 10 000 / 168,14).
+ * Približne reciproký k URIC_ACID_UMOLL_TO_MGDL (MW ≈ 168,14 / 10 000).
+ */
+const URIC_ACID_MGDL_TO_UMOLL = 59.48;
+
+/**
+ * Kyselina močová µmol/L → mg/dL (≈ MW kyseliny močovej / 10 000 = 0,016814).
+ * Nie je odvodený ako 1/59,48: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 59,48; TLS prah Cairo–Bishop 8 mg/dL · 59,48 ≈ 476 µmol/L).
+ */
+const URIC_ACID_UMOLL_TO_MGDL = 0.0168;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1430,6 +1443,18 @@ function magnesiumMmolLToMgDl(float $mmolL): float
     return $mmolL * MAGNESIUM_MMOLL_TO_MGDL;
 }
 
+/** Kyselina močová mg/dL → µmol/L. */
+function uricAcidMgDlToUmolL(float $mgDl): float
+{
+    return $mgDl * URIC_ACID_MGDL_TO_UMOLL;
+}
+
+/** Kyselina močová µmol/L → mg/dL. */
+function uricAcidUmolLToMgDl(float $umolL): float
+{
+    return $umolL * URIC_ACID_UMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1782,7 +1807,7 @@ function calculatorUnitConversionRows(): array
         ['Vápnik', 'mg/dL', 'mmol/L', CALCIUM_MGDL_TO_MMOLL, 1, 2],
         ['Fosfát (P)', 'mg/dL', 'mmol/L', PHOSPHATE_MGDL_TO_MMOLL, 1, 2],
         ['Magnézium', 'mg/dL', 'mmol/L', MAGNESIUM_MGDL_TO_MMOLL, 1, 2],
-        ['Kyselina močová', 'mg/dL', 'µmol/L', 59.48, 1, 0],
+        ['Kyselina močová', 'mg/dL', 'µmol/L', URIC_ACID_MGDL_TO_UMOLL, 1, 0],
         ['Cholesterol', 'mg/dL', 'mmol/L', 0.02586, 0, 2],
         ['Triglyceridy', 'mg/dL', 'mmol/L', 0.01129, 0, 2],
         ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],

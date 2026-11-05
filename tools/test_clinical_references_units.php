@@ -57,7 +57,9 @@ unitsRefApprox(3.097, PHOSPHATE_MMOLL_TO_MGDL, 0.0, 'PHOSPHATE_MMOLL_TO_MGDL = 3
 unitsRefApprox(MAGNESIUM_MGDL_TO_MMOLL, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor z konštanty');
 unitsRefApprox(0.4114, MAGNESIUM_MGDL_TO_MMOLL, 0.0, 'MAGNESIUM_MGDL_TO_MMOLL = 0,4114');
 unitsRefApprox(2.4305, MAGNESIUM_MMOLL_TO_MGDL, 0.0, 'MAGNESIUM_MMOLL_TO_MGDL = 2,4305');
-unitsRefApprox(59.48, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor 59,48');
+unitsRefApprox(URIC_ACID_MGDL_TO_UMOLL, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor z konštanty');
+unitsRefApprox(59.48, URIC_ACID_MGDL_TO_UMOLL, 0.0, 'URIC_ACID_MGDL_TO_UMOLL = 59,48');
+unitsRefApprox(0.0168, URIC_ACID_UMOLL_TO_MGDL, 0.0, 'URIC_ACID_UMOLL_TO_MGDL = 0,0168');
 unitsRefApprox(0.02586, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor 0,02586');
 unitsRefApprox(0.01129, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor 0,01129');
 unitsRefApprox(10.0, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor 10');
@@ -163,6 +165,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(2.0, MAGNESIUM_MGDL_TO_MMOLL),
     0.0,
     'magnesium helper = prevodník s MAGNESIUM_MGDL_TO_MMOLL',
+);
+
+$uaSi = calculatorConvertConventionalToSi(8.0, (float) $byName['Kyselina močová'][3]);
+unitsRefApprox(475.84, $uaSi, 1e-9, 'Kyselina močová 8,0 mg/dL → 475,84 µmol/L');
+unitsRefApprox(475.84, uricAcidMgDlToUmolL(8.0), 1e-9, 'uricAcidMgDlToUmolL(8)');
+unitsRefApprox(1.68, uricAcidUmolLToMgDl(100.0), 1e-9, 'uricAcidUmolLToMgDl(100)');
+unitsRefApprox(
+    uricAcidMgDlToUmolL(8.0),
+    calculatorConvertConventionalToSi(8.0, URIC_ACID_MGDL_TO_UMOLL),
+    0.0,
+    'uric acid helper = prevodník s URIC_ACID_MGDL_TO_UMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -321,6 +334,20 @@ unitsRefTest(
     !preg_match("/['\"]Magnézium['\"].*0\.4114/", $commonSrc)
         && !preg_match('/\*\s*2\.4305\b/', $commonSrc),
     'calculators_common bez literálu 0,4114 v prevodníku a bez inline × 2,4305',
+);
+
+// Kyselina močová mg/dL ↔ µmol/L: konštanty + helpery; bez inline 59.48 / 0.0168 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'URIC_ACID_MGDL_TO_UMOLL')
+        && str_contains($commonSrc, 'URIC_ACID_UMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'uricAcidMgDlToUmolL')
+        && str_contains($commonSrc, 'uricAcidUmolLToMgDl'),
+    'calculators_common má konštanty a helpery kyseliny močovej',
+);
+unitsRefTest(
+    !preg_match("/['\"]Kyselina močová['\"].*59\.48/", $commonSrc)
+        && !preg_match('/\*\s*0\.0168\b/', $commonSrc),
+    'calculators_common bez literálu 59,48 v prevodníku a bez inline × 0,0168',
 );
 
 echo "Clinical references (units): $checks PASS\n";
