@@ -9,8 +9,8 @@ Beh: `adpkdInterpretation` do `calculators_common`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `f947f90b`)
-- Runtime / `DEPLOY_COMMIT`: `f947f90b`
+- Vetva: `main` (HEAD `1696bc56`; feature `f947f90b`)
+- Runtime / `DEPLOY_COMMIT`: `f947f90b` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
