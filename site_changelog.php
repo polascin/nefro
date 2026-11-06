@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-06 21:30',
+                'category' => 'calculators',
+                'title' => 'KDIGO heatmapa: G4 s albuminúriou A1 je veľmi vysoké riziko',
+                'description' => 'Kombinácia G4 (eGFR 15 až 29) a A1 sa v KDIGO kalkulačke a v Ambulantnej kalkulačke zobrazovala ako vysoké riziko. Podľa heatmapy KDIGO je celý riadok G4 veľmi vysoké riziko; opravené. Ostatné bunky sa nemenia.',
+                'url' => 'calculator_kdigo_risk.php',
+            ],
+            [
                 'date' => '2026-11-06 20:26',
                 'category' => 'calculators',
                 'title' => 'Mayo klasifikácia ADPKD: triedy podľa ročného prírastku a opravená citácia',

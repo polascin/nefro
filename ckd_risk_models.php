@@ -64,9 +64,11 @@ function kdigoACategory(float $uacr, string $unit = "mg_g"): string
  */
 function kdigoRisk(string $g, string $a): array
 {
-    // KDIGO 2024 heatmapa prognózy CKD (G × A). G4×A1 je oranžová = vysoké,
-    // nie červená; predchádzajúci fallback „veľmi vysoké“ ju nesprávne zaraďoval
-    // a v Ambulantnej kalkulačke tým posúval CKM staging na stupeň 3.
+    // KDIGO 2012/2024 heatmapa prognózy CKD (G × A). Celé riadky G4 a G5 sú
+    // červené (veľmi vysoké riziko), vrátane A1. Beh 101 chybne preradil G4×A1
+    // na „vysoké“; overené aritmeticky na kohorte s kategóriami heatmapy
+    // (PMC13512940, Table 3: vysoké 10,31 %, veľmi vysoké 5,75 % sedí len s G4×A1
+    // = veľmi vysoké). AHA CKM 2023 zaraďuje G4 a G5 do štádia 3 aj samostatne.
     $heatmap = [
         'G1' => [
             'A1' => 'Nízke riziko',
@@ -89,7 +91,7 @@ function kdigoRisk(string $g, string $a): array
             'A3' => 'Veľmi vysoké riziko',
         ],
         'G4' => [
-            'A1' => 'Vysoké riziko',
+            'A1' => 'Veľmi vysoké riziko',
             'A2' => 'Veľmi vysoké riziko',
             'A3' => 'Veľmi vysoké riziko',
         ],

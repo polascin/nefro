@@ -335,7 +335,7 @@ $kdigoHeatmap = [
     'G2' => ['A1' => 'Nízke riziko', 'A2' => 'Stredné riziko', 'A3' => 'Vysoké riziko'],
     'G3a' => ['A1' => 'Stredné riziko', 'A2' => 'Vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
     'G3b' => ['A1' => 'Vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
-    'G4' => ['A1' => 'Vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
+    'G4' => ['A1' => 'Veľmi vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
     'G5' => ['A1' => 'Veľmi vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
 ];
 foreach ($kdigoHeatmap as $gCategory => $albuminRows) {

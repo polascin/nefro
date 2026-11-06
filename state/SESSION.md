@@ -18,8 +18,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - Nahradené, nezlúčené vetvy: `fix/gupta-mg-cutoff-2026-11-03`, `fix/adpkd-mayo-2026-11-03`
   (zmazanie len so súhlasom).
 - PHPStan v `.claude/worktrees` nič neanalyzuje (excludePaths); spúšťať v dočasnom worktree.
-- `D:\Dev
-efro` používajú aj iní agenti: merge do main iba s guardom
+- `D:\Dev\nefro` používajú aj iní agenti: merge do main iba s guardom
   `[ "$(git branch --show-current)" = main ]` v tom istom príkaze.
 
 ## Executable next step
