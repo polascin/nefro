@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 23:00 Europe/Bratislava
+Aktualizované: 2026-11-06 23:30 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -16,6 +16,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - x (Beh 168): datalist autorov len na indexe (404 254 → 42 kB). Deploy `52aa602a`.
 - y (Beh 169): deny pre 2 include-only knižnice + všeobecná regresia. Deploy `8cf39b0c`.
 - z (Beh 170): úplný head pre content_report (DSA) a admin_content_notices. Deploy `e544b159`.
+- aa (Beh 171): JSON-LD WebApplication + MedicalWebPage pre 33 kalkulačiek. Deploy `a11ba838`.
 
 ## Stav repozitára
 
@@ -27,9 +28,9 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: robots.txt Disallow vs deny
-zoznam (presunuté z Behu 170), meta description kalkulačiek (dĺžka, duplicity).
+Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: nastroj_* a ďalšie stránky
+(lieky.php, studie.php) proti rovnakým kontrolám head/JSON-LD, alebo admin stránky.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-230000-loop-dsa-head-beh170.md`
+`.codex/handoffs/2026-11-06-233000-loop-schema-beh171.md`
