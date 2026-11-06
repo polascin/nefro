@@ -367,6 +367,12 @@ function plasmicRiskLabel(int $score): string
 const CREATININE_UMOL_PER_MGDL = 88.4;
 
 /**
+ * SI prefix kreatinínu: 1 mmol/L = 1000 µmol/L.
+ * Použitie: AKI (S-Cr µmol → mmol), CrCl vstup mmol/L, mg/dL → mmol/L.
+ */
+const CREATININE_UMOL_PER_MMOL = 1000.0;
+
+/**
  * Molárna hmotnosť kreatinínu [g/mol] ≈ 113,12
  * (= 10 000 / CREATININE_UMOL_PER_MGDL; jeden zdroj pravdy s faktorom 88,4).
  */
@@ -1423,10 +1429,22 @@ function creatinineUmolLToMgDl(float $umolL): float
     return $umolL / CREATININE_UMOL_PER_MGDL;
 }
 
+/** µmol/L → mmol/L (SI prefix / 1000). */
+function creatinineUmolLToMmolL(float $umolL): float
+{
+    return $umolL / CREATININE_UMOL_PER_MMOL;
+}
+
+/** mmol/L → µmol/L (SI prefix × 1000). */
+function creatinineMmolLToUmolL(float $mmolL): float
+{
+    return $mmolL * CREATININE_UMOL_PER_MMOL;
+}
+
 /** mg/dL → mmol/L (88,4 / 1000). */
 function creatinineMgDlToMmolL(float $mgDl): float
 {
-    return $mgDl * CREATININE_UMOL_PER_MGDL / 1000.0;
+    return creatinineUmolLToMmolL(creatinineMgDlToUmolL($mgDl));
 }
 
 /** mmol/L → g/L (MW kreatinínu). */
@@ -1600,7 +1618,7 @@ function crclCreatinineToMgDl(float $value, string $unit): float
 {
     return match ($unit) {
         'umol_l' => creatinineUmolLToMgDl($value),
-        'mmol_l' => creatinineUmolLToMgDl($value * 1000.0),
+        'mmol_l' => creatinineUmolLToMgDl(creatinineMmolLToUmolL($value)),
         default => $value, // mg_dl
     };
 }

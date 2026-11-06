@@ -72,7 +72,7 @@ urineIdxRefTest(str_starts_with(akiFeureaInterpretation(35.0), 'Hraničná'), 'F
 // Prepočet U_cr z mg/dL; jednotky kreatinínu sa krátia
 urineIdxRefApprox(
     calculatorFractionalExcretion(20.0, 140.0, creatinineMgDlToMmolL(100.0), 0.2),
-    calculatorFractionalExcretion(20.0, 140.0, 100.0, creatinineUmolLToMgDl(0.2 * 1000.0)),
+    calculatorFractionalExcretion(20.0, 140.0, 100.0, creatinineUmolLToMgDl(creatinineMmolLToUmolL(0.2))),
     0.0001,
     'FENa nezávisí od jednotky kreatinínu',
 );

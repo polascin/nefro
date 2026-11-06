@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $sCrUnit === "mg_dl"
                     ? creatinineMgDlToUmolL((float) $sCrValue)
                     : (float) $sCrValue;
-            $sCrMmol = $sCrUmol / 1000.0;
+            $sCrMmol = creatinineUmolLToMmolL($sCrUmol);
             $uCrMmol =
                 $uCrUnit === "mg_dl"
                     ? creatinineMgDlToMmolL((float) $uCrValue)

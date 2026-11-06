@@ -91,6 +91,15 @@ unitsRefApprox(1.0, calculatorConvertSiToConventional($crSi, (float) $byName['Kr
 // Spoločné kreatinínové helpery
 unitsRefApprox(88.4, creatinineMgDlToUmolL(1.0), 1e-12, 'creatinineMgDlToUmolL(1)');
 unitsRefApprox(1.0, creatinineUmolLToMgDl(88.4), 1e-12, 'creatinineUmolLToMgDl(88,4)');
+unitsRefApprox(1000.0, CREATININE_UMOL_PER_MMOL, 0.0, 'CREATININE_UMOL_PER_MMOL = 1000');
+unitsRefApprox(0.0884, creatinineUmolLToMmolL(88.4), 1e-12, 'creatinineUmolLToMmolL(88,4)');
+unitsRefApprox(88.4, creatinineMmolLToUmolL(0.0884), 1e-12, 'creatinineMmolLToUmolL(0,0884)');
+unitsRefApprox(
+    88.4,
+    creatinineMmolLToUmolL(creatinineUmolLToMmolL(88.4)),
+    1e-12,
+    'kreatinín µmol ↔ mmol round-trip 88,4',
+);
 unitsRefApprox(0.0884, creatinineMgDlToMmolL(1.0), 1e-12, 'creatinineMgDlToMmolL(1)');
 unitsRefApprox(1.0, crclCreatinineToMgDl(88.4, 'umol_l'), 1e-12, 'crclCreatinineToMgDl umol_l');
 unitsRefApprox(1.0, crclCreatinineToMgDl(0.0884, 'mmol_l'), 1e-12, 'crclCreatinineToMgDl mmol_l');
@@ -296,6 +305,20 @@ $ekfcLogic = (string) file_get_contents($root . '/calculator_ekfc_logic.php');
 unitsRefTest(
     !preg_match('/EKFC_CREATININE_UMOL_PER_MGDL|=\s*88\.4/', $ekfcLogic),
     'calculator_ekfc_logic.php nemá vlastný faktor 88,4',
+);
+$akiSrc = (string) file_get_contents($root . '/calculator_aki.php');
+unitsRefTest(
+    str_contains($akiSrc, 'creatinineUmolLToMmolL')
+        && !preg_match('/\$sCrUmol\s*\/\s*1000\b/', $akiSrc),
+    'calculator_aki.php používa creatinineUmolLToMmolL bez inline ÷ 1000',
+);
+$commonSrcEarly = (string) file_get_contents($root . '/calculators_common.php');
+unitsRefTest(
+    str_contains($commonSrcEarly, 'CREATININE_UMOL_PER_MMOL')
+        && str_contains($commonSrcEarly, 'creatinineUmolLToMmolL')
+        && str_contains($commonSrcEarly, 'creatinineMmolLToUmolL')
+        && !preg_match('/creatinineUmolLToMgDl\(\$value\s*\*\s*1000/', $commonSrcEarly),
+    'calculators_common má kreatinín µmol↔mmol helpery; CrCl bez inline × 1000',
 );
 
 // Kalkulačky s UACR vstupom: helper uacrToMgG, bez inline × 8,84 vo výpočte
