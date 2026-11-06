@@ -9,8 +9,8 @@ Beh: `ckdpcInterpretation` do `calculators_common`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `2a00246a`; feature = DEPLOY)
-- Runtime / `DEPLOY_COMMIT`: `2a00246a`
+- Vetva: `main` (HEAD `dc7bfac4`; feature `2a00246a`)
+- Runtime / `DEPLOY_COMMIT`: `2a00246a` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
