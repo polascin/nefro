@@ -5,45 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/**
- * Mayo ADPKD klasifikácia — Irazabal et al. JASN 2015;26(8):1987–1994
- * HtTKV = TKV / výška (mL/m)
- * k = ln(HtTKV / 150) / vek  — odhadovaná ročná rýchlosť rastu obličiek
- * Triedy 1A–1E podľa k (prahové hodnoty: 1.5%, 3.0%, 4.5%, 6.0%/rok)
- * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická)
- */
-function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
-{
-    $height_m = $height_cm / 100.0;
-    $httkv = $tkv_ml / $height_m; // mL/m
-    $k = log($httkv / 150.0) / $age; // ročná miera rastu (log)
-    $annual_pct = (exp($k) - 1.0) * 100.0; // % za rok
-
-    if ($k < 0.015) {
-        $class = "1A";
-        $speed = "Pomalá (<1,5 %/rok)";
-    } elseif ($k < 0.03) {
-        $class = "1B";
-        $speed = "Mierna (1,5–3 %/rok)";
-    } elseif ($k < 0.045) {
-        $class = "1C";
-        $speed = "Rýchla (3–4,5 %/rok)";
-    } elseif ($k < 0.06) {
-        $class = "1D";
-        $speed = "Veľmi rýchla (4,5–6 %/rok)";
-    } else {
-        $class = "1E";
-        $speed = "Extrémne rýchla (>6 %/rok)";
-    }
-
-    return [
-        "httkv" => round($httkv, 1),
-        "k_pct" => round($annual_pct, 2),
-        "class" => $class,
-        "speed" => $speed,
-    ];
-}
-
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_adpkd.php";

@@ -101,7 +101,55 @@ clinicalRefTest(
     'calculator_kfre.php volá kfreInterpretation z calculators_common.php',
 );
 
-// Mayo ADPKD interpretácia: triedy 1A–1E (správanie + wiring; klasifikácia ostáva v stránke)
+// Mayo ADPKD klasifikácia: pin tried 1A–1E podľa k (prah 0.015 / 0.03 / 0.045 / 0.06)
+// tkv_ml, height_cm, age → class, httkv, k_pct
+$adpkdClassifyCases = [
+    [400.0, 170.0, 40.0, '1A', 235.3, 1.13],
+    [600.0, 170.0, 40.0, '1B', 352.9, 2.16],
+    [1000.0, 170.0, 40.0, '1C', 588.2, 3.48],
+    [2500.0, 170.0, 40.0, '1D', 1470.6, 5.87],
+    [2000.0, 180.0, 25.0, '1E', 1111.1, 8.34],
+    [350.0, 170.0, 60.0, '1A', 205.9, 0.53],
+    [3000.0, 170.0, 20.0, '1E', 1764.7, 13.12],
+];
+foreach ($adpkdClassifyCases as $i => [$tkv, $h, $age, $cls, $httkv, $kPct]) {
+    $got = adpkdClassify($tkv, $h, $age);
+    clinicalRefTest(
+        $got['class'] === $cls
+            && $got['httkv'] === $httkv
+            && $got['k_pct'] === $kPct
+            && is_string($got['speed'])
+            && $got['speed'] !== '',
+        'ADPKD classify #' . ($i + 1) . " ($cls)",
+    );
+}
+// Hranice k pri veku 40 a výške 170 cm (TKV = 150*exp(k*age)*height_m)
+$adpkdBoundaryBelow = adpkdClassify(150.0 * exp(0.01499 * 40.0) * 1.70, 170.0, 40.0);
+$adpkdBoundaryAt = adpkdClassify(150.0 * exp(0.015 * 40.0) * 1.70, 170.0, 40.0);
+clinicalRefTest(
+    $adpkdBoundaryBelow['class'] === '1A' && $adpkdBoundaryAt['class'] === '1B',
+    'ADPKD hranica k=0.015: 1A → 1B',
+);
+$adpkdB03Below = adpkdClassify(150.0 * exp(0.02999 * 40.0) * 1.70, 170.0, 40.0);
+$adpkdB03At = adpkdClassify(150.0 * exp(0.03 * 40.0) * 1.70, 170.0, 40.0);
+clinicalRefTest(
+    $adpkdB03Below['class'] === '1B' && $adpkdB03At['class'] === '1C',
+    'ADPKD hranica k=0.03: 1B → 1C',
+);
+$adpkdB045Below = adpkdClassify(150.0 * exp(0.04499 * 40.0) * 1.70, 170.0, 40.0);
+$adpkdB045At = adpkdClassify(150.0 * exp(0.045 * 40.0) * 1.70, 170.0, 40.0);
+clinicalRefTest(
+    $adpkdB045Below['class'] === '1C' && $adpkdB045At['class'] === '1D',
+    'ADPKD hranica k=0.045: 1C → 1D',
+);
+$adpkdB06Below = adpkdClassify(150.0 * exp(0.05999 * 40.0) * 1.70, 170.0, 40.0);
+$adpkdB06At = adpkdClassify(150.0 * exp(0.06 * 40.0) * 1.70, 170.0, 40.0);
+clinicalRefTest(
+    $adpkdB06Below['class'] === '1D' && $adpkdB06At['class'] === '1E',
+    'ADPKD hranica k=0.06: 1D → 1E',
+);
+
+// Mayo ADPKD interpretácia: triedy 1A–1E (správanie + wiring)
 $adpkd1a = adpkdInterpretation('1A');
 clinicalRefTest(
     $adpkd1a['warnings'] === []
@@ -148,16 +196,22 @@ clinicalRefTest(
 $adpkdPageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_adpkd.php');
 $adpkdCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
 clinicalRefTest(
-    str_contains($adpkdCommonSource, 'function adpkdInterpretation')
+    str_contains($adpkdCommonSource, 'function adpkdClassify')
+        && str_contains($adpkdCommonSource, 'function adpkdInterpretation')
+        && str_contains($adpkdCommonSource, '$k < 0.015')
+        && str_contains($adpkdCommonSource, '$k < 0.03')
+        && str_contains($adpkdCommonSource, '$k < 0.045')
+        && str_contains($adpkdCommonSource, '$k < 0.06')
         && str_contains($adpkdCommonSource, 'Trieda 1C je typický kandidát')
         && str_contains($adpkdCommonSource, 'URGENTNÉ: Zvážiť zaradenie do transplantačného programu'),
-    'calculators_common.php musí mať adpkdInterpretation pre triedy 1A–1E',
+    'calculators_common.php musí mať adpkdClassify aj adpkdInterpretation',
 );
 clinicalRefTest(
-    str_contains($adpkdPageSource, 'adpkdInterpretation(')
-        && !str_contains($adpkdPageSource, 'function adpkdInterpretation')
-        && str_contains($adpkdPageSource, 'function adpkdClassify'),
-    'calculator_adpkd.php volá adpkdInterpretation z common; adpkdClassify ostáva lokálne',
+    str_contains($adpkdPageSource, 'adpkdClassify(')
+        && str_contains($adpkdPageSource, 'adpkdInterpretation(')
+        && !str_contains($adpkdPageSource, 'function adpkdClassify')
+        && !str_contains($adpkdPageSource, 'function adpkdInterpretation'),
+    'calculator_adpkd.php volá adpkdClassify a adpkdInterpretation z common',
 );
 
 // IgAN Prediction Tool: pin aktuálneho iganRisk (Barbour 2019; bez zmeny koeficientov)
