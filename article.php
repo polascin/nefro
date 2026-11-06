@@ -479,6 +479,7 @@ if ($article) {
         ?>
         <?php
         $authorFilterBase = "index.php";
+        $authorPickerInline = false;
         include "widget_participating_authors.php";
         ?>
         <a href="index.php" class="btn-primary article-back-link">Všetky články</a>

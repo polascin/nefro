@@ -10,6 +10,11 @@
  *   $projectAuthors    array<int,array{author:string,articles:int}>  (zo štatistík)
  *   $authorFilterBase  string  základ URL filtra ?autor= ('' na index.php,
  *                              'index.php' na podstránkach ako article.php)
+ *   $authorPickerInline bool   true (predvolene) = výber autora s <datalist>
+ *                              všetkých zdrojových autorov; false = len odkaz
+ *                              na výber na index.php (datalist má ~2 600 mien
+ *                              a ~200 kB HTML, na stránke článku zbytočne)
+ *   $authorPickerOpen  bool    otvorí <details> výberu (index.php?autori=1)
  *
  * Bez priameho prístupu.
  */
@@ -23,6 +28,8 @@ if ($projectAuthors === []) {
     return;
 }
 $authorFilterBase = isset($authorFilterBase) ? (string) $authorFilterBase : '';
+$authorPickerInline = !isset($authorPickerInline) || $authorPickerInline !== false;
+$authorPickerOpen = isset($authorPickerOpen) && $authorPickerOpen === true;
 
 $participating = splitParticipatingAuthors($projectAuthors);
 
@@ -84,8 +91,12 @@ $renderAuthorItem = static function (array $authorStat) use ($authorFilterBase):
           $renderAuthorItem($authorStat);
       } ?>
     </ul>
-    <?php if (count($participating['sources']) > 8): ?>
-      <details class="project-authors__picker no-print">
+    <?php if (count($participating['sources']) > 8 && !$authorPickerInline): ?>
+      <p class="project-authors__picker no-print">
+        <a href="index.php?autori=1#autori-vyhladanie">Vyhľadať ďalšieho autora</a>
+      </p>
+    <?php elseif (count($participating['sources']) > 8): ?>
+      <details class="project-authors__picker no-print" id="autori-vyhladanie"<?= $authorPickerOpen ? ' open' : '' ?>>
         <summary>Vyhľadať ďalšieho autora</summary>
         <form method="get" action="<?= htmlspecialchars($authorFilterBase !== '' ? $authorFilterBase : 'index.php', ENT_QUOTES, 'UTF-8') ?>#autor-articles-heading">
           <div class="form-group">
