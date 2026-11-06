@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery bilirubínu mg/dL ↔ µmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `3807b84a`)
-- Runtime / `DEPLOY_COMMIT`: `3807b84a`
+- Vetva: `main` (HEAD `691fded6`; feature `3807b84a`)
+- Runtime / `DEPLOY_COMMIT`: `3807b84a` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

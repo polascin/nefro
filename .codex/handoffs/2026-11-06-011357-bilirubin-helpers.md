@@ -5,8 +5,8 @@
 - Generated At: 2026-11-06T01:13:57+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: 3807b84a
-- Runtime / DEPLOY_COMMIT: 3807b84a (SSH grep deploy_info.php)
+- Head Commit: 691fded6 (feature 3807b84a)
+- Runtime / DEPLOY_COMMIT: 3807b84a (SSH grep deploy_info.php; docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
@@ -62,11 +62,11 @@ Hotové. `BILIRUBIN_MGDL_TO_UMOLL = 17.1`, `BILIRUBIN_UMOLL_TO_MGDL = 0.0585` (s
 
 ## Recent Commits
 
+- 691fded6 docs(state): handoff spolocnych helperov prevodu bilirubinu
 - 3807b84a feat(kalkulacky): spolocne konstanty a helpery prevodu bilirubinu
 - 9a7b36f2 docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 - ef5457cc docs(state): handoff spolocnych helperov prevodu triglyceridov
 - 33814da9 feat(kalkulacky): spolocne konstanty a helpery prevodu triglyceridov
-- cf2ece6d docs(state): upresnenie HEAD vs DEPLOY_COMMIT po handoffe
 
 ## Modified Files
 
