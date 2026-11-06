@@ -72,7 +72,10 @@ unitsRefApprox(10.0, MASS_CONC_GDL_TO_GL, 0.0, 'MASS_CONC_GDL_TO_GL = 10');
 unitsRefApprox(BILIRUBIN_MGDL_TO_UMOLL, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor z konštanty');
 unitsRefApprox(17.1, BILIRUBIN_MGDL_TO_UMOLL, 0.0, 'BILIRUBIN_MGDL_TO_UMOLL = 17,1');
 unitsRefApprox(0.0585, BILIRUBIN_UMOLL_TO_MGDL, 0.0, 'BILIRUBIN_UMOLL_TO_MGDL = 0,0585');
-unitsRefApprox(1 / 60, (float) $byName['eGFR'][3], 1e-12, 'eGFR faktor 1/60');
+unitsRefApprox(EGFR_ML_MIN_TO_ML_S, (float) $byName['eGFR'][3], 1e-12, 'eGFR faktor z konštanty');
+unitsRefApprox(60.0, EGFR_ML_S_PER_ML_MIN, 0.0, 'EGFR_ML_S_PER_ML_MIN = 60');
+unitsRefApprox(1.0 / 60.0, EGFR_ML_MIN_TO_ML_S, 0.0, 'EGFR_ML_MIN_TO_ML_S = 1/60');
+unitsRefApprox(EGFR_ML_MIN_TO_ML_S, 1.0 / EGFR_ML_S_PER_ML_MIN, 0.0, 'EGFR_ML_MIN_TO_ML_S = 1/EGFR_ML_S_PER_ML_MIN');
 
 // Dokumentované reciproké hodnoty projektu
 unitsRefApprox(CHOLESTEROL_MMOLL_TO_MGDL, 1.0 / (float) $byName['Cholesterol'][3], 0.01, 'Cholesterol ÷ 38,67');
@@ -234,7 +237,17 @@ unitsRefApprox(3.5, massConcGlToGdl(35.0), 1e-9, 'Albumín 35 g/L → 3,5 g/dL')
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
 unitsRefApprox(1.0, $egfrSi, 1e-9, 'eGFR 60 ml/min → 1,0 ml/s');
+unitsRefApprox(1.0, egfrMlMinToMlS(60.0), 1e-9, 'egfrMlMinToMlS(60)');
+unitsRefApprox(60.0, egfrMlSToMlMin(1.0), 1e-9, 'egfrMlSToMlMin(1)');
+unitsRefApprox(
+    egfrMlMinToMlS(60.0),
+    calculatorConvertConventionalToSi(60.0, EGFR_ML_MIN_TO_ML_S),
+    0.0,
+    'egfr helper = prevodník s EGFR_ML_MIN_TO_ML_S',
+);
 unitsRefApprox(60.0, calculatorConvertSiToConventional(1.0, (float) $byName['eGFR'][3]), 1e-9, 'eGFR round-trip');
+unitsRefApprox(45.0, calculatorEgfrToMlMin(0.75, EGFR_UNIT_ML_S), 1e-9, 'calculatorEgfrToMlMin cez egfrMlSToMlMin');
+unitsRefApprox(0.75, calculatorEgfrFromMlMin(45.0, EGFR_UNIT_ML_S), 1e-9, 'calculatorEgfrFromMlMin cez egfrMlMinToMlS');
 
 $lookup = calculatorUnitFactorByName('Kreatinín');
 unitsRefTest(
@@ -464,6 +477,32 @@ unitsRefTest(
         && !preg_match('/\/\s*10\.0\b/', $guptaPage),
     'calculator_gupta.php používa massConcGlToGdl bez inline ÷ 10,0',
 );
+
+// eGFR ml/min ↔ ml/s: konštanty + helpery; bez inline 1/60 v prevodníku a výsledkoch
+unitsRefTest(
+    str_contains($commonSrc, 'EGFR_ML_S_PER_ML_MIN')
+        && str_contains($commonSrc, 'EGFR_ML_MIN_TO_ML_S')
+        && str_contains($commonSrc, 'egfrMlMinToMlS')
+        && str_contains($commonSrc, 'egfrMlSToMlMin'),
+    'calculators_common má eGFR konštanty a helpery ml/min ↔ ml/s',
+);
+unitsRefTest(
+    !preg_match("/['\"]eGFR['\"].*1\s*\/\s*60/", $commonSrc),
+    'calculators_common bez literálu 1/60 v riadku eGFR prevodníka',
+);
+$egfrPages = [
+    'calculator_egfr.php',
+    'calculator_egfr_cys.php',
+    'calculator_ekfc.php',
+];
+foreach ($egfrPages as $file) {
+    $src = (string) file_get_contents($root . '/' . $file);
+    unitsRefTest(
+        str_contains($src, 'egfrMlMinToMlS')
+            && !preg_match('/\/\s*EGFR_ML_S_PER_ML_MIN/', $src),
+        $file . ' používa egfrMlMinToMlS bez priameho ÷ EGFR_ML_S_PER_ML_MIN',
+    );
+}
 
 $preventSrc = (string) file_get_contents(dirname(__DIR__) . '/prevent_model.php');
 unitsRefTest(

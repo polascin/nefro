@@ -1906,7 +1906,7 @@ function calculatorUnitConversionRows(): array
         ['Hemoglobín', 'g/dL', 'g/L', MASS_CONC_GDL_TO_GL, 1, 0],
         ['Albumín', 'g/dL', 'g/L', MASS_CONC_GDL_TO_GL, 1, 0],
         ['Bilirubín', 'mg/dL', 'µmol/L', BILIRUBIN_MGDL_TO_UMOLL, 1, 0],
-        ['eGFR', 'ml/min/1,73 m²', 'ml/s/1,73 m²', 1 / 60, 1, 3],
+        ['eGFR', 'ml/min/1,73 m²', 'ml/s/1,73 m²', EGFR_ML_MIN_TO_ML_S, 1, 3],
     ];
 }
 
@@ -2459,7 +2459,29 @@ function calculatorRenderSavedResultsTable(
 
 const EGFR_UNIT_ML_MIN = 'ml_min';
 const EGFR_UNIT_ML_S = 'ml_s';
+
+/**
+ * Faktor 1 ml/s = 60 ml/min (60 s/min). Používa sa pri prevode ml/s → ml/min.
+ * Názov je historický; hodnota je počet ml/min na 1 ml/s.
+ */
 const EGFR_ML_S_PER_ML_MIN = 60.0;
+
+/**
+ * eGFR ml/min/1,73 m² → ml/s/1,73 m² (exaktne 1/60; prevodník a SI ekvivalent).
+ */
+const EGFR_ML_MIN_TO_ML_S = 1.0 / EGFR_ML_S_PER_ML_MIN;
+
+/** eGFR ml/min/1,73 m² → ml/s/1,73 m². */
+function egfrMlMinToMlS(float $mlMin): float
+{
+    return $mlMin * EGFR_ML_MIN_TO_ML_S;
+}
+
+/** eGFR ml/s/1,73 m² → ml/min/1,73 m². */
+function egfrMlSToMlMin(float $mlS): float
+{
+    return $mlS * EGFR_ML_S_PER_ML_MIN;
+}
 
 /**
  * CKD-EPI 2021 (kreatinín, bez rasy) — spoločný vzorec pre kalkulačku eGFR aj porovnanie v EKFC.
@@ -2534,7 +2556,7 @@ function calculatorEgfrUnitLabel(string $unit): string
 function calculatorEgfrToMlMin(float $value, string $unit): float
 {
     return calculatorNormalizeEgfrUnit($unit) === EGFR_UNIT_ML_S
-        ? $value * EGFR_ML_S_PER_ML_MIN
+        ? egfrMlSToMlMin($value)
         : $value;
 }
 
@@ -2542,7 +2564,7 @@ function calculatorEgfrToMlMin(float $value, string $unit): float
 function calculatorEgfrFromMlMin(float $value, string $unit): float
 {
     return calculatorNormalizeEgfrUnit($unit) === EGFR_UNIT_ML_S
-        ? $value / EGFR_ML_S_PER_ML_MIN
+        ? egfrMlMinToMlS($value)
         : $value;
 }
 
@@ -2553,7 +2575,7 @@ function calculatorEgfrFromMlMin(float $value, string $unit): float
 function calculatorFormatEgfrBothUnits(float $mlMin, int $decimals = 1): string
 {
     return number_format($mlMin, $decimals, ',', ' ') . ' ml/min/1,73 m² (' .
-        number_format($mlMin / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ') . ' ml/s/1,73 m²)';
+        number_format(egfrMlMinToMlS($mlMin), 3, ',', ' ') . ' ml/s/1,73 m²)';
 }
 
 /**
@@ -2585,8 +2607,8 @@ function calculatorParseEgfrToMlMin(
             $fieldLabel,
             rtrim(rtrim(number_format($min, 1, ',', ' '), '0'), ','),
             rtrim(rtrim(number_format($max, 1, ',', ' '), '0'), ','),
-            number_format($min / EGFR_ML_S_PER_ML_MIN, 3, ',', ' '),
-            number_format($max / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ')
+            number_format(egfrMlMinToMlS($min), 3, ',', ' '),
+            number_format(egfrMlMinToMlS($max), 3, ',', ' ')
         );
         return null;
     }
