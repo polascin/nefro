@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:53 Europe/Bratislava
+Aktualizované: 2026-11-06 04:00 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: CKD-PC label helpery do `calculators_common` + pin. Handoff:
-`.codex/handoffs/2026-11-06-035239-ckdpc-label-helpers-common.md`.
+Beh: `adpkdClassify` do `calculators_common` + golden pin. Handoff:
+`.codex/handoffs/2026-11-06-035947-adpkd-classify-common.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `8869effc`; feature `e8ae58c6`)
-- Runtime / `DEPLOY_COMMIT`: `e8ae58c6` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `28bcf11e`)
+- Runtime / `DEPLOY_COMMIT`: `28bcf11e`
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -45,6 +45,7 @@ Beh: CKD-PC label helpery do `calculators_common` + pin. Handoff:
 28. Slučka tick 29: `iganInterpretation` → `calculators_common`; clinical 107 PASS; suite 56 PASS; deploy `36c6541b`
 29. Slučka tick 30: `iganRisk` → `calculators_common` + golden pin 8 scenárov; clinical 116 PASS; suite 56 PASS; deploy `715c6dcc`
 30. Slučka tick 31: CKD-PC label helpery → `calculatorBool/Sex/SmokingLabel`; CKD-PC/CKM 53 PASS; suite 56 PASS; deploy `e8ae58c6`
+31. Slučka tick 32: `adpkdClassify` → `calculators_common` + golden pin 7+4; clinical 127 PASS; suite 56 PASS; deploy `28bcf11e`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -54,11 +55,11 @@ Beh: CKD-PC label helpery do `calculators_common` + pin. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function adpkdClassify" calculator_adpkd.php calculators_common.php tools/
+rg -n "function ekfcModeLabel" calculator_ekfc.php calculators_common.php tools/
 ```
 
-`adpkdClassify` do `calculators_common` (interpretácia už je common), alebo iný malý bezpečný kalkulačkový refactor.
+`ekfcModeLabel` do `calculators_common` (malý label helper), alebo iný malý bezpečný kalkulačkový refactor.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-035239-ckdpc-label-helpers-common.md`
+`.codex/handoffs/2026-11-06-035947-adpkd-classify-common.md`

@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. `adpkdClassify` → `calculators_common` (interpretácia už je common), alebo iný malý bezpečný kalkulačkový refactor.
+1. `ekfcModeLabel` → `calculators_common` (malý label helper), alebo iný malý bezpečný kalkulačkový refactor.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-r (adpkdClassify)
+
+- [x] `adpkdClassify` → `calculators_common`; golden pin 7 scenárov + 4 hranice k + wiring; clinical 127 PASS; suite 56 PASS; deploy `28bcf11e`
 
 ## Hotové: slučka 2026-11-06-q (CKD-PC label helpery)
 
