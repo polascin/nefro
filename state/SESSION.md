@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery Hb/Alb g/dL ↔ g/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `135590d9`)
-- Runtime / `DEPLOY_COMMIT`: `135590d9`
+- Vetva: `main` (HEAD `4b9e479c`; feature `135590d9`)
+- Runtime / `DEPLOY_COMMIT`: `135590d9` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
