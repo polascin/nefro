@@ -253,6 +253,28 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
 
+## 2026-11-06 (pauza / close-WIP) — ADPKD a Gupta merge: NIE teraz
+
+Majiteľ požiadal dokončiť rozrobené a prechodne zastaviť doaudit + RSI slučky.
+RSI mandát (Beh 148) umožňuje rozhodnúť; zlúčenie teraz **nie**.
+
+- **Pre odklad:** vetvy `fix/adpkd-mayo-2026-11-03` a `fix/gupta-mg-cutoff-2026-11-03`
+  majú starý merge-base (`3d09b657`); na `main` už žije `adpkdClassify` v common
+  s golden pinom log-k. ADPKD vetva mení klasifikáciu na ročný % prírastok HtTKV
+  (iná veličina na prahoch 0,015…); Gupta mení jednotku/hranicu Mg na &lt; 0,82 mmol/L.
+  Merge bez rebase + nového pinu by rozbil aktuálne testy alebo ticho zmenil kliniku.
+- **Proti odkladu:** obe vetvy vyzerajú ako korekcie podľa zdroja; ostávajú mimo produkcie.
+- **Rozhodnutie:** BLOCKED do samostatného behu po zrušení PAUSE: najprv rebase na
+  aktuálny `main`, potom pin, potom merge. Počas pauzy nespúšťať /loop ani doaudit.
+- **Rollback:** netreba; produkcia ostáva na `f695d7aa` bez týchto zmien.
+
+## 2026-11-06 (tick 33) — calculatorEkfcModeLabel do calculators_common
+
+Lokálny `ekfcModeLabel` → `calculatorEkfcModeLabel` v `calculators_common.php`.
+Len UI label režimu cr/cys/cr_cys; klinický výpočet EKFC sa nemení. Pin v
+`tools/test_clinical_references.php`. Deploy dobehnutý manuálne (predchádzajúci
+post-commit nechal produkciu na `28bcf11e`).
+
 ## 2026-11-06 (tick 32) — adpkdClassify do calculators_common
 
 `adpkdClassify` (Mayo HtTKV, Irazabal 2015) ide do `calculators_common.php`

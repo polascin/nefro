@@ -18,10 +18,11 @@ Koordinátor pauzoval denný doaudit a agent loops.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `f695d7aa`)
-- Runtime / `DEPLOY_COMMIT`: `f695d7aa` (zhoda po dobehnutí SFTP deployu)
-- Working tree: clean
+- Vetva: `main` (HEAD po docs committe; feature `f695d7aa`)
+- Runtime / `DEPLOY_COMMIT`: `f695d7aa` (docs-only drift OK: state/handoff v deploy-ignore)
+- Working tree: docs close-WIP (DECISIONS/TODO/handoff)
 - Pripravené, nezlúčené (BLOCKED): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
+- Súvisiaci handoff ekfc: `.codex/handoffs/2026-11-06-040942-ekfc-mode-label-common-loop-paused.md`
 
 ## Čo je hotové v tomto behu
 

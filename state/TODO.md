@@ -1,20 +1,29 @@
 # TODO
 
-## Ďalšia slučka
+## Slučky PAUSED (2026-11-06)
 
-**RSI slučka prechodne zastavená** (2026-11-06, pokyn používateľa). Bez ticku 34, kým majiteľ nevysloví pokračovanie.
+Denný doaudit (1d) a RSI ~20m loop sú **PAUSED**. Nespúšťať, kým majiteľ
+neobnoví. Tento beh novú slučku nespustil.
 
-1. Až na pokyn: ďalší malý bezpečný kalkulačkový refactor (kandidát `preventRenderOutcome` / print format helpery).
-2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
-3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
-4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
+## Po odblokovaní (nie teraz)
+
+1. BLOCKED: rebase + zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Mg &lt; 0,82 mmol/L) s pinom.
+2. BLOCKED: rebase + zlúčenie `fix/adpkd-mayo-2026-11-03` (Mayo %/rok) s aktualizáciou golden pinu `adpkdClassify`.
+3. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
+4. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
-6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
-## Hotové: slučka 2026-11-06-s (calculatorEkfcModeLabel + pauza)
+## Hotové: close-WIP 2026-11-06 (pauza)
 
-- [x] `ekfcModeLabel` → `calculatorEkfcModeLabel` v common; pin 5 + wiring; clinical 134 PASS; suite 56 PASS; deploy `f695d7aa`
-- [x] RSI loop PID 59480 / sentinel zastavený
+- [x] Overenie `calculatorEkfcModeLabel` na main; clinical 134 PASS
+- [x] Dobehnutie deployu `28bcf11e` → `f695d7aa` (Git Bash + Windows PHP; WSL mbstring FAIL)
+- [x] RSI: ADPKD/Gupta merge odložené (DECISIONS)
+- [x] SESSION/handoff: PAUSED; loop nespustený
+
+## Hotové: slučka 2026-11-06-s (calculatorEkfcModeLabel)
+
+- [x] `ekfcModeLabel` → `calculatorEkfcModeLabel` v common; pin; suite 56 PASS; deploy `f695d7aa`
 
 ## Hotové: slučka 2026-11-06-r (adpkdClassify)
 
