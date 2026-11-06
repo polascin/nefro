@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:21 Europe/Bratislava
+Aktualizované: 2026-11-06 03:26 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: `ckmStageClass` do `calculators_common`. Handoff:
-`.codex/handoffs/2026-11-06-032054-ckm-stage-class-common.md`.
+Beh: `ckdpcInterpretation` do `calculators_common`. Handoff:
+`.codex/handoffs/2026-11-06-032601-ckdpc-interpretation-common.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `5fad4075`; feature `5110a7f9`)
-- Runtime / `DEPLOY_COMMIT`: `5110a7f9` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `2a00246a`; feature = DEPLOY)
+- Runtime / `DEPLOY_COMMIT`: `2a00246a`
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -39,6 +39,7 @@ Beh: `ckmStageClass` do `calculators_common`. Handoff:
 22. Slučka tick 23: `CREATININE_UMOL_PER_MMOL` + `creatinineUmolLToMmolL` / `creatinineMmolLToUmolL`; AKI + CrCl; units 199 PASS; urine 24 PASS; suite 56 PASS
 23. Slučka tick 24: `*ParseNonNeg` → `calculatorParseNonNegativeFloat` (8 stránok + kdpi); suite 56 PASS; deploy `e676e53b`
 24. Slučka tick 25: `ckmStageClass` → `calculators_common`; CKD-PC/CKM 40 PASS; suite 56 PASS; deploy `5110a7f9`
+25. Slučka tick 26: `ckdpcInterpretation` → `calculators_common`; CKD-PC/CKM 42 PASS; suite 56 PASS; deploy `2a00246a`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -48,11 +49,11 @@ Beh: `ckmStageClass` do `calculators_common`. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function ckdpcInterpretation" calculator_ckdpc.php calculators_common.php tools/test_clinical_references_ckdpc_ckm.php
+rg -n "function kfreInterpretation" calculator_kfre.php calculators_common.php tools/test_clinical_references.php
 ```
 
-Presunúť `ckdpcInterpretation` do `calculators_common` (mimo majiteľa).
+Presunúť `kfreInterpretation` do `calculators_common` (mimo majiteľa).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-032054-ckm-stage-class-common.md`
+`.codex/handoffs/2026-11-06-032601-ckdpc-interpretation-common.md`
