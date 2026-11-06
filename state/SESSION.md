@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 23:30 Europe/Bratislava
+Aktualizované: 2026-11-07 00:05 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -17,6 +17,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - y (Beh 169): deny pre 2 include-only knižnice + všeobecná regresia. Deploy `8cf39b0c`.
 - z (Beh 170): úplný head pre content_report (DSA) a admin_content_notices. Deploy `e544b159`.
 - aa (Beh 171): JSON-LD WebApplication + MedicalWebPage pre 33 kalkulačiek. Deploy `a11ba838`.
+- ab (Beh 172): externé odkazy (CYNMA bez odkazu, TNDTHD, APAR); admin/CSRF/cookie bez nálezu. Deploy `80d811e0`.
 
 ## Stav repozitára
 
@@ -28,9 +29,10 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: nastroj_* a ďalšie stránky
-(lieky.php, studie.php) proti rovnakým kontrolám head/JSON-LD, alebo admin stránky.
+Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: externé odkazy v článkoch (DB obsah,
+len čítanie) a v lieky.php/studie.php; prípadne lokálny nástroj na pravidelnú kontrolu
+externých odkazov zo servera (tools/ + cron podľa tools/crontab.example, so súhlasom).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-233000-loop-schema-beh171.md`
+`.codex/handoffs/2026-11-07-000500-loop-links-beh172.md`
