@@ -234,6 +234,7 @@ unitsRefApprox(
 );
 unitsRefApprox(35.0, massConcGdlToGl(3.5), 1e-9, 'Albumín 3,5 g/dL → 35 g/L');
 unitsRefApprox(3.5, massConcGlToGdl(35.0), 1e-9, 'Albumín 35 g/L → 3,5 g/dL');
+unitsRefApprox(30.0, massConcGdlToGl(3.0), 1e-9, 'UACR albumín 3 mg/dL → 30 mg/L (ten istý faktor)');
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
 unitsRefApprox(1.0, $egfrSi, 1e-9, 'eGFR 60 ml/min → 1,0 ml/s');
@@ -476,6 +477,12 @@ unitsRefTest(
     str_contains($guptaPage, 'massConcGlToGdl')
         && !preg_match('/\/\s*10\.0\b/', $guptaPage),
     'calculator_gupta.php používa massConcGlToGdl bez inline ÷ 10,0',
+);
+$uacrPage = (string) file_get_contents($root . '/calculator_uacr.php');
+unitsRefTest(
+    str_contains($uacrPage, 'massConcGdlToGl')
+        && !preg_match('/\$ualb\s*\*\s*10\b/', $uacrPage),
+    'calculator_uacr.php používa massConcGdlToGl bez inline × 10 pre albumín',
 );
 
 // eGFR ml/min ↔ ml/s: konštanty + helpery; bez inline 1/60 v prevodníku a výsledkoch

@@ -47,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             $alb_mg_l = $ualb;
             if ($form["u_alb_unit"] === "mg_dl") {
-                $alb_mg_l = $ualb * 10;
+                // mg/dL → mg/L: ten istý faktor 10 ako g/dL → g/L
+                $alb_mg_l = massConcGdlToGl($ualb);
             } elseif ($form["u_alb_unit"] === "g_l") {
                 $alb_mg_l = $ualb * 1000;
             }

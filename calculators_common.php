@@ -499,8 +499,9 @@ const BILIRUBIN_MGDL_TO_UMOLL = 17.1;
 const BILIRUBIN_UMOLL_TO_MGDL = 0.0585;
 
 /**
- * Hmotnostná koncentrácia g/dL → g/L (hemoglobín, albumín).
- * Exaktný faktor: 1 g/dL = 10 g/L (prevodník; Gupta skorovanie v g/dL).
+ * Hmotnostná koncentrácia ×/dL → ×/L (faktor 10).
+ * Platí pre g/dL → g/L (hemoglobín, sérový albumín; prevodník; Gupta)
+ * aj pre mg/dL → mg/L (močový albumín v UACR).
  */
 const MASS_CONC_GDL_TO_GL = 10.0;
 
@@ -1536,13 +1537,17 @@ function bilirubinUmolLToMgDl(float $umolL): float
     return $umolL * BILIRUBIN_UMOLL_TO_MGDL;
 }
 
-/** Hmotnostná koncentrácia g/dL → g/L (Hb, albumín). */
+/**
+ * Hmotnostná koncentrácia ×/dL → ×/L (Hb/Alb g/dL→g/L; UACR albumín mg/dL→mg/L).
+ */
 function massConcGdlToGl(float $gDl): float
 {
     return $gDl * MASS_CONC_GDL_TO_GL;
 }
 
-/** Hmotnostná koncentrácia g/L → g/dL (Hb, albumín). */
+/**
+ * Hmotnostná koncentrácia ×/L → ×/dL (Hb/Alb g/L→g/dL; prípadne mg/L→mg/dL).
+ */
 function massConcGlToGdl(float $gL): float
 {
     return $gL / MASS_CONC_GDL_TO_GL;

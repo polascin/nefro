@@ -105,11 +105,12 @@ clinicalRefTest($a2['stage'] === 'A2', 'UACR A2');
 clinicalRefTest($a2b['stage'] === 'A2', 'UACR A2 na hranici 30');
 clinicalRefTest($a3['stage'] === 'A3', 'UACR A3');
 
-// Prevod mg/dL albumínu → mg/L (×10) a kreatinínu mg/dL → mmol/L
-$albMgL = 3.0 * 10; // 3 mg/dL
+// Prevod mg/dL albumínu → mg/L (massConcGdlToGl) a kreatinínu mg/dL → mmol/L
+$albMgL = massConcGdlToGl(3.0); // 3 mg/dL → 30 mg/L
 $crMmol = creatinineMgDlToMmolL(100.0); // 100 mg/dL
 $fromUnits = calculatorUacrMgMmol($albMgL, $crMmol);
 clinicalRefApprox(uacrMgGToMgMmol(30.0), $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
+clinicalRefApprox(30.0, $albMgL, 0.0, 'UACR albumín 3 mg/dL → 30 mg/L cez massConcGdlToGl');
 
 // ─── KDIGO G kategórie ───
 // Páry [eGFR, kategória]: float kľúče v asociatívnom poli PHPStan odmieta (array.invalidKey).
