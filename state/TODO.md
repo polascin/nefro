@@ -11,6 +11,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-06-w (CKM G4 bez uACR, Beh 167)
+
+- [x] CKM 3 pri eGFR < 30 bez uACR; popis štádia 3; testy; deploy `2e1941d9`
+
 ## Hotové: slučka 2026-11-06-v (KDIGO G4×A1, Beh 166)
 
 - [x] heatmapa G4×A1 = veľmi vysoké; pin; poučenie; deploy `20a30272`

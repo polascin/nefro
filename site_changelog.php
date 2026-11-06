@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-06 21:40',
+                'date' => '2026-11-06 21:27',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: CKM pri G4 bez albuminúrie',
                 'description' => 'Pri potvrdenej CKD s eGFR pod 30 bez zadaného uACR kalkulačka zaraďuje CKM štádium 3, lebo riadky G4 a G5 heatmapy KDIGO sú veľmi vysoké riziko pri každej kategórii albuminúrie. Popis štádia 3 teraz uvádza aj veľmi vysoké riziko CKD.',
