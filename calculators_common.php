@@ -697,10 +697,13 @@ function guptaRiskCategory(float $score): array
         'incidence' => '≈ 16,7 až 23,5 % ťažkého CP-AKI'];
 }
 
+/** Gupta skóre: horčík < 0,82 mmol/L dáva 1 bod (článok, Methods: „<0.82, ≥0.82 mmol/L“). */
+const GUPTA_MG_MMOL_CUTOFF = 0.82;
+
 /**
  * Gupta skóre ťažkej AKI po cisplatine (Gupta S a kol., BMJ 2024;384:e077169,
  * PMID 38538012): 9 premenných, rozsah 0 až 22,5 bodu. Kategórie premenných podľa
- * textu článku; bodové hodnoty a hranice rizikových skupín sú v obr. 2.
+ * textu článku (horčík v mmol/L); bodové hodnoty a hranice rizikových skupín sú v obr. 2.
  *
  * @return array{age: float, htn: float, dm: float, hb: float, wbc: float, plt: float, alb: float, mg: float, dose: float, score: float}
  */
@@ -712,7 +715,7 @@ function guptaScore(
     float $wbcGL,
     float $plateletsGL,
     float $albGdl,
-    float $mgMgdl,
+    float $mgMmolL,
     float $cisplatinMg
 ): array {
     $p = [
@@ -723,7 +726,7 @@ function guptaScore(
         'wbc' => $wbcGL > 12.0 ? 1.5 : 0.0,
         'plt' => $plateletsGL < 150.0 ? 1.0 : 0.0,
         'alb' => guptaAlbPoints($albGdl),
-        'mg' => $mgMgdl < 2.0 ? 1.0 : 0.0,
+        'mg' => $mgMmolL < GUPTA_MG_MMOL_CUTOFF ? 1.0 : 0.0,
         'dose' => guptaDosePoints($cisplatinMg),
     ];
 

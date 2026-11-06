@@ -25,10 +25,10 @@ function guptaRefTest(bool $ok, string $message): void
 }
 
 // Maximum podľa článku: 22,5 bodu
-$max = guptaScore(80.0, true, true, 9.0, 15.0, 100.0, 2.5, 1.5, 250.0);
+$max = guptaScore(80.0, true, true, 9.0, 15.0, 100.0, 2.5, 0.6, 250.0);
 guptaRefTest($max['score'] === 22.5, 'Maximálne skóre je 22,5 (článok: 0 až 22,5).');
 // Minimum: 0 bodov
-$min = guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 2.2, 40.0);
+$min = guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 0.9, 40.0);
 guptaRefTest($min['score'] === 0.0, 'Minimálne skóre je 0.');
 
 // Hranice kategórií podľa textu článku (ostrá vs. neostrá nerovnosť)
@@ -39,8 +39,8 @@ guptaRefTest(guptaHbPoints(12.0) === 0.0 && guptaHbPoints(11.9) > 0.0, 'Hb ≥ 1
 guptaRefTest(guptaHbPoints(11.0) === guptaHbPoints(11.9) && guptaHbPoints(10.9) > guptaHbPoints(11.0), 'Hb 110 až 119 g/L je jedna kategória.');
 guptaRefTest(guptaAlbPoints(3.81) === 0.0 && guptaAlbPoints(3.8) > 0.0, 'Albumín > 38 g/L je referencia.');
 guptaRefTest(guptaAlbPoints(3.3) === guptaAlbPoints(3.8) && guptaAlbPoints(3.29) > guptaAlbPoints(3.3), 'Albumín 33 až 38 g/L je jedna kategória.');
-guptaRefTest(guptaScore(40.0, false, false, 13.0, 12.0, 250.0, 4.2, 2.2, 40.0)['wbc'] === 0.0, 'Leukocyty 12,0 bod nedávajú.');
-guptaRefTest(guptaScore(40.0, false, false, 13.0, 12.1, 250.0, 4.2, 2.2, 40.0)['wbc'] > 0.0, 'Leukocyty > 12,0 dávajú bod.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 12.0, 250.0, 4.2, 0.9, 40.0)['wbc'] === 0.0, 'Leukocyty 12,0 bod nedávajú.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 12.1, 250.0, 4.2, 0.9, 40.0)['wbc'] > 0.0, 'Leukocyty > 12,0 dávajú bod.');
 $doseEdges = [50.0, 75.0, 100.0, 125.0, 150.0, 200.0];
 $prev = -1.0;
 foreach ($doseEdges as $edge) {
@@ -51,8 +51,15 @@ foreach ($doseEdges as $edge) {
 }
 guptaRefTest(guptaDosePoints(50.0) === 0.0, 'Dávka ≤ 50 mg je referencia.');
 
+// Horčík: hranica < 0,82 mmol/L podľa článku (regresia: 0,82 mmol/L · 2,43 = 1,99 mg/dL < 2,0 dávalo bod)
+guptaRefTest(GUPTA_MG_MMOL_CUTOFF === 0.82, 'Hranica horčíka je 0,82 mmol/L.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 0.82, 40.0)['mg'] === 0.0, 'Mg 0,82 mmol/L bod nedáva.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 0.81, 40.0)['mg'] === 1.0, 'Mg 0,81 mmol/L dáva bod.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, magnesiumMgDlToMmolL(2.0), 40.0)['mg'] === 0.0, 'Mg 2,0 mg/dL (0,823 mmol/L) bod nedáva.');
+guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, magnesiumMgDlToMmolL(1.99), 40.0)['mg'] === 1.0, 'Mg 1,99 mg/dL (0,819 mmol/L) dáva bod.');
+
 // Súčet bodov zodpovedá zložkám
-$mixed = guptaScore(58.0, true, false, 11.5, 9.0, 140.0, 3.5, 2.1, 140.0);
+$mixed = guptaScore(58.0, true, false, 11.5, 9.0, 140.0, 3.5, 0.86, 140.0);
 guptaRefTest(
     $mixed['score'] === $mixed['age'] + $mixed['htn'] + $mixed['dm'] + $mixed['hb'] + $mixed['wbc']
         + $mixed['plt'] + $mixed['alb'] + $mixed['mg'] + $mixed['dose'],
