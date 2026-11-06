@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 00:54 Europe/Bratislava
+Aktualizované: 2026-11-06 01:13 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery triglyceridov mg/dL ↔ mmol/L. Handoff:
-`.codex/handoffs/2026-11-06-005411-triglycerides-helpers.md`.
+Beh: spoločné konštanty/helpery bilirubínu mg/dL ↔ µmol/L. Handoff:
+`.codex/handoffs/2026-11-06-011357-bilirubin-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `ef5457cc`; feature `33814da9`)
-- Runtime / `DEPLOY_COMMIT`: `33814da9` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `3807b84a`)
+- Runtime / `DEPLOY_COMMIT`: `3807b84a`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -31,6 +31,7 @@ Beh: spoločné konštanty/helpery triglyceridov mg/dL ↔ mmol/L. Handoff:
 14. Slučka tick 15: `URIC_ACID_MGDL_TO_UMOLL` + `URIC_ACID_UMOLL_TO_MGDL` + helpery; units 136 PASS; scores 26 PASS; suite 56 PASS
 15. Slučka tick 16: `CHOLESTEROL_MGDL_TO_MMOLL` + `CHOLESTEROL_MMOLL_TO_MGDL` + helpery; PREVENT bez inline 0,02586; units 145 PASS; scores 26 PASS; suite 56 PASS
 16. Slučka tick 17: `TRIGLYCERIDES_MGDL_TO_MMOLL` + `TRIGLYCERIDES_MMOLL_TO_MGDL` + helpery; units 153 PASS; scores 26 PASS; suite 56 PASS
+17. Slučka tick 18: `BILIRUBIN_MGDL_TO_UMOLL` + `BILIRUBIN_UMOLL_TO_MGDL` + helpery; units 162 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -40,9 +41,9 @@ Beh: spoločné konštanty/helpery triglyceridov mg/dL ↔ mmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n 17.1 calculator_*.php calculators_common.php
+rg -n "10\.0" calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-005411-triglycerides-helpers.md`
+`.codex/handoffs/2026-11-06-011357-bilirubin-helpers.md`
