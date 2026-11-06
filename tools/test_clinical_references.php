@@ -101,6 +101,65 @@ clinicalRefTest(
     'calculator_kfre.php volá kfreInterpretation z calculators_common.php',
 );
 
+// Mayo ADPKD interpretácia: triedy 1A–1E (správanie + wiring; klasifikácia ostáva v stránke)
+$adpkd1a = adpkdInterpretation('1A');
+clinicalRefTest(
+    $adpkd1a['warnings'] === []
+        && str_contains($adpkd1a['interpretation'][0], 'Trieda 1A')
+        && str_contains($adpkd1a['interpretation'][0], 'pomalá progresia'),
+    'ADPKD 1A: pomalá progresia bez varovania',
+);
+$adpkd1b = adpkdInterpretation('1B');
+clinicalRefTest(
+    $adpkd1b['warnings'] === []
+        && str_contains($adpkd1b['interpretation'][0], 'Trieda 1B')
+        && str_contains($adpkd1b['interpretation'][0], 'mierna progresia'),
+    'ADPKD 1B: mierna progresia bez varovania',
+);
+$adpkd1c = adpkdInterpretation('1C');
+clinicalRefTest(
+    count($adpkd1c['warnings']) === 1
+        && str_contains($adpkd1c['interpretation'][0], 'rýchla progresia')
+        && str_contains($adpkd1c['interpretation'][0], 'tolvaptan')
+        && str_contains($adpkd1c['warnings'][0], 'kandidát na špecifickú liečbu tolvaptanom'),
+    'ADPKD 1C: rýchla progresia + varovanie tolvaptan',
+);
+$adpkd1d = adpkdInterpretation('1D');
+clinicalRefTest(
+    count($adpkd1d['warnings']) === 1
+        && str_contains($adpkd1d['interpretation'][0], 'veľmi rýchla progresia')
+        && str_contains($adpkd1d['warnings'][0], 'každých 6'),
+    'ADPKD 1D: veľmi rýchla progresia + sledovanie 6 mesiacov',
+);
+$adpkd1e = adpkdInterpretation('1E');
+clinicalRefTest(
+    count($adpkd1e['warnings']) === 1
+        && str_contains($adpkd1e['interpretation'][0], 'extrémne rýchla progresia')
+        && str_contains($adpkd1e['warnings'][0], 'URGENTNÉ')
+        && str_contains($adpkd1e['warnings'][0], 'transplantačného programu'),
+    'ADPKD 1E: extrémna progresia + urgentné varovanie RRT/Tx',
+);
+$adpkdUnknown = adpkdInterpretation('2');
+clinicalRefTest(
+    $adpkdUnknown['interpretation'] === [] && $adpkdUnknown['warnings'] === [],
+    'ADPKD neznáma/atypická trieda: prázdna interpretácia',
+);
+
+$adpkdPageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_adpkd.php');
+$adpkdCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+clinicalRefTest(
+    str_contains($adpkdCommonSource, 'function adpkdInterpretation')
+        && str_contains($adpkdCommonSource, 'Trieda 1C je typický kandidát')
+        && str_contains($adpkdCommonSource, 'URGENTNÉ: Zvážiť zaradenie do transplantačného programu'),
+    'calculators_common.php musí mať adpkdInterpretation pre triedy 1A–1E',
+);
+clinicalRefTest(
+    str_contains($adpkdPageSource, 'adpkdInterpretation(')
+        && !str_contains($adpkdPageSource, 'function adpkdInterpretation')
+        && str_contains($adpkdPageSource, 'function adpkdClassify'),
+    'calculator_adpkd.php volá adpkdInterpretation z common; adpkdClassify ostáva lokálne',
+);
+
 // ─── EKFC Q plateau a polynóm ───
 clinicalRefApprox(80.0, ekfcQCreatinineUmol(50.0, 'male'), 1e-9, 'EKFC Q Cr muž >25');
 clinicalRefApprox(62.0, ekfcQCreatinineUmol(50.0, 'female'), 1e-9, 'EKFC Q Cr žena >25');

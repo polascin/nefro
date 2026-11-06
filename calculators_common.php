@@ -1152,6 +1152,46 @@ function kfreInterpretation(float $risk2yr, float $risk5yr): array
 }
 
 /**
+ * Klinická interpretácia Mayo ADPKD tried 1A–1E (Irazabal 2015).
+ * Klasifikácia HtTKV ostáva v calculator_adpkd.php (mimo Mayo vetvy).
+ *
+ * @return array{interpretation: list<string>, warnings: list<string>}
+ */
+function adpkdInterpretation(string $class): array
+{
+    $interp = [];
+    $warn = [];
+    switch ($class) {
+        case "1A":
+            $interp[] =
+                "Trieda 1A: pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.";
+            break;
+        case "1B":
+            $interp[] =
+                "Trieda 1B: mierna progresia. Optimalizácia krvného tlaku, hydratácia.";
+            break;
+        case "1C":
+            $interp[] =
+                "Trieda 1C: rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).";
+            $warn[] =
+                "Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.";
+            break;
+        case "1D":
+            $interp[] =
+                "Trieda 1D: veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
+            $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
+            break;
+        case "1E":
+            $interp[] =
+                "Trieda 1E: extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.";
+            $warn[] =
+                "URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.";
+            break;
+    }
+    return ["interpretation" => $interp, "warnings" => $warn];
+}
+
+/**
  * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
  * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.
  */

@@ -44,40 +44,6 @@ function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
     ];
 }
 
-function adpkdInterpretation(string $class): array
-{
-    $interp = [];
-    $warn = [];
-    switch ($class) {
-        case "1A":
-            $interp[] =
-                "Trieda 1A: pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.";
-            break;
-        case "1B":
-            $interp[] =
-                "Trieda 1B: mierna progresia. Optimalizácia krvného tlaku, hydratácia.";
-            break;
-        case "1C":
-            $interp[] =
-                "Trieda 1C: rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).";
-            $warn[] =
-                "Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.";
-            break;
-        case "1D":
-            $interp[] =
-                "Trieda 1D: veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
-            $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
-            break;
-        case "1E":
-            $interp[] =
-                "Trieda 1E: extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.";
-            $warn[] =
-                "URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.";
-            break;
-    }
-    return ["interpretation" => $interp, "warnings" => $warn];
-}
-
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_adpkd.php";
