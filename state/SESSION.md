@@ -9,8 +9,8 @@ Beh: `kfreInterpretation` do `calculators_common`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `98753a08`; po docs handoffe tip drift OK)
-- Runtime / `DEPLOY_COMMIT`: `98753a08`
+- Vetva: `main` (HEAD `0297c70e`; feature `98753a08`)
+- Runtime / `DEPLOY_COMMIT`: `98753a08` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
