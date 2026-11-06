@@ -66,8 +66,9 @@ unitsRefApprox(38.67, CHOLESTEROL_MMOLL_TO_MGDL, 0.0, 'CHOLESTEROL_MMOLL_TO_MGDL
 unitsRefApprox(TRIGLYCERIDES_MGDL_TO_MMOLL, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor z konštanty');
 unitsRefApprox(0.01129, TRIGLYCERIDES_MGDL_TO_MMOLL, 0.0, 'TRIGLYCERIDES_MGDL_TO_MMOLL = 0,01129');
 unitsRefApprox(88.57, TRIGLYCERIDES_MMOLL_TO_MGDL, 0.0, 'TRIGLYCERIDES_MMOLL_TO_MGDL = 88,57');
-unitsRefApprox(10.0, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor 10');
-unitsRefApprox(10.0, (float) $byName['Albumín'][3], 1e-12, 'Albumín faktor 10');
+unitsRefApprox(MASS_CONC_GDL_TO_GL, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor z konštanty');
+unitsRefApprox(MASS_CONC_GDL_TO_GL, (float) $byName['Albumín'][3], 1e-12, 'Albumín faktor z konštanty');
+unitsRefApprox(10.0, MASS_CONC_GDL_TO_GL, 0.0, 'MASS_CONC_GDL_TO_GL = 10');
 unitsRefApprox(BILIRUBIN_MGDL_TO_UMOLL, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor z konštanty');
 unitsRefApprox(17.1, BILIRUBIN_MGDL_TO_UMOLL, 0.0, 'BILIRUBIN_MGDL_TO_UMOLL = 17,1');
 unitsRefApprox(0.0585, BILIRUBIN_UMOLL_TO_MGDL, 0.0, 'BILIRUBIN_UMOLL_TO_MGDL = 0,0585');
@@ -217,6 +218,19 @@ unitsRefApprox(
     0.0,
     'bilirubin helper = prevodník s BILIRUBIN_MGDL_TO_UMOLL',
 );
+
+$hbSi = calculatorConvertConventionalToSi(12.0, (float) $byName['Hemoglobín'][3]);
+unitsRefApprox(120.0, $hbSi, 1e-9, 'Hemoglobín 12,0 g/dL → 120 g/L');
+unitsRefApprox(120.0, massConcGdlToGl(12.0), 1e-9, 'massConcGdlToGl(12)');
+unitsRefApprox(12.0, massConcGlToGdl(120.0), 1e-9, 'massConcGlToGdl(120)');
+unitsRefApprox(
+    massConcGdlToGl(12.0),
+    calculatorConvertConventionalToSi(12.0, MASS_CONC_GDL_TO_GL),
+    0.0,
+    'massConc helper = prevodník s MASS_CONC_GDL_TO_GL',
+);
+unitsRefApprox(35.0, massConcGdlToGl(3.5), 1e-9, 'Albumín 3,5 g/dL → 35 g/L');
+unitsRefApprox(3.5, massConcGlToGdl(35.0), 1e-9, 'Albumín 35 g/L → 3,5 g/dL');
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
 unitsRefApprox(1.0, $egfrSi, 1e-9, 'eGFR 60 ml/min → 1,0 ml/s');
@@ -430,6 +444,25 @@ unitsRefTest(
     !preg_match("/['\"]Bilirubín['\"].*17\.1/", $commonSrc)
         && !preg_match('/\*\s*0\.0585\b/', $commonSrc),
     'calculators_common bez literálu 17,1 v prevodníku a bez inline × 0,0585',
+);
+
+// Hb/albumín g/dL ↔ g/L: spoločná konštanta + helpery; bez inline 10.0 v prevodníku a Gupta
+unitsRefTest(
+    str_contains($commonSrc, 'MASS_CONC_GDL_TO_GL')
+        && str_contains($commonSrc, 'massConcGdlToGl')
+        && str_contains($commonSrc, 'massConcGlToGdl'),
+    'calculators_common má MASS_CONC_GDL_TO_GL a helpery g/dL ↔ g/L',
+);
+unitsRefTest(
+    !preg_match("/['\"]Hemoglobín['\"].*10\.0/", $commonSrc)
+        && !preg_match("/['\"]Albumín['\"].*10\.0/", $commonSrc),
+    'calculators_common bez literálu 10,0 v riadkoch Hemoglobín/Albumín prevodníka',
+);
+$guptaPage = (string) file_get_contents($root . '/calculator_gupta.php');
+unitsRefTest(
+    str_contains($guptaPage, 'massConcGlToGdl')
+        && !preg_match('/\/\s*10\.0\b/', $guptaPage),
+    'calculator_gupta.php používa massConcGlToGdl bez inline ÷ 10,0',
 );
 
 $preventSrc = (string) file_get_contents(dirname(__DIR__) . '/prevent_model.php');

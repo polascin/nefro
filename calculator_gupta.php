@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($hbRaw === null) {
             $errors[] = "Hemoglobín musí byť kladné číslo.";
         } else {
-            $hbGdl = $form["hemoglobin_unit"] === "g_dl" ? (float) $hbRaw : (float) $hbRaw / 10.0;
+            $hbGdl = $form["hemoglobin_unit"] === "g_dl" ? (float) $hbRaw : massConcGlToGdl((float) $hbRaw);
             if ($hbGdl < 2.0 || $hbGdl > 25.0) {
                 $errors[] = "Hemoglobín je mimo prijateľného rozsahu (2 až 25 g/dL).";
             }
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($albRaw === null) {
             $errors[] = "Albumín musí byť kladné číslo.";
         } else {
-            $albGdl = $form["albumin_unit"] === "g_dl" ? (float) $albRaw : (float) $albRaw / 10.0;
+            $albGdl = $form["albumin_unit"] === "g_dl" ? (float) $albRaw : massConcGlToGdl((float) $albRaw);
             if ($albGdl < 1.0 || $albGdl > 7.0) {
                 $errors[] = "Albumín je mimo prijateľného rozsahu (1 až 7 g/dL).";
             }

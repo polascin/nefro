@@ -498,6 +498,12 @@ const BILIRUBIN_MGDL_TO_UMOLL = 17.1;
  */
 const BILIRUBIN_UMOLL_TO_MGDL = 0.0585;
 
+/**
+ * Hmotnostná koncentrácia g/dL → g/L (hemoglobín, albumín).
+ * Exaktný faktor: 1 g/dL = 10 g/L (prevodník; Gupta skorovanie v g/dL).
+ */
+const MASS_CONC_GDL_TO_GL = 10.0;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1530,6 +1536,18 @@ function bilirubinUmolLToMgDl(float $umolL): float
     return $umolL * BILIRUBIN_UMOLL_TO_MGDL;
 }
 
+/** Hmotnostná koncentrácia g/dL → g/L (Hb, albumín). */
+function massConcGdlToGl(float $gDl): float
+{
+    return $gDl * MASS_CONC_GDL_TO_GL;
+}
+
+/** Hmotnostná koncentrácia g/L → g/dL (Hb, albumín). */
+function massConcGlToGdl(float $gL): float
+{
+    return $gL / MASS_CONC_GDL_TO_GL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1885,8 +1903,8 @@ function calculatorUnitConversionRows(): array
         ['Kyselina močová', 'mg/dL', 'µmol/L', URIC_ACID_MGDL_TO_UMOLL, 1, 0],
         ['Cholesterol', 'mg/dL', 'mmol/L', CHOLESTEROL_MGDL_TO_MMOLL, 0, 2],
         ['Triglyceridy', 'mg/dL', 'mmol/L', TRIGLYCERIDES_MGDL_TO_MMOLL, 0, 2],
-        ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],
-        ['Albumín', 'g/dL', 'g/L', 10.0, 1, 0],
+        ['Hemoglobín', 'g/dL', 'g/L', MASS_CONC_GDL_TO_GL, 1, 0],
+        ['Albumín', 'g/dL', 'g/L', MASS_CONC_GDL_TO_GL, 1, 0],
         ['Bilirubín', 'mg/dL', 'µmol/L', BILIRUBIN_MGDL_TO_UMOLL, 1, 0],
         ['eGFR', 'ml/min/1,73 m²', 'ml/s/1,73 m²', 1 / 60, 1, 3],
     ];
