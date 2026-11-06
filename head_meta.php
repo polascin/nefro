@@ -29,6 +29,12 @@ $ogImageHeight = $ogImageHeight ?? 630;
 
 // Helper for Schema.org
 $structuredData = $structuredData ?? [];
+// Kalkulačky bez vlastnej hlavnej entity dostanú WebApplication + MedicalWebPage (Beh 171).
+if (function_exists('calculatorStructuredDataWithEntity')
+    && str_starts_with(basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')), 'calculator_')
+    && basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')) !== 'calculator_history.php') {
+    $structuredData = calculatorStructuredDataWithEntity($structuredData, $pageTitle, $seoDescription, $canonicalUrl, $siteName, $baseUrl);
+}
 
 $katexBase = 'assets/katex/0.18.11';
 $katexCss = $katexBase . '/katex.min.css';

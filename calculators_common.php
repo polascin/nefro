@@ -2964,3 +2964,56 @@ function calculatorRenderEgfrUnitSelect(
     </select>
     <?php
 }
+
+/**
+ * Doplní hlavnú entitu WebApplication + MedicalWebPage do štruktúrovaných dát
+ * stránky kalkulačky, ak ju stránka sama neuvádza (Beh 171: 33 kalkulačiek mali
+ * len BreadcrumbList, nástroje a katalóg entitu majú). Názov sa berie z položky
+ * 3 breadcrumbu, inak z titulku po prvé „ | “. Existujúce uzly ostávajú.
+ *
+ * @param list<array<string, mixed>> $structuredData
+ * @return list<array<string, mixed>>
+ */
+function calculatorStructuredDataWithEntity(
+    array $structuredData,
+    string $pageTitle,
+    string $description,
+    string $canonicalUrl,
+    string $siteName,
+    string $baseUrl
+): array {
+    $name = '';
+    foreach ($structuredData as $node) {
+        $types = (array) ($node['@type'] ?? []);
+        if (in_array('WebApplication', $types, true) || in_array('MedicalWebPage', $types, true)) {
+            return $structuredData;
+        }
+        if (in_array('BreadcrumbList', $types, true) && is_array($node['itemListElement'] ?? null)) {
+            foreach ($node['itemListElement'] as $item) {
+                if (is_array($item) && (int) ($item['position'] ?? 0) === 3 && is_string($item['name'] ?? null)) {
+                    $name = $item['name'];
+                }
+            }
+        }
+    }
+    if ($name === '') {
+        $name = trim(explode(' | ', $pageTitle)[0]);
+    }
+
+    array_unshift($structuredData, [
+        '@context' => 'https://schema.org',
+        '@type' => ['WebApplication', 'MedicalWebPage'],
+        'name' => $name,
+        'description' => $description,
+        'url' => $canonicalUrl,
+        'inLanguage' => 'sk-SK',
+        'applicationCategory' => 'HealthApplication',
+        'operatingSystem' => 'Web',
+        'medicalSpecialty' => 'Nephrology',
+        'audience' => ['@type' => 'MedicalAudience', 'audienceType' => 'Clinician'],
+        'isAccessibleForFree' => true,
+        'publisher' => ['@type' => 'MedicalOrganization', 'name' => $siteName, 'url' => $baseUrl],
+    ]);
+
+    return $structuredData;
+}
