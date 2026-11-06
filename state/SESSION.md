@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 04:00 Europe/Bratislava
+Aktualizované: 2026-11-06 04:01 Europe/Bratislava
 
 ## Aktívna úloha
 
@@ -9,8 +9,8 @@ Beh: `adpkdClassify` do `calculators_common` + golden pin. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `28bcf11e`)
-- Runtime / `DEPLOY_COMMIT`: `28bcf11e`
+- Vetva: `main` (HEAD `5bb3e60f`; feature `28bcf11e`)
+- Runtime / `DEPLOY_COMMIT`: `28bcf11e` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

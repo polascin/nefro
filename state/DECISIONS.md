@@ -253,6 +253,14 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
 
+## 2026-11-06 (tick 32) — adpkdClassify do calculators_common
+
+`adpkdClassify` (Mayo HtTKV, Irazabal 2015) ide do `calculators_common.php`
+tesne pred `adpkdInterpretation`. Prahy k (0.015 / 0.03 / 0.045 / 0.06) a
+výstupy tried sa nemenia; pin 7 scenárov + 4 hranice v
+`tools/test_clinical_references.php`. Atypická trieda 2 ostáva v POST vetve
+stránky. Meno bez prefixu `calculator*` (konzistentné s `adpkdInterpretation`).
+
 ## 2026-11-06 (tick 30) — iganRisk do calculators_common
 
 `iganRisk` (Barbour 2019 klinický model) ide do `calculators_common.php`
