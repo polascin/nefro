@@ -76,9 +76,14 @@ if ($isPost) {
     }
 }
 
-$pageTitle = 'Oznámenie nezákonného obsahu';
-$metaDescription = 'Kontaktné miesto a formulár na oznámenie nezákonného obsahu podľa aktu o digitálnych službách.';
-include 'header.php';
+// Plný <head> (DOCTYPE, CSS, canonical, meta) ako ostatné právne stránky; samotné
+// header.php vynechalo DOCTYPE aj štýly, takže stránka bežala v quirks móde.
+$legalTitle       = 'Oznámenie nezákonného obsahu';
+$legalDescription = 'Kontaktné miesto a formulár na oznámenie nezákonného obsahu podľa aktu o digitálnych službách.';
+$legalSlug        = 'content_report.php';
+$legalHeaderTitle = 'Oznámenie nezákonného obsahu';
+$legalHeaderIntro = 'Kontaktné miesto podľa nariadenia (EÚ) 2022/2065';
+include 'legal_head.php';
 include 'main_nav.php';
 ?>
 <main id="main-content" class="container main-content main-content--single-col" role="main">
