@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:41 Europe/Bratislava
+Aktualizované: 2026-11-06 03:42 Europe/Bratislava
 
 ## Aktívna úloha
 
@@ -9,8 +9,8 @@ Beh: `iganInterpretation` do `calculators_common`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `36c6541b`; feature = DEPLOY)
-- Runtime / `DEPLOY_COMMIT`: `36c6541b`
+- Vetva: `main` (HEAD `ca6a4c5a`; feature `36c6541b`)
+- Runtime / `DEPLOY_COMMIT`: `36c6541b` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
