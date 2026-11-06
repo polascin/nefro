@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Presunúť `iganInterpretation` z `calculator_igan.php` do `calculators_common.php`; pridať pin v teste (mimo klinickej opravy koeficientov).
+1. Pin aktuálneho správania `iganRisk` (golden cases bez zmeny koeficientov), alebo malý bezpečný refactor CKD-PC label helperov (`sexLabel` / `smokingLabel` / `boolLabel`).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-o (iganInterpretation)
+
+- [x] `iganInterpretation` → `calculators_common`; pin pásiem 5/15/40 + wiring; `iganRisk` lokálne; clinical 107 PASS; suite 56 PASS; deploy `36c6541b`
 
 ## Hotové: slučka 2026-11-06-n (adpkdInterpretation)
 
