@@ -2,12 +2,19 @@
 
 ## Ďalšia slučka
 
-1. `ekfcModeLabel` → `calculators_common` (malý label helper), alebo iný malý bezpečný kalkulačkový refactor.
+**RSI slučka prechodne zastavená** (2026-11-06, pokyn používateľa). Bez ticku 34, kým majiteľ nevysloví pokračovanie.
+
+1. Až na pokyn: ďalší malý bezpečný kalkulačkový refactor (kandidát `preventRenderOutcome` / print format helpery).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-s (calculatorEkfcModeLabel + pauza)
+
+- [x] `ekfcModeLabel` → `calculatorEkfcModeLabel` v common; pin 5 + wiring; clinical 134 PASS; suite 56 PASS; deploy `f695d7aa`
+- [x] RSI loop PID 59480 / sentinel zastavený
 
 ## Hotové: slučka 2026-11-06-r (adpkdClassify)
 
