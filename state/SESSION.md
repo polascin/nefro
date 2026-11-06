@@ -9,8 +9,8 @@ Beh: `ckmStageClass` do `calculators_common`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `5110a7f9`)
-- Runtime / `DEPLOY_COMMIT`: `5110a7f9` (zhoda s HEAD)
+- Vetva: `main` (HEAD `5fad4075`; feature `5110a7f9`)
+- Runtime / `DEPLOY_COMMIT`: `5110a7f9` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
