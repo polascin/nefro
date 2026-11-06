@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:48 Europe/Bratislava
+Aktualizované: 2026-11-06 03:53 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: `iganRisk` do `calculators_common` + golden pin. Handoff:
-`.codex/handoffs/2026-11-06-034716-igan-risk-common-pin.md`.
+Beh: CKD-PC label helpery do `calculators_common` + pin. Handoff:
+`.codex/handoffs/2026-11-06-035239-ckdpc-label-helpers-common.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `2c7fda2d`; feature `715c6dcc`)
-- Runtime / `DEPLOY_COMMIT`: `715c6dcc` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `e8ae58c6`; feature = DEPLOY_COMMIT)
+- Runtime / `DEPLOY_COMMIT`: `e8ae58c6`
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -44,6 +44,7 @@ Beh: `iganRisk` do `calculators_common` + golden pin. Handoff:
 27. Slučka tick 28: `adpkdInterpretation` → `calculators_common`; clinical 101 PASS; suite 56 PASS; deploy `f947f90b`
 28. Slučka tick 29: `iganInterpretation` → `calculators_common`; clinical 107 PASS; suite 56 PASS; deploy `36c6541b`
 29. Slučka tick 30: `iganRisk` → `calculators_common` + golden pin 8 scenárov; clinical 116 PASS; suite 56 PASS; deploy `715c6dcc`
+30. Slučka tick 31: CKD-PC label helpery → `calculatorBool/Sex/SmokingLabel`; CKD-PC/CKM 53 PASS; suite 56 PASS; deploy `e8ae58c6`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -53,11 +54,11 @@ Beh: `iganRisk` do `calculators_common` + golden pin. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function (boolLabel|smokingLabel|sexLabel)" calculator_ckdpc.php calculators_common.php tools/
+rg -n "function adpkdClassify" calculator_adpkd.php calculators_common.php tools/
 ```
 
-CKD-PC label helpery do `calculators_common` s prefixom, alebo iný malý bezpečný kalkulačkový refactor.
+`adpkdClassify` do `calculators_common` (interpretácia už je common), alebo iný malý bezpečný kalkulačkový refactor.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-034716-igan-risk-common-pin.md`
+`.codex/handoffs/2026-11-06-035239-ckdpc-label-helpers-common.md`
