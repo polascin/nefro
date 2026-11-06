@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Zjednotiť lokálne `*ParseNonNeg` na `calculatorParseNonNegativeFloat` (gupta, furst, crrt, tls, mgus, ckm, plasmic; `kdpiParseNonNeg`), mimo unit faktorov a mimo „Čaká na majiteľa“.
+1. Presunúť `ckmStageClass` z `calculator_ckm.php` do `calculators_common.php`; upraviť pin v `tools/test_clinical_references_ckdpc_ckm.php` (mimo „Čaká na majiteľa“).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
-4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
+4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
-6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-j (ParseNonNeg)
+
+- [x] Lokálne `*ParseNonNeg` + `kdpiParseNonNeg` → `calculatorParseNonNegativeFloat`; CRRT empty→0; suite 56 PASS; deploy `e676e53b`
 
 ## Hotové: slučka 2026-11-06-i (kreatinín µmol ↔ mmol)
 

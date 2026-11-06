@@ -1,17 +1,17 @@
 # SESSION
 
-Aktualizované: 2026-11-06 02:56 Europe/Bratislava
+Aktualizované: 2026-11-06 03:15 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: kreatinín µmol/L ↔ mmol/L cez `CREATININE_UMOL_PER_MMOL` / `creatinineUmolLToMmolL`. Handoff:
-`.codex/handoffs/2026-11-06-025500-creatinine-umol-mmol.md`.
+Beh: zjednotenie `*ParseNonNeg` na `calculatorParseNonNegativeFloat`. Handoff:
+`.codex/handoffs/2026-11-06-031500-parse-nonneg-unify.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `84a31ee0`; feature `a165e6d1`)
-- Runtime / `DEPLOY_COMMIT`: `a165e6d1` (docs-only drift po handoffe OK)
-- Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
+- Vetva: `main` (HEAD po docs commite; feature `e676e53b`)
+- Runtime / `DEPLOY_COMMIT`: `e676e53b`
+- Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
 
@@ -37,6 +37,7 @@ Beh: kreatinín µmol/L ↔ mmol/L cez `CREATININE_UMOL_PER_MMOL` / `creatinineU
 20. Slučka tick 21: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`; units 187 PASS; clinical 85 PASS; scores 26 PASS; suite 56 PASS
 21. Slučka tick 22: `MASS_CONC_GL_TO_MGL` + `massConcGlToMgl` / `massConcMglToGl`; UACR g/L → mg/L; units 193 PASS; clinical 87 PASS; scores 26 PASS; suite 56 PASS
 22. Slučka tick 23: `CREATININE_UMOL_PER_MMOL` + `creatinineUmolLToMmolL` / `creatinineMmolLToUmolL`; AKI + CrCl; units 199 PASS; urine 24 PASS; suite 56 PASS
+23. Slučka tick 24: `*ParseNonNeg` → `calculatorParseNonNegativeFloat` (8 stránok + kdpi); suite 56 PASS; deploy `e676e53b`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -46,11 +47,11 @@ Beh: kreatinín µmol/L ↔ mmol/L cez `CREATININE_UMOL_PER_MMOL` / `creatinineU
 ## Executable next step
 
 ```text
-rg -n "function \\w+ParseNonNeg" calculator_*.php calculators_common.php
+rg -n "function ckmStageClass" calculator_ckm.php calculators_common.php tools/test_clinical_references_ckdpc_ckm.php
 ```
 
-Zjednotiť lokálne `*ParseNonNeg` na existujúci `calculatorParseNonNegativeFloat` (mimo unit faktorov, mimo majiteľa).
+Presunúť `ckmStageClass` do `calculators_common` (mimo majiteľa).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-025500-creatinine-umol-mmol.md`
+`.codex/handoffs/2026-11-06-031500-parse-nonneg-unify.md`
