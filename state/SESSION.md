@@ -9,8 +9,8 @@ Beh: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `600e2f50`)
-- Runtime / `DEPLOY_COMMIT`: `600e2f50`
+- Vetva: `main` (HEAD `e5bbceb8`; feature `600e2f50`)
+- Runtime / `DEPLOY_COMMIT`: `600e2f50` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
