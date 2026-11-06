@@ -1098,6 +1098,60 @@ function ckdpcInterpretation(float $risk3yr): array
 }
 
 /**
+ * Klinická interpretácia 2- a 5-ročného rizika KFRE (Tangri).
+ *
+ * @param float $risk2yr 2-ročné riziko v %
+ * @param float $risk5yr 5-ročné riziko v %
+ * @return array{interpretation: list<string>, warnings: list<string>}
+ */
+function kfreInterpretation(float $risk2yr, float $risk5yr): array
+{
+    $interpretation = [];
+    $warnings = [];
+
+    if ($risk5yr >= 3.0 && $risk5yr <= 5.0) {
+        $interpretation[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: zvážiť odoslanie k nefrológovi.";
+    } elseif ($risk5yr > 5.0) {
+        $interpretation[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: výrazne zvýšené, odporúča sa konzultácia nefrológa.";
+    } else {
+        $interpretation[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: nižšie ako odporúčaný prah pre nefrologickú konzultáciu.";
+    }
+
+    if ($risk2yr > 10.0) {
+        $interpretation[] =
+            "2-ročné riziko " .
+            number_format($risk2yr, 1, ",", " ") .
+            " % (>10 %): zvážiť intenzívnejší/multidisciplinárny model starostlivosti.";
+        $warnings[] =
+            "Potrebný multidisciplinárny tím: nefrológ, diabetológ, kardiológ, nutričný terapeuta, všeobecný lekár, edukačná sestra.";
+    } else {
+        $interpretation[] =
+            "2-ročné riziko " .
+            number_format($risk2yr, 1, ",", " ") .
+            " %: aktuálne pod prahom 10 % pre intenzívny model.";
+    }
+
+    if ($risk2yr > 40.0) {
+        $warnings[] =
+            "KRITICKÉ: 2-ročné riziko nad 40 %; potrebné včasné plánovanie náhrady funkcie obličiek.";
+    }
+
+    return [
+        "interpretation" => $interpretation,
+        "warnings" => $warnings,
+    ];
+}
+
+/**
  * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
  * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.
  */

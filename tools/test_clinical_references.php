@@ -56,6 +56,51 @@ foreach ($kfreCases as $i => [$age, $sex, $egfr, $uacr, $isNa, $r2, $r5]) {
 $fromMmol = kfreRisk(60, 'male', 25.0, uacrMgMmolToMgG(uacrMgGToMgMmol(300.0)), false);
 clinicalRefApprox(10.0, $fromMmol['risk_2yr'], 0.05, 'KFRE UACR mg/g konzistencia');
 
+// KFRE interpretácia: pásma 5yr 3–5 / >5 % a 2yr 10 / 40 % (správanie + wiring)
+$kfreLow = kfreInterpretation(2.0, 2.5);
+clinicalRefTest(
+    $kfreLow['warnings'] === []
+        && str_contains($kfreLow['interpretation'][0], 'nižšie ako odporúčaný prah')
+        && str_contains($kfreLow['interpretation'][1], 'pod prahom 10 %'),
+    'KFRE low: 5yr <3 % a 2yr ≤10 % bez varovania',
+);
+$kfreReferral = kfreInterpretation(5.0, 4.0);
+clinicalRefTest(
+    $kfreReferral['warnings'] === []
+        && str_contains($kfreReferral['interpretation'][0], 'zvážiť odoslanie k nefrológovi'),
+    'KFRE 5yr 3–5 %: zvážiť odoslanie bez varovania',
+);
+$kfreElevated = kfreInterpretation(15.0, 20.0);
+clinicalRefTest(
+    count($kfreElevated['warnings']) === 1
+        && str_contains($kfreElevated['interpretation'][0], 'výrazne zvýšené')
+        && str_contains($kfreElevated['interpretation'][1], '>10 %')
+        && str_contains($kfreElevated['warnings'][0], 'multidisciplinárny tím'),
+    'KFRE 2yr >10 % a 5yr >5 %: zvýšené + multidisciplinárne varovanie',
+);
+$kfreCritical = kfreInterpretation(45.0, 80.0);
+clinicalRefTest(
+    count($kfreCritical['warnings']) === 2
+        && str_contains($kfreCritical['warnings'][1], 'KRITICKÉ')
+        && str_contains($kfreCritical['warnings'][1], 'nad 40 %'),
+    'KFRE 2yr >40 %: kritické varovanie plánovania RRT',
+);
+
+$kfrePageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_kfre.php');
+$kfreCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+clinicalRefTest(
+    str_contains($kfreCommonSource, '$risk5yr >= 3.0 && $risk5yr <= 5.0')
+        && str_contains($kfreCommonSource, '$risk5yr > 5.0')
+        && str_contains($kfreCommonSource, '$risk2yr > 10.0')
+        && str_contains($kfreCommonSource, '$risk2yr > 40.0'),
+    'calculators_common.php musí mať KFRE interpretačné prahy 3–5 / >5 / 10 / 40 %',
+);
+clinicalRefTest(
+    str_contains($kfrePageSource, 'kfreInterpretation(')
+        && !str_contains($kfrePageSource, 'function kfreInterpretation'),
+    'calculator_kfre.php volá kfreInterpretation z calculators_common.php',
+);
+
 // ─── EKFC Q plateau a polynóm ───
 clinicalRefApprox(80.0, ekfcQCreatinineUmol(50.0, 'male'), 1e-9, 'EKFC Q Cr muž >25');
 clinicalRefApprox(62.0, ekfcQCreatinineUmol(50.0, 'female'), 1e-9, 'EKFC Q Cr žena >25');
