@@ -136,6 +136,10 @@ foreach ($labels as [$code, $label]) {
     ckdpcCkmRefTest(ckmStageLabel($code) === $label, 'CKM label ' . $code);
 }
 
+ckdpcCkmRefTest(ckmStageClass(0) === 'risk-low' && ckmStageClass(1) === 'risk-low', 'CKM štádium 0–1: risk-low');
+ckdpcCkmRefTest(ckmStageClass(2) === 'risk-moderate', 'CKM štádium 2: risk-moderate');
+ckdpcCkmRefTest(ckmStageClass(3) === 'risk-high' && ckmStageClass(4) === 'risk-high', 'CKM štádium 3–4: risk-high');
+
 // Wiring: BMI prahy a KF→very-high v calculator_ckm.php (AHA / AHA-asian 23)
 $ckmSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_ckm.php');
 ckdpcCkmRefTest(
@@ -146,6 +150,10 @@ ckdpcCkmRefTest(
     str_contains($ckmSource, '$ckdRisk === "veryhigh" || $kidneyFailure'),
     'calculator_ckm.php musí mapovať zlyhanie obličiek na ckdVeryHigh',
 );
+ckdpcCkmRefTest(
+    str_contains($ckmSource, 'ckmStageClass(') && !str_contains($ckmSource, 'function ckmStageClass'),
+    'calculator_ckm.php volá ckmStageClass z calculators_common.php',
+);
 
 // Wiring: CKD-PC interpretačné prahy 5 / 10 / 20 %
 $ckdpcSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_ckdpc.php');
@@ -155,10 +163,6 @@ ckdpcCkmRefTest(str_contains($ckdpcSource, '$risk3yr < 20.0'), 'CKD-PC interpret
 ckdpcCkmRefTest(
     str_contains($ckdpcSource, 'function ckdpcInterpretation'),
     'calculator_ckdpc.php musí mať ckdpcInterpretation',
-);
-ckdpcCkmRefTest(
-    str_contains($ckmSource, 'function ckmStageClass'),
-    'calculator_ckm.php musí mať ckmStageClass',
 );
 
 echo "Clinical references (CKD-PC/CKM): $checks PASS\n";

@@ -1042,6 +1042,18 @@ function furstLabel(float $ratio): string
     return 'reštrikcia tekutín neúčinná';
 }
 
+/** CSS trieda podľa číselného štádia CKM (0–4; AHA 2023). */
+function ckmStageClass(int $num): string
+{
+    if ($num >= 3) {
+        return 'risk-high';
+    }
+    if ($num === 2) {
+        return 'risk-moderate';
+    }
+    return 'risk-low';
+}
+
 /**
  * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
  * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.

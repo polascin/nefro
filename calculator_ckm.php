@@ -6,18 +6,6 @@ require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php';
 require_once __DIR__ . '/ckd_risk_models.php';
 
-/** CSS trieda podľa číselného štádia CKM (0–4). */
-function ckmStageClass(int $num): string
-{
-    if ($num >= 3) {
-        return 'risk-high';
-    }
-    if ($num === 2) {
-        return 'risk-moderate';
-    }
-    return 'risk-low';
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
