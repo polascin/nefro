@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-06 20:45',
+                'date' => '2026-11-06 20:26',
                 'category' => 'calculators',
                 'title' => 'Mayo klasifikácia ADPKD: triedy podľa ročného prírastku a opravená citácia',
                 'description' => 'Triedy 1A až 1E sa určujú podľa ročného percentuálneho prírastku HtTKV (< 1,5 / 3 / 4,5 / 6 %), ako ho definuje Irazabal a kol. Doteraz sa porovnávala logaritmická miera rastu, takže napríklad prírastok 6,1 %/rok sa zaradil do 1D namiesto 1E. Opravená je aj citácia: J Am Soc Nephrol 2015;26(1):160–172 (PMID 24904092).',

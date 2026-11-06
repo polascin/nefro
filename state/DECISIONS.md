@@ -253,6 +253,14 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
 
+## 2026-11-06 (slučka u) — ADPKD Mayo: klasifikácia podľa ročného % prírastku
+
+Irazabal 2015 (PMC4279733, Methods): „yearly percentage increases of <1.5% (1A) …
+>6% (1E)“ od teoretických 150 mL/m. Rovnica s počiatočným vekom nie je v texte
+(Suppl.); ponechaný predpoklad celého veku, zhodný so zobrazeným %/rok. Zmena
+dotkne len pacientov tesne nad hranicami (r ≥ prah, k < prah). Nová vetva nad main,
+stará `fix/adpkd-mayo-2026-11-03` ponechaná. Rollback: revert merge `7ec81e1c`.
+
 ## 2026-11-06 (slučka t) — Gupta Mg: nová vetva namiesto rebase starej
 
 Majiteľ obnovil /loop. Zdroj overený (Gupta 2024, PMC10964715, Methods:

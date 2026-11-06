@@ -4,12 +4,17 @@
 
 ## Ďalej
 
-1. ADPKD Mayo %/rok: overiť zdroj, nová vetva nad main + nový golden pin `adpkdClassify`.
-2. Voliteľné so súhlasom: zmazať nahradenú vetvu `fix/gupta-mg-cutoff-2026-11-03`.
+1. Audit kalkulačiek bez PubMed odkazu proti primárnemu zdroju (citácia + prahy).
+2. Voliteľné so súhlasom: zmazať nahradené vetvy `fix/gupta-mg-cutoff-2026-11-03`, `fix/adpkd-mayo-2026-11-03`.
 3. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 4. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
+
+## Hotové: slučka 2026-11-06-u (ADPKD Mayo, Beh 165)
+
+- [x] Mayo triedy podľa r (ročný %); citácia PMID 24904092; pin; deploy `7ec81e1c`
+- [x] Beh 165: PHPStan 0; živé kontroly PASS
 
 ## Hotové: slučka 2026-11-06-t (Gupta Mg, Beh 164)
 
