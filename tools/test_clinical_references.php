@@ -326,6 +326,28 @@ $above = ekfcCore(100.0, 80.0, 30.0);
 clinicalRefApprox(-0.322, $below['exponent'], 1e-9, 'EKFC exponent pod Q');
 clinicalRefApprox(-1.132, $above['exponent'], 1e-9, 'EKFC exponent nad Q');
 
+// EKFC mode label (UI štítok; bez zmeny výpočtu)
+clinicalRefTest(calculatorEkfcModeLabel('cr') === 'EKFC z kreatinínu', 'EKFC label cr');
+clinicalRefTest(calculatorEkfcModeLabel('cys') === 'EKFC z cystatínu C', 'EKFC label cys');
+clinicalRefTest(
+    calculatorEkfcModeLabel('cr_cys') === 'EKFC kombinovaná (kreatinín + cystatín C)',
+    'EKFC label cr_cys',
+);
+clinicalRefTest(calculatorEkfcModeLabel('other') === 'EKFC', 'EKFC label default');
+clinicalRefTest(calculatorEkfcModeLabel('') === 'EKFC', 'EKFC label empty → default');
+$ekfcPageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_ekfc.php');
+$ekfcCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+clinicalRefTest(
+    str_contains($ekfcCommonSource, 'function calculatorEkfcModeLabel'),
+    'calculators_common.php definuje calculatorEkfcModeLabel',
+);
+clinicalRefTest(
+    str_contains($ekfcPageSource, 'calculatorEkfcModeLabel(')
+        && !str_contains($ekfcPageSource, 'function calculatorEkfcModeLabel')
+        && !str_contains($ekfcPageSource, 'function ekfcModeLabel'),
+    'calculator_ekfc.php volá calculatorEkfcModeLabel z common',
+);
+
 // ─── UACR ───
 clinicalRefApprox(6.0, calculatorUacrMgMmol(30.0, 5.0), 1e-9, 'UACR 30/5 mg/mmol');
 clinicalRefApprox(53.04, round(calculatorUacrMgG(30.0, 5.0), 2), 0.005, 'UACR 30/5 mg/g');

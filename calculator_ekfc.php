@@ -248,16 +248,6 @@ if (isLoggedIn()) {
     }
 }
 
-/** Čitateľný názov zvolenej varianty rovnice. */
-function ekfcModeLabel(string $mode): string
-{
-    return match ($mode) {
-        'cr' => 'EKFC z kreatinínu',
-        'cys' => 'EKFC z cystatínu C',
-        'cr_cys' => 'EKFC kombinovaná (kreatinín + cystatín C)',
-        default => 'EKFC',
-    };
-}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -432,7 +422,7 @@ function ekfcModeLabel(string $mode): string
                     $riskCls = egfrRiskClass($calculated['g_category']);
                 ?>
                     <div class="form-section calculator-result-block <?= htmlspecialchars($riskCls) ?>" role="status" aria-live="polite">
-                        <h3>Výsledok výpočtu: <?= htmlspecialchars(ekfcModeLabel((string) $calculated['mode'])) ?></h3>
+                        <h3>Výsledok výpočtu: <?= htmlspecialchars(calculatorEkfcModeLabel((string) $calculated['mode'])) ?></h3>
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float) $calculated['egfr'], 1, ',', ' ')) ?></span>
@@ -579,7 +569,7 @@ function ekfcModeLabel(string $mode): string
                         echo ' (' . htmlspecialchars($category) . ')';
                     }
                     if ($mode !== '') {
-                        echo '<small class="d-block saved-meta">' . htmlspecialchars(ekfcModeLabel($mode)) . '</small>';
+                        echo '<small class="d-block saved-meta">' . htmlspecialchars(calculatorEkfcModeLabel($mode)) . '</small>';
                     }
                 }
             ); ?>

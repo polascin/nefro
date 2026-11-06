@@ -1125,6 +1125,17 @@ function calculatorSexLabel(string $v): string
     return $v === "male" ? "Muž" : "Žena";
 }
 
+/** Čitateľný názov zvolenej varianty rovnice EKFC. */
+function calculatorEkfcModeLabel(string $mode): string
+{
+    return match ($mode) {
+        "cr" => "EKFC z kreatinínu",
+        "cys" => "EKFC z cystatínu C",
+        "cr_cys" => "EKFC kombinovaná (kreatinín + cystatín C)",
+        default => "EKFC",
+    };
+}
+
 /**
  * Klinická interpretácia 2- a 5-ročného rizika KFRE (Tangri).
  *
