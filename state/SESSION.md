@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:15 Europe/Bratislava
+Aktualizované: 2026-11-06 03:21 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: zjednotenie `*ParseNonNeg` na `calculatorParseNonNegativeFloat`. Handoff:
-`.codex/handoffs/2026-11-06-031500-parse-nonneg-unify.md`.
+Beh: `ckmStageClass` do `calculators_common`. Handoff:
+`.codex/handoffs/2026-11-06-032054-ckm-stage-class-common.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e610421b`; feature `e676e53b`)
-- Runtime / `DEPLOY_COMMIT`: `e676e53b` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `5110a7f9`)
+- Runtime / `DEPLOY_COMMIT`: `5110a7f9` (zhoda s HEAD)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -38,6 +38,7 @@ Beh: zjednotenie `*ParseNonNeg` na `calculatorParseNonNegativeFloat`. Handoff:
 21. Slučka tick 22: `MASS_CONC_GL_TO_MGL` + `massConcGlToMgl` / `massConcMglToGl`; UACR g/L → mg/L; units 193 PASS; clinical 87 PASS; scores 26 PASS; suite 56 PASS
 22. Slučka tick 23: `CREATININE_UMOL_PER_MMOL` + `creatinineUmolLToMmolL` / `creatinineMmolLToUmolL`; AKI + CrCl; units 199 PASS; urine 24 PASS; suite 56 PASS
 23. Slučka tick 24: `*ParseNonNeg` → `calculatorParseNonNegativeFloat` (8 stránok + kdpi); suite 56 PASS; deploy `e676e53b`
+24. Slučka tick 25: `ckmStageClass` → `calculators_common`; CKD-PC/CKM 40 PASS; suite 56 PASS; deploy `5110a7f9`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -47,11 +48,11 @@ Beh: zjednotenie `*ParseNonNeg` na `calculatorParseNonNegativeFloat`. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function ckmStageClass" calculator_ckm.php calculators_common.php tools/test_clinical_references_ckdpc_ckm.php
+rg -n "function ckdpcInterpretation" calculator_ckdpc.php calculators_common.php tools/test_clinical_references_ckdpc_ckm.php
 ```
 
-Presunúť `ckmStageClass` do `calculators_common` (mimo majiteľa).
+Presunúť `ckdpcInterpretation` do `calculators_common` (mimo majiteľa).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-031500-parse-nonneg-unify.md`
+`.codex/handoffs/2026-11-06-032054-ckm-stage-class-common.md`
