@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-06 22:10',
+                'date' => '2026-11-06 21:57',
                 'category' => 'portal',
                 'title' => 'Rýchlejšie stránky článkov: výber autora len na hlavnej stránke',
                 'description' => 'Zoznam všetkých autorov zdrojových článkov (vyše 2 500 mien) sa už nevkladá do každej stránky článku, čím sa stránka zmenšila zhruba o 200 kB. Odkaz „Vyhľadať ďalšieho autora“ otvorí rovnaký výber na hlavnej stránke.',
