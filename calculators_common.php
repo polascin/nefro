@@ -1055,6 +1055,49 @@ function ckmStageClass(int $num): string
 }
 
 /**
+ * Klinická interpretácia 3-ročného rizika CKD-PC (gfrdecline40).
+ *
+ * @param float $risk3yr Riziko v %
+ * @return array{interpretation: list<string>, warnings: list<string>}
+ */
+function ckdpcInterpretation(float $risk3yr): array
+{
+    $interpretation = [];
+    $warnings = [];
+
+    if ($risk3yr < 5.0) {
+        $interpretation[] =
+            "3-ročné riziko " .
+            number_format($risk3yr, 1, ",", " ") .
+            " %: nízke riziko progresie obličkového ochorenia.";
+    } elseif ($risk3yr < 10.0) {
+        $interpretation[] =
+            "3-ročné riziko " .
+            number_format($risk3yr, 1, ",", " ") .
+            " %: stredne zvýšené riziko, odporúča sa intenzívnejší monitoring eGFR a uACR.";
+    } elseif ($risk3yr < 20.0) {
+        $interpretation[] =
+            "3-ročné riziko " .
+            number_format($risk3yr, 1, ",", " ") .
+            " %: zvýšené riziko progresie CKD, zvážiť konzultáciu nefrológa.";
+        $warnings[] =
+            "Riziko ≥10 %: zvážiť intenzívnejší/multidisciplinárny model starostlivosti (analogicky s prahom pre 2-ročné riziko z KFRE).";
+    } else {
+        $interpretation[] =
+            "3-ročné riziko " .
+            number_format($risk3yr, 1, ",", " ") .
+            " %: vysoké riziko rýchlej progresie, prioritne zvážiť konzultáciu nefrológa a optimalizáciu terapie.";
+        $warnings[] =
+            "Riziko ≥20 %: zvážiť včasné plánovanie náhrady funkcie obličiek a odoslanie na nefrologickú ambulanciu.";
+    }
+
+    return [
+        "interpretation" => $interpretation,
+        "warnings" => $warnings,
+    ];
+}
+
+/**
  * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
  * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.
  */

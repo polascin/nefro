@@ -155,14 +155,43 @@ ckdpcCkmRefTest(
     'calculator_ckm.php volá ckmStageClass z calculators_common.php',
 );
 
-// Wiring: CKD-PC interpretačné prahy 5 / 10 / 20 %
-$ckdpcSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_ckdpc.php');
-ckdpcCkmRefTest(str_contains($ckdpcSource, '$risk3yr < 5.0'), 'CKD-PC interpretácia prah 5 %');
-ckdpcCkmRefTest(str_contains($ckdpcSource, '$risk3yr < 10.0'), 'CKD-PC interpretácia prah 10 %');
-ckdpcCkmRefTest(str_contains($ckdpcSource, '$risk3yr < 20.0'), 'CKD-PC interpretácia prah 20 %');
+// CKD-PC interpretácia: pásma 5 / 10 / 20 % (správanie + wiring)
+$ckdpcLow = ckdpcInterpretation(4.9);
 ckdpcCkmRefTest(
-    str_contains($ckdpcSource, 'function ckdpcInterpretation'),
-    'calculator_ckdpc.php musí mať ckdpcInterpretation',
+    $ckdpcLow['warnings'] === [] && str_contains($ckdpcLow['interpretation'][0], 'nízke riziko'),
+    'CKD-PC < 5 %: nízke riziko bez varovania',
+);
+$ckdpcMid = ckdpcInterpretation(5.0);
+ckdpcCkmRefTest(
+    $ckdpcMid['warnings'] === [] && str_contains($ckdpcMid['interpretation'][0], 'stredne zvýšené'),
+    'CKD-PC 5–<10 %: stredne zvýšené bez varovania',
+);
+$ckdpcElevated = ckdpcInterpretation(10.0);
+ckdpcCkmRefTest(
+    count($ckdpcElevated['warnings']) === 1
+        && str_contains($ckdpcElevated['interpretation'][0], 'zvýšené riziko progresie CKD')
+        && str_contains($ckdpcElevated['warnings'][0], 'Riziko ≥10 %'),
+    'CKD-PC 10–<20 %: zvýšené riziko + varovanie ≥10 %',
+);
+$ckdpcHigh = ckdpcInterpretation(20.0);
+ckdpcCkmRefTest(
+    count($ckdpcHigh['warnings']) === 1
+        && str_contains($ckdpcHigh['interpretation'][0], 'vysoké riziko')
+        && str_contains($ckdpcHigh['warnings'][0], 'Riziko ≥20 %'),
+    'CKD-PC ≥20 %: vysoké riziko + varovanie ≥20 %',
+);
+
+$ckdpcSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_ckdpc.php');
+$ckdpcCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+ckdpcCkmRefTest(
+    str_contains($ckdpcCommonSource, '$risk3yr < 5.0')
+        && str_contains($ckdpcCommonSource, '$risk3yr < 10.0')
+        && str_contains($ckdpcCommonSource, '$risk3yr < 20.0'),
+    'calculators_common.php musí mať CKD-PC interpretačné prahy 5 / 10 / 20 %',
+);
+ckdpcCkmRefTest(
+    str_contains($ckdpcSource, 'ckdpcInterpretation(') && !str_contains($ckdpcSource, 'function ckdpcInterpretation'),
+    'calculator_ckdpc.php volá ckdpcInterpretation z calculators_common.php',
 );
 
 echo "Clinical references (CKD-PC/CKM): $checks PASS\n";
