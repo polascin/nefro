@@ -11,6 +11,11 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-06-y (deny include-only, Beh 169)
+
+- [x] calculator_ekfc_logic + widget_participating_authors v deny; regresia; deploy `8cf39b0c`
+- [x] prístupnosť formulárov, sitemap: bez nálezu
+
 ## Hotové: slučka 2026-11-06-x (výkon, Beh 168)
 
 - [x] datalist autorov len na index.php; regresia; deploy `52aa602a`

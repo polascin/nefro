@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 22:05 Europe/Bratislava
+Aktualizované: 2026-11-06 22:30 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -14,6 +14,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - v (Beh 166): KDIGO heatmapa G4×A1 = veľmi vysoké (oprava Behu 101). Deploy `20a30272`.
 - w (Beh 167): CKM 3 pri G4 bez uACR; popis štádia 3. Deploy `2e1941d9`.
 - x (Beh 168): datalist autorov len na indexe (404 254 → 42 kB). Deploy `52aa602a`.
+- y (Beh 169): deny pre 2 include-only knižnice + všeobecná regresia. Deploy `8cf39b0c`.
 
 ## Stav repozitára
 
@@ -25,9 +26,9 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: index.php 313 kB (iné veľké bloky
-okrem datalistu?), prístupnosť formulárov kalkulačiek, alebo kalkulačky bez golden pinu.
+Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: robots.txt Disallow vs deny
+zoznam, SEO metadáta kalkulačiek (description, canonical), alebo kalkulačky bez golden pinu.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-220500-loop-perf-autori-beh168.md`
+`.codex/handoffs/2026-11-06-223000-loop-deny-beh169.md`
