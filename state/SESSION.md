@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 02:14 Europe/Bratislava
+Aktualizované: 2026-11-06 02:34 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`. Handoff:
-`.codex/handoffs/2026-11-06-021351-uacr-albumin-mgdl-mgl.md`.
+Beh: UACR albumín g/L → mg/L cez `MASS_CONC_GL_TO_MGL` / `massConcGlToMgl`. Handoff:
+`.codex/handoffs/2026-11-06-023400-uacr-albumin-gl-mgl.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e5bbceb8`; feature `600e2f50`)
-- Runtime / `DEPLOY_COMMIT`: `600e2f50` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `e6a7bd6c`)
+- Runtime / `DEPLOY_COMMIT`: `e6a7bd6c`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -35,6 +35,7 @@ Beh: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`. Handoff:
 18. Slučka tick 19: `MASS_CONC_GDL_TO_GL` + `massConcGdlToGl` / `massConcGlToGdl`; Gupta + prevodník; units 172 PASS; scores 26 PASS; suite 56 PASS
 19. Slučka tick 20: `EGFR_ML_MIN_TO_ML_S` + `egfrMlMinToMlS` / `egfrMlSToMlMin`; prevodník + egfr/cys/ekfc; units 185 PASS; scores 26 PASS; suite 56 PASS
 20. Slučka tick 21: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`; units 187 PASS; clinical 85 PASS; scores 26 PASS; suite 56 PASS
+21. Slučka tick 22: `MASS_CONC_GL_TO_MGL` + `massConcGlToMgl` / `massConcMglToGl`; UACR g/L → mg/L; units 193 PASS; clinical 87 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -44,11 +45,11 @@ Beh: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`. Handoff:
 ## Executable next step
 
 ```text
-rg -n "ualb\s*\*\s*1000|\*\s*1000" calculator_uacr.php calculators_common.php
+rg -n "/\s*1000|\*\s*1000" calculator_aki.php calculators_common.php
 ```
 
-Po `* 1000` (g/L→mg/L): tenké helpery kreatinín µmol/L ↔ mmol/L (`calculator_aki.php` `/ 1000`, common `* 1000`), mimo majiteľa.
+Tenké helpery kreatinín µmol/L ↔ mmol/L (`calculator_aki.php` `/ 1000`, common `* 1000`), mimo majiteľa.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-021351-uacr-albumin-mgdl-mgl.md`
+`.codex/handoffs/2026-11-06-023400-uacr-albumin-gl-mgl.md`
