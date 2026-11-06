@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:42 Europe/Bratislava
+Aktualizované: 2026-11-06 03:48 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: `iganInterpretation` do `calculators_common`. Handoff:
-`.codex/handoffs/2026-11-06-034048-igan-interpretation-common.md`.
+Beh: `iganRisk` do `calculators_common` + golden pin. Handoff:
+`.codex/handoffs/2026-11-06-034716-igan-risk-common-pin.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `ca6a4c5a`; feature `36c6541b`)
-- Runtime / `DEPLOY_COMMIT`: `36c6541b` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `715c6dcc`)
+- Runtime / `DEPLOY_COMMIT`: `715c6dcc`
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -43,6 +43,7 @@ Beh: `iganInterpretation` do `calculators_common`. Handoff:
 26. Slučka tick 27: `kfreInterpretation` → `calculators_common`; clinical 93 PASS; suite 56 PASS; deploy `98753a08`
 27. Slučka tick 28: `adpkdInterpretation` → `calculators_common`; clinical 101 PASS; suite 56 PASS; deploy `f947f90b`
 28. Slučka tick 29: `iganInterpretation` → `calculators_common`; clinical 107 PASS; suite 56 PASS; deploy `36c6541b`
+29. Slučka tick 30: `iganRisk` → `calculators_common` + golden pin 8 scenárov; clinical 116 PASS; suite 56 PASS; deploy `715c6dcc`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -52,11 +53,11 @@ Beh: `iganInterpretation` do `calculators_common`. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function iganRisk" calculator_igan.php tools/
+rg -n "function (boolLabel|smokingLabel|sexLabel)" calculator_ckdpc.php calculators_common.php tools/
 ```
 
-Pin aktuálneho `iganRisk` (golden cases bez zmeny koeficientov), alebo malý bezpečný refactor CKD-PC label helperov.
+CKD-PC label helpery do `calculators_common` s prefixom, alebo iný malý bezpečný kalkulačkový refactor.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-034048-igan-interpretation-common.md`
+`.codex/handoffs/2026-11-06-034716-igan-risk-common-pin.md`

@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Pin aktuálneho správania `iganRisk` (golden cases bez zmeny koeficientov), alebo malý bezpečný refactor CKD-PC label helperov (`sexLabel` / `smokingLabel` / `boolLabel`).
+1. CKD-PC label helpery (`sexLabel` / `smokingLabel` / `boolLabel` → `calculators_common` s prefixom), alebo iný malý bezpečný kalkulačkový refactor.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-p (iganRisk pin)
+
+- [x] `iganRisk` → `calculators_common`; golden pin 8 scenárov + koeficienty; wiring; clinical 116 PASS; suite 56 PASS; deploy `715c6dcc`
 
 ## Hotové: slučka 2026-11-06-o (iganInterpretation)
 

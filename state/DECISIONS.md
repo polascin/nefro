@@ -252,3 +252,10 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **Rollback:** worker má feature detection; bez ENUM ostáva legacy režim.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
+
+## 2026-11-06 (tick 30) — iganRisk do calculators_common
+
+`iganRisk` (Barbour 2019 klinický model) ide do `calculators_common.php`
+vedľa `iganInterpretation`. Koeficienty sa nemenia; golden pin 8 scenárov
+v `tools/test_clinical_references.php` chráni aktuálne správanie. Klinická
+oprava koeficientov ostáva samostatný beh so súhlasom majiteľa.
