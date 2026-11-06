@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. UACR albumín mg/dL → mg/L (`* 10` v calculator_uacr.php) cez `MASS_CONC_GDL_TO_GL` / `massConcGdlToGl` (alebo alias), alebo iný P1 mimo „Čaká na majiteľa“.
+1. UACR albumín g/L → mg/L (`* 1000` v calculator_uacr.php) cez konštantu/helper (napr. `MASS_CONC_GL_TO_MGL` = 1000), alebo po vyčerpaní unit faktorov tenké helpery kreatinín µmol/L ↔ mmol/L (`calculator_aki.php` `/ 1000`), mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-g (UACR albumín mg/dL → mg/L)
+
+- [x] `massConcGdlToGl` v UACR; units 187 PASS; clinical 85 PASS; scores 26 PASS; deploy `600e2f50`
 
 ## Hotové: slučka 2026-11-06-f (eGFR ml/min ↔ ml/s)
 
