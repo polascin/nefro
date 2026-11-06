@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 00:05 Europe/Bratislava
+Aktualizované: 2026-11-07 01:00 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -18,6 +18,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - z (Beh 170): úplný head pre content_report (DSA) a admin_content_notices. Deploy `e544b159`.
 - aa (Beh 171): JSON-LD WebApplication + MedicalWebPage pre 33 kalkulačiek. Deploy `a11ba838`.
 - ab (Beh 172): externé odkazy (CYNMA bez odkazu, TNDTHD, APAR); admin/CSRF/cookie bez nálezu. Deploy `80d811e0`.
+- ac (Beh 173): 1 015 odkazov v článkoch; 8 mŕtvych → návrh náhrad čaká na súhlas; nástroj tools/check_external_links.sh.
 
 ## Stav repozitára
 
@@ -29,10 +30,10 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: externé odkazy v článkoch (DB obsah,
-len čítanie) a v lieky.php/studie.php; prípadne lokálny nástroj na pravidelnú kontrolu
-externých odkazov zo servera (tools/ + cron podľa tools/crontab.example, so súhlasom).
+ČAKÁ NA SÚHLAS: náhrady 8 mŕtvych odkazov v 7 článkoch (state/TODO.md). Po súhlase:
+upraviť add_*_article.php, merge do main (post-merge UPSERT + PDF), overiť článok naživo.
+Inak: IgAN/Na/CRRT tiež len so súhlasom; ďalšia technická kontrola podľa výberu.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-000500-loop-links-beh172.md`
+`.codex/handoffs/2026-11-07-010000-loop-article-links-beh173.md`
