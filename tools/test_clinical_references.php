@@ -101,7 +101,7 @@ clinicalRefTest(
     'calculator_kfre.php volá kfreInterpretation z calculators_common.php',
 );
 
-// Mayo ADPKD klasifikácia: pin tried 1A–1E podľa k (prah 0.015 / 0.03 / 0.045 / 0.06)
+// Mayo ADPKD klasifikácia: pin tried 1A–1E podľa ročného prírastku r (1,5 / 3 / 4,5 / 6 %, Irazabal 2015)
 // tkv_ml, height_cm, age → class, httkv, k_pct
 $adpkdClassifyCases = [
     [400.0, 170.0, 40.0, '1A', 235.3, 1.13],
@@ -123,31 +123,18 @@ foreach ($adpkdClassifyCases as $i => [$tkv, $h, $age, $cls, $httkv, $kPct]) {
         'ADPKD classify #' . ($i + 1) . " ($cls)",
     );
 }
-// Hranice k pri veku 40 a výške 170 cm (TKV = 150*exp(k*age)*height_m)
-$adpkdBoundaryBelow = adpkdClassify(150.0 * exp(0.01499 * 40.0) * 1.70, 170.0, 40.0);
-$adpkdBoundaryAt = adpkdClassify(150.0 * exp(0.015 * 40.0) * 1.70, 170.0, 40.0);
-clinicalRefTest(
-    $adpkdBoundaryBelow['class'] === '1A' && $adpkdBoundaryAt['class'] === '1B',
-    'ADPKD hranica k=0.015: 1A → 1B',
-);
-$adpkdB03Below = adpkdClassify(150.0 * exp(0.02999 * 40.0) * 1.70, 170.0, 40.0);
-$adpkdB03At = adpkdClassify(150.0 * exp(0.03 * 40.0) * 1.70, 170.0, 40.0);
-clinicalRefTest(
-    $adpkdB03Below['class'] === '1B' && $adpkdB03At['class'] === '1C',
-    'ADPKD hranica k=0.03: 1B → 1C',
-);
-$adpkdB045Below = adpkdClassify(150.0 * exp(0.04499 * 40.0) * 1.70, 170.0, 40.0);
-$adpkdB045At = adpkdClassify(150.0 * exp(0.045 * 40.0) * 1.70, 170.0, 40.0);
-clinicalRefTest(
-    $adpkdB045Below['class'] === '1C' && $adpkdB045At['class'] === '1D',
-    'ADPKD hranica k=0.045: 1C → 1D',
-);
-$adpkdB06Below = adpkdClassify(150.0 * exp(0.05999 * 40.0) * 1.70, 170.0, 40.0);
-$adpkdB06At = adpkdClassify(150.0 * exp(0.06 * 40.0) * 1.70, 170.0, 40.0);
-clinicalRefTest(
-    $adpkdB06Below['class'] === '1D' && $adpkdB06At['class'] === '1E',
-    'ADPKD hranica k=0.06: 1D → 1E',
-);
+// Hranice r pri veku 40 a výške 170 cm (TKV = 150 · (1 + r)^vek · výška_m)
+foreach ([[0.015, '1A', '1B'], [0.03, '1B', '1C'], [0.045, '1C', '1D'], [0.06, '1D', '1E']] as [$edge, $below, $at]) {
+    $adpkdBelow = adpkdClassify(150.0 * ((1.0 + $edge - 0.0001) ** 40.0) * 1.70, 170.0, 40.0);
+    $adpkdAt = adpkdClassify(150.0 * ((1.0 + $edge + 1e-9) ** 40.0) * 1.70, 170.0, 40.0);
+    clinicalRefTest(
+        $adpkdBelow['class'] === $below && $adpkdAt['class'] === $at,
+        "ADPKD hranica r={$edge}: {$below} → {$at}",
+    );
+}
+// Regresia: r = 6,1 %/rok (k ≈ 0,0592 < 0,06) musí byť 1E, nie 1D
+$adpkdR061 = adpkdClassify(150.0 * (1.061 ** 40.0) * 1.70, 170.0, 40.0);
+clinicalRefTest($adpkdR061['class'] === '1E' && $adpkdR061['k_pct'] === 6.1, 'ADPKD r = 6,1 %/rok je 1E.');
 
 // Mayo ADPKD interpretácia: triedy 1A–1E (správanie + wiring)
 $adpkd1a = adpkdInterpretation('1A');
@@ -198,10 +185,10 @@ $adpkdCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators
 clinicalRefTest(
     str_contains($adpkdCommonSource, 'function adpkdClassify')
         && str_contains($adpkdCommonSource, 'function adpkdInterpretation')
-        && str_contains($adpkdCommonSource, '$k < 0.015')
-        && str_contains($adpkdCommonSource, '$k < 0.03')
-        && str_contains($adpkdCommonSource, '$k < 0.045')
-        && str_contains($adpkdCommonSource, '$k < 0.06')
+        && str_contains($adpkdCommonSource, '$annual < 0.015')
+        && str_contains($adpkdCommonSource, '$annual < 0.03')
+        && str_contains($adpkdCommonSource, '$annual < 0.045')
+        && str_contains($adpkdCommonSource, '$annual < 0.06')
         && str_contains($adpkdCommonSource, 'Trieda 1C je typický kandidát')
         && str_contains($adpkdCommonSource, 'URGENTNÉ: Zvážiť zaradenie do transplantačného programu'),
     'calculators_common.php musí mať adpkdClassify aj adpkdInterpretation',

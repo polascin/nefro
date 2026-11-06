@@ -1194,29 +1194,31 @@ function kfreInterpretation(float $risk2yr, float $risk5yr): array
 }
 
 /**
- * Mayo ADPKD klasifikácia — Irazabal et al. JASN 2015;26(8):1987–1994
- * HtTKV = TKV / výška (mL/m)
- * k = ln(HtTKV / 150) / vek  — odhadovaná ročná rýchlosť rastu obličiek
- * Triedy 1A–1E podľa k (prahové hodnoty: 1.5%, 3.0%, 4.5%, 6.0%/rok)
- * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická)
+ * Mayo ADPKD klasifikácia: Irazabal MV a kol., J Am Soc Nephrol 2015;26(1):160–172,
+ * PMID 24904092. HtTKV = TKV / výška (mL/m); teoretický počiatočný HtTKV 150 mL/m.
+ * Triedy podľa ročného percentuálneho prírastku (Methods): < 1,5 % 1A, 1,5–3 % 1B,
+ * 3–4,5 % 1C, 4,5–6 % 1D, > 6 % 1E. Prírastok r = (HtTKV / 150)^(1/vek) − 1;
+ * klasifikuje sa podľa r, nie podľa logaritmickej miery k = ln(HtTKV / 150) / vek,
+ * ktorá je pri rovnakom r nižšia (napr. r = 6 % ↔ k ≈ 0,0583).
+ * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická) sa určuje mimo tejto funkcie.
  */
 function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
 {
     $height_m = $height_cm / 100.0;
     $httkv = $tkv_ml / $height_m; // mL/m
-    $k = log($httkv / 150.0) / $age; // ročná miera rastu (log)
-    $annual_pct = (exp($k) - 1.0) * 100.0; // % za rok
+    $annual = (($httkv / 150.0) ** (1.0 / $age)) - 1.0; // ročný prírastok (podiel)
+    $annual_pct = $annual * 100.0; // % za rok
 
-    if ($k < 0.015) {
+    if ($annual < 0.015) {
         $class = "1A";
         $speed = "Pomalá (<1,5 %/rok)";
-    } elseif ($k < 0.03) {
+    } elseif ($annual < 0.03) {
         $class = "1B";
         $speed = "Mierna (1,5–3 %/rok)";
-    } elseif ($k < 0.045) {
+    } elseif ($annual < 0.045) {
         $class = "1C";
         $speed = "Rýchla (3–4,5 %/rok)";
-    } elseif ($k < 0.06) {
+    } elseif ($annual < 0.06) {
         $class = "1D";
         $speed = "Veľmi rýchla (4,5–6 %/rok)";
     } else {
