@@ -9,8 +9,8 @@ Beh: `iganRisk` do `calculators_common` + golden pin. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `715c6dcc`)
-- Runtime / `DEPLOY_COMMIT`: `715c6dcc`
+- Vetva: `main` (HEAD `2c7fda2d`; feature `715c6dcc`)
+- Runtime / `DEPLOY_COMMIT`: `715c6dcc` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

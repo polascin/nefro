@@ -5,8 +5,8 @@
 - Generated At: 2026-11-06T03:47:16+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: 715c6dcc
-- Runtime / DEPLOY_COMMIT: 715c6dcc
+- Head Commit: 2c7fda2d (feature 715c6dcc)
+- Runtime / DEPLOY_COMMIT: 715c6dcc (docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
