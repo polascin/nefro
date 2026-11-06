@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 20:35 Europe/Bratislava
+Aktualizované: 2026-11-06 21:05 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -10,8 +10,8 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 ## Posledné slučky
 
 - t (Beh 164): Gupta Mg < 0,82 mmol/L; PHPStan 2 → 0. Deploy `43858b6d`, `5e38079a`.
-- u (Beh 165): ADPKD Mayo podľa ročného % prírastku r; citácia Irazabal opravená
-  (26(1):160–172, PMID 24904092). Deploy `7ec81e1c`.
+- u (Beh 165): ADPKD Mayo podľa ročného % prírastku r; citácia Irazabal. Deploy `7ec81e1c`.
+- v (Beh 166): KDIGO heatmapa G4×A1 = veľmi vysoké (oprava Behu 101). Deploy `20a30272`.
 
 ## Stav repozitára
 
@@ -23,10 +23,10 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalšia slučka: audit ďalšej kalkulačky
-proti primárnemu zdroju (citácia v texte + prahy), prednostne tie bez PubMed odkazu
-(`check_calculator_pubmed` pokrýva iba 18 odkazov).
+Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: preveriť ďalšie historické
+„klinické“ rozhodnutia v Primárnych úlohách `.audit.md` (Beh 101 bol chybný) proti
+primárnym zdrojom, napr. prahy CKM a ACC v Ambulantnej kalkulačke.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-203500-loop-adpkd-beh165.md`
+`.codex/handoffs/2026-11-06-210500-loop-kdigo-beh166.md`
