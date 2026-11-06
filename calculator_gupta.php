@@ -84,13 +84,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
         }
 
-        // Magnézium → mg/dL
+        // Magnézium: skóre sa hodnotí v mmol/L (< 0,82); mg/dL slúži na kontrolu rozsahu a uloženie.
         $mgRaw = calculatorParsePositiveFloat($form["magnesium_value"]);
         $mgMgdl = null;
+        $mgMmol = null;
         if ($mgRaw === null) {
             $errors[] = "Magnézium musí byť kladné číslo.";
         } else {
-            $mgMgdl = $form["magnesium_unit"] === "mg_dl" ? (float) $mgRaw : (float) $mgRaw * 2.43;
+            $mgMmol = $form["magnesium_unit"] === "mg_dl" ? magnesiumMgDlToMmolL((float) $mgRaw) : (float) $mgRaw;
+            $mgMgdl = $form["magnesium_unit"] === "mg_dl" ? (float) $mgRaw : magnesiumMmolLToMgDl((float) $mgRaw);
             if ($mgMgdl < 0.2 || $mgMgdl > 10.0) {
                 $errors[] = "Magnézium je mimo prijateľného rozsahu.";
             }
@@ -116,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 'mg' => $pMg,
                 'dose' => $pDose,
                 'score' => $score,
-            ] = guptaScore((float) $age, $htn, $dm, (float) $hbGdl, (float) $wbc, (float) $platelets, (float) $albGdl, (float) $mgMgdl, (float) $dose);
+            ] = guptaScore((float) $age, $htn, $dm, (float) $hbGdl, (float) $wbc, (float) $platelets, (float) $albGdl, (float) $mgMmol, (float) $dose);
             $cat = guptaRiskCategory($score);
 
             $calculated = [
@@ -285,7 +287,7 @@ if (isLoggedIn()) {
                             <strong>Leukocyty (×10⁹/l):</strong> ≤12 → 0 · &gt;12 → 1,5 &bull;
                             <strong>Trombocyty (×10⁹/l):</strong> ≥150 → 0 · &lt;150 → 1 &bull;
                             <strong>Albumín (g/dl):</strong> &gt;3,8 → 0 · 3,3–3,8 → 1 · &lt;3,3 → 1,5 &bull;
-                            <strong>Magnézium (mg/dl):</strong> ≥2,0 → 0 · &lt;2,0 → 1 &bull;
+                            <strong>Magnézium (mmol/l):</strong> ≥0,82 → 0 · &lt;0,82 → 1 &bull;
                             <strong>Dávka cisplatiny (mg):</strong> ≤50 → 0 · 51–75 → 2 · 76–100 → 2,5 · 101–125 → 3 · 126–150 → 5 · 151–200 → 7,5 · &gt;200 → 9,5
                         </div>
                         <div class="calc-formula-vars">
