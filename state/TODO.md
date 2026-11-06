@@ -1,18 +1,20 @@
 # TODO
 
-## Slučky PAUSED (2026-11-06)
+## Slučky ACTIVE (obnovené majiteľom 2026-11-06 popoludní)
 
-Denný doaudit (1d) a RSI ~20m loop sú **PAUSED**. Nespúšťať, kým majiteľ
-neobnoví. Tento beh novú slučku nespustil.
+## Ďalej
 
-## Po odblokovaní (nie teraz)
-
-1. BLOCKED: rebase + zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Mg &lt; 0,82 mmol/L) s pinom.
-2. BLOCKED: rebase + zlúčenie `fix/adpkd-mayo-2026-11-03` (Mayo %/rok) s aktualizáciou golden pinu `adpkdClassify`.
+1. ADPKD Mayo %/rok: overiť zdroj, nová vetva nad main + nový golden pin `adpkdClassify`.
+2. Voliteľné so súhlasom: zmazať nahradenú vetvu `fix/gupta-mg-cutoff-2026-11-03`.
 3. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 4. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
+
+## Hotové: slučka 2026-11-06-t (Gupta Mg, Beh 164)
+
+- [x] Gupta: Mg &lt; 0,82 mmol/L (PMC10964715); pin; changelog; deploy `43858b6d`
+- [x] Beh 164: PHPStan 0; živé kontroly PASS
 
 ## Hotové: close-WIP 2026-11-06 (pauza)
 

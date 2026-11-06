@@ -253,6 +253,14 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
 
+## 2026-11-06 (slučka t) — Gupta Mg: nová vetva namiesto rebase starej
+
+Majiteľ obnovil /loop. Zdroj overený (Gupta 2024, PMC10964715, Methods:
+„magnesium <0.82, ≥0.82 mmol/L“). Namiesto rebase `fix/gupta-mg-cutoff-2026-11-03`
+(starý merge-base, vlastný faktor 2,4305) nová vetva nad main so spoločnými
+`magnesium*` helpermi. Stará vetva ostáva, zmazanie len so súhlasom.
+Rollback: revert merge `43858b6d`.
+
 ## 2026-11-06 (pauza / close-WIP) — ADPKD a Gupta merge: NIE teraz
 
 Majiteľ požiadal dokončiť rozrobené a prechodne zastaviť doaudit + RSI slučky.
