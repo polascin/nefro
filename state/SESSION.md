@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 02:55 Europe/Bratislava
+Aktualizované: 2026-11-06 02:56 Europe/Bratislava
 
 ## Aktívna úloha
 
@@ -9,8 +9,8 @@ Beh: kreatinín µmol/L ↔ mmol/L cez `CREATININE_UMOL_PER_MMOL` / `creatinineU
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `a165e6d1`)
-- Runtime / `DEPLOY_COMMIT`: `a165e6d1`
+- Vetva: `main` (HEAD `84a31ee0`; feature `a165e6d1`)
+- Runtime / `DEPLOY_COMMIT`: `a165e6d1` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
