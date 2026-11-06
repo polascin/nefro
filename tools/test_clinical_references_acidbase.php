@@ -53,7 +53,12 @@ $hypo = calculatorAnionGapAnalysis(140.0, 104.0, 16.0, 20.0);
 acidbaseRefTest($hypo['ag'] === 20.0, 'Nekorigované AG ostáva 20 pri hypoalbuminémii.');
 acidbaseRefTest($hypo['corrected_ag'] === 25.0, 'Figge: AG + 5 pri Alb 20 g/L.');
 acidbaseRefTest($hypo['delta_ratio'] === 1.63, 'Δ/Δ z korigovaného AG.');
-acidbaseRefApprox(2.5, ACIDBASE_ALBUMIN_CORR_PER_GL * 10.0, 1e-9, 'Faktor 0,25/g/L = 2,5/g/dL.');
+acidbaseRefApprox(
+    2.5,
+    calculatorAnionGapAnalysis(140.0, 104.0, 16.0, 30.0)['corrected_ag'] - calculatorAnionGapAnalysis(140.0, 104.0, 16.0, 40.0)['corrected_ag'],
+    1e-9,
+    'Figge: pokles albumínu o 10 g/L (1 g/dL) zvýši korigované AG o 2,5.',
+);
 
 // ─── Hyperchloremická (normálna AG) acidóza ───
 // Na 140, Cl 120, HCO₃ 16 → AG 4; Δ = (4 − 12) / 8 = −1,0 → < 0,4

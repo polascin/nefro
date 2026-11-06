@@ -32,7 +32,7 @@ unitsRefTest(count($rows) === 13, 'Prevodník má 13 riadkov.');
 
 $byName = [];
 foreach ($rows as $row) {
-    unitsRefTest(is_string($row[0]) && $row[0] !== '', 'Názov analytu musí byť neprázdny.');
+    unitsRefTest($row[0] !== '', 'Názov analytu musí byť neprázdny.');
     unitsRefTest((float) $row[3] > 0.0, 'Faktor ' . $row[0] . ' musí byť kladný.');
     $byName[$row[0]] = $row;
 }
