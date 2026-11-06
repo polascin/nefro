@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 01:13 Europe/Bratislava
+Aktualizované: 2026-11-06 01:34 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery bilirubínu mg/dL ↔ µmol/L. Handoff:
-`.codex/handoffs/2026-11-06-011357-bilirubin-helpers.md`.
+Beh: spoločné konštanty/helpery Hb/Alb g/dL ↔ g/L. Handoff:
+`.codex/handoffs/2026-11-06-013436-hb-alb-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `691fded6`; feature `3807b84a`)
-- Runtime / `DEPLOY_COMMIT`: `3807b84a` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `135590d9`)
+- Runtime / `DEPLOY_COMMIT`: `135590d9`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -32,6 +32,7 @@ Beh: spoločné konštanty/helpery bilirubínu mg/dL ↔ µmol/L. Handoff:
 15. Slučka tick 16: `CHOLESTEROL_MGDL_TO_MMOLL` + `CHOLESTEROL_MMOLL_TO_MGDL` + helpery; PREVENT bez inline 0,02586; units 145 PASS; scores 26 PASS; suite 56 PASS
 16. Slučka tick 17: `TRIGLYCERIDES_MGDL_TO_MMOLL` + `TRIGLYCERIDES_MMOLL_TO_MGDL` + helpery; units 153 PASS; scores 26 PASS; suite 56 PASS
 17. Slučka tick 18: `BILIRUBIN_MGDL_TO_UMOLL` + `BILIRUBIN_UMOLL_TO_MGDL` + helpery; units 162 PASS; scores 26 PASS; suite 56 PASS
+18. Slučka tick 19: `MASS_CONC_GDL_TO_GL` + `massConcGdlToGl` / `massConcGlToGdl`; Gupta + prevodník; units 172 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -41,9 +42,9 @@ Beh: spoločné konštanty/helpery bilirubínu mg/dL ↔ µmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n "10\.0" calculator_*.php calculators_common.php
+rg -n "1\s*/\s*60" calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-011357-bilirubin-helpers.md`
+`.codex/handoffs/2026-11-06-013436-hb-alb-helpers.md`
