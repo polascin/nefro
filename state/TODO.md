@@ -11,6 +11,11 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-06-v (KDIGO G4×A1, Beh 166)
+
+- [x] heatmapa G4×A1 = veľmi vysoké; pin; poučenie; deploy `20a30272`
+- [x] 11 textových citácií OK (ecitmatch); interné odkazy OK; serverové logy OK
+
 ## Hotové: slučka 2026-11-06-u (ADPKD Mayo, Beh 165)
 
 - [x] Mayo triedy podľa r (ročný %); citácia PMID 24904092; pin; deploy `7ec81e1c`

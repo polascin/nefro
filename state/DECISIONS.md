@@ -253,6 +253,13 @@ ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
 - **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
   aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.
 
+## 2026-11-06 (slučka v) — KDIGO G4×A1 späť na veľmi vysoké
+
+Beh 101 (0e71c47e) preradil G4×A1 na „vysoké“ s tvrdením „oranžová“. Heatmapa KDIGO
+má celý riadok G4 červený; textový primárny zdroj je obrázok, preto overenie
+aritmetikou z publikovanej kohorty (PMC13512940, Table 3). AHA CKM 2023 dáva G4 do
+štádia 3 aj nezávisle. Rollback: revert merge `20a30272`.
+
 ## 2026-11-06 (slučka u) — ADPKD Mayo: klasifikácia podľa ročného % prírastku
 
 Irazabal 2015 (PMC4279733, Methods): „yearly percentage increases of <1.5% (1A) …
