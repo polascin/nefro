@@ -2,6 +2,19 @@
 
 ## Slučky ACTIVE (obnovené majiteľom 2026-11-06 popoludní)
 
+## Čaká na súhlas: 8 mŕtvych odkazov v článkoch (Beh 173)
+
+| Článok (add_*_article.php) | Starý odkaz | Návrh |
+| --- | --- | --- |
+| nahrada-funkcie-obliciek-stredna-vychodna-europa-era-trendy | portalcris.lsmuni.lt …/0ffc5593…/content | portalcris.lsmuni.lt/server/api/core/bitstreams/cc93e432-acf8-4aff-8036-1c48170fa481/content |
+| vysetrenie-hematurie-nefrologicka-prax-algoritmus | auanet.org …/Microhematuria-Guideline.pdf | auanet.org/documents/Guidelines/PDF/2025%20Guidelines/MH%20Unabridged%20FINAL.pdf |
+| improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku | ukkidney.org …/guideline-water-treatment-systems-… | ukkidney.org/wp-content/uploads/drupal-archive/RAandARTGuidelineVersion%2012_0.pdf (alebo vydanie 2026 na guidelines.ukkidney.org) |
+| improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku | chinadaily.com.cn/life/2013-01/22/content_16152514.htm | covid-19.chinadaily.com.cn/life/2013-01/22/content_16152514.htm |
+| krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza | fda.gov …-qualaquin-quinine | web.archive.org/web/20260213080223/ (FDA DSC Qualaquin) |
+| alogliptin-dpp4-inhibitory-oblickove-vysledky-diabetes | fda.gov/media/96895/download | web.archive.org/web/20251214080356/https://www.fda.gov/media/96895/download |
+| skor-nez-pacienta-oznacime-nespolupracujuceho | library.samhsa.gov …/sma14-4884.pdf | web.archive.org/web/20250904005813/ (SAMHSA SMA14-4884) |
+| krvna-skupina-a-mortalita-hemodialyza | omu.ac.jp …/entry-24436.html | nenájdené: odstrániť (ostáva DOI 10.1016/j.ekir.2026.106558) alebo AlphaGalileo ako sekundárny zdroj |
+
 ## Ďalej
 
 1. Audit kalkulačiek bez PubMed odkazu proti primárnemu zdroju (citácia + prahy).
