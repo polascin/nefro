@@ -9,8 +9,8 @@ Beh: UACR albumín g/L → mg/L cez `MASS_CONC_GL_TO_MGL` / `massConcGlToMgl`. H
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e6a7bd6c`)
-- Runtime / `DEPLOY_COMMIT`: `e6a7bd6c`
+- Vetva: `main` (HEAD `8f49c948`; feature `e6a7bd6c`)
+- Runtime / `DEPLOY_COMMIT`: `e6a7bd6c` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
