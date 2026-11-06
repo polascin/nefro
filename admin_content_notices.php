@@ -94,7 +94,25 @@ try {
     $error = 'Evidencia oznámení zatiaľ nie je dostupná.';
 }
 
-$pageTitle = 'Oznámenia obsahu';
+?>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oznámenia obsahu – Nefro-projekt Slovensko</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+  <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>"></script>
+  <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
+  <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+<?php
+$headerTitle = 'Oznámenia obsahu';
+$headerIntro = 'Oznámenia nezákonného obsahu podľa DSA';
+$showLogo = false;
 include 'header.php';
 include 'admin_menu.php';
 ?>
