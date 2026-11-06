@@ -5,17 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
-function tlsParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -52,19 +41,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $uricAcid = tlsParseNonNeg($form["uric_acid"]);
+        $uricAcid = calculatorParseNonNegativeFloat($form["uric_acid"]);
         if ($uricAcid === null || $uricAcid > 2000.0) {
             $errors[] = "Kyselina močová musí byť 0 – 2000 µmol/L.";
         }
-        $potassium = tlsParseNonNeg($form["potassium"]);
+        $potassium = calculatorParseNonNegativeFloat($form["potassium"]);
         if ($potassium === null || $potassium < 1.5 || $potassium > 9.5) {
             $errors[] = "Draslík musí byť 1,5 – 9,5 mmol/L.";
         }
-        $phosphate = tlsParseNonNeg($form["phosphate"]);
+        $phosphate = calculatorParseNonNegativeFloat($form["phosphate"]);
         if ($phosphate === null || $phosphate > 6.0) {
             $errors[] = "Fosfát musí byť 0 – 6,0 mmol/L.";
         }
-        $calcium = tlsParseNonNeg($form["calcium"]);
+        $calcium = calculatorParseNonNegativeFloat($form["calcium"]);
         if ($calcium === null || $calcium < 0.5 || $calcium > 4.0) {
             $errors[] = "Vápnik musí byť 0,5 – 4,0 mmol/L.";
         }

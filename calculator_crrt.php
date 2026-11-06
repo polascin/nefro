@@ -5,20 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = 0. Vráti null pri neplatnom/zápornom. */
-function crrtParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '') {
-        return 0.0;
-    }
-    if (!is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -60,15 +46,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
         }
 
-        $dialysate = crrtParseNonNeg($form["dialysate_ml_h"]);
+        $dialysate = calculatorParseNonNegativeFloat(trim($form["dialysate_ml_h"]) === '' ? '0' : $form["dialysate_ml_h"]);
         if ($dialysate === null || $dialysate > 10000.0) {
             $errors[] = "Prietok dialyzátu musí byť 0 až 10 000 mL/h.";
         }
-        $replacement = crrtParseNonNeg($form["replacement_ml_h"]);
+        $replacement = calculatorParseNonNegativeFloat(trim($form["replacement_ml_h"]) === '' ? '0' : $form["replacement_ml_h"]);
         if ($replacement === null || $replacement > 10000.0) {
             $errors[] = "Prietok substitučného roztoku musí byť 0 až 10 000 mL/h.";
         }
-        $netUf = crrtParseNonNeg($form["net_uf_ml_h"]);
+        $netUf = calculatorParseNonNegativeFloat(trim($form["net_uf_ml_h"]) === '' ? '0' : $form["net_uf_ml_h"]);
         if ($netUf === null || $netUf > 2000.0) {
             $errors[] = "Čistá ultrafiltrácia musí byť 0 až 2 000 mL/h.";
         }
@@ -84,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Cieľová dávka mimo rozsahu (10 až 50 mL/kg/h).";
         }
 
-        $downtime = crrtParseNonNeg($form["downtime_pct"]);
+        $downtime = calculatorParseNonNegativeFloat(trim($form["downtime_pct"]) === '' ? '0' : $form["downtime_pct"]);
         if ($downtime === null || $downtime > 50.0) {
             $errors[] = "Výpadok času musí byť 0 až 50 %.";
         }

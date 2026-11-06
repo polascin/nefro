@@ -97,7 +97,7 @@ kdpiRefTest(kdriRiskClass(1.0) === 'risk-moderate' && kdriRiskClass(1.44) === 'r
 kdpiRefTest(kdriRiskClass(1.45) === 'risk-high' && str_contains(kdriRiskLabel(1.45), 'vyššie'), 'KDRI ≥ 1,45.');
 
 // Parser vstupov
-kdpiRefTest(kdpiParseNonNeg('1,5') === 1.5 && kdpiParseNonNeg('') === null && kdpiParseNonNeg('-1') === null, 'Parser nezáporných čísel.');
+kdpiRefTest(calculatorParseNonNegativeFloat('1,5') === 1.5 && calculatorParseNonNegativeFloat('') === null && calculatorParseNonNegativeFloat('-1') === null, 'Parser nezáporných čísel.');
 
 // Wiring a citácia
 $page = (string) file_get_contents(dirname(__DIR__) . '/calculator_kdpi.php');

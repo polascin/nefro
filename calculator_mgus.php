@@ -5,17 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
-function mgusParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -48,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $mProtein = mgusParseNonNeg($form["m_protein"]);
+        $mProtein = calculatorParseNonNegativeFloat($form["m_protein"]);
         if ($mProtein === null || $mProtein > 100.0) {
             $errors[] = "Sérový M-proteín musí byť 0 až 100 g/L.";
         }

@@ -856,17 +856,6 @@ function mgrsClassify(bool $cloneEvidence, bool $biopsyMGRS, bool $clinicalRenal
     ];
 }
 
-/** Nezáporné desatinné číslo; prázdny/neplatný/záporný vstup = null. */
-function kdpiParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 /**
  * Lineárny prediktor KDRI (Rao PS a kol., Transplantation 2009;88(2):231–236, PMID 19623019;
  * donor-only model používaný OPTN). Sérový kreatinín v mg/dL, výška v cm, hmotnosť v kg,

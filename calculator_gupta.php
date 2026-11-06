@@ -5,17 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny/neplatný/záporný vstup = null. */
-function guptaParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -56,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $age = guptaParseNonNeg($form["age_years"]);
+        $age = calculatorParseNonNegativeFloat($form["age_years"]);
         if ($age === null || $age > 120.0) {
             $errors[] = "Vek musí byť 0 až 120 rokov.";
         }

@@ -6,17 +6,6 @@ require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php';
 require_once __DIR__ . '/ckd_risk_models.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
-function ckmParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 /** CSS trieda podľa číselného štádia CKM (0–4). */
 function ckmStageClass(int $num): string
 {
@@ -70,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $bmi = ckmParseNonNeg($form["bmi"]);
+        $bmi = calculatorParseNonNegativeFloat($form["bmi"]);
         if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
             $errors[] = "BMI musí byť 10 až 80 kg/m².";
         }

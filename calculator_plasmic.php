@@ -5,17 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
-function plasmicParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -51,19 +40,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $platelets = plasmicParseNonNeg($form["platelets"]);
+        $platelets = calculatorParseNonNegativeFloat($form["platelets"]);
         if ($platelets === null || $platelets > 1500.0) {
             $errors[] = "Počet trombocytov musí byť 0 až 1500 ×10⁹/L.";
         }
-        $mcv = plasmicParseNonNeg($form["mcv"]);
+        $mcv = calculatorParseNonNegativeFloat($form["mcv"]);
         if ($mcv === null || $mcv < 50.0 || $mcv > 140.0) {
             $errors[] = "MCV musí byť 50 až 140 fL.";
         }
-        $inr = plasmicParseNonNeg($form["inr"]);
+        $inr = calculatorParseNonNegativeFloat($form["inr"]);
         if ($inr === null || $inr < 0.5 || $inr > 15.0) {
             $errors[] = "INR musí byť 0,5 až 15.";
         }
-        $creatinine = plasmicParseNonNeg($form["creatinine"]);
+        $creatinine = calculatorParseNonNegativeFloat($form["creatinine"]);
         if ($creatinine === null || $creatinine < 10.0 || $creatinine > 2000.0) {
             $errors[] = "Kreatinín musí byť 10 až 2000 µmol/L.";
         }

@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $age = kdpiParseNonNeg($form["age_years"]);
+        $age = calculatorParseNonNegativeFloat($form["age_years"]);
         if ($age === null || $age > 100.0) {
             $errors[] = "Vek darcu musí byť 0 – 100 rokov.";
         }

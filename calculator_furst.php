@@ -5,17 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
-function furstParseNonNeg(string $value): ?float
-{
-    $v = str_replace(',', '.', trim($value));
-    if ($v === '' || !is_numeric($v)) {
-        return null;
-    }
-    $f = (float) $v;
-    return $f < 0 ? null : $f;
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -47,11 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         calculatorValidateOptionalPatientData($patient, $errors);
         calculatorValidateExaminationDate($form["examination_date"], $errors);
 
-        $uNa = furstParseNonNeg($form["u_na"]);
+        $uNa = calculatorParseNonNegativeFloat($form["u_na"]);
         if ($uNa === null || $uNa > 400.0) {
             $errors[] = "Sodík v moči musí byť 0 až 400 mmol/L.";
         }
-        $uK = furstParseNonNeg($form["u_k"]);
+        $uK = calculatorParseNonNegativeFloat($form["u_k"]);
         if ($uK === null || $uK > 300.0) {
             $errors[] = "Draslík v moči musí byť 0 až 300 mmol/L.";
         }
