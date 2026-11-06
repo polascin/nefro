@@ -52,7 +52,7 @@ foreach ($doseEdges as $edge) {
 guptaRefTest(guptaDosePoints(50.0) === 0.0, 'Dávka ≤ 50 mg je referencia.');
 
 // Horčík: hranica < 0,82 mmol/L podľa článku (regresia: 0,82 mmol/L · 2,43 = 1,99 mg/dL < 2,0 dávalo bod)
-guptaRefTest(GUPTA_MG_MMOL_CUTOFF === 0.82, 'Hranica horčíka je 0,82 mmol/L.');
+guptaRefTest(str_contains((string) file_get_contents(dirname(__DIR__) . '/calculator_gupta.php'), 'Magnézium (mmol/l):</strong> ≥0,82 → 0 · &lt;0,82 → 1'), 'Legenda stránky uvádza hranicu 0,82 mmol/l.');
 guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 0.82, 40.0)['mg'] === 0.0, 'Mg 0,82 mmol/L bod nedáva.');
 guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, 0.81, 40.0)['mg'] === 1.0, 'Mg 0,81 mmol/L dáva bod.');
 guptaRefTest(guptaScore(40.0, false, false, 13.0, 8.0, 250.0, 4.2, magnesiumMgDlToMmolL(2.0), 40.0)['mg'] === 0.0, 'Mg 2,0 mg/dL (0,823 mmol/L) bod nedáva.');
