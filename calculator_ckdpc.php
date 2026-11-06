@@ -282,25 +282,6 @@ if (isLoggedIn()) {
     }
 }
 
-/* ─────────────────────────────────────────────────────
-   Pomocné funkcie pre zobrazenie
-   ───────────────────────────────────────────────────── */
-function boolLabel(bool $v): string
-{
-    return $v ? "Áno" : "Nie";
-}
-function smokingLabel(string $v): string
-{
-    return match ($v) {
-        "current" => "Fajčí",
-        "former" => "Ex-fajčiar",
-        default => "Nefajčí",
-    };
-}
-function sexLabel(string $v): string
-{
-    return $v === "male" ? "Muž" : "Žena";
-}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -711,7 +692,7 @@ function sexLabel(string $v): string
                                     "age_years"
                                 ] ?> rokov</td></tr>
                                 <tr><th scope="row">Pohlavie</th><td><?= htmlspecialchars(
-                                    sexLabel($calculated["sex"]),
+                                    calculatorSexLabel($calculated["sex"]),
                                 ) ?></td></tr>
                                 <tr><th scope="row">eGFR</th><td><?= htmlspecialchars(
                                     calculatorFormatEgfrBothUnits((float) $calculated["egfr"]),
@@ -743,29 +724,29 @@ function sexLabel(string $v): string
                                         ) ?> mg/g)
                                     <?php endif; ?>
                                 </td></tr>
-                                <tr><th scope="row">DM</th><td><?= boolLabel(
+                                <tr><th scope="row">DM</th><td><?= calculatorBoolLabel(
                                     $calculated["diabetes"],
                                 ) ?></td></tr>
                                 <tr><th scope="row">Systolický TK</th><td><?= (int) $calculated[
                                     "sbp"
                                 ] ?> mmHg</td></tr>
-                                <tr><th scope="row">Antihypertenzíva</th><td><?= boolLabel(
+                                <tr><th scope="row">Antihypertenzíva</th><td><?= calculatorBoolLabel(
                                     $calculated["antihtn"],
                                 ) ?></td></tr>
-                                <tr><th scope="row">Srdcové zlyhanie</th><td><?= boolLabel(
+                                <tr><th scope="row">Srdcové zlyhanie</th><td><?= calculatorBoolLabel(
                                     $calculated["hf"],
                                 ) ?></td></tr>
-                                <tr><th scope="row">ICHS</th><td><?= boolLabel(
+                                <tr><th scope="row">ICHS</th><td><?= calculatorBoolLabel(
                                     $calculated["chd"],
                                 ) ?></td></tr>
-                                <tr><th scope="row">Fibrilácia predsiení</th><td><?= boolLabel(
+                                <tr><th scope="row">Fibrilácia predsiení</th><td><?= calculatorBoolLabel(
                                     $calculated["afib"],
                                 ) ?></td></tr>
                                 <tr><th scope="row">BMI</th><td><?= htmlspecialchars(
                                     (string) $calculated["bmi"],
                                 ) ?> kg/m²</td></tr>
                                 <tr><th scope="row">Fajčenie</th><td><?= htmlspecialchars(
-                                    smokingLabel($calculated["smoking"]),
+                                    calculatorSmokingLabel($calculated["smoking"]),
                                 ) ?></td></tr>
                                 <?php if ($calculated["diabetes"]): ?>
                                     <tr><th scope="row">HbA1c</th><td><?= htmlspecialchars(
@@ -776,10 +757,10 @@ function sexLabel(string $v): string
                                             " ",
                                         ),
                                     ) ?> %</td></tr>
-                                    <tr><th scope="row">Inzulín</th><td><?= boolLabel(
+                                    <tr><th scope="row">Inzulín</th><td><?= calculatorBoolLabel(
                                         $calculated["insulin"],
                                     ) ?></td></tr>
-                                    <tr><th scope="row">Perorálna antidiabetická liečba</th><td><?= boolLabel(
+                                    <tr><th scope="row">Perorálna antidiabetická liečba</th><td><?= calculatorBoolLabel(
                                         $calculated["oral_dm"],
                                     ) ?></td></tr>
                                 <?php endif; ?>

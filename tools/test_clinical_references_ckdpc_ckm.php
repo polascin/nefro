@@ -194,4 +194,33 @@ ckdpcCkmRefTest(
     'calculator_ckdpc.php volá ckdpcInterpretation z calculators_common.php',
 );
 
+// ─── Label helpery (zobrazenie vstupov CKD-PC) ───
+ckdpcCkmRefTest(calculatorBoolLabel(true) === 'Áno', 'calculatorBoolLabel(true) = Áno');
+ckdpcCkmRefTest(calculatorBoolLabel(false) === 'Nie', 'calculatorBoolLabel(false) = Nie');
+ckdpcCkmRefTest(calculatorSexLabel('male') === 'Muž', 'calculatorSexLabel(male) = Muž');
+ckdpcCkmRefTest(calculatorSexLabel('female') === 'Žena', 'calculatorSexLabel(female) = Žena');
+ckdpcCkmRefTest(calculatorSexLabel('other') === 'Žena', 'calculatorSexLabel(other) pinuje CKD-PC default Žena');
+ckdpcCkmRefTest(calculatorSmokingLabel('current') === 'Fajčí', 'calculatorSmokingLabel(current) = Fajčí');
+ckdpcCkmRefTest(calculatorSmokingLabel('former') === 'Ex-fajčiar', 'calculatorSmokingLabel(former) = Ex-fajčiar');
+ckdpcCkmRefTest(calculatorSmokingLabel('never') === 'Nefajčí', 'calculatorSmokingLabel(never) = Nefajčí');
+ckdpcCkmRefTest(calculatorSmokingLabel('') === 'Nefajčí', 'calculatorSmokingLabel(empty) pinuje CKD-PC default Nefajčí');
+ckdpcCkmRefTest(
+    str_contains($ckdpcSource, 'calculatorBoolLabel(')
+        && str_contains($ckdpcSource, 'calculatorSexLabel(')
+        && str_contains($ckdpcSource, 'calculatorSmokingLabel(')
+        && !str_contains($ckdpcSource, 'function boolLabel')
+        && !str_contains($ckdpcSource, 'function sexLabel')
+        && !str_contains($ckdpcSource, 'function smokingLabel')
+        && !str_contains($ckdpcSource, 'function calculatorBoolLabel')
+        && !str_contains($ckdpcSource, 'function calculatorSexLabel')
+        && !str_contains($ckdpcSource, 'function calculatorSmokingLabel'),
+    'calculator_ckdpc.php volá label helpery z calculators_common.php',
+);
+ckdpcCkmRefTest(
+    str_contains($ckdpcCommonSource, 'function calculatorBoolLabel')
+        && str_contains($ckdpcCommonSource, 'function calculatorSexLabel')
+        && str_contains($ckdpcCommonSource, 'function calculatorSmokingLabel'),
+    'calculators_common.php definuje calculatorBool/Sex/SmokingLabel',
+);
+
 echo "Clinical references (CKD-PC/CKM): $checks PASS\n";

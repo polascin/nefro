@@ -1097,6 +1097,34 @@ function ckdpcInterpretation(float $risk3yr): array
     ];
 }
 
+/** Slovenský štítok áno/nie pre zobrazenie vstupov kalkulačky. */
+function calculatorBoolLabel(bool $v): string
+{
+    return $v ? "Áno" : "Nie";
+}
+
+/**
+ * Slovenský štítok fajčenia (kódy never / former / current).
+ * Neznáma hodnota sa zobrazí ako „Nefajčí“ (rovnaké správanie ako CKD-PC).
+ */
+function calculatorSmokingLabel(string $v): string
+{
+    return match ($v) {
+        "current" => "Fajčí",
+        "former" => "Ex-fajčiar",
+        default => "Nefajčí",
+    };
+}
+
+/**
+ * Slovenský štítok pohlavia (kódy male / female).
+ * Hodnota iná než „male“ sa zobrazí ako „Žena“ (rovnaké správanie ako CKD-PC).
+ */
+function calculatorSexLabel(string $v): string
+{
+    return $v === "male" ? "Muž" : "Žena";
+}
+
 /**
  * Klinická interpretácia 2- a 5-ročného rizika KFRE (Tangri).
  *
