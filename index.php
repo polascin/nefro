@@ -695,6 +695,7 @@ if (!empty($itemListElements)) {
         ?>
         <?php
         $authorFilterBase = "";
+        $authorPickerOpen = requestScalarString($_GET, 'autori', '') === '1';
         include "widget_participating_authors.php";
         ?>
       </div>
