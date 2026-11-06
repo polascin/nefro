@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-06 23:00',
+                'date' => '2026-11-06 22:54',
                 'category' => 'portal',
                 'title' => 'Formulár na oznámenie nezákonného obsahu sa zobrazuje správne',
                 'description' => 'Stránka kontaktného miesta podľa aktu o digitálnych službách nemala úplnú hlavičku dokumentu, takže sa zobrazovala bez štýlov portálu. Teraz má rovnakú podobu ako ostatné právne stránky.',

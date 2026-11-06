@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-06 22:30 Europe/Bratislava
+Aktualizované: 2026-11-06 23:00 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -15,6 +15,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - w (Beh 167): CKM 3 pri G4 bez uACR; popis štádia 3. Deploy `2e1941d9`.
 - x (Beh 168): datalist autorov len na indexe (404 254 → 42 kB). Deploy `52aa602a`.
 - y (Beh 169): deny pre 2 include-only knižnice + všeobecná regresia. Deploy `8cf39b0c`.
+- z (Beh 170): úplný head pre content_report (DSA) a admin_content_notices. Deploy `e544b159`.
 
 ## Stav repozitára
 
@@ -27,8 +28,8 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 ## Executable next step
 
 Klinické zmeny IgAN/Na/CRRT čakajú na súhlas. Ďalej: robots.txt Disallow vs deny
-zoznam, SEO metadáta kalkulačiek (description, canonical), alebo kalkulačky bez golden pinu.
+zoznam (presunuté z Behu 170), meta description kalkulačiek (dĺžka, duplicity).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-223000-loop-deny-beh169.md`
+`.codex/handoffs/2026-11-06-230000-loop-dsa-head-beh170.md`
