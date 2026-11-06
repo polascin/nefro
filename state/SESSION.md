@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 03:31 Europe/Bratislava
+Aktualizované: 2026-11-06 03:36 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: `kfreInterpretation` do `calculators_common`. Handoff:
-`.codex/handoffs/2026-11-06-033050-kfre-interpretation-common.md`.
+Beh: `adpkdInterpretation` do `calculators_common`. Handoff:
+`.codex/handoffs/2026-11-06-033542-adpkd-interpretation-common.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `0297c70e`; feature `98753a08`)
-- Runtime / `DEPLOY_COMMIT`: `98753a08` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `f947f90b`)
+- Runtime / `DEPLOY_COMMIT`: `f947f90b`
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -41,6 +41,7 @@ Beh: `kfreInterpretation` do `calculators_common`. Handoff:
 24. Slučka tick 25: `ckmStageClass` → `calculators_common`; CKD-PC/CKM 40 PASS; suite 56 PASS; deploy `5110a7f9`
 25. Slučka tick 26: `ckdpcInterpretation` → `calculators_common`; CKD-PC/CKM 42 PASS; suite 56 PASS; deploy `2a00246a`
 26. Slučka tick 27: `kfreInterpretation` → `calculators_common`; clinical 93 PASS; suite 56 PASS; deploy `98753a08`
+27. Slučka tick 28: `adpkdInterpretation` → `calculators_common`; clinical 101 PASS; suite 56 PASS; deploy `f947f90b`
 
 ## Otvorené (súhlas majiteľa)
 
@@ -50,11 +51,11 @@ Beh: `kfreInterpretation` do `calculators_common`. Handoff:
 ## Executable next step
 
 ```text
-rg -n "function adpkdInterpretation" calculator_adpkd.php calculators_common.php tools/
+rg -n "function iganInterpretation" calculator_igan.php calculators_common.php tools/
 ```
 
-Presunúť `adpkdInterpretation` do `calculators_common` (mimo zlúčenia Mayo vetvy).
+Presunúť `iganInterpretation` do `calculators_common` (mimo klinickej opravy koeficientov).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-033050-kfre-interpretation-common.md`
+`.codex/handoffs/2026-11-06-033542-adpkd-interpretation-common.md`

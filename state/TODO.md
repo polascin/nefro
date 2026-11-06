@@ -2,13 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Presunúť `adpkdInterpretation` z `calculator_adpkd.php` do `calculators_common.php`; pridať pin v teste (mimo zlúčenia Mayo vetvy).
-2. Potom: `iganInterpretation` → `calculators_common` (mimo klinickej opravy koeficientov).
-3. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
-4. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
-5. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
-6. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
-7. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+1. Presunúť `iganInterpretation` z `calculator_igan.php` do `calculators_common.php`; pridať pin v teste (mimo klinickej opravy koeficientov).
+2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
+3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
+4. Čaká na majiteľa: zlúčenie `feature/adpkd-mayo-2026-11-03` (Beh 158).
+5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
+6. Čaká na majiteľa: zlúčenie `feature/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-n (adpkdInterpretation)
+
+- [x] `adpkdInterpretation` → `calculators_common`; pin 1A–1E + wiring; `adpkdClassify` lokálne; clinical 101 PASS; suite 56 PASS; deploy `f947f90b`
 
 ## Hotové: slučka 2026-11-06-m (kfreInterpretation)
 
