@@ -188,13 +188,13 @@ if (isLoggedIn()) {
                     <summary>Vzorec: Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{HtTKV} = \frac{\text{TKV [mL]}}{\text{výška [m]}} \]</div>
-                        <div class="calc-formula-line">\[ k = \frac{\ln(\text{HtTKV} / 150)}{\text{vek}} \]</div>
-                        <div class="calc-formula-line">\[ \begin{aligned} \text{Triedy: } &1A: k \lt 0.015 \quad 1B: 0.015\text{--}0.030 \quad 1C: 0.030\text{--}0.045 \\ &1D: 0.045\text{--}0.060 \quad 1E: k \ge 0.060 \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ r = \left(\frac{\text{HtTKV}}{150}\right)^{1/\text{vek}} - 1 \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} \text{Triedy: } &1A: r \lt 1{,}5\,\% \quad 1B: 1{,}5\text{--}3\,\% \quad 1C: 3\text{--}4{,}5\,\% \\ &1D: 4{,}5\text{--}6\,\% \quad 1E: r \ge 6\,\% \end{aligned} \]</div>
                         <div class="calc-formula-vars">
                             HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
-                            k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;
+                            r = odhadovaný ročný prírastok HtTKV od teoretických 150 mL/m &ensp;&bull;&ensp;
                             Platí len pre typickú ADPKD (bilaterálna, difúzna) &ensp;&bull;&ensp;
-                            Zdroj: Irazabal MV et al. <em>JASN.</em> 2015;26(8):1987–1994.
+                            Zdroj: <a href="https://pubmed.ncbi.nlm.nih.gov/24904092/" target="_blank" rel="noopener noreferrer">Irazabal MV a kol., J Am Soc Nephrol 2015;26(1):160–172</a>, doi:10.1681/ASN.2013101138.
                         </div>
                     </div>
                 </details>

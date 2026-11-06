@@ -21,6 +21,7 @@ $registry = [
     'calculator_ckdpc.php' => ['35856507'],
     'calculator_ckm.php' => ['37807924'],
     'calculator_furst.php' => ['10768609'],
+    'calculator_adpkd.php' => ['24904092'],
     'calculator_gupta.php' => ['38538012'],
     'calculator_kdpi.php' => ['19623019'],
     'calculator_mgrs.php' => ['30510265'],
