@@ -11,6 +11,11 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-06-aa (JSON-LD kalkulačiek, Beh 171)
+
+- [x] WebApplication + MedicalWebPage pre 33 kalkulačiek; regresia; deploy `a11ba838`
+- [x] robots.txt, meta description, JSON-LD vzorky: bez chyby
+
 ## Hotové: slučka 2026-11-06-z (head DSA stránok, Beh 170)
 
 - [x] content_report.php cez legal_head; admin_content_notices head; regresia; deploy `e544b159`
