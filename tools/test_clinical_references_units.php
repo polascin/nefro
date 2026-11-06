@@ -68,13 +68,16 @@ unitsRefApprox(0.01129, TRIGLYCERIDES_MGDL_TO_MMOLL, 0.0, 'TRIGLYCERIDES_MGDL_TO
 unitsRefApprox(88.57, TRIGLYCERIDES_MMOLL_TO_MGDL, 0.0, 'TRIGLYCERIDES_MMOLL_TO_MGDL = 88,57');
 unitsRefApprox(10.0, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor 10');
 unitsRefApprox(10.0, (float) $byName['Albumín'][3], 1e-12, 'Albumín faktor 10');
-unitsRefApprox(17.1, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor 17,1');
+unitsRefApprox(BILIRUBIN_MGDL_TO_UMOLL, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor z konštanty');
+unitsRefApprox(17.1, BILIRUBIN_MGDL_TO_UMOLL, 0.0, 'BILIRUBIN_MGDL_TO_UMOLL = 17,1');
+unitsRefApprox(0.0585, BILIRUBIN_UMOLL_TO_MGDL, 0.0, 'BILIRUBIN_UMOLL_TO_MGDL = 0,0585');
 unitsRefApprox(1 / 60, (float) $byName['eGFR'][3], 1e-12, 'eGFR faktor 1/60');
 
 // Dokumentované reciproké hodnoty projektu
 unitsRefApprox(CHOLESTEROL_MMOLL_TO_MGDL, 1.0 / (float) $byName['Cholesterol'][3], 0.01, 'Cholesterol ÷ 38,67');
 unitsRefApprox(18.0, 1.0 / (float) $byName['Glukóza'][3], 0.02, 'Glukóza ÷ 18');
 unitsRefApprox(TRIGLYCERIDES_MMOLL_TO_MGDL, 1.0 / (float) $byName['Triglyceridy'][3], 0.05, 'Triglyceridy ÷ 88,57');
+unitsRefApprox(BILIRUBIN_UMOLL_TO_MGDL, 1.0 / (float) $byName['Bilirubín'][3], 0.0001, 'Bilirubín × 0,0585');
 
 // Obojsmerné konverzie (referenčné príklady)
 $crSi = calculatorConvertConventionalToSi(1.0, (float) $byName['Kreatinín'][3]);
@@ -202,6 +205,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(100.0, TRIGLYCERIDES_MGDL_TO_MMOLL),
     0.0,
     'triglycerides helper = prevodník s TRIGLYCERIDES_MGDL_TO_MMOLL',
+);
+
+$biliSi = calculatorConvertConventionalToSi(1.0, (float) $byName['Bilirubín'][3]);
+unitsRefApprox(17.1, $biliSi, 1e-9, 'Bilirubín 1,0 mg/dL → 17,1 µmol/L');
+unitsRefApprox(17.1, bilirubinMgDlToUmolL(1.0), 1e-9, 'bilirubinMgDlToUmolL(1)');
+unitsRefApprox(5.85, bilirubinUmolLToMgDl(100.0), 1e-9, 'bilirubinUmolLToMgDl(100)');
+unitsRefApprox(
+    bilirubinMgDlToUmolL(1.0),
+    calculatorConvertConventionalToSi(1.0, BILIRUBIN_MGDL_TO_UMOLL),
+    0.0,
+    'bilirubin helper = prevodník s BILIRUBIN_MGDL_TO_UMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -402,6 +416,20 @@ unitsRefTest(
     !preg_match("/['\"]Triglyceridy['\"].*0\.01129/", $commonSrc)
         && !preg_match('/\*\s*88\.57\b/', $commonSrc),
     'calculators_common bez literálu 0,01129 v prevodníku a bez inline × 88,57',
+);
+
+// Bilirubín mg/dL ↔ µmol/L: konštanty + helpery; bez inline 17.1 / 0.0585 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'BILIRUBIN_MGDL_TO_UMOLL')
+        && str_contains($commonSrc, 'BILIRUBIN_UMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'bilirubinMgDlToUmolL')
+        && str_contains($commonSrc, 'bilirubinUmolLToMgDl'),
+    'calculators_common má bilirubínové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Bilirubín['\"].*17\.1/", $commonSrc)
+        && !preg_match('/\*\s*0\.0585\b/', $commonSrc),
+    'calculators_common bez literálu 17,1 v prevodníku a bez inline × 0,0585',
 );
 
 $preventSrc = (string) file_get_contents(dirname(__DIR__) . '/prevent_model.php');

@@ -485,6 +485,19 @@ const TRIGLYCERIDES_MGDL_TO_MMOLL = 0.01129;
  */
 const TRIGLYCERIDES_MMOLL_TO_MGDL = 88.57;
 
+/**
+ * Bilirubín mg/dL → µmol/L (konvenčný faktor prevodníka; ≈ 10 000 / 584,66).
+ * Približne reciproký k BILIRUBIN_UMOLL_TO_MGDL (MW ≈ 584,66 / 10 000).
+ */
+const BILIRUBIN_MGDL_TO_UMOLL = 17.1;
+
+/**
+ * Bilirubín µmol/L → mg/dL (≈ MW bilirubínu / 10 000 = 0,058466).
+ * Nie je odvodený ako 1/17,1: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 17,1; bežný klinický faktor 0,0585).
+ */
+const BILIRUBIN_UMOLL_TO_MGDL = 0.0585;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1505,6 +1518,18 @@ function triglyceridesMmolLToMgDl(float $mmolL): float
     return $mmolL * TRIGLYCERIDES_MMOLL_TO_MGDL;
 }
 
+/** Bilirubín mg/dL → µmol/L. */
+function bilirubinMgDlToUmolL(float $mgDl): float
+{
+    return $mgDl * BILIRUBIN_MGDL_TO_UMOLL;
+}
+
+/** Bilirubín µmol/L → mg/dL. */
+function bilirubinUmolLToMgDl(float $umolL): float
+{
+    return $umolL * BILIRUBIN_UMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1862,7 +1887,7 @@ function calculatorUnitConversionRows(): array
         ['Triglyceridy', 'mg/dL', 'mmol/L', TRIGLYCERIDES_MGDL_TO_MMOLL, 0, 2],
         ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],
         ['Albumín', 'g/dL', 'g/L', 10.0, 1, 0],
-        ['Bilirubín', 'mg/dL', 'µmol/L', 17.1, 1, 0],
+        ['Bilirubín', 'mg/dL', 'µmol/L', BILIRUBIN_MGDL_TO_UMOLL, 1, 0],
         ['eGFR', 'ml/min/1,73 m²', 'ml/s/1,73 m²', 1 / 60, 1, 3],
     ];
 }
