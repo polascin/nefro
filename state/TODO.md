@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Kreatinín µmol/L ↔ mmol/L (`calculator_aki.php` `/ 1000`, common `* 1000`) cez tenké helpery, mimo „Čaká na majiteľa“.
+1. Zjednotiť lokálne `*ParseNonNeg` na `calculatorParseNonNegativeFloat` (gupta, furst, crrt, tls, mgus, ckm, plasmic; `kdpiParseNonNeg`), mimo unit faktorov a mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-i (kreatinín µmol ↔ mmol)
+
+- [x] `CREATININE_UMOL_PER_MMOL` + helpery; AKI + CrCl; units 199 PASS; urine 24 PASS; deploy `a165e6d1`
 
 ## Hotové: slučka 2026-11-06-h (UACR albumín g/L → mg/L)
 

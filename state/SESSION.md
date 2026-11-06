@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 02:34 Europe/Bratislava
+Aktualizované: 2026-11-06 02:55 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: UACR albumín g/L → mg/L cez `MASS_CONC_GL_TO_MGL` / `massConcGlToMgl`. Handoff:
-`.codex/handoffs/2026-11-06-023400-uacr-albumin-gl-mgl.md`.
+Beh: kreatinín µmol/L ↔ mmol/L cez `CREATININE_UMOL_PER_MMOL` / `creatinineUmolLToMmolL`. Handoff:
+`.codex/handoffs/2026-11-06-025500-creatinine-umol-mmol.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `8f49c948`; feature `e6a7bd6c`)
-- Runtime / `DEPLOY_COMMIT`: `e6a7bd6c` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `a165e6d1`)
+- Runtime / `DEPLOY_COMMIT`: `a165e6d1`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -36,6 +36,7 @@ Beh: UACR albumín g/L → mg/L cez `MASS_CONC_GL_TO_MGL` / `massConcGlToMgl`. H
 19. Slučka tick 20: `EGFR_ML_MIN_TO_ML_S` + `egfrMlMinToMlS` / `egfrMlSToMlMin`; prevodník + egfr/cys/ekfc; units 185 PASS; scores 26 PASS; suite 56 PASS
 20. Slučka tick 21: UACR albumín mg/dL → mg/L cez `massConcGdlToGl`; units 187 PASS; clinical 85 PASS; scores 26 PASS; suite 56 PASS
 21. Slučka tick 22: `MASS_CONC_GL_TO_MGL` + `massConcGlToMgl` / `massConcMglToGl`; UACR g/L → mg/L; units 193 PASS; clinical 87 PASS; scores 26 PASS; suite 56 PASS
+22. Slučka tick 23: `CREATININE_UMOL_PER_MMOL` + `creatinineUmolLToMmolL` / `creatinineMmolLToUmolL`; AKI + CrCl; units 199 PASS; urine 24 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -45,11 +46,11 @@ Beh: UACR albumín g/L → mg/L cez `MASS_CONC_GL_TO_MGL` / `massConcGlToMgl`. H
 ## Executable next step
 
 ```text
-rg -n "/\s*1000|\*\s*1000" calculator_aki.php calculators_common.php
+rg -n "function \\w+ParseNonNeg" calculator_*.php calculators_common.php
 ```
 
-Tenké helpery kreatinín µmol/L ↔ mmol/L (`calculator_aki.php` `/ 1000`, common `* 1000`), mimo majiteľa.
+Zjednotiť lokálne `*ParseNonNeg` na existujúci `calculatorParseNonNegativeFloat` (mimo unit faktorov, mimo majiteľa).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-023400-uacr-albumin-gl-mgl.md`
+`.codex/handoffs/2026-11-06-025500-creatinine-umol-mmol.md`
