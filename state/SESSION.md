@@ -9,8 +9,8 @@ Beh: zjednotenie `*ParseNonNeg` na `calculatorParseNonNegativeFloat`. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD po docs commite; feature `e676e53b`)
-- Runtime / `DEPLOY_COMMIT`: `e676e53b`
+- Vetva: `main` (HEAD `e610421b`; feature `e676e53b`)
+- Runtime / `DEPLOY_COMMIT`: `e676e53b` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

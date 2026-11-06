@@ -5,8 +5,8 @@
 - Generated At: 2026-11-06T03:15:00+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: (docs commit po tomto handoffe; feature `e676e53b`)
-- Runtime / DEPLOY_COMMIT: e676e53b (SSH grep deploy_info.php)
+- Head Commit: e610421b (feature e676e53b)
+- Runtime / DEPLOY_COMMIT: e676e53b (SSH grep deploy_info.php; docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
