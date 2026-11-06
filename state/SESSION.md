@@ -1,55 +1,32 @@
 # SESSION
 
-Aktualizované: 2026-11-06 04:10 Europe/Bratislava
+Aktualizované: 2026-11-06 20:00 Europe/Bratislava
 
-## Slučky: PAUSED
+## Slučky: ACTIVE
 
-Majiteľ: dokončiť rozrobené a prechodne zastaviť slučku.
-Koordinátor pauzoval denný doaudit a agent loops.
+Majiteľ 6. 11. popoludní výslovne obnovil /loop (vývoj, opravy, optimalizácia;
+po každej slučke handoff + `.doaudit.md`). Pauza z rána tým skončila.
 
-- Denný doaudit (1d): **PAUSED** (nespúšťať)
-- RSI /loop ~20m: **PAUSED** (nespúšťať)
-- Tento beh **nespustil** novú slučku
+## Posledná slučka (2026-11-06-t, Beh 164)
 
-## Aktívna úloha
+1. Gupta CP-AKI: horčík < 0,82 mmol/L podľa zdroja (PMC10964715, Methods); nová vetva
+   `fix/gupta-mg-mmol-2026-11-06` nad aktuálnym main, zlúčená, deploy `43858b6d`.
+2. Beh 164: PHPStan 2 → 0 (testy správania namiesto tautológií), živé kontroly PASS.
 
-Žiadna. Handoff pauzy:
-`.codex/handoffs/2026-11-06-041000-pause-close-wip.md`.
+## Stav repozitára
 
-## Stav repozitária
+- `main` po merge `audit/beh-164-2026-11-06`; runtime podľa posledného post-merge.
+- Stará vetva `fix/gupta-mg-cutoff-2026-11-03` je nahradená, nezlúčená (zmazanie len so súhlasom).
+- PHPStan v `.claude/worktrees` nič neanalyzuje (excludePaths `*/.claude/*`): spúšťať
+  v dočasnom worktree mimo `.claude` alebo v `D:\Dev
+efro`.
 
-- Vetva: `main` (HEAD po docs committe; feature `f695d7aa`)
-- Runtime / `DEPLOY_COMMIT`: `f695d7aa` (docs-only drift OK: state/handoff v deploy-ignore)
-- Working tree: docs close-WIP (DECISIONS/TODO/handoff)
-- Pripravené, nezlúčené (BLOCKED): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
-- Súvisiaci handoff ekfc: `.codex/handoffs/2026-11-06-040942-ekfc-mode-label-common-loop-paused.md`
+## Executable next step
 
-## Čo je hotové v tomto behu
-
-1. Overené: `calculatorEkfcModeLabel` už na `main` (`f695d7aa`); clinical 134 PASS
-2. Dobehnutý produkčný drift: deploy bol na `28bcf11e`, SFTP cez Git Bash + Windows PHP → `f695d7aa`
-3. Live: `/` 200, `/calculator_ekfc.php` 200, `/calculators_common.php` 403
-4. RSI zápis: ADPKD/Gupta merge **NIE teraz** (klinická zmena + divergencia + pin konflikt)
-5. SESSION/TODO/handoff: slučky PAUSED
-
-## Predchádzajúce (stručne)
-
-Beh 150–163 + slučka ticky 2–33: AG/Figge/ΔΔ … `adpkdClassify` … `calculatorEkfcModeLabel`.
-
-## Otvorené / BLOCKED (po pauze)
-
-- **BLOCKED:** zlúčenie `fix/adpkd-mayo-2026-11-03` (Mayo %/rok vs log-k; rebase na common + pin)
-- **BLOCKED:** zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Mg &lt; 0,82 mmol/L; rebase + pin)
-- **BLOCKED / majiteľ:** IgAN koeficienty; limity korekcie Na; CRRT predilúcia
-- Worktree dirty (mimo main): `.claude/worktrees/expert-article-review-social-9d76d4` (SKILL + add_finerenon…); neriešené v tomto behu
-
-## Executable next step (až po odblokovaní slučiek)
-
-```text
-# Až majiteľ zruší PAUSE. Nezačínať novú epiku.
-# Kandidát po rebase: Gupta Mg cutoff (menší diff) alebo ADPKD Mayo %/rok s novým pinom.
-```
+ADPKD Mayo: over v Irazabal 2015, či triedy 1A až 1E delia ročný % rast HtTKV
+(1,5 / 3 / 4,5 / 6 %); ak áno, nová vetva nad main, prepočet + nový golden pin
+`adpkdClassify`, changelog. Stará vetva `fix/adpkd-mayo-2026-11-03` je len predloha.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-041000-pause-close-wip.md`
+`.codex/handoffs/2026-11-06-200000-loop-gupta-beh164.md`

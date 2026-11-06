@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-06 14:15',
+                'date' => '2026-11-06 19:50',
                 'category' => 'calculators',
                 'title' => 'Gupta skóre (CP-AKI): hranica horčíka podľa zdroja',
                 'description' => 'Bod za horčík sa prideľuje pri hodnote < 0,82 mmol/l, ako uvádza Gupta a kol. (BMJ 2024). Doteraz sa porovnávalo s 2,0 mg/dl, preto hodnota presne 0,82 mmol/l chybne pridala bod. Ostatné premenné a kategórie rizika sa nemenia.',
