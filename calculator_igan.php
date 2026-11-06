@@ -5,29 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/**
- * IgAN — International IgA Nephropathy Prediction Tool
- * Barbour SJ et al. JAMA Intern Med. 2019;179(7):942–952. PMC7876283
- * Klinický model (bez histológie) — Cox proportional hazards
- */
-function iganRisk(
-    float $egfr,
-    float $uprotGDay,
-    float $map,
-    bool $rasb,
-    bool $immuno,
-): float {
-    $lp =
-        -0.02663 * ($egfr - 66.0) +
-        0.55198 * ($uprotGDay - 1.7) +
-        0.00678 * ($map - 96.0) +
-        -0.23079 * (($rasb ? 1 : 0) - 0.65) +
-        -0.63861 * (($immuno ? 1 : 0) - 0.21);
-
-    $risk5yr = (1.0 - pow(0.972, exp($lp))) * 100.0;
-    return max(0.0, min(100.0, $risk5yr));
-}
-
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_igan.php";

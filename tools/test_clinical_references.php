@@ -160,7 +160,39 @@ clinicalRefTest(
     'calculator_adpkd.php volá adpkdInterpretation z common; adpkdClassify ostáva lokálne',
 );
 
-// IgAN interpretácia: pásma 5yr <5 / <15 / <40 / ≥40 % (správanie + wiring; skóre ostáva v stránke)
+// IgAN Prediction Tool: pin aktuálneho iganRisk (Barbour 2019; bez zmeny koeficientov)
+// egfr, uprot g/deň, MAP, RASB, immuno → 5yr % (zaokrúhlené na 0,1 ako vo UI)
+$iganRiskCases = [
+    [66.0, 1.7, 96.0, true, false, 3.0],
+    [66.0, 1.7, 96.0, false, false, 3.7],
+    [66.0, 1.7, 96.0, true, true, 1.6],
+    [45.0, 2.5, 110.0, true, false, 8.6],
+    [30.0, 3.5, 120.0, false, false, 26.9],
+    [20.0, 4.0, 130.0, false, true, 26.2],
+    [90.0, 0.5, 85.0, true, false, 0.8],
+    [15.0, 6.0, 140.0, false, false, 88.0],
+];
+foreach ($iganRiskCases as $i => [$egfr, $uprot, $map, $rasb, $immuno, $expected]) {
+    $got = round(iganRisk($egfr, $uprot, $map, $rasb, $immuno), 1);
+    clinicalRefApprox($expected, $got, 0.05, 'IgAN risk #' . ($i + 1));
+}
+
+$iganCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+clinicalRefTest(
+    str_contains($iganCommonSource, 'function iganRisk')
+        && str_contains($iganCommonSource, '-0.02663')
+        && str_contains($iganCommonSource, '0.55198')
+        && str_contains($iganCommonSource, '0.00678')
+        && str_contains($iganCommonSource, '-0.23079')
+        && str_contains($iganCommonSource, '-0.63861')
+        && str_contains($iganCommonSource, 'pow(0.972, exp($lp))')
+        && str_contains($iganCommonSource, '$egfr - 66.0')
+        && str_contains($iganCommonSource, '$uprotGDay - 1.7')
+        && str_contains($iganCommonSource, '$map - 96.0'),
+    'calculators_common.php musí mať iganRisk s Barbour 2019 koeficientmi',
+);
+
+// IgAN interpretácia: pásma 5yr <5 / <15 / <40 / ≥40 % (správanie + wiring)
 $iganLow = iganInterpretation(3.0);
 clinicalRefTest(
     $iganLow['warnings'] === []
@@ -191,7 +223,6 @@ clinicalRefTest(
 );
 
 $iganPageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_igan.php');
-$iganCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
 clinicalRefTest(
     str_contains($iganCommonSource, 'function iganInterpretation')
         && str_contains($iganCommonSource, '$risk5yr < 5.0')
@@ -201,10 +232,11 @@ clinicalRefTest(
     'calculators_common.php musí mať iganInterpretation s prahmi 5 / 15 / 40 %',
 );
 clinicalRefTest(
-    str_contains($iganPageSource, 'iganInterpretation(')
-        && !str_contains($iganPageSource, 'function iganInterpretation')
-        && str_contains($iganPageSource, 'function iganRisk'),
-    'calculator_igan.php volá iganInterpretation z common; iganRisk ostáva lokálne',
+    str_contains($iganPageSource, 'iganRisk(')
+        && str_contains($iganPageSource, 'iganInterpretation(')
+        && !str_contains($iganPageSource, 'function iganRisk')
+        && !str_contains($iganPageSource, 'function iganInterpretation'),
+    'calculator_igan.php volá iganRisk a iganInterpretation z common',
 );
 
 // ─── EKFC Q plateau a polynóm ───

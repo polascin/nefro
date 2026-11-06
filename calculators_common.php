@@ -1192,8 +1192,31 @@ function adpkdInterpretation(string $class): array
 }
 
 /**
+ * IgAN Prediction Tool — 5-ročné riziko poklesu eGFR ≥50 % alebo ESKD
+ * (Barbour SJ et al. JAMA Intern Med. 2019;179(7):942–952; klinický model bez histológie).
+ * Koeficienty a referencie (eGFR 66, proteinúria 1,7 g/deň, MAP 96, RASB 0,65, immuno 0,21,
+ * baseline 0,972) pinuje tools/test_clinical_references.php; klinická oprava je oddelená.
+ */
+function iganRisk(
+    float $egfr,
+    float $uprotGDay,
+    float $map,
+    bool $rasb,
+    bool $immuno,
+): float {
+    $lp =
+        -0.02663 * ($egfr - 66.0) +
+        0.55198 * ($uprotGDay - 1.7) +
+        0.00678 * ($map - 96.0) +
+        -0.23079 * (($rasb ? 1 : 0) - 0.65) +
+        -0.63861 * (($immuno ? 1 : 0) - 0.21);
+
+    $risk5yr = (1.0 - pow(0.972, exp($lp))) * 100.0;
+    return max(0.0, min(100.0, $risk5yr));
+}
+
+/**
  * Klinická interpretácia 5-ročného rizika IgAN Prediction Tool (Barbour 2019).
- * Skórovací model (iganRisk) ostáva v calculator_igan.php.
  *
  * @return array{interpretation: list<string>, warnings: list<string>}
  */
