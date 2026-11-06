@@ -505,6 +505,12 @@ const BILIRUBIN_UMOLL_TO_MGDL = 0.0585;
  */
 const MASS_CONC_GDL_TO_GL = 10.0;
 
+/**
+ * Hmotnostná koncentrácia g/L → mg/L (faktor 1000; SI prefix).
+ * Použitie: močový albumín v UACR (g/L → mg/L).
+ */
+const MASS_CONC_GL_TO_MGL = 1000.0;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1551,6 +1557,18 @@ function massConcGdlToGl(float $gDl): float
 function massConcGlToGdl(float $gL): float
 {
     return $gL / MASS_CONC_GDL_TO_GL;
+}
+
+/** Hmotnostná koncentrácia g/L → mg/L (UACR albumín). */
+function massConcGlToMgl(float $gL): float
+{
+    return $gL * MASS_CONC_GL_TO_MGL;
+}
+
+/** Hmotnostná koncentrácia mg/L → g/L. */
+function massConcMglToGl(float $mgL): float
+{
+    return $mgL / MASS_CONC_GL_TO_MGL;
 }
 
 /** UACR mg/mmol → mg/g. */

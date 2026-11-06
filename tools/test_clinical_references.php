@@ -111,6 +111,15 @@ $crMmol = creatinineMgDlToMmolL(100.0); // 100 mg/dL
 $fromUnits = calculatorUacrMgMmol($albMgL, $crMmol);
 clinicalRefApprox(uacrMgGToMgMmol(30.0), $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
 clinicalRefApprox(30.0, $albMgL, 0.0, 'UACR albumín 3 mg/dL → 30 mg/L cez massConcGdlToGl');
+// Prevod g/L albumínu → mg/L (massConcGlToMgl)
+$albFromGl = massConcGlToMgl(0.03); // 0,03 g/L → 30 mg/L
+clinicalRefApprox(30.0, $albFromGl, 0.0, 'UACR albumín 0,03 g/L → 30 mg/L cez massConcGlToMgl');
+clinicalRefApprox(
+    calculatorUacrMgMmol($albMgL, $crMmol),
+    calculatorUacrMgMmol($albFromGl, $crMmol),
+    1e-12,
+    'UACR mg/dL a g/L vstupy dávajú rovnaký výsledok',
+);
 
 // ─── KDIGO G kategórie ───
 // Páry [eGFR, kategória]: float kľúče v asociatívnom poli PHPStan odmieta (array.invalidKey).

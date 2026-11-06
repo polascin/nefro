@@ -50,7 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // mg/dL → mg/L: ten istý faktor 10 ako g/dL → g/L
                 $alb_mg_l = massConcGdlToGl($ualb);
             } elseif ($form["u_alb_unit"] === "g_l") {
-                $alb_mg_l = $ualb * 1000;
+                // g/L → mg/L: SI prefixový faktor 1000
+                $alb_mg_l = massConcGlToMgl($ualb);
             }
 
             $cr_mmol_l = $ucr;
