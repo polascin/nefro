@@ -645,7 +645,9 @@ function ambulatoryComputeReport(array $input): array
                 || $aCategory === 'A2'
                 || $aCategory === 'A3'
             );
-            $ckdVeryHigh = $kidneyFailure;
+            // Riadky G4 a G5 heatmapy KDIGO sú veľmi vysoké pri každej A kategórii,
+            // preto eGFR < 30 stačí na CKM štádium 3 aj bez uACR.
+            $ckdVeryHigh = $kidneyFailure || ($hasConfirmedCkd && $egfr !== null && $egfr < 30.0);
         }
         $ckmStage = ckmComputeStage(
             $adiposity,

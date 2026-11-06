@@ -128,7 +128,7 @@ $labels = [
     ['0', 'bez rizikových faktorov CKM'],
     ['1', 'nadmerná / dysfunkčná adipozita'],
     ['2', 'metabolické rizikové faktory a/alebo CKD'],
-    ['3', 'subklinické kardiovaskulárne ochorenie'],
+    ['3', 'subklinické KV ochorenie alebo veľmi vysoké riziko CKD'],
     ['4a', 'klinické KV ochorenie (bez zlyhania obličiek)'],
     ['4b', 'klinické KV ochorenie so zlyhaním obličiek'],
 ];
