@@ -9,8 +9,8 @@ Beh: CKD-PC label helpery do `calculators_common` + pin. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e8ae58c6`; feature = DEPLOY_COMMIT)
-- Runtime / `DEPLOY_COMMIT`: `e8ae58c6`
+- Vetva: `main` (HEAD `8869effc`; feature `e8ae58c6`)
+- Runtime / `DEPLOY_COMMIT`: `e8ae58c6` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `feature/adpkd-mayo-2026-11-03`, `feature/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
