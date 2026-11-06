@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-06 01:34 Europe/Bratislava
+Aktualizované: 2026-11-06 01:55 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery Hb/Alb g/dL ↔ g/L. Handoff:
-`.codex/handoffs/2026-11-06-013436-hb-alb-helpers.md`.
+Beh: spoločné konštanty/helpery eGFR ml/min ↔ ml/s. Handoff:
+`.codex/handoffs/2026-11-06-015509-egfr-mlmin-mls-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `4b9e479c`; feature `135590d9`)
-- Runtime / `DEPLOY_COMMIT`: `135590d9` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `d8adc96c`)
+- Runtime / `DEPLOY_COMMIT`: `d8adc96c`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -33,6 +33,7 @@ Beh: spoločné konštanty/helpery Hb/Alb g/dL ↔ g/L. Handoff:
 16. Slučka tick 17: `TRIGLYCERIDES_MGDL_TO_MMOLL` + `TRIGLYCERIDES_MMOLL_TO_MGDL` + helpery; units 153 PASS; scores 26 PASS; suite 56 PASS
 17. Slučka tick 18: `BILIRUBIN_MGDL_TO_UMOLL` + `BILIRUBIN_UMOLL_TO_MGDL` + helpery; units 162 PASS; scores 26 PASS; suite 56 PASS
 18. Slučka tick 19: `MASS_CONC_GDL_TO_GL` + `massConcGdlToGl` / `massConcGlToGdl`; Gupta + prevodník; units 172 PASS; scores 26 PASS; suite 56 PASS
+19. Slučka tick 20: `EGFR_ML_MIN_TO_ML_S` + `egfrMlMinToMlS` / `egfrMlSToMlMin`; prevodník + egfr/cys/ekfc; units 185 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -42,9 +43,9 @@ Beh: spoločné konštanty/helpery Hb/Alb g/dL ↔ g/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n "1\s*/\s*60" calculator_*.php calculators_common.php
+rg -n "ualb\s*\*\s*10|\*\s*10\b" calculator_uacr.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-06-013436-hb-alb-helpers.md`
+`.codex/handoffs/2026-11-06-015509-egfr-mlmin-mls-helpers.md`
