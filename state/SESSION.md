@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery eGFR ml/min ↔ ml/s. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `d8adc96c`)
-- Runtime / `DEPLOY_COMMIT`: `d8adc96c`
+- Vetva: `main` (HEAD `8cc366ba`; feature `d8adc96c`)
+- Runtime / `DEPLOY_COMMIT`: `d8adc96c` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
