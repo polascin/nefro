@@ -248,6 +248,16 @@ testSame(false, isset($egfrOnly['summary']['ckdpc']), 'Len eGFR nespočíta CKD-
 testSame(true, isset($egfrOnly['summary']['ckm']), 'Potvrdená CKD G3b zaradí CKM');
 testSame(true, str_starts_with((string) ($egfrOnly['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G3b bez uACR je CKM 2');
 testSame(true, in_array('Orientačné riziko G+A: chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
+
+// G4 bez uACR: celý riadok G4 je v heatmape KDIGO veľmi vysoké riziko → CKM 3
+$egfrG4Only = ambulatoryComputeReport(ambulatoryTestInput([
+    'egfr' => 22.0,
+]));
+testSame(true, str_starts_with((string) ($egfrG4Only['summary']['ckm'] ?? ''), '3 –'), 'Potvrdená G4 bez uACR je CKM 3');
+$egfrG4Edge = ambulatoryComputeReport(ambulatoryTestInput([
+    'egfr' => 30.0,
+]));
+testSame(true, str_starts_with((string) ($egfrG4Edge['summary']['ckm'] ?? ''), '2 –'), 'eGFR 30 (G3b) bez uACR ostáva CKM 2');
 testSame(true, in_array('eGFR slope: chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
 
 $kfreReady = ambulatoryComputeReport(ambulatoryTestInput([

@@ -419,7 +419,7 @@ function ckmStageLabel(string $code): string
         case '2':
             return 'metabolické rizikové faktory a/alebo CKD';
         case '3':
-            return 'subklinické kardiovaskulárne ochorenie';
+            return 'subklinické KV ochorenie alebo veľmi vysoké riziko CKD';
         case '4a':
             return 'klinické KV ochorenie (bez zlyhania obličiek)';
         case '4b':
