@@ -160,6 +160,53 @@ clinicalRefTest(
     'calculator_adpkd.php volá adpkdInterpretation z common; adpkdClassify ostáva lokálne',
 );
 
+// IgAN interpretácia: pásma 5yr <5 / <15 / <40 / ≥40 % (správanie + wiring; skóre ostáva v stránke)
+$iganLow = iganInterpretation(3.0);
+clinicalRefTest(
+    $iganLow['warnings'] === []
+        && str_contains($iganLow['interpretation'][0], 'nízke riziko progresie'),
+    'IgAN <5 %: nízke riziko bez varovania',
+);
+$iganMid = iganInterpretation(10.0);
+clinicalRefTest(
+    $iganMid['warnings'] === []
+        && str_contains($iganMid['interpretation'][0], 'stredné riziko')
+        && str_contains($iganMid['interpretation'][0], 'RASB'),
+    'IgAN 5–15 %: stredné riziko bez varovania',
+);
+$iganHigh = iganInterpretation(25.0);
+clinicalRefTest(
+    count($iganHigh['warnings']) === 1
+        && str_contains($iganHigh['interpretation'][0], 'vysoké riziko')
+        && str_contains($iganHigh['warnings'][0], 'KDIGO 2021 IgAN'),
+    'IgAN 15–40 %: vysoké riziko + varovanie imunosupresie',
+);
+$iganVeryHigh = iganInterpretation(50.0);
+clinicalRefTest(
+    count($iganVeryHigh['warnings']) === 1
+        && str_contains($iganVeryHigh['interpretation'][0], 'veľmi vysoké riziko')
+        && str_contains($iganVeryHigh['warnings'][0], 'VYSOKÉ RIZIKO')
+        && str_contains($iganVeryHigh['warnings'][0], 'náhradu funkcie obličiek'),
+    'IgAN ≥40 %: veľmi vysoké riziko + urgentné varovanie',
+);
+
+$iganPageSource = (string) file_get_contents(dirname(__DIR__) . '/calculator_igan.php');
+$iganCommonSource = (string) file_get_contents(dirname(__DIR__) . '/calculators_common.php');
+clinicalRefTest(
+    str_contains($iganCommonSource, 'function iganInterpretation')
+        && str_contains($iganCommonSource, '$risk5yr < 5.0')
+        && str_contains($iganCommonSource, '$risk5yr < 15.0')
+        && str_contains($iganCommonSource, '$risk5yr < 40.0')
+        && str_contains($iganCommonSource, 'KDIGO 2021 IgAN Guidelines'),
+    'calculators_common.php musí mať iganInterpretation s prahmi 5 / 15 / 40 %',
+);
+clinicalRefTest(
+    str_contains($iganPageSource, 'iganInterpretation(')
+        && !str_contains($iganPageSource, 'function iganInterpretation')
+        && str_contains($iganPageSource, 'function iganRisk'),
+    'calculator_igan.php volá iganInterpretation z common; iganRisk ostáva lokálne',
+);
+
 // ─── EKFC Q plateau a polynóm ───
 clinicalRefApprox(80.0, ekfcQCreatinineUmol(50.0, 'male'), 1e-9, 'EKFC Q Cr muž >25');
 clinicalRefApprox(62.0, ekfcQCreatinineUmol(50.0, 'female'), 1e-9, 'EKFC Q Cr žena >25');

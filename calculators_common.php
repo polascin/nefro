@@ -1192,6 +1192,46 @@ function adpkdInterpretation(string $class): array
 }
 
 /**
+ * Klinická interpretácia 5-ročného rizika IgAN Prediction Tool (Barbour 2019).
+ * Skórovací model (iganRisk) ostáva v calculator_igan.php.
+ *
+ * @return array{interpretation: list<string>, warnings: list<string>}
+ */
+function iganInterpretation(float $risk5yr): array
+{
+    $interp = [];
+    $warn = [];
+
+    if ($risk5yr < 5.0) {
+        $interp[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: nízke riziko progresie.";
+    } elseif ($risk5yr < 15.0) {
+        $interp[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: stredné riziko; zvážiť optimalizáciu RASB a proteinúrie.";
+    } elseif ($risk5yr < 40.0) {
+        $interp[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: vysoké riziko; odporúča sa nefrologická konzultácia a zváženie imunosupresie.";
+        $warn[] =
+            "Zvážiť imunosupresívnu liečbu podľa KDIGO 2021 IgAN Guidelines.";
+    } else {
+        $interp[] =
+            "5-ročné riziko " .
+            number_format($risk5yr, 1, ",", " ") .
+            " %: veľmi vysoké riziko rýchlej progresie.";
+        $warn[] =
+            "VYSOKÉ RIZIKO: Urgentná nefrologická konzultácia. Zvážiť imunosupresiu a prípravu na náhradu funkcie obličiek.";
+    }
+
+    return ["interpretation" => $interp, "warnings" => $warn];
+}
+
+/**
  * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
  * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.
  */
