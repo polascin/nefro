@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 04:55 Europe/Bratislava
+Aktualizované: 2026-11-07 05:25 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -28,6 +28,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - aj (Beh 180): typy v auth a newsletter (PHPStan 6 = 127). Deploy `d2fd6c61`.
 - ak (Beh 181): typy v avatar/legal/prevent/providers (PHPStan 6 = 99). Deploy `b1596720`.
 - al (Beh 182): typy v 9 runtime knižniciach (PHPStan 6 = 64). Deploy `2b19fa48`.
+- am (Beh 183): kompaktné datalisty adresy (register 1,5 MB → 517 kB). Deploy `ddccc9ba`.
 
 ## Stav repozitára
 
@@ -39,10 +40,9 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-register.php má 1,5 MB HTML (5 851 <option>, číselníky obcí?). Zistiť zdroj a zmenšiť
-bez novej požiadavky (limit 429), podobne ako datalist autorov (Beh 168).
-Články/routine/IgAN/Na/CRRT len so súhlasom.
+PHPStan 6 (64 ostáva) alebo ďalšie veľké stránky (zmerať veľkosť HTML verejných stránok
+zo sitemap a hľadať odsadené cykly). Články/routine/IgAN/Na/CRRT len so súhlasom.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-045500-loop-libs2-types-beh182.md`
+`.codex/handoffs/2026-11-07-052500-loop-address-datalist-beh183.md`
