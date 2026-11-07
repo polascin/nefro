@@ -237,10 +237,10 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
 
                 if ($sent) {
                     $mobileVerifiedAt = null;
-                    $mobileVerificationCodeHash = $usingExternalProvider ? null : ($tokenData['code_hash'] ?? null);
+                    $mobileVerificationCodeHash = $usingExternalProvider ? null : $tokenData['code_hash'];
                     $mobileVerificationExpiresAt = $usingExternalProvider
                         ? date('Y-m-d H:i:s', time() + 600)
-                        : ($tokenData['expires_at'] ?? null);
+                        : $tokenData['expires_at'];
                     $mobileVerificationSentAt = date('Y-m-d H:i:s');
 
                     // Okamžité uloženie do DB: code_hash musí byť dostupný na overenie
@@ -269,7 +269,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
 
                     $mobileVerificationNotice = 'Overovací SMS kód bol odoslaný. Platnosť kódu je 10 minút.';
 
-                    if ($isLocalDev && !$usingExternalProvider && isset($tokenData['code'])) {
+                    if ($isLocalDev && !$usingExternalProvider) {
                         $mobileVerificationNotice .= ' [DEV] Kód: ' . $tokenData['code'];
                     }
                 } else {

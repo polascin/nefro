@@ -149,6 +149,9 @@ function searchNormalizeSk(string $text): string
     return strtolower(strtr($text, $map));
 }
 
+/**
+ * @return array<string, string>  normalizovaný tvar => pôvodný token
+ */
 function searchTokenize(string $rawQuery): array
 {
     $clean = preg_replace('/[^\p{L}\p{N}\s]+/u', " ", $rawQuery) ?? $rawQuery;
@@ -195,6 +198,10 @@ function searchFtIndexExists(PDO $pdo): bool
     return $cache;
 }
 
+/**
+ * @param array<string, string> $tokens
+ * @return array<string, mixed>
+ */
 function doArticleSearch(
     PDO $pdo,
     array $tokens,
@@ -234,6 +241,9 @@ function doArticleSearch(
     return $result;
 }
 
+/**
+ * @return array<string, mixed>
+ */
 function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): array
 {
     $page = max(1, $page);
@@ -268,6 +278,10 @@ function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): ar
     ];
 }
 
+/**
+ * @param array<string, string> $tokens
+ * @return array<string, mixed>
+ */
 function searchViaFullText(
     PDO $pdo,
     array $tokens,
@@ -324,6 +338,10 @@ function searchViaFullText(
     return $result;
 }
 
+/**
+ * @param array<string, string> $tokens
+ * @return array<string, mixed>
+ */
 function searchViaLike(
     PDO $pdo,
     array $tokens,
@@ -408,6 +426,9 @@ function searchViaLike(
     return $result;
 }
 
+/**
+ * @param array<string, string> $tokens
+ */
 function buildSearchSnippet(
     string $htmlContent,
     array $tokens,
@@ -457,7 +478,11 @@ function buildSearchSnippet(
     return highlightSearchTerms($snippet, $tokens);
 }
 
-/** Prijíma čistý text; escapovanie aj zvýraznenie vykoná v jednom priechode. */
+/**
+ * Prijíma čistý text; escapovanie aj zvýraznenie vykoná v jednom priechode.
+ *
+ * @param array<string, string> $tokens
+ */
 function highlightSearchTerms(string $text, array $tokens): string
 {
     $terms = [];
@@ -488,6 +513,11 @@ function highlightSearchTerms(string $text, array $tokens): string
     return $result . $escape(substr($text, $offset));
 }
 
+/**
+ * @param array<string, mixed> $row
+ * @param array<string, string> $tokens
+ * @return list<string>
+ */
 function detectMatchFields(array $row, array $tokens): array
 {
     $fields = [];
