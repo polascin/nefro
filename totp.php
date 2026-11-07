@@ -166,7 +166,7 @@ function decodeTotpStorage(string $secretField, ?string $backupJson): array
 
     return [
         'secret' => $secretField,
-        'codes' => is_array($decoded) && array_is_list($decoded) ? array_values($decoded) : [],
+        'codes' => is_array($decoded) && array_is_list($decoded) ? $decoded : [],
         'legacy' => true,
     ];
 }

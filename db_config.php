@@ -319,7 +319,7 @@ function hydrateArticleContentForUnmappedAuthors(\PDO $pdo, array &$rows): void
     foreach (array_chunk(array_keys($needIds), 200) as $chunk) {
         $placeholders = implode(',', array_fill(0, count($chunk), '?'));
         $stmt = $pdo->prepare("SELECT id, content FROM articles WHERE id IN ($placeholders)");
-        $stmt->execute(array_values($chunk));
+        $stmt->execute($chunk);
         while ($contentRow = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             $id = (int) ($contentRow['id'] ?? 0);
             if (!isset($needIds[$id])) {
