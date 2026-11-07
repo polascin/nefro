@@ -118,7 +118,6 @@ foreach ($adpkdClassifyCases as $i => [$tkv, $h, $age, $cls, $httkv, $kPct]) {
         $got['class'] === $cls
             && $got['httkv'] === $httkv
             && $got['k_pct'] === $kPct
-            && is_string($got['speed'])
             && $got['speed'] !== '',
         'ADPKD classify #' . ($i + 1) . " ($cls)",
     );

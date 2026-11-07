@@ -113,6 +113,10 @@ function calculatorDeleteExpiredResults(PDO $pdo, int $days = CALCULATOR_RESULT_
     return $stmt->rowCount();
 }
 
+/**
+ * @param array<string, mixed> $source
+ * @return array{first_name: string, last_name: string, birth_date: string, birth_number: string, insurance_code: string}
+ */
 function calculatorPatientDataFromRequest(array $source): array
 {
     $firstName = requestScalarString($source, 'patient_first_name');
@@ -219,6 +223,10 @@ function validateBirthNumber(string $raw): array {
     return [];
 }
 
+/**
+ * @param array<string, string> $patient
+ * @param list<string> $errors
+ */
 function calculatorValidateOptionalPatientData(array $patient, array &$errors): void
 {
     if ($patient['birth_date'] !== '') {
@@ -240,6 +248,9 @@ function calculatorValidateOptionalPatientData(array $patient, array &$errors): 
     }
 }
 
+/**
+ * @param list<string> $errors
+ */
 function calculatorValidateExaminationDate(string $date, array &$errors): void
 {
     $dt = \DateTime::createFromFormat('!Y-m-d', $date);
@@ -257,7 +268,7 @@ function calculatorValidateExaminationDate(string $date, array &$errors): void
  * Odvodí vek pacienta z dátumu narodenia alebo rodného čísla.
  * Preferuje dátum narodenia; fallback na rodné číslo.
  *
- * @param array $patient  Výstup calculatorPatientDataFromRequest()
+ * @param array<string, string> $patient  Výstup calculatorPatientDataFromRequest()
  * @return int|null  Vek v rokoch, alebo null ak sa nedá odvodiť
  */
 function calculatorAgeFromPatient(array $patient): ?int
@@ -1201,6 +1212,8 @@ function kfreInterpretation(float $risk2yr, float $risk5yr): array
  * klasifikuje sa podľa r, nie podľa logaritmickej miery k = ln(HtTKV / 150) / vek,
  * ktorá je pri rovnakom r nižšia (napr. r = 6 % ↔ k ≈ 0,0583).
  * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická) sa určuje mimo tejto funkcie.
+ *
+ * @return array{httkv: float, k_pct: float, class: string, speed: string}
  */
 function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
 {
@@ -2306,6 +2319,11 @@ function ckdGCategoryDescription(string $category): string
     return $map[$category] ?? '';
 }
 
+/**
+ * @param array<string, string> $patient
+ * @param array<string, mixed> $inputPayload
+ * @param array<string, mixed> $resultPayload
+ */
 function calculatorSaveResult(
     PDO $pdo,
     int $userId,
@@ -2355,6 +2373,9 @@ function calculatorSaveResult(
     ]);
 }
 
+/**
+ * @return list<array<string, mixed>>
+ */
 function calculatorFetchSavedResults(PDO $pdo, int $userId, string $calculatorKey, int $limit = 20): array
 {
     $limit = max(1, min(100, $limit));
@@ -2390,6 +2411,9 @@ function calculatorFetchSavedResults(PDO $pdo, int $userId, string $calculatorKe
     return $rows;
 }
 
+/**
+ * @return array<string, mixed>|null
+ */
 function calculatorFetchSavedResultById(PDO $pdo, int $resultId, int $userId): ?array
 {
     $stmt = $pdo->prepare(
@@ -2436,6 +2460,9 @@ function calculatorDeleteSavedResult(PDO $pdo, int $resultId, int $userId): bool
     return $stmt->rowCount() > 0;
 }
 
+/**
+ * @return array<mixed>
+ */
 function calculatorDecodeJsonArray(string $json): array
 {
     if ($json === '') {
@@ -2450,6 +2477,9 @@ function calculatorDecodeJsonArray(string $json): array
     return $decoded;
 }
 
+/**
+ * @param array<string, mixed> $row
+ */
 function calculatorBuildPatientDisplay(array $row): string
 {
     $name = trim((string) (($row['patient_first_name'] ?? '') . ' ' . ($row['patient_last_name'] ?? '')));
@@ -2476,6 +2506,8 @@ function calculatorBuildPatientDisplay(array $row): string
 
 /**
  * Načíta základné klinické údaje používateľa z DB pre quickfill.
+ *
+ * @return array<string, mixed>
  */
 function calculatorGetUserProfile(PDO $pdo, int $userId): array
 {
@@ -2506,6 +2538,8 @@ function calculatorGetUserProfile(PDO $pdo, int $userId): array
 
 /**
  * Vráti všetky uložené výsledky používateľa naprieč všetkými kalkulačkami.
+ *
+ * @return list<array<string, mixed>>
  */
 function calculatorFetchAllResults(PDO $pdo, int $userId, int $limit = 200): array
 {
@@ -2622,6 +2656,9 @@ function calculatorApplyInputPayloadToForm(array &$form, array $payload): void
 
 /**
  * Načíta uložený výsledok do $form podľa GET parametra load_id.
+ *
+ * @param array<string, mixed> $form
+ * @param list<string> $messages
  */
 function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
 {
@@ -2651,6 +2688,9 @@ function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
 
 /**
  * Spracuje akciu delete_saved z POST handlera kalkulačky.
+ *
+ * @param list<string> $errors
+ * @param list<string> $messages
  */
 function calculatorHandleDeleteSaved(PDO $pdo, array &$errors, array &$messages, string $logPrefix): void
 {
@@ -2716,6 +2756,8 @@ function calculatorRenderRegisterCta(string $variant = 'saved'): void
 /**
  * Vykreslí sekciu uložených výsledkov so štandardnou 4-stĺpcovou tabuľkou.
  * $renderResultCell(array $row): void — echos HTML pre stĺpec "Výsledok"
+ *
+ * @param list<array<string, mixed>> $savedResults
  */
 function calculatorRenderSavedResultsTable(
     array $savedResults,
@@ -2907,6 +2949,8 @@ function calculatorFormatEgfrBothUnits(float $mlMin, int $decimals = 1): string
  * Prečíta hodnotu eGFR z formulára a prepočíta ju na ml/min/1,73 m².
  * Rozsah $min/$max sa kontroluje v kanonickej jednotke.
  * Vracia null a doplní $errors, ak je hodnota neplatná.
+ *
+ * @param list<string> $errors
  */
 function calculatorParseEgfrToMlMin(
     string $rawValue,
