@@ -18,6 +18,9 @@ function complianceTest(bool $condition, string $label): void
 
 class ComplianceTestPdo extends PDO
 {
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         $query = str_replace('DATE_ADD(NOW(), INTERVAL 4 YEAR)', "datetime('now', '+4 years')", $query);

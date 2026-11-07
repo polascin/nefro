@@ -17,12 +17,18 @@ function searchTest(bool $ok, string $message): void
 // Natívny PDO MySQL odmieta opakované pomenované parametre; SQLite ich povoľuje.
 class NativeSearchTestPdo extends PDO
 {
+    /**
+     * @var array<mixed>
+     */
     public array $statements = [];
 
     public function __construct()
     {
     }
 
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         preg_match_all('/(?<!:):([a-zA-Z_][a-zA-Z_0-9]*)/', $query, $matches);
@@ -37,6 +43,9 @@ class NativeSearchTestPdo extends PDO
 
 class NativeSearchTestStatement extends PDOStatement
 {
+    /**
+     * @var array<mixed>
+     */
     public array $values = [];
 
     public function __construct(public string $sql)
@@ -49,6 +58,9 @@ class NativeSearchTestStatement extends PDOStatement
         return true;
     }
 
+    /**
+     * @param array<mixed>|null $params
+     */
     public function execute(?array $params = null): bool
     {
         $values = $params ?? $this->values;
@@ -66,6 +78,9 @@ class NativeSearchTestStatement extends PDOStatement
         return str_contains($this->sql, 'information_schema') ? 1 : 3;
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function fetchAll(int $mode = PDO::FETCH_DEFAULT, mixed ...$args): array
     {
         return [['id' => 3, 'title' => 'Syntetický výsledok']];
@@ -92,6 +107,9 @@ searchTest(true, 'Dotaz opätovného overenia rešpektuje natívne placeholdery.
 
 class LikeSearchTestPdo extends PDO
 {
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         return parent::prepare(str_replace('LEFT(content, 3000)', 'substr(content, 1, 3000)', $query), $options);

@@ -15,6 +15,9 @@ function catalogueSearchTest(bool $ok, string $message): void
     }
 }
 
+/**
+ * @return list<string>
+ */
 function catalogueNamedPlaceholders(string $sql): array
 {
     preg_match_all('/(?<!:):([a-zA-Z_][a-zA-Z_0-9]*)/', $sql, $matches);
@@ -32,12 +35,18 @@ function catalogueRejectDuplicatePlaceholders(string $sql): void
 /** Natívny PDO MySQL odmieta opakované pomenované parametre; SQLite ich povoľuje. */
 class NativeCatalogueTestPdo extends PDO
 {
+    /**
+     * @var array<mixed>
+     */
     public array $statements = [];
 
     public function __construct()
     {
     }
 
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         catalogueRejectDuplicatePlaceholders($query);
@@ -49,12 +58,18 @@ class NativeCatalogueTestPdo extends PDO
 
 class NativeCatalogueTestStatement extends PDOStatement
 {
+    /**
+     * @var array<mixed>
+     */
     public array $values = [];
 
     public function __construct(public string $sql)
     {
     }
 
+    /**
+     * @param array<mixed>|null $params
+     */
     public function execute(?array $params = null): bool
     {
         $values = $params ?? $this->values;
@@ -66,6 +81,9 @@ class NativeCatalogueTestStatement extends PDOStatement
         return true;
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function fetchAll(int $mode = PDO::FETCH_DEFAULT, mixed ...$args): array
     {
         return [['nct_id' => 'NCT00000000', 'slug' => 'furosemid']];

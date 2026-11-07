@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
-/** Stav vydania musí patriť presnému commitu, nie predchádzajúcemu zelenému behu. */
+/**
+ * Stav vydania musí patriť presnému commitu, nie predchádzajúcemu zelenému behu.
+ *
+ * @param list<array<string, mixed>> $runs
+ */
 function nefroCiGateState(array $runs, string $sha): string
 {
     foreach ($runs as $run) {

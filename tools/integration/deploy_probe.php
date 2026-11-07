@@ -23,6 +23,11 @@ $environment['NEFRO_GATE_CMD'] = 'sh "$NEFRO_PROBE_BIN/gate"';
 $environment['NEFRO_PROBE_BIN'] = $root . '/bin';
 $environment['NEFRO_SKIP_POST_DEPLOY'] = '1';
 
+/**
+ * @param list<string> $command
+ * @param array<string, string> $environment
+ * @return array{0: int, 1: string}
+ */
 function releaseProbeRun(array $command, string $root, array $environment): array
 {
     $process = proc_open($command, [STDIN, ['pipe', 'w'], ['pipe', 'w']], $pipes, $root, $environment);

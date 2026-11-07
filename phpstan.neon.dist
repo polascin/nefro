@@ -1,6 +1,6 @@
 parameters:
     # Začni nízko (0–4). Po vyčistení nálezov môžeš úroveň postupne zvyšovať až po 9.
-    level: 5
+    level: 6
 
     # Analyzuj ako PHP 8.5 (produkcia 8.5.x) bez ohľadu na interpreter, ktorý
     # PHPStan spúšťa. Triedy Pdo\Mysql a Pdo\Sqlite existujú od PHP 8.4; pod
