@@ -24,6 +24,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-an (veľkosť stránok, Beh 184)
+
+- [x] index 313 → 235 kB (datalist autorov); 64 stránok zmeraných; deploy `ea377a33`
+
 ## Hotové: slučka 2026-11-07-am (datalisty adresy, Beh 183)
 
 - [x] register/profil kompaktné datalisty; 1,5 MB → 517 kB; autofill overený v prehliadači; deploy `ddccc9ba`

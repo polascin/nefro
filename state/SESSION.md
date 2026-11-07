@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 05:25 Europe/Bratislava
+Aktualizované: 2026-11-07 05:50 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -29,6 +29,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - ak (Beh 181): typy v avatar/legal/prevent/providers (PHPStan 6 = 99). Deploy `b1596720`.
 - al (Beh 182): typy v 9 runtime knižniciach (PHPStan 6 = 64). Deploy `2b19fa48`.
 - am (Beh 183): kompaktné datalisty adresy (register 1,5 MB → 517 kB). Deploy `ddccc9ba`.
+- an (Beh 184): kompaktný datalist autorov (index 313 → 235 kB). Deploy `ea377a33`.
 
 ## Stav repozitára
 
@@ -45,4 +46,4 @@ zo sitemap a hľadať odsadené cykly). Články/routine/IgAN/Na/CRRT len so sú
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-052500-loop-address-datalist-beh183.md`
+`.codex/handoffs/2026-11-07-055000-loop-index-size-beh184.md`
