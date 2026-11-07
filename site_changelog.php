@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-07 07:10',
+                'category' => 'portal',
+                'title' => 'Prístupnosť: jeden hlavný nadpis na stránke',
+                'description' => 'Hlavným nadpisom stránky je teraz jej vlastný názov (napríklad titulok článku), nie názov portálu v hlavičke. Čítačky obrazovky a vyhľadávače tak správne rozpoznajú, o čom stránka je. Vzhľad sa nemení.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-07 05:17',
                 'category' => 'portal',
                 'title' => 'Rýchlejšia registrácia a úprava profilu',

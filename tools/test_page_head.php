@@ -35,6 +35,24 @@ foreach (glob($root . '/*.php') ?: [] as $file) {
 }
 pageHeadTest($pages >= 40, "Príliš málo stránok s header.php ({$pages}); heuristika zlyhala.");
 
+// Jediný <h1> (Beh 187): hlavička dáva názov portálu ako <h1> len stránkam bez
+// vlastného nadpisu; stránka s vlastným <h1> musí nastaviť $pageHasOwnH1 = true.
+$header = (string) file_get_contents($root . '/header.php');
+pageHeadTest(str_contains($header, "\$siteHeaderTitleTag = !empty(\$pageHasOwnH1) ? 'p' : 'h1';"), 'header.php volí tag názvu portálu podľa $pageHasOwnH1.');
+foreach (glob($root . '/*.php') ?: [] as $file) {
+    $name = basename($file);
+    if ($name === 'header.php' || str_starts_with($name, 'add_') || in_array($name, ['auth.php', 'pdf_generator.php', 'refresh_article.php', 'admin_users_notice.php'], true)) {
+        continue;
+    }
+    $src = (string) file_get_contents($file);
+    if (preg_match('~<h1\b~', $src) !== 1 || preg_match('~["\']/?(?:header|legal_head)\.php["\']~', $src) !== 1) {
+        continue;
+    }
+    pageHeadTest(str_contains($src, '$pageHasOwnH1 = true;'), "{$name} má vlastný <h1>, musí nastaviť \$pageHasOwnH1 = true (inak dva <h1>).");
+}
+$articleSrc = (string) file_get_contents($root . '/article.php');
+pageHeadTest(str_contains($articleSrc, '<h1 class="page-title" itemprop="headline">'), 'Titulok článku je <h1 class="page-title">.');
+
 $report = (string) file_get_contents($root . '/content_report.php');
 pageHeadTest(str_contains($report, "\$legalSlug        = 'content_report.php';"), 'content_report.php má canonical cez legal_head.php.');
 

@@ -113,6 +113,7 @@ try {
 $headerTitle = 'Oznámenia obsahu';
 $headerIntro = 'Oznámenia nezákonného obsahu podľa DSA';
 $showLogo = false;
+$pageHasOwnH1 = true;
 include 'header.php';
 include 'admin_menu.php';
 ?>

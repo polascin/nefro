@@ -139,6 +139,7 @@ if (!empty($itemListElements)) {
   $headerTitle = "Ťaháky";
   $headerIntro = "Tlačiteľné ťaháky pre klinickú prax.";
   $showLogo = true;
+  $pageHasOwnH1 = true;
   include_once "header.php";
   ?>
 

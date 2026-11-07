@@ -249,6 +249,7 @@ $schemaWebApp = [
     $headerTitle = "Nefrologické kalkulačky";
     $headerIntro = "";
     $showLogo = false;
+    $pageHasOwnH1 = true;
     include "header.php";
     ?>
 

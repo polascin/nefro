@@ -31,12 +31,17 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
     <!-- Stred - Nadpis a Podnadpis (1/3) -->
     <div class="site-header__col site-header__col--center">
         <a href="index.php" class="site-header__title-link">
-            <h1 class="site-header__main-title">
+            <?php
+            // Jediný <h1> na stránke: názov portálu len tam, kde stránka nemá vlastný
+            // nadpis (Beh 187). Stránky s vlastným <h1> nastavia $pageHasOwnH1 = true.
+            $siteHeaderTitleTag = !empty($pageHasOwnH1) ? 'p' : 'h1';
+            ?>
+            <<?= $siteHeaderTitleTag ?> class="site-header__main-title">
                 <span class="site-header__brand">
                     <span class="site-header__brand-primary">Nefro</span><span class="site-header__brand-sep">-</span><span class="site-header__brand-secondary">projekt</span>
                     <span class="site-header__brand-place">Slovensko</span>
                 </span>
-            </h1>
+            </<?= $siteHeaderTitleTag ?>>
         </a>
         <p class="site-header__tagline">Nefrológia&nbsp;· Dialýza&nbsp;· Interná medicína</p>
 

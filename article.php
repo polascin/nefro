@@ -320,6 +320,7 @@ if ($article) {
   $headerIntro =
       "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.";
   $showLogo = true;
+  $pageHasOwnH1 = true;
   include_once "header.php";
   ?>
 
@@ -330,7 +331,7 @@ if ($article) {
       <?php if ($notFound || $article === null) { ?>
         <article class="primary-article">
           <header>
-            <h2>Článok nenájdený</h2>
+            <h1 class="page-title">Článok nenájdený</h1>
           </header>
           <p>Požadovaný článok neexistuje alebo bol odstránený.</p>
           <a href="index.php" class="btn-primary">← Späť na úvodnú stránku</a>
@@ -357,9 +358,9 @@ if ($article) {
             <span class="badge-top" aria-label="Odporúčaný článok">★ TOP</span>
           <?php endif; ?>
           <header>
-            <h2 itemprop="headline"><?= htmlspecialchars(
+            <h1 class="page-title" itemprop="headline"><?= htmlspecialchars(
                 (string) $article["title"],
-            ) ?></h2>
+            ) ?></h1>
             <p class="meta">
               Publikované:&nbsp;
               <time datetime="<?= $pubDateIso ?>" itemprop="datePublished"><?= htmlspecialchars(
