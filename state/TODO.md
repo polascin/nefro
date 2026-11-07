@@ -24,6 +24,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-aq (jeden h1, Beh 187)
+
+- [x] header h1 len bez vlastného nadpisu; článok h1; 13 stránok = 1 h1; deploy `2f2a48c7`
+
 ## Hotové: slučka 2026-11-07-ap (PHPStan 6, Beh 186)
 
 - [x] tools/ typy; phpstan.neon.dist level: 6; celý projekt 0 chýb
