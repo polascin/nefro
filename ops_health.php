@@ -166,6 +166,85 @@ function opsHealthEvaluateFileAge(string $label, ?int $ageSeconds, int $maxAgeSe
 }
 
 /**
+ * Chybový log Apache/PHP-FPM subdomény nefro na WebSupport: <web>/logs-nefro.polascin.net/
+ * (koreň aplikácie je <web>/sub/nefro). Rotuje sa denne o polnoci do error_log-YYYY-MM-DD.gz.
+ * NEFRO_PHP_ERROR_LOG_DIR ho prepíše (testy, iný hosting).
+ */
+function opsHealthPhpErrorLogDir(string $root): string
+{
+    $override = getenv('NEFRO_PHP_ERROR_LOG_DIR');
+    if (is_string($override) && $override !== '') {
+        return rtrim($override, '/');
+    }
+
+    return dirname($root, 2) . '/logs-nefro.polascin.net';
+}
+
+/**
+ * Text aktuálneho logu a včerajšieho rotovaného súboru (spolu pokrýva aspoň 24 h).
+ * Nečitateľný adresár vráti null, chýbajúci súbor sa preskočí.
+ */
+function opsHealthReadPhpErrorLogs(string $dir, int $now): ?string
+{
+    if (!is_dir($dir) || !is_readable($dir)) {
+        return null;
+    }
+    $text = '';
+    $rotated = $dir . '/error_log-' . date('Y-m-d', $now - 86400) . '.gz';
+    if (is_readable($rotated)) {
+        $raw = file_get_contents($rotated);
+        $decoded = $raw === false ? false : gzdecode($raw);
+        if (is_string($decoded)) {
+            $text .= $decoded . "\n";
+        }
+    }
+    $current = $dir . '/error_log';
+    if (is_readable($current)) {
+        $text .= (string) file_get_contents($current);
+    }
+
+    return $text;
+}
+
+/**
+ * Spočíta fatálne chyby PHP v texte logu a vráti najviac 3 unikátne vzorky
+ * „správa v súbor:riadok“ bez absolútnej cesty a bez IP klienta.
+ *
+ * @return array{count: int, samples: list<string>}
+ */
+function opsHealthPhpFatals(string $logText): array
+{
+    $count = 0;
+    $samples = [];
+    foreach (preg_split('/\R/', $logText) ?: [] as $line) {
+        if (preg_match('/PHP (?:Fatal|Parse) error:\s+(.*)$/', $line, $m) !== 1) {
+            continue;
+        }
+        ++$count;
+        $message = preg_replace('~ in /\S*/([^/\s]+\.php):(\d+)~', ' in $1:$2', $m[1]) ?? $m[1];
+        $message = mb_substr(trim($message), 0, 200);
+        if (count($samples) < 3 && !in_array($message, $samples, true)) {
+            $samples[] = $message;
+        }
+    }
+
+    return ['count' => $count, 'samples' => $samples];
+}
+
+/**
+ * @param array{count: int, samples: list<string>} $fatals
+ * @return array{status: string, messages: list<string>}
+ */
+function opsHealthEvaluatePhpFatals(array $fatals): array
+{
+    if ($fatals['count'] === 0) {
+        return ['status' => 'PASS', 'messages' => []];
+    }
+
+    return ['status' => 'WARN', 'messages' => $fatals['samples']];
+}
+
+/**
  * Načíta DEPLOY_COMMIT a DEPLOY_TIMESTAMP z deploy_info.php bez jeho vykonania.
  *
  * @return array{commit: ?string, timestamp: ?int}
@@ -642,6 +721,21 @@ function opsHealthMain(array $argv): int
         $age = $marker['timestamp'] === null ? null : max(0, time() - $marker['timestamp']);
         $lines[] = sprintf('PASS  deploy marker: %s%s', $marker['commit'],
             $age === null ? '' : ' (nasadené pred ' . intdiv($age, 3600) . ' h)');
+    }
+
+    // 3b) Fatálne chyby PHP za posledných 24 h (Beh 176: register.php TypeError z 3. 11.
+    //     bol viditeľný len v serverovom logu, nie v žiadnej kontrole).
+    $phpLog = opsHealthReadPhpErrorLogs(opsHealthPhpErrorLogDir(__DIR__), time());
+    if ($phpLog === null) {
+        $lines[] = 'INFO  PHP chybový log: adresár nedostupný (mimo produkcie), preskočené.';
+    } else {
+        $fatals = opsHealthPhpFatals($phpLog);
+        $fatalEval = opsHealthEvaluatePhpFatals($fatals);
+        $statuses[] = $fatalEval['status'];
+        $lines[] = sprintf('%-5s PHP fatálne chyby (24 h): %d', $fatalEval['status'], $fatals['count']);
+        foreach ($fatalEval['messages'] as $message) {
+            $lines[] = '      ' . $message;
+        }
     }
 
     // 4) Verejné stránky
