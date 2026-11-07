@@ -55,10 +55,10 @@ $payMethods = [
         'cta' => 'Zaplatiť kartou',
     ],
 ];
-$enabledPayMethods = array_values(array_filter(
+$enabledPayMethods = array_filter(
     $payMethods,
     static fn (array $m): bool => $m['url'] !== ''
-));
+);
 
 // Kryptomeny — Uphold účet (príjem na e-mail účtu).
 $upholdAccount = 'lubomir@polascin.net';

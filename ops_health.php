@@ -325,7 +325,7 @@ function opsHealthExcerptDrift(PDO $pdo, array $scriptExcerpts): array
     foreach (array_chunk($slugs, 200) as $chunk) {
         $placeholders = implode(',', array_fill(0, count($chunk), '?'));
         $stmt = $pdo->prepare("SELECT slug, excerpt FROM articles WHERE slug IN ({$placeholders})");
-        $stmt->execute(array_values($chunk));
+        $stmt->execute($chunk);
         foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
             $slug = (string) $row['slug'];
             if (!isset($scriptExcerpts[$slug])) {
