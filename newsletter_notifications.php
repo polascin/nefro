@@ -419,6 +419,9 @@ if (!function_exists('requeueFailedArticleNewsletter')) {
 }
 
 if (!function_exists('enqueueArticleNewsletterEmailsNow')) {
+    /**
+     * @return array{updated: int, inserted: int, total: int}
+     */
     function enqueueArticleNewsletterEmailsNow(PDO $pdo, int $articleId): array
     {
         if ($articleId <= 0) {
@@ -489,6 +492,9 @@ if (!function_exists('enqueueArticleNewsletterEmailsNow')) {
 }
 
 if (!function_exists('getNewsletterQueueSummary')) {
+    /**
+     * @return array<string, mixed>
+     */
     function getNewsletterQueueSummary(PDO $pdo): array
     {
         $summary = [
@@ -523,6 +529,9 @@ if (!function_exists('getNewsletterQueueSummary')) {
 }
 
 if (!function_exists('getArticleNewsletterQueueStats')) {
+    /**
+     * @return array<int, array<string, int>>  ID článku => počty podľa stavu
+     */
     function getArticleNewsletterQueueStats(PDO $pdo): array
     {
         $stats = [];
@@ -554,6 +563,9 @@ if (!function_exists('getArticleNewsletterQueueStats')) {
 }
 
 if (!function_exists('getNewsletterQueueRecent')) {
+    /**
+     * @return list<array<string, mixed>>
+     */
     function getNewsletterQueueRecent(PDO $pdo, int $limit = 40, string $statusFilter = '', int $articleIdFilter = 0, string $presetFilter = ''): array
     {
         $limit = max(1, min(200, $limit));
@@ -698,6 +710,9 @@ if (!function_exists('sendSubscriberVerifyEmail')) {
 }
 
 if (!function_exists('processNlSubQueue')) {
+    /**
+     * @return array<string, mixed>
+     */
     function processNlSubQueue(PDO $pdo, int $limit = 50, int $maxAttempts = 5): array
     {
         $limit       = max(1, min(500, $limit));
@@ -841,6 +856,9 @@ if (!function_exists('processNlSubQueue')) {
 }
 
 if (!function_exists('processArticleNewsletterQueue')) {
+    /**
+     * @return array<string, mixed>
+     */
     function processArticleNewsletterQueue(PDO $pdo, int $limit = 50, int $maxAttempts = 5): array
     {
         $limit = max(1, min(500, $limit));
@@ -1088,6 +1106,9 @@ if (!function_exists('ensureWeeklyDigestTable')) {
 }
 
 if (!function_exists('getWeeklyDigestArticles')) {
+    /**
+     * @return list<array<string, mixed>>
+     */
     function getWeeklyDigestArticles(PDO $pdo, string $since, string $until): array
     {
         $stmt = $pdo->prepare("SELECT id, title, slug, excerpt, published_at
@@ -1102,6 +1123,9 @@ if (!function_exists('getWeeklyDigestArticles')) {
 }
 
 if (!function_exists('buildWeeklyDigestArticlesHtml')) {
+    /**
+     * @param list<array<string, mixed>> $articles
+     */
     function buildWeeklyDigestArticlesHtml(array $articles): string
     {
         $baseUrl = getAppBaseUrl();
@@ -1195,8 +1219,8 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
      * sekciu „Novinky na portáli“ zo site_changelog.php — nové kalkulačky,
      * interaktívne nástroje a ďalšie zmeny mimo článkov.
      *
-     * @param array $opts  days (int, predvolené 7), dry_run (bool), ignore_last_run (bool)
-     * @return array  Súhrn behu.
+     * @param array<string, mixed> $opts  days (int, predvolené 7), dry_run (bool), ignore_last_run (bool)
+     * @return array<string, mixed>  Súhrn behu.
      */
     function sendWeeklyNewsletterDigest(PDO $pdo, array $opts = []): array
     {

@@ -409,6 +409,7 @@ function requireAdminReauth(int $graceSeconds = 300): void {
  * @param string|null $targetType Typ cieľovej entity (napr. 'article', 'user')
  * @param int|null $targetId  ID cieľovej entity
  * @param array $details      Voliteľné štruktúrované detaily (ukladá sa JSON)
+ * @param array<string, mixed> $details
  */
 function logAdminAction(
     PDO $pdo,
@@ -578,6 +579,7 @@ function clearUserSession(): void {
  * Podpis autentifikačného stavu invaliduje staré relácie po zmene hesla,
  * administrátorskej roly, aktivity účtu alebo 2FA údajov bez ukladania tajomstiev
  * do samostatnej session tabuľky.
+ * @param array<string, mixed> $user
  */
 function buildUserAuthFingerprint(array $user): string {
     $parts = [
@@ -598,6 +600,9 @@ function buildUserAuthFingerprint(array $user): string {
     );
 }
 
+/**
+ * @param array<string, mixed> $user
+ */
 function refreshCurrentSessionAuthFingerprint(array $user): void {
     $_SESSION['_auth_fingerprint'] = buildUserAuthFingerprint($user);
 }
@@ -931,6 +936,7 @@ function setFlashMessage(string $type, string $message): void {
 
 /**
  * Načítanie a odstránenie jednorazovej hlášky z relácie
+ * @return array<string, mixed>|null
  */
 function popFlashMessage(): ?array {
     if (empty($_SESSION['flash_message']) || !is_array($_SESSION['flash_message'])) {
@@ -1178,6 +1184,7 @@ function getAccessLogPdo(): ?\PDO {
 
 /**
  * Zapíše informácie o prístupe do databázy alebo do fallback logu.
+ * @param array<string, mixed> $record
  */
 function saveAccessLog(array $record): bool {
     $pdo = getAccessLogPdo();
@@ -1224,6 +1231,7 @@ function saveAccessLog(array $record): bool {
 
 /**
  * Zapíše prístupový záznam do lokálneho fallback logu, ak DB nie je dostupná.
+ * @param array<string, mixed> $record
  */
 function fallbackAccessLog(array $record): void {
     $logDir = __DIR__ . '/private/logs';
@@ -1361,6 +1369,7 @@ function isTwoFactorPending(): bool
  * Ekvivalent bloku v login.php — nastavuje rovnaké session premenné.
  *
  * @param array $user  Riadok z tabuľky users (musí obsahovať id, username, email, is_admin, email_verified_at)
+ * @param array<string, mixed> $user
  */
 function completeTwoFactorLogin(array $user): void
 {
@@ -1381,6 +1390,7 @@ function completeTwoFactorLogin(array $user): void
 /**
  * Zoznam podporovaných časových pásiem, ktoré používateľ môže zvoliť v profile.
  * Predvolené je CET/CEST (Europe/Bratislava).
+ * @return array<string, string>  identifikátor pásma => popis
  */
 function getAllowedUserTimezones(): array
 {

@@ -461,8 +461,8 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 }
                 try {
                     $result = enqueueArticleNewsletterEmailsNow($pdo, $id);
-                    logAdminAction($pdo, 'enqueue_newsletter', 'article', $id, ['recipients' => (int) ($result['total'] ?? 0)]);
-                    if (($result["total"] ?? 0) > 0) {
+                    logAdminAction($pdo, 'enqueue_newsletter', 'article', $id, ['recipients' => $result['total']]);
+                    if ($result["total"] > 0) {
                         $actionResult =
                             "Avízo bolo ručne zaradené pre článok. Počet príjemcov vo fronte: " .
                             (int) $result["total"] .
