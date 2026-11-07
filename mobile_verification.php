@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/config_loader.php';
 
+/**
+ * @return array{code: string, code_hash: string, expires_at: string}
+ */
 function generateMobileVerificationCode(): array {
     $code = (string) random_int(100000, 999999);
 
@@ -61,6 +64,9 @@ function isMobileResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool
     return (time() - $sentTs) >= $cooldownSeconds;
 }
 
+/**
+ * @param array<string, mixed> $userRow
+ */
 function verifyMobileCodeRecord(array $userRow, string $providedCode): string {
     $status = 'ok';
 
@@ -79,6 +85,9 @@ function verifyMobileCodeRecord(array $userRow, string $providedCode): string {
     return $status;
 }
 
+/**
+ * @return array<string, mixed>
+ */
 function getMobileVerificationEnvConfig(): array {
     static $config = null;
     if ($config !== null) {
@@ -115,6 +124,10 @@ function twilioVerifyMissingConfig(string $accountSid, string $authToken, string
     return $missing;
 }
 
+/**
+ * @param array<string, string> $postData
+ * @return array{ok: bool, status_code: int, json: mixed}
+ */
 function twilioVerifyExecuteRequest(string $url, string $accountSid, string $authToken, array $postData): array {
     $response = ['ok' => false, 'status_code' => 0, 'json' => null];
 
@@ -156,6 +169,10 @@ function twilioVerifyExecuteRequest(string $url, string $accountSid, string $aut
     return ['ok' => $ok, 'status_code' => $statusCode, 'json' => $decoded];
 }
 
+/**
+ * @param array<string, string> $postData
+ * @return array{ok: bool, status_code: int, json: mixed}
+ */
 function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     $cfg = getMobileVerificationEnvConfig();
     $accountSid = (string) ($cfg['twilio_account_sid'] ?? '');
@@ -175,6 +192,9 @@ function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     return twilioVerifyExecuteRequest($url, $accountSid, $authToken, $postData);
 }
 
+/**
+ * @param array<string, mixed> $userRow
+ */
 function verifyMobileCodeByProvider(array $userRow, ?string $mobilePhone, string $providedCode): string {
     $status = verifyMobileCodeRecord($userRow, $providedCode);
 
@@ -243,6 +263,7 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
 
 /**
  * Vráti true ak je SMS verifikácia zablokovaná kvôli príliš veľa neúspešným pokusom.
+ * @param array<string, mixed> $user
  */
 function isMobileVerifyLocked(array $user): bool {
     $lockedUntil = $user['mobile_verify_locked_until'] ?? null;
@@ -256,6 +277,7 @@ function isMobileVerifyLocked(array $user): bool {
 /**
  * Zaznamená neúspešný pokus o overenie SMS kódu.
  * Pri dosiahnutí 5 pokusov nastaví 15-minútový lockout.
+ * @param array<string, mixed> $user
  */
 function recordMobileVerifyFail(PDO $pdo, int $userId, array $user): void {
     $previousCount = (int) ($user['mobile_verify_fail_count'] ?? 0);
