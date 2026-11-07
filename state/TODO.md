@@ -24,6 +24,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-ai (typy vyhľadávania, Beh 179)
+
+- [x] search_helpers + mobile_verification + profile; PHPStan 6 = 145; deploy `9c70b213`
+
 ## Hotové: slučka 2026-11-07-ah (typy e-mailu, Beh 178)
 
 - [x] email_verification: PHPStan 6 = 0; deploy `26c03dd8`
@@ -32,7 +36,7 @@
 
 - [x] calculators_common: PHPStan 6 = 0; deploy `da0be54a`
 - [ ] Majiteľ: v nočnej routine vylúčiť bot_trap.php (sama sa banuje okolo 01:05)
-- [ ] PHPStan 6: ostáva 168 (search_helpers 13, newsletter_notifications 10, mobile_verification 10, auth 8)
+- [ ] PHPStan 6: ostáva 145 (newsletter_notifications 10, auth 8, providers_common 7, prevent_model 7, legal_data 7)
 
 ## Hotové: slučka 2026-11-07-af (chybový log, Beh 176)
 
