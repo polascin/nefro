@@ -39,6 +39,9 @@ function legalTest(bool $condition, string $label): void
 // SQLite adaptér mení iba syntax INSERT IGNORE; aplikačné dotazy zostávajú reálne.
 class LegalTestPdo extends Pdo\Sqlite
 {
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         return parent::prepare(str_replace('INSERT IGNORE', 'INSERT OR IGNORE', $query), $options);

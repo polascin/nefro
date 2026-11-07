@@ -46,6 +46,7 @@ function dependencyRegisterLoad(string $path = DEPENDENCY_REGISTER_PATH): array
 
 /**
  * @return list<string> relatívne cesty (lomky) zoradené podľa názvu
+ * @param list<string> $patterns
  */
 function dependencyRegisterExpand(string $root, array $patterns): array
 {
@@ -96,6 +97,10 @@ function dependencyRegisterHash(string $path): string
     return hash('sha256', str_replace("\r\n", "\n", $contents));
 }
 
+/**
+ * @param array<string, mixed> $register
+ * @return array<string, mixed>
+ */
 function dependencyRegisterUpdate(array $register, string $root, string $today): array
 {
     foreach ($register['entries'] as &$entry) {

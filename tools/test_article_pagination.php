@@ -96,6 +96,10 @@ function normalizeAuthorIdentity(string $author): string
     return mb_strtolower(trim($author), 'UTF-8');
 }
 
+/**
+ * @param array<string, mixed> $row
+ * @return array<string, string>
+ */
 function articleAuthorIdentities(array $row): array
 {
     $author = (string) ($row['author'] ?? '');

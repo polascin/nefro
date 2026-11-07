@@ -34,6 +34,10 @@ function probePath(string $relative): string|false
     return $path !== false && str_starts_with($path, '/restore/') && is_file($path) && is_readable($path) ? $path : false;
 }
 
+/**
+ * @param list<string> $paths
+ * @return array<string, mixed>
+ */
 function probeReferences(array $paths): array
 {
     $missing = [];

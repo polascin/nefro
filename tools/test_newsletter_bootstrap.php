@@ -24,6 +24,9 @@ function newsletterBootstrapTest(bool $ok, string $label): void
 
 class NewsletterLimitTestPdo extends Pdo\Sqlite
 {
+    /**
+     * @param array<mixed> $options
+     */
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         $query = str_replace('ON DUPLICATE KEY UPDATE id = id', 'ON CONFLICT(ip, action) DO NOTHING', $query);

@@ -23,6 +23,11 @@ function integrationCheck(bool $condition, string $label): void
     echo "PASS: $label\n";
 }
 
+/**
+ * @param array<string, mixed>|null $post
+ * @param array<mixed> $headers
+ * @return array<string, mixed>
+ */
 function integrationHttp(string $path, ?array $post = null, array $headers = [], string $client = 'owner'): array
 {
     if (!str_starts_with($path, '/') || str_starts_with($path, '//')) {
@@ -63,6 +68,9 @@ function integrationCsrf(string $html): string
     return html_entity_decode($match[1], ENT_QUOTES, 'UTF-8');
 }
 
+/**
+ * @return array<mixed>
+ */
 function integrationMailbox(): array
 {
     $data = json_decode((string) file_get_contents('http://mailpit:8025/api/v1/messages'), true, 512, JSON_THROW_ON_ERROR);
