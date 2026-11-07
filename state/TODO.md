@@ -24,6 +24,12 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-ad (PHPStan 5, Beh 174)
+
+- [x] PHPStan úroveň 5, 5× array_values; deploy `83b72b8d`
+- [x] cron vs crontab.example: zhodné
+- [ ] Voliteľné: PHPStan úroveň 6 (227 nálezov, typy iterable)
+
 ## Hotové: slučka 2026-11-06-ab (externé odkazy, Beh 172)
 
 - [x] CYNMA bez odkazu, TNDTHD, APAR; deploy `80d811e0`

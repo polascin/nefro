@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 01:00 Europe/Bratislava
+Aktualizované: 2026-11-07 01:10 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -19,6 +19,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - aa (Beh 171): JSON-LD WebApplication + MedicalWebPage pre 33 kalkulačiek. Deploy `a11ba838`.
 - ab (Beh 172): externé odkazy (CYNMA bez odkazu, TNDTHD, APAR); admin/CSRF/cookie bez nálezu. Deploy `80d811e0`.
 - ac (Beh 173): 1 015 odkazov v článkoch; 8 mŕtvych → návrh náhrad čaká na súhlas; nástroj tools/check_external_links.sh.
+- ad (Beh 174): PHPStan úroveň 5 (0 chýb); cron zhodný. Deploy `83b72b8d`.
 
 ## Stav repozitára
 
@@ -36,4 +37,4 @@ Inak: IgAN/Na/CRRT tiež len so súhlasom; ďalšia technická kontrola podľa v
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-010000-loop-article-links-beh173.md`
+`.codex/handoffs/2026-11-07-011000-loop-phpstan5-beh174.md`
