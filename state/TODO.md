@@ -27,8 +27,7 @@
 ## Hotové: slučka 2026-11-07-ae (integračná brána, Beh 175)
 
 - [x] tools/integration/** eol=lf; Integration 45 PASS, restore self-test PASS
-- [ ] Na D:\Dev
-efro a Mac raz obnoviť tools/integration/ (CRLF → LF)
+- [ ] Na D:\Dev\nefro a Mac raz obnoviť tools/integration/ (CRLF → LF)
 
 ## Hotové: slučka 2026-11-07-ad (PHPStan 5, Beh 174)
 
