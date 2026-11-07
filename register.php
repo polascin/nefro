@@ -726,12 +726,7 @@ if ($requestMethod === 'POST') {
                                     placeholder="napr. Bratislava"
                                     autocomplete="off">
                                 <datalist id="city_list">
-                                    <?php foreach ($addrMunicipalities as $m): ?>
-                                        <option value="<?= htmlspecialchars($m['name']) ?>"
-                                            data-zip="<?= htmlspecialchars($m['zip_code']) ?>"
-                                            data-district="<?= htmlspecialchars($m['district_name']) ?>"
-                                            data-region="<?= htmlspecialchars(getRegionNameByCode($pdo, $m['region_code'])) ?>">
-                                    <?php endforeach; ?>
+                                    <?= addressMunicipalityDatalistOptions($pdo, $addrMunicipalities) ?>
                                 </datalist>
                                 <small class="avatar-upload-hint">Výberom obce sa automaticky doplní PSČ, okres a kraj.</small>
                             </div>
@@ -743,9 +738,7 @@ if ($requestMethod === 'POST') {
                                     placeholder="napr. 81101"
                                     maxlength="6" autocomplete="off">
                                 <datalist id="zip_list">
-                                    <?php foreach ($addrZips as $z): ?>
-                                        <option value="<?= htmlspecialchars($z) ?>">
-                                    <?php endforeach; ?>
+                                    <?= addressDatalistOptions($addrZips) ?>
                                 </datalist>
                             </div>
                             <div class="form-group">
@@ -756,9 +749,7 @@ if ($requestMethod === 'POST') {
                                     placeholder="napr. Bratislava I"
                                     autocomplete="off">
                                 <datalist id="district_list">
-                                    <?php foreach ($addrDistricts as $d): ?>
-                                        <option value="<?= htmlspecialchars($d) ?>">
-                                    <?php endforeach; ?>
+                                    <?= addressDatalistOptions($addrDistricts) ?>
                                 </datalist>
                             </div>
                             <div class="form-group">
@@ -769,9 +760,7 @@ if ($requestMethod === 'POST') {
                                     placeholder="napr. Bratislavský kraj"
                                     autocomplete="off">
                                 <datalist id="region_list">
-                                    <?php foreach ($addrRegions as $r): ?>
-                                        <option value="<?= htmlspecialchars($r) ?>">
-                                    <?php endforeach; ?>
+                                    <?= addressDatalistOptions($addrRegions) ?>
                                 </datalist>
                             </div>
                             <div class="form-group">
@@ -782,9 +771,7 @@ if ($requestMethod === 'POST') {
                                     placeholder="napr. Slovenská republika"
                                     autocomplete="off">
                                 <datalist id="country_list">
-                                    <?php foreach ($addrCountries as $c): ?>
-                                        <option value="<?= htmlspecialchars($c) ?>">
-                                    <?php endforeach; ?>
+                                    <?= addressDatalistOptions($addrCountries) ?>
                                 </datalist>
                             </div>
                         </div>
