@@ -2,7 +2,7 @@
 
 ## Slučky ACTIVE (obnovené majiteľom 2026-11-06 popoludní)
 
-## Čaká na súhlas: 8 mŕtvych odkazov v článkoch (Beh 173)
+## Hotové (súhlas 2026-11-07): 8 mŕtvych odkazov v článkoch (Beh 173 → Beh 188)
 
 | Článok (add_*_article.php) | Starý odkaz | Návrh |
 | --- | --- | --- |
@@ -23,6 +23,12 @@
 4. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
+
+## Slučka PAUSED (2026-11-07 07:30)
+
+## Hotové: slučka 2026-11-07-ar (odkazy v článkoch, Beh 188)
+
+- [x] 7 článkov, UPSERT + PDF; naživo overené; deploy `04572420`
 
 ## Hotové: slučka 2026-11-07-aq (jeden h1, Beh 187)
 
