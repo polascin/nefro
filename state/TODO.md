@@ -24,6 +24,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-af (chybový log, Beh 176)
+
+- [x] ops_health: PHP fatálne chyby 24 h; overené na serveri; deploy `b9fdf971`
+
 ## Hotové: slučka 2026-11-07-ae (integračná brána, Beh 175)
 
 - [x] tools/integration/** eol=lf; Integration 45 PASS, restore self-test PASS

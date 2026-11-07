@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 01:40 Europe/Bratislava
+Aktualizované: 2026-11-07 02:05 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -21,6 +21,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - ac (Beh 173): 1 015 odkazov v článkoch; 8 mŕtvych → návrh náhrad čaká na súhlas; nástroj tools/check_external_links.sh.
 - ad (Beh 174): PHPStan úroveň 5 (0 chýb); cron zhodný. Deploy `83b72b8d`.
 - ae (Beh 175): integračná brána PASS po eol=lf pre tools/integration (Windows CRLF).
+- af (Beh 176): ops_health hlási fatálne chyby PHP zo serverového logu. Deploy `b9fdf971`.
 
 ## Stav repozitára
 
@@ -38,4 +39,4 @@ Inak: IgAN/Na/CRRT tiež len so súhlasom; ďalšia technická kontrola podľa v
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-014000-loop-integration-beh175.md`
+`.codex/handoffs/2026-11-07-020500-loop-errorlog-beh176.md`
