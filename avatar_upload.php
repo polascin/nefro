@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 if (!function_exists('npsCreateImageResourceFromFile')) {
+    /**
+     * @return \GdImage|false
+     */
     function npsCreateImageResourceFromFile(string $filePath, string $mime)
     {
         if ($mime === 'image/jpeg') {
@@ -41,7 +44,12 @@ if (!function_exists('npsIniBytes')) {
 }
 
 if (!function_exists('npsApplyExifOrientation')) {
-    /** Aplikuje EXIF orientáciu JPEG pred novým zakódovaním bez metadát. */
+    /**
+     * Aplikuje EXIF orientáciu JPEG pred novým zakódovaním bez metadát.
+     *
+     * @param \GdImage $source
+     * @return \GdImage
+     */
     function npsApplyExifOrientation($source, string $filePath, string $mime)
     {
         if ($mime !== 'image/jpeg' || !function_exists('exif_read_data')) {
@@ -80,6 +88,10 @@ if (!function_exists('npsApplyExifOrientation')) {
 }
 
 if (!function_exists('npsResizeImageResource')) {
+    /**
+     * @param \GdImage $source
+     * @return \GdImage|false
+     */
     function npsResizeImageResource($source, int $srcW, int $srcH, int $dstW, int $dstH, string $mime)
     {
         $canvas = imagecreatetruecolor($dstW, $dstH);
@@ -101,6 +113,9 @@ if (!function_exists('npsResizeImageResource')) {
 }
 
 if (!function_exists('npsWriteImageWithLimit')) {
+    /**
+     * @param \GdImage $image
+     */
     function npsWriteImageWithLimit($image, string $destination, string $mime, int $maxFileSize): bool
     {
         $qualitySteps = [82, 74, 66, 58, 50, 42];
@@ -159,6 +174,7 @@ if (!function_exists('npsWriteImageWithLimit')) {
 if (!function_exists('processAvatarUpload')) {
     /**
      * @return array{path:?string,error:?string}
+     * @param array<string, mixed> $file
      */
     function processAvatarUpload(array $file, int $maxFileSize = 2097152): array
     {

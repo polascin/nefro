@@ -8,7 +8,11 @@ declare(strict_types=1);
  */
 
 if (!function_exists('ppTypeLabels')) {
-    /** Typy poskytovateľa (slug => popis). */
+    /**
+     * Typy poskytovateľa (slug => popis).
+     *
+     * @return array<string, string>
+     */
     function ppTypeLabels(): array
     {
         return [
@@ -36,7 +40,11 @@ if (!function_exists('ppTypeLabel')) {
 }
 
 if (!function_exists('ppOutreachLabels')) {
-    /** Stav oslovenia odporúčateľa (slug => popis) — sledovanie akvizície. */
+    /**
+     * Stav oslovenia odporúčateľa (slug => popis) — sledovanie akvizície.
+     *
+     * @return array<string, string>
+     */
     function ppOutreachLabels(): array
     {
         return [
@@ -59,7 +67,11 @@ if (!function_exists('ppOutreachLabel')) {
 }
 
 if (!function_exists('ppContactChannelLabels')) {
-    /** Kanály kontaktu (história) — slug => popis. */
+    /**
+     * Kanály kontaktu (história) — slug => popis.
+     *
+     * @return array<string, string>
+     */
     function ppContactChannelLabels(): array
     {
         return [
@@ -81,7 +93,11 @@ if (!function_exists('ppContactChannelLabel')) {
 }
 
 if (!function_exists('ppPriorityLabels')) {
-    /** Priorita odporúčateľa (cielenie akvizície). */
+    /**
+     * Priorita odporúčateľa (cielenie akvizície).
+     *
+     * @return array<string, string>
+     */
     function ppPriorityLabels(): array
     {
         return [
@@ -141,6 +157,7 @@ if (!function_exists('ppPriorityForProvider')) {
      * Navrhne prioritu A/B/C alebo null (nechať na ručné rozhodnutie).
      *
      * @param array{name?: string, provider_type?: string, locality?: string} $provider
+     * @param array{west: list<string>, east: list<string>, mid: list<string>, institutions: list<string>, overrides: array<string, ?string>}|null $rules
      */
     function ppPriorityForProvider(array $provider, ?array $rules = null): ?string
     {
@@ -167,7 +184,11 @@ if (!function_exists('ppPriorityForProvider')) {
 }
 
 if (!function_exists('ppLocalitySuggestions')) {
-    /** Návrhy lokalít v pracovnom dosahu Dúbravky (západná BA + Záhorie). */
+    /**
+     * Návrhy lokalít v pracovnom dosahu Dúbravky (západná BA + Záhorie).
+     *
+     * @return list<string>
+     */
     function ppLocalitySuggestions(): array
     {
         return [
@@ -182,7 +203,11 @@ if (!function_exists('ppLocalitySuggestions')) {
 }
 
 if (!function_exists('ppSpecializationSuggestions')) {
-    /** Návrhy odborností (špecializácií). */
+    /**
+     * Návrhy odborností (špecializácií).
+     *
+     * @return list<string>
+     */
     function ppSpecializationSuggestions(): array
     {
         return [
