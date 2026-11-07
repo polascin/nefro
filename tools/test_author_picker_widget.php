@@ -63,6 +63,7 @@ for ($i = 1; $i <= 20; $i++) {
 $index = renderAuthorWidget(['projectAuthors' => $authors, 'authorFilterBase' => '']);
 authorPickerTest(str_contains($index, '<datalist id="source-author-options">'), 'Index vykreslí datalist autorov.');
 authorPickerTest(substr_count($index, '<option value=') === 20, 'Datalist obsahuje všetkých 20 zdrojových autorov.');
+authorPickerTest(preg_match('/^[ \t]+<option value=/m', $index) === 0, 'Položky datalistu nie sú odsadené (Beh 184: ~90 kB medzier na index.php).');
 authorPickerTest(str_contains($index, 'id="autori-vyhladanie"') && !str_contains($index, 'id="autori-vyhladanie" open'), 'Index: výber je predvolene zatvorený.');
 
 $indexOpen = renderAuthorWidget(['projectAuthors' => $authors, 'authorFilterBase' => '', 'authorPickerOpen' => true]);
