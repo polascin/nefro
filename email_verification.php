@@ -13,6 +13,9 @@ const EMAIL_SENTENCE_PARAGRAPH_SUFFIX = ".\n\n";
 
 $GLOBALS['__smtpLastError'] = '';
 
+/**
+ * @return array<string, mixed>
+ */
 function getEmailEnvConfig(): array {
     static $config = null;
     if ($config !== null) {
@@ -89,6 +92,10 @@ function medimpaxEmailFooterHtml(): string {
         . '<a href="' . $url . '" style="color:#64748b;text-decoration:underline;">Dialyzačné stredisko Medimpax (Dúbravka)</a></div>';
 }
 
+/**
+ * @param resource $socket
+ * @return array{0: int, 1: string}
+ */
 function smtpReadResponse($socket): array {
     $lines = '';
     $code = 0;
@@ -106,6 +113,9 @@ function smtpReadResponse($socket): array {
     return [$code, $lines];
 }
 
+/**
+ * @param array<string, mixed> $context
+ */
 function smtpLogError(string $stage, string $reason, array $context = []): void {
     $parts = ['SMTP ' . $stage . ' failed', 'reason=' . $reason];
 
@@ -143,6 +153,11 @@ function smtpGetLastError(): string {
     return $error;
 }
 
+/**
+ * @param resource $socket
+ * @param list<int> $expectedCodes
+ * @return array{ok: bool, code: int, response: string}
+ */
 function smtpSendCommand($socket, string $command, array $expectedCodes, string $stage): array {
     if (@fwrite($socket, $command . "\r\n") === false) {
         smtpLogError($stage, 'write_failed', ['expected' => $expectedCodes]);
@@ -162,12 +177,18 @@ function smtpSendCommand($socket, string $command, array $expectedCodes, string 
     return ['ok' => $ok, 'code' => $code, 'response' => $response];
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpCloseSocket($socket): void {
     if (is_resource($socket)) {
         fclose($socket);
     }
 }
 
+/**
+ * @param array<string, mixed> $cfg
+ */
 function smtpHasRequiredConfig(array $cfg): bool {
     return $cfg['smtp_host'] !== ''
         && $cfg['smtp_user'] !== ''
@@ -184,6 +205,10 @@ function smtpTlsCryptoMethod(): int {
     return $method;
 }
 
+/**
+ * @param array<string, mixed> $cfg
+ * @return resource|null
+ */
 function smtpOpenSocket(array $cfg) {
     if (!in_array($cfg['smtp_secure'], ['tls', 'ssl'], true)) {
         smtpLogError('config', 'smtp_secure_must_be_tls_or_ssl');
@@ -223,6 +248,9 @@ function smtpOpenSocket(array $cfg) {
     return $socket;
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpExpectBanner($socket): bool {
     [$code, $bannerResponse] = smtpReadResponse($socket);
     if ($code === 220) {
@@ -237,6 +265,9 @@ function smtpExpectBanner($socket): bool {
     return false;
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpRunEhlo($socket, string $ehloHost, string $stage): bool {
     $result = smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], $stage);
 
@@ -262,6 +293,7 @@ function smtpAdvertisedMaxMessageSize(): int {
  * Zistí limit veľkosti správy samostatným handshakom. Výsledok sa cachuje
  * v rámci požiadavky — zisťovanie otvára spojenie, takže ho nechceme
  * opakovať pri každej prílohe.
+ * @param array<string, mixed> $cfg
  */
 function smtpProbeMaxMessageSize(array $cfg): int {
     static $probed = null;
@@ -285,6 +317,9 @@ function smtpProbeMaxMessageSize(array $cfg): int {
     return $probed;
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
     if (!smtpSendCommand($socket, 'STARTTLS', [220], 'starttls')['ok']) {
         return false;
@@ -299,6 +334,10 @@ function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
     return smtpRunEhlo($socket, $ehloHost, 'ehlo_tls');
 }
 
+/**
+ * @param array<string, mixed> $cfg
+ * @return resource|null
+ */
 function smtpOpenAndHandshake(array $cfg) {
     $socket = null;
 
@@ -327,18 +366,29 @@ function smtpOpenAndHandshake(array $cfg) {
     return $socket;
 }
 
+/**
+ * @param resource $socket
+ * @param array<string, mixed> $cfg
+ */
 function smtpAuthenticate($socket, array $cfg): bool {
     return smtpSendCommand($socket, 'AUTH LOGIN', [334], 'auth_login')['ok']
         && smtpSendCommand($socket, base64_encode($cfg['smtp_user']), [334], 'auth_username')['ok']
         && smtpSendCommand($socket, base64_encode($cfg['smtp_pass']), [235], 'auth_password')['ok'];
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpOpenEnvelope($socket, string $fromEmail, string $toEmail): bool {
     return smtpSendCommand($socket, 'MAIL FROM:<' . $fromEmail . '>', [250], 'mail_from')['ok']
         && smtpSendCommand($socket, 'RCPT TO:<' . $toEmail . '>', [250, 251], 'rcpt_to')['ok']
         && smtpSendCommand($socket, 'DATA', [354], 'data')['ok'];
 }
 
+/**
+ * @param array<string, mixed> $cfg
+ * @param array<string, string|null> $extraHeaders
+ */
 function smtpBuildPayload(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType, ?string $plainTextAlt, array $extraHeaders = []): string {
     $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
     $encodedFromName = mb_encode_mimeheader($cfg['from_name'], 'UTF-8', 'B', "\r\n ");
@@ -382,6 +432,9 @@ function smtpBuildPayload(string $toEmail, string $subject, string $messageBody,
     return $payload . "\r\n.\r\n";
 }
 
+/**
+ * @param resource $socket
+ */
 function smtpWritePayloadAndFinish($socket, string $payload, bool $quit = true): bool {
     if (@fwrite($socket, $payload) === false) {
         smtpLogError('data_payload', 'write_failed');
@@ -406,6 +459,11 @@ function smtpWritePayloadAndFinish($socket, string $payload, bool $quit = true):
     return $dataCode === 250;
 }
 
+/**
+ * @param array<string, mixed> $cfg
+ * @param array<string, string|null> $extraHeaders
+ * @param resource|null $persistentSocket
+ */
 function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null, array $extraHeaders = [], &$persistentSocket = null, bool &$socketAuthenticated = false): bool {
     $GLOBALS['__smtpLastError'] = '';
 
@@ -460,6 +518,9 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
     return false;
 }
 
+/**
+ * @return array{token: string, token_hash: string, expires_at: string}
+ */
 function generateEmailVerificationToken(): array {
     $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
     $tokenHash = hash('sha256', $rawToken);
@@ -545,6 +606,8 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
 /**
  * Pošle internú notifikáciu o novej úspešnej registrácii.
  * Citlivé hash hodnoty sa zo správy zámerne vynechávajú.
+ * @param array<string, mixed> $dbUserRow
+ * @param array<string, mixed> $registrationContext
  */
 function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationContext = []): bool {
     $cfg = getEmailEnvConfig();
@@ -622,6 +685,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
 
 /**
  * Pošle potvrdenie novej registrácie registrovanému používateľovi.
+ * @param array<string, mixed> $dbUserRow
  */
 function sendUserRegistrationNotificationEmail(string $toEmail, string $username, array $dbUserRow = []): bool {
     $cfg = getEmailEnvConfig();
@@ -738,6 +802,9 @@ function isEmailResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool 
 /** Koľko bajtov originálu naraz čítame — násobok 3, aby base64 nemal padding v strede. */
 const SMTP_ATTACHMENT_CHUNK_BYTES = 57456;
 
+/**
+ * @param resource $socket
+ */
 function smtpWriteRaw($socket, string $data): bool {
     $length = strlen($data);
     $written = 0;
@@ -786,7 +853,8 @@ function smtpEstimateMessageSize(string $messageBody, ?string $plainTextAlt, arr
  * pamäťová náročnosť nerastie s ich veľkosťou.
  *
  * @param array<int, array{path: string, filename: string, mime: string, ascii_filename?: string}> $attachments
- * @param array<string, string> $extraHeaders
+ * @param array<string, string|null> $extraHeaders
+ * @param array<string, mixed> $cfg
  */
 function sendViaSmtpWithAttachments(
     string $toEmail,
