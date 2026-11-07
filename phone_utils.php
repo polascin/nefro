@@ -7,6 +7,7 @@ if (!function_exists('normalizeUserMobilePhone')) {
      * Normalizuje a validuje mobilné tel. číslo používateľa v medzinárodnom formáte.
      * Akceptované príklady: +421901234567, +421 901 234 567.
      * Vráti normalizovaný formát +421XXXXXXXXX alebo null pre prázdnu hodnotu.
+     * @return string|false|null  false = neplatné číslo, null = prázdny vstup
      */
     function normalizeUserMobilePhone(?string $rawPhone)
     {
@@ -47,6 +48,7 @@ if (!function_exists('normalizeGenericPhone')) {
      * Normalizuje a validuje všeobecné tel. číslo v medzinárodnom formáte.
      * Podporuje +XXXXXXXX bez oddeľovačov alebo s oddeľovačmi.
      * Vráti normalizovaný formát +XXXXXXXX alebo null pre prázdnu hodnotu.
+     * @return string|false|null  false = neplatné číslo, null = prázdny vstup
      */
     function normalizeGenericPhone(?string $rawPhone)
     {

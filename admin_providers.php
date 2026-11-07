@@ -690,7 +690,11 @@ try {
 
 $csrfToken = generateCsrfToken();
 
-/** Query string pre stránkovanie so zachovaním filtrov. */
+/**
+ * Query string pre stránkovanie so zachovaním filtrov.
+ *
+ * @param array<string, scalar|null> $extra
+ */
 function ppAdminQs(array $extra = []): string
 {
     global $fType, $fLoc, $fSpec, $fActive, $fOutreach, $fPriority, $fGroup, $fQuery;

@@ -601,6 +601,7 @@ function opsHealthLogEntry(string $result, array $queues, array $http, ?string $
 
 /**
  * Hlavný beh — iba pri priamom spustení (testy súbor includujú).
+ * @param list<string> $argv
  */
 function opsHealthMain(array $argv): int
 {

@@ -19,6 +19,9 @@ $months = [
     9 => "septembra", 10 => "októbra", 11 => "novembra", 12 => "decembra",
 ];
 
+/**
+ * @param array<int, string> $months
+ */
 function csFormatDate(string $datetime, array $months): string
 {
     try {

@@ -108,7 +108,12 @@ function dgSourcesToText(?string $json): string
     return implode("\n", $lines);
 }
 
-/** Spoločné čítanie a validácia polí formulára (create aj update). */
+/**
+ * Spoločné čítanie a validácia polí formulára (create aj update).
+ *
+ * @param array<string, string> $catLabels
+ * @return array<string, mixed>
+ */
 function dgReadForm(array $catLabels): array
 {
     $nameSk = requestScalarString($_POST, 'name_sk');
@@ -334,7 +339,11 @@ try {
 
 $csrfToken = generateCsrfToken();
 
-/** Hodnota poľa editovaného lieku pre formulár. */
+/**
+ * Hodnota poľa editovaného lieku pre formulár.
+ *
+ * @param array<string, mixed> $drug
+ */
 function dgEditVal(?array $drug, string $key): string
 {
     return htmlspecialchars((string) ($drug[$key] ?? ''));

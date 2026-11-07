@@ -32,7 +32,11 @@ $form["patient_birth_number"]  = calculatorPostString("patient_birth_number");
 $form["patient_insurance_code"] = calculatorPostString("patient_insurance_code");
 $form["examination_date"]      = calculatorPostString("examination_date", date("Y-m-d"));
 
-/** Načíta eGFR merania z uložených výsledkov pre pacienta s daným RC. */
+/**
+ * Načíta eGFR merania z uložených výsledkov pre pacienta s daným RC.
+ *
+ * @return list<array<string, mixed>>
+ */
 function fetchPatientEgfrHistory(PDO $pdo, int $userId, string $birthNumber): array
 {
     $stmt = $pdo->prepare(

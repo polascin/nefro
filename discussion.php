@@ -180,6 +180,9 @@ function formatDiscDate(string $datetime): string
     return (int) $dt->format('j') . '. ' . ($months[(int) $dt->format('n')] ?? '') . ' ' . $dt->format('Y');
 }
 
+/**
+ * @param array<string, mixed> $row
+ */
 function discDisplayName(array $row): string
 {
     $name = trim((string) ($row['display_name'] ?? ''));
@@ -189,6 +192,9 @@ function discDisplayName(array $row): string
     return htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 }
 
+/**
+ * @param array<string, mixed> $row
+ */
 function discAvatarSrc(array $row): string
 {
     $path = trim((string) ($row['avatar_path'] ?? ''));
