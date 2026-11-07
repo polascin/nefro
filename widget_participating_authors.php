@@ -105,9 +105,16 @@ $renderAuthorItem = static function (array $authorStat) use ($authorFilterBase):
                    list="source-author-options" maxlength="200" required autocomplete="off"
                    placeholder="Začnite písať meno">
             <datalist id="source-author-options">
-              <?php foreach ($participating['sources'] as $authorStat): ?>
-                <option value="<?= htmlspecialchars($authorStat['author'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(formatProjectArticleCountLabel($authorStat['articles']), ENT_QUOTES, 'UTF-8') ?></option>
-              <?php endforeach; ?>
+<?php
+            // Jedna položka na riadok bez odsadenia: ~2 600 autorov s odsadením
+            // šablóny pridávalo na index.php ~90 kB medzier (Beh 184).
+            $authorOptions = [];
+            foreach ($participating['sources'] as $authorStat) {
+                $authorOptions[] = '<option value="' . htmlspecialchars($authorStat['author'], ENT_QUOTES, 'UTF-8') . '">'
+                    . htmlspecialchars(formatProjectArticleCountLabel($authorStat['articles']), ENT_QUOTES, 'UTF-8') . '</option>';
+            }
+            echo implode("\n", $authorOptions), "\n";
+?>
             </datalist>
           </div>
           <button class="btn-primary" type="submit">Zobraziť články autora</button>
