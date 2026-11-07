@@ -1208,6 +1208,40 @@ function getMunicipalities(\PDO $pdo, ?string $districtFilter = null): array {
 }
 
 /**
+ * Kompaktné <option> pre datalist obcí (register.php, profil). Jedna obec na riadok,
+ * bez odsadenia šablóny: 4 158 obcí s odsadením malo 1,28 MB HTML, väčšinou medzery
+ * (Beh 183). Atribúty data-zip/-district/-region číta address-autofill.js.
+ *
+ * @param array<int, array<string, string>> $municipalities výstup getMunicipalitiesWithZip()
+ */
+function addressMunicipalityDatalistOptions(\PDO $pdo, array $municipalities): string {
+    $out = [];
+    foreach ($municipalities as $m) {
+        $out[] = '<option value="' . htmlspecialchars((string) ($m['name'] ?? ''), ENT_QUOTES, 'UTF-8')
+            . '" data-zip="' . htmlspecialchars((string) ($m['zip_code'] ?? ''), ENT_QUOTES, 'UTF-8')
+            . '" data-district="' . htmlspecialchars((string) ($m['district_name'] ?? ''), ENT_QUOTES, 'UTF-8')
+            . '" data-region="' . htmlspecialchars(getRegionNameByCode($pdo, (string) ($m['region_code'] ?? '')), ENT_QUOTES, 'UTF-8')
+            . '">';
+    }
+
+    return implode("\n", $out);
+}
+
+/**
+ * Kompaktné <option value="…"> pre jednoduchý datalist (PSČ, okresy, kraje, krajiny).
+ *
+ * @param iterable<mixed> $values
+ */
+function addressDatalistOptions(iterable $values): string {
+    $out = [];
+    foreach ($values as $value) {
+        $out[] = '<option value="' . htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8') . '">';
+    }
+
+    return implode("\n", $out);
+}
+
+/**
  * Vráti pole obcí so PSČ pre JS autofill.
  * Formát: [['name'=>..., 'zip_code'=>..., 'district_name'=>..., 'region_code'=>...], ...]
  * @return array<int,array<string,string>>

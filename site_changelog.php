@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-07 05:30',
+                'category' => 'portal',
+                'title' => 'Rýchlejšia registrácia a úprava profilu',
+                'description' => 'Zoznam obcí, PSČ a okresov pre automatické doplnenie adresy sa do stránky vkladá úspornejšie. Stránka registrácie sa tým zmenšila približne z 1,5 MB na zlomok pôvodnej veľkosti; doplnenie PSČ, okresu a kraja po výbere obce funguje ako doteraz.',
+                'url' => 'register.php',
+            ],
+            [
                 'date' => '2026-11-06 22:54',
                 'category' => 'portal',
                 'title' => 'Formulár na oznámenie nezákonného obsahu sa zobrazuje správne',
