@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 04:00 Europe/Bratislava
+Aktualizované: 2026-11-07 04:30 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -26,6 +26,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - ah (Beh 178): typy v email_verification (PHPStan 6 tam 0; celkovo 168). Deploy `26c03dd8`.
 - ai (Beh 179): typy vo vyhľadávaní a SMS overení (PHPStan 6 = 145). Deploy `9c70b213`.
 - aj (Beh 180): typy v auth a newsletter (PHPStan 6 = 127). Deploy `d2fd6c61`.
+- ak (Beh 181): typy v avatar/legal/prevent/providers (PHPStan 6 = 99). Deploy `b1596720`.
 
 ## Stav repozitára
 
@@ -43,4 +44,4 @@ Inak: IgAN/Na/CRRT tiež len so súhlasom; ďalšia technická kontrola podľa v
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-040000-loop-auth-types-beh180.md`
+`.codex/handoffs/2026-11-07-043000-loop-lib-types-beh181.md`
