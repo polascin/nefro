@@ -88,7 +88,7 @@ $articles[] = [
 <li><small><em>European Medicines Agency. Vipidia: súhrn charakteristických vlastností lieku, časti 4.1, 4.2 a 4.4. <a href="https://www.ema.europa.eu/en/documents/product-information/vipidia-epar-product-information_en.pdf" target="_blank" rel="noopener noreferrer">EMA</a>.</em></small></li>
 <li><small><em>European Medicines Agency. Trajenta: súhrn charakteristických vlastností lieku, časť 4.2. <a href="https://www.ema.europa.eu/en/documents/product-information/trajenta-epar-product-information_en.pdf" target="_blank" rel="noopener noreferrer">EMA</a>.</em></small></li>
 <li><small><em>Perkovic V, Tuttle KR, Rossing P, Mahaffey KW, Mann JFE, Bakris G, Baeres FMM, Idorn T, Bosch-Traberg H, Lausvig NL, Pratley R, FLOW Trial Committees and Investigators. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. <a href="https://pubmed.ncbi.nlm.nih.gov/38785209/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></li>
-<li><small><em>U.S. Food and Drug Administration. Drug Safety Communication: upozornenie na riziko srdcového zlyhávania pri saxagliptíne a alogliptíne. 5. apríla 2016. <a href="https://www.fda.gov/media/96895/download" target="_blank" rel="noopener noreferrer">FDA</a>.</em></small></li>
+<li><small><em>U.S. Food and Drug Administration. Drug Safety Communication: upozornenie na riziko srdcového zlyhávania pri saxagliptíne a alogliptíne. 5. apríla 2016. <a href="https://web.archive.org/web/20251214080356/https://www.fda.gov/media/96895/download" target="_blank" rel="noopener noreferrer">FDA</a>.</em></small></li>
 </ol>
 HTML,
 ];

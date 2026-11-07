@@ -128,7 +128,7 @@ $articles[] = [
 <hr>
 
 <p><em><strong>Hlavný zdroj:</strong> Prochaska M, Reynolds LF, Zisman A. Approach to Hematuria: Core Curriculum 2026. <em>Am J Kidney Dis.</em> 2026;88(4):605–614. <a href="https://doi.org/10.1053/j.ajkd.2026.05.013" target="_blank" rel="noopener noreferrer">doi:10.1053/j.ajkd.2026.05.013</a>.</em></p>
-<p><em><strong>Odporúčanie:</strong> American Urological Association, Society of Urodynamics, Female Pelvic Medicine &amp; Urogenital Reconstruction. <a href="https://www.auanet.org/documents/Guidelines/PDF/Microhematuria-Guideline.pdf" target="_blank" rel="noopener noreferrer">Microhematuria: AUA/SUFU Guideline (2020, amended 2025)</a>.</em></p>
+<p><em><strong>Odporúčanie:</strong> American Urological Association, Society of Urodynamics, Female Pelvic Medicine &amp; Urogenital Reconstruction. <a href="https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/MH%20Unabridged%20FINAL.pdf" target="_blank" rel="noopener noreferrer">Microhematuria: AUA/SUFU Guideline (2020, amended 2025)</a>.</em></p>
 <p><em><strong>Aktualizácia:</strong> Barocas DA, Lotan Y, Matulewicz RS, et al. Updates to Microhematuria: AUA/SUFU Guideline (2025). <em>J Urol.</em> 2025;213(5):547–557. <a href="https://doi.org/10.1097/JU.0000000000004490" target="_blank" rel="noopener noreferrer">doi:10.1097/JU.0000000000004490</a>.</em></p>
 
 <p><small><em>Text je odborným prehľadom pre zdravotníckych pracovníkov. Konkrétny postup treba prispôsobiť klinickému stavu, dostupnosti vyšetrení a lokálnym odporúčaniam.</em></small></p>
