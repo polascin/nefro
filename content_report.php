@@ -83,6 +83,7 @@ $legalDescription = 'Kontaktné miesto a formulár na oznámenie nezákonného o
 $legalSlug        = 'content_report.php';
 $legalHeaderTitle = 'Oznámenie nezákonného obsahu';
 $legalHeaderIntro = 'Kontaktné miesto podľa nariadenia (EÚ) 2022/2065';
+$pageHasOwnH1 = true;
 include 'legal_head.php';
 include 'main_nav.php';
 ?>

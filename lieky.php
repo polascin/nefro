@@ -71,6 +71,7 @@ $totalCount = array_sum($counts);
     $headerTitle = "Lieky v nefrológii";
     $headerIntro = "Kurátorská databáza s dôrazom na funkciu obličiek";
     $showLogo = false;
+    $pageHasOwnH1 = true;
     include "header.php";
     ?>
 

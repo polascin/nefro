@@ -111,6 +111,7 @@ $schemaWebApp = [
     $headerTitle = "Interaktívne nástroje";
     $headerIntro = "";
     $showLogo = false;
+    $pageHasOwnH1 = true;
     include "header.php";
     ?>
 

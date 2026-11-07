@@ -98,6 +98,7 @@ if (!empty($itemListElements)) {
   $headerTitle = "Nefro-projekt Slovensko";
   $headerIntro = "Zrozumiteľne o obličkách pre poučených pacientov a verejnosť.";
   $showLogo = true;
+  $pageHasOwnH1 = true;
   include_once "header.php";
   ?>
 

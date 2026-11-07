@@ -71,6 +71,7 @@ $totalCount = array_sum($counts);
     $headerTitle = "Klinické štúdie v nefrológii";
     $headerIntro = "Kurátorský register z ClinicalTrials.gov";
     $showLogo = false;
+    $pageHasOwnH1 = true;
     include "header.php";
     ?>
 

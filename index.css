@@ -714,12 +714,18 @@ body {
 }
 
 /* Typografia */
-h2 {
+h2,
+h1.page-title {
     color: var(--text-primary);
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 1.3;
+}
+
+/* Titulok článku je <h1> (Beh 187), vzhľad zostáva ako pri <h2>. */
+h1.page-title {
+    margin-top: 0;
 }
 
 h3 {
@@ -1826,7 +1832,8 @@ input:disabled + .slider:before {
         padding: 24px;
     }
 
-    h2 {
+    h2,
+    h1.page-title {
         font-size: 1.6rem;
     }
 

@@ -216,6 +216,7 @@ function discAvatarSrc(array $row): string
   $headerTitle = 'Nefro-projekt Slovensko';
   $headerIntro = 'Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.';
   $showLogo    = true;
+  $pageHasOwnH1 = true;
   include 'header.php';
   ?>
 
