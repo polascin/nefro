@@ -339,6 +339,7 @@ function botGuardLog(string $action, string $reason): void
  *
  * Návratové hodnoty: true = overený, false = podvrh, null = nedá sa rozhodnúť
  * (DNS nedostupné) — vtedy bota nezahadzujeme, len ho neodmeníme výnimkou.
+ * @param list<string> $suffixes
  */
 function botGuardVerifyRdns(string $ip, array $suffixes): ?bool
 {
@@ -701,6 +702,7 @@ function botGuardThrottle(int $retryAfter, string $reason): void
  * Formát: `BOT_GUARD_ALLOW_IPS` v ini súbore alebo v prostredí, hodnoty
  * oddelené čiarkou, bodkoučiarkou alebo medzerou. Podporuje IPv4 CIDR
  * (napr. `203.0.113.0/24`) a presné IPv4/IPv6 adresy.
+ * @return list<string>
  */
 function botGuardAllowedIps(): array
 {

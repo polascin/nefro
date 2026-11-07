@@ -205,7 +205,11 @@ try {
 
 $csrfToken = generateCsrfToken();
 
-/** Pomocník: zostaví query string pre stránkovacie odkazy so zachovaním filtrov. */
+/**
+ * Pomocník: zostaví query string pre stránkovacie odkazy so zachovaním filtrov.
+ *
+ * @param array<string, scalar|null> $extra
+ */
 function ctAdminQs(array $extra = []): string
 {
     global $fCat, $fPub, $fQuery;

@@ -275,6 +275,9 @@ function backupDumpDatabase(PDO $pdo, string $gzPath, string $dbName): array
     return $stats;
 }
 
+/**
+ * @param list<string> $argv
+ */
 function backupSnapshotMain(array $argv): int
 {
     $root = __DIR__;

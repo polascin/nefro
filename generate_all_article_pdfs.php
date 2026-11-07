@@ -53,6 +53,7 @@ $pdfDir = __DIR__ . '/pdf';
  *   --force  → vždy
  *   --stale  → ak PDF chýba (priradenie/súbor) ALEBO je obsah novší (updated_at > mtime PDF)
  *   inak     → len ak PDF úplne chýba
+ * @param array<string, mixed> $a
  */
 function articleNeedsPdf(array $a, bool $force, bool $stale, string $pdfDir): bool
 {

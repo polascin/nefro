@@ -256,7 +256,11 @@ if (isLoggedIn()) {
     }
 }
 
-/** Pomocná: vykreslí jeden výstup (10r + 30r) s gauge. */
+/**
+ * Pomocná: vykreslí jeden výstup (10r + 30r) s gauge.
+ *
+ * @param array<string, mixed> $pair
+ */
 function preventRenderOutcome(string $title, array $pair, bool $show30): void
 {
     $r10 = $pair['10yr'];

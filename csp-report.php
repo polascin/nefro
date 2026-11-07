@@ -60,6 +60,8 @@ function sanitizeCspReportUrl(string $value): string
 /**
  * Whitelist polí z legacy `report-uri` payloadu. Vynecháva script-sample
  * a všetky neznáme polia, aby útočník nemohol plniť log ľubovoľným obsahom.
+ * @param array<string, mixed> $report
+ * @return array<string, mixed>
  */
 function sanitizeCspReport(array $report): array
 {

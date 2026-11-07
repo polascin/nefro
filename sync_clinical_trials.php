@@ -38,7 +38,12 @@ $categories = [
     ],
 ];
 
-/** Bezpečné čítanie zanorenej hodnoty z poľa cez cestu kľúčov. */
+/**
+ * Bezpečné čítanie zanorenej hodnoty z poľa cez cestu kľúčov.
+ *
+ * @param array<mixed> $arr
+ * @param list<string|int> $path
+ */
 function ctGet(array $arr, array $path, mixed $default = null): mixed
 {
     $cur = $arr;
@@ -70,7 +75,11 @@ function ctNormalizeDate(?string $d): ?string
     return $ts !== false ? date('Y-m-d', $ts) : null;
 }
 
-/** Stiahne JSON z v2 API; vráti dekódované pole alebo null pri chybe. */
+/**
+ * Stiahne JSON z v2 API; vráti dekódované pole alebo null pri chybe.
+ *
+ * @return array<string, mixed>|null
+ */
 function ctFetch(string $url): ?array
 {
     $ch = curl_init($url);

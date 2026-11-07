@@ -72,6 +72,7 @@ $calculatorDeleted = 0;
 /**
  * Vyčistí riadky staršie než cutoff z tab-delimited fallback logu.
  * Prvých 19 znakov každého riadka musí byť dátum Y-m-d H:i:s.
+ * @param list<string> $errors
  */
 function cleanupTimestampedLogFile(
     string $path,

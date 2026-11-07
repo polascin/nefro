@@ -65,6 +65,9 @@ $months = [
     12 => "decembra",
 ];
 
+/**
+ * @param array<int, string> $months
+ */
 function formatArticlePageDate(string $datetime, array $months): string
 {
     try {

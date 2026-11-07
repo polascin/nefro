@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * @param array<string, mixed> $user
+ * @return array<string, mixed>
+ */
 function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
 {
     $deleteErrors   = [];

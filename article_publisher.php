@@ -35,6 +35,8 @@ require_once __DIR__ . '/pdf_generator.php';
  *          odpublikuje článok.
  *
  * @return array{inserted:int, updated:int, skipped:int, queued:int, errors:array<string>}
+ * @param list<array<string, mixed>> $articles
+ * @param array<string, mixed> $options
  */
 function upsertArticles(
     PDO $pdo,

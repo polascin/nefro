@@ -57,7 +57,11 @@ const CALC_URLS = [
     'uacr'                => 'calculator_uacr.php',
 ];
 
-/** Kľúč pre zoskupenie výsledkov podľa identity pacienta. */
+/**
+ * Kľúč pre zoskupenie výsledkov podľa identity pacienta.
+ *
+ * @param array<string, mixed> $row
+ */
 function patientGroupKey(array $row): string {
     $bn = trim((string)($row['patient_birth_number'] ?? ''));
     if ($bn !== '') {
@@ -74,7 +78,11 @@ function patientGroupKey(array $row): string {
     return '__anon__';
 }
 
-/** Čitateľný nadpis pacienta z prvého záznamu skupiny. */
+/**
+ * Čitateľný nadpis pacienta z prvého záznamu skupiny.
+ *
+ * @param array<string, mixed> $row
+ */
 function patientHeading(array $row): string {
     $fn = trim((string)($row['patient_first_name'] ?? ''));
     $ln = trim((string)($row['patient_last_name'] ?? ''));
@@ -97,6 +105,7 @@ function patientHeading(array $row): string {
  * Vráti zobrazovací dátum záznamu.
  * Prednosť: examination_date z input_payload; fallback: created_at.
  * $withTime = true pridá čas len pri fallback na created_at (examination_date je iba dátum).
+ * @param array<string, mixed> $row
  */
 function calcDisplayDate(array $row, bool $withTime = false): string {
     $examDate = trim((string)($row['input_payload']['examination_date'] ?? ''));

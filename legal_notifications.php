@@ -210,7 +210,11 @@ if (!function_exists('buildLegalNoticeEmailHtml')) {
 }
 
 if (!function_exists('legalNoticeDisplayName')) {
-    /** Zostaví oslovenie z mena používateľa (fallback username / e-mail). */
+    /**
+     * Zostaví oslovenie z mena používateľa (fallback username / e-mail).
+     *
+     * @param array<string, mixed> $item
+     */
     function legalNoticeDisplayName(array $item, string $fallbackEmail): string
     {
         $titleBefore = trim((string) ($item['title_before'] ?? ''));

@@ -104,7 +104,11 @@ const DGR_FIELDS = [
     'monitoring'     => 'Monitorovanie',
 ];
 
-/** Počet vyplnených kurátorských klinických polí (z DGR_FIELDS). */
+/**
+ * Počet vyplnených kurátorských klinických polí (z DGR_FIELDS).
+ *
+ * @param array<string, mixed> $drug
+ */
 function dgrFilledCount(array $drug): int
 {
     $n = 0;

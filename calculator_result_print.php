@@ -90,6 +90,9 @@ function formatInputKey(string $key): string {
 
 // Konvertuje internú hodnotu payloadu na čitateľný slovenský text.
 // Pokrýva: jednotky, pohlavie, fajčenie, boolean hodnoty, typ mutácie, kódy štádií.
+/**
+ * @param mixed $value
+ */
 function formatInputValue(string $key, $value): string {
     $value = (string) $value;
 
