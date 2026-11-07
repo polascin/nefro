@@ -26,6 +26,7 @@ define('LEGAL_DATA_INCLUDED', 1);
  * `consentVersion` sa MUSÍ zhodovať s konštantou `consentVersion`
  * v `ui-preferences.js` — pri jej zmene sa všetkým návštevníkom znova
  * zobrazí cookie banner (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
+ * @return array<string, mixed>
  */
 function legalInfo(): array
 {
@@ -54,7 +55,11 @@ function legalInfo(): array
     ];
 }
 
-/** Kategórie osobných údajov, ktoré spracúvame. */
+/**
+ * Kategórie osobných údajov, ktoré spracúvame.
+ *
+ * @return list<array<string, mixed>>
+ */
 function legalDataCategories(): array
 {
     return [
@@ -113,7 +118,11 @@ function legalDataCategories(): array
     ];
 }
 
-/** Účely spracúvania mapované na právny základ podľa GDPR (čl. 6, resp. čl. 9). */
+/**
+ * Účely spracúvania mapované na právny základ podľa GDPR (čl. 6, resp. čl. 9).
+ *
+ * @return list<array<string, mixed>>
+ */
 function legalProcessingPurposes(): array
 {
     return [
@@ -192,6 +201,7 @@ function legalProcessingPurposes(): array
  *
  * `role` je jedna z: `sprostredkovateľ`, `samostatný prevádzkovateľ`,
  * `samostatný prevádzkovateľ (neprenášame mu údaje)`.
+ * @return list<array<string, mixed>>
  */
 function legalSubprocessors(): array
 {
@@ -241,7 +251,11 @@ function legalSubprocessors(): array
     ];
 }
 
-/** Práva dotknutých osôb a spôsob ich uplatnenia podľa regiónu. */
+/**
+ * Práva dotknutých osôb a spôsob ich uplatnenia podľa regiónu.
+ *
+ * @return list<array<string, mixed>>
+ */
 function legalRightsRegions(): array
 {
     return [
@@ -286,6 +300,7 @@ function legalRightsRegions(): array
 /**
  * Kategórie cookies. `id` zodpovedá kľúčom v `ui-preferences.js`
  * (necessary / analytics / marketing / preferences).
+ * @return list<array<string, mixed>>
  */
 function legalCookieCategories(): array
 {
@@ -317,7 +332,11 @@ function legalCookieCategories(): array
     ];
 }
 
-/** Konkrétne cookies a úložisko, ktoré nastavujeme. */
+/**
+ * Konkrétne cookies a úložisko, ktoré nastavujeme.
+ *
+ * @return list<array<string, mixed>>
+ */
 function legalStoredItems(): array
 {
     return [

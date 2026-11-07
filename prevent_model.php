@@ -32,7 +32,11 @@
  */
 declare(strict_types=1);
 
-/** Načíta koeficientové tabuľky (cache v statickej premennej). */
+/**
+ * Načíta koeficientové tabuľky (cache v statickej premennej).
+ *
+ * @return array<string, mixed>
+ */
 function preventCoefficients(): array
 {
     static $coeff = null;
@@ -52,6 +56,8 @@ function preventCoefficients(): array
  *   sbp (float), bp_tx (bool), statin (bool), dm (bool), smoking (bool),
  *   bmi (float), egfr (float),
  *   uacr (?float mg/g), hba1c (?float %), sdi (?int 1–10)
+ * @param array<string, mixed> $in
+ * @return array<string, float>
  */
 function preventBuildPredictors(array $in): array
 {
@@ -146,6 +152,7 @@ function preventSelectModel(bool $hasUacr, bool $hasHba1c, bool $hasSdi): string
 /**
  * Vypočíta absolútne riziko (%) pre daný model/horizont/outcome/pohlavie.
  * Vráti null, ak tabuľka neexistuje.
+ * @param array<string, float> $pred
  */
 function preventRisk(string $model, string $horizon, string $outcome, string $sex, array $pred): ?float
 {
@@ -168,6 +175,8 @@ function preventRisk(string $model, string $horizon, string $outcome, string $se
  * Vypočíta všetky tri výstupy × {10r, 30r} pre zadané vstupy.
  * 30-ročné riziko sa počíta len pre vek ≤ 59 r. (mimo tohto rozsahu PREVENT
  * 30-ročný odhad neodporúča).
+ * @param array<string, mixed> $in
+ * @return array<string, mixed>
  */
 function preventComputeAll(array $in): array
 {
@@ -226,6 +235,7 @@ function preventRiskClass(float $ascvd10): string
 /**
  * Interpretačná vrstva: z 10-ročného ASCVD rizika odvodí rizikovú kategóriu,
  * cieľovú hodnotu LDL a odporúčanie statínu podľa odporúčaní pre dyslipidémiu 2026.
+ * @return array{category: string, css: string, ldl_target: string, statin: string, notes: list<string>}
  */
 function preventInterpretation(?float $ascvd10): array
 {
