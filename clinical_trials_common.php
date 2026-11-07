@@ -7,7 +7,11 @@ declare(strict_types=1);
  * Knižnica (len include, web prístup blokovaný v .htaccess).
  */
 
-/** Slovenské popisky kurátorských kategórií. */
+/**
+ * Slovenské popisky kurátorských kategórií.
+ *
+ * @return array<string, string>
+ */
 function ctCategoryLabels(): array
 {
     return [
@@ -62,7 +66,11 @@ function ctPhaseLabel(?string $phase): string
     return ucfirst(implode(' / ', $parts));
 }
 
-/** Bezpečné dekódovanie JSON poľa zo stĺpca; vždy vráti pole reťazcov/štruktúr. */
+/**
+ * Bezpečné dekódovanie JSON poľa zo stĺpca; vždy vráti pole reťazcov/štruktúr.
+ *
+ * @return array<mixed>
+ */
 function ctDecodeJsonList(?string $json): array
 {
     if ($json === null || $json === '') {
@@ -107,7 +115,11 @@ function ctFetchTrials(\PDO $pdo, string $category = '', string $query = '', int
     return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 
-/** Načíta jednu publikovanú štúdiu podľa nct_id (alebo null). */
+/**
+ * Načíta jednu publikovanú štúdiu podľa nct_id (alebo null).
+ *
+ * @return array<string, mixed>|null
+ */
 function ctFetchTrial(\PDO $pdo, string $nctId): ?array
 {
     $stmt = $pdo->prepare("SELECT * FROM clinical_trials WHERE nct_id = :nct AND is_published = 1 LIMIT 1");
@@ -123,7 +135,11 @@ function ctLastSync(\PDO $pdo): ?string
     return is_string($v) && $v !== '' ? substr($v, 0, 10) : null;
 }
 
-/** Počty publikovaných štúdií podľa kategórie (slug → počet). */
+/**
+ * Počty publikovaných štúdií podľa kategórie (slug → počet).
+ *
+ * @return array<string, int>
+ */
 function ctCategoryCounts(\PDO $pdo): array
 {
     $out = [];

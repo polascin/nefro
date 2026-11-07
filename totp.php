@@ -120,6 +120,7 @@ function decryptTotpSecret(string $encrypted): string
  * Vytvorí šifrovaný envelope pre tajomstvo a bcrypt hashe záložných kódov.
  *
  * @return array{secret_field:string, backup_json:string}
+ * @param array<int, string> $backupCodes
  */
 function encodeTotpStorage(string $secret, array $backupCodes): array
 {
@@ -142,6 +143,7 @@ function encodeTotpStorage(string $secret, array $backupCodes): array
  * Načíta nový šifrovaný formát aj pôvodný plaintext formát.
  *
  * @return array{secret:string, codes:array, legacy:bool}
+ * @return array{secret: string, codes: list<string>, legacy: bool}
  */
 function decodeTotpStorage(string $secretField, ?string $backupJson): array
 {
@@ -175,6 +177,7 @@ function decodeTotpStorage(string $secretField, ?string $backupJson): array
  * Nahradí záložné kódy a zachová existujúce šifrované tajomstvo.
  *
  * @return array{secret_field:string, backup_json:string}
+ * @param array<int, string> $backupCodes
  */
 function replaceTotpBackupCodes(string $secretField, ?string $backupJson, array $backupCodes): array
 {
@@ -286,6 +289,7 @@ function formatTotpSecret(string $secret): string
  * Vráti: ['plain' => string[], 'hashed' => string[]]
  * plain  — zobrazíme raz používateľovi (formát XXXXX-XXXXX)
  * hashed — uložíme do DB (bcrypt hash)
+ * @return array{plain: list<string>, hashed: list<string>}
  */
 function generateBackupCodes(): array
 {

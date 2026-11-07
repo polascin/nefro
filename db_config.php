@@ -1007,6 +1007,7 @@ function splitParticipatingAuthors(array $authors): array {
 /**
  * Vráti zoznam titulov pred menom z tabuľky title_codebook.
  * Ak tabuľka neexistuje alebo je prázdna, vráti zabudovaný fallback zoznam.
+ * @return list<string>
  */
 function getTitlesBeforeName(\PDO $pdo): array {
     try {
@@ -1025,6 +1026,7 @@ function getTitlesBeforeName(\PDO $pdo): array {
 /**
  * Vráti zoznam titulov za menom z tabuľky title_codebook.
  * Ak tabuľka neexistuje alebo je prázdna, vráti zabudovaný fallback zoznam.
+ * @return list<string>
  */
 function getTitlesAfterName(\PDO $pdo): array {
     try {
@@ -1040,7 +1042,11 @@ function getTitlesAfterName(\PDO $pdo): array {
     }
 }
 
-/** @internal Fallback zoznam titulov pred menom. */
+/**
+ * @internal Fallback zoznam titulov pred menom.
+ *
+ * @return list<string>
+ */
 function getFallbackTitlesBefore(): array {
     return [
         'prof.', 'doc.', 'MUDr.', 'MDDr.', 'MVDr.', 'RNDr.', 'PhDr.', 'JUDr.',
@@ -1049,7 +1055,11 @@ function getFallbackTitlesBefore(): array {
     ];
 }
 
-/** @internal Fallback zoznam titulov za menom. */
+/**
+ * @internal Fallback zoznam titulov za menom.
+ *
+ * @return list<string>
+ */
 function getFallbackTitlesAfter(): array {
     return [
         'PhD.', 'Ph.D.', 'CSc.', 'DrSc.', 'DSc.', 'DBA', 'MBA', 'MSc.',
