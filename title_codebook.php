@@ -6,6 +6,7 @@ declare(strict_types=1);
 /**
  * Vráti zoznam titulov pred menom z tabuľky title_codebook.
  * Ak databáza nie je dostupná, vráti zabudovaný fallback zoznam.
+ * @return list<string>
  */
 function getTitlesBeforeName(\PDO $pdo): array {
     try {
@@ -24,6 +25,7 @@ function getTitlesBeforeName(\PDO $pdo): array {
 /**
  * Vráti zoznam titulov za menom z tabuľky title_codebook.
  * Ak databáza nie je dostupná, vráti zabudovaný fallback zoznam.
+ * @return list<string>
  */
 function getTitlesAfterName(\PDO $pdo): array {
     try {
@@ -41,6 +43,7 @@ function getTitlesAfterName(\PDO $pdo): array {
 
 /**
  * Záložný zoznam titulov pred menom (ak tabuľka ešte neexistuje).
+ * @return list<string>
  */
 function getFallbackTitlesBefore(): array {
     return [
@@ -71,6 +74,7 @@ function getFallbackTitlesBefore(): array {
 
 /**
  * Záložný zoznam titulov za menom (ak tabuľka ešte neexistuje).
+ * @return list<string>
  */
 function getFallbackTitlesAfter(): array {
     return [

@@ -22,6 +22,9 @@ if (!function_exists('popSkMonths')) {
 }
 
 if (!function_exists('popFormatDate')) {
+    /**
+     * @param array<int, string> $months
+     */
     function popFormatDate(string $datetime, array $months): string
     {
         try {
@@ -63,7 +66,12 @@ if (!function_exists('popFirstImage')) {
 }
 
 if (!function_exists('popRenderCard')) {
-    /** Vyrenderuje jednu kartu článku (položka gridu .populars-grid). */
+    /**
+     * Vyrenderuje jednu kartu článku (položka gridu .populars-grid).
+     *
+     * @param array<string, mixed> $art
+     * @param array<int, string> $months
+     */
     function popRenderCard(array $art, array $months): void
     {
         $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
@@ -158,6 +166,7 @@ if (!function_exists('isMedimpaxPatientArticle')) {
      * Článok patrí do podsekcie „Dialýza a stredisko Medimpax", ak spomína „Medimpax".
      * Úvod sekcie („pre-pacientov-uvod") sem patrí tiež — a vďaka is_top=1 / sort_order
      * vyjde na prvé miesto podsekcie.
+     * @param array<string, mixed> $art
      */
     function isMedimpaxPatientArticle(array $art): bool
     {

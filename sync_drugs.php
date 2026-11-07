@@ -152,7 +152,11 @@ $seed = [
     ['chembl' => 'CHEMBL1201439', 'slug' => 'basiliximab',       'name_sk' => 'Basiliximab',        'category' => 'transplant',    'drug_class' => 'Anti-IL-2R monoklonálna protilátka (indukcia)', 'atc' => 'L04AC02'],
 ];
 
-/** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */
+/**
+ * Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe.
+ *
+ * @return array<string, mixed>|null
+ */
 function dgFetch(string $url): ?array
 {
     $ch = curl_init($url);
@@ -179,7 +183,11 @@ function dgFetch(string $url): ?array
     return is_array($data) ? $data : null;
 }
 
-/** Cesty podania z booleanov molekuly → CSV „oral,parenteral,topical". */
+/**
+ * Cesty podania z booleanov molekuly → CSV „oral,parenteral,topical".
+ *
+ * @param array<string, mixed> $m
+ */
 function dgBuildRoutes(array $m): ?string
 {
     $r = [];
@@ -191,7 +199,11 @@ function dgBuildRoutes(array $m): ?string
     return $r !== [] ? implode(',', $r) : null;
 }
 
-/** ATC level5 z poľa atc_classifications (REST: pole reťazcov, prvý prvok). */
+/**
+ * ATC level5 z poľa atc_classifications (REST: pole reťazcov, prvý prvok).
+ *
+ * @param array<string, mixed> $m
+ */
 function dgExtractAtc(array $m): ?string
 {
     $atc = $m['atc_classifications'] ?? null;
@@ -201,7 +213,11 @@ function dgExtractAtc(array $m): ?string
     return null;
 }
 
-/** Obchodné názvy (TRADE_NAME) z molecule_synonyms → JSON (max 15, dedup). */
+/**
+ * Obchodné názvy (TRADE_NAME) z molecule_synonyms → JSON (max 15, dedup).
+ *
+ * @param array<string, mixed> $m
+ */
 function dgExtractSynonyms(array $m): ?string
 {
     $syns = $m['molecule_synonyms'] ?? null;
@@ -232,7 +248,11 @@ function dgExtractSynonyms(array $m): ?string
     return $out !== [] ? (json_encode($out, JSON_UNESCAPED_UNICODE) ?: null) : null;
 }
 
-/** EMA odkazy z cross_references → JSON [{label,url}] (len pri prvom vložení). */
+/**
+ * EMA odkazy z cross_references → JSON [{label,url}] (len pri prvom vložení).
+ *
+ * @param array<string, mixed> $m
+ */
 function dgExtractSources(array $m): ?string
 {
     $refs = $m['cross_references'] ?? null;

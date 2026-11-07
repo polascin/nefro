@@ -16,6 +16,7 @@ class DataProtectionKeyException extends RuntimeException {
 /**
  * Vráti kandidátne cesty ku konfiguračnému súboru.
  * Poradie je od najbezpečnejšej/explicitnej po fallback pre lokálny vývoj.
+ * @return list<string>
  */
 function getAppConfigPaths(): array {
     $paths = [];
@@ -43,6 +44,7 @@ function getAppConfigPaths(): array {
 
 /**
  * Načíta konfiguráciu z prvého dostupného ini súboru.
+ * @return array<string, mixed>
  */
 function loadAppConfig(): array {
     static $config = null;
@@ -142,6 +144,9 @@ function isRequestHttps(): bool {
     return $isHttps;
 }
 
+/**
+ * @param array<mixed> $candidates
+ */
 function firstNonEmptySecretCandidate(array $candidates): string {
     foreach ($candidates as $candidate) {
         $candidate = trim((string) $candidate);

@@ -7,7 +7,11 @@ declare(strict_types=1);
  * Knižnica (len include, web prístup blokovaný v .htaccess).
  */
 
-/** Slovenské popisky kurátorských kategórií liekov. */
+/**
+ * Slovenské popisky kurátorských kategórií liekov.
+ *
+ * @return array<string, string>
+ */
 function dgCategoryLabels(): array
 {
     return [
@@ -80,7 +84,11 @@ function dgSlugify(string $name): string
     return mb_substr($name, 0, 120);
 }
 
-/** Bezpečné dekódovanie JSON poľa zo stĺpca; vždy vráti pole. */
+/**
+ * Bezpečné dekódovanie JSON poľa zo stĺpca; vždy vráti pole.
+ *
+ * @return array<mixed>
+ */
 function dgDecodeJsonList(?string $json): array
 {
     if ($json === null || $json === '') {
@@ -132,7 +140,11 @@ function dgFetchDrugs(\PDO $pdo, string $category = '', string $query = '', int 
     return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 
-/** Načíta jeden zverejnený liek podľa slugu (alebo null). */
+/**
+ * Načíta jeden zverejnený liek podľa slugu (alebo null).
+ *
+ * @return array<string, mixed>|null
+ */
 function dgFetchDrug(\PDO $pdo, string $slug): ?array
 {
     $stmt = $pdo->prepare("SELECT * FROM drugs WHERE slug = :slug AND is_published = 1 LIMIT 1");
@@ -141,7 +153,11 @@ function dgFetchDrug(\PDO $pdo, string $slug): ?array
     return is_array($row) ? $row : null;
 }
 
-/** Počty zverejnených liekov podľa kategórie (slug → počet). */
+/**
+ * Počty zverejnených liekov podľa kategórie (slug → počet).
+ *
+ * @return array<string, int>
+ */
 function dgCategoryCounts(\PDO $pdo): array
 {
     $out = [];

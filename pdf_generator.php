@@ -278,6 +278,7 @@ function sanitizeArticlePdfContent(string $content, string $articleSlug = ''): s
 /**
  * Zostaví tlačové HTML článku pre wkhtmltopdf.
  * Obrázky sa načítavajú lokálne cez <base href="file://…"> (rýchle, bez siete).
+ * @param array<string, mixed> $article
  */
 function buildArticlePdfHtml(array $article): string
 {
@@ -388,6 +389,8 @@ function articlePdfIsProtected(string $slug): bool
  * @param array $article        riadok z tabuľky articles (id, slug, title, author, content, published_at)
  * @param bool  $updateDb       ak true, nastaví articles.pdf_file na názov súboru
  * @param bool  $allowProtected ak true, prepíše aj chránené (ručné) PDF
+ * @param array<string, mixed> $article
+ * @return array{ok: bool, file: ?string, error: ?string, skipped?: bool}
  */
 function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true, bool $allowProtected = false): array
 {
