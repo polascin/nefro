@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 02:05 Europe/Bratislava
+Aktualizované: 2026-11-07 02:35 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -22,6 +22,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - ad (Beh 174): PHPStan úroveň 5 (0 chýb); cron zhodný. Deploy `83b72b8d`.
 - ae (Beh 175): integračná brána PASS po eol=lf pre tools/integration (Windows CRLF).
 - af (Beh 176): ops_health hlási fatálne chyby PHP zo serverového logu. Deploy `b9fdf971`.
+- ag (Beh 177): typy v calculators_common (PHPStan 6 tam 0); nočný audit si banuje IP cez honeypot. Deploy `da0be54a`.
 
 ## Stav repozitára
 
@@ -39,4 +40,4 @@ Inak: IgAN/Na/CRRT tiež len so súhlasom; ďalšia technická kontrola podľa v
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-020500-loop-errorlog-beh176.md`
+`.codex/handoffs/2026-11-07-023500-loop-types-beh177.md`
