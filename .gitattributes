@@ -2,6 +2,9 @@
 # inak na Windows checkoute zlyhajú s „/bin/sh^M: bad interpreter".
 hooks/* text eol=lf
 *.sh    text eol=lf
+# Integračná brána beží v Linuxovom kontajneri; PHP súbory v nej vkladajú
+# shellové skripty cez heredoc (deploy_probe.php), CRLF ich rozbije v dash.
+tools/integration/** text eol=lf
 
 # Trunk/Prettier must see the same line endings on Windows, WSL and CI.
 *.md    text eol=lf
