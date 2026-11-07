@@ -1,11 +1,11 @@
 # SESSION
 
-Aktualizované: 2026-11-07 07:15 Europe/Bratislava
+Aktualizované: 2026-11-07 07:30 Europe/Bratislava
 
-## Slučky: ACTIVE
+## Slučky: PAUSED
 
-Majiteľ 6. 11. popoludní obnovil /loop (vývoj, opravy, optimalizácia; po každej slučke
-handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
+Majiteľ 2026-11-07 ráno: „Dokonči a slučku prechodne zastav.“ Rozrobená náhrada
+odkazov dokončená (Beh 188), /loop zastavený (ScheduleWakeup stop). Neobnovovať bez pokynu.
 
 ## Posledné slučky
 
@@ -33,6 +33,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - ao (Beh 185): typy vo zvyšných runtime súboroch (PHPStan 6 = 30, len tools/). Deploy `59147646`.
 - ap (Beh 186): PHPStan úroveň 6 = 0 v celom projekte; phpstan.neon.dist level: 6.
 - aq (Beh 187): jeden <h1> na stránke, titulok článku <h1>. Deploy `2f2a48c7`.
+- ar (Beh 188): 8 mŕtvych odkazov v 7 článkoch nahradených (súhlas), UPSERT + PDF. Deploy `04572420`.
 
 ## Stav repozitára
 
@@ -44,9 +45,10 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-PHPStan je na úrovni 6 bez chýb. Ďalej iná oblasť: napr. prístupnosť (kontrast, focus) alebo
-logika ďalších kalkulačiek proti zdrojom. Články/routine/IgAN/Na/CRRT len so súhlasom.
+Slučka je PAUSED. Po obnovení: čaká na súhlas prompt nočnej routine (vylúčiť bot_trap.php),
+IgAN/Na/CRRT, zmazanie nahradených vetiev fix/gupta-mg-cutoff-2026-11-03 a fix/adpkd-mayo-2026-11-03.
+Inak ďalšia technická oblasť (focus/kontrast, kalkulačky).
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-071500-loop-h1-beh187.md`
+`.codex/handoffs/2026-11-07-073000-pause-dead-links-beh188.md`
