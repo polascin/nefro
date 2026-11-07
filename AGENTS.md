@@ -15,7 +15,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Run archive cleanup manually: `php .\archive_cleanup.php [profile_days] [avatar_days] [access_log_days]`.
   Production also runs it automatically every Sunday at 02:00 through cron; output is written to
   `private/archive_cleanup_cron.log`.
-- Run the operational health check (queues, cron log, deploy marker, excerpt parity of `add_*_article.php` vs `articles.excerpt`, public pages): `php .\ops_health.php [--no-http] [--mail]`;
+- Run the operational health check (queues, cron log, deploy marker, excerpt parity of `add_*_article.php` vs `articles.excerpt`, PHP fatal errors in the server error log over the last 24 h, public pages): `php .\ops_health.php [--no-http] [--mail]`;
   exit 1 = FAIL. The server cron runs it daily at 06:10 with `--mail` (public pages included).
 - Scheduled server jobs live in one file: `tools/crontab.example` (single source of truth for the cron table).
   When adding a worker, add its entry there in the same commit.

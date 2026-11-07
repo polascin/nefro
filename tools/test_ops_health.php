@@ -226,4 +226,38 @@ opsHealthTest(
     'Chýbajúci ENUM sending = WARN s názvom tabuľky a migráciou.',
 );
 
+// Fatálne chyby PHP v serverovom logu (Beh 176)
+$logLine = "nefro.polascin.net [Tue Nov 03 04:05:32.110453 2026] [proxy_fcgi:error] [pid 1] [client 192.0.2.1:5] "
+    . "AH01071: Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 (\$string) "
+    . "must be of type string, array given in /data/8/6/uuid/polascin.net/sub/nefro/register.php:508";
+$noise = "nefro.polascin.net [Wed Nov 04 01:07:40] [authz_core:error] AH01630: client denied by server configuration: setup_db.php";
+$fatals = opsHealthPhpFatals($noise . "\n" . $logLine . "\n" . $logLine . "\n");
+opsHealthTest($fatals['count'] === 2, 'Spočítajú sa dve fatálne chyby, odmietnutý prístup nie.');
+opsHealthTest(count($fatals['samples']) === 1, 'Rovnaká chyba je jedna vzorka.');
+opsHealthTest(
+    str_contains($fatals['samples'][0], 'register.php:508')
+        && !str_contains($fatals['samples'][0], '/data/')
+        && !str_contains($fatals['samples'][0], '192.0.2.1'),
+    'Vzorka bez absolútnej cesty a IP, so súborom a riadkom.',
+);
+opsHealthTest(opsHealthEvaluatePhpFatals($fatals)['status'] === 'WARN', 'Fatálna chyba = WARN.');
+opsHealthTest(opsHealthEvaluatePhpFatals(opsHealthPhpFatals($noise))['status'] === 'PASS', 'Bez fatálnej chyby = PASS.');
+opsHealthTest(opsHealthPhpFatals("PHP Parse error:  syntax error in /x/y/a.php:3")['count'] === 1, 'Parse error sa počíta.');
+
+$logDir = sys_get_temp_dir() . '/nefro-ops-log-' . bin2hex(random_bytes(4));
+mkdir($logDir);
+$now = strtotime('2026-11-07 06:10:00');
+file_put_contents($logDir . '/error_log-2026-11-06.gz', gzencode($logLine . "\n"));
+file_put_contents($logDir . '/error_log-2026-11-05.gz', gzencode($logLine . "\n" . $logLine . "\n"));
+file_put_contents($logDir . '/error_log', $noise . "\n");
+$read = opsHealthReadPhpErrorLogs($logDir, $now);
+opsHealthTest(is_string($read) && opsHealthPhpFatals($read)['count'] === 1, 'Číta sa aktuálny log a len včerajší rotovaný súbor.');
+array_map('unlink', glob($logDir . '/*') ?: []);
+rmdir($logDir);
+opsHealthTest(opsHealthReadPhpErrorLogs($logDir, $now) === null, 'Chýbajúci adresár logov = null (preskočené).');
+opsHealthTest(
+    opsHealthPhpErrorLogDir('/data/x/polascin.net/sub/nefro') === '/data/x/polascin.net/logs-nefro.polascin.net',
+    'Adresár logu je vedľa sub/ v koreni webu.',
+);
+
 echo "Ops health: $checks PASS\n";
