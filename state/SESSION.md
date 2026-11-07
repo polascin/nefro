@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-07 06:20 Europe/Bratislava
+Aktualizované: 2026-11-07 06:45 Europe/Bratislava
 
 ## Slučky: ACTIVE
 
@@ -31,6 +31,7 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 - am (Beh 183): kompaktné datalisty adresy (register 1,5 MB → 517 kB). Deploy `ddccc9ba`.
 - an (Beh 184): kompaktný datalist autorov (index 313 → 235 kB). Deploy `ea377a33`.
 - ao (Beh 185): typy vo zvyšných runtime súboroch (PHPStan 6 = 30, len tools/). Deploy `59147646`.
+- ap (Beh 186): PHPStan úroveň 6 = 0 v celom projekte; phpstan.neon.dist level: 6.
 
 ## Stav repozitára
 
@@ -42,9 +43,9 @@ handoff + `.doaudit.md`). Tempo: ScheduleWakeup ~20 min.
 
 ## Executable next step
 
-PHPStan 6: zvyšných 30 v tools/ (testy); potom zvážiť level: 6 v phpstan.neon.dist.
-Články/routine/IgAN/Na/CRRT len so súhlasom.
+PHPStan je na úrovni 6 bez chýb. Ďalej iná oblasť: napr. prístupnosť (kontrast, focus) alebo
+logika ďalších kalkulačiek proti zdrojom. Články/routine/IgAN/Na/CRRT len so súhlasom.
 
 ## Handoff
 
-`.codex/handoffs/2026-11-07-062000-loop-runtime-types-beh185.md`
+`.codex/handoffs/2026-11-07-064500-loop-phpstan6-beh186.md`

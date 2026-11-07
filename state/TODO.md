@@ -24,6 +24,10 @@
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Voliteľné: dirty worktree `expert-article-review-social-9d76d4` (mimo main).
 
+## Hotové: slučka 2026-11-07-ap (PHPStan 6, Beh 186)
+
+- [x] tools/ typy; phpstan.neon.dist level: 6; celý projekt 0 chýb
+
 ## Hotové: slučka 2026-11-07-ao (typy runtime, Beh 185)
 
 - [x] 22 súborov; PHPStan 6 = 30; ranný ops_health s kontrolou fatálnych chýb PASS; deploy `59147646`
@@ -60,7 +64,6 @@
 
 - [x] calculators_common: PHPStan 6 = 0; deploy `da0be54a`
 - [ ] Majiteľ: v nočnej routine vylúčiť bot_trap.php (sama sa banuje okolo 01:05)
-- [ ] PHPStan 6: ostáva 30 (len tools/); potom level: 6
 
 ## Hotové: slučka 2026-11-07-af (chybový log, Beh 176)
 
