@@ -83,6 +83,7 @@ $selectedComplications = array_values(array_unique($selectedComplications));
 $labsPosted = $_SERVER['REQUEST_METHOD'] === 'POST' && calculatorPostString('form_mode') === 'labs';
 $labsDefaults = [
     'labs_input' => '',
+    'labs_text_encoding' => 'auto',
     'labs_selection' => 'usual',
     'labs_custom_list' => 'Urea, Kreatinín, eGFR, Na, K, Ca, P, HCO3, Albumín, Hb, PTH, ACR',
     'labs_dates' => 'latest',
@@ -97,6 +98,7 @@ $labsForm['labs_flags'] = '1';
 $labsForm['labs_ref'] = '';
 $labsErrors = [];
 $labsResult = null;
+$labsRepairedFrom = null;
 if ($labsPosted) {
     foreach ($labsDefaults as $field => $default) {
         $labsForm[$field] = requestScalarString($_POST, $field, $default, true, false);
@@ -104,6 +106,7 @@ if ($labsPosted) {
     $labsForm['labs_flags'] = isset($_POST['labs_flags']) ? '1' : '';
     $labsForm['labs_ref'] = isset($_POST['labs_ref']) ? '1' : '';
     $labsChoices = [
+        'labs_text_encoding' => array_merge(['auto', 'none'], array_keys(labsMisreadEncodings())),
         'labs_selection' => ['usual', 'all', 'custom'],
         'labs_dates' => ['latest', 'latest_each', 'all'],
         'labs_format' => ['inline', 'list', 'table', 'custom'],
@@ -142,6 +145,10 @@ if ($labsPosted) {
     }
 
     if ($labsErrors === []) {
+        // Text z MS-DOS (CP852) prečítaný cestou v inom kódovaní sa vráti na správnu diakritiku.
+        $labsRepair = labsRepairDosText($labsForm['labs_input'], $labsForm['labs_text_encoding']);
+        $labsForm['labs_input'] = $labsRepair['text'];
+        $labsRepairedFrom = $labsRepair['from'];
         $labsResult = labsBuildOutput($labsForm['labs_input'], [
             'selection' => $labsForm['labs_selection'],
             'custom_list' => $labsForm['labs_custom_list'],
@@ -756,7 +763,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                         <div class="form-group">
                             <label for="labs_input">Text laboratórnych výsledkov</label>
                             <textarea id="labs_input" name="labs_input" class="form-control ambulatory-output labs-input" rows="14" cols="80" wrap="off" spellcheck="false" placeholder="08.11.2026&#10;S-Urea        18,4  mmol/l  (2,8 - 8,1)  H&#10;S-Kreatinín   412   umol/l  (62 - 106)   H" aria-describedby="labs_input_help"><?= htmlspecialchars($labsForm['labs_input']) ?></textarea>
-                            <small id="labs_input_help">Rozpozná riadky v tvare „názov hodnota jednotka (rozpätie) príznak“, dátumy odberov, viac parametrov v jednom riadku aj kumulatívny výpis s dátumami v hlavičke stĺpcov.</small>
+                            <small id="labs_input_help">Text môžete vložiť zo schránky alebo sem pretiahnuť súbor TXT. Ak sa diakritika z MS-DOS zobrazí pokazene (napríklad „Kreatinˇn“ namiesto „Kreatinín“), pri spracovaní sa opraví. Rozpozná riadky v tvare „názov hodnota jednotka (rozpätie) príznak“, dátumy odberov, viac parametrov v jednom riadku aj kumulatívny výpis s dátumami v hlavičke stĺpcov.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="labs_text_encoding">Kódovanie vloženého textu</label>
+                            <select id="labs_text_encoding" name="labs_text_encoding" class="form-control">
+                                <option value="auto" <?= $labsSelected('labs_text_encoding', 'auto') ?>>Automaticky rozpoznať a opraviť text z MS-DOS</option>
+                                <option value="none" <?= $labsSelected('labs_text_encoding', 'none') ?>>Text je v poriadku, neprevádzať</option>
+                                <?php foreach (labsMisreadEncodings() as $labsEncodingKey => $labsEncoding): ?>
+                                    <option value="<?= htmlspecialchars($labsEncodingKey) ?>" <?= $labsSelected('labs_text_encoding', $labsEncodingKey) ?>>MS-DOS (CP852) zobrazený ako <?= htmlspecialchars($labsEncoding['label']) ?></option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
                     </section>
 
@@ -827,6 +844,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                         <a href="calculator_ambulatory.php#nefris-labs" class="btn-secondary">Vymazať</a>
                     </div>
                 </form>
+
+                <?php if ($labsRepairedFrom !== null): ?>
+                    <div class="info-box-blue" role="status">
+                        Vložený text bol v kódovaní MS-DOS (CP852), ale cestou sa prečítal ako <?= htmlspecialchars(labsMisreadEncodings()[$labsRepairedFrom]['label']) ?>. Diakritika je opravená aj v poli so vstupom; skontrolujte ju. Ak oprava nesedí, zvoľte kódovanie vloženého textu ručne alebo „Text je v poriadku, neprevádzať“.
+                    </div>
+                <?php endif; ?>
 
                 <?php if ($labsResult !== null && $labsResult['output'] !== ''): ?>
                     <section class="form-section calculator-result-block" role="status" aria-live="polite" aria-labelledby="labs-result-heading">

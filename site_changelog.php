@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-08 21:35',
+                'category' => 'calculators',
+                'title' => 'Ambulantná kalkulačka: text z MS-DOS priamo do okna aj súbor TXT',
+                'description' => 'Laboratórne výsledky z Nefrisu možno vložiť priamo do okna, aj keď sa text z MS-DOS (CP852) cestou prečítal v inom kódovaní a diakritika je pokazená (napríklad „Kreatinˇn“ namiesto „Kreatinín“); kalkulačka to rozpozná a opraví, kódovanie možno zvoliť aj ručne. Súbor TXT stačí pretiahnuť do okna, rozpozná sa CP852 aj Windows-1250.',
+                'url' => 'calculator_ambulatory.php#nefris-labs',
+            ],
+            [
                 'date' => '2026-11-08 20:30',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: výber laboratórnych výsledkov z Nefrisu',

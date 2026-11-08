@@ -165,4 +165,22 @@ $parsed = labsParse($boxed);
 labsTestSame(1, count($parsed['items']), 'Rámčeky a tabulátory');
 labsTestSame('12,5', $parsed['items'][0]['value'], 'Hodnota z riadka s rámčekom');
 
+// 8. Text z MS-DOS (CP852) prečítaný v inom kódovaní pred vložením do okna.
+if (function_exists('iconv')) {
+    $dosText = "Dátum odberu: 08.11.2026\nS-Kreatinín 412 umol/l\nKys. močová 455 umol/l\nŽelezo 12 umol/l\nĽudský ťažký ňô ýŕĺ";
+    $dosBytes = (string) iconv('UTF-8', 'CP852', $dosText);
+    foreach (labsMisreadEncodings() as $key => $encoding) {
+        $misread = (string) @iconv($encoding['iconv'], 'UTF-8//IGNORE', $dosBytes);
+        $repair = labsRepairDosText($misread);
+        labsTestSame($key, $repair['from'], 'Rozpoznané nesprávne čítanie ' . $encoding['label']);
+        labsTestSame($dosText, $repair['text'], 'Opravený text z ' . $encoding['label']);
+    }
+    $misread = (string) iconv('CP1250', 'UTF-8', $dosBytes);
+    labsTestSame('cp1250', labsRepairDosText($misread, 'cp1250')['from'], 'Ručne zvolené kódovanie');
+    labsTestSame($misread, labsRepairDosText($misread, 'none')['text'], 'Režim bez prevodu');
+    labsTestSame('412', labsBuildOutput($misread, $defaults)['parsed']['items'][0]['value'] ?? null, 'Výpis sa parsuje aj bez opravy');
+}
+labsTestSame(null, labsRepairDosText($flow)['from'], 'Správny slovenský text sa nemení');
+labsTestSame(null, labsRepairDosText("Urea 12,5 mmol/l\n")['from'], 'ASCII text sa nemení');
+
 echo "test_ambulatory_labs: {$assertions} assertions PASS\n";

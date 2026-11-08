@@ -458,6 +458,27 @@
         return bytes;
     }
 
+    // Rovnaké skóre ako labsTextScore() v ambulatory_labs.php: slovenské písmená plus,
+    // iné znaky mimo ASCII a veľké písmeno uprostred slova mínus, rámčeky DOS neutrálne.
+    var SLOVAK_LETTERS = 'áäčďéíĺľňóôŕšťúýžÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ';
+    function textScore(text) {
+        var score = 0;
+        for (var i = 0; i < text.length; i++) {
+            var code = text.charCodeAt(i);
+            if (code < 128) {
+                continue;
+            }
+            var char = text.charAt(i);
+            if (SLOVAK_LETTERS.indexOf(char) !== -1) {
+                score += 2;
+            } else if (!(code >= 0x2500 && code <= 0x259F) && char !== '°' && char !== 'µ') {
+                score -= 3;
+            }
+        }
+        var mixed = text.match(/[a-záäčďéíĺľňóôŕšťúýž][ÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ][a-záäčďéíĺľňóôŕšťúýž]/g);
+        return score - 4 * (mixed ? mixed.length : 0);
+    }
+
     function decodeLabsFile(bytes, encoding) {
         if (encoding === 'cp852') {
             return {text: decodeCp852(bytes), used: 'CP852'};
@@ -466,7 +487,12 @@
             try {
                 return {text: new TextDecoder('utf-8', {fatal: encoding === 'auto'}).decode(bytes), used: 'UTF-8'};
             } catch (error) {
-                return {text: decodeCp852(bytes), used: 'CP852'};
+                // Nie je UTF-8: súbor z Nefrisu býva v CP852, prípadne už prevedený do Windows-1250.
+                var dos = decodeCp852(bytes);
+                var windows = new TextDecoder('windows-1250').decode(bytes);
+                return textScore(windows) > textScore(dos) + 1
+                    ? {text: windows, used: 'Windows-1250'}
+                    : {text: dos, used: 'CP852'};
             }
         }
         return {text: new TextDecoder(encoding).decode(bytes), used: encoding};
@@ -482,11 +508,12 @@
 
         if (labsFileGroup && labsFile && labsInput && window.TextDecoder && window.Uint8Array) {
             labsFileGroup.hidden = false;
-            var readLabsFile = function () {
-                var file = labsFile.files && labsFile.files[0];
+            var lastLabsFile = null;
+            var readLabsFile = function (file) {
                 if (!file) {
                     return;
                 }
+                lastLabsFile = file;
                 if (file.size > LABS_MAX_FILE_BYTES) {
                     labsFileStatus.textContent = 'Súbor je väčší ako 1 MB. Vložte len časť s výsledkami.';
                     return;
@@ -502,10 +529,32 @@
                 };
                 reader.readAsArrayBuffer(file);
             };
-            labsFile.addEventListener('change', readLabsFile);
+            labsFile.addEventListener('change', function () {
+                readLabsFile(labsFile.files && labsFile.files[0]);
+            });
             if (labsEncoding) {
-                labsEncoding.addEventListener('change', readLabsFile);
+                labsEncoding.addEventListener('change', function () {
+                    readLabsFile(lastLabsFile);
+                });
             }
+            // Súbor TXT možno pretiahnuť aj priamo do okna s textom.
+            labsInput.addEventListener('dragover', function (event) {
+                if (event.dataTransfer && Array.prototype.indexOf.call(event.dataTransfer.types || [], 'Files') !== -1) {
+                    event.preventDefault();
+                    event.dataTransfer.dropEffect = 'copy';
+                    labsInput.classList.add('labs-input--drop');
+                }
+            });
+            labsInput.addEventListener('dragleave', function () {
+                labsInput.classList.remove('labs-input--drop');
+            });
+            labsInput.addEventListener('drop', function (event) {
+                labsInput.classList.remove('labs-input--drop');
+                if (event.dataTransfer && event.dataTransfer.files && event.dataTransfer.files.length > 0) {
+                    event.preventDefault();
+                    readLabsFile(event.dataTransfer.files[0]);
+                }
+            });
         }
 
         var fieldValue = function (name) {

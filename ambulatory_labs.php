@@ -165,6 +165,105 @@ function labsResolveName(string $name): ?string
 }
 
 /**
+ * Kódovania, v ktorých sa text z MS-DOS (CP852) cestou do schránky zvykne
+ * nesprávne prečítať, napríklad keď Poznámkový blok otvorí súbor z Nefrisu
+ * ako Windows-1250 („Kreatinˇn“ namiesto „Kreatinín“).
+ *
+ * @return array<string, array{iconv: string, label: string}>
+ */
+function labsMisreadEncodings(): array
+{
+    return [
+        'cp1250' => ['iconv' => 'CP1250', 'label' => 'Windows-1250'],
+        'iso-8859-2' => ['iconv' => 'ISO-8859-2', 'label' => 'ISO-8859-2'],
+        'cp1252' => ['iconv' => 'CP1252', 'label' => 'Windows-1252'],
+        'iso-8859-1' => ['iconv' => 'ISO-8859-1', 'label' => 'ISO-8859-1'],
+        'cp437' => ['iconv' => 'CP437', 'label' => 'CP437 (DOS, US)'],
+        'cp850' => ['iconv' => 'CP850', 'label' => 'CP850 (DOS, západná Európa)'],
+    ];
+}
+
+/**
+ * Skóre „slovenskosti“ textu: slovenské písmená plus, iné znaky mimo ASCII
+ * a veľké písmeno uprostred slova (KreatinÝn) mínus. Rámčeky DOS sú neutrálne.
+ */
+function labsTextScore(string $text): int
+{
+    static $slovak = 'áäčďéíĺľňóôŕšťúýžÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ';
+    $score = 0;
+    if (preg_match_all('/[^\x00-\x7F]/u', $text, $matches) > 0) {
+        foreach ($matches[0] as $char) {
+            if (mb_strpos($slovak, $char, 0, 'UTF-8') !== false) {
+                $score += 2;
+            } elseif (preg_match('/^[\x{2500}-\x{259F}°µ]$/u', $char) !== 1) {
+                $score -= 3;
+            }
+        }
+    }
+
+    return $score - 4 * (int) preg_match_all('/\p{Ll}[ÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ]\p{Ll}/u', $text);
+}
+
+/**
+ * Text prečítaný v kódovaní $iconv vráti na pôvodné bajty a dekóduje ako CP852.
+ * Znak, ktorý sa v $iconv nedá zapísať, nahradí otáznikom.
+ */
+function labsReinterpretAsCp852(string $text, string $iconv): ?string
+{
+    if (!function_exists('iconv')) {
+        return null;
+    }
+    $bytes = '';
+    foreach (preg_split('/([^\x00-\x7F])/u', $text, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY) ?: [] as $piece) {
+        if (preg_match('/^[\x00-\x7F]+$/', $piece) === 1) {
+            $bytes .= $piece;
+            continue;
+        }
+        $byte = @iconv('UTF-8', $iconv, $piece);
+        $bytes .= is_string($byte) && strlen($byte) === 1 ? $byte : '?';
+    }
+    $decoded = @iconv('CP852', 'UTF-8', $bytes);
+
+    return is_string($decoded) ? $decoded : null;
+}
+
+/**
+ * Opraví text z MS-DOS (CP852), ktorý sa pred vložením do okna prečítal
+ * v inom kódovaní. Režim 'auto' vyberie kódovanie s najlepším skóre a text
+ * zmení len vtedy, keď je výsledok zreteľne lepší; 'none' text nechá tak.
+ *
+ * @return array{text: string, from: ?string}
+ */
+function labsRepairDosText(string $text, string $mode = 'auto'): array
+{
+    $encodings = labsMisreadEncodings();
+    if ($mode === 'none' || preg_match('/[^\x00-\x7F]/', $text) !== 1) {
+        return ['text' => $text, 'from' => null];
+    }
+    if (isset($encodings[$mode])) {
+        $repaired = labsReinterpretAsCp852($text, $encodings[$mode]['iconv']);
+
+        return $repaired === null ? ['text' => $text, 'from' => null] : ['text' => $repaired, 'from' => $mode];
+    }
+
+    $bestScore = labsTextScore($text);
+    $best = ['text' => $text, 'from' => null];
+    foreach ($encodings as $key => $encoding) {
+        $repaired = labsReinterpretAsCp852($text, $encoding['iconv']);
+        if ($repaired === null) {
+            continue;
+        }
+        $score = labsTextScore($repaired);
+        if ($score > $bestScore + 1) {
+            $bestScore = $score;
+            $best = ['text' => $repaired, 'from' => $key];
+        }
+    }
+
+    return $best;
+}
+
+/**
  * Normalizuje vložený text: konce riadkov, tabulátory na 8-stĺpcové zarážky,
  * rámčekové znaky DOS na medzery, odstráni riadiace znaky.
  */
