@@ -756,5 +756,8 @@ function getSourceArticleAuthors(): array {
         // Therapies for Chronic Kidney Disease“ (Medscape Education 2026); CME Author podľa verejnej
         // stránky programu overený 2026-11-03. Recenzenti compliance nie sú autori.
         'kombinovana-nefroprotektivna-liecba-ckd-ras-sglt2-finerenon' => ['Naseem Bazargan'],
+        // Autori rámcového prehľadu Nat Rev Nephrol 2026 (doi 10.1038/s41581-026-01146-1, PMID 42995255);
+        // overené v PubMed a v registri Crossref 2026-11-08. Autori ďalších citovaných prác sem nepatria.
+        'buducnost-nahrady-funkcie-obliciek-nositelna-dialyza-xenotransplantacia' => ['Mari Karoliina H. Winkler', 'Stephen R. Ash', 'Katherine A. Barraclough', 'Christian Bluechel', 'Nicholas Ferrell', 'William Fissell', 'Benjamin S. Freedman', 'Karin G. F. Gerritsen', 'Hatim A. Hassan', 'Dirk M. Hentschel', 'Jamie Hestekin', 'Alex Hughes', 'Dean G. Johnson', 'Mira Krendel', 'Zhongwei Li', 'Jayme E. Locke', 'Nuria Montserrat', 'Ryuichi Nishinakamura', 'Alexa Plisiewicz', 'Buddy D. Ratner', 'Glenda V. Roberts', 'Shuvo Roy', 'Tammy L. Sirich', 'Arohan R. Subramanya', 'Haimanot Wasse', 'Scott Wiener', 'Fokko Wieringa', 'Kayla Wolf', 'Jonathan Himmelfarb'],
     ];
 }
