@@ -25,6 +25,8 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Pôvodná štúdia Prepare for Kidney Care, Lancet 2026, PMID 42982076.
+        'dialyza-konzervativna-starostlivost-starsi-prepare-kidney-care' => ['Fergus J Caskey', 'Jo Worthington', 'Yumeng Liu', 'Stephanie J MacNeill', 'Leila Rooshenas', 'Kirsty Garfield', 'Jessica Frost', 'Alexandra Soundy', 'Helen Winton', 'Karen Alloway', 'Yoav Ben-Shlomo', 'Áine Burns', 'Joseph Chilcot', 'Jos Darling', 'Simon J Davies', 'Ken Farrington', 'Andy Gibson', 'Barnaby Hole', 'Samantha Husbands', 'Rachel Johnson', 'Richard Huxtable', 'Emma Murphy', 'Fliss E M Murtagh', 'Yuta Nakano', 'Hugh Rayner', 'Caoimhe T Rice', 'Paul Roderick', 'Lucy E Selman', 'Jodi Taylor', 'Alba X Realpe', 'Chris Salisbury', 'Joanna Coast', 'Jenny L Donovan', 'J Athene Lane'],
         // JAMA Medical News, DOI 10.1001/jama.2026.19959; autorka overená v PubMed.
         'kidney-week-2026-sglt2-darcovstvo-anemia-hyperkaliemia' => ['Jennifer Abbasi'],
         // Autorka spracovaného článku Medscape Medical News „Physicians Spend More Time
