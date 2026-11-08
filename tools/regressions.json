@@ -2,6 +2,7 @@
   "tools/test_address_datalist.php",
   "tools/test_acidbase_display.php",
   "tools/test_ambulatory_calculator.php",
+  "tools/test_ambulatory_labs.php",
   "tools/test_article_excerpts.php",
   "tools/test_article_pagination.php",
   "tools/test_botguard_privacy.php",

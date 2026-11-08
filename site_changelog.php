@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-08 20:30',
+                'category' => 'calculators',
+                'title' => 'Ambulantná kalkulačka: výber laboratórnych výsledkov z Nefrisu',
+                'description' => 'Do novej sekcie vložíte laboratórne výsledky skopírované z Nefrisu alebo načítate súbor v kódovaní MS-DOS (CP852). Kalkulačka vyberie zvyčajné nefrologické parametre alebo parametre podľa vášho zoznamu a zostaví text do správy v zvyčajnom alebo vlastnom formáte, aj ako tabuľku vývoja odberov. Výstup má konce riadkov CRLF a znaky CP852; možno ho skopírovať alebo stiahnuť ako súbor v CP852.',
+                'url' => 'calculator_ambulatory.php#nefris-labs',
+            ],
+            [
                 'date' => '2026-11-08 16:45',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: text vo formáte MS-DOS a HbA1c v mmol/mol',

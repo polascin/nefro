@@ -8487,6 +8487,32 @@ mark.search-hl {
   color: var(--text-secondary);
 }
 
+.labs-section .ambulatory-output.labs-input,
+.labs-section .ambulatory-output.labs-output {
+  min-height: 8rem;
+}
+
+.labs-details {
+  margin-top: 1rem;
+}
+
+.labs-details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.labs-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.labs-unparsed {
+  overflow-x: auto;
+  white-space: pre;
+  font-family: "Cascadia Mono", Consolas, "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 480px) {
   .content-wrapper:has(.calc-disclaimer) .form-section:not(.calculator-result-block) {
     padding: 1rem 0.85rem 0.25rem;
