@@ -25,6 +25,8 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // JAMA Medical News, DOI 10.1001/jama.2026.19959; autorka overená v PubMed.
+        'kidney-week-2026-sglt2-darcovstvo-anemia-hyperkaliemia' => ['Jennifer Abbasi'],
         // Autorka spracovaného článku Medscape Medical News „Physicians Spend More Time
         // on Paperwork Than With Patients: The Squeeze of Invisible Work“ (21. 10. 2026) –
         // byline overený z verejne dostupnej stránky zdroja 2026-10-30.
