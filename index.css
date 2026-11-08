@@ -3040,6 +3040,10 @@ input:disabled + .slider:before {
     border-left: 4px solid var(--accent-color);
 }
 
+.calculator-legal-notice {
+    text-align: center;
+}
+
 .legal-change-list {
     margin: 0;
     padding-left: 18px;
