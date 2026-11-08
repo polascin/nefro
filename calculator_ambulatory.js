@@ -3,7 +3,8 @@
 
     function copyText(textarea) {
         if (navigator.clipboard && window.isSecureContext) {
-            return navigator.clipboard.writeText(textarea.value);
+            // Textarea normalizuje konce riadkov na LF; DOS a Nefris očakávajú CRLF.
+            return navigator.clipboard.writeText(textarea.value.replace(/\r?\n/g, '\r\n'));
         }
 
         return new Promise(function (resolve, reject) {

@@ -50,6 +50,7 @@ $form = [
     'bmi' => calculatorPostString('bmi'),
     'smoking' => calculatorPostString('smoking'),
     'hba1c' => calculatorPostString('hba1c'),
+    'hba1c_unit' => calculatorPostString('hba1c_unit', 'mmol_mol'),
 ];
 
 for ($index = 1; $index <= 3; $index++) {
@@ -233,13 +234,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $diabetes = $form['diabetes'] === '1';
+        $hba1cUnit = in_array($form['hba1c_unit'], ['mmol_mol', 'percent'], true)
+            ? $form['hba1c_unit']
+            : 'mmol_mol';
+        $form['hba1c_unit'] = $hba1cUnit;
         $hba1c = null;
         if (trim($form['hba1c']) !== '') {
             $parsedHba1c = calculatorParsePositiveFloat($form['hba1c']);
-            if ($parsedHba1c === null || $parsedHba1c < 4.0 || $parsedHba1c > 20.0) {
-                $errors[] = 'HbA1c musí byť v rozsahu 4 až 20 %.';
+            $hba1cPercent = $parsedHba1c !== null
+                ? ambulatoryHba1cToNgspPercent($parsedHba1c, $hba1cUnit)
+                : null;
+            if ($hba1cPercent === null || $hba1cPercent < 4.0 || $hba1cPercent > 20.0) {
+                $errors[] = $hba1cUnit === 'mmol_mol'
+                    ? 'HbA1c musí byť v rozsahu 21 až 195 mmol/mol.'
+                    : 'HbA1c musí byť v rozsahu 4 až 20 % (NGSP/DCCT).';
             } else {
-                $hba1c = $parsedHba1c;
+                $hba1c = $hba1cPercent;
             }
         }
 
@@ -344,7 +354,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'slope_points' => $slopePoints,
                 'complications' => $complicationText,
             ]);
-            $plainTextOutput = ambulatoryBuildPlainText($report['summary']);
+            $plainTextOutput = ambulatoryToDosText(ambulatoryBuildPlainText($report['summary']));
             $skippedOutput = $report['skipped'];
             if (trim($plainTextOutput) === '') {
                 $errors[] = 'Zadajte aspoň jeden údaj, z ktorého možno zostaviť súhrn (napr. eGFR, uACR, príčinu CKD, BMI alebo komplikácie).';
@@ -518,8 +528,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="hba1c">HbA1c (%)</label>
-                                <input type="text" id="hba1c" name="hba1c" inputmode="decimal" class="form-control" placeholder="povinné pri DM, napr. 7,2" value="<?= htmlspecialchars($form['hba1c']) ?>">
+                                <label for="hba1c">HbA1c</label>
+                                <div class="input-with-unit">
+                                    <input type="text" id="hba1c" name="hba1c" inputmode="decimal" class="form-control" placeholder="povinné pri DM, napr. 55" value="<?= htmlspecialchars($form['hba1c']) ?>" aria-describedby="hba1c_help">
+                                    <select id="hba1c_unit" name="hba1c_unit" class="form-control flex-08" aria-label="Jednotka HbA1c">
+                                        <option value="mmol_mol" <?= $form['hba1c_unit'] !== 'percent' ? 'selected' : '' ?>>mmol/mol</option>
+                                        <option value="percent" <?= $form['hba1c_unit'] === 'percent' ? 'selected' : '' ?>>% (NGSP)</option>
+                                    </select>
+                                </div>
+                                <small id="hba1c_help">mmol/mol (IFCC) sa pre CKD-PC prepočíta na % NGSP/DCCT.</small>
                             </div>
                         </div>
 
@@ -590,7 +607,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <section class="form-section calculator-result-block" role="status" aria-live="polite" aria-labelledby="ambulatory-result-heading">
                         <h3 id="ambulatory-result-heading">Text do lekárskej správy</h3>
                         <label for="ambulatory-output">Pred vložením do Nefrisu text skontrolujte a podľa potreby upravte. Sekcie, na ktoré nestačili vstupy, sú vynechané.</label>
-                        <textarea id="ambulatory-output" class="form-control ambulatory-output" rows="<?= max(14, min(28, substr_count($plainTextOutput, "\n") + 3)) ?>" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
+                        <textarea id="ambulatory-output" class="form-control ambulatory-output" cols="80" wrap="off" spellcheck="false" aria-describedby="ambulatory-format-note" rows="<?= max(14, min(32, substr_count($plainTextOutput, "\n") + 3)) ?>" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
+                        <small id="ambulatory-format-note" class="ambulatory-format-note">Formát MS-DOS: konce riadkov CRLF, len znaky kódovej stránky CP852 (slovenská diakritika zostáva), riadky najviac 80 znakov. Symboly ≥ a ² sú zapísané ako &gt;= a 2.</small>
                         <?php if ($skippedOutput !== []): ?>
                             <div class="info-box-blue ambulatory-skipped" role="note" aria-labelledby="ambulatory-skipped-heading">
                                 <p id="ambulatory-skipped-heading">Z dostupných údajov sa nevypočítalo:</p>

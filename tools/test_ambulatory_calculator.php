@@ -76,12 +76,12 @@ testSame('N18.3', ambulatoryIcd10CodeForGCategory('G3b'), 'MKCH G3b');
 testSame('N18.5', ambulatoryIcd10CodeForGCategory('G5'), 'MKCH G5');
 testSame('N18.3 CKD G3b', ambulatoryMainDiagnosis('G3b', true, true), 'Potvrdená CKD G3b');
 testSame(
-    'CKD nepotvrdená – kód N18.x zatiaľ neurčený',
+    'CKD nepotvrdená, kód N18.x zatiaľ neurčený',
     ambulatoryMainDiagnosis('G3b', false, true),
     'Nepotvrdená chronicita'
 );
 testSame(
-    'kritériá CKD z uvedených údajov nesplnené – kód neurčený',
+    'kritériá CKD z uvedených údajov nesplnené, kód neurčený',
     ambulatoryMainDiagnosis('G2', true, false),
     'G2A1 bez iného markera poškodenia obličiek'
 );
@@ -180,7 +180,7 @@ $output = ambulatoryBuildPlainText([
     'egfr_note' => true,
 ]);
 testSame(true, str_starts_with($output, 'Hlavná diagnóza (MKCH-10): N18.3 CKD G3b'), 'Začiatok čistého textu');
-testSame(true, str_contains($output, "\n\nKDIGO 2024 – CGA\n"), 'Oddelená sekcia CGA');
+testSame(true, str_contains($output, "\n\nKDIGO 2024, klasifikácia CGA\n"), 'Oddelená sekcia CGA');
 testSame(true, str_contains($output, "\n\nPrognóza\nKFRE: "), 'Oddelená sekcia prognózy');
 testSame(true, str_contains($output, 'Pridružené diagnózy (MKCH-10): E11.2'), 'Riadok pridružených diagnóz');
 testSame(true, str_contains($output, 'Poznámka k eGFR:'), 'Povinná poznámka k eGFR');
@@ -191,7 +191,7 @@ $partialOutput = ambulatoryBuildPlainText([
     'g_category' => 'G3b (eGFR 38,5 ml/min/1,73 m²) – stredne až výrazne znížená filtrácia',
     'egfr_note' => true,
 ]);
-testSame(true, str_contains($partialOutput, "KDIGO 2024 – CGA\nKategória G:"), 'Čiastočný výstup má len kategóriu G');
+testSame(true, str_contains($partialOutput, "KDIGO 2024, klasifikácia CGA\nKategória G:"), 'Čiastočný výstup má len kategóriu G');
 testSame(false, str_contains($partialOutput, 'KFRE:'), 'Čiastočný výstup vynechá KFRE');
 testSame(false, str_contains($partialOutput, 'Pridružené diagnózy'), 'Čiastočný výstup vynechá prázdne diagnózy');
 testSame(false, str_contains($partialOutput, 'Hlavná diagnóza'), 'Čiastočný výstup bez kódu N18');
@@ -246,18 +246,18 @@ testSame(false, isset($egfrOnly['summary']['a_category']), 'Len eGFR nevyplní k
 testSame(false, isset($egfrOnly['summary']['kfre']), 'Len eGFR nespočíta KFRE');
 testSame(false, isset($egfrOnly['summary']['ckdpc']), 'Len eGFR nespočíta CKD-PC');
 testSame(true, isset($egfrOnly['summary']['ckm']), 'Potvrdená CKD G3b zaradí CKM');
-testSame(true, str_starts_with((string) ($egfrOnly['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G3b bez uACR je CKM 2');
+testSame(true, str_starts_with((string) ($egfrOnly['summary']['ckm'] ?? ''), '2 ('), 'Potvrdená G3b bez uACR je CKM 2');
 testSame(true, in_array('Orientačné riziko G+A: chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
 
 // G4 bez uACR: celý riadok G4 je v heatmape KDIGO veľmi vysoké riziko → CKM 3
 $egfrG4Only = ambulatoryComputeReport(ambulatoryTestInput([
     'egfr' => 22.0,
 ]));
-testSame(true, str_starts_with((string) ($egfrG4Only['summary']['ckm'] ?? ''), '3 –'), 'Potvrdená G4 bez uACR je CKM 3');
+testSame(true, str_starts_with((string) ($egfrG4Only['summary']['ckm'] ?? ''), '3 ('), 'Potvrdená G4 bez uACR je CKM 3');
 $egfrG4Edge = ambulatoryComputeReport(ambulatoryTestInput([
     'egfr' => 30.0,
 ]));
-testSame(true, str_starts_with((string) ($egfrG4Edge['summary']['ckm'] ?? ''), '2 –'), 'eGFR 30 (G3b) bez uACR ostáva CKM 2');
+testSame(true, str_starts_with((string) ($egfrG4Edge['summary']['ckm'] ?? ''), '2 ('), 'eGFR 30 (G3b) bez uACR ostáva CKM 2');
 testSame(true, in_array('eGFR slope: chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
 
 $kfreReady = ambulatoryComputeReport(ambulatoryTestInput([
@@ -290,28 +290,28 @@ $siBoundary = ambulatoryComputeReport(ambulatoryTestInput([
 ]));
 testSame(true, str_contains((string) ($siBoundary['summary']['a_category'] ?? ''), 'A2'), '3,2 mg/mmol vo výstupe je A2');
 testSame('N18.1 CKD G1', $siBoundary['summary']['main_diagnosis'] ?? null, '3,2 mg/mmol pri G1 spĺňa kritériá CKD');
-testSame(true, str_starts_with((string) ($siBoundary['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G1A2 je CKM 2');
+testSame(true, str_starts_with((string) ($siBoundary['summary']['ckm'] ?? ''), '2 ('), 'Potvrdená G1A2 je CKM 2');
 
 $uacrA3Only = ambulatoryComputeReport(ambulatoryTestInput([
     'uacr_value' => 500.0,
     'uacr_unit' => 'mg_g',
 ]));
-testSame(true, str_starts_with((string) ($uacrA3Only['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená A3 bez eGFR je CKM 2, nie 0');
+testSame(true, str_starts_with((string) ($uacrA3Only['summary']['ckm'] ?? ''), '2 ('), 'Potvrdená A3 bez eGFR je CKM 2, nie 0');
 testSame(true, str_contains((string) ($uacrA3Only['summary']['a_category'] ?? ''), 'A3'), 'A3-only vyplní kategóriu A');
-testSame(false, str_contains((string) ($uacrA3Only['summary']['ckm'] ?? ''), '0 –'), 'A3-only nesmie hlásiť CKM 0');
+testSame(false, str_contains((string) ($uacrA3Only['summary']['ckm'] ?? ''), '0 ('), 'A3-only nesmie hlásiť CKM 0');
 
 $uacrA2Only = ambulatoryComputeReport(ambulatoryTestInput([
     'uacr_value' => 50.0,
     'uacr_unit' => 'mg_g',
 ]));
-testSame(true, str_starts_with((string) ($uacrA2Only['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená A2 bez eGFR je CKM 2');
+testSame(true, str_starts_with((string) ($uacrA2Only['summary']['ckm'] ?? ''), '2 ('), 'Potvrdená A2 bez eGFR je CKM 2');
 
 $uacrA3Mmol = ambulatoryComputeReport(ambulatoryTestInput([
     'uacr_value' => 31.0,
     'uacr_unit' => 'mg_mmol',
 ]));
 testSame(true, str_contains((string) ($uacrA3Mmol['summary']['a_category'] ?? ''), 'A3'), '31 mg/mmol vo výstupe je A3');
-testSame(true, str_starts_with((string) ($uacrA3Mmol['summary']['ckm'] ?? ''), '2 –'), 'A3 v mg/mmol bez eGFR je CKM 2');
+testSame(true, str_starts_with((string) ($uacrA3Mmol['summary']['ckm'] ?? ''), '2 ('), 'A3 v mg/mmol bez eGFR je CKM 2');
 
 $uacrA1Only = ambulatoryComputeReport(ambulatoryTestInput([
     'uacr_value' => 10.0,
@@ -329,7 +329,7 @@ testSame(false, isset($unconfirmedA3['summary']['ckm']), 'Nepotvrdená A3 nezara
 $markerOnly = ambulatoryComputeReport(ambulatoryTestInput([
     'other_kidney_marker' => true,
 ]));
-testSame(true, str_starts_with((string) ($markerOnly['summary']['ckm'] ?? ''), '0 –'), 'Iný marker bez eGFR a bez A2/A3 nie je CKM 2');
+testSame(true, str_starts_with((string) ($markerOnly['summary']['ckm'] ?? ''), '0 ('), 'Iný marker bez eGFR a bez A2/A3 nie je CKM 2');
 
 $bmiOnly = ambulatoryComputeReport(ambulatoryTestInput([
     'bmi' => 29.4,
@@ -337,7 +337,7 @@ $bmiOnly = ambulatoryComputeReport(ambulatoryTestInput([
 ]));
 testSame(false, isset($bmiOnly['summary']['main_diagnosis']), 'Samotné BMI neurčí N18');
 testSame(false, isset($bmiOnly['summary']['chronicity']), 'Chronicita bez obličkových údajov sa do textu nedá');
-testSame(true, str_starts_with((string) ($bmiOnly['summary']['ckm'] ?? ''), '1 –'), 'BMI ≥25 zaradí CKM stage 1');
+testSame(true, str_starts_with((string) ($bmiOnly['summary']['ckm'] ?? ''), '1 ('), 'BMI ≥25 zaradí CKM stage 1');
 testSame(false, str_contains(ambulatoryBuildPlainText($bmiOnly['summary']), 'KDIGO'), 'BMI-only text nemá sekciu CGA');
 
 $kdigoHeatmap = [
@@ -391,5 +391,26 @@ if ($prevMethod === null) {
 } else {
     $_SERVER['REQUEST_METHOD'] = $prevMethod;
 }
+
+// Hlavná diagnóza bez eGFR, ak albuminúria A2/A3 spĺňa kritériá CKD.
+testSame('N18.9 CKD, kategória G neurčená (chýba eGFR)', $uacrA3Only['summary']['main_diagnosis'] ?? null, 'Potvrdená A3 bez eGFR je N18.9');
+testSame('CKD nepotvrdená, kód N18.x zatiaľ neurčený', $unconfirmedA3['summary']['main_diagnosis'] ?? null, 'Nepotvrdená A3 bez eGFR nemá kód');
+testSame(false, isset($uacrA1Only['summary']['main_diagnosis']), 'A1 bez eGFR nemá hlavnú diagnózu');
+
+// HbA1c: mmol/mol (IFCC) na % NGSP podľa hlavnej rovnice IFCC-NGSP.
+testApprox(7.0, ambulatoryHba1cToNgspPercent(53.0, 'mmol_mol'), 0.05, 'HbA1c 53 mmol/mol = 7,0 %');
+testApprox(6.5, ambulatoryHba1cToNgspPercent(48.0, 'mmol_mol'), 0.05, 'HbA1c 48 mmol/mol = 6,5 %');
+testSame(7.2, ambulatoryHba1cToNgspPercent(7.2, 'percent'), 'HbA1c v % bez prepočtu');
+
+// DOS výstup: CRLF, len CP852, max. 80 znakov na riadok.
+$dos = ambulatoryToDosText("KDIGO 2024, klasifikácia CGA\nKategória G: G3b (eGFR 38,5 ml/min/1,73 m²), ≥40 % pokles; E11.21† „test“ – ďalej\n" . str_repeat('dlhé slovo ', 12));
+testSame(false, (bool) preg_match("/(?<!\r)\n/", $dos), 'DOS text má len CRLF');
+testSame(true, str_contains($dos, 'ml/min/1,73 m2), >=40 % pokles; E11.21+ "test" -'), 'DOS náhrady symbolov');
+testSame(true, str_contains($dos, 'Kategória G'), 'Slovenská diakritika ostáva');
+foreach (explode("\r\n", $dos) as $dosLine) {
+    testSame(true, mb_strlen($dosLine, 'UTF-8') <= 80, 'DOS riadok do 80 znakov');
+}
+testSame(false, @iconv('UTF-8', 'CP852', $dos) === false, 'DOS text je zakódovateľný v CP852');
+testSame('a?b', ambulatoryToDosText("a\u{1F600}b"), 'Neznámy znak mimo CP852 je ?');
 
 echo 'Ambulantná kalkulačka: ' . $assertions . " kontrol prešlo.\n";

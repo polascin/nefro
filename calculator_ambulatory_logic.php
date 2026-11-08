@@ -160,11 +160,11 @@ function ambulatoryIcd10CodeForGCategory(string $gCategory): string
 function ambulatoryMainDiagnosis(string $gCategory, bool $chronicityConfirmed, bool $ckdCriteriaMet): string
 {
     if (!$chronicityConfirmed) {
-        return 'CKD nepotvrdená – kód N18.x zatiaľ neurčený';
+        return 'CKD nepotvrdená, kód N18.x zatiaľ neurčený';
     }
 
     if (!$ckdCriteriaMet) {
-        return 'kritériá CKD z uvedených údajov nesplnené – kód neurčený';
+        return 'kritériá CKD z uvedených údajov nesplnené, kód neurčený';
     }
 
     return ambulatoryIcd10CodeForGCategory($gCategory) . ' CKD ' . $gCategory;
@@ -218,6 +218,16 @@ function ambulatoryCalculateEgfrSlope(array $points): ?array
     ];
 }
 
+/**
+ * HbA1c na % NGSP/DCCT, v ktorých je odvodený model CKD-PC (Grams 2022).
+ * Slovenské laboratóriá bežne uvádzajú mmol/mol (IFCC); prevod podľa
+ * hlavnej rovnice IFCC-NGSP: NGSP % = 0,09148 × IFCC mmol/mol + 2,152.
+ */
+function ambulatoryHba1cToNgspPercent(float $value, string $unit): float
+{
+    return $unit === 'mmol_mol' ? 0.09148 * $value + 2.152 : $value;
+}
+
 function ambulatoryFormatNumber(float $value, int $decimals = 1): string
 {
     return number_format($value, $decimals, ',', ' ');
@@ -241,7 +251,7 @@ function ambulatoryACategoryDescription(string $aCategory): string
     return match ($aCategory) {
         'A1' => 'norma až mierne zvýšená albuminúria',
         'A2' => 'stredne zvýšená albuminúria',
-        'A3' => 'ťažko zvýšená albuminúria',
+        'A3' => 'výrazne zvýšená albuminúria',
         default => '',
     };
 }
@@ -355,7 +365,7 @@ function ambulatoryBuildPlainText(array $summary): string
         $cgaLines[] = 'Orientačné riziko G+A: ' . $gaRisk;
     }
     if ($cgaLines !== []) {
-        $blocks[] = implode("\n", array_merge(['KDIGO 2024 – CGA'], $cgaLines));
+        $blocks[] = implode("\n", array_merge(['KDIGO 2024, klasifikácia CGA'], $cgaLines));
     }
 
     $prognosisLines = [];
@@ -495,8 +505,13 @@ function ambulatoryComputeReport(array $input): array
         } elseif ($canRuleOutCkd) {
             $summary['main_diagnosis'] = ambulatoryMainDiagnosis($gCategory, true, false);
         } else {
-            $summary['main_diagnosis'] = 'kritériá CKD neúplné (chýba uACR alebo iný marker) – kód neurčený';
+            $summary['main_diagnosis'] = 'kritériá CKD neúplné (chýba uACR alebo iný marker), kód neurčený';
         }
+    } elseif ($gCategory === null && $chronicity !== null && $meetsCkdCriteria) {
+        // Albuminúria A2/A3 alebo iný marker bez eGFR: CKD je splnená, štádium G nie je známe.
+        $summary['main_diagnosis'] = $chronicityConfirmed
+            ? 'N18.9 CKD, kategória G neurčená (chýba eGFR)'
+            : ambulatoryMainDiagnosis('', false, true);
     }
 
     if ($cause !== '') {
@@ -508,7 +523,7 @@ function ambulatoryComputeReport(array $input): array
         $gDescription = ambulatoryGCategoryDescription($resolvedGCategory);
         $gLine = $resolvedGCategory . ' (eGFR ' . ambulatoryFormatNumber($egfr, 1) . ' ml/min/1,73 m²)';
         if ($gDescription !== '') {
-            $gLine .= ' – ' . $gDescription;
+            $gLine .= ', ' . $gDescription;
         }
         $summary['g_category'] = $gLine;
         $summary['egfr_note'] = true;
@@ -518,7 +533,7 @@ function ambulatoryComputeReport(array $input): array
         $aDescription = ambulatoryACategoryDescription($aCategory);
         $aLine = $aCategory . ' (uACR ' . ambulatoryFormatUacrDisplay($uacrValue, $uacrUnit, $uacrMgG) . ')';
         if ($aDescription !== '') {
-            $aLine .= ' – ' . $aDescription;
+            $aLine .= ', ' . $aDescription;
         }
         $summary['a_category'] = $aLine;
     }
@@ -526,7 +541,7 @@ function ambulatoryComputeReport(array $input): array
     if ($hasKidneyContext && $chronicity === 'unconfirmed') {
         $chronicityText = 'nepotvrdená';
         if ($input['repeat_date'] instanceof \DateTimeImmutable) {
-            $chronicityText .= ' – opakovať eGFR/uACR dňa ' .
+            $chronicityText .= ', opakovať eGFR/uACR dňa ' .
                 $input['repeat_date']->format('d.m.Y') . ' (pri podozrení na AKI skôr)';
         }
         $summary['chronicity'] = $chronicityText;
@@ -611,7 +626,7 @@ function ambulatoryComputeReport(array $input): array
             $summary['ckdpc'] = '3-ročné ' . ambulatoryFormatNumber($ckdpc['risk_3yr']) .
                 ' % (≥40 % pokles eGFR alebo zlyhanie obličiek)';
         } else {
-            $summary['ckdpc'] = 'nevypočítané (vek mimo 20–80 rokov)';
+            $summary['ckdpc'] = 'nevypočítané (vek mimo 20 až 80 rokov)';
         }
     } elseif (count(array_filter($ckdpcPresent)) >= 2) {
         $skipped[] = 'CKD-PC: chýba ' . ambulatoryJoinSlovakList(ambulatoryMissingLabels($ckdpcPresent));
@@ -659,7 +674,7 @@ function ambulatoryComputeReport(array $input): array
             $clinicalCvd,
             $kidneyFailure,
         );
-        $summary['ckm'] = $ckmStage['code'] . ' – ' . ckmStageLabel($ckmStage['code']);
+        $summary['ckm'] = $ckmStage['code'] . ' (' . ckmStageLabel($ckmStage['code']) . ')';
     }
 
     $slopeResult = ambulatoryCalculateEgfrSlope($input['slope_points']);
@@ -682,4 +697,65 @@ function ambulatoryComputeReport(array $input): array
         'summary' => $summary,
         'skipped' => array_values(array_unique($skipped)),
     ];
+}
+
+/**
+ * Prevedie text do podoby pre MS-DOS / staršie ambulantné systémy (Nefris):
+ * len znaky kódovej stránky CP852 (slovenská diakritika zostáva), typografické
+ * znaky na ASCII ekvivalenty, riadky najviac $width znakov a konce riadkov CRLF.
+ */
+function ambulatoryToDosText(string $text, int $width = 80): string
+{
+    static $map = [
+        "\u{00A0}" => ' ', "\u{202F}" => ' ', "\u{2009}" => ' ', "\u{00AD}" => '',
+        "\u{2013}" => '-', "\u{2014}" => '-', "\u{2212}" => '-', "\u{2010}" => '-', "\u{2011}" => '-',
+        "\u{2265}" => '>=', "\u{2264}" => '<=', "\u{2260}" => '<>', "\u{00B1}" => '+/-',
+        "\u{00B2}" => '2', "\u{00B3}" => '3', "\u{00B5}" => 'u', "\u{2030}" => ' promile',
+        "\u{2020}" => '+', "\u{2021}" => '++', "\u{2026}" => '...', "\u{2022}" => '*',
+        "\u{201E}" => '"', "\u{201C}" => '"', "\u{201D}" => '"', "\u{201A}" => "'",
+        "\u{2018}" => "'", "\u{2019}" => "'", "\u{00AB}" => '"', "\u{00BB}" => '"',
+        "\u{2192}" => '->', "\u{2190}" => '<-', "\u{00D7}" => 'x', "\u{00B7}" => '.',
+    ];
+    // Písmená kódovej stránky CP852 mimo ASCII (bez rámčekov a riadiacich znakov).
+    static $cp852Letters = 'ÇüéâäůćçłëŐőîŹÄĆÉĹĺôöĽľŚśÖÜŤťŁčáíóúĄąŽžĘęźČşÁÂĚŞŻżĂăđĐĎËďŇÍÎěŢŮÓßÔŃńňŠšŔÚŕŰýÝţűŘř§°';
+
+    $text = strtr(str_replace(["\r\n", "\r"], "\n", $text), $map);
+    if (class_exists(\Normalizer::class)) {
+        $text = (string) \Normalizer::normalize($text, \Normalizer::FORM_C);
+    }
+
+    $clean = '';
+    foreach (mb_str_split($text, 1, 'UTF-8') as $char) {
+        $code = mb_ord($char, 'UTF-8');
+        if ($char === "\n" || ($code >= 32 && $code < 127)) {
+            $clean .= $char;
+        } elseif ($char === "\t") {
+            $clean .= ' ';
+        } elseif (mb_strpos($cp852Letters, $char, 0, 'UTF-8') !== false) {
+            $clean .= $char;
+        } else {
+            $base = class_exists(\Normalizer::class)
+                ? preg_replace('/\p{Mn}+/u', '', (string) \Normalizer::normalize($char, \Normalizer::FORM_D))
+                : '';
+            $clean .= (is_string($base) && $base !== '' && preg_match('/^[\x20-\x7E]+$/', $base) === 1)
+                ? $base
+                : '?';
+        }
+    }
+
+    $lines = [];
+    foreach (explode("\n", $clean) as $line) {
+        $line = rtrim($line);
+        while (mb_strlen($line, 'UTF-8') > $width) {
+            $cut = mb_strrpos(mb_substr($line, 0, $width + 1, 'UTF-8'), ' ', 0, 'UTF-8');
+            if ($cut === false || $cut < (int) ($width / 3)) {
+                $cut = $width;
+            }
+            $lines[] = rtrim(mb_substr($line, 0, $cut, 'UTF-8'));
+            $line = '  ' . ltrim(mb_substr($line, $cut, null, 'UTF-8'));
+        }
+        $lines[] = $line;
+    }
+
+    return implode("\r\n", $lines);
 }

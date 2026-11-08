@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-08 16:45',
+                'category' => 'calculators',
+                'title' => 'Ambulantná kalkulačka: text vo formáte MS-DOS a HbA1c v mmol/mol',
+                'description' => 'Text do lekárskej správy má konce riadkov CRLF, len znaky kódovej stránky CP852 so slovenskou diakritikou a riadky najviac 80 znakov, takže sa do Nefrisu a starších systémov vloží bez rozsypaných znakov. HbA1c možno zadať v mmol/mol (IFCC), pre CKD-PC sa prepočíta na % NGSP. Pri potvrdenej albuminúrii bez eGFR kalkulačka uvedie kód N18.9. Formuláre všetkých kalkulačiek majú prehľadnejšie členenie do sekcií.',
+                'url' => 'calculator_ambulatory.php',
+            ],
+            [
                 'date' => '2026-11-07 07:05',
                 'category' => 'portal',
                 'title' => 'Prístupnosť: jeden hlavný nadpis na stránke',

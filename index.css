@@ -8357,3 +8357,145 @@ mark.search-hl {
 .pub-hero__lang-note p:last-child {
     margin-bottom: 0;
 }
+
+/* ==========================================================================
+   KALKULAČKY: zjednotený vzhľad formulárov (2026-11-08)
+   Rozsah: stránky s právnym upozornením kalkulačiek (.calc-disclaimer).
+   Sekcie ako ohraničené karty, prehľadnejšie zaškrtávacie polia,
+   tabulárne číslice a výstup do správy v 80-stĺpcovom DOS formáte.
+   ========================================================================== */
+.content-wrapper:has(.calc-disclaimer) .form-section:not(.calculator-result-block) {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-wrapper:has(.calc-disclaimer) .form-section:not(.calculator-result-block):focus-within {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.content-wrapper:has(.calc-disclaimer) .form-section > h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.content-wrapper:has(.calc-disclaimer) .form-section > h3::before {
+  content: "";
+  flex: 0 0 4px;
+  align-self: stretch;
+  min-height: 1.1em;
+  border-radius: 2px;
+  background: var(--primary-gradient);
+}
+
+.content-wrapper:has(.calc-disclaimer) .form-control,
+.content-wrapper:has(.calc-disclaimer) .risk-value,
+.content-wrapper:has(.calc-disclaimer) .calculator-result-block td {
+  font-variant-numeric: tabular-nums;
+}
+
+.content-wrapper:has(.calc-disclaimer) .form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.content-wrapper:has(.calc-disclaimer) .helper-text,
+.content-wrapper:has(.calc-disclaimer) .form-group small {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.calc-fieldset {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.calc-fieldset > legend {
+  padding: 0 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.ambulatory-check-grid .form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  line-height: 1.35;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.ambulatory-check-grid .form-check:hover {
+  border-color: var(--primary-light);
+}
+
+.ambulatory-check-grid .form-check:has(input:checked) {
+  border-color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.ambulatory-check-grid .form-check input[type="checkbox"] {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+/* Dlhý ambulantný formulár: tlačidlo odoslania ostáva na dosah. */
+#ambulatory-calculator-form > .form-actions {
+  position: sticky;
+  bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 5;
+  margin: 1rem -0.5rem 0;
+  padding: 0.75rem 0.5rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--white);
+}
+
+/* Výstup do správy: presne 80 stĺpcov ako v DOS, bez zalamovania prehliadačom. */
+.ambulatory-output {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  font-family: "Cascadia Mono", Consolas, "Courier New", Courier, monospace;
+  tab-size: 8;
+}
+
+.ambulatory-format-note {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .content-wrapper:has(.calc-disclaimer) .form-section:not(.calculator-result-block) {
+    padding: 1rem 0.85rem 0.25rem;
+  }
+
+  .content-wrapper:has(.calc-disclaimer) .form-actions > * {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
+@media print {
+  #ambulatory-calculator-form > .form-actions {
+    position: static;
+  }
+}
