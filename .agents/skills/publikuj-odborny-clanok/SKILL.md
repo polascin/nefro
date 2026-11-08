@@ -24,7 +24,8 @@ Zavedený postup pre `category = 'odborne'`. Pre články v sekcii „Pre pacien
 7. **Sociálne siete len na výslovnú žiadosť v tej istej úlohe:** SK + EN zhrnutie,
    iná ilustrácia bez textu, kópia na Google Disk
    (`G:\Môj disk\polascin.net obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
-   Threads. Ak MCP konektor chýba, povedz to rovno a nepredstieraj zverejnenie.
+   Threads. Ak MCP chýba: balík + voliteľne browser text+link (over na profile);
+   médium cez Computer Use; nikdy nepredstieraj zverejnenie (detaily v sekcii 8).
 
 ---
 
@@ -58,9 +59,21 @@ Poradie nástrojov, ktoré funguje:
 | `api.openalex.org/works/doi:<DOI>` | Abstrakt aj pri closed-access prácach (`abstract_inverted_index`). |
 | `WebFetch` na CDC/KDIGO/FDA accessdata | Primárne odporúčania a znenie SPC/labelu. |
 
-`WebFetch` na `pubmed.ncbi.nlm.nih.gov` padá na reCAPTCHA. Medscape vracia 402 →
-použi `curl -s -L` + strip HTML (prejde, vrátane bylinu a disclosures).
-Na Windows nastav `export PYTHONIOENCODING=utf-8`.
+`WebFetch` na `pubmed.ncbi.nlm.nih.gov` padá na reCAPTCHA. Medscape (`medscape.org`)
+je od 3. 11. 2026 za výzvou Cloudflare: `curl` vracia 403/429. Byline a disclosures
+prečítaš cez Tavily `tavily_extract` s `extract_depth: advanced` (sekcia „CME Author");
+pri `medscape.com` skús najprv `curl -s -L` + strip HTML. Plné znenie CME programu býva
+uzamknuté: tému preber, všetky tvrdenia over v primárnych zdrojoch a v Poznámke
+k dôkazom to priznaj.
+
+**Odporúčania KDIGO doslovne:** `WebFetch` na PDF usmernenia (napr.
+`kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf`) uloží binárny
+súbor do `tool-results`; text z neho dostaneš cez `pdftotext -enc UTF-8` (Git Bash,
+`/ucrt64/bin`). Symbol `‡` vo výstupe znamená `≥`. Odporúčania a praktické body potom
+nájdeš regexom `Recommendation 3\.7\.[0-9]` a podobne.
+
+Na Windows nastav `export PYTHONIOENCODING=utf-8`; `python -I` túto premennú ignoruje,
+preto v skripte volaj `sys.stdout.reconfigure(encoding='utf-8')`.
 
 ### Typické chyby v predlohách — cielene ich hľadaj
 
@@ -109,13 +122,6 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
    16:10. Výstup môže mať iný rozmer: orež na presný pomer 1,6 a zmeň na 1600 × 1000
    (PIL, `LANCZOS`), potom pokračuj krokom 5. Nástroj, ktorým obrázok vznikol, v článku
    ani v poznámke neuvádzaj.
-   **Ak ani Canva MCP, ani `experimental_image_generate` v session nie sú, ale je pripojený
-   konektor Figma** (overené 5. 11. 2026): `whoami` → `planKey` → `create_new_file` (editorType
-   `design`) → `create_session` (sessionId) → `generate_image` (fileKey, sessionId, width 1600,
-   height 1000, rovnaký vizuálny jazyk + „no text, no letters, no words, no logos, no watermark,
-   no faces“). Výstup stiahni cez `curl` z `image.url` (URL exspiruje) a orež na pomer 1,6 na
-   1600 × 1000 — na Windows v PHP/GD použi cestu `D:/...`, nie `/d/...` (PHP `/d/...` nepozná).
-   Potom pokračuj krokom 5 (watermark + WebP).
 2. Canva design **`DAHWYJ0SGc0`**, strana s rozmermi **1600×1000** (napr. page_index 3,
    `PBSj9SXGdtl93QnB`). Postup:
    - `read-design` s `open_transaction: true` → vráti `transaction_id` a `locator_id`
@@ -162,7 +168,8 @@ súbor môže vyjsť v LF; pred commitom ho na CRLF preveď a over `php -l`.
 
 ### Povinná typografia a prístupnosť
 
-- Slovenské úvodzovky `„…"`, pomlčka `–`, `≥`/`≤` namiesto `>=`/`<=`, jednotky `µg`/`mg/dl`.
+- Slovenské úvodzovky `„…"`, `≥`/`≤` namiesto `>=`/`<=`, jednotky `µg`/`mg/dl`.
+- **Žiadne en dash ani em dash** (globálne pravidlo používateľa): v texte čiarka, dvojbodka alebo nová veta; rozsahy „3 až 7 dní“, „95 % IS 0,84 až 1,27“; strany v literatúre so spojovníkom (`481-490`).
 - **Žiadny inline `style="…"`** — CSP `style-src 'self'` ho ticho zahodí; používaj triedy z `index.css`.
 - Externé odkazy `target="_blank" rel="noopener noreferrer"`.
 - Každá `<table>` obalená v
@@ -193,8 +200,12 @@ php -l add_<slug>_article.php
 php tools/phpstan.phar analyse add_<slug>_article.php --no-progress
 ```
 
+V git worktree (`.claude/worktrees/…`) PHAR nie je, lebo nie je v gite; spusti
+`php D:/Dev/nefro/tools/phpstan.phar analyse …` z koreňa worktree (konfigurácia
+`phpstan.neon.dist` sa načíta z worktree).
+
 PHPStan už pre nové články baseline **nevyžaduje** (šablóna sa zmenila). Baseline
-negeneruj automaticky — pridaj ho len ak analýza skutočne niečo nahlási.
+negeneruj automaticky, pridaj ho len ak analýza skutočne niečo nahlási.
 
 Rýchla kontrola obsahu:
 
@@ -214,8 +225,19 @@ git add add_<slug>_article.php img/<slug>.png img/<slug>.webp tools/.watermark-m
 git commit -m "content(odborne): <názov článku bez diakritiky>"
 ```
 
-Post-commit hook pushne a nasadí cez SFTP. Ak článok mení **databázovú schému**,
+Post-commit hook na `main` pushne a nasadí cez SFTP. Ak článok mení **databázovú schému**,
 commitni migráciu **zvlášť a PRED** kódom.
+
+**Práca z worktree (vetva `claude/…`):** commit na vetve sa len zálohuje (`[post-commit]
+… produkcia sa nasadzuje iba z main`). Nasadenie spustí až zlúčenie v hlavnom checkoute:
+
+```bash
+git -C D:/Dev/nefro status --short          # musí byť prázdne (súbežné agenty!)
+git -C D:/Dev/nefro merge --ff-only <vetva> # post-merge -> local_gate -> SFTP -> zálohy
+```
+
+Spúšťaj ho na pozadí, trvá viac minút. Deploy **nové** `add_*_article.php` zámerne
+nespúšťa (len upravené); UPSERT nového článku urob ručne podľa kroku 6.
 
 `git commit` vrátane hooku beží bežne dlhšie než 2 minúty a Bash ho utne. **Neopakuj ho** —
 over skutočný stav: `git log --oneline -1`, `git log --oneline -1 origin/main` a
@@ -316,24 +338,34 @@ Keď požiada, platia tieto body:
    `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia). **Ak konektor v session nie je**,
    ulož ich priamo do koreňa `G:\Môj disk` ako `.docx` s tým istým názvom; súbor sa
    zosynchronizuje rovnako, len nebude natívnym Dokumentom Google. Priečinok s obrázkami
-   sa volá `polascin.net obálky blogu` (medzery; overené cez konektor 5. 11. 2026 —
-   id `1a_g8vTcMH3hIA2rECaV0aRVoPp3xfwFC`, vlastník polascin@gmail.com).
+   sa volá presne `polascin.net obálky blogu` (bez pomlčky, jedna medzera; Drive id
+   `1a_g8vTcMH3hIA2rECaV0aRVoPp3xfwFC`, overené konektorom aj lokálne 3. a 8. 11. 2026;
+   staršia verzia skillu uvádzala en dash chybne).
+   Dokument s textami vytvoríš cez `create_file` s `parentId: 0AJovQ1J8xonsUk9PVA`,
+   `contentMimeType: text/plain` a `textContent`; konektor ho prevedie na Dokument Google.
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené 1. 11. 2026 a znova 5. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je
-   pripojený žiadny MCP konektor** (5. 11. 2026 boli pripojené PubMed, Google Drive, Gmail,
-   Figma, Tavily, web_search, Slack, Teams, Notion, Box, SharePoint, Stripe, GitHub, Outlook —
-   žiadna sociálna sieť; zoznam sa medzi session mení, vždy over). Agent teda **nedokáže príspevok zverejniť
-   cez MCP**. V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku
-   na Disku a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
-   Prehliadačová automatizácia nie je náhradou za chýbajúci konektor, pokiaľ používateľ
-   výslovne nepožiada o iný postup.
-   **1. 11. 2026 session nemala pripojený ani jeden MCP server** (`list_mcp_resources`
-   vrátil prázdny zoznam), takže nedostupné boli aj Gmail, Disk a Canva. Pred odkazom
-   na konektor vždy over `list_mcp_resources`; zoznam dostupných serverov sa medzi
-   session mení. Browser v takej session nemá prihlásené relácie, preto ním príspevok
-   nezverejňuj a prihlasovacie údaje nikdy nezadávaj.
+   ⚠️ **Overené opakovane 1., 3. a 8. 11. 2026:** pre X, Facebook, LinkedIn ani
+   Threads nie je pripojený žiadny MCP konektor. Pred odkazom na konektor vždy over
+   namespace (`GetDynamicTools`); zoznam sa medzi session mení.
+
+   **Keď používateľ social výslovne vyžiadal a MCP chýba:**
+   1. Vždy priprav balík (SK+EN + X≤280, ilustrácie 16:10 na Disku
+      `G:\Môj disk\polascin.net obálky blogu\`, texty ako Google Doc alebo
+      lokálny `.md`/`.docx` v koreňi Disku / `scratch/`).
+   2. Ak je v IDE prehliadači aktívna prihlásená session danej siete, môžeš
+      skúsiť **text + odkaz** (bez hesla; heslá nikdy nezadávaj). Po kliknutí
+      „Uverejniť“ **over na profile**, či príspevok naozaj je; neúspešný pokus
+      nevydávaj za zverejnenie.
+   3. **Médiá (obrázok):** `DOM.setFileInputFiles` cez CDP je zakázané. Príloha
+      vyžaduje Computer Use (OS dialóg). Sidecar Computer Use môže byť
+      nedostupný (`sidecar_unavailable`) — vtedy text+odkaz alebo STOP s balíkom.
+   4. Ak session nie je prihlásená / pokus zlyhá: povedz rovno, odovzdaj balík,
+      nepredstieraj zverejnenie.
+
+   PowerShell: `sh` nie je na PATH; použi
+   `& 'C:\Program Files\Git\bin\sh.exe'` (deploy/PDF sync).
 5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
    Čo sa nepodarilo, povedz menovite.
 
