@@ -23,7 +23,7 @@ Zavedený postup pre `category = 'odborne'`. Pre články v sekcii „Pre pacien
    (nie `nefro.sk`) + `DEPLOY_COMMIT` vs. `git rev-parse --short HEAD`.
 7. **Sociálne siete len na výslovnú žiadosť v tej istej úlohe:** SK + EN zhrnutie,
    iná ilustrácia bez textu, kópia na Google Disk
-   (`G:\Môj disk\polascin.net – obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
+   (`G:\Môj disk\polascin.net obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
    Threads. Ak MCP chýba: balík + voliteľne browser text+link (over na profile);
    médium cez Computer Use; nikdy nepredstieraj zverejnenie (detaily v sekcii 8).
 
@@ -156,7 +156,8 @@ súbor môže vyjsť v LF; pred commitom ho na CRLF preveď a over `php -l`.
 
 ### Povinná typografia a prístupnosť
 
-- Slovenské úvodzovky `„…"`, pomlčka `–`, `≥`/`≤` namiesto `>=`/`<=`, jednotky `µg`/`mg/dl`.
+- Slovenské úvodzovky `„…"`, `≥`/`≤` namiesto `>=`/`<=`, jednotky `µg`/`mg/dl`.
+- **Žiadne en dash ani em dash** (globálne pravidlo používateľa): v texte čiarka, dvojbodka alebo nová veta; rozsahy „3 až 7 dní“, „95 % IS 0,84 až 1,27“; strany v literatúre so spojovníkom (`481-490`).
 - **Žiadny inline `style="…"`** — CSP `style-src 'self'` ho ticho zahodí; používaj triedy z `index.css`.
 - Externé odkazy `target="_blank" rel="noopener noreferrer"`.
 - Každá `<table>` obalená v
@@ -299,7 +300,7 @@ Keď požiada, platia tieto body:
    priamo do lokálnej synchronizovanej zložky**:
 
    ```
-   G:\Môj disk\polascin.net – obálky blogu\<RRRR-MM-DD>-<slug>.png
+   G:\Môj disk\polascin.net obálky blogu\<RRRR-MM-DD>-<slug>.png
    ```
 
    `G:\Môj disk` je koreň Disku účtu polascin@gmail.com (overené cez konektor,
@@ -310,17 +311,17 @@ Keď požiada, platia tieto body:
    `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia). **Ak konektor v session nie je**,
    ulož ich priamo do koreňa `G:\Môj disk` ako `.docx` s tým istým názvom; súbor sa
    zosynchronizuje rovnako, len nebude natívnym Dokumentom Google. Priečinok s obrázkami
-   sa volá presne `polascin.net – obálky blogu` (pomlčka je en dash, nie spojovník).
+   sa volá presne `polascin.net obálky blogu` (bez pomlčky; overené 2026-11-08 cez `os.listdir`, staršia verzia skillu uvádzala en dash chybne).
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené opakovane 1. a 3. 11. 2026 (RSI):** pre X, Facebook, LinkedIn ani
+   ⚠️ **Overené opakovane 1., 3. a 8. 11. 2026:** pre X, Facebook, LinkedIn ani
    Threads nie je pripojený žiadny MCP konektor. Pred odkazom na konektor vždy over
    namespace (`GetDynamicTools`); zoznam sa medzi session mení.
 
    **Keď používateľ social výslovne vyžiadal a MCP chýba:**
    1. Vždy priprav balík (SK+EN + X≤280, ilustrácie 16:10 na Disku
-      `G:\Môj disk\polascin.net – obálky blogu\`, texty ako Google Doc alebo
+      `G:\Môj disk\polascin.net obálky blogu\`, texty ako Google Doc alebo
       lokálny `.md`/`.docx` v koreňi Disku / `scratch/`).
    2. Ak je v IDE prehliadači aktívna prihlásená session danej siete, môžeš
       skúsiť **text + odkaz** (bez hesla; heslá nikdy nezadávaj). Po kliknutí
