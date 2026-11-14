@@ -230,6 +230,7 @@ function getSourceArticleAuthors(): array {
         // 21 mien overených cez PubMed eutils, PMC a Crossref 2026-09-03; klinický rámec
         // článku sa oň opiera. Autori pacientskych stránok Cleveland Clinic sa neuvádzajú.
         'lipedem-multidisciplinarny-manazment-chirurgia' => ['Astrid Rivera', 'Karen L Herbst', 'Linda Anne Kahn', 'Emily Iker', 'Chuck Ehrlich', 'Thomas Wright', 'Lindy McHutchison', 'Jaime Schwartz', 'Molly Sleigh', 'Paula MC Donahue', 'Kathleen H Lisson', 'Tami Faris', 'Janis Miller', 'Erik Lontok', 'Michael S Schwartz', 'Steven M Dean', 'John R Bartholomew', 'Polly Armour', 'Margarita Correa-Perez', 'Nicholas Pennings', 'Edely L Wallace', 'Ethan Larson'],
+        'lipoprotein-a-ckd-nla-2026' => ['Marlys Koschinsky', 'Christie Ballantyne'],
         'lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost' => ['Rajdeep Dhami'],
         // Autor spracovaného komentára Medscape „Lithium: 7 Myths That May Be Keeping It Underused“
         // (28. 8. 2026); byline Nassir Ghaemi overený vo verejnej tiráži 2026-09-03.
