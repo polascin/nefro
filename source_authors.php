@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'pots-po-covide-a-ckd' => ['Laurie Tarkan'],
         'hs-crp-riziko-ckd' => ['Faizan Mazhar', 'Minjung Han', 'Katherine R Tuttle', 'Aurora Caldinelli', 'Magnus Fugger', 'Sofia Gerward', 'Jimmi Mathisen', 'Brendon L Neuen', 'Marie Evans', 'Juan-Jesus Carrero'],
         'sglt2-starsi-pacienti-ckd' => ['Nancy A. Melville'],
         'buducnost-dialyzy' => ['Ute Eppinger'],
