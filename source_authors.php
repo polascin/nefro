@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'epimer-vitaminu-d-tuhost-tepien-ckd' => ['Monique O Campos', 'Chien-Yao Sun', 'Heather N Burney', 'Yang Li', 'Gayatri Narayanan', 'Olivia Carlton', 'Tzong-Shi Lu', 'Glenville Jones', 'Martin Kaufmann', 'Stephen M S Ting', 'Daniel Zehnder', 'Thomas Hiemstra', 'Kenneth Lim'],
         'adpkd-kreatinin-cystatin-c-pokles-filtracie' => ['Gopala Rangan'],
         'styri-piliere-diabetes-ckd-g4-g5' => ['Masayuki Yamanouchi', 'Naoki Sawa', 'Kengo Furuichi', 'Takashi Wada'],
         'molekularna-hla-nezhoda-eplety-transplantacia-oblicky' => ['Suzanne Bezstarosti', 'Aleksandar Senev', 'Anna B Morris', 'Sebastiaan Heidt'],
