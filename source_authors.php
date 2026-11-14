@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'diabetes-2-typu-ckd-regards' => ['Xingsheng Li', 'Javier A Jurado Vélez', 'Nita Kanney', 'Archie Landrum', 'Lloyd J Edwards', 'Orlando M Gutierrez', 'D Leann Long', 'Bertha Hidalgo'],
         'nespavost-denna-spavost-ckd-rein' => ['Bénédicte Stengel', 'Emilie Moutard', 'Marie Metzger', 'Isabelle Jaussent', 'Aghilès Hamroun', 'Solène M Laville', 'Abdou Omorou', 'Denis Fouque', 'Ziad A Massy', 'Roberto Pecoits-Filho', 'Luc Frimat', 'Natalia Alencar de Pinho', 'Sophie Liabeuf'],
         'epimer-vitaminu-d-tuhost-tepien-ckd' => ['Monique O Campos', 'Chien-Yao Sun', 'Heather N Burney', 'Yang Li', 'Gayatri Narayanan', 'Olivia Carlton', 'Tzong-Shi Lu', 'Glenville Jones', 'Martin Kaufmann', 'Stephen M S Ting', 'Daniel Zehnder', 'Thomas Hiemstra', 'Kenneth Lim'],
         'adpkd-kreatinin-cystatin-c-pokles-filtracie' => ['Gopala Rangan'],
