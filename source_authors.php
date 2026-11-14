@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'sglt2-starsi-pacienti-ckd' => ['Nancy A. Melville'],
         'buducnost-dialyzy' => ['Ute Eppinger'],
         'diabetes-2-typu-ckd-regards' => ['Xingsheng Li', 'Javier A Jurado Vélez', 'Nita Kanney', 'Archie Landrum', 'Lloyd J Edwards', 'Orlando M Gutierrez', 'D Leann Long', 'Bertha Hidalgo'],
         'nespavost-denna-spavost-ckd-rein' => ['Bénédicte Stengel', 'Emilie Moutard', 'Marie Metzger', 'Isabelle Jaussent', 'Aghilès Hamroun', 'Solène M Laville', 'Abdou Omorou', 'Denis Fouque', 'Ziad A Massy', 'Roberto Pecoits-Filho', 'Luc Frimat', 'Natalia Alencar de Pinho', 'Sophie Liabeuf'],
