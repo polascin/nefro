@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'V štúdii DAPARHT bol vývoj eGFR od druhého týždňa priaznivejší pri dapagliflozíne. Čo znamená tento rozdiel pre príjemcov srdca?',
     'content'      => <<<'HTML'
+<figure><a href="img/dapagliflozin-po-transplantacii-srdca-daparht.webp" target="_blank" rel="noopener noreferrer"><img src="img/dapagliflozin-po-transplantacii-srdca-daparht.webp" alt="Transplantované srdce a obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Transplantované srdce a obličky. Ilustračný obrázok.</figcaption></figure>
 <p>V randomizovanej štúdii DAPARHT sa u dospelých po transplantácii srdca od druhého týždňa do dvanásteho mesiaca vyvíjala odhadovaná glomerulová filtrácia (eGFR) priaznivejšie pri dapagliflozíne ako pri placebe. Rozdiel v zmene eGFR za toto obdobie bol 1,7 ml/min/1,73 m². Štúdia hodnotila náhradný ukazovateľ a nepreukázala, že dapagliflozín znižuje riziko zlyhania obličiek alebo potreby dialýzy. [1]</p>
 
 <h2>Koho štúdia sledovala</h2>
@@ -35,7 +36,7 @@ $articles[] = [
 
 <h2>Bezpečnosť a prenos výsledku do praxe</h2>
 
-<p>Podľa publikovaného abstraktu autori nezaznamenali neočakávané bezpečnostné signály a frekvencia nežiaducich udalostí vrátane infekcií bola podobná. Pri 430 randomizovaných účastníkoch a 12 mesiacoch zaslepenej liečby zostáva istota o zriedkavých a neskorých nežiaducich účinkoch obmedzená. Tento text vychádza z abstraktu s výsledkami, publikovaného dizajnu a registrácie štúdie. Úplné bezpečnostné tabuľky a výsledok za obdobie od začiatku liečby do 12. mesiaca sa nepodarilo overiť. [1, 2]</p>
+<p>Podľa publikovaného abstraktu autori nezaznamenali neočakávané bezpečnostné zistenia a frekvencia nežiaducich udalostí vrátane infekcií bola podobná. Pri 430 randomizovaných účastníkoch a 12 mesiacoch zaslepenej liečby zostáva istota o zriedkavých a neskorých nežiaducich účinkoch obmedzená. Tento text vychádza z abstraktu s výsledkami, publikovaného dizajnu a registrácie štúdie. Úplné bezpečnostné tabuľky a výsledok za obdobie od začiatku liečby do 12. mesiaca sa nepodarilo overiť. [1, 2]</p>
 
 <p>Pri poklese eGFR po transplantácii srdca môže byť expozícia inhibítorom kalcineurínu jedným z viacerých faktorov. DAPARHT podporuje možnosť priaznivého účinku dapagliflozínu na neskorší priebeh eGFR u vybraných príjemcov srdca. O tom, či sa účinok prenáša aj na príjemcov obličky, táto štúdia neposkytuje priamy dôkaz. Rovnako neobjasňuje pomer prínosu a rizika v prvom roku po transplantácii srdca ani pri východiskovej eGFR pod 25 ml/min/1,73 m². [1, 2]</p>
 

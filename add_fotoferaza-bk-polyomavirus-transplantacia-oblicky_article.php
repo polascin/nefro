@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Francúzsky register opísal pokles BKPyV DNAémie po fotoferéze. Čo ukazujú počty pacientov a akú úlohu mohla mať úprava imunosupresie?',
     'content'      => <<<'HTML'
+<figure><a href="img/fotoferaza-bk-polyomavirus-transplantacia-oblicky.webp" target="_blank" rel="noopener noreferrer"><img src="img/fotoferaza-bk-polyomavirus-transplantacia-oblicky.webp" alt="Extrakorporálna fotoferéza po transplantácii obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Extrakorporálna fotoferéza po transplantácii obličky. Ilustračný obrázok.</figcaption></figure>
 <p>Francúzsky multicentrický register opísal vývoj BK polyomavírusovej (BKPyV) DNAémie u 50 príjemcov obličky liečených extrakorporálnou fotoferézou (ECP). U mnohých pacientov s dostupnými kontrolnými odbermi DNAémia klesla pod hranicu detekcie. Súčasne sa znižovala imunosupresia a chýbala kontrolná skupina, takže samostatný prínos fotoferézy zostáva neznámy. [1]</p>
 
 <h2>Koho liečili fotoferézou</h2>

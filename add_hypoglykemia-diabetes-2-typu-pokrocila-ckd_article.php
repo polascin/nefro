@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Kedy pri pokročilej CKD doplniť HbA1c meraním glukózy a ako podľa zistených hypoglykémií upraviť liečbu diabetu 2. typu.',
     'content'      => <<<'HTML'
+<figure><a href="img/hypoglykemia-diabetes-2-typu-pokrocila-ckd.webp" target="_blank" rel="noopener noreferrer"><img src="img/hypoglykemia-diabetes-2-typu-pokrocila-ckd.webp" alt="Nízka hladina glukózy pri pokročilom ochorení obličiek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Nízka hladina glukózy pri pokročilom ochorení obličiek. Ilustračný obrázok.</figcaption></figure>
 <p>Konsenzus ADA a EASD z roku 2026, ktorý v októbri spracoval Medscape, odporúča pri diabete 2. typu a krehkosti prehodnotiť lieky s rizikom hypoglykémie, najmä deriváty sulfonylmočoviny. Pri pokročilej chronickej chorobe obličiek (CKD) má táto revízia osobitný význam. HbA1c môže byť skreslený a ani pri presnom meraní neukáže, kedy a ako často glykémia klesá. [1, 2]</p>
 
 <h2>Kedy HbA1c nestačí</h2>

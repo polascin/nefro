@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'V malej dvojcentrovej kohorte pri inhibícii SGLT2 stúpla diuréza. Čo ukázali merania klírensu a čo z výsledku vyplýva pre predpis dialýzy?',
     'content'      => <<<'HTML'
+<figure><a href="img/sglt2-diureza-inkrementalna-hemodialyza.webp" target="_blank" rel="noopener noreferrer"><img src="img/sglt2-diureza-inkrementalna-hemodialyza.webp" alt="Zvyšková funkcia obličiek pri hemodialýze" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Zvyšková funkcia obličiek pri hemodialýze. Ilustračný obrázok.</figcaption></figure>
 <p>V malej španielskej kohorte sa po začatí inkrementálnej hemodialýzy zvýšila 24-hodinová diuréza u pacientov užívajúcich inhibítor SGLT2. Výsledok, na ktorý upozornil ReachMD, sa týka objemu moču. Klírens močoviny ani kreatinínu sa v liečenej skupine štatisticky významne nezmenil. Štúdia preto otvára otázku, či by liečba mohla pomôcť udržať diurézu, a zatiaľ ponecháva jej vplyv na reziduálnu funkciu obličiek otvorený. [1]</p>
 
 <h2>Čo ukázala dvojcentrová kohorta</h2>

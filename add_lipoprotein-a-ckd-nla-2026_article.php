@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Kedy pri chronickej chorobe obličiek zopakovať meranie Lp(a), ako výsledok ovplyvní prevenciu a čo ukázala štúdia Lp(a)HORIZON.',
     'content'      => <<<'HTML'
+<figure><a href="img/lipoprotein-a-ckd-nla-2026.webp" target="_blank" rel="noopener noreferrer"><img src="img/lipoprotein-a-ckd-nla-2026.webp" alt="Častica lipoproteínu(a) pri stene tepny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Častica lipoproteínu(a) pri stene tepny. Ilustračný obrázok.</figcaption></figure>
 <p>Praktický prehľad National Lipid Association (NLA), ktorý Medscape spracoval v októbri 2026, odporúča stanoviť lipoproteín(a) [Lp(a)] aspoň raz u každého dospelého. Pri chronickej chorobe obličiek (CKD) môže výsledok spresniť odhad aterosklerotického kardiovaskulárneho rizika. Jeho interpretáciu však ovplyvňuje aj stav obličiek v čase odberu. Novembrové výsledky štúdie Lp(a)HORIZON zároveň ukázali, že výrazný pokles Lp(a) po pelakarsene neviedol k preukázanému poklesu kardiovaskulárnych príhod. [1, 2]</p>
 
 <h2>Kedy pri CKD zopakovať meranie</h2>

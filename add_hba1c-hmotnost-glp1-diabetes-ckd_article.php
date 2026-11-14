@@ -14,13 +14,14 @@ require_once __DIR__ . '/article_publisher.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Keď sa HbA1c a hmotnosť pri liečbe GLP-1 menia rozdielne',
+    'title'        => 'Keď sa HbA1c a hmotnosť pri liečbe založenej na GLP-1 menia rozdielne',
     'slug'         => 'hba1c-hmotnost-glp1-diabetes-ckd',
     'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),   // ← dátum + čas zverejnenia (upraviť ak treba)
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Ako u pacienta s diabetom 2. typu a chronickou chorobou obličiek interpretovať nesúlad medzi HbA1c a poklesom hmotnosti.',
     'content'      => <<<'HTML'
+<figure><a href="img/hba1c-hmotnost-glp1-diabetes-ckd.webp" target="_blank" rel="noopener noreferrer"><img src="img/hba1c-hmotnost-glp1-diabetes-ckd.webp" alt="Meranie glykémie a telesnej hmotnosti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Meranie glykémie a telesnej hmotnosti. Ilustračný obrázok.</figcaption></figure>
 <p>Pri liečbe založenej na GLP‑1 môže HbA1c klesnúť aj pri malom úbytku hmotnosti. Inokedy pacient schudne, ale glykémie zostávajú nad cieľom. Julie Pecková v Medscape opisuje, ako odborníci pri takomto nesúlade zvažujú glykémiu, obezitu a pridružené ochorenia. Pri chronickej chorobe obličiek (CKD) treba navyše overiť, či zmena hmotnosti odráža úbytok tukového tkaniva a či HbA1c spoľahlivo vystihuje glykémiu. [1, 2, 3]</p>
 <h2>HbA1c klesol, hmotnosť sa výrazne nezmenila</h2>
 <p>Zlepšenie glykémie má klinický význam aj pri malom úbytku hmotnosti. Ak však obezita naďalej obmedzuje pohyb alebo zhoršuje pridružené ochorenia, zostáva samostatným cieľom liečby. ADA odporúča u dospelých s diabetom 2. typu a nadhmotnosťou alebo obezitou stanoviť ciele pre glykémiu aj hmotnosť a prispôsobiť postup zdravotnému stavu a preferenciám pacienta. Pri CKD treba pri hodnotení hmotnosti zohľadniť aj zmeny hydratácie. Ústup edémov môže vysvetliť časť poklesu hmotnosti a retencia tekutín môže úbytok tkaniva zakryť. [2, 3]</p>

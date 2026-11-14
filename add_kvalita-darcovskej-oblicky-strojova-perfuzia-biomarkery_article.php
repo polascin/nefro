@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Čo preukázala hypotermická strojová perfúzia pri uchovávaní obličky a čo ešte treba overiť pred rozhodovaním podľa biomarkerov?',
     'content'      => <<<'HTML'
+<figure><a href="img/kvalita-darcovskej-oblicky-strojova-perfuzia-biomarkery.webp" target="_blank" rel="noopener noreferrer"><img src="img/kvalita-darcovskej-oblicky-strojova-perfuzia-biomarkery.webp" alt="Darcovská oblička pri strojovej perfúzii" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Darcovská oblička pri strojovej perfúzii. Ilustračný obrázok.</figcaption></figure>
 <p>Strojová perfúzia umožňuje darcovskú obličku uchovať a zároveň získať údaje o jej stave pred implantáciou. Prehľad Zua a spoluautorov opisuje tri obdobia, v ktorých možno tieto údaje využiť. Klinické dôkazy o účinnosti perfúzie pri uchovaní orgánu treba posudzovať samostatne od dôkazov o tom, či nový biomarker pomáha rozhodnúť o prijatí konkrétnej obličky. [1, 2]</p>
 <h2>Pred odberom, počas uchovávania a po transplantácii</h2>
 <p>Pri hodnotení darcu môžu genetické a epigenetické údaje či analýza obrazových nálezov doplniť klinické skóre. Pred použitím v praxi treba preukázať, že zlepšujú odhad rizika aj mimo pracoviska, na ktorom vznikli. Model vyvinutý v jednom centre môže pri inom výbere darcov alebo inom postupe odberu odhadovať riziko nepresne. [1]</p>

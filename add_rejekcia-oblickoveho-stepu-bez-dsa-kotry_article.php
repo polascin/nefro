@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Kórejský register porovnal stratu štepu pri troch formách rejekcie. Výsledky treba čítať spolu s definíciou mikrovaskulárneho zápalu podľa Banff.',
     'content'      => <<<'HTML'
+<figure><a href="img/rejekcia-oblickoveho-stepu-bez-dsa-kotry.webp" target="_blank" rel="noopener noreferrer"><img src="img/rejekcia-oblickoveho-stepu-bez-dsa-kotry.webp" alt="Mikrocirkulácia obličkového štepu pri rejekcii" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Mikrocirkulácia obličkového štepu pri rejekcii. Ilustračný obrázok.</figcaption></figure>
 <p>V kórejskom transplantačnom registri KOTRY sa strata obličkového štepu vyskytla aj u príjemcov s biopsiou klasifikovanou ako protilátkami sprostredkovaná rejekcia (ABMR) bez detegovateľných protilátok špecifických proti darcovi (DSA). Upravené porovnania s ostatnými skupinami však boli nepresné. Pri prenose výsledkov do praxe záleží aj na tom, ako autori definovali DSA-negatívnu ABMR a ako sa táto definícia prekrýva s dnešnou klasifikáciou Banff. [1, 2]</p>
 
 <h2>Čo ukázal register KOTRY</h2>

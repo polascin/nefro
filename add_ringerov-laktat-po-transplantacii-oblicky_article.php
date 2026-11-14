@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Ringerov laktát viedol k vyššiemu bikarbonátu na štvrtý deň než dvojinfúzny protokol NaCl a glukózy. Čo štúdia ukázala o funkcii štepu?',
     'content'      => <<<'HTML'
+<figure><a href="img/ringerov-laktat-po-transplantacii-oblicky.webp" target="_blank" rel="noopener noreferrer"><img src="img/ringerov-laktat-po-transplantacii-oblicky.webp" alt="Infúzne kryštaloidy v starostlivosti o obličkový štep" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Infúzne kryštaloidy v starostlivosti o obličkový štep. Ilustračný obrázok.</figcaption></figure>
 <p>V otvorenej randomizovanej štúdii bol po transplantácii obličky sérový bikarbonát na štvrtý deň vyšší pri Ringerovom laktáte než pri protokole s 0,9 % NaCl a 5 % glukózou. Príjemcovia v skupine s Ringerovým laktátom tiež menej často potrebovali záchranné podanie bikarbonátu. Výsledok sa vzťahuje na dva konkrétne pooperačné infúzne postupy a najmä na príjemcov s včasnou funkciou štepu. [1]</p>
 <h2>Čo sa v štúdii porovnávalo</h2>
 <p>Štúdia prebehla v jednom thajskom transplantačnom centre. Randomizovali 159 dospelých príjemcov obličky od živého alebo zosnulého darcu. Ringerov laktát porovnali s aktívnou kontrolou, pri ktorej sa 0,9 % NaCl a 5 % glukóza podávali oddelenými infúziami s cieľom znížiť celkovú chloridovú záťaž. Objem infúzií sa prispôsoboval hodinovej diuréze. Výsledok preto nemožno priamo preniesť na porovnanie Ringerovho laktátu so samotným 0,9 % NaCl. [1]</p>

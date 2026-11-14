@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Znižuje pridanie ekulizumabu k desenzibilizácii riziko rejekcie? Systematický prehľad ukazuje, prečo randomizované a historické porovnania vedú k odlišným záverom.',
     'content'      => <<<'HTML'
+<figure><a href="img/ekulizumab-prevencia-abmr-transplantacia-oblicky.webp" target="_blank" rel="noopener noreferrer"><img src="img/ekulizumab-prevencia-abmr-transplantacia-oblicky.webp" alt="Blokáda komplementu pri transplantácii obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Blokáda komplementu pri transplantácii obličky. Ilustračný obrázok.</figcaption></figure>
 <p>Peritransplantačná blokáda komplementu ekulizumabom má biologické opodstatnenie, ale jej prínos nad rámec štandardnej desenzibilizácie zostáva neistý. V jedinej randomizovanej štúdii zahrnutej do systematického prehľadu Lianga a spoluautorov sa centrálne potvrdená protilátkami sprostredkovaná rejekcia (ABMR) vyskytla u 5 z 51 príjemcov v každom ramene. Široký interval spoľahlivosti ponecháva otvorenú možnosť prínosu aj poškodenia. [1, 2]</p>
 
 <h2>Čo testovala randomizovaná štúdia</h2>

@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Karcinóm močového mechúra bol v registrovej kohorte častejší pri BKPyV DNAémii. Čo z toho vyplýva pre sledovanie po transplantácii?',
     'content'      => <<<'HTML'
+<figure><a href="img/bk-polyomavirus-karcinom-mocoveho-mechura-po-transplantacii.webp" target="_blank" rel="noopener noreferrer"><img src="img/bk-polyomavirus-karcinom-mocoveho-mechura-po-transplantacii.webp" alt="Močový mechúr pri sledovaní príjemcov obličkového štepu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Močový mechúr pri sledovaní príjemcov obličkového štepu. Ilustračný obrázok.</figcaption></figure>
 <p>V registrovej kohorte príjemcov obličky sa karcinóm močového mechúra zistil častejšie u pacientov s DNAémiou BK polyomavírusu (BKPyV). Celkovo však išlo o 12 nádorov. Výsledok upozorňuje na možnú súvislosť a sám osebe neodôvodňuje zavedenie pravidelnej cystoskopie u bezpríznakových príjemcov. [1, 2]</p>
 <h2>Čo zistila registrová kohorta</h2>
 <p>Clinceová a spoluautori analyzovali prospektívne zbierané údaje o 1 372 príjemcoch prvej transplantovanej obličky z rokov 2011 až 2022. Pri pravidelnom monitorovaní definovali BKPyV DNAémiu ako viac než 1 000 kópií/ml. Túto hranicu prekročilo 22,2 % príjemcov. Pozitívna PCR v krvi a biopticky potvrdená BKPyV nefropatia predstavujú odlišné klinické nálezy. [1, 2]</p>

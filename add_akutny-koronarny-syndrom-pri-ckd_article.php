@@ -21,6 +21,7 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'Ako pri CKD vyhodnotiť troponín, načasovať koronarografiu, obmedziť riziko poškodenia obličiek a zvoliť dĺžku antiagregačnej liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/akutny-koronarny-syndrom-pri-ckd.webp" target="_blank" rel="noopener noreferrer"><img src="img/akutny-koronarny-syndrom-pri-ckd.webp" alt="Koronárne tepny srdca a obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Koronárne tepny srdca a obličky. Ilustračný obrázok.</figcaption></figure>
 <p>Pri akútnom koronárnom syndróme (AKS) u pacienta s chronickou chorobou obličiek (CKD) treba naraz posúdiť riziko pokračujúcej ischémie, krvácania a akútneho poškodenia obličiek (AKI). Medscape v septembri 2026 spracoval americké odporúčania ACC/AHA z roku 2025. Európske odporúčania ESC/ERA z augusta 2026 k nim pridávajú podrobnejší postup pre pacientov s CKD. Pri infarkte s eleváciou úseku ST (STEMI) má prednosť včasná reperfúzia. Pri stabilizovanom AKS bez elevácie úseku ST (NSTE-AKS) sa načasovanie invazívneho vyšetrenia riadi klinickým rizikom. [1, 2]</p>
 
 <h2>Troponín treba čítať spolu s EKG a klinickým obrazom</h2>
