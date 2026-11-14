@@ -41,6 +41,7 @@ function getSourceArticleAuthors(): array {
         // Autori pilotnej RCT JASN 2026, doi 10.1681/ASN.0000001271 (PMID 42925875) –
         // 12 mien overených cez PubMed eutils a Crossref 2026-10-28.
         'empagliflozin-adpkd-pilotna-studia' => ['Stephen L. Seliger', 'Berenice Gitomer', 'Zhiying You', 'Wei Wang', 'Anna Ostrow', 'Emily Andrews', 'Charalett Diggs', 'Diana George', 'Miranda West', 'Kristen L. Nowak', 'Terry Watnick', 'Michel Chonchol'],
+        'hdf-convince-vysledky-hlasene-pacientmi' => ['Krister Cromm', 'Felix Fischer', 'Giovanni Pellegrino', 'Robin W M Vernooij', 'Leili Riazy', 'Claudia Barth', 'Peter J Blankestijn', 'Michiel L Bots', 'Bernard Canaud', 'Andrew Davenport', 'Jörgen Hegbrant', 'Mark Woodward', 'Matthias Rose', 'Giovanni F M Strippoli'],
         // Autor spracovaného redakčného prehľadu Medscape Medical News (14. 10. 2026) –
         // byline overený z verejne dostupnej stránky zdroja 2026-10-19.
         'longevity-normalne-vysledky-cielene-testovanie-ckd' => ['Julie Peck'],
