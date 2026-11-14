@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'osteoporoza-po-transplantacii-oblicky' => ['Aschariya Wipattanakitcharoen', 'Tanun Ngamvichchukorn', 'Sirinatta Prachathai', 'Kullaya Takkavatakarn', 'Kearkiat Praditpornsilpa', 'Paweena Susantitaphong'],
         'peritonealna-dialyza-roztok-sodik-126' => ['Masaaki Nakayama', 'Hiroaki Takahashi', 'Hideka Hosaka', 'Fumiyo Uosaki', 'Yasuhiko Ito', 'Hidetomo Nakamoto'],
         'spironolakton-finerenon-ckd-sietova-metaanalyza' => ['Berfu Korucu', 'Ayse Colak', 'Reem Mustafa', 'Amy Earley', 'David C Wheeler'],
         'implantat-echo-elektricka-regulacia-glykemie-nefrologia' => ['Debasis Maity', 'Preetam Guha Ray', 'Peter Buchmann', 'Ghislaine Charpin-El Hamri', 'Martin Fussenegger'],
