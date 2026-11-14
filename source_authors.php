@@ -662,6 +662,7 @@ function getSourceArticleAuthors(): array {
         'vyhorenie-peritonealna-dialyza-prechod-na-hemodialyzu' => ['Yung-An Chen', 'Yi-Chih Lin', 'Yu-Hsiang Chou', 'Yi-Ting Chen', 'Shuei-Liong Lin'],
         'bk-polyomavirus-karcinom-mocoveho-mechura-po-transplantacii' => ['Michelle Clince', 'Darragh O\'Donoghue', 'Vicki Sandys', 'Peter Conlon', 'Ciara Magee', 'Patrick O\'Kelly', 'Anne Cooney', 'Caoimhe Brennan', 'Una Sutton-Fitzpatrick', 'Nicholas Kruseman Aretz', 'Eilis Ni Chinneide', 'Jeff Connell', 'Min Yuen Teo', 'Fidelma Fitzpatrick', 'Brendan Doyle', 'Mark Broe', 'Dilly Little', 'Peter J Conlon'],
         'kvalita-darcovskej-oblicky-strojova-perfuzia-biomarkery' => ['You Zuo', 'Veerle A. Lantinga', 'Elizabeth Orozco-García', 'Baran Ogurlu', 'Cyril Moers'],
+        'hba1c-hmotnost-glp1-diabetes-ckd' => ['Julie Peck'],
         'konsenzus-ada-easd-2026-diabetes-2-typu-nefrologia' => ['Melanie J. Davies', 'Vanita R. Aroda', 'Mandeep Bajaj', 'Nuha A. ElSayed', 'Francesco Giorgino', 'Jennifer Green', 'Rita R. Kalyani', 'Nisa M. Maruthur', 'Chantal Mathieu', 'Sylvia E. Rosas', 'Peter Rossing', 'Tommy Slater', 'Tsvetalina Tankova', 'Pinar Topsever', 'Apostolos Tsapas', 'John B. Buse'],
         // SGLT2i a hemoglobín/železo/erytropoéza (JAMA; doi 10.1001/jama.2026.19921), autori Crossref 2026-11-02.
         'inhibitory-sglt2-hemoglobin-anemia-ckd' => ['Yaqin Yang', 'Changyuan Yang', 'Yanmei Wang', 'Pien Rawee', 'Aleix Cases', 'David E. Leaf', 'Lucia del Vecchio', 'Taulant Muka', 'Hiddo J. L. Heerspink', 'Ron T. Gansevoort', 'Michele F. Eisenga'],
