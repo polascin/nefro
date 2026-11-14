@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'semaglutid-select-flow-soul' => ['Johannes F E Mann', 'Sunil V Badve', 'Florian M M Baeres', 'Nicolas Belmar', 'Kirstine Brown-Frandsen', 'John B Buse', 'Helen M Colhoun', 'John E Deanfield', 'Mads D M Engelmann', 'G Kees Hovingh', 'Thomas Idorn', 'A Michael Lincoff', 'Ildiko Lingvay', 'Kenneth W Mahaffey', 'Darren K McGuire', 'Richard E Pratley', 'Søren Rasmussen', 'Peter Rossing', 'Naveed Sattar', 'Katherine R Tuttle', 'Vlado Perkovic'],
         'obezita-tukove-tkanivo-ckd' => ['Megan Brooks', 'Harold Edward Bays', 'Catherine Varney', 'Lydia Alexander', 'Jennifer Ng', 'Justin Tondt', 'Christopher Weber', 'Sandra Christensen', 'Karlijn Burridge', 'Carolynn Francavilla', 'Shagun Bindlish', 'Bharti Shetye', 'Marisa Censani'],
         'pots-po-covide-a-ckd' => ['Laurie Tarkan'],
         'hs-crp-riziko-ckd' => ['Faizan Mazhar', 'Minjung Han', 'Katherine R Tuttle', 'Aurora Caldinelli', 'Magnus Fugger', 'Sofia Gerward', 'Jimmi Mathisen', 'Brendon L Neuen', 'Marie Evans', 'Juan-Jesus Carrero'],
