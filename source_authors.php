@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'peritonealna-dialyza-roztok-sodik-126' => ['Masaaki Nakayama', 'Hiroaki Takahashi', 'Hideka Hosaka', 'Fumiyo Uosaki', 'Yasuhiko Ito', 'Hidetomo Nakamoto'],
         'spironolakton-finerenon-ckd-sietova-metaanalyza' => ['Berfu Korucu', 'Ayse Colak', 'Reem Mustafa', 'Amy Earley', 'David C Wheeler'],
         'implantat-echo-elektricka-regulacia-glykemie-nefrologia' => ['Debasis Maity', 'Preetam Guha Ray', 'Peter Buchmann', 'Ghislaine Charpin-El Hamri', 'Martin Fussenegger'],
         // Pôvodná štúdia Prepare for Kidney Care, Lancet 2026, PMID 42982076.
