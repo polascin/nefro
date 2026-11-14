@@ -651,6 +651,7 @@ function getSourceArticleAuthors(): array {
         // CKD-aP mixed-methods pri HD (J Ren Care; doi 10.1111/jorc.70075), autori Crossref 2026-11-02.
         'svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie' => ['Gülay Turgay', 'Çiğdem Özdemir Eler'],
         // Konsenzus ADA/EASD 2026 (Diabetes Care; doi 10.2337/dci26-0141), autori Crossref 2026-11-02.
+        'hypoglykemia-diabetes-2-typu-pokrocila-ckd' => ['Melanie J. Davies', 'Vanita R. Aroda', 'Mandeep Bajaj', 'Nuha A. ElSayed', 'Francesco Giorgino', 'Jennifer Green', 'Rita R. Kalyani', 'Nisa M. Maruthur', 'Chantal Mathieu', 'Sylvia E. Rosas', 'Peter Rossing', 'Tommy Slater', 'Tsvetalina Tankova', 'Pinar Topsever', 'Apostolos Tsapas', 'John B. Buse'],
         'konsenzus-ada-easd-2026-diabetes-2-typu-nefrologia' => ['Melanie J. Davies', 'Vanita R. Aroda', 'Mandeep Bajaj', 'Nuha A. ElSayed', 'Francesco Giorgino', 'Jennifer Green', 'Rita R. Kalyani', 'Nisa M. Maruthur', 'Chantal Mathieu', 'Sylvia E. Rosas', 'Peter Rossing', 'Tommy Slater', 'Tsvetalina Tankova', 'Pinar Topsever', 'Apostolos Tsapas', 'John B. Buse'],
         // SGLT2i a hemoglobín/železo/erytropoéza (JAMA; doi 10.1001/jama.2026.19921), autori Crossref 2026-11-02.
         'inhibitory-sglt2-hemoglobin-anemia-ckd' => ['Yaqin Yang', 'Changyuan Yang', 'Yanmei Wang', 'Pien Rawee', 'Aleix Cases', 'David E. Leaf', 'Lucia del Vecchio', 'Taulant Muka', 'Hiddo J. L. Heerspink', 'Ron T. Gansevoort', 'Michele F. Eisenga'],
