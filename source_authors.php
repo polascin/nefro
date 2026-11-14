@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'adpkd-kreatinin-cystatin-c-pokles-filtracie' => ['Gopala Rangan'],
         'styri-piliere-diabetes-ckd-g4-g5' => ['Masayuki Yamanouchi', 'Naoki Sawa', 'Kengo Furuichi', 'Takashi Wada'],
         'molekularna-hla-nezhoda-eplety-transplantacia-oblicky' => ['Suzanne Bezstarosti', 'Aleksandar Senev', 'Anna B Morris', 'Sebastiaan Heidt'],
         'osteoporoza-po-transplantacii-oblicky' => ['Aschariya Wipattanakitcharoen', 'Tanun Ngamvichchukorn', 'Sirinatta Prachathai', 'Kullaya Takkavatakarn', 'Kearkiat Praditpornsilpa', 'Paweena Susantitaphong'],
