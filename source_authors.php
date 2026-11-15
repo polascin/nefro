@@ -25,6 +25,25 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'ibuprofen-akutne-poskodenie-obliciek-hospitalizovani' => ['Haedi E. Thelen', 'Luke J. Keele', 'Christina Brotman', 'Michael G. S. Shashaty', 'Todd A. Miano'],
+        'semaglutid-oblickove-vysledky-flow' => ['Vlado Perkovic', 'Katherine R Tuttle', 'Peter Rossing', 'Kenneth W Mahaffey', 'Johannes F E Mann', 'George Bakris', 'Florian M M Baeres', 'Thomas Idorn', 'Heidrun Bosch-Traberg', 'Nanna Leonora Lausvig', 'Richard Pratley'],
+        'semaglutid-oblickove-vysledky-select' => ['Helen M Colhoun', 'Ildiko Lingvay', 'Paul M Brown', 'John Deanfield', 'Kirstine Brown-Frandsen', 'Steven E Kahn', 'Jorge Plutzky', 'Koichi Node', 'Alexander Parkhomenko', 'Lars Rydén', 'John P H Wilding', 'Johannes F E Mann', 'Katherine R Tuttle', 'Thomas Idorn', 'Naveen Rathor', 'A Michael Lincoff'],
+        'peroralny-semaglutid-soul' => ['Johannes F E Mann', 'Nikolaus Marx', 'John E Deanfield', 'Scott S Emerson', 'Silvio E Inzucchi', 'Darren K McGuire', 'Sharon L Mulvagh', 'Rodica Pop-Busui', 'Neil R Poulter', 'Mads D M Engelmann', 'G Kees Hovingh', 'Nicolas Belmar', 'Thomas Idorn', 'Ole Kleist Jeppesen', 'Andreas L Birkenfeld', 'Aslam Amod', 'Boris Mankovsky', 'Cyrus Desouza', 'Juan J Gorgojo-Martinez', 'Rosario Arechavaleta', 'Shih-Te Tu', 'John B Buse', 'SOUL Study Group*'],
+        'semaglutid-select-flow-soul' => ['Johannes F E Mann', 'Sunil V Badve', 'Florian M M Baeres', 'Nicolas Belmar', 'Kirstine Brown-Frandsen', 'John B Buse', 'Helen M Colhoun', 'John E Deanfield', 'Mads D M Engelmann', 'G Kees Hovingh', 'Thomas Idorn', 'A Michael Lincoff', 'Ildiko Lingvay', 'Kenneth W Mahaffey', 'Darren K McGuire', 'Richard E Pratley', 'Søren Rasmussen', 'Peter Rossing', 'Naveed Sattar', 'Katherine R Tuttle', 'Vlado Perkovic'],
+        'obezita-tukove-tkanivo-ckd' => ['Megan Brooks', 'Harold Edward Bays', 'Catherine Varney', 'Lydia Alexander', 'Jennifer Ng', 'Justin Tondt', 'Christopher Weber', 'Sandra Christensen', 'Karlijn Burridge', 'Carolynn Francavilla', 'Shagun Bindlish', 'Bharti Shetye', 'Marisa Censani'],
+        'pots-po-covide-a-ckd' => ['Laurie Tarkan'],
+        'hs-crp-riziko-ckd' => ['Faizan Mazhar', 'Minjung Han', 'Katherine R Tuttle', 'Aurora Caldinelli', 'Magnus Fugger', 'Sofia Gerward', 'Jimmi Mathisen', 'Brendon L Neuen', 'Marie Evans', 'Juan-Jesus Carrero'],
+        'sglt2-starsi-pacienti-ckd' => ['Nancy A. Melville'],
+        'buducnost-dialyzy' => ['Ute Eppinger'],
+        'diabetes-2-typu-ckd-regards' => ['Xingsheng Li', 'Javier A Jurado Vélez', 'Nita Kanney', 'Archie Landrum', 'Lloyd J Edwards', 'Orlando M Gutierrez', 'D Leann Long', 'Bertha Hidalgo'],
+        'nespavost-denna-spavost-ckd-rein' => ['Bénédicte Stengel', 'Emilie Moutard', 'Marie Metzger', 'Isabelle Jaussent', 'Aghilès Hamroun', 'Solène M Laville', 'Abdou Omorou', 'Denis Fouque', 'Ziad A Massy', 'Roberto Pecoits-Filho', 'Luc Frimat', 'Natalia Alencar de Pinho', 'Sophie Liabeuf'],
+        'epimer-vitaminu-d-tuhost-tepien-ckd' => ['Monique O Campos', 'Chien-Yao Sun', 'Heather N Burney', 'Yang Li', 'Gayatri Narayanan', 'Olivia Carlton', 'Tzong-Shi Lu', 'Glenville Jones', 'Martin Kaufmann', 'Stephen M S Ting', 'Daniel Zehnder', 'Thomas Hiemstra', 'Kenneth Lim'],
+        'adpkd-kreatinin-cystatin-c-pokles-filtracie' => ['Gopala Rangan'],
+        'styri-piliere-diabetes-ckd-g4-g5' => ['Masayuki Yamanouchi', 'Naoki Sawa', 'Kengo Furuichi', 'Takashi Wada'],
+        'molekularna-hla-nezhoda-eplety-transplantacia-oblicky' => ['Suzanne Bezstarosti', 'Aleksandar Senev', 'Anna B Morris', 'Sebastiaan Heidt'],
+        'osteoporoza-po-transplantacii-oblicky' => ['Aschariya Wipattanakitcharoen', 'Tanun Ngamvichchukorn', 'Sirinatta Prachathai', 'Kullaya Takkavatakarn', 'Kearkiat Praditpornsilpa', 'Paweena Susantitaphong'],
+        'peritonealna-dialyza-roztok-sodik-126' => ['Masaaki Nakayama', 'Hiroaki Takahashi', 'Hideka Hosaka', 'Fumiyo Uosaki', 'Yasuhiko Ito', 'Hidetomo Nakamoto'],
+        'spironolakton-finerenon-ckd-sietova-metaanalyza' => ['Berfu Korucu', 'Ayse Colak', 'Reem Mustafa', 'Amy Earley', 'David C Wheeler'],
         'implantat-echo-elektricka-regulacia-glykemie-nefrologia' => ['Debasis Maity', 'Preetam Guha Ray', 'Peter Buchmann', 'Ghislaine Charpin-El Hamri', 'Martin Fussenegger'],
         // Pôvodná štúdia Prepare for Kidney Care, Lancet 2026, PMID 42982076.
         'dialyza-konzervativna-starostlivost-starsi-prepare-kidney-care' => ['Fergus J Caskey', 'Jo Worthington', 'Yumeng Liu', 'Stephanie J MacNeill', 'Leila Rooshenas', 'Kirsty Garfield', 'Jessica Frost', 'Alexandra Soundy', 'Helen Winton', 'Karen Alloway', 'Yoav Ben-Shlomo', 'Áine Burns', 'Joseph Chilcot', 'Jos Darling', 'Simon J Davies', 'Ken Farrington', 'Andy Gibson', 'Barnaby Hole', 'Samantha Husbands', 'Rachel Johnson', 'Richard Huxtable', 'Emma Murphy', 'Fliss E M Murtagh', 'Yuta Nakano', 'Hugh Rayner', 'Caoimhe T Rice', 'Paul Roderick', 'Lucy E Selman', 'Jodi Taylor', 'Alba X Realpe', 'Chris Salisbury', 'Joanna Coast', 'Jenny L Donovan', 'J Athene Lane'],
@@ -41,6 +60,7 @@ function getSourceArticleAuthors(): array {
         // Autori pilotnej RCT JASN 2026, doi 10.1681/ASN.0000001271 (PMID 42925875) –
         // 12 mien overených cez PubMed eutils a Crossref 2026-10-28.
         'empagliflozin-adpkd-pilotna-studia' => ['Stephen L. Seliger', 'Berenice Gitomer', 'Zhiying You', 'Wei Wang', 'Anna Ostrow', 'Emily Andrews', 'Charalett Diggs', 'Diana George', 'Miranda West', 'Kristen L. Nowak', 'Terry Watnick', 'Michel Chonchol'],
+        'hdf-convince-vysledky-hlasene-pacientmi' => ['Krister Cromm', 'Felix Fischer', 'Giovanni Pellegrino', 'Robin W M Vernooij', 'Leili Riazy', 'Claudia Barth', 'Peter J Blankestijn', 'Michiel L Bots', 'Bernard Canaud', 'Andrew Davenport', 'Jörgen Hegbrant', 'Mark Woodward', 'Matthias Rose', 'Giovanni F M Strippoli'],
         // Autor spracovaného redakčného prehľadu Medscape Medical News (14. 10. 2026) –
         // byline overený z verejne dostupnej stránky zdroja 2026-10-19.
         'longevity-normalne-vysledky-cielene-testovanie-ckd' => ['Julie Peck'],
