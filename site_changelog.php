@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-15 12:15',
+                'category' => 'calculators',
+                'title' => 'Ambulantná kalkulačka: dátumy po kumulatívnej tabuľke z Nefrisu',
+                'description' => 'Ak za kumulatívnym výpisom s viacerými dátumami odberu nasledoval bežný riadok (napríklad „Hb 98 g/l“ alebo dva parametre v jednom riadku), hodnoty sa predtým priradili k najbližšiemu stĺpcu tabuľky. Mohli dostať nesprávny dátum, pri starších odberoch vľavo aj vypadnúť z výberu posledného odberu. Teraz sa taký riadok číta ako samostatný výpis bez dátumu zo stĺpca.',
+                'url' => 'calculator_ambulatory.php#nefris-labs',
+            ],
+            [
                 'date' => '2026-11-08 21:35',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: text z MS-DOS priamo do okna aj súbor TXT',

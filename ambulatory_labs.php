@@ -457,6 +457,39 @@ function labsIsHeaderName(string $name): bool
 }
 
 /**
+ * Riadok v tvare „názov hodnota jednotka“ (jednotka až za hodnotou) je riadkový
+ * výpis. Kumulatívna tabuľka má jednotku v stĺpci pred hodnotami
+ * („Urea mmol/l 18,4 17,9“). Po hlavičke s viacerými dátumami by inak ostal
+ * zapnutý stĺpcový režim a voľný riadok by zdedil dátum najbližšieho stĺpca.
+ *
+ * @param list<array{text: string, start: int}> $tokens
+ */
+function labsLineLooksLikeFlow(array $tokens): bool
+{
+    $count = count($tokens);
+    $index = 0;
+    while ($index < $count && (
+        labsParseValueToken($tokens[$index]['text']) === null
+        || labsIsYearInName($tokens, $index, 0)
+    )) {
+        $index++;
+    }
+    if ($index === 0 || $index >= $count) {
+        return false;
+    }
+    $nameTokens = array_column(array_slice($tokens, 0, $index), 'text');
+    if ($nameTokens !== [] && labsIsUnitToken((string) end($nameTokens))) {
+        return false;
+    }
+    $next = $index + 1;
+    while ($next < $count && labsIsFlagToken($tokens[$next]['text'])) {
+        $next++;
+    }
+
+    return $next < $count && labsIsUnitToken($tokens[$next]['text']);
+}
+
+/**
  * Rozparsuje text výpisu.
  *
  * @return array{
@@ -494,8 +527,16 @@ function labsParse(string $text): array
 
         $refs = [];
         $columnMode = $columns !== [] && count($dates) === 0;
-        $work = labsExtractRefs($work, $refs, $columnMode);
+        $workForRefs = $work;
+        $work = labsExtractRefs($workForRefs, $refs, $columnMode);
         $tokens = labsTokenize($work);
+        if ($columnMode && labsLineLooksLikeFlow($tokens)) {
+            $columnMode = false;
+            $columns = [];
+            $refs = [];
+            $work = labsExtractRefs($workForRefs, $refs, false);
+            $tokens = labsTokenize($work);
+        }
 
         $lineItems = $columnMode
             ? labsParseColumnLine($tokens, $refs, $columns)

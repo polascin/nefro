@@ -128,6 +128,35 @@ labsTestSame(
     'Posledná hodnota každého parametra so starším dátumom',
 );
 
+// 4b. Po kumulatívnej tabuľke nesmie ostať stĺpcový režim: riadok „Hb 98 g/l“
+// by inak zdedil dátum najbližšieho stĺpca (pri starších dátumoch vľavo aj
+// vypadol z predvoleného výberu „posledný odber“) a „Na … K …“ by stratilo K.
+$sticky = <<<TXT
+Parameter         Jednotka   14.09.2026  12.10.2026  08.11.2026
+Urea              mmol/l       16,2        17,9        18,4
+Kreatinín         umol/l       390         398         412
+Hb                98 g/l
+Na 140 mmol/l   K 4,2 mmol/l
+TXT;
+$parsed = labsParse($sticky);
+$hb = array_values(array_filter($parsed['items'], static fn (array $item): bool => $item['code'] === 'hb'));
+$na = array_values(array_filter($parsed['items'], static fn (array $item): bool => $item['code'] === 'na'));
+$k = array_values(array_filter($parsed['items'], static fn (array $item): bool => $item['code'] === 'k'));
+$ureaDates = array_column(array_filter($parsed['items'], static fn (array $item): bool => $item['code'] === 'urea'), 'date');
+labsTestSame(['2026-09-14', '2026-10-12', '2026-11-08'], array_values($ureaDates), 'Stĺpcové dátumy urey ostávajú');
+labsTestSame(1, count($hb), 'Hb po tabuľke je jedna položka');
+labsTestSame(null, $hb[0]['date'] ?? null, 'Hb po tabuľke nemá dátum zo stĺpca');
+labsTestSame('98', $hb[0]['value'], 'Hodnota Hb');
+labsTestSame(1, count($na), 'Na po tabuľke');
+labsTestSame(null, $na[0]['date'] ?? null, 'Na po tabuľke nemá dátum zo stĺpca');
+labsTestSame('140', $na[0]['value'], 'Hodnota Na');
+labsTestSame(1, count($k), 'K po tabuľke sa nestratí ako druhý parameter');
+labsTestSame(null, $k[0]['date'] ?? null, 'K po tabuľke nemá dátum zo stĺpca');
+labsTestSame('4,2', $k[0]['value'], 'Hodnota K');
+$stickyAll = labsBuildOutput($sticky, ['dates' => 'all'] + $defaults);
+labsTestSame(true, str_contains($stickyAll['output'], 'Hb 98 g/l'), 'Hb je vo výstupe všetkých odberov');
+labsTestSame(true, str_contains($stickyAll['output'], 'K 4,2 mmol/l'), 'K je vo výstupe všetkých odberov');
+
 // 5. Vlastný zoznam a vlastný formát.
 $custom = labsBuildOutput($flow, [
     'selection' => 'custom',
