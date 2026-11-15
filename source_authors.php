@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'ibuprofen-akutne-poskodenie-obliciek-hospitalizovani' => ['Haedi E. Thelen', 'Luke J. Keele', 'Christina Brotman', 'Michael G. S. Shashaty', 'Todd A. Miano'],
         'semaglutid-oblickove-vysledky-flow' => ['Vlado Perkovic', 'Katherine R Tuttle', 'Peter Rossing', 'Kenneth W Mahaffey', 'Johannes F E Mann', 'George Bakris', 'Florian M M Baeres', 'Thomas Idorn', 'Heidrun Bosch-Traberg', 'Nanna Leonora Lausvig', 'Richard Pratley'],
         'semaglutid-oblickove-vysledky-select' => ['Helen M Colhoun', 'Ildiko Lingvay', 'Paul M Brown', 'John Deanfield', 'Kirstine Brown-Frandsen', 'Steven E Kahn', 'Jorge Plutzky', 'Koichi Node', 'Alexander Parkhomenko', 'Lars Rydén', 'John P H Wilding', 'Johannes F E Mann', 'Katherine R Tuttle', 'Thomas Idorn', 'Naveen Rathor', 'A Michael Lincoff'],
         'peroralny-semaglutid-soul' => ['Johannes F E Mann', 'Nikolaus Marx', 'John E Deanfield', 'Scott S Emerson', 'Silvio E Inzucchi', 'Darren K McGuire', 'Sharon L Mulvagh', 'Rodica Pop-Busui', 'Neil R Poulter', 'Mads D M Engelmann', 'G Kees Hovingh', 'Nicolas Belmar', 'Thomas Idorn', 'Ole Kleist Jeppesen', 'Andreas L Birkenfeld', 'Aslam Amod', 'Boris Mankovsky', 'Cyrus Desouza', 'Juan J Gorgojo-Martinez', 'Rosario Arechavaleta', 'Shih-Te Tu', 'John B Buse', 'SOUL Study Group*'],
