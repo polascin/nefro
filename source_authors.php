@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'papilarna-nekroza-napodobnujuca-kamen' => ['Parthiban Palanivel', 'Deepak Dubey', 'Mahesha Vankalakunti'],
         'druhe-antihypertenzivum-ckd-tiazid-observacna-studia' => ['L Parker Gregg', 'Aaron Perkins', 'Hui Yang', 'Christine Vu', 'Vijay Nambi', 'Wolfgang C Winkelmayer', 'S Susan Hedayati', 'Sankar D Navaneethan', 'Carlos A Alvarez'],
         'rituximab-iga-nefropatia-rita' => ['Yan Ouyang', 'Hong Ren', 'Weiming Wang', 'Na Liu', 'Beiyan Bao', 'Hua Li', 'Xiaoling Xiong', 'Jian Li', 'Duolao Wang', 'Qinjie Weng', 'Chaohui Wang', 'Jingyuan Xie', 'Nan Chen'],
         'szc-titracia-raasi-ckd-hfref-lift' => ['Debasish Banerjee', 'Mahrukh Ali', 'Ella Tumelty', 'Daniel Murphy', 'Hilary Warrens', 'Simran Parmar', 'Thomas McNally', 'Tony Lopez', 'Sharirose Abat', 'Riny Paul', 'Sabba Hussain', 'Souradip Mookerjee', 'Isaac Chung', 'Irina Chis Ster', 'Lisa Anderson'],
