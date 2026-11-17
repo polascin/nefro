@@ -191,7 +191,7 @@ if ($fiction === null) {
     throw new RuntimeException('Missing fiction publication');
 }
 $fictionOrder = createPublicationOrder($pdo, $fiction, $fiction['formats'], ['email' => 'buyer@example.invalid']);
-integrationCheck((float) $fictionOrder['order']['amount_eur'] === 9.98, 'fiction bundle stores exactly 9.98 EUR');
+integrationCheck((float) $fictionOrder['order']['amount_eur'] === 7.00, 'fiction bundle stores exactly 7.00 EUR');
 $download = '/download_publication.php?' . http_build_query(['vs' => $order['variable_symbol'], 't' => $created['token'], 'format' => 'pdf']);
 integrationCheck(integrationHttp($download)['status'] === 402, 'unpaid order cannot download');
 integrationCheck(markPublicationOrderPaid($pdo, (int) $order['id'], 'Synthetic settlement, no charge'), 'synthetic manual settlement');

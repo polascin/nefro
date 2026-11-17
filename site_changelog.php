@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-17 17:55',
+                'category' => 'content',
+                'title' => 'Cena e-knihy Marža z krvi je 7 €',
+                'description' => 'E-kniha Marža z krvi stojí 7 € pri každom výbere dostupných formátov.',
+                'url' => 'publikacia.php?slug=marza-z-krvi',
+            ],
+            [
                 'date' => '2026-11-08 21:35',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: text z MS-DOS priamo do okna aj súbor TXT',

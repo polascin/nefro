@@ -126,7 +126,7 @@ include 'legal_head.php';
                     a pri dvoch a viac formátoch sa uplatní balíková cena
                     <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE), ENT_QUOTES, 'UTF-8') ?></strong>.
                     Pri beletrii môže byť cena odlišná; e-kniha Marža z krvi stojí
-                    <strong>20,00 €</strong> za ľubovoľný výber dostupných formátov.
+                    <strong><?= htmlspecialchars(formatPublicationPrice(publicationPriceFor(['pdf'], findPublication('marza-z-krvi'))), ENT_QUOTES, 'UTF-8') ?></strong> za ľubovoľný výber dostupných formátov.
                     Ceny sú konečné a vrátane všetkých daní;
                     k cene sa neúčtuje poštovné ani iné náklady na dodanie, keďže obsah
                     sa dodáva elektronicky.
