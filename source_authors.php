@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'ischemia-ckd-extend-osemrocne-prezivanie' => ['Sripal Bangalore', 'David J Maron', 'Rebecca Anthopolos', 'Harmony R Reynolds', 'Yifan Xu', 'Michelle Chang', 'Stephanie Boumakis', 'Jose Lopez-Sendon', 'Roxy Senior', 'Shaun G Goodman', 'Sean M O\'Brien', 'Jerome L Fleg', 'Judith S Hochman', 'ISCHEMIA-CKD EXTEND Research Group'],
         'finerenon-fsgs-find-ckd-podskupina' => ['Hiddo J L Heerspink', 'Brendon L Neuen', 'Rajiv Agarwal', 'David Z I Cherney', 'Carolyn S P Lam', 'Katherine R Tuttle', 'Christoph Wanner', 'Pantelis Sarafidis', 'Glenn M Chertow', 'Tim Friede', 'Jonathan Barratt', 'Jürgen Floege', 'Alfredo Chew-Wong', 'Vladimir Dobronravov', 'Susanne B Nicholas', 'Hirokazu Okada', 'David Packham', 'Pablo E Pergola', 'Marijn M Speeckaert', 'Shuifu Tang', 'Niels Jongs', 'J David Smeijer', 'Carolina Aldworth', 'Mario Berger', 'Meike Brinker', 'Rania Dayoub', 'Marina Yael Finkelsztein', 'Aidan MacNamara', 'Patrick Schloemer', 'Vlado Perkovic', 'FIND-CKD Investigators'],
         'ibuprofen-akutne-poskodenie-obliciek-hospitalizovani' => ['Haedi E. Thelen', 'Luke J. Keele', 'Christina Brotman', 'Michael G. S. Shashaty', 'Todd A. Miano'],
         'semaglutid-oblickove-vysledky-flow' => ['Vlado Perkovic', 'Katherine R Tuttle', 'Peter Rossing', 'Kenneth W Mahaffey', 'Johannes F E Mann', 'George Bakris', 'Florian M M Baeres', 'Thomas Idorn', 'Heidrun Bosch-Traberg', 'Nanna Leonora Lausvig', 'Richard Pratley'],
