@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'fibrilacia-predsieni-ckd-liecba' => ['Caroline Schneppe', 'Gunnar H Heine', 'Ingo Eitel', 'Marie Evans', 'Lukas Urbanek', 'Wolfgang Winkelmayer', 'An S De Vriese'],
         'egfr-kreatinin-cystatin-c-akutny-koronarny-syndrom' => ['Cristina García Majado', 'Cristina Baldeón Conde', 'Emilio Rodrigo Calabia', 'José Enrique Pasache Chong', 'Gema Fernández Fresnedo', 'Juan Carlos Ruiz', 'José Luis Hernández'],
         'draslik-fosfor-pridavne-latky-ckd' => ['Annabel Biruete', 'Csaba P Kovesdy'],
         'papilarna-nekroza-napodobnujuca-kamen' => ['Parthiban Palanivel', 'Deepak Dubey', 'Mahesha Vankalakunti'],
