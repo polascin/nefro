@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-17",
+  "accounts": {
+    "x": "https://x.com/polascin",
+    "facebook": "https://www.facebook.com/lubomir.polascin",
+    "linkedin": "https://www.linkedin.com/in/lubomirpolascin/",
+    "threads": "https://www.threads.com/@lubomirpolascin"
+  },
+  "posts": [
+    {
+      "slug": "finerenon-fsgs-find-ckd-podskupina",
+      "image": "finerenon-fsgs-social.png",
+      "sk": "Finerenón pri FSGS spomalil pokles eGFR a znížil proteinúriu. Prínos pre riziko zlyhania obličiek zostáva neistý.",
+      "en": "Finerenone slowed eGFR decline and reduced proteinuria in FSGS. Benefit for kidney failure risk remains uncertain.",
+      "x": "Finerenón pri FSGS: pomalší pokles eGFR; vplyv na riziko zlyhania obličiek neistý. | Finerenone in FSGS: slower eGFR decline; kidney failure benefit uncertain.",
+      "alt_sk": "Ilustrácia sklenenej obličky s jemnou cievnou kresbou a svetelným oblúkom.",
+      "alt_en": "Illustration of a glass-like kidney with delicate vessels and an arc of light.",
+      "publication": {
+        "x": "https://x.com/polascin/status/2122707184668570020",
+        "facebook": "https://www.facebook.com/photo/?fbid=10245842747302424",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7528474337838854144/",
+        "threads": "https://www.threads.com/@lubomirpolascin/post/Df2NM3EiMSJ"
+      },
+      "article_url": "https://nefro.polascin.net/article.php?slug=finerenon-fsgs-find-ckd-podskupina",
+      "published_text": "Finerenón pri FSGS spomalil pokles eGFR a znížil proteinúriu. Prínos pre riziko zlyhania obličiek zostáva neistý.\n\nFinerenone slowed eGFR decline and reduced proteinuria in FSGS. Benefit for kidney failure risk remains uncertain.\n\nhttps://nefro.polascin.net/article.php?slug=finerenon-fsgs-find-ckd-podskupina",
+      "x_published_text": "Finerenón pri FSGS: pomalší pokles eGFR; vplyv na riziko zlyhania obličiek neistý. | Finerenone in FSGS: slower eGFR decline; kidney failure benefit uncertain. https://nefro.polascin.net/article.php?slug=finerenon-fsgs-find-ckd-podskupina",
+      "google_drive_image": "https://drive.google.com/file/d/14S87cW734VmvQlW2MQJss7atrvR4cJN5/view",
+      "verified": "2026-11-17: profile, bilingual text, article link and attached image observed in published UI"
+    },
+    {
+      "slug": "ischemia-ckd-extend-osemrocne-prezivanie",
+      "image": "ischemia-social.png",
+      "sk": "ISCHEMIA-CKD: ani po ôsmich rokoch sa nepreukázal prínos úvodnej invazívnej stratégie pre prežívanie pri stabilnej koronárnej chorobe a pokročilej CKD.",
+      "en": "No proven survival benefit at eight years from an initial invasive strategy in stable coronary disease and advanced CKD.",
+      "x": "ISCHEMIA-CKD: ani po 8 rokoch nebol preukázaný prínos úvodnej invazívnej stratégie pre prežívanie. | No proven survival benefit at 8 years from an initial invasive strategy in stable coronary disease and advanced CKD.",
+      "alt_sk": "Ilustrácia srdca a obličiek pod svetelným oblúkom symbolizujúcim dlhodobé sledovanie.",
+      "alt_en": "Illustration of a heart and kidneys under an arc of light representing long-term follow-up.",
+      "publication": {
+        "x": "https://x.com/polascin/status/2122709814895853924",
+        "facebook": "https://www.facebook.com/photo/?fbid=10245842771543030",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7528474991143759872/",
+        "threads": "https://www.threads.com/@lubomirpolascin/post/Df2OP6ZCEwf"
+      },
+      "article_url": "https://nefro.polascin.net/article.php?slug=ischemia-ckd-extend-osemrocne-prezivanie",
+      "published_text": "ISCHEMIA-CKD: ani po ôsmich rokoch sa nepreukázal prínos úvodnej invazívnej stratégie pre prežívanie pri stabilnej koronárnej chorobe a pokročilej CKD.\n\nNo proven survival benefit at eight years from an initial invasive strategy in stable coronary disease and advanced CKD.\n\nhttps://nefro.polascin.net/article.php?slug=ischemia-ckd-extend-osemrocne-prezivanie",
+      "x_published_text": "ISCHEMIA-CKD: ani po 8 rokoch nebol preukázaný prínos úvodnej invazívnej stratégie pre prežívanie. | No proven survival benefit at 8 years from an initial invasive strategy in stable coronary disease and advanced CKD. https://nefro.polascin.net/article.php?slug=ischemia-ckd-extend-osemrocne-prezivanie",
+      "google_drive_image": "https://drive.google.com/file/d/1QNWe1VsCpJ5w90bKL2NVEgjKVXSTtnVF/view",
+      "verified": "2026-11-17: profile, bilingual text, article link and attached image observed in published UI"
+    },
+    {
+      "slug": "szc-titracia-raasi-ckd-hfref-lift",
+      "image": "szc-social.png",
+      "sk": "LIFT: SZC uľahčil titráciu liečby pri CKD a HFrEF. Potrebné boli časté kontroly. Dlhodobý klinický prínos zostáva nepreukázaný.",
+      "en": "SZC enabled medication titration in CKD and HFrEF with close monitoring. Long-term clinical benefit remains unproven.",
+      "x": "LIFT: SZC uľahčil titráciu liečby pri CKD a HFrEF. Potrebné boli časté kontroly. | SZC enabled medication titration in CKD and HFrEF with close monitoring. Long-term clinical benefit remains unproven.",
+      "alt_sk": "Ilustrácia obličky, srdca a sklenených stupňov ako symbolu postupnej titrácie liečby.",
+      "alt_en": "Illustration of a kidney, a heart and glass steps symbolising gradual medication titration.",
+      "publication": {
+        "x": "https://x.com/polascin/status/2122710228508581999",
+        "facebook": "https://www.facebook.com/photo/?fbid=10245842797983691",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7528475735842451456/",
+        "threads": "https://www.threads.com/@lubomirpolascin/post/Df2ObFxiFt8"
+      },
+      "article_url": "https://nefro.polascin.net/article.php?slug=szc-titracia-raasi-ckd-hfref-lift",
+      "published_text": "LIFT: SZC uľahčil titráciu liečby pri CKD a HFrEF. Potrebné boli časté kontroly. Dlhodobý klinický prínos zostáva nepreukázaný.\n\nSZC enabled medication titration in CKD and HFrEF with close monitoring. Long-term clinical benefit remains unproven.\n\nhttps://nefro.polascin.net/article.php?slug=szc-titracia-raasi-ckd-hfref-lift",
+      "x_published_text": "LIFT: SZC uľahčil titráciu liečby pri CKD a HFrEF. Potrebné boli časté kontroly. | SZC enabled medication titration in CKD and HFrEF with close monitoring. Long-term clinical benefit remains unproven. https://nefro.polascin.net/article.php?slug=szc-titracia-raasi-ckd-hfref-lift",
+      "google_drive_image": "https://drive.google.com/file/d/1QuuoyHAtXLlZb_0gosnCJHSv6K23r57F/view",
+      "verified": "2026-11-17: profile, bilingual text, article link and attached image observed in published UI"
+    },
+    {
+      "slug": "rituximab-iga-nefropatia-rita",
+      "image": "rita-social.png",
+      "sk": "RITA: rituximab pri IgA nefropatii nepreukázal dodatočný prínos pre proteinúriu ani eGFR.",
+      "en": "Rituximab showed no added benefit for proteinuria or eGFR in IgA nephropathy.",
+      "x": "RITA: rituximab pri IgA nefropatii nepreukázal dodatočný prínos pre proteinúriu ani eGFR. | Rituximab showed no added benefit for proteinuria or eGFR in IgA nephropathy.",
+      "alt_sk": "Konceptuálna ilustrácia obličky a rôznych imunitných buniek.",
+      "alt_en": "Conceptual illustration of a kidney and different immune cells.",
+      "publication": {
+        "x": "https://x.com/polascin/status/2122710677689078222",
+        "facebook": "https://www.facebook.com/photo/?fbid=10245842833264573",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7528476214542651392/",
+        "threads": "https://www.threads.com/@lubomirpolascin/post/Df2OrUNiFSY"
+      },
+      "article_url": "https://nefro.polascin.net/article.php?slug=rituximab-iga-nefropatia-rita",
+      "published_text": "RITA: rituximab pri IgA nefropatii nepreukázal dodatočný prínos pre proteinúriu ani eGFR.\n\nRituximab showed no added benefit for proteinuria or eGFR in IgA nephropathy.\n\nhttps://nefro.polascin.net/article.php?slug=rituximab-iga-nefropatia-rita",
+      "x_published_text": "RITA: rituximab pri IgA nefropatii nepreukázal dodatočný prínos pre proteinúriu ani eGFR. | Rituximab showed no added benefit for proteinuria or eGFR in IgA nephropathy. https://nefro.polascin.net/article.php?slug=rituximab-iga-nefropatia-rita",
+      "google_drive_image": "https://drive.google.com/file/d/1I6wiJvuUXwUA2dJmuttEnMdxRNkwV96z/view",
+      "verified": "2026-11-17: profile, bilingual text, article link and attached image observed in published UI"
+    },
+    {
+      "slug": "druhe-antihypertenzivum-ckd-tiazid-observacna-studia",
+      "image": "antihypertenzivum-social.png",
+      "sk": "Druhé antihypertenzívum pri CKD: priaznivá asociácia tiazidov nie je dôkaz nadradenosti. Rozhoduje aj klinická indikácia.",
+      "en": "Second-line BP treatment in CKD: favourable thiazide associations do not prove superiority. Clinical indication matters.",
+      "x": "Druhé antihypertenzívum pri CKD: priaznivá asociácia tiazidov nie je dôkaz nadradenosti. | Second-line BP treatment in CKD: favourable thiazide associations do not prove superiority.",
+      "alt_sk": "Ilustrácia obličky a viacerých možností liečby bez určenia víťaznej možnosti.",
+      "alt_en": "Illustration of a kidney and several treatment options without ranking a winner.",
+      "publication": {
+        "x": "https://x.com/polascin/status/2122711080480948259",
+        "facebook": "https://www.facebook.com/photo/?fbid=10245842849544980",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7528476793310355456/",
+        "threads": "https://www.threads.com/@lubomirpolascin/post/Df2O2BmiPCw"
+      },
+      "article_url": "https://nefro.polascin.net/article.php?slug=druhe-antihypertenzivum-ckd-tiazid-observacna-studia",
+      "published_text": "Druhé antihypertenzívum pri CKD: priaznivá asociácia tiazidov nie je dôkaz nadradenosti. Rozhoduje aj klinická indikácia.\n\nSecond-line BP treatment in CKD: favourable thiazide associations do not prove superiority. Clinical indication matters.\n\nhttps://nefro.polascin.net/article.php?slug=druhe-antihypertenzivum-ckd-tiazid-observacna-studia",
+      "x_published_text": "Druhé antihypertenzívum pri CKD: priaznivá asociácia tiazidov nie je dôkaz nadradenosti. | Second-line BP treatment in CKD: favourable thiazide associations do not prove superiority. https://nefro.polascin.net/article.php?slug=druhe-antihypertenzivum-ckd-tiazid-observacna-studia",
+      "google_drive_image": "https://drive.google.com/file/d/1DCNio4zVIUDNqprXNK39XiSSDqOqLaBM/view",
+      "verified": "2026-11-17: profile, bilingual text, article link and attached image observed in published UI"
+    }
+  ]
+}
