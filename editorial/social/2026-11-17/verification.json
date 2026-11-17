@@ -1,0 +1,46 @@
+{
+  "source_deployment": "26a9c821",
+  "verified_utc": "2026-11-17",
+  "articles": [
+    {
+      "slug": "finerenon-fsgs-find-ckd-podskupina",
+      "id": 2573,
+      "published": true,
+      "content_parity": true,
+      "pdf_sha256": "5c77cefa466bd96c68835aad061585d1954e02d50c5fb34d3d72f0fb66c8848f",
+      "newsletter_queues": 0
+    },
+    {
+      "slug": "ischemia-ckd-extend-osemrocne-prezivanie",
+      "id": 2575,
+      "published": true,
+      "content_parity": true,
+      "pdf_sha256": "b30148467e86609b2def97d33f3e0a1b4522210e30a8c90bfcc5001de8c6e660",
+      "newsletter_queues": 0
+    },
+    {
+      "slug": "szc-titracia-raasi-ckd-hfref-lift",
+      "id": 2577,
+      "published": true,
+      "content_parity": true,
+      "pdf_sha256": "86324e38f7139d9ccf6f5ede19ab16e5f39891db30d824a114cc937ebb99c834",
+      "newsletter_queues": 0
+    },
+    {
+      "slug": "rituximab-iga-nefropatia-rita",
+      "id": 2579,
+      "published": true,
+      "content_parity": true,
+      "pdf_sha256": "ec930b00635c673453ba8110f6f6eab8cee9770e761213953298331025498338",
+      "newsletter_queues": 0
+    },
+    {
+      "slug": "druhe-antihypertenzivum-ckd-tiazid-observacna-studia",
+      "id": 2581,
+      "published": true,
+      "content_parity": true,
+      "pdf_sha256": "2b6217b8dfb7f9e7b67b77961d55cb89817805e809c383d0e012c4c754b97729",
+      "newsletter_queues": 0
+    }
+  ]
+}
