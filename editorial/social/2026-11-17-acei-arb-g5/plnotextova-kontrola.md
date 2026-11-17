@@ -24,4 +24,12 @@ Kontrola dopĺňa pôvodný záznam publikovanie.md. Používateľ výslovne vy�
 
 Číselná chyba v hlavných výsledkoch nebola zistená. Úpravy spresňujú populácie, ukazovatele, analytické obmedzenia a rozsah skutočne vykonanej kontroly. Zachované rozlíšenie pokračovania a nového začatia, G5 a G5D, registračnej indikácie a úrovne dôkazov. Slovenská jazyková a terminologická korektúra vykonaná aj pre nové odseky. Zdrojový článok a Markdown archív upravené súbežne. Oznámenia zostávajú vypnuté cez enqueue_newsletter=false.
 
-Technické výsledky nasadenia a obnoveného PDF budú doplnené po overení produkcie.
+## Overenie aktualizácie
+
+- Obsah nasadený lokálnou cestou cez websupport z commitu aa7c8c1b. Kontrola 787 PHP súborov, 64 regresných súborov a syntaxe JavaScriptu úspešná; samostatná statická analýza publikačného súboru bez chýb.
+- UPSERT: jeden aktualizovaný článok, žiadny nový záznam, nula avíz. Opakované spustenie: jeden preskočený článok bez zmeny. ID 2597 a pôvodný published_at 2026-11-17 17:15:31 zachované.
+- Obe databázové fronty article_newsletter_queue a nl_sub_queue majú pre tento článok nula záznamov.
+- Verejný článok aj úvodná stránka cez IPv4 curl: HTTP 200. Článok obsahuje nové pasáže a zdroj 12, úvodná stránka obsahuje slug. Pôvodný pokus cez Python urllib vrátil HTTP 403; úspešná kontrola bola zopakovaná bežným curl.
+- Aktualizované PDF vzniklo na produkcii a bolo cielene stiahnuté do repozitára: päť strán, 286983 bajtov. Zhodný SHA-256 na serveri a lokálne: f3a8be138e6f5160160819522f1ad585189d272f829a882ec7eb258d954fa51f.
+- V extrahovanom texte PDF overené nové odseky, čísla a úplnosť záverečného zoznamu zdrojov; posledná strana vizuálne skontrolovaná. Odkazy PubMed a suplementu sú súčasťou PDF. Ilustrácia zachovaná.
+- Sociálne siete ani nastavenia odosielania správ sa nemenili. Výsledný PDF súbor a tento záznam sa ukladajú v samostatnom nadväzujúcom commite.
