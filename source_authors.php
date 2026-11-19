@@ -808,5 +808,11 @@ function getSourceArticleAuthors(): array {
         // Autori rámcového prehľadu Nat Rev Nephrol 2026 (doi 10.1038/s41581-026-01146-1, PMID 42995255);
         // overené v PubMed a v registri Crossref 2026-11-08. Autori ďalších citovaných prác sem nepatria.
         'buducnost-nahrady-funkcie-obliciek-nositelna-dialyza-xenotransplantacia' => ['Mari Karoliina H. Winkler', 'Stephen R. Ash', 'Katherine A. Barraclough', 'Christian Bluechel', 'Nicholas Ferrell', 'William Fissell', 'Benjamin S. Freedman', 'Karin G. F. Gerritsen', 'Hatim A. Hassan', 'Dirk M. Hentschel', 'Jamie Hestekin', 'Alex Hughes', 'Dean G. Johnson', 'Mira Krendel', 'Zhongwei Li', 'Jayme E. Locke', 'Nuria Montserrat', 'Ryuichi Nishinakamura', 'Alexa Plisiewicz', 'Buddy D. Ratner', 'Glenda V. Roberts', 'Shuvo Roy', 'Tammy L. Sirich', 'Arohan R. Subramanya', 'Haimanot Wasse', 'Scott Wiener', 'Fokko Wieringa', 'Kayla Wolf', 'Jonathan Himmelfarb'],
+        // Prehľad AJKD 2026 o CKDu (doi 10.1053/j.ajkd.2026.05.025, PMID 42772347); autori overení v PubMed a na stránke vydavateľa 2026-11-19.
+        'ckdu-neznama-etiologia-2026' => ['Ben Caplin', 'Prabhdeep Kaur', 'Thilanga Ruwanpathirana', 'Neil Pearce', 'Marvin Gonzalez-Quiroz'],
+        // RCT AJKD 2026, rastlinné bielkoviny pri pokročilej CKD (doi 10.1053/j.ajkd.2026.07.008, PMID 42767319); autori overení v PubMed 2026-11-19.
+        'rastlinne-bielkoviny-pokrocila-ckd-tmao-rct' => ['Ryuta Uwatoko', 'Yusuke Sakaguchi', 'Tatsufumi Oka', 'Yohei Doi', 'Yuki Kawano', 'Hikaru Kadono', 'Shungo Fukuda', 'Ryohei Yamamoto', 'Isao Matsui', 'Masayuki Mizui', 'Jun-Ya Kaimori', 'Yoshitaka Isaka'],
+        // Kohortová štúdia AJKD 2026, bezpečnosť inhibítorov SGLT2 (doi 10.1053/j.ajkd.2026.06.013, PMID 42767321); autori overení v PubMed a v plnom texte 2026-11-19.
+        'inhibitory-sglt2-bezpecnost-diabetes-ckd-treescan' => ['Janinne Ortega-Montiel', 'Wajd Alkabbani', 'Georg Hahn', 'Jun Liu', 'Caroline F. Byrne', 'Deborah J. Wexler', 'Elisabetta Patorno', 'Julie M. Paik'],
     ];
 }
