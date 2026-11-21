@@ -1,0 +1,45 @@
+## article
+
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## facebook
+
+V japonskej kohorte s diabetom 2. typu sa dlhší spánok spájal s častejším vznikom alebo zhoršením albuminúrie, HR 1,92 pri aspoň 8 hodinách oproti menej než 6 hodinám. Spojitá analýza nebola významná a výsledok nie je dôvodom skracovať spánok.
+
+A Japanese type 2 diabetes cohort linked longer sleep to incident or worsening albuminuria, with an HR of 1.92 for at least 8 hours versus under 6 hours. The continuous analysis was not significant, and the findings do not justify sleep restriction.
+
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## linkedin
+
+V japonskej kohorte s diabetom 2. typu sa dlhší spánok spájal s častejším vznikom alebo zhoršením albuminúrie, HR 1,92 pri aspoň 8 hodinách oproti menej než 6 hodinám. Spojitá analýza nebola významná a výsledok nie je dôvodom skracovať spánok.
+
+A Japanese type 2 diabetes cohort linked longer sleep to incident or worsening albuminuria, with an HR of 1.92 for at least 8 hours versus under 6 hours. The continuous analysis was not significant, and the findings do not justify sleep restriction.
+
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+#Nefrológia #Diabetes #SleepHealth #Albuminuria
+
+## x_sk
+
+Dlhší spánok a albuminúria pri diabete: HR 1,92 pri ≥8 h oproti <6 h. Spojitá analýza nebola významná; kohorta nepreukazuje príčinu ani prínos skracovania spánku.
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## x_en
+
+Longer sleep and albuminuria in type 2 diabetes: HR 1.92 for ≥8 h versus <6 h. The continuous analysis was not significant; this cohort does not support sleep restriction.
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## threads_sk
+
+Dlhší spánok a albuminúria pri diabete: HR 1,92 pri ≥8 h oproti <6 h. Spojitá analýza nebola významná; kohorta nepreukazuje príčinu ani prínos skracovania spánku.
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## threads_en
+
+Longer sleep and albuminuria in type 2 diabetes: HR 1.92 for ≥8 h versus <6 h. The continuous analysis was not significant; this cohort does not support sleep restriction.
+https://nefro.polascin.net/article.php?slug=dlhsi-spanok-diabetes-albuminuria-kohorta
+
+## alt_sk
+
+Symbolická nočná scéna: posteľ, mesiac a priehľadný model obličky na nočnom stolíku. Ilustrácia spánku a zdravia obličiek, nie snímka pacienta.

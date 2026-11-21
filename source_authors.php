@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'dlhsi-spanok-diabetes-albuminuria-kohorta' => ['Batya Swift Yasgur'],
         'retatrutid-semaglutid-predbezne-vysledky-transcend-t2d-2' => ['Anne L. Peters'],
         'fibrilacia-predsieni-ckd-liecba' => ['Caroline Schneppe', 'Gunnar H Heine', 'Ingo Eitel', 'Marie Evans', 'Lukas Urbanek', 'Wolfgang Winkelmayer', 'An S De Vriese'],
         'egfr-kreatinin-cystatin-c-akutny-koronarny-syndrom' => ['Cristina García Majado', 'Cristina Baldeón Conde', 'Emilio Rodrigo Calabia', 'José Enrique Pasache Chong', 'Gema Fernández Fresnedo', 'Juan Carlos Ruiz', 'José Luis Hernández'],
