@@ -1,0 +1,126 @@
+NEFRO · NEFRO.POLASCIN.NET
+Po liečbe GLP-1: ktoré postupy pomáhajú udržať nižšiu
+hmotnosť?
+Autor: MUDr. Ľubomír Polaščín · Publikované: 22.11.2026
+Symbolická ilustrácia plánovania dlhodobej liečby obezity, nie zobrazenie konkrétneho lieku alebo pacienta.
+Ukončenie semaglutidu alebo tirzepatidu nemusí znamenať ukončenie liečby obezity. Observačná
+analýza Cleveland Clinic porovnala päť ďalších postupov a najväčší pokles hmotnosti od začatia
+pôvodnej liečby odhadla pri metabolickej a bariatrickej chirurgii. Výsledok však nepochádza z
+randomizovaného porovnania a neurčuje univerzálnu stratégiu po vysadení lieku. [1, 2]
+Správa Nancy A. Melvilleovej pre Medscape otvára praktickú otázku: ako pokračovať, keď pacient pôvodnú
+injekčnú liečbu nechce alebo nemôže užívať. Pôvodná štúdia Hamleta Gasoyana a spoluautorov bola
+publikovaná v eClinicalMedicine. Nasledujúce hodnotenie vychádza z jej dostupného abstraktu a pôvodnej
+kongresovej prezentácie, nie z overenia celého publikačného textu a suplementu. [1, 2]
+Päť postupov v emulácii klinickej štúdie
+Autori použili elektronické zdravotné záznamy Cleveland Clinic z Ohia a Floridy vrátane prepojených údajov o
+výdaji liekov od januára 2021 do decembra 2025. Súbor zahŕňal 20 486 pacientov; priemerný vek bol 56,7 roka
+a priemerný index telesnej hmotnosti 38,0 kg/m². Približne dve tretiny mali diabetes 2. typu. [2, 3]
+Po najmenej troch mesiacoch pôvodnej liečby sa porovnávalo pokračovanie rovnakým liekom, prechod medzi
+semaglutidom a tirzepatidom, prechod na iný liek na obezitu, metabolická a bariatrická chirurgia alebo
+ukončenie farmakologickej a chirurgickej liečby obezity. Abstrakt definuje ukončenie lieku medzerou v jeho
+zásobe dlhšou než 90 dní. [2, 3] Semaglutid je agonista receptora pre glukagónu podobný peptid 1 (GLP-1);
+tirzepatid súčasne pôsobí na receptor GLP-1 aj na receptor pre glukózovo dependentný inzulinotropný
+polypeptid (GIP).
+Emulácia cieľovej klinickej štúdie sa snaží z observačných údajov zostaviť porovnanie podobné vopred
+definovanému experimentu. Pacienti však neboli náhodne pridelení k ďalšej liečbe. Autori použili váženie na
+1 / 3
+
+zohľadnenie meraných rozdielov, ukončenia sledovanej stratégie a dostupnosti meraní. Hlavné výsledky
+predstavujú odhad pri dodržiavaní jednotlivých postupov, teda analýzu podľa protokolu. Neopisujú jednoducho
+priemer všetkých pacientov, ktorým bol určitý postup pôvodne zvolený. [2, 3]
+Rozhoduje aj okamih, od ktorého sa meria hmotnosť
+Východiskom bola hmotnosť pri prvom výdaji semaglutidu alebo tirzepatidu. Výsledky sa hodnotili dva
+roky po vstupe do emulovanej štúdie, teda po úvodnom období liečby. Pri tomto vstupe už bola priemerná
+hmotnosť o 2,1 % nižšia než na začiatku užívania lieku. [2, 3] Nejde preto o dvojročnú zmenu počítanú od
+vysadenia ani od najnižšej dosiahnutej hmotnosti.
+Ďalší postup
+Zmena hmotnosti
+95 % interval spoľahlivosti
+Pokračovanie pôvodným liekom
+−10,9 %
+−13,1 % až −9,1 %
+Prechod medzi semaglutidom a tirzepatidom
+−16,0 %
+−19,4 % až −12,3 %
+Prechod na iný liek na obezitu
+−8,2 %
+−12,7 % až −3,0 %
+Metabolická a bariatrická chirurgia
+−28,2 %
+−36,8 % až −19,6 %
+Ukončenie liečby
+−4,0 %
+−6,3 % až −1,0 %
+Tabuľka uvádza modelové odhady zmeny od prvého výdaja pôvodného lieku do dvoch rokov po vstupe do
+emulovanej štúdie. [2] Údaj −4,0 % po ukončení liečby neznamená, že pacienti po vysadení ďalej chudli alebo
+že sa im nevracala predtým stratená hmotnosť. Na taký záver by bolo potrebné sledovať zmenu od okamihu
+vysadenia či od dosiahnutého hmotnostného minima.
+Spoločná kategória prechodu medzi oboma liekmi navyše spája dva odlišné smery. U pacientov pôvodne
+liečených semaglutidom bol prechod na tirzepatid spojený s väčším poklesom hmotnosti než pokračovanie
+semaglutidom. Pri pôvodnom tirzepatide bolo výhodnejšie pokračovanie než prechod na semaglutid. [2]
+Súhrnných 16,0 % preto nemožno interpretovať ako účinok ľubovoľnej zámeny. Ani heterogénna kategória
+iných liekov neurčuje účinnosť konkrétneho náhradného prípravku.
+Čo pridávajú štúdie po vysadení liečby
+Predĺžené sledovanie STEP 1 zahŕňalo 327 účastníkov bez diabetu. Po ukončení semaglutidu aj organizovanej
+intervencie zameranej na životosprávu sa počas ďalšieho roka vrátili približne dve tretiny predchádzajúceho
+poklesu hmotnosti. Išlo o prieskumné sledovanie vybranej podskupiny, nie o nové náhodné pridelenie pri
+vysadení. [4]
+SURMOUNT-4 poskytuje randomizované porovnanie pokračovania a vysadenia tirzepatidu u dospelých s
+obezitou alebo nadváhou a komplikáciou, bez diabetu. Po 36-týždňovej úvodnej liečbe bolo 670 účastníkov
+náhodne pridelených na pokračovanie tirzepatidu alebo placebo. Počas nasledujúcich 52 týždňov hmotnosť pri
+pokračovaní klesla o ďalších 5,5 %, kým pri placebe vzrástla o 14,0 %. Tieto percentá sa počítajú od
+randomizácie, na rozdiel od výsledkov Cleveland Clinic. [5]
+Štúdie tak odpovedajú na odlišné otázky. SURMOUNT-4 presvedčivejšie oddeľuje účinok pokračovania liečby od
+jej vysadenia. Observačná emulácia rozširuje pohľad na ďalšie postupy v klinickej praxi vrátane chirurgickej
+liečby, ale za cenu väčšej neistoty o príčinách rozdielov.
+Čo z výsledkov vyplýva pre nefrológa
+Odhad poklesu hmotnosti nepostačuje na rozhodnutie o zámene lieku u pacienta s chronickou chorobou obličiek.
+Treba rozlišovať cieľ liečby obezity, kompenzáciu diabetu a preukázané účinky konkrétneho lieku na
+kardiovaskulárne a renálne výsledky. Porovnávaná analýza tieto klinické prínosy jednotlivých následných
+postupov nepreukazuje. Nemožno z nej odvodiť, že náhrada s podobným hmotnostným účinkom zachová aj
+ochranu obličiek.
+KDIGO 2024 pri výbere agonistu receptora GLP-1 uprednostňuje prípravky s dokumentovaným
+kardiovaskulárnym prínosom. [6] Je to iné kritérium než poradie podľa poklesu hmotnosti v observačnom
+2 / 3
+
+súbore. Výsledky Cleveland Clinic neposkytujú samostatný liečebný postup pre dialyzovaných alebo
+transplantovaných pacientov ani porovnanie progresie chronickej choroby obličiek.
+Hranice porovnania
+Výber operácie, pokračovania alebo vysadenia lieku súvisí so zdravotným stavom, toleranciou, preferenciami aj
+dostupnosťou liečby. Váženie môže obmedziť vplyv zaznamenaných rozdielov, neodstraňuje však nemerané
+skreslenie. Autori prezentácie upozorňujú na nezachytené zmeny životosprávy a individuálne pripravované
+lieky; prenositeľnosť výsledkov mimo skúmaného zdravotného systému zostáva obmedzená. [3]
+Široký interval pri chirurgii zároveň pripomína neistotu odhadu. Najväčší pokles hmotnosti neznamená najlepší
+celkový pomer prínosu a rizika pre každého pacienta. Z dostupných podkladov nemožno zostaviť porovnanie
+bezpečnosti všetkých piatich postupov. Analýza tiež neoveruje postupné znižovanie dávky ani predlžovanie
+intervalov ako samostatnú stratégiu.
+Praktický prínos štúdie spočíva v rozšírení rozhovoru o ďalšej liečbe: pri ukončení pôvodného lieku existujú
+alternatívy, ich výber však nemožno riadiť iba jedným hmotnostným odhadom. Rozhodnutie musí nadväzovať na
+dôvod ukončenia, ostatné liečebné indikácie a dôkazy o účinnosti a bezpečnosti konkrétnej možnosti.
+Text je určený zdravotníckym pracovníkom. Pôvodná publikácia bola overená bibliograficky, podľa abstraktu dostupného v bibliografickej
+databáze a podľa pôvodnej prezentácie IFSO. Plný publikačný text ani suplement neboli dostupné na overenie. Číselné odhady tabuľky
+pochádzajú z abstraktu publikácie. STEP 1 a SURMOUNT-4 boli hodnotené podľa úplných abstraktov. Nejde o nové odporúčanie na vysadenie
+alebo zámenu liečby. Štúdia Cleveland Clinic uvádza podporu Mandel Accelerator Grants.
+Zdroje
+1. Nancy A. Melville. After a GLP-1: Which Exit Strategy Keeps the Weight Off? Medscape, 15. november 2026. Východisková správa.
+2. Hamlet Gasoyan, Christopher B. Boyer, Rebecca Isakoff, Nicholas J. Casacchia, Marcio L. Griebeler, W. Scott Butsch, Phuc Le,
+Bartolome Burguera, Ali Aminian, Michael B. Rothberg. Comparative effectiveness of obesity treatments after initial therapy with
+semaglutide or tirzepatide: a target trial emulation using data from Cleveland Clinic electronic health records. eClinicalMedicine.
+2026;104321. DOI: 10.1016/j.eclinm.2026.104321. Vydavateľ. Bibliografický záznam a abstrakt. Samostatný záznam PubMed pri
+kontrole 22. novembra 2026 nebol nájdený.
+3. Hamlet Gasoyan. Comparative effectiveness of MBS and other obesity therapies after initial treatment with semaglutide or
+tirzepatide: A target trial emulation. IFSO World Congress 2026, 3. september 2026. Pôvodná prezentácia.
+4. John P H Wilding, Rachel L Batterham, Melanie Davies, Luc F Van Gaal, Kristian Kandler, Katerina Konakli, Ildiko Lingvay, Barbara M
+McGowan, Tugce Kalayci Oral, Julio Rosenstock, Thomas A Wadden, Sean Wharton, Koutaro Yokote, Robert F Kushner, STEP 1
+Study Group. Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension. Diabetes
+Obes Metab. 2022;24(8):1553-1564. DOI: 10.1111/dom.14725. PubMed. Vydavateľ.
+5. Louis J Aronne, Naveed Sattar, Deborah B Horn, Harold E Bays, Sean Wharton, Wen-Yuan Lin, Nadia N Ahmad, Shuyu Zhang, Ran
+Liao, Mathijs C Bunck, Irina Jouravskaya, Madhumita A Murphy, SURMOUNT-4 Investigators. Continued Treatment With Tirzepatide
+for Maintenance of Weight Reduction in Adults With Obesity: The SURMOUNT-4 Randomized Clinical Trial. JAMA. 2024;331(1):38-
+48. DOI: 10.1001/jama.2023.24945. PubMed. Vydavateľ.
+6. Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation
+and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PubMed.
+Vydavateľ.
+Zdroj: https://nefro.polascin.net/article.php?slug=po-glp1-liecbe-udrzanie-hmotnosti · Nefro-projekt Slovensko. Obsah má informačný a vzdelávací charakter a
+nenahrádza konzultáciu s lekárom.
+3 / 3
