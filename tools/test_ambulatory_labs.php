@@ -183,4 +183,10 @@ if (function_exists('iconv')) {
 labsTestSame(null, labsRepairDosText($flow)['from'], 'Správny slovenský text sa nemení');
 labsTestSame(null, labsRepairDosText("Urea 12,5 mmol/l\n")['from'], 'ASCII text sa nemení');
 
+// Limit dĺžky riadku: počíta znaky, nie bajty, a pozná všetky konce riadkov.
+labsTestSame(0, labsLongestLineChars(''), 'Prázdny vstup nemá riadok');
+labsTestSame(9, labsLongestLineChars("Urea 12\r\nKreatinín\rK 4"), 'Najdlhší riadok v znakoch pri CRLF a CR');
+labsTestSame(true, labsLongestLineChars(str_repeat('S-Urea 18,4 mmol/l ', 300)) > LABS_MAX_LINE_CHARS, 'Príliš dlhý riadok prekročí limit');
+labsTestSame(true, labsLongestLineChars(str_repeat(str_repeat('x', 132) . "\n", 50)) <= LABS_MAX_LINE_CHARS, 'Výpis so 132 stĺpcami limit neprekročí');
+
 echo "test_ambulatory_labs: {$assertions} assertions PASS\n";

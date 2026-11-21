@@ -127,6 +127,8 @@ if ($labsPosted) {
     } elseif (mb_strlen($labsForm['labs_input'], 'UTF-8') > LABS_MAX_INPUT_CHARS || substr_count($labsForm['labs_input'], "
 ") > LABS_MAX_LINES) {
         $labsErrors[] = 'Text je príliš dlhý (najviac ' . number_format(LABS_MAX_INPUT_CHARS, 0, ',', ' ') . ' znakov a ' . LABS_MAX_LINES . ' riadkov).';
+    } elseif (labsLongestLineChars($labsForm['labs_input']) > LABS_MAX_LINE_CHARS) {
+        $labsErrors[] = 'Jeden riadok textu je príliš dlhý (najviac ' . number_format(LABS_MAX_LINE_CHARS, 0, ',', ' ') . ' znakov). Rozdeľte ho na viac riadkov.';
     }
     if ($labsWidth === false) {
         $labsErrors[] = 'Šírka riadku musí byť celé číslo od 40 do 132 znakov.';
@@ -826,7 +828,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                                 <label for="labs_separator">Oddeľovač položiek</label>
                                 <input type="text" id="labs_separator" name="labs_separator" class="form-control" maxlength="20" value="<?= htmlspecialchars($labsForm['labs_separator']) ?>">
                             </div>
-                            <small>Zástupné znaky: {nazov}, {hodnota}, {jednotka}, {priznak} (H alebo L), {ref} (referenčné rozpätie), {datum}. Oddeľovač \n znamená nový riadok. Vlastný formát a zoznam si tento prehliadač zapamätá.</small>
+                            <small>Zástupné znaky: {nazov}, {hodnota}, {jednotka}, {priznak} (H alebo L), {ref} (referenčné rozpätie), {datum}. Oddeľovač \n znamená nový riadok. Vlastný formát a zoznam si tento prehliadač zapamätá, ak ste udelili preferenčný súhlas.</small>
                         </fieldset>
 
                         <div class="form-group">

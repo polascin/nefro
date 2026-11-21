@@ -25,6 +25,13 @@ počká na pripravenosť, vykoná kontroly a odstráni iba svoj projekt vrátane
 zväzkov. MariaDB ukladá testovacie dáta do dočasnej pamäte. Žiadny port sa
 nepublikuje na hostiteľa. Nepoužívaj `docker system prune` ani cudzí Compose projekt.
 
+Docker nainštalovaný ako snap (Ubuntu) nácvik obnovy nedokončí: nevidí hostiteľský
+`/tmp`, kde vzniká syntetická záloha, a pod AppArmorom odmietne spustiť proces
+s `--security-opt no-new-privileges:true` (`exec ...: operation not permitted`).
+Integračné kontroly, lint a PHPStan v kontajneroch prebehnú, skúška obnovy skončí
+chybou `Command failed (docker run)`. Ochranné prepínače preto neodstraňuj; použi
+Docker Engine z balíka `docker-ce` alebo výsledok zapíš ako neoverený.
+
 ## Dôkaz izolácie
 
 - Build používa zoznam povolených zdrojových súborov v `.dockerignore`.

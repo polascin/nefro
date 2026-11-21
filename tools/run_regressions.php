@@ -3,6 +3,16 @@
 declare(strict_types=1);
 
 $root = dirname(__DIR__);
+// Bez týchto rozšírení testy zlyhajú zavádzajúcou chybou (napr. PDF sanitizér bez DOM
+// potichu prejde na náhradnú vetvu), preto ich chýbanie hlásime vopred a presne.
+$missingExtensions = array_values(array_filter(
+    ['dom', 'iconv', 'mbstring', 'pdo_sqlite'],
+    static fn (string $extension): bool => !extension_loaded($extension)
+));
+if ($missingExtensions !== []) {
+    fwrite(STDERR, 'Regression suite: chýbajú rozšírenia PHP: ' . implode(', ', $missingExtensions) . ".\n");
+    exit(1);
+}
 $manifest = json_decode((string) file_get_contents(__DIR__ . '/regressions.json'), true, 512, JSON_THROW_ON_ERROR);
 $discovered = array_merge(glob(__DIR__ . '/test_*.php') ?: [], glob(__DIR__ . '/test_*.mjs') ?: []);
 $discovered = array_map(static fn (string $path): string => 'tools/' . basename($path), $discovered);

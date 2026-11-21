@@ -9,8 +9,11 @@ PHAR súbory (sú v `.gitignore`, na server sa nedeployujú).
 .\tools\install-dev-tools.ps1
 ```
 
-Stiahne `phpstan.phar` + `php-cs-fixer.phar` do `tools/` a vygeneruje
-`phpstan-baseline.neon` (existujúce nálezy sa ignorujú → hlásia sa len NOVÉ chyby).
+Stiahne `phpstan.phar` + `php-cs-fixer.phar` do `tools/` vo verziách z registra
+`tools/dependencies.json` a pred uložením overí ich SHA-256. Existujúci
+`phpstan-baseline.neon` neprepisuje; nový baseline vznikne iba s prepínačom
+`-GenerateBaseline`. Pri povýšení verzie uprav `version` v registri, spusti skript
+s `-AllowHashMismatch`, over nástroje a spusti `php tools/dependency_register.php --update`.
 
 ## Každodenné použitie
 

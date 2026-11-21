@@ -214,4 +214,29 @@ assert.match(
     'fallback musí pri zobrazení bannera zrušiť inert.',
 );
 
+// Nastavenia formátu laboratórnych výsledkov sú preferenčné úložisko: zápis aj čítanie
+// iba po preferenčnom súhlase a pri jeho odvolaní sa kľúč vymaže (cookies.php, bod 1).
+const ambulatorySource = fs.readFileSync(path.join(root, 'calculator_ambulatory.js'), 'utf8');
+const labsKey = (ambulatorySource.match(/LABS_PREFS_KEY = '([^']+)'/) || [])[1];
+assert.ok(labsKey, 'LABS_PREFS_KEY sa musí dať prečítať z calculator_ambulatory.js');
+assert.ok(
+    source.includes(`localStorage.removeItem('${labsKey}')`),
+    'odvolanie preferenčného súhlasu musí vymazať nastavenia formátu laboratórnych výsledkov.',
+);
+assert.match(
+    ambulatorySource,
+    /if \(labsPrefsAllowed\(\) && [^\n]+\{\s+try \{\s+var saved = JSON\.parse\(window\.localStorage\.getItem\(LABS_PREFS_KEY\)/,
+    'čítanie nastavení laboratórnych výsledkov musí byť podmienené preferenčným súhlasom.',
+);
+assert.match(
+    ambulatorySource,
+    /addEventListener\('submit', function \(\) \{\s+if \(!labsPrefsAllowed\(\)\) \{\s+return;/,
+    'zápis nastavení laboratórnych výsledkov musí byť podmienený preferenčným súhlasom.',
+);
+assert.match(
+    ambulatorySource,
+    /labsPrefsAllowed = function \(\) \{\s+return typeof window\.npsHasConsent === 'function' && window\.npsHasConsent\('preferences'\);/,
+    'labsPrefsAllowed musí vychádzať z npsHasConsent(\'preferences\').',
+);
+
 console.log('ui-preferences: všetky testy prešli');

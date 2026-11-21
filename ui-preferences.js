@@ -477,6 +477,7 @@ function initPrivacyManager() {
                 localStorage.removeItem('nps_theme_auto');
                 localStorage.removeItem('calc_autosave');
                 localStorage.removeItem('calc_local_history');
+                localStorage.removeItem('nefro.ambulatory.labs.v1');
             } catch (e) {
                 // Prehliadač môže lokálne úložisko blokovať.
             }

@@ -301,6 +301,7 @@ def main():
                        "--routines", "--events", "--databases", *databases], environment=environment)
         return hashlib.sha256(content).hexdigest()
 
+    failure = None
     try:
         if socket_volume:
             run(["docker", "volume", "create", "--label", "nefro.restore.run=" + token, socket_volume])
@@ -475,6 +476,10 @@ def main():
         if recovery is not None:
             report["recovery_working_copy"] = recovery
         # Publish PASS only after all owned containers and tmpfs data are removed.
+    except RuntimeError as error:
+        # A container that never started also fails cleanup; keep the first, already sanitised cause.
+        failure = error
+        raise
     finally:
         cleanup_failed = False
         for name in reversed(containers):
@@ -499,7 +504,8 @@ def main():
                                         stderr=subprocess.DEVNULL, timeout=60, check=False)
                 cleanup_failed |= result.returncode != 0
         if cleanup_failed:
-            raise RuntimeError("Restore container cleanup failed; no success report was written.")
+            raise RuntimeError("Restore container cleanup failed; no success report was written."
+                               + (" First failure: " + str(failure) if failure is not None else ""))
     args.report.parent.mkdir(parents=True, exist_ok=True)
     with args.report.open("x", encoding="utf-8") as output:
         output.write(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
