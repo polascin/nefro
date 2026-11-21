@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://doi.org/10.1016/j.kint.2019.09.018",
+    "http": 200,
+    "final": "https://linkinghub.elsevier.com/retrieve/pii/S0085253819310129"
+  },
+  {
+    "url": "https://doi.org/10.1038/s41467-025-66394-4",
+    "http": 200,
+    "final": "https://www.nature.com/articles/s41467-025-66394-4?error=cookies_not_supported&code=2590f157-6716-4a2b-a2bf-326c692400d0"
+  },
+  {
+    "url": "https://doi.org/10.1053/j.ajkd.2026.05.020",
+    "http": 200,
+    "final": "https://linkinghub.elsevier.com/retrieve/pii/S0272638626010590"
+  },
+  {
+    "url": "https://doi.org/10.7759/cureus.113226",
+    "http": 403
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31706619/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/31706619/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41507124/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/41507124/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42595038/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/42595038/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42633279/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/42633279/"
+  },
+  {
+    "url": "https://www.medscape.com/viewarticle/ai-enabled-ecg-may-offer-faster-potassium-monitoring-severe-2026a10017d0",
+    "http": 200,
+    "final": "https://www.medscape.com/viewarticle/ai-enabled-ecg-may-offer-faster-potassium-monitoring-severe-2026a10017d0"
+  }
+]
