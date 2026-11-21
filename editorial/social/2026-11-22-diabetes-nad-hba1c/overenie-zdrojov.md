@@ -1,0 +1,19 @@
+# Overenie zdrojov a redakcie, 22. november 2026
+
+Východiskový komentár Medscape: Kevin Fernando, 16. november 2026. Načítaný celý verejný text, vrátane financovania a konfliktov záujmov. Štúdia je kongresová opisná analýza, nie randomizovaný dôkaz o účinku dosiahnutia cieľov. Pôvodný poster nájdený na Science Hub Novo Nordisk, príspevok EASD 2026 číslo 339, prezentovaný 1. októbra 2026. Načítané celé PDF a vizuálne skontrolované grafy i poznámky pod čiarou. Autori v publikačnom poradí: Kevin Fernando, Tariq Halasa, Fan Liu, Amine Lotfi, Torquil Watt, Eva Johnsen. Samostatná recenzovaná publikácia s DOI alebo PMID nebola identifikovaná, identifikátory sa nedopĺňajú.
+
+Primárne potvrdené počty: 387 932 nových diagnóz v rokoch 2017 až 2020; 232 516 s požadovaným sledovaním; 60 093 so všetkými meraniami po dvoch rokoch. Vekové rozmedzie 18 až 80 rokov. Zložený výsledok 5 % platí pre úplné údaje, nie pre celú kohortu. Časové okno je ±7 mesiacov, pri diagnóze v roku 2018 ±10 mesiacov. Zachovaný význam opisnej analýzy; nevymýšľa sa kauzalita, klinické príhody ani menovatele neuvedené pri jednotlivých výsledkoch.
+
+Tabuľka podľa pôvodného posteru: HbA1c 45 %, pokles hmotnosti 33 %, non-HDL cholesterol 30 %, systolický tlak 89 %, diastolický tlak 96 %, UACR 80 %. Zachované výnimky: HbA1c ≤7,0 % alebo ≤53 mmol/mol pri sulfonylureách; non-HDL ≤2,6 mmol/l pri preukázanom CVD. Všeobecné hranice nie sú vydávané za individuálne ciele pre každého pacienta. Študijný cieľ UACR je výslovne <30 mg/mmol, nie <30 mg/g a nie normálna albuminúria. Podiely chýbajúcich UACR 56 % a lipidov 42 % potvrdené posterom.
+
+Rozdiel sekundárneho komentára a posteru: Medscape spomína chýbajúce údaje o hmotnosti u 35 %, poster ukazuje 36 %. Tento nepodstatný a nevyriešený rozdiel nie je použitý v článku ani anotáciách. Hlavné publikované výsledky a definície sa opierajú o primárny poster; neúplné definície v komentári sú doplnené z jeho poznámok pod čiarou.
+
+KDIGO 2024: PMID 38490803, DOI 10.1016/j.kint.2023.10.018; kolektívny autor a bibliografia overené cez Europe PMC a oficiálny dokument dostupný v lokálnom výskumnom archíve. Kategórie albuminúrie potvrdené aj na oficiálnych odporúčaniach NICE NG203, body 1.1.12 až 1.1.14 a tabuľka 1. Aktuálnosť KDIGO overená na oficiálnej stránke: aktualizácie Diabetes 2026 a CKD 2027 sú stále návrhy, nie náhrada finálnych odporúčaní.
+
+ADA 2026, kapitola 11: PMID 41358881, DOI 10.2337/dc26-S011, plný text načítaný v PMC12690176, HTTP 200. Overené odporúčanie 11.1a pre každoročné UACR a eGFR pri diabete 2. typu, potvrdenie albuminúrie v dvoch z troch odberov počas troch až šiestich mesiacov a odporúčania 11.7a a 11.7b pre liečbu s preukázaným orgánovým prínosom. Text neuvádza dávkovanie alebo registračné indikácie konkrétnych liekov.
+
+Steno-2: PMID 12556541, DOI 10.1056/NEJMoa021778. Úplný abstrakt a všetkých šesť autorov overené cez Europe PMC: Peter Gaede, Poul Vedel, Nicolai Larsen, Gunnar V H Jensen, Hans-Henrik Parving, Oluf Pedersen. Overené 160 randomizovaných, priemerné sledovanie 7,8 roka, HR 0,47 a 95 % IS 0,24 až 0,73 pre kardiovaskulárny zložený výsledok. Bez prepočtu na absolútny prínos alebo NNT. Staršia liečebná éra a vybraná populácia výslovne uvedené.
+
+HTTP kontroly sú v link-check.json. Žiadny odkaz nevrátil 404 alebo 410; 403 u vydavateľov je ochrana prístupu, nie dôkaz neexistencie. Identita PubMed záznamov overená podľa DOI, titulu a autorov aj cez Europe PMC. Bibliografické autorstvo ADA a KDIGO zostáva kolektívne, členovia výboru sa nevydávajú za individuálnych bibliografických autorov kapitoly.
+
+Vykonaná odborná, číselná, terminologická, bibliografická a slovenská korektúra, samostatné redakčné čítanie a kontrola zachovania neistoty. Obrázky sú symbolické modely bez textu, loga a vodoznaku podľa výslovného zadania; rozmery 1600 × 1000. Kópie v požadovanom priečinku Google Disku overené SHA-256. Avíza a newsletter vypnuté.

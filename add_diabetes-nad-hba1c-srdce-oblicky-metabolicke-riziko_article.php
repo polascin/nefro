@@ -1,0 +1,62 @@
+<?php
+// Klinicky prehlad s rozlisenim dostupnosti zdrojov. Aviza ani newsletter nie su povolene.
+if (PHP_SAPI !== 'cli') {
+    require_once __DIR__ . '/auth.php';
+    requireAdmin();
+    requireAdminMutationConfirmation('Vložiť alebo aktualizovať článok');
+}
+require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
+require_once __DIR__ . '/article_publisher.php';
+$articles = [[
+    'title' => 'Diabetes nad rámec HbA1c: čo chýba pri hodnotení srdca a obličiek',
+    'slug' => 'diabetes-nad-hba1c-srdce-oblicky-metabolicke-riziko',
+    'author' => 'MUDr. Ľubomír Polaščín',
+    'published_at' => date('Y-m-d H:i:s'),
+    'is_top' => 0,
+    'excerpt' => 'Iba 5 % pacientov s úplnými údajmi splnilo šesť cieľov britskej analýzy. Čo tento výsledok znamená a prečo UACR pod 30 mg/mmol nie je normálna albuminúria.',
+    'content' => <<<'HTML'
+<figure><a href="img/diabetes-nad-hba1c-srdce-oblicky-metabolicke-riziko.webp" target="_blank" rel="noopener noreferrer"><img src="img/diabetes-nad-hba1c-srdce-oblicky-metabolicke-riziko.webp" alt="Model srdca a obličiek ako symbol spoločného hodnotenia rizika pri diabete" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Symbolická ilustrácia kardiovaskulárneho, renálneho a metabolického hodnotenia, nie nález konkrétneho pacienta.</figcaption></figure>
+<p><strong>Dobrá hodnota glykovaného hemoglobínu ešte neznamená dobre zvládnuté celkové riziko pacienta s diabetom 2. typu. Britská observačná analýza prezentovaná na EASD 2026 ukázala, že všetkých šesť sledovaných cieľov dosiahlo iba približne 5 % pacientov s úplnými údajmi. Rovnako podstatný je však rozsah chýbajúcich meraní a presná definícia každého cieľa. [1, 2]</strong></p>
+<p>Kevin Fernando v komentári pre Medscape upozorňuje na potrebu hodnotiť spolu kardiovaskulárne, renálne a metabolické riziko. [1] Kongresové údaje podporujú pozornejšie sledovanie viacerých ukazovateľov, nepreukazujú však, že ostatných 95 % pacientov dostávalo nekvalitnú starostlivosť. Ide o náročný zložený ukazovateľ: na jeho nesplnenie stačí nesplniť jedinú podmienku.</p>
+<h2>Výsledok 5 % sa netýka celej pôvodnej kohorty</h2>
+<p>Retrospektívna štúdia použila databázu britskej primárnej starostlivosti Clinical Practice Research Datalink Aurum (CPRD Aurum). Zahŕňala dospelých vo veku od 18 do 80 rokov s novým záznamom diabetu 2. typu v rokoch 2017 až 2020. Z pôvodných 387 932 osôb splnilo požiadavky sledovania 232 516. Údaje pre všetky sledované ukazovatele po dvoch rokoch boli dostupné u 60 093 osôb. Práve tejto skupiny sa týka výsledok približne 5 %. [2]</p>
+<p>Merania sa prijímali v časovom okne sedem mesiacov pred druhým výročím diagnózy alebo po ňom. Pri diagnóze v roku 2018 bolo okno rozšírené na desať mesiacov na obe strany, aby sa čiastočne zohľadnilo narušenie kontrol počas pandémie. [2] Výsledok teda nepredstavuje stav všetkých ukazovateľov zmeraných v jeden deň presne dva roky po diagnóze.</p>
+<h2>Čo sa v skutočnosti považovalo za splnený cieľ</h2>
+<p>Ciele autori upravili podľa britských odporúčaní National Institute for Health and Care Excellence (NICE). Nie sú univerzálnou zostavou cieľov pre každého pacienta. Pôvodný poster obsahuje aj výnimky, ktoré sú pri interpretácii dôležité. [2]</p>
+<div class="table-responsive" role="region" aria-label="Definície cieľov a ich dosiahnutie v kongresovej analýze" tabindex="0"><table><thead><tr><th scope="col">Ukazovateľ</th><th scope="col">Definícia použitá v štúdii</th><th scope="col">Dosiahnutie cieľa</th></tr></thead><tbody>
+<tr><th scope="row">Glykovaný hemoglobín (HbA1c)</th><td>≤6,5 % alebo ≤48 mmol/mol; pri liečbe derivátmi sulfonylurey ≤7,0 % alebo ≤53 mmol/mol</td><td>45 %</td></tr>
+<tr><th scope="row">Telesná hmotnosť</th><td>Pokles najmenej o 5 %</td><td>33 %</td></tr>
+<tr><th scope="row">Non-HDL cholesterol</th><td>Pokles najmenej o 40 % oproti najvyššej zaznamenanej hodnote; pri preukázanom kardiovaskulárnom ochorení ≤2,6 mmol/l</td><td>30 %</td></tr>
+<tr><th scope="row">Systolický krvný tlak</th><td>&lt;140 mmHg</td><td>89 %</td></tr>
+<tr><th scope="row">Diastolický krvný tlak</th><td>&lt;90 mmHg</td><td>96 %</td></tr>
+<tr><th scope="row">Pomer albumínu ku kreatinínu v moči (UACR)</th><td>&lt;30 mg/mmol</td><td>80 %</td></tr>
+</tbody></table></div>
+<p>HDL označuje lipoproteíny s vysokou hustotou; non-HDL cholesterol predstavuje celkový cholesterol po odpočítaní HDL cholesterolu. Tabuľka reprodukuje definície a zaokrúhlené podiely z kongresového posteru. [2] Nie je súborom nových liečebných odporúčaní. Samostatné hodnotenie systolického a diastolického tlaku navyše znamená, že dva zo šiestich cieľov opisujú jednu rizikovú oblasť.</p>
+<h2>UACR pod 30 mg/mmol nie je normálna albuminúria</h2>
+<p><strong>Hranicu použitú v tejto štúdii nemožno zamieňať s hranicou 30 mg/g.</strong> Podľa KDIGO je normálna až mierne zvýšená albuminúria kategórie A1 pod 3 mg/mmol. Kategória A2 zahŕňa hodnoty od 3 do 30 mg/mmol a kategória A3 hodnoty nad 30 mg/mmol. [3] Študijný cieľ UACR pod 30 mg/mmol preto zahŕňa aj pacientov so stredne zvýšenou albuminúriou.</p>
+<p>Údaj, že cieľ dosiahlo 80 %, neznamená, že 80 % malo normálnu albuminúriu alebo nemalo chronickú chorobu obličiek. Tá sa posudzuje aj podľa odhadovanej glomerulovej filtrácie (eGFR), ďalších prejavov poškodenia a ich pretrvávania. [3] Samotný poster nehodnotí tento šesťzložkový ukazovateľ ako diagnostický test na chronickú chorobu obličiek.</p>
+<h2>Chýbajúci výsledok nie je automaticky nevykonané vyšetrenie</h2>
+<p>Spomedzi 232 516 osôb, ktoré splnili požiadavky sledovania, chýbali údaje o UACR u 56 % a o non-HDL cholesterole u 42 %. [2] Taký rozsah chýbajúcich údajov obmedzuje nielen možnosť zachytiť riziko, ale aj reprezentatívnosť výsledku v skupine s úplnými záznamami. Pacienti pravidelne vyšetrovaní vo všetkých oblastiach sa môžu líšiť od ostatných.</p>
+<p>Neprítomnosť hodnoty v analyzovanej databáze však sama osebe nedokazuje, že vyšetrenie nebolo vykonané. Mohlo byť zaznamenané inde alebo mimo prijatého časového okna. Kongresové údaje tiež neoddeľujú všetky príčiny chýbania záznamov. Terapeutická zotrvačnosť je možným vysvetlením niektorých výsledkov, nie kauzálnym záverom tejto štúdie.</p>
+<h2>Ochrana orgánov sa nedá zredukovať na HbA1c</h2>
+<p>Význam súčasného ovplyvňovania viacerých rizikových faktorov nestojí iba na tejto databázovej analýze. Randomizovaná štúdia Steno-2 porovnávala intenzívnu viacfaktorovú intervenciu s vtedajšou štandardnou starostlivosťou u 160 pacientov s diabetom 2. typu a zvýšeným vylučovaním albumínu do moču. Po priemernom sledovaní 7,8 roka bol pomer hazardov pre kardiovaskulárny zložený výsledok 0,47, s 95 % intervalom spoľahlivosti od 0,24 do 0,73. [4]</p>
+<p>Steno-2 poskytuje dôkaz o prínose komplexnej intervencie, nie o samostatnom účinku každého cieľa. Išlo o malú, vybranú populáciu a staršiu liečebnú éru. Jej výsledok nemožno mechanicky preniesť na dnešnú britskú kohortu ani použiť na výpočet počtu odvrátených príhod pri splnení všetkých šiestich kongresových kritérií.</p>
+<p>Aktuálne štandardy American Diabetes Association (ADA) 2026 odporúčajú u všetkých pacientov s diabetom 2. typu aspoň raz ročne posúdiť UACR aj eGFR, nezávisle od spôsobu liečby. Zvýšenú albuminúriu treba hodnotiť s ohľadom na biologickú variabilitu a prechodné príčiny; pred jej klasifikáciou majú byť abnormálne dva z troch odberov v období troch až šiestich mesiacov. [5]</p>
+<p>Tieto štandardy zároveň odporúčajú pri diabete 2. typu a chronickej chorobe obličiek liečbu s preukázaným renálnym a kardiovaskulárnym prínosom, vrátane inhibítorov sodíkovo-glukózového kotransportéra 2 (SGLT2) a agonistov receptora pre glukagónu podobný peptid 1 (GLP-1) podľa príslušných podmienok. [5] Dosiahnutý HbA1c preto nemôže sám rozhodnúť, či je ochrana obličiek dostatočná. Tento článok neurčuje výber konkrétneho prípravku ani dávkovanie.</p>
+<h2>Čo si odniesť z kongresovej analýzy</h2>
+<p>Pre nefrologickú a internistickú kontrolu je užitočnejšie vedieť, ktorý rizikový faktor nie je vyšetrený alebo ovplyvnený, než pacienta iba zaradiť medzi tých, ktorí splnili alebo nesplnili zložený cieľ. Hodnota HbA1c patrí do spoločného hodnotenia s krvným tlakom, lipidmi, hmotnosťou, albuminúriou a filtráciou. Ciele pritom musia zohľadniť riziko hypoglykémie, pridružené choroby, liečebnú záťaž a preferencie pacienta.</p>
+<p>Poster je opisná observačná analýza bez podrobných výsledkov klinických príhod. Nepreukazuje príčiny nedosiahnutia cieľov, účinnosť konkrétnej zmeny organizácie starostlivosti ani optimálny cieľ pre každého jednotlivca. Výsledok 5 % je podnetom na presnejšie hodnotenie údajov a starostlivosti, nie mierou zlyhania pacientov alebo praktických lekárov.</p>
+<hr><p><small><em>Text je určený zdravotníckym pracovníkom. Kongresová štúdia bola overená podľa pôvodného posteru EASD 2026 vrátane definícií a poznámok pod čiarou. Samostatná recenzovaná plná publikácia tejto analýzy nebola pri rešerši identifikovaná. Steno-2 bolo hodnotené podľa abstraktu, ADA 2026 podľa plného textu a KDIGO 2024 podľa oficiálneho dokumentu. Medscape uvádza financovanie štúdie spoločnosťou Novo Nordisk; päť zo šiestich autorov posteru má afiliáciu k tejto spoločnosti. Kevin Fernando deklaruje finančné vzťahy s viacerými farmaceutickými a technologickými spoločnosťami.</em></small></p>
+<h2>Zdroje</h2><ol><li><small><em>Kevin Fernando. Beyond A1c: Are We Missing the Bigger Picture in Type 2 Diabetes? Medscape, 16. november 2026. <a href="https://www.medscape.com/viewarticle/beyond-a1c-are-we-missing-bigger-picture-type-2-diabetes-2026a10016lh" target="_blank" rel="noopener noreferrer">Východiskový komentár</a>.</em></small></li><li><small><em>Kevin Fernando, Tariq Halasa, Fan Liu, Amine Lotfi, Torquil Watt, Eva Johnsen. Are people living with type 2 diabetes in the UK reaching guideline-recommended treatment targets two years after diagnosis? EASD Annual Meeting 2026, Miláno, 1. október 2026, kongresový príspevok 339. <a href="https://sciencehub.novonordisk.com/congresses/easd2026/fernando.html" target="_blank" rel="noopener noreferrer">Kongresový materiál</a>. <a href="https://sciencehub.novonordisk.com/content/dam/sciencehub/global/en/congresses-and-scientific-publications/congresses/easd2026/fernando/images/fernando-eposter-01oct2026.pdf" target="_blank" rel="noopener noreferrer">Pôvodný poster</a>. Samostatný DOI ani PMID neboli overené.</em></small></li><li><small><em>Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: <a href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank" rel="noopener noreferrer">10.1016/j.kint.2023.10.018</a>. <a href="https://pubmed.ncbi.nlm.nih.gov/38490803/" target="_blank" rel="noopener noreferrer">PubMed</a>. <a href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank" rel="noopener noreferrer">Vydavateľ</a>.</em></small></li><li><small><em>Peter Gaede, Pernille Vedel, Nicolai Larsen, Gunnar V H Jensen, Hans-Henrik Parving, Oluf Pedersen. Multifactorial intervention and cardiovascular disease in patients with type 2 diabetes. N Engl J Med. 2003;348(5):383-393. DOI: <a href="https://doi.org/10.1056/nejmoa021778" target="_blank" rel="noopener noreferrer">10.1056/nejmoa021778</a>. <a href="https://pubmed.ncbi.nlm.nih.gov/12556541/" target="_blank" rel="noopener noreferrer">PubMed</a>. <a href="https://doi.org/10.1056/nejmoa021778" target="_blank" rel="noopener noreferrer">Vydavateľ</a>.</em></small></li><li><small><em>American Diabetes Association Professional Practice Committee for Diabetes. 11. Chronic Kidney Disease and Risk Management: Standards of Care in Diabetes-2026. Diabetes Care. 2026;49(Suppl 1):S246-S260. DOI: <a href="https://doi.org/10.2337/dc26-s011" target="_blank" rel="noopener noreferrer">10.2337/dc26-s011</a>. <a href="https://pubmed.ncbi.nlm.nih.gov/41358881/" target="_blank" rel="noopener noreferrer">PubMed</a>. <a href="https://doi.org/10.2337/dc26-s011" target="_blank" rel="noopener noreferrer">Vydavateľ</a>.</em></small></li></ol>
+HTML,
+]];
+$result = upsertArticles($pdo, $articles, 'odborne', [
+    'enqueue_newsletter' => false,
+    'regenerate_pdf' => true,
+    'log_prefix' => 'add_diabetes_nad_hba1c',
+]);
+echo json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . PHP_EOL;
+if (!empty($result['errors'])) {
+    exit(1);
+}

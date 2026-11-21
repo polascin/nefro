@@ -1,0 +1,45 @@
+[
+  {
+    "url": "https://doi.org/10.1016/j.kint.2023.10.018",
+    "http": 200,
+    "final": "https://linkinghub.elsevier.com/retrieve/pii/S0085253823007664"
+  },
+  {
+    "url": "https://doi.org/10.1056/nejmoa021778",
+    "http": 403
+  },
+  {
+    "url": "https://doi.org/10.2337/dc26-s011",
+    "http": 403
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12556541/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/12556541/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38490803/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/38490803/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41358881/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/41358881/"
+  },
+  {
+    "url": "https://sciencehub.novonordisk.com/congresses/easd2026/fernando.html",
+    "http": 200,
+    "final": "https://sciencehub.novonordisk.com/congresses/easd2026/fernando.html"
+  },
+  {
+    "url": "https://sciencehub.novonordisk.com/content/dam/sciencehub/global/en/congresses-and-scientific-publications/congresses/easd2026/fernando/images/fernando-eposter-01oct2026.pdf",
+    "http": 200,
+    "final": "https://sciencehub.novonordisk.com/content/dam/sciencehub/global/en/congresses-and-scientific-publications/congresses/easd2026/fernando/images/fernando-eposter-01oct2026.pdf"
+  },
+  {
+    "url": "https://www.medscape.com/viewarticle/beyond-a1c-are-we-missing-bigger-picture-type-2-diabetes-2026a10016lh",
+    "http": 200,
+    "final": "https://www.medscape.com/viewarticle/beyond-a1c-are-we-missing-bigger-picture-type-2-diabetes-2026a10016lh"
+  }
+]
