@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:asundexian&limit=1",
+    "http": 200,
+    "final": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:asundexian&limit=1"
+  },
+  {
+    "url": "https://doi.org/10.1007/s40262-024-01435-7",
+    "http": 200,
+    "final": "https://link.springer.com/article/10.1007/s40262-024-01435-7?error=cookies_not_supported&code=9598e682-97fb-48a9-b689-a3e487976f2d"
+  },
+  {
+    "url": "https://doi.org/10.1056/nejmoa2407105",
+    "http": 403
+  },
+  {
+    "url": "https://doi.org/10.1056/nejmoa2513880",
+    "http": 403
+  },
+  {
+    "url": "https://labeling.bayerhealthcare.com/html/products/pi/Sunharbo_PI.pdf",
+    "http": 200,
+    "final": "https://labeling.bayerhealthcare.com/html/products/pi/Sunharbo_PI.pdf"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39225267/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/39225267/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39511105/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/39511105/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41985132/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/41985132/"
+  },
+  {
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk",
+    "http": 200,
+    "final": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk"
+  },
+  {
+    "url": "https://www.medscape.com/viewarticle/fda-approves-first-class-asundexian-stroke-prevention-2026a10016yr",
+    "http": 200,
+    "final": "https://www.medscape.com/viewarticle/fda-approves-first-class-asundexian-stroke-prevention-2026a10016yr"
+  }
+]

@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'asundexian-fda-sekundarna-prevencia-mozgovej-prihody' => ['Megan Brooks'],
         'diabetes-nad-hba1c-srdce-oblicky-metabolicke-riziko' => ['Kevin Fernando'],
         'po-glp1-liecbe-udrzanie-hmotnosti' => ['Nancy A. Melville'],
         'asn-2026-glomerularne-choroby-predbezne-vysledky' => ['Brad H. Rovin'],
