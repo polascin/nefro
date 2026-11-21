@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'asn-2026-glomerularne-choroby-predbezne-vysledky' => ['Brad H. Rovin'],
         'asn-2026-iga-nefropatia-komplement-klinicka-prax' => ['Jeffrey M. Turner'],
         'looksmaxxing-mladi-muzi-rizika-klinicky-rozhovor' => ['Alison Palkhivala'],
         'dlhsi-spanok-diabetes-albuminuria-kohorta' => ['Batya Swift Yasgur'],
