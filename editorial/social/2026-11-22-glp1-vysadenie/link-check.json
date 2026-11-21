@@ -1,0 +1,57 @@
+[
+  {
+    "url": "https://doi.org/10.1001/jama.2023.24945",
+    "http": 403,
+    "limit": "access protection"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.eclinm.2026.104321",
+    "http": 200,
+    "final": "https://linkinghub.elsevier.com/retrieve/pii/S2589537026005742"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.kint.2023.10.018",
+    "http": 200,
+    "final": "https://linkinghub.elsevier.com/retrieve/pii/S0085253823007664"
+  },
+  {
+    "url": "https://doi.org/10.1111/dom.14725",
+    "http": 403,
+    "limit": "access protection"
+  },
+  {
+    "url": "https://openalex.org/W7227856628",
+    "http": 200,
+    "final": "https://openalex.org/works/W7227856628"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35441470/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/35441470/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38078870/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/38078870/"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38490803/",
+    "http": 203,
+    "final": "https://pubmed.ncbi.nlm.nih.gov/38490803/"
+  },
+  {
+    "url": "https://www.ifso.com/presentations/September-3-2026/comparative-effectiveness-of-mbs-and-other-obesity-therapies-after-initial-treatment-with-semaglutide-or-tirzepatide-a-target-trial-emulation-gasoyan-ifso-2026-slides.pdf",
+    "http": 200,
+    "final": "https://www.ifso.com/presentations/September-3-2026/comparative-effectiveness-of-mbs-and-other-obesity-therapies-after-initial-treatment-with-semaglutide-or-tirzepatide-a-target-trial-emulation-gasoyan-ifso-2026-slides.pdf"
+  },
+  {
+    "url": "https://www.medscape.com/viewarticle/after-glp-1-which-exit-strategy-keeps-weight-2026a10018gh",
+    "http": 200,
+    "final": "https://www.medscape.com/viewarticle/after-glp-1-which-exit-strategy-keeps-weight-2026a10018gh"
+  },
+  {
+    "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00574-2/fulltext",
+    "http": 403,
+    "limit": "access protection"
+  }
+]
