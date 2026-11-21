@@ -570,8 +570,12 @@
             });
         };
 
-        // Vlastný výber a formát si pamätá len tento prehliadač (pohodlie, nie údaje pacienta).
-        if (labsForm.getAttribute('data-labs-posted') !== '1') {
+        // Vlastný výber a formát si pamätá len tento prehliadač (pohodlie, nie údaje pacienta),
+        // a to iba po preferenčnom súhlase, rovnako ako ostatné nastavenia v localStorage.
+        var labsPrefsAllowed = function () {
+            return typeof window.npsHasConsent === 'function' && window.npsHasConsent('preferences');
+        };
+        if (labsPrefsAllowed() && labsForm.getAttribute('data-labs-posted') !== '1') {
             try {
                 var saved = JSON.parse(window.localStorage.getItem(LABS_PREFS_KEY) || 'null');
                 if (saved && typeof saved === 'object') {
@@ -596,6 +600,9 @@
             }
         }
         labsForm.addEventListener('submit', function () {
+            if (!labsPrefsAllowed()) {
+                return;
+            }
             try {
                 var prefs = {};
                 LABS_PREF_FIELDS.forEach(function (name) {

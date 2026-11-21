@@ -23,7 +23,7 @@ function Test-TextFilesEncoding {
 		$files = foreach ($relativePath in $trackedAndUntracked) {
 			$extension = [System.IO.Path]::GetExtension($relativePath).ToLowerInvariant()
 			if ($allowedExtensions -contains $extension) {
-				Get-Item -LiteralPath (Join-Path $RootPath $relativePath)
+				Get-Item -LiteralPath (Join-Path $RootPath $relativePath) -Force
 			}
 		}
 	} else {

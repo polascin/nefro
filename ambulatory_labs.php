@@ -16,6 +16,9 @@ require_once __DIR__ . '/calculator_ambulatory_logic.php';
 
 const LABS_MAX_INPUT_CHARS = 100000;
 const LABS_MAX_LINES = 3000;
+// Rozbor jedného riadku rastie s jeho dĺžkou rýchlejšie než lineárne; výpis z Nefrisu
+// má najviac 132 znakov, súvislý text v správe niekoľko stoviek.
+const LABS_MAX_LINE_CHARS = 4000;
 const LABS_MAX_UNPARSED = 30;
 
 /**
@@ -586,6 +589,19 @@ function labsParseFlowLine(array $tokens, array $refs, ?string $date): array
     }
 
     return $items;
+}
+
+/**
+ * Dĺžka najdlhšieho riadku vstupu v znakoch (konce riadkov LF, CRLF aj CR).
+ */
+function labsLongestLineChars(string $text): int
+{
+    $longest = 0;
+    foreach (preg_split('/\r\n?|\n/', $text) ?: [] as $line) {
+        $longest = max($longest, mb_strlen($line, 'UTF-8'));
+    }
+
+    return $longest;
 }
 
 /**
