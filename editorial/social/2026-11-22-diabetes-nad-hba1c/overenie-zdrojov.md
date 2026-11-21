@@ -12,7 +12,7 @@ KDIGO 2024: PMID 38490803, DOI 10.1016/j.kint.2023.10.018; kolektívny autor a b
 
 ADA 2026, kapitola 11: PMID 41358881, DOI 10.2337/dc26-S011, plný text načítaný v PMC12690176, HTTP 200. Overené odporúčanie 11.1a pre každoročné UACR a eGFR pri diabete 2. typu, potvrdenie albuminúrie v dvoch z troch odberov počas troch až šiestich mesiacov a odporúčania 11.7a a 11.7b pre liečbu s preukázaným orgánovým prínosom. Text neuvádza dávkovanie alebo registračné indikácie konkrétnych liekov.
 
-Steno-2: PMID 12556541, DOI 10.1056/NEJMoa021778. Úplný abstrakt a všetkých šesť autorov overené cez Europe PMC: Peter Gaede, Poul Vedel, Nicolai Larsen, Gunnar V H Jensen, Hans-Henrik Parving, Oluf Pedersen. Overené 160 randomizovaných, priemerné sledovanie 7,8 roka, HR 0,47 a 95 % IS 0,24 až 0,73 pre kardiovaskulárny zložený výsledok. Bez prepočtu na absolútny prínos alebo NNT. Staršia liečebná éra a vybraná populácia výslovne uvedené.
+Steno-2: PMID 12556541, DOI 10.1056/NEJMoa021778. Úplný abstrakt a všetkých šesť autorov overené cez Europe PMC: Peter Gaede, Pernille Vedel, Nicolai Larsen, Gunnar V H Jensen, Hans-Henrik Parving, Oluf Pedersen. Overené 160 randomizovaných, priemerné sledovanie 7,8 roka, HR 0,47 a 95 % IS 0,24 až 0,73 pre kardiovaskulárny zložený výsledok. Bez prepočtu na absolútny prínos alebo NNT. Staršia liečebná éra a vybraná populácia výslovne uvedené.
 
 HTTP kontroly sú v link-check.json. Žiadny odkaz nevrátil 404 alebo 410; 403 u vydavateľov je ochrana prístupu, nie dôkaz neexistencie. Identita PubMed záznamov overená podľa DOI, titulu a autorov aj cez Europe PMC. Bibliografické autorstvo ADA a KDIGO zostáva kolektívne, členovia výboru sa nevydávajú za individuálnych bibliografických autorov kapitoly.
 

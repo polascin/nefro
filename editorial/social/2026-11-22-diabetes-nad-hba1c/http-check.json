@@ -1,0 +1,12 @@
+[
+  {
+    "page": "article",
+    "http": 200,
+    "slug": true
+  },
+  {
+    "page": "home",
+    "http": 200,
+    "slug": true
+  }
+]
