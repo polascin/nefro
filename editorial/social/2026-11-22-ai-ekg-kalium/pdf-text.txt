@@ -1,0 +1,105 @@
+NEFRO · NEFRO.POLASCIN.NET
+AI-EKG pri ťažkej hypokaliémii: skorší odhad, nie náhrada
+laboratória
+Autor: MUDr. Ľubomír Polaščín · Publikované: 22.11.2026
+Symbolická ilustrácia EKG a laboratórnej kontroly kaliémie, nie diagnostický záznam ani vyšetrenie konkrétneho pacienta.
+Odhad kaliémie z elektrokardiogramu pomocou umelej inteligencie môže počas liečby ťažkej
+hypokaliémie priniesť skoršiu informáciu než laboratórium. V retrospektívnej štúdii 191 pacientov
+bol výsledok dostupný priemerne o 52,5 minúty skôr. Ide však o odhad zo záznamu elektrickej
+aktivity srdca, nie o priame meranie draslíka ani o overenú náhradu odberov pri rozhodovaní o
+substitúcii. [1, 2]
+Správa Nancy A. Melvilleovej pre Medscape vychádza z práce publikovanej v American Journal of Kidney
+Diseases. Autori skúmali, či elektrokardiografia s podporou umelej inteligencie (AI-EKG) zachytáva zmeny
+sérového draslíka počas jeho dopĺňania. Pre klinickú prax je dôležité rozlíšiť schopnosť sledovať trend, presnosť
+konkrétnej hodnoty a prínos pre pacienta. Tieto otázky nie sú totožné.
+Koho štúdia zahŕňala
+Multicentrická retrospektívna kohorta pochádzala z troch výučbových nemocníc na Taiwane a zahŕňala obdobie
+od septembra 2019 do augusta 2024. Zaradených bolo 191 dospelých s laboratórnou kaliémiou ≤2,5 mmol/l,
+súčasným odhadom AI-EKG pod 3,5 mmol/l a najmenej jednou následnou dvojicou meraní počas 24 hodín od
+začatia dopĺňania draslíka. [2]
+Podmienkou zaradenia teda bol aj nízky vstupný odhad AI-EKG. Výsledky neukazujú, ako systém zachytí
+všetkých pacientov s ťažkou hypokaliémiou vrátane tých, u ktorých by vstupný odhad vyzeral normálne.
+Požiadavka následných párových meraní navyše vytvára možnosť výberového skreslenia.
+U 156 pacientov autori klasifikovali chronický deficit draslíka a u 35 akútny presun draslíka medzi
+kompartmentmi. V prvej skupine patrili k častým príčinám gastrointestinálne ochorenia a diuretiká, v druhej
+tyreotoxická periodická paralýza. [2] Táto odlišnosť mechanizmu je podstatná pre interpretáciu zmien kaliémie
+1 / 3
+
+aj odpovede modelu.
+Dobrá korelácia, ale iná otázka než presnosť jednotlivej hodnoty
+Koeficient korelácie opakovaných meraní medzi laboratórnou kaliémiou a odhadom AI-EKG dosiahol 0,847, s 95
+% intervalom spoľahlivosti od 0,81 do 0,88; p <0,001. Korelácia bola slabšia pri chronickom deficite než pri
+akútnom presune draslíka, s p pre interakciu <0,0001. [2]
+Pri rozlišovaní laboratórnej kaliémie pod 3,5 mmol/l bola plocha pod krivkou vzťahu citlivosti a falošnej pozitivity,
+označovaná AUROC, 0,920, s 95 % intervalom spoľahlivosti od 0,863 do 0,961. [2] Táto hodnota neznamená, že
+systém určí presnú koncentráciu draslíka správne v 92 % prípadov. Vyjadruje schopnosť rozlišovať kategórie
+naprieč rozhodovacími prahmi.
+Silná korelácia môže existovať aj pri systematickej odchýlke alebo klinicky neprijateľnej chybe jednotlivého
+odhadu. Pri rozhodovaní o zameniteľnosti by preto bolo potrebné hodnotiť aj veľkosť odchýlky, medze zhody a
+chyby v kritických koncentráciách. Samotné čísla korelácie a AUROC na taký záver nestačia. Autori použili aj
+Blandovu-Altmanovu analýzu; dostupný abstrakt však neposkytuje jej úplné číselné výsledky. [2]
+Čo znamená výsledok dostupný o 52,5 minúty skôr
+Časový rozdiel opisuje skoršiu dostupnosť odhadu AI-EKG oproti laboratórnemu výsledku v skúmanom
+pracovnom postupe. [2] Neznamená, že samotný algoritmus potrebuje na výpočet 52,5 minúty, ani že by v
+každom laboratóriu ušetril rovnaký čas. Prínos závisí aj od dostupnosti EKG a odberov, transportu vzoriek,
+laboratórneho spracovania a oznámenia výsledku.
+Autori opisujú aj dvoch pacientov, u ktorých AI-EKG zachytilo následnú hyperkaliémiu pred laboratórnym
+potvrdením. [2] Ide o klinicky zaujímavé pozorovania, nie o samostatnú validáciu citlivosti systému pre
+nebezpečný vzostup kaliémie. Štúdia nepreukázala, že by použitie odhadu znížilo počet arytmií, úmrtí alebo
+odberov.
+Deficit a redistribúcia vyžadujú odlišné uvažovanie
+Nízka sérová koncentrácia nemusí vždy znamenať rovnaký celkový deficit draslíka. Pri redistribúcii sa mení jeho
+rozdelenie medzi bunkami a extracelulárnym priestorom, kým pri stratách klesá aj množstvo draslíka v
+organizme. Konferenčný dokument Kidney Disease: Improving Global Outcomes (KDIGO) o poruchách kaliémie
+zdôrazňuje význam klinického kontextu pri určovaní príčiny hypokaliémie. [3]
+V skúmanej kohorte sa kaliémia pri akútnom presune upravovala rýchlejšie a AI-EKG malo v tejto skupine lepšie
+výsledky. [2] To neznamená, že model sám spoľahlivo stanoví príčinu hypokaliémie alebo vypočíta potrebnú
+dávku. Rozdiely medzi skupinami môžu súvisieť aj s pridruženými chorobami a liekmi.
+Pre nefrológa zostávajú podstatné renálna funkcia, mechanizmus strát či presunu a sprievodná liečba. Táto
+štúdia neposkytuje osobitne overený postup substitúcie pre pacientov s akútnym poškodením obličiek,
+pokročilou chronickou chorobou obličiek alebo pri dialýze. Z výsledku vo vybranej kohorte nemožno odvodiť
+rovnakú presnosť vo všetkých týchto situáciách.
+Diagnostický výsledok treba overiť aj v klinickom pracovnom postupe
+Randomizované údaje o upozorneniach AI-EKG už existujú, hoci skúmajú inú otázku než sledovanie substitúcie.
+V pragmatickej štúdii bolo randomizovaných 70 lekárov urgentného príjmu a hodnotená starostlivosť o 14 989
+pacientov. Upozornenia v celom súbore štatisticky významne nezvýšili mieru liečby hyperkaliémie ani
+hypokaliémie počas prvých troch hodín. U pacientov, u ktorých AI upozornila na riziko hyperkaliémie, sa však
+liečba hyperkaliémie začínala častejšie počas sledovaného trojhodinového okna. Tento výsledok nemožno
+preniesť na všetkých pacientov ani na presné riadenie substitúcie. [4]
+Systematický prehľad z roku 2026 navyše poukazuje na rozdielne rozhodovacie prahy, spôsoby validácie a
+vykazovania výsledkov, ako aj na časté riziko skreslenia. [5] Výsledok konkrétneho modelu preto nie je
+vlastnosťou každého systému označeného ako AI-EKG. Prospektívne overenie musí posúdiť aj to, ako lekári
+reagujú na nesúlad odhadu s laboratóriom a či upozornenia vedú k lepším klinickým výsledkom.
+Východisková štúdia má popri retrospektívnom dizajne nejednotné liečebné postupy, obmedzené podrobnosti o
+2 / 3
+
+nemocničnej medikácii a výber pacientov podľa dostupných následných meraní. [2] Je preto dôkazom sľubnej
+možnosti doplniť sledovanie kaliémie, nie dôkazom bezpečného nahradenia laboratórneho monitorovania. Skorší
+odhad môže upozorniť na potrebu kontroly; rozhodnutie o liečbe musí zostať opreté o celý klinický stav a
+overené meranie.
+Text je určený zdravotníckym pracovníkom. Hlavná štúdia bola overená podľa úplného abstraktu a bibliografických metadát; plný text ani
+suplement neboli dostupné na overenie. Preto sa neuvádzajú neoverené podrobnosti Blandovej-Altmanovej analýzy, architektúry modelu ani
+presné hodnoty jednotlivých kazuistík. Randomizovaná štúdia upozornení bola overená podľa plného textu, dokument KDIGO a systematický
+prehľad podľa abstraktov. Článok neuvádza dávkovací protokol ani nepovažuje skúmaný model za univerzálne validovanú pomôcku.
+Medscape uvádza podporu hlavnej práce nemocničným výskumným fondom a neprítomnosť relevantných finančných záujmov autorov.
+Zdroje
+1. Nancy A. Melville. AI-Enabled ECG May Offer Faster Potassium Monitoring in Severe Hypokalemia. Medscape, 12. november 2026.
+Východisková správa.
+2. Jhao-Jhuang Ding, Chin Lin, Wen-I Liao, Chen-Yi Liao, Wen-Fang Chiang, Chien-Chou Chen, Min-Hua Tseng, Chin-Sheng Lin, Shun-
+Neng Hsu, Chih-Chien Sung, Shih-Hua Lin. Artificial Intelligence-Enabled Electrocardiography for Monitoring Serum Potassium
+Dynamics in Patients With Severe Hypokalemia. Am J Kidney Dis. 2026;88(5):715-724.e1. DOI: 10.1053/j.ajkd.2026.05.020.
+PubMed. Vydavateľ.
+3. Catherine M Clase, Juan-Jesus Carrero, David H Ellison, Morgan E Grams, Brenda R Hemmelgarn, Meg J Jardine, Csaba P Kovesdy,
+Gregory A Kline, Gregor Lindner, Gregorio T Obrador, Biff F Palmer, Michael Cheung, David C Wheeler, Wolfgang C Winkelmayer,
+Roberto Pecoits-Filho, Conference Participants. Potassium homeostasis and management of dyskalemia in kidney diseases:
+conclusions from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference. Kidney Int. 2020;97(1):42-61.
+DOI: 10.1016/j.kint.2019.09.018. PubMed. Vydavateľ.
+4. Chin Lin, Chin-Sheng Lin, Sy-Jou Chen, Shi-Hung Tsai, Chih-Chien Sung, Chien-Chou Chen, Yu-Juei Hsu, Yi-Jen Hung, Shih-Hua Lin.
+AI-enabled electrocardiogram alert for potassium imbalance treatment: a pragmatic randomized controlled trial. Nat Commun.
+2026;17(1):159. DOI: 10.1038/s41467-025-66394-4. PubMed. Vydavateľ.
+5. Baldeep Kaur, Guntas Singh Gill, Kiranpreet Kaur, Ankur Chaudhary, Ashutosh Garg. Artificial Intelligence-Enabled
+Electrocardiography for Potassium Abnormality Detection and Estimation: A Systematic Review. Cureus. 2026;18(7):e113226. DOI:
+10.7759/cureus.113226. PubMed. Vydavateľ.
+Zdroj: https://nefro.polascin.net/article.php?slug=ai-ekg-monitorovanie-tazkej-hypokaliemie · Nefro-projekt Slovensko. Obsah má informačný a vzdelávací charakter a
+nenahrádza konzultáciu s lekárom.
+3 / 3
