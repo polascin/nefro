@@ -97,10 +97,14 @@ ServerSignature Off
     RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|DEBUG|CONNECT)$
     RewriteRule ^ - [F,L]
 
-    # Blokovanie .git, scratch, hooks, tools, .vscode, .kilo, .trunk adresárov
+    # Blokovanie .git, scratch, hooks, tools, editorial, state, .vscode, .kilo, .trunk adresárov
     # (.well-known zámerne NIE je v zozname — hostí tdmrep.json, ktorý musí
     # byť verejne čitateľný, inak je výhrada práv bezzubá.)
-    RewriteRule ^(\.git|scratch|hooks|tools|\.vscode|\.kilo|\.trunk)(/.*)?$ - [F,L]
+    # editorial/ = interné redakčné doklady (snímky účtov na sociálnych sieťach,
+    # kontroly zdrojov); nenasadzuje sa, pravidlo kryje aj skôr nahrané súbory.
+    # Nový interný adresár pridaj sem aj do hooks/deploy-ignore.txt a .deployignore
+    # (stráži tools/test_internal_dirs_deny.php).
+    RewriteRule ^(\.git|scratch|hooks|tools|editorial|state|\.vscode|\.kilo|\.trunk)(/.*)?$ - [F,L]
 
     # Defense-in-depth pre runtime dáta a interný archív avatarov. Oba
     # adresáre majú aj vlastný .htaccess, no koreňové pravidlo ich chráni

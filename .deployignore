@@ -39,6 +39,7 @@ phpstan.neon.dist
 phpstan-baseline.neon
 pyproject.toml
 scratch
+editorial
 *.ps1
 sync_article_pdfs.sh
 tools

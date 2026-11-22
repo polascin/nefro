@@ -4,6 +4,7 @@
 !/*.css
 !/robots.txt
 !/.htaccess
+!/.deployignore
 !/phpstan.neon.dist
 !/phpstan-baseline.neon
 !/assets/

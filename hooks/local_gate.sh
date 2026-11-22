@@ -19,6 +19,17 @@ REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || {
 cd "$REPO_ROOT" || exit 1
 
 PHP_BIN=${NEFRO_PHP_BIN:-php}
+
+# Rozšírenia PHP mimo systémového conf.d (napr. dom a pdo_sqlite rozbalené v domovskom
+# adresári) sa nastavujú pre každý počítač zvlášť:
+#   git config nefro.phpIniScanDir "/etc/php/8.5/cli/conf.d:$HOME/.local/lib/nefro-php-ext/conf.d"
+# Hook spustený z `git merge` totiž nededí premenné z interaktívnej relácie.
+if [[ -z ${PHP_INI_SCAN_DIR:-} ]]; then
+	GATE_SCAN_DIR=$(git config --get nefro.phpIniScanDir 2>/dev/null || true)
+	if [[ -n $GATE_SCAN_DIR ]]; then
+		export PHP_INI_SCAN_DIR=$GATE_SCAN_DIR
+	fi
+fi
 if ! command -v "$PHP_BIN" >/dev/null 2>&1; then
 	echo "[gate] Chýba PHP ($PHP_BIN); bez overenia sa nenasadzuje." >&2
 	exit 1

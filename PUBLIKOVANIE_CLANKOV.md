@@ -70,6 +70,13 @@ poľom `category` a tým, kde sú vypísané.
    `?? '(bez titulu)'` nad známym literálovým poľom, odstráň ho v danom súbore;
    pri neistom tvare poľa ho zachovaj. Chybu neopravuj automatickým rozšírením
    ani regenerovaním `phpstan-baseline.neon`.
+   Štýl over ešte pred prvým commitom:
+   `php tools/php-cs-fixer.phar fix --dry-run --diff add_<slug>_article.php`
+   (častá odchýlka: chýbajúci prázdny riadok za `<?php` pred komentárom `//`).
+   Po zverejnení by oprava štýlu pri nasadení spustila produkčný UPSERT článku.
+   Redakčné doklady (snímky príspevkov, kontroly zdrojov, `posts.json`) patria do
+   `editorial/`; adresár sa nenasadzuje a `.htaccess` ho zamieta. Nedávaj doň nič,
+   čo má byť verejne dostupné, a obrázky článku ukladaj iba do `img/`.
 7. **Commit** (post-commit hook nahrá SFTP na produkciu):
    `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
 8. **Spusti na serveri** cez SSH (vloží do DB + podľa skriptu prípadne PDF):
