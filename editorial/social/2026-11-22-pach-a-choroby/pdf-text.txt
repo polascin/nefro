@@ -1,0 +1,109 @@
+NEFRO · NEFRO.POLASCIN.NET
+Prchavé biomarkery v moči a dychu: čo už vieme o
+diagnostike z pachu
+Autor: MUDr. Ľubomír Polaščín · Publikované: 22.11.2026
+Symbolická ilustrácia laboratórneho výskumu prchavých látok, nie fotografia konkrétneho testu alebo pacienta.
+Prchavé látky v moči, vydychovanom vzduchu a kožnom maze môžu niesť informáciu o
+metabolizme, infekcii či nádore. Výskum už dokáže rozlišovať niektoré skupiny pacientov podľa ich
+chemického profilu. To však ešte neznamená spoľahlivú diagnózu z telesného pachu ani test
+pripravený na bežné použitie. Rozhodujú spôsob odberu, výber pacientov a overenie výsledku v
+nezávislej populácii. [1, 2, 3]
+Reportáž Marty Zaraskovej pre Knowable Magazine, prevzatá portálom Medscape, predstavuje viacero smerov
+tohto výskumu. Spája klinické pozorovanie telesného pachu s prístrojovou analýzou molekúl, ktoré sa uvoľňujú z
+biologických vzoriek. Pre nefrológa je užitočné tieto dve veci odlíšiť: subjektívny čuchový vnem nie je totožný s
+meraním koncentrácie látky ani s výstupom štatistického modelu.
+Čo sa vlastne meria
+Prchavé organické zlúčeniny, v medzinárodnej literatúre označované skratkou VOC, možno analyzovať vo
+vydychovanom vzduchu alebo v plynnej fáze nad vzorkou moču či kožného mazu. Plynová chromatografia
+spojená s hmotnostnou spektrometriou látky oddeľuje a umožňuje ich identifikáciu. Senzorové sústavy
+označované ako elektronický nos môžu namiesto presného určenia jednotlivých molekúl vyhodnocovať vzorec
+odpovedí senzorov. Výsledky týchto postupov preto nemožno automaticky zamieňať. [1, 2, 3]
+Cieľom býva rozpoznať kombináciu zmien, nie jednu molekulu výlučne typickú pre konkrétnu chorobu. Navyše
+nie každá analyzovaná látka patrí medzi organické zlúčeniny: amoniak, skúmaný aj pri dialýze, je anorganická
+látka. Pojem prchavé biomarkery je preto širší než samotné VOC. [4, 5]
+Moč a karcinóm prostaty: výsledok vývojovej štúdie
+1 / 3
+Woollam a spoluautori analyzovali moč 162 mužov vybraných na biopsiu prostaty alebo radikálnu
+prostatektómiu. U 95 bol prítomný karcinóm a 67 malo negatívny výsledok biopsie. Model zo šiestich prchavých
+zlúčenín dosiahol pri päťnásobnom krížovom overení senzitivitu 75 % a špecificitu 69 %. [2] Nejde teda o
+všeobecnú „75-percentnú presnosť“: prvá hodnota vyjadruje zachytenie pacientov s nádorom, druhá správne
+zaradenie pacientov bez nádoru.
+Krížové overenie využíva rozdelenie toho istého súboru na časti určené na učenie a hodnotenie. Pomáha skúmať
+stabilitu modelu, ale nenahrádza skúšku na novej nezávislej populácii. Výber premenných a tvorba modelu v
+jednom vývojovom súbore navyše vyžadujú opatrnosť pri odhade budúcej výkonnosti.
+Autori upozorňujú, že účastníci netvorili náhodnú vzorku populácie a často mali zvýšený prostatický špecifický
+antigén (PSA). Preto nepovažovali priame porovnanie s PSA za vhodné. Z práce nemožno vyvodiť, že nový test
+už znižuje počet zbytočných biopsií alebo liečebných zákrokov. Neoverená zostáva aj špecificita chemického
+profilu voči iným chorobám; časť rovnakých látok sa spája s ďalšími nádormi. [2]
+Kožný maz a Parkinsonova choroba: stopa pred klinickou diagnózou?
+Štúdia z roku 2025 zahŕňala 46 ľudí s Parkinsonovou chorobou, 28 kontrol a deväť účastníkov s izolovanou
+poruchou správania v spánku s rýchlymi pohybmi očí, medzinárodne iRBD. Zo sterov hornej časti chrbta
+výskumníci analyzovali prchavé zložky kožného mazu. Pri 55 vybraných analytických znakoch bola priemerná
+hodnota v skupine iRBD medzi skupinou s Parkinsonovou chorobou a kontrolami. [3]
+Takýto výsledok podporuje hypotézu, že chemické zmeny môžu byť prítomné ešte pred typickými motorickými
+prejavmi. Nepreukazuje však, že konkrétna osoba s daným profilom nevyhnutne ochorie na Parkinsonovu
+chorobu. iRBD môže predchádzať viacerým neurodegeneratívnym ochoreniam a malá vývojová skupina
+neumožňuje spoľahlivo určiť individuálne riziko. Samotní autori označujú prácu za objavnú a plánujú overenie vo
+väčšom súbore. [3]
+Časť chemických identít bola priradená iba predbežne podľa spektrálnych knižníc. Rozklad lipidov môže navyše
+prebiehať v organizme aj počas analytického spracovania. Biologické vysvetlenie pozorovaného signálu preto
+treba odlišovať od jeho štatistickej schopnosti rozlišovať skupiny. [3]
+Obličky a dialýza: dych odráža pacienta aj prostredie
+V štúdii 18 dialyzovaných pacientov klesali počas hemodialýzy zvýšené koncentrácie amoniaku v dychu a
+súviseli so sérovou močovinou. Autori to interpretovali ako možnosť neinvazívneho sledovania účinnosti dialýzy.
+[5] Malá fyziologická štúdia však nepreukazuje, že dychové meranie možno použiť namiesto štandardného
+hodnotenia dialyzačnej dávky alebo že taký postup zlepšuje klinické výsledky.
+Iná práca sledovala krv a dych 14 pacientov liečených hemodialýzou alebo hemodiafiltráciou a identifikovala 60
+prchavých organických zlúčenín. Ukázala pritom výrazný vplyv látok z materiálov mimotelového okruhu a
+vzduchu v dialyzačnej miestnosti. [4] Je to podstatné metodické upozornenie: zmena dychového profilu počas
+výkonu nemusí predstavovať iba odstránenie uremickej látky alebo zmenu metabolizmu.
+Tieto výsledky pochádzajú z konkrétnych starších štúdií a použitých materiálov. Nemožno ich preniesť na každý
+dnešný dialyzátor ani z nich určovať zdravotné riziko aktuálneho výrobku. Pre budúci monitorovací test však
+jasne ukazujú potrebu kontrolných vzoriek okolitého vzduchu a materiálov, presne určeného času odberu a
+porovnania s nezávislým referenčným meraním.
+Čo platí v ambulancii už dnes
+Od výskumu prístrojovo meraných profilov treba oddeliť rozhodovanie podľa samotného pachu. Európska
+urologická asociácia výslovne neodporúča používať prítomnosť ani neprítomnosť zapáchajúceho alebo
+zakaleného moču ako jediný znak na rozlíšenie asymptomatickej bakteriúrie od infekcie močových ciest pri
+zavedenom katétri. [6] Táto situácia má osobitný význam u pacientov s dlhodobou katetrizáciou: pach sám
+neurčuje potrebu antibiotickej liečby.
+Rovnako treba presne čítať regulačné správy. Zaradenie zdravotníckej pomôcky do programu FDA Breakthrough
+Devices má urýchliť jej vývoj a posudzovanie. Samo osebe nie je povolením uvádzať pomôcku na trh ani
+dôkazom splnenia všetkých požiadaviek na jej bezpečnosť a účinnosť. [7] Obchodný termín uvedenia testu,
+2 / 3
+ktorý sľubuje výrobca, preto nemožno vydávať za klinické odporúčanie.
+Limity a cesta ku klinickému testu
+Prchavé biomarkery majú potenciál rozšíriť neinvazívnu diagnostiku. Pred zavedením konkrétneho testu však
+treba poznať jeho presnosť v zamýšľanej populácii, vplyv pridružených chorôb a liekov, opakovateľnosť medzi
+pracoviskami aj dôsledky nesprávneho výsledku. Rozlíšenie skupín vo vývojovej štúdii je začiatkom tohto
+procesu, nie jeho ukončením.
+Východiskom je prehľadová reportáž, nie jedna nová klinická štúdia. Práce o moči, Parkinsonovej chorobe a chemickom profile pri dialýze
+boli overené v plnom texte; štúdia dychového amoniaku podľa abstraktu. Suplementy neboli podkladom uvádzaných výsledkov. Klinické
+odporúčanie o katetrizovaných pacientoch a vysvetlenie programu FDA boli overené v oficiálnych dokumentoch. Práce o karcinóme prostaty
+a Parkinsonovej chorobe uvádzajú neprítomnosť konfliktov záujmov. Článok nepreberá neoverené tvrdenia reportáže o komerčnej
+dostupnosti konkrétnych testov ani jej porovnanie močového testu s PSA.
+Zdroje
+1. Marta Zaraska. Sniffing Out the Link Between Odor and Disease. Medscape, 16. november 2026; pôvodne Knowable Magazine, 2.
+november 2026. Východisková reportáž.
+2. Mark Woollam, Amanda P Siegel, Adam Munshi, Shengzhi Liu, Sunil Tholpady, Thomas Gardner, Bai-Yan Li, Hiroki Yokota, Mangilal
+Agarwal. Canine-Inspired Chemometric Analysis of Volatile Organic Compounds in Urine Headspace to Distinguish Prostate Cancer
+in Mice and Men. Cancers. 2023;15(4):1352. DOI: 10.3390/cancers15041352. PubMed. Vydavateľ.
+3. Caitlin Walton-Doyle, Beatrice Heim, Eleanor Sinclair, Sze Hway Lim, Katherine A. Hollywood, Joy Milne, Evi Holzknecht, Ambra
+Stefani, Birgit Högl, Klaus Seppi, Monty Silverdale, Werner Poewe, Perdita Barran, Drupad K. Trivedi. Classification of Parkinson’s
+disease and isolated REM sleep behaviour disorder: delineating progression markers from the sebum volatilome. NPJ Parkinson's
+Disease. 2025;11:202. DOI: 10.1038/s41531-025-01026-8. PubMed. Vydavateľ.
+4. Paweł Mochalski, Julian King, Matthias Haas, Karl Unterkofler, Anton Amann, Gert Mayer. Blood and breath profiles of volatile
+organic compounds in patients with end-stage renal disease. BMC Nephrology. 2014;15:43. DOI: 10.1186/1471-2369-15-43.
+PubMed. Vydavateľ.
+5. Ulf Schönermarck, Christina Dengler, Annegret Gmeinwieser, Siegfried Praun, Gustav Schelling, Michael Fischereder, Anne-Laure
+Boulesteix, Michael E Dolch. Exhaled breath volatile organic and inorganic compound composition in end-stage renal disease.
+Clinical Nephrology. 2016;86:132-140. DOI: 10.5414/cn108614. PubMed. Vydavateľ.
+6. European Association of Urology. EAU Guidelines on Urological Infections. The Guideline, časť 3.8.3, diagnostika infekcie spojenej s
+katétrom. Aktuálna webová verzia, prístup 22. novembra 2026. Oficiálny dokument.
+7. U.S. Food and Drug Administration. Breakthrough Devices Program. Aktuálna webová verzia, prístup 22. novembra 2026. Oficiálny
+dokument.
+Súvisiace články
+AI-EKG pri ťažkej hypokaliémii: skorší odhad, nie náhrada laboratória
+Zdroj: https://nefro.polascin.net/article.php?slug=prchave-biomarkery-moc-dych-diagnostika · Nefro-projekt Slovensko. Obsah má informačný a vzdelávací charakter a
+nenahrádza konzultáciu s lekárom.
+3 / 3

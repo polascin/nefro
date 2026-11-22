@@ -1,0 +1,13 @@
+# Ilustrácie a konečné prompty
+
+Použitý vstavaný image_gen, nie CLI fallback. Dva odlišné motívy. Konečné PNG majú 1600 × 1000, článková ilustrácia aj WebP. Úprava pomocou PHP GD iba zjednotila rozmery a formát, nemenila motív. Uložené v tomto priečinku a v G:/Môj disk/nefro.polascin.net/obrazky/2026-11.
+
+## Článok
+
+Create an editorial medical illustration for a Slovak professional nephrology article on research of volatile biomarkers in breath and urine. Landscape 16:10 aspect ratio, high resolution. One clear motif: a single closed transparent laboratory urine specimen container containing a modest amount of pale straw-yellow urine, in foreground on clean white laboratory bench, beside a compact analytical instrument with a small sampling inlet and a glass vial, soft teal grey background and natural daylight. Photorealistic careful clinical still life, calm, elegant, realistic materials. The image symbolizes analysis of molecules above urine, not smelling a container. No people, no noses, no anatomical fantasy, no smoke, no glowing particles. Absolutely no text, letters, numbers, labels, logos, watermark or grain effect. No sensationalism. Balanced horizontal composition, medically plausible laboratory equipment.
+
+## Sociálne siete
+
+Professional medical editorial photograph for a social media post about research into volatile breath biomarkers, landscape 16:10. One clear central motif: an unused transparent flexible laboratory breath-collection bag with a single white mouthpiece and valve lying on a pristine light grey tabletop beside two small capped clear sorbent sampling tubes. Calm daylight, soft blue-green out-of-focus clinical laboratory background, authentic realistic laboratory materials. No patient, no person, no face, no nose, no mask, no breath mist or smoke. No text, labels, numbers, logos or watermarks anywhere. No textGrain or film grain. The bag must be a realistic gas sampling pouch, not an IV fluid bag: no fluid, no hanging hook, no tubing to patient. Understated accurate scientific still life, no science-fiction glow or molecular graphics. High resolution horizontal composition.
+
+Oba výsledky vizuálne skontrolované. Článok má motív vzorky moču a analytického prístroja, sociálna ilustrácia motív odberu dychu. Google Disk cloudové potvrdenie: článok 1Y-Fb4ZoDqJk594cdLMAYCCTkAcN_Gc9e, sociálny obrázok 1RQHKI3Jn2MAI6K6vD7YdkFriC7bwf3XW, parent 185YuC_CDZ_UkbFdLT1EHdS7ka8OEm5T5. Lokálne a Drive kópie overené SHA-256.

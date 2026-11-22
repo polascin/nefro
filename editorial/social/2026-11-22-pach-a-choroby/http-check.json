@@ -1,0 +1,14 @@
+[
+  {
+    "page": "article",
+    "http": 200,
+    "slug": true,
+    "fatal": false
+  },
+  {
+    "page": "home",
+    "http": 200,
+    "slug": true,
+    "fatal": false
+  }
+]
