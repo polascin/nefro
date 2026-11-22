@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'prchave-biomarkery-moc-dych-diagnostika' => ['Marta Zaraska'],
         'ai-ekg-monitorovanie-tazkej-hypokaliemie' => ['Nancy A. Melville'],
         'asundexian-fda-sekundarna-prevencia-mozgovej-prihody' => ['Megan Brooks'],
         'diabetes-nad-hba1c-srdce-oblicky-metabolicke-riziko' => ['Kevin Fernando'],

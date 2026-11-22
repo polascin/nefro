@@ -1,0 +1,77 @@
+[
+  {
+    "url": "https://www.medscape.com/s/viewarticle/sniffing-out-link-between-odor-and-disease-2026a10018n3",
+    "result": "200 https://www.medscape.com/s/viewarticle/sniffing-out-link-between-odor-and-disease-2026a10018n3",
+    "error": ""
+  },
+  {
+    "url": "https://doi.org/10.3390/cancers15041352",
+    "result": "403 https://www.mdpi.com/2072-6694/15/4/1352",
+    "error": ""
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36831694/",
+    "result": "203 https://pubmed.ncbi.nlm.nih.gov/36831694/",
+    "error": ""
+  },
+  {
+    "url": "https://www.mdpi.com/2072-6694/15/4/1352",
+    "result": "403 https://www.mdpi.com/2072-6694/15/4/1352",
+    "error": ""
+  },
+  {
+    "url": "https://doi.org/10.1038/s41531-025-01026-8",
+    "result": "200 https://www.nature.com/articles/s41531-025-01026-8?error=cookies_not_supported&code=71dd4bec-7d8b-4e1e-b1cf-4f5881cce040",
+    "error": ""
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40664681/",
+    "result": "203 https://pubmed.ncbi.nlm.nih.gov/40664681/",
+    "error": ""
+  },
+  {
+    "url": "https://www.nature.com/articles/s41531-025-01026-8",
+    "result": "200 https://www.nature.com/articles/s41531-025-01026-8?error=cookies_not_supported&code=c401e0a5-0383-40b1-a910-7e3c0c44e05d",
+    "error": ""
+  },
+  {
+    "url": "https://doi.org/10.1186/1471-2369-15-43",
+    "result": "200 https://link.springer.com/article/10.1186/1471-2369-15-43?error=cookies_not_supported&code=39a8abec-2a2c-48a2-b6e5-629d9213c1ad",
+    "error": ""
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24607025/",
+    "result": "203 https://pubmed.ncbi.nlm.nih.gov/24607025/",
+    "error": ""
+  },
+  {
+    "url": "https://bmcnephrol.biomedcentral.com/articles/10.1186/1471-2369-15-43",
+    "result": "200 https://link.springer.com/article/10.1186/1471-2369-15-43?error=cookies_not_supported&code=f99698f6-f62a-4d0d-bb7e-eb855b5805cf",
+    "error": ""
+  },
+  {
+    "url": "https://doi.org/10.5414/cn108614",
+    "result": "200 https://www.dustri.com/article_response_page.html?artId=14604&doi=10.5414/CN108614&L=0",
+    "error": ""
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27443565/",
+    "result": "203 https://pubmed.ncbi.nlm.nih.gov/27443565/",
+    "error": ""
+  },
+  {
+    "url": "https://www.dustri.com/article_response_page.html?artId=14604&doi=10.5414/CN108614&L=0",
+    "result": "200 https://www.dustri.com/article_response_page.html?artId=14604&doi=10.5414/CN108614&L=0",
+    "error": ""
+  },
+  {
+    "url": "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+    "result": "200 https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+    "error": ""
+  },
+  {
+    "url": "https://www.fda.gov/medical-devices/how-study-and-market-your-device/breakthrough-devices-program",
+    "result": "200 https://www.fda.gov/medical-devices/how-study-and-market-your-device/breakthrough-devices-program",
+    "error": ""
+  }
+]
