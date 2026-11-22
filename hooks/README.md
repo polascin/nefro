@@ -65,6 +65,19 @@ Obnova z repozitára na serveri:
 git clone ssh://websupport/~/git/nefro.git nefro
 ```
 
+### Rozšírenia PHP na konkrétnom počítači
+
+Regresná sada potrebuje `dom`, `iconv`, `mbstring` a `pdo_sqlite`. Ak ich systémové PHP
+nemá a sú rozbalené inde (Linux bez práv správcu), nastav cestu raz pre daný klon:
+
+```bash
+git config nefro.phpIniScanDir "/etc/php/8.5/cli/conf.d:$HOME/.local/lib/nefro-php-ext/conf.d"
+```
+
+`hooks/local_gate.sh` ju použije ako `PHP_INI_SCAN_DIR`, ak premenná nie je nastavená
+v prostredí. Bez toho brána po `git merge` skončí hlásením o chýbajúcich rozšíreniach
+a nenasadí sa nič. Nastavenie je v `.git/config`, medzi počítačmi sa neprenáša.
+
 ### Integračná sada v Dockeri
 
 Rovnaká sada, akú predtým spúšťal GitHub ako „Regression gate“

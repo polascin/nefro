@@ -11,6 +11,7 @@
   "tools/test_catalogue_search.php",
   "tools/test_compliance_controls.php",
   "tools/test_include_library_deny.php",
+  "tools/test_internal_dirs_deny.php",
   "tools/test_page_head.php",
   "tools/test_crontab_cli_ops.php",
   "tools/test_legal_notifications.php",
