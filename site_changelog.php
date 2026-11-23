@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-23 03:45',
+                'category' => 'calculators',
+                'title' => 'Ambulantná kalkulačka: laboratórne výsledky z Nefrisu aj z PDF Synlabu na začiatku formulára',
+                'description' => 'Výsledky skopírované z Nefrisu alebo výsledkový list PDF z elab.synlab.sk sa vložia na začiatku kalkulačky; PDF sa spracuje priamo v prehliadači a hlavička s menom a rodným číslom sa vynechá. Rozpoznané hodnoty doplnia prázdne polia (eGFR CKD-EPI 2021 z kreatinínu, uACR, HbA1c, BMI, staršie eGFR pre slope) a text do správy dostane časť „Laboratórne a pomocné vyšetrenia“ v pevnej šablóne s ionogramom, ABR, krvným obrazom, feritínom, saturáciou transferínu, CRP, albumínom, iPTH, vitamínom D a močom; korigovaný Ca, saturáciu transferínu a eGFR z cystatínu C dopočíta. Čo sa rozpoznať nedá, ostane prázdne na ručné doplnenie.',
+                'url' => 'calculator_ambulatory.php#labs-section',
+            ],
+            [
                 'date' => '2026-11-17 17:55',
                 'category' => 'content',
                 'title' => 'Cena e-knihy Marža z krvi je 7 €',
@@ -66,14 +73,14 @@ if (!function_exists('siteChangelogEntries')) {
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: text z MS-DOS priamo do okna aj súbor TXT',
                 'description' => 'Laboratórne výsledky z Nefrisu možno vložiť priamo do okna, aj keď sa text z MS-DOS (CP852) cestou prečítal v inom kódovaní a diakritika je pokazená (napríklad „Kreatinˇn“ namiesto „Kreatinín“); kalkulačka to rozpozná a opraví, kódovanie možno zvoliť aj ručne. Súbor TXT stačí pretiahnuť do okna, rozpozná sa CP852 aj Windows-1250.',
-                'url' => 'calculator_ambulatory.php#nefris-labs',
+                'url' => 'calculator_ambulatory.php#labs-section',
             ],
             [
                 'date' => '2026-11-08 20:30',
                 'category' => 'calculators',
                 'title' => 'Ambulantná kalkulačka: výber laboratórnych výsledkov z Nefrisu',
                 'description' => 'Do novej sekcie vložíte laboratórne výsledky skopírované z Nefrisu alebo načítate súbor v kódovaní MS-DOS (CP852). Kalkulačka vyberie zvyčajné nefrologické parametre alebo parametre podľa vášho zoznamu a zostaví text do správy v zvyčajnom alebo vlastnom formáte, aj ako tabuľku vývoja odberov. Výstup má konce riadkov CRLF a znaky CP852; možno ho skopírovať alebo stiahnuť ako súbor v CP852.',
-                'url' => 'calculator_ambulatory.php#nefris-labs',
+                'url' => 'calculator_ambulatory.php#labs-section',
             ],
             [
                 'date' => '2026-11-08 16:45',

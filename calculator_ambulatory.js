@@ -428,14 +428,13 @@
                 });
             });
     }
-    // Výber laboratórnych výsledkov z Nefrisu: súbor a stiahnutie v CP852 (MS-DOS Latin 2).
+    // Laboratórne výsledky: súbor TXT z Nefrisu (CP852) alebo PDF zo Synlabu, spracované v prehliadači.
     // Znaky pre bajty 0x80 až 0xFF; tools/test_ambulatory_labs.php ich porovnáva s iconv.
     var CP852_HIGH = 'ÇüéâäůćçłëŐőîŹÄĆ' + 'ÉĹĺôöĽľŚśÖÜŤťŁ×č' + 'áíóúĄąŽžĘę¬źČş«»' + '░▒▓│┤ÁÂĚŞ╣║╗╝Żż┐' +
-        '└┴┬├─┼Ăă╚╔╩╦╠═╬¤' + 'đĐĎËďŇÍÎě┘┌█▄ŢŮ▀' + 'ÓßÔŃńňŠšŔÚŕŰýÝţ´' + '\u00AD˝˛ˇ˘§÷¸°¨˙űŘř■\u00A0';
-    var LABS_MAX_FILE_BYTES = 1024 * 1024;
-    var LABS_PREFS_KEY = 'nefro.ambulatory.labs.v1';
-    var LABS_PREF_FIELDS = ['labs_selection', 'labs_custom_list', 'labs_dates', 'labs_format', 'labs_item_template',
-        'labs_group_template', 'labs_separator', 'labs_width', 'labs_flags', 'labs_ref'];
+        '└┴┬├─┼Ăă╚╔╩╦╠═╬¤' + 'đĐĎËďŇÍÎě┘┌█▄ŢŮ▀' + 'ÓßÔŃńňŠšŔÚŕŰýÝţ´' + '­˝˛ˇ˘§÷¸°¨˙űŘř■ ';
+    var LABS_MAX_TEXT_BYTES = 1024 * 1024;
+    var LABS_MAX_PDF_BYTES = 10 * 1024 * 1024;
+    var PDFJS_BASE = 'assets/pdfjs/6.5.438/';
 
     function decodeCp852(bytes) {
         var out = '';
@@ -443,19 +442,6 @@
             out += bytes[i] < 128 ? String.fromCharCode(bytes[i]) : CP852_HIGH.charAt(bytes[i] - 128);
         }
         return out;
-    }
-
-    function encodeCp852(text) {
-        var reverse = {};
-        for (var i = 0; i < CP852_HIGH.length; i++) {
-            reverse[CP852_HIGH.charAt(i)] = 128 + i;
-        }
-        var bytes = new Uint8Array(text.length);
-        for (var j = 0; j < text.length; j++) {
-            var code = text.charCodeAt(j);
-            bytes[j] = code < 128 ? code : (reverse[text.charAt(j)] || 63);
-        }
-        return bytes;
     }
 
     // Rovnaké skóre ako labsTextScore() v ambulatory_labs.php: slovenské písmená plus,
@@ -498,8 +484,135 @@
         return {text: new TextDecoder(encoding).decode(bytes), used: encoding};
     }
 
-    var labsForm = document.getElementById('labs-form');
-    if (labsForm) {
+    function isPdf(bytes) {
+        return bytes.length > 4 && bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46;
+    }
+
+    var pdfjsPromise = null;
+    function loadPdfJs() {
+        if (!pdfjsPromise) {
+            var base = new URL(PDFJS_BASE, document.baseURI).href;
+            pdfjsPromise = import(base + 'pdf.min.mjs').then(function (lib) {
+                lib.GlobalWorkerOptions.workerSrc = base + 'pdf.worker.min.mjs';
+                return lib;
+            });
+        }
+        return pdfjsPromise;
+    }
+
+    // Textové položky strany zoskupí do riadkov podľa výšky (y) a zoradí podľa x.
+    function pdfRows(items) {
+        var cells = items.filter(function (item) {
+            return typeof item.str === 'string' && item.str.trim() !== '';
+        }).map(function (item) {
+            return {text: item.str.trim(), x: item.transform[4], y: item.transform[5], h: Math.abs(item.transform[3]) || item.height || 8};
+        }).sort(function (a, b) {
+            return b.y - a.y || a.x - b.x;
+        });
+        var rows = [];
+        cells.forEach(function (cell) {
+            var row = rows.length ? rows[rows.length - 1] : null;
+            if (row && Math.abs(row.y - cell.y) <= Math.max(2, cell.h * 0.45)) {
+                row.cells.push(cell);
+            } else {
+                rows.push({y: cell.y, cells: [cell]});
+            }
+        });
+        rows.forEach(function (row) {
+            row.cells.sort(function (a, b) {
+                return a.x - b.x;
+            });
+        });
+        return rows;
+    }
+
+    function rowText(cells) {
+        return cells.map(function (cell) {
+            return cell.text;
+        }).join(' ').replace(/\s+/g, ' ').trim();
+    }
+
+    // Výsledkový list Synlab má hlavičku s údajmi pacienta a pod ňou dva stĺpce
+    // „Názov metódy / Výsledky / Ref.medze / Jednotky / Lab.“. Hlavička sa vynechá
+    // (zachová sa len dátum odberu), stĺpce sa vypíšu postupne, najprv ľavý.
+    var PDF_FOOTER = /^(Lab\.\s*-?\s*Labor|S_vy[šs]etrenie v s[ée]re|Uveden[ée] v[ýy]sledky|Povolen[ée] reprodukova|eGF CKD-EPI: hodnotenie)/i;
+    function pdfPageText(rows, state) {
+        var lines = [];
+        var headerIndex = -1;
+        var splitX = null;
+        rows.forEach(function (row, index) {
+            var text = rowText(row.cells);
+            var sampled = text.match(/Odber:?\s*(\d{1,2}\.\s?\d{1,2}\.\s?\d{4})/i);
+            if (sampled && !state.date) {
+                state.date = sampled[1].replace(/\s/g, '');
+            }
+            if (headerIndex === -1 && /N[áa]zov met[óo]dy/i.test(text)) {
+                headerIndex = index;
+                var headers = row.cells.filter(function (cell) {
+                    return /^N[áa]zov met[óo]dy/i.test(cell.text);
+                });
+                if (headers.length >= 2) {
+                    splitX = headers[1].x - 8;
+                }
+            }
+        });
+        if (headerIndex === -1) {
+            return rows.map(function (row) {
+                return rowText(row.cells);
+            });
+        }
+        var left = [];
+        var right = [];
+        for (var i = headerIndex + 1; i < rows.length; i++) {
+            var cells = rows[i].cells;
+            if (PDF_FOOTER.test(rowText(cells))) {
+                break;
+            }
+            var leftCells = splitX === null ? cells : cells.filter(function (cell) {
+                return cell.x < splitX;
+            });
+            var rightCells = splitX === null ? [] : cells.filter(function (cell) {
+                return cell.x >= splitX;
+            });
+            if (leftCells.length) {
+                left.push(rowText(leftCells));
+            }
+            if (rightCells.length) {
+                right.push(rowText(rightCells));
+            }
+        }
+        return lines.concat(left, right);
+    }
+
+    function pdfToLabsText(buffer) {
+        var loadingTask = null;
+        return loadPdfJs().then(function (pdfjs) {
+            loadingTask = pdfjs.getDocument({data: buffer, isEvalSupported: false, disableFontFace: true});
+            return loadingTask.promise;
+        }).then(function (pdf) {
+            var state = {date: null};
+            var pages = [];
+            var chain = Promise.resolve();
+            for (var number = 1; number <= Math.min(pdf.numPages, 30); number++) {
+                (function (pageNumber) {
+                    chain = chain.then(function () {
+                        return pdf.getPage(pageNumber);
+                    }).then(function (page) {
+                        return page.getTextContent();
+                    }).then(function (content) {
+                        pages.push(pdfPageText(pdfRows(content.items), state).join('\n'));
+                    });
+                })(number);
+            }
+            return chain.then(function () {
+                loadingTask.destroy();
+                return (state.date ? 'Odber: ' + state.date + '\n' : '') + pages.join('\n');
+            });
+        });
+    }
+
+    var labsSection = document.getElementById('labs-section');
+    if (labsSection) {
         var labsFileGroup = document.getElementById('labs-file-group');
         var labsFile = document.getElementById('labs_file');
         var labsEncoding = document.getElementById('labs_file_encoding');
@@ -514,14 +627,36 @@
                     return;
                 }
                 lastLabsFile = file;
-                if (file.size > LABS_MAX_FILE_BYTES) {
-                    labsFileStatus.textContent = 'Súbor je väčší ako 1 MB. Vložte len časť s výsledkami.';
-                    return;
-                }
                 var reader = new FileReader();
                 reader.onload = function () {
-                    var decoded = decodeLabsFile(new Uint8Array(reader.result), labsEncoding ? labsEncoding.value : 'auto');
-                    labsInput.value = decoded.text.replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n');
+                    var bytes = new Uint8Array(reader.result);
+                    if (isPdf(bytes)) {
+                        if (bytes.length > LABS_MAX_PDF_BYTES) {
+                            labsFileStatus.textContent = 'Súbor PDF je väčší ako 10 MB.';
+                            return;
+                        }
+                        labsFileStatus.textContent = 'Spracúvam PDF…';
+                        pdfToLabsText(bytes).then(function (text) {
+                            if (text.trim() === '') {
+                                labsFileStatus.textContent = 'PDF neobsahuje text (môže ísť o sken). Výsledky vložte ako text.';
+                                return;
+                            }
+                            labsInput.value = text;
+                            labsFileStatus.textContent = 'Načítané: ' + file.name + ' (PDF). Skontrolujte text a stlačte „Načítať hodnoty do formulára“.';
+                        }).catch(function (error) {
+                            if (window.console && console.error) {
+                                console.error('PDF:', error && error.message ? error.message : error);
+                            }
+                            labsFileStatus.textContent = 'PDF sa nepodarilo spracovať. Výsledky vložte ako text.';
+                        });
+                        return;
+                    }
+                    if (bytes.length > LABS_MAX_TEXT_BYTES) {
+                        labsFileStatus.textContent = 'Súbor je väčší ako 1 MB. Vložte len časť s výsledkami.';
+                        return;
+                    }
+                    var decoded = decodeLabsFile(bytes, labsEncoding ? labsEncoding.value : 'auto');
+                    labsInput.value = decoded.text.replace(/^﻿/, '').replace(/\r\n?/g, '\n');
                     labsFileStatus.textContent = 'Načítané: ' + file.name + ' (kódovanie ' + decoded.used + '). Skontrolujte diakritiku v poli nižšie.';
                 };
                 reader.onerror = function () {
@@ -537,7 +672,7 @@
                     readLabsFile(lastLabsFile);
                 });
             }
-            // Súbor TXT možno pretiahnuť aj priamo do okna s textom.
+            // Súbor PDF alebo TXT možno pretiahnuť aj priamo do okna s textom.
             labsInput.addEventListener('dragover', function (event) {
                 if (event.dataTransfer && Array.prototype.indexOf.call(event.dataTransfer.types || [], 'Files') !== -1) {
                     event.preventDefault();
@@ -556,102 +691,5 @@
                 }
             });
         }
-
-        var fieldValue = function (name) {
-            var field = labsForm.elements[name];
-            return field ? field.value : '';
-        };
-        var toggleLabsFields = function () {
-            labsForm.querySelectorAll('[data-labs-show], [data-labs-hide]').forEach(function (element) {
-                var show = element.getAttribute('data-labs-show');
-                var rule = (show || element.getAttribute('data-labs-hide')).split(':');
-                var matches = fieldValue(rule[0]) === rule[1];
-                element.hidden = show ? !matches : matches;
-            });
-        };
-
-        // Vlastný výber a formát si pamätá len tento prehliadač (pohodlie, nie údaje pacienta),
-        // a to iba po preferenčnom súhlase, rovnako ako ostatné nastavenia v localStorage.
-        var labsPrefsAllowed = function () {
-            return typeof window.npsHasConsent === 'function' && window.npsHasConsent('preferences');
-        };
-        if (labsPrefsAllowed() && labsForm.getAttribute('data-labs-posted') !== '1') {
-            try {
-                var saved = JSON.parse(window.localStorage.getItem(LABS_PREFS_KEY) || 'null');
-                if (saved && typeof saved === 'object') {
-                    LABS_PREF_FIELDS.forEach(function (name) {
-                        var field = labsForm.elements[name];
-                        if (!field || typeof saved[name] !== 'string') {
-                            return;
-                        }
-                        if (field.type === 'checkbox') {
-                            field.checked = saved[name] === '1';
-                        } else if (field instanceof RadioNodeList) {
-                            field.forEach(function (radio) {
-                                radio.checked = radio.value === saved[name];
-                            });
-                        } else {
-                            field.value = saved[name];
-                        }
-                    });
-                }
-            } catch (error) {
-                // Bez uložených nastavení platia predvolené hodnoty formulára.
-            }
-        }
-        labsForm.addEventListener('submit', function () {
-            if (!labsPrefsAllowed()) {
-                return;
-            }
-            try {
-                var prefs = {};
-                LABS_PREF_FIELDS.forEach(function (name) {
-                    var field = labsForm.elements[name];
-                    if (field) {
-                        prefs[name] = field.type === 'checkbox' ? (field.checked ? '1' : '') : field.value;
-                    }
-                });
-                window.localStorage.setItem(LABS_PREFS_KEY, JSON.stringify(prefs));
-            } catch (error) {
-                // Úložisko prehliadača môže byť vypnuté; formulár sa odošle aj tak.
-            }
-        });
-        labsForm.addEventListener('change', toggleLabsFields);
-        toggleLabsFields();
-    }
-
-    var labsOutput = document.getElementById('labs-output');
-    var labsCopy = document.getElementById('copy-labs-output');
-    var labsDownload = document.getElementById('download-labs-output');
-    var labsCopyStatus = document.getElementById('labs-copy-status');
-    if (labsOutput && labsCopy && labsCopyStatus) {
-        labsCopy.addEventListener('click', function () {
-            copyText(labsOutput).then(function () {
-                labsCopyStatus.textContent = 'Text bol skopírovaný.';
-            }).catch(function () {
-                labsCopyStatus.textContent = 'Kopírovanie zlyhalo. Označte text a skopírujte ho ručne.';
-            });
-        });
-    }
-    if (labsOutput && labsDownload && window.Blob && window.URL && URL.createObjectURL) {
-        labsDownload.hidden = false;
-        labsDownload.addEventListener('click', function () {
-            var text = labsOutput.value.replace(/\r?\n/g, '\r\n') + '\r\n';
-            var blob = new Blob([encodeCp852(text)], {type: 'text/plain'});
-            var link = document.createElement('a');
-            var today = new Date();
-            var pad = function (number) {
-                return (number < 10 ? '0' : '') + number;
-            };
-            link.href = URL.createObjectURL(blob);
-            link.download = 'laboratorne-vysledky-' + today.getFullYear() + '-' + pad(today.getMonth() + 1) + '-' + pad(today.getDate()) + '.txt';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.setTimeout(function () {
-                URL.revokeObjectURL(link.href);
-            }, 1000);
-            labsCopyStatus.textContent = 'Súbor v kódovaní CP852 sa sťahuje.';
-        });
     }
 })();

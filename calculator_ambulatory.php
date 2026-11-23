@@ -79,99 +79,41 @@ foreach (calculatorPostStringList('complications') as $complication) {
 }
 $selectedComplications = array_values(array_unique($selectedComplications));
 
-// Výber laboratórnych výsledkov z Nefrisu: samostatný formulár na tej istej stránke.
-$labsPosted = $_SERVER['REQUEST_METHOD'] === 'POST' && calculatorPostString('form_mode') === 'labs';
-$labsDefaults = [
-    'labs_input' => '',
-    'labs_text_encoding' => 'auto',
-    'labs_selection' => 'usual',
-    'labs_custom_list' => 'Urea, Kreatinín, eGFR, Na, K, Ca, P, HCO3, Albumín, Hb, PTH, ACR',
-    'labs_dates' => 'latest',
-    'labs_format' => 'inline',
-    'labs_item_template' => '{nazov} {hodnota} {jednotka} {priznak}',
-    'labs_group_template' => 'Lab. {datum}: ',
-    'labs_separator' => ', ',
-    'labs_width' => '80',
+// Laboratórne výsledky na začiatku formulára: text z Nefrisu alebo text výsledkového listu
+// Synlab (PDF prevedie na text prehliadač). Rozpoznané hodnoty doplnia prázdne polia
+// kalkulačky a blok „Laboratórne a pomocné vyšetrenia“ vo výstupe.
+$labsFillFields = ['egfr', 'uacr_value', 'hba1c', 'bmi', 'slope_date_1', 'slope_egfr_1', 'slope_date_2', 'slope_egfr_2', 'slope_date_3', 'slope_egfr_3'];
+$labsForm = [
+    'labs_input' => requestScalarString($_POST, 'labs_input', '', true, false),
+    'labs_text_encoding' => calculatorPostString('labs_text_encoding', 'auto'),
 ];
-$labsForm = $labsDefaults;
-$labsForm['labs_flags'] = '1';
-$labsForm['labs_ref'] = '';
-$labsErrors = [];
-$labsResult = null;
-$labsRepairedFrom = null;
-if ($labsPosted) {
-    foreach ($labsDefaults as $field => $default) {
-        $labsForm[$field] = requestScalarString($_POST, $field, $default, true, false);
-    }
-    $labsForm['labs_flags'] = isset($_POST['labs_flags']) ? '1' : '';
-    $labsForm['labs_ref'] = isset($_POST['labs_ref']) ? '1' : '';
-    $labsChoices = [
-        'labs_text_encoding' => array_merge(['auto', 'none'], array_keys(labsMisreadEncodings())),
-        'labs_selection' => ['usual', 'all', 'custom'],
-        'labs_dates' => ['latest', 'latest_each', 'all'],
-        'labs_format' => ['inline', 'list', 'table', 'custom'],
-    ];
-    foreach ($labsChoices as $field => $allowed) {
-        if (!in_array($labsForm[$field], $allowed, true)) {
-            $labsForm[$field] = $labsDefaults[$field];
-        }
-    }
-    $labsWidth = filter_var($labsForm['labs_width'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 40, 'max_range' => 132]]);
-
-    if (!validateCsrfToken(calculatorPostString('csrf_token'))) {
-        $labsErrors[] = 'Platnosť formulára vypršala. Odošlite ho znova.';
-    } elseif (trim($labsForm['labs_input']) === '') {
-        $labsErrors[] = 'Vložte text laboratórnych výsledkov z Nefrisu alebo načítajte súbor.';
-    } elseif (!mb_check_encoding($labsForm['labs_input'], 'UTF-8')) {
-        $labsErrors[] = 'Text nie je v platnom kódovaní. Načítajte ho ako súbor, prehliadač ho prevedie z CP852.';
-    } elseif (mb_strlen($labsForm['labs_input'], 'UTF-8') > LABS_MAX_INPUT_CHARS || substr_count($labsForm['labs_input'], "
-") > LABS_MAX_LINES) {
-        $labsErrors[] = 'Text je príliš dlhý (najviac ' . number_format(LABS_MAX_INPUT_CHARS, 0, ',', ' ') . ' znakov a ' . LABS_MAX_LINES . ' riadkov).';
-    } elseif (labsLongestLineChars($labsForm['labs_input']) > LABS_MAX_LINE_CHARS) {
-        $labsErrors[] = 'Jeden riadok textu je príliš dlhý (najviac ' . number_format(LABS_MAX_LINE_CHARS, 0, ',', ' ') . ' znakov). Rozdeľte ho na viac riadkov.';
-    }
-    if ($labsWidth === false) {
-        $labsErrors[] = 'Šírka riadku musí byť celé číslo od 40 do 132 znakov.';
-    }
-    foreach (['labs_custom_list' => 500, 'labs_item_template' => 200, 'labs_group_template' => 200, 'labs_separator' => 20] as $field => $maxLength) {
-        if (mb_strlen($labsForm[$field], 'UTF-8') > $maxLength || !mb_check_encoding($labsForm[$field], 'UTF-8')) {
-            $labsErrors[] = 'Pole nastavenia formátu je príliš dlhé alebo neplatné (najviac ' . $maxLength . ' znakov).';
-            $labsForm[$field] = $labsDefaults[$field];
-        }
-    }
-    if ($labsForm['labs_selection'] === 'custom' && trim($labsForm['labs_custom_list']) === '') {
-        $labsErrors[] = 'Pri vlastnom výbere zadajte zoznam parametrov oddelený čiarkami.';
-    }
-    if ($labsForm['labs_format'] === 'custom' && !str_contains($labsForm['labs_item_template'], '{hodnota}')) {
-        $labsErrors[] = 'Vlastný formát položky musí obsahovať {hodnota}.';
-    }
-
-    if ($labsErrors === []) {
-        // Text z MS-DOS (CP852) prečítaný cestou v inom kódovaní sa vráti na správnu diakritiku.
-        $labsRepair = labsRepairDosText($labsForm['labs_input'], $labsForm['labs_text_encoding']);
-        $labsForm['labs_input'] = $labsRepair['text'];
-        $labsRepairedFrom = $labsRepair['from'];
-        $labsResult = labsBuildOutput($labsForm['labs_input'], [
-            'selection' => $labsForm['labs_selection'],
-            'custom_list' => $labsForm['labs_custom_list'],
-            'dates' => $labsForm['labs_dates'],
-            'format' => $labsForm['labs_format'],
-            'flags' => $labsForm['labs_flags'] === '1',
-            'ref' => $labsForm['labs_ref'] === '1',
-            'item_template' => $labsForm['labs_item_template'],
-            'group_template' => $labsForm['labs_group_template'],
-            'separator' => $labsForm['labs_separator'],
-            'width' => (int) $labsWidth,
-        ]);
-        if ($labsResult['parsed']['items'] === []) {
-            $labsErrors[] = 'V texte sa nenašiel žiadny laboratórny výsledok v tvare „názov hodnota jednotka“.';
-        } elseif ($labsResult['output'] === '') {
-            $labsErrors[] = 'Žiadny rozpoznaný výsledok nezodpovedá zvolenému výberu. Skúste výber „všetky rozpoznané“.';
+if (!in_array($labsForm['labs_text_encoding'], array_merge(['auto', 'none'], array_keys(labsMisreadEncodings())), true)) {
+    $labsForm['labs_text_encoding'] = 'auto';
+}
+// Hodnoty, ktoré do formulára doplnilo predchádzajúce načítanie; kým ich lekár nezmení,
+// nové načítanie ich smie prepísať.
+$labsPreviousAutofill = [];
+$labsAutofillRaw = calculatorPostString('labs_autofill');
+if ($labsAutofillRaw !== '' && strlen($labsAutofillRaw) <= 2000) {
+    $decodedAutofill = json_decode($labsAutofillRaw, true, 2);
+    if (is_array($decodedAutofill)) {
+        foreach ($decodedAutofill as $field => $value) {
+            if (in_array($field, $labsFillFields, true) && is_string($value) && strlen($value) <= 20) {
+                $labsPreviousAutofill[$field] = $value;
+            }
         }
     }
 }
+$labsAutofill = $labsPreviousAutofill;
+$labsAction = calculatorPostString('action') === 'labs_fill';
+$labsItems = [];
+$labsParsed = null;
+$labsRepairedFrom = null;
+$labsFilledLabels = [];
+$labsMissingLabels = [];
+$labsTemplatePreview = null;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validateCsrfToken(calculatorPostString('csrf_token'))) {
         $errors[] = 'Neplatný CSRF token.';
     } else {
@@ -247,6 +189,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
         $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : null;
         if ($form['sex'] !== '' && $sex === null) {
             $errors[] = 'Vyberte pohlavie použité v prognostických rovniciach.';
+        }
+
+        // Laboratórne výsledky: rozbor a doplnenie polí pred ich kontrolou nižšie.
+        $labsAgeYears = $ageYears !== null && $ageYears >= 18 && $ageYears <= 120 ? $ageYears : null;
+        if (trim($labsForm['labs_input']) !== '') {
+            if (!mb_check_encoding($labsForm['labs_input'], 'UTF-8')) {
+                $errors[] = 'Text laboratórnych výsledkov nie je v platnom kódovaní. Načítajte ho ako súbor, prehliadač ho prevedie z CP852.';
+            } elseif (mb_strlen($labsForm['labs_input'], 'UTF-8') > LABS_MAX_INPUT_CHARS || substr_count($labsForm['labs_input'], "\n") > LABS_MAX_LINES) {
+                $errors[] = 'Text laboratórnych výsledkov je príliš dlhý (najviac ' . number_format(LABS_MAX_INPUT_CHARS, 0, ',', ' ') . ' znakov a ' . LABS_MAX_LINES . ' riadkov).';
+            } elseif (labsLongestLineChars($labsForm['labs_input']) > LABS_MAX_LINE_CHARS) {
+                $errors[] = 'Jeden riadok laboratórnych výsledkov je príliš dlhý (najviac ' . number_format(LABS_MAX_LINE_CHARS, 0, ',', ' ') . ' znakov). Rozdeľte ho na viac riadkov.';
+            } else {
+                // Text z MS-DOS (CP852) prečítaný cestou v inom kódovaní sa vráti na správnu diakritiku.
+                $labsRepair = labsRepairDosText($labsForm['labs_input'], $labsForm['labs_text_encoding']);
+                $labsForm['labs_input'] = $labsRepair['text'];
+                $labsRepairedFrom = $labsRepair['from'];
+                $labsParsed = labsParse($labsForm['labs_input']);
+                $labsItems = $labsParsed['items'];
+                if ($labsItems === []) {
+                    $errors[] = 'V laboratórnych výsledkoch sa nenašiel žiadny parameter v tvare „názov hodnota jednotka“.';
+                }
+            }
+        }
+
+        if ($labsItems !== []) {
+            $labsValues = labsFormValues($labsItems, $labsAgeYears, $sex);
+            $labsCanFill = static function (string $field) use ($form, $labsPreviousAutofill): bool {
+                return trim($form[$field]) === '' || ($labsPreviousAutofill[$field] ?? null) === $form[$field];
+            };
+            $labsSet = static function (string $field, string $value) use (&$form, &$labsAutofill): void {
+                $form[$field] = $value;
+                $labsAutofill[$field] = $value;
+            };
+            if ($labsValues['egfr'] !== null && $labsCanFill('egfr')) {
+                $egfrInFormUnit = calculatorEgfrFromMlMin($labsValues['egfr']['ml_min'], $form['egfr_unit']);
+                $labsSet('egfr', labsNumber($egfrInFormUnit, $form['egfr_unit'] === EGFR_UNIT_ML_S ? 3 : 1));
+                $labsFilledLabels[] = $labsValues['egfr']['source'] === 'computed'
+                    ? 'eGFR (CKD-EPI 2021 z kreatinínu)'
+                    : 'eGFR (hodnota z laboratória)';
+            }
+            if ($labsValues['uacr'] !== null && $labsCanFill('uacr_value')) {
+                $labsSet('uacr_value', labsNumber($labsValues['uacr']['value'], 1));
+                $form['uacr_unit'] = $labsValues['uacr']['unit'];
+                $labsFilledLabels[] = 'uACR';
+            }
+            if ($labsValues['hba1c'] !== null && $labsCanFill('hba1c')) {
+                $labsSet('hba1c', labsNumber($labsValues['hba1c']['value'], $labsValues['hba1c']['unit'] === 'percent' ? 1 : 0));
+                $form['hba1c_unit'] = $labsValues['hba1c']['unit'];
+                $labsFilledLabels[] = 'HbA1c';
+            }
+            if ($labsValues['bmi'] !== null && $labsCanFill('bmi')) {
+                $labsSet('bmi', labsNumber($labsValues['bmi'], 1));
+                $labsFilledLabels[] = 'BMI';
+            }
+            $slopeFields = ['slope_date_1', 'slope_egfr_1', 'slope_date_2', 'slope_egfr_2', 'slope_date_3', 'slope_egfr_3'];
+            if ($labsValues['slope'] !== [] && array_filter($slopeFields, static fn (string $field): bool => !$labsCanFill($field)) === []) {
+                foreach ([1, 2, 3] as $slopeIndex) {
+                    $point = $labsValues['slope'][$slopeIndex - 1] ?? null;
+                    $labsSet('slope_date_' . $slopeIndex, $point === null ? '' : $point['date']);
+                    $labsSet('slope_egfr_' . $slopeIndex, $point === null ? '' : labsNumber(
+                        calculatorEgfrFromMlMin($point['ml_min'], $form['egfr_unit']),
+                        $form['egfr_unit'] === EGFR_UNIT_ML_S ? 3 : 1,
+                    ));
+                }
+                $labsFilledLabels[] = 'staršie eGFR pre slope (' . count($labsValues['slope']) . ')';
+            }
+            $labsAutofill = array_filter($labsAutofill, static fn (string $value): bool => $value !== '');
         }
 
         $egfr = null;
@@ -404,7 +413,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
             }
         }
 
-        if (empty($errors)) {
+        if ($labsAction && trim($labsForm['labs_input']) === '') {
+            $errors[] = 'Vložte text laboratórnych výsledkov alebo načítajte súbor PDF či TXT.';
+        }
+        // Blok laboratórnych výsledkov podľa šablóny; eGFR a uACR z formulára, ak ich výpis neobsahuje.
+        $labsData = labsTemplateData($labsItems, [
+            'age' => $labsAgeYears,
+            'sex' => $sex,
+            'egfr_ml_min' => $egfr,
+            'uacr_value' => $uacrValue,
+            'uacr_unit' => $uacrUnit,
+        ]);
+        $labsMissingLabels = labsMissingTemplateLabels($labsData);
+        if ($labsAction && $labsItems !== []) {
+            $labsTemplatePreview = ambulatoryToDosText(labsBuildTemplate($labsData));
+        }
+
+        if (empty($errors) && !$labsAction) {
             $complicationText = '';
             if ($selectedComplications !== []) {
                 $labels = array_map(
@@ -447,9 +472,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                 'slope_points' => $slopePoints,
                 'complications' => $complicationText,
             ]);
-            $plainTextOutput = ambulatoryToDosText(ambulatoryBuildPlainText($report['summary']));
+            $summaryText = ambulatoryBuildPlainText($report['summary']);
             $skippedOutput = $report['skipped'];
-            if (trim($plainTextOutput) === '') {
+            // Laboratórne výsledky idú pred súhrn CKD, ako v lekárskej správe pred záverom.
+            $plainTextOutput = trim($summaryText) === '' && $labsItems === []
+                ? ''
+                : ambulatoryToDosText(rtrim(labsBuildTemplate($labsData) . "\n\n" . $summaryText));
+            if ($plainTextOutput === '') {
                 $errors[] = 'Zadajte aspoň jeden údaj, z ktorého možno zostaviť súhrn (napr. eGFR, uACR, príčinu CKD, BMI alebo komplikácie).';
                 $plainTextOutput = null;
                 $skippedOutput = [];
@@ -509,6 +538,97 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
 
                 <form method="POST" action="calculator_ambulatory.php" id="ambulatory-calculator-form" autocomplete="off">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="labs_autofill" value="<?= htmlspecialchars($labsAutofill === [] ? '' : (string) json_encode($labsAutofill, JSON_UNESCAPED_UNICODE)) ?>">
+
+                    <?php $labsSelected = static fn (string $value): string => $labsForm['labs_text_encoding'] === $value ? 'selected' : ''; ?>
+                    <section class="form-section labs-section" id="labs-section" aria-labelledby="labs-input-heading">
+                        <h3 id="labs-input-heading">Laboratórne výsledky</h3>
+                        <p class="helper-text">Vložte výsledky skopírované z Nefrisu alebo načítajte výsledkový list PDF z elab.synlab.sk či súbor TXT z Nefrisu. Rozpoznané hodnoty sa doplnia do prázdnych polí kalkulačky (eGFR, uACR, HbA1c, BMI, staršie eGFR pre slope) a do časti „Laboratórne a pomocné vyšetrenia“ vo výstupe. Čo sa rozpoznať nedá, ostane vo výstupe prázdne na ručné doplnenie.</p>
+                        <div class="form-group" id="labs-file-group" hidden>
+                            <label for="labs_file">Súbor s výsledkami (PDF zo Synlabu alebo TXT z Nefrisu)</label>
+                            <div class="input-with-unit">
+                                <input type="file" id="labs_file" class="form-control" accept=".pdf,.txt,.prn,.lst,.out,.dat,application/pdf,text/plain" aria-describedby="labs_file_status">
+                                <select id="labs_file_encoding" class="form-control flex-08" aria-label="Kódovanie súboru TXT">
+                                    <option value="auto">TXT: automaticky (UTF-8, inak CP852)</option>
+                                    <option value="cp852">TXT: MS-DOS CP852</option>
+                                    <option value="windows-1250">TXT: Windows-1250</option>
+                                    <option value="utf-8">TXT: UTF-8</option>
+                                </select>
+                            </div>
+                            <small id="labs_file_status" role="status" aria-live="polite">PDF aj TXT sa spracujú priamo v prehliadači; do poľa nižšie sa vloží len text výsledkov bez hlavičky s menom a rodným číslom.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="labs_input">Text laboratórnych výsledkov</label>
+                            <textarea id="labs_input" name="labs_input" class="form-control ambulatory-output labs-input" rows="10" cols="80" wrap="off" spellcheck="false" placeholder="08.11.2026&#10;S-Urea        18,4  mmol/l  (2,8 - 8,1)  H&#10;S-Kreatinín   412   umol/l  (62 - 106)   H" aria-describedby="labs_input_help"><?= htmlspecialchars($labsForm['labs_input']) ?></textarea>
+                            <small id="labs_input_help">Text môžete vložiť zo schránky alebo sem pretiahnuť súbor PDF či TXT. Ak sa diakritika z MS-DOS zobrazí pokazene (napríklad „Kreatinˇn“ namiesto „Kreatinín“), pri spracovaní sa opraví. eGFR (CKD-EPI 2021) a eGFR z cystatínu C (CKD-EPI 2012) sa vypočítajú z kreatinínu a cystatínu C, ak je zadaný vek a pohlavie; inak sa použije eGFR z laboratória. Vyplnené polia formulára sa neprepíšu.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="labs_text_encoding">Kódovanie vloženého textu</label>
+                            <select id="labs_text_encoding" name="labs_text_encoding" class="form-control">
+                                <option value="auto" <?= $labsSelected('auto') ?>>Automaticky rozpoznať a opraviť text z MS-DOS</option>
+                                <option value="none" <?= $labsSelected('none') ?>>Text je v poriadku, neprevádzať</option>
+                                <?php foreach (labsMisreadEncodings() as $labsEncodingKey => $labsEncoding): ?>
+                                    <option value="<?= htmlspecialchars($labsEncodingKey) ?>" <?= $labsSelected($labsEncodingKey) ?>>MS-DOS (CP852) zobrazený ako <?= htmlspecialchars($labsEncoding['label']) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" name="action" value="labs_fill" class="btn-secondary" formnovalidate>Načítať hodnoty do formulára</button>
+                        </div>
+
+                        <?php if ($labsRepairedFrom !== null): ?>
+                            <div class="info-box-blue" role="status">
+                                Vložený text bol v kódovaní MS-DOS (CP852), ale cestou sa prečítal ako <?= htmlspecialchars(labsMisreadEncodings()[$labsRepairedFrom]['label']) ?>. Diakritika je opravená aj v poli so vstupom; skontrolujte ju. Ak oprava nesedí, zvoľte kódovanie vloženého textu ručne alebo „Text je v poriadku, neprevádzať“.
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($labsItems !== []): ?>
+                            <div class="info-box-blue labs-summary" role="status">
+                                <p><?= $labsFilledLabels === []
+                                    ? 'Polia formulára ostali bez zmeny (sú vyplnené ručne alebo výpis príslušné hodnoty neobsahuje).'
+                                    : 'Doplnené do formulára: ' . htmlspecialchars(implode(', ', $labsFilledLabels)) . '. Hodnoty skontrolujte.' ?></p>
+                                <?php if ($labsMissingLabels !== []): ?>
+                                    <p>Vo výstupe ostane na ručné doplnenie: <?= htmlspecialchars(implode(', ', $labsMissingLabels)) ?>.</p>
+                                <?php endif; ?>
+                            </div>
+                            <?php if ($labsTemplatePreview !== null): ?>
+                                <details class="labs-details" open>
+                                    <summary>Náhľad časti Laboratórne a pomocné vyšetrenia</summary>
+                                    <pre class="labs-unparsed"><?= htmlspecialchars($labsTemplatePreview) ?></pre>
+                                </details>
+                            <?php endif; ?>
+                            <details class="labs-details">
+                                <summary>Rozpoznané položky (<?= count($labsItems) ?>)</summary>
+                                <div class="labs-table-wrap">
+                                    <table class="admin-table labs-table">
+                                        <thead>
+                                            <tr><th scope="col">Odber</th><th scope="col">Vo výpise</th><th scope="col">Parameter</th><th scope="col">Hodnota</th><th scope="col">Jednotka</th><th scope="col">Rozpätie</th><th scope="col">Príznak</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach (array_slice($labsItems, 0, 400) as $labsItem): ?>
+                                                <tr>
+                                                    <td><?= htmlspecialchars(labsFormatDate($labsItem['date'])) ?></td>
+                                                    <td><?= htmlspecialchars($labsItem['name']) ?></td>
+                                                    <td><?= $labsItem['known'] ? htmlspecialchars($labsItem['label']) : '<em>nerozpoznané</em>' ?></td>
+                                                    <td><?= htmlspecialchars($labsItem['value']) ?></td>
+                                                    <td><?= htmlspecialchars($labsItem['unit']) ?></td>
+                                                    <td><?= htmlspecialchars($labsItem['ref']) ?></td>
+                                                    <td><?= htmlspecialchars($labsItem['flag']) ?></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </details>
+                        <?php endif; ?>
+                        <?php if ($labsParsed !== null && $labsParsed['unparsed_count'] > 0): ?>
+                            <details class="labs-details">
+                                <summary>Riadky s číslami, ktoré sa nerozpoznali (<?= (int) $labsParsed['unparsed_count'] ?>)</summary>
+                                <pre class="labs-unparsed"><?= htmlspecialchars(implode("\n", $labsParsed['unparsed'])) ?></pre>
+                            </details>
+                        <?php endif; ?>
+                    </section>
+
 
                     <section class="form-section" aria-labelledby="ambulatory-core-heading">
                         <h3 id="ambulatory-core-heading">Základné údaje a KDIGO CGA</h3>
@@ -699,8 +819,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                 <?php if ($plainTextOutput !== null): ?>
                     <section class="form-section calculator-result-block" role="status" aria-live="polite" aria-labelledby="ambulatory-result-heading">
                         <h3 id="ambulatory-result-heading">Text do lekárskej správy</h3>
-                        <label for="ambulatory-output">Pred vložením do Nefrisu text skontrolujte a podľa potreby upravte. Sekcie, na ktoré nestačili vstupy, sú vynechané.</label>
-                        <textarea id="ambulatory-output" class="form-control ambulatory-output" cols="80" wrap="off" spellcheck="false" aria-describedby="ambulatory-format-note" rows="<?= max(14, min(32, substr_count($plainTextOutput, "\n") + 3)) ?>" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
+                        <label for="ambulatory-output">Pred vložením do Nefrisu text skontrolujte a podľa potreby upravte. Sekcie súhrnu CKD, na ktoré nestačili vstupy, sú vynechané; v časti Laboratórne a pomocné vyšetrenia ostávajú nerozpoznané údaje prázdne na ručné doplnenie.</label>
+                        <textarea id="ambulatory-output" class="form-control ambulatory-output" cols="80" wrap="off" spellcheck="false" aria-describedby="ambulatory-format-note" rows="<?= max(14, min(60, substr_count($plainTextOutput, "\n") + 3)) ?>" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
                         <small id="ambulatory-format-note" class="ambulatory-format-note">Formát MS-DOS: konce riadkov CRLF, len znaky kódovej stránky CP852 (slovenská diakritika zostáva), riadky najviac 80 znakov. Symboly ≥ a ² sú zapísané ako &gt;= a 2.</small>
                         <?php if ($skippedOutput !== []): ?>
                             <div class="info-box-blue ambulatory-skipped" role="note" aria-labelledby="ambulatory-skipped-heading">
@@ -720,194 +840,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                 <?php endif; ?>
             </div>
 
-            <?php
-            $labsChecked = static fn (string $field, string $value): string => $labsForm[$field] === $value ? 'checked' : '';
-            $labsSelected = static fn (string $field, string $value): string => $labsForm[$field] === $value ? 'selected' : '';
-            $labsParsedItems = $labsResult['parsed']['items'] ?? [];
-            ?>
-            <div class="auth-container auth-container--wide labs-section" id="nefris-labs">
-                <h2>Laboratórne výsledky z Nefrisu</h2>
-                <p class="auth-subtitle">Vložte laboratórne výsledky skopírované z Nefrisu alebo načítajte súbor exportovaný v kódovaní MS-DOS (CP852). Kalkulačka z nich vyberie bežné nefrologické parametre alebo parametre podľa vášho zoznamu a zostaví text do správy, opäť vo formáte MS-DOS.</p>
-
-                <div class="info-box-blue">
-                    Text slúži len na vytvorenie výstupu, neukladá sa a nezapisuje sa do záznamov servera. Súbor sa načíta priamo v prehliadači. Riadky s rodným číslom alebo dátumom narodenia nástroj preskočí, napriek tomu pred vložením odstráňte z textu meno a ďalšie identifikačné údaje pacienta.
-                </div>
-
-                <?php if ($labsErrors !== []): ?>
-                    <div class="alert alert-error" role="alert">
-                        <ul>
-                            <?php foreach ($labsErrors as $labsError): ?>
-                                <li><?= htmlspecialchars($labsError) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-
-                <form method="POST" action="calculator_ambulatory.php#nefris-labs" id="labs-form" autocomplete="off" data-labs-posted="<?= $labsPosted ? '1' : '0' ?>">
-                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-                    <input type="hidden" name="form_mode" value="labs">
-
-                    <section class="form-section" aria-labelledby="labs-input-heading">
-                        <h3 id="labs-input-heading">Vstup z Nefrisu</h3>
-                        <div class="form-group" id="labs-file-group" hidden>
-                            <label for="labs_file">Súbor s výsledkami (TXT)</label>
-                            <div class="input-with-unit">
-                                <input type="file" id="labs_file" class="form-control" accept=".txt,.prn,.lst,.out,.dat,text/plain" aria-describedby="labs_file_status">
-                                <select id="labs_file_encoding" class="form-control flex-08" aria-label="Kódovanie súboru">
-                                    <option value="auto">Automaticky (UTF-8, inak CP852)</option>
-                                    <option value="cp852">MS-DOS CP852</option>
-                                    <option value="windows-1250">Windows-1250</option>
-                                    <option value="utf-8">UTF-8</option>
-                                </select>
-                            </div>
-                            <small id="labs_file_status" role="status" aria-live="polite">Súbor sa prevedie z kódovania MS-DOS a vloží do poľa nižšie, na server sa neodosiela.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="labs_input">Text laboratórnych výsledkov</label>
-                            <textarea id="labs_input" name="labs_input" class="form-control ambulatory-output labs-input" rows="14" cols="80" wrap="off" spellcheck="false" placeholder="08.11.2026&#10;S-Urea        18,4  mmol/l  (2,8 - 8,1)  H&#10;S-Kreatinín   412   umol/l  (62 - 106)   H" aria-describedby="labs_input_help"><?= htmlspecialchars($labsForm['labs_input']) ?></textarea>
-                            <small id="labs_input_help">Text môžete vložiť zo schránky alebo sem pretiahnuť súbor TXT. Ak sa diakritika z MS-DOS zobrazí pokazene (napríklad „Kreatinˇn“ namiesto „Kreatinín“), pri spracovaní sa opraví. Rozpozná riadky v tvare „názov hodnota jednotka (rozpätie) príznak“, dátumy odberov, viac parametrov v jednom riadku aj kumulatívny výpis s dátumami v hlavičke stĺpcov.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="labs_text_encoding">Kódovanie vloženého textu</label>
-                            <select id="labs_text_encoding" name="labs_text_encoding" class="form-control">
-                                <option value="auto" <?= $labsSelected('labs_text_encoding', 'auto') ?>>Automaticky rozpoznať a opraviť text z MS-DOS</option>
-                                <option value="none" <?= $labsSelected('labs_text_encoding', 'none') ?>>Text je v poriadku, neprevádzať</option>
-                                <?php foreach (labsMisreadEncodings() as $labsEncodingKey => $labsEncoding): ?>
-                                    <option value="<?= htmlspecialchars($labsEncodingKey) ?>" <?= $labsSelected('labs_text_encoding', $labsEncodingKey) ?>>MS-DOS (CP852) zobrazený ako <?= htmlspecialchars($labsEncoding['label']) ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </section>
-
-                    <section class="form-section" aria-labelledby="labs-format-heading">
-                        <h3 id="labs-format-heading">Výber a formát výstupu</h3>
-                        <fieldset class="calc-fieldset">
-                            <legend>Ktoré parametre</legend>
-                            <div class="ambulatory-check-grid">
-                                <label class="form-check"><input type="radio" name="labs_selection" value="usual" <?= $labsChecked('labs_selection', 'usual') ?>> Zvyčajný nefrologický výber</label>
-                                <label class="form-check"><input type="radio" name="labs_selection" value="all" <?= $labsChecked('labs_selection', 'all') ?>> Všetky rozpoznané</label>
-                                <label class="form-check"><input type="radio" name="labs_selection" value="custom" <?= $labsChecked('labs_selection', 'custom') ?>> Podľa môjho zoznamu</label>
-                            </div>
-                            <div class="form-group" data-labs-show="labs_selection:custom">
-                                <label for="labs_custom_list">Môj zoznam parametrov (v poradí výstupu)</label>
-                                <input type="text" id="labs_custom_list" name="labs_custom_list" class="form-control" maxlength="500" value="<?= htmlspecialchars($labsForm['labs_custom_list']) ?>" aria-describedby="labs_custom_list_help">
-                                <small id="labs_custom_list_help">Oddeľte čiarkou. Rozpozná bežné skratky a názvy (Krea, Kreatinín, S-Kreat, K, Kalium, ACR, Alb/Krea, 25-OH vit. D) aj presný názov z výpisu.</small>
-                            </div>
-                        </fieldset>
-
-                        <div class="form-group" data-labs-hide="labs_format:table">
-                            <label for="labs_dates">Odbery</label>
-                            <select id="labs_dates" name="labs_dates" class="form-control">
-                                <option value="latest" <?= $labsSelected('labs_dates', 'latest') ?>>Len najnovší odber</option>
-                                <option value="latest_each" <?= $labsSelected('labs_dates', 'latest_each') ?>>Posledná hodnota každého parametra (s dátumom, ak je starší)</option>
-                                <option value="all" <?= $labsSelected('labs_dates', 'all') ?>>Všetky odbery</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="labs_format">Formát</label>
-                            <select id="labs_format" name="labs_format" class="form-control" aria-describedby="labs_format_help">
-                                <option value="inline" <?= $labsSelected('labs_format', 'inline') ?>>Zvyčajný: Lab. dátum: parameter hodnota jednotka, ...</option>
-                                <option value="list" <?= $labsSelected('labs_format', 'list') ?>>Zoznam pod sebou</option>
-                                <option value="table" <?= $labsSelected('labs_format', 'table') ?>>Tabuľka odberov (vývoj v čase)</option>
-                                <option value="custom" <?= $labsSelected('labs_format', 'custom') ?>>Vlastný formát</option>
-                            </select>
-                            <small id="labs_format_help">Tabuľka zobrazí toľko najnovších odberov, koľko sa zmestí do šírky riadku.</small>
-                        </div>
-
-                        <fieldset class="calc-fieldset" data-labs-show="labs_format:custom">
-                            <legend>Vlastný formát</legend>
-                            <div class="form-group">
-                                <label for="labs_group_template">Úvod odberu</label>
-                                <input type="text" id="labs_group_template" name="labs_group_template" class="form-control" maxlength="200" value="<?= htmlspecialchars($labsForm['labs_group_template']) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="labs_item_template">Položka</label>
-                                <input type="text" id="labs_item_template" name="labs_item_template" class="form-control" maxlength="200" value="<?= htmlspecialchars($labsForm['labs_item_template']) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="labs_separator">Oddeľovač položiek</label>
-                                <input type="text" id="labs_separator" name="labs_separator" class="form-control" maxlength="20" value="<?= htmlspecialchars($labsForm['labs_separator']) ?>">
-                            </div>
-                            <small>Zástupné znaky: {nazov}, {hodnota}, {jednotka}, {priznak} (H alebo L), {ref} (referenčné rozpätie), {datum}. Oddeľovač \n znamená nový riadok. Vlastný formát a zoznam si tento prehliadač zapamätá, ak ste udelili preferenčný súhlas.</small>
-                        </fieldset>
-
-                        <div class="form-group">
-                            <label for="labs_width">Šírka riadku (znaky)</label>
-                            <input type="number" id="labs_width" name="labs_width" class="form-control" min="40" max="132" step="1" inputmode="numeric" value="<?= htmlspecialchars($labsForm['labs_width']) ?>">
-                        </div>
-                        <div class="ambulatory-check-grid">
-                            <label class="form-check"><input type="checkbox" name="labs_flags" value="1" <?= $labsForm['labs_flags'] === '1' ? 'checked' : '' ?>> Označiť hodnoty mimo rozpätia (H, L)</label>
-                            <label class="form-check"><input type="checkbox" name="labs_ref" value="1" <?= $labsForm['labs_ref'] === '1' ? 'checked' : '' ?>> Uviesť referenčné rozpätie</label>
-                        </div>
-                    </section>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn-primary">Vybrať výsledky</button>
-                        <a href="calculator_ambulatory.php#nefris-labs" class="btn-secondary">Vymazať</a>
-                    </div>
-                </form>
-
-                <?php if ($labsRepairedFrom !== null): ?>
-                    <div class="info-box-blue" role="status">
-                        Vložený text bol v kódovaní MS-DOS (CP852), ale cestou sa prečítal ako <?= htmlspecialchars(labsMisreadEncodings()[$labsRepairedFrom]['label']) ?>. Diakritika je opravená aj v poli so vstupom; skontrolujte ju. Ak oprava nesedí, zvoľte kódovanie vloženého textu ručne alebo „Text je v poriadku, neprevádzať“.
-                    </div>
-                <?php endif; ?>
-
-                <?php if ($labsResult !== null && $labsResult['output'] !== ''): ?>
-                    <section class="form-section calculator-result-block" role="status" aria-live="polite" aria-labelledby="labs-result-heading">
-                        <h3 id="labs-result-heading">Výber laboratórnych výsledkov</h3>
-                        <label for="labs-output">Text porovnajte s pôvodným výpisom, najmä hodnoty a jednotky.</label>
-                        <textarea id="labs-output" class="form-control ambulatory-output labs-output" cols="80" wrap="off" spellcheck="false" aria-describedby="labs-format-note" rows="<?= max(4, min(30, substr_count($labsResult['output'], "\n") + 2)) ?>" readonly><?= htmlspecialchars($labsResult['output']) ?></textarea>
-                        <small id="labs-format-note" class="ambulatory-format-note">Formát MS-DOS: konce riadkov CRLF, len znaky kódovej stránky CP852, riadky najviac <?= (int) $labsForm['labs_width'] ?> znakov. Stiahnutý súbor je priamo v kódovaní CP852.</small>
-                        <?php if ($labsResult['note'] !== '' || $labsResult['unresolved'] !== []): ?>
-                            <div class="info-box-blue ambulatory-skipped" role="note">
-                                <?php if ($labsResult['note'] !== ''): ?><p><?= htmlspecialchars($labsResult['note']) ?></p><?php endif; ?>
-                                <?php if ($labsResult['unresolved'] !== []): ?>
-                                    <p>Zo zoznamu sa nepodarilo priradiť: <?= htmlspecialchars(implode(', ', $labsResult['unresolved'])) ?>.</p>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                        <div class="form-actions no-print">
-                            <button type="button" id="copy-labs-output" class="btn-primary">Skopírovať text</button>
-                            <button type="button" id="download-labs-output" class="btn-secondary" hidden>Stiahnuť TXT (CP852)</button>
-                            <span id="labs-copy-status" class="helper-text" role="status" aria-live="polite"></span>
-                        </div>
-                    </section>
-                <?php endif; ?>
-
-                <?php if ($labsParsedItems !== []): ?>
-                    <details class="labs-details">
-                        <summary>Rozpoznané položky (<?= count($labsParsedItems) ?>)</summary>
-                        <div class="labs-table-wrap">
-                            <table class="admin-table labs-table">
-                                <thead>
-                                    <tr><th scope="col">Odber</th><th scope="col">Vo výpise</th><th scope="col">Vo výstupe</th><th scope="col">Hodnota</th><th scope="col">Jednotka</th><th scope="col">Rozpätie</th><th scope="col">Príznak</th></tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach (array_slice($labsParsedItems, 0, 400) as $labsItem): ?>
-                                        <tr>
-                                            <td><?= htmlspecialchars(labsFormatDate($labsItem['date'])) ?></td>
-                                            <td><?= htmlspecialchars($labsItem['name']) ?></td>
-                                            <td><?= $labsItem['known'] ? htmlspecialchars($labsItem['label']) : '<em>nerozpoznané</em>' ?></td>
-                                            <td><?= htmlspecialchars($labsItem['value']) ?></td>
-                                            <td><?= htmlspecialchars($labsItem['unit']) ?></td>
-                                            <td><?= htmlspecialchars($labsItem['ref']) ?></td>
-                                            <td><?= htmlspecialchars($labsItem['flag']) ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </details>
-                <?php endif; ?>
-                <?php if ($labsResult !== null && $labsResult['parsed']['unparsed_count'] > 0): ?>
-                    <details class="labs-details">
-                        <summary>Riadky s číslami, ktoré sa nerozpoznali (<?= (int) $labsResult['parsed']['unparsed_count'] ?>)</summary>
-                        <pre class="labs-unparsed"><?= htmlspecialchars(implode("\n", $labsResult['parsed']['unparsed'])) ?></pre>
-                    </details>
-                <?php endif; ?>
-            </div>
-
             <section class="primary-article auth-container auth-container--wide" aria-labelledby="ambulatory-limits-heading">
                 <h3 id="ambulatory-limits-heading">Dôležité hranice interpretácie</h3>
                 <ul>
@@ -920,6 +852,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$labsPosted) {
                 <h3>Primárne zdroje</h3>
                 <ul class="reference-list">
                     <li><small><em><a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of CKD</a>.</em></small></li>
+                    <li><small><em><a href="https://doi.org/10.1056/NEJMoa2102953" target="_blank" rel="noopener noreferrer">Inker LA et al. New Creatinine- and Cystatin C-Based Equations to Estimate GFR without Race. N Engl J Med. 2021;385(19):1737-1749</a> (eGFR CKD-EPI 2021 z kreatinínu).</em></small></li>
+                    <li><small><em><a href="https://doi.org/10.1056/NEJMoa1114248" target="_blank" rel="noopener noreferrer">Inker LA et al. Estimating Glomerular Filtration Rate from Serum Creatinine and Cystatin C. N Engl J Med. 2012;367(1):20-29</a> (eGFR CKD-EPI 2012 z cystatínu C).</em></small></li>
                     <li><small><em><a href="https://jamanetwork.com/journals/jama/fullarticle/897102" target="_blank" rel="noopener noreferrer">Tangri N et al. A Predictive Model for Progression of CKD to Kidney Failure. JAMA. 2011</a>.</em></small></li>
                     <li><small><em><a href="https://jamanetwork.com/journals/jama/fullarticle/2481159" target="_blank" rel="noopener noreferrer">Tangri N et al. Multinational Assessment of Accuracy of Equations for Predicting Risk of Kidney Failure. JAMA. 2016</a>.</em></small></li>
                     <li><small><em><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9472501/" target="_blank" rel="noopener noreferrer">Grams ME et al. Development and Validation of Prediction Models of Adverse Kidney Outcomes. Diabetes Care. 2022</a>.</em></small></li>

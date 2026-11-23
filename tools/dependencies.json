@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-20",
+  "updated": "2026-11-23",
   "entries": [
     {
       "id": "katex",
@@ -97,6 +97,22 @@
         "assets/katex/0.18.11/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
         "assets/katex/0.18.11/katex.min.css": "b8511ee880e4981ac28bbc3d675a90cb9fa080e275f06d648147ed316cb421ba",
         "assets/katex/0.18.11/katex.min.js": "607cb26db8e23fba98ba8e1c0b764ff4c67af35106e59316ec5449a94083fa68"
+      }
+    },
+    {
+      "id": "pdfjs",
+      "name": "PDF.js (pdfjs-dist)",
+      "version": "6.5.438",
+      "origin": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.5.438.tgz (npm tarball, SHA-512 integrita sha512-vg8Pw1x+AFKy4AMDvhuWl5cOYV8d698UoEANoFFhc79hqXDnZQqnOXoxw3HG907WHOg1JYOvLhP756boddFxpA== overená 23. 11. 2026)",
+      "license": "Apache-2.0 (assets/pdfjs/6.5.438/LICENSE)",
+      "advisories": "https://github.com/mozilla/pdf.js/security/advisories",
+      "update": "Stiahnuť tarball z npm registra, overiť integrity hash z metadát balíka (npm view pdfjs-dist dist.integrity), skopírovať build/pdf.min.mjs, build/pdf.worker.min.mjs a LICENSE do assets/pdfjs/<verzia>/, prepísať PDFJS_BASE v calculator_ambulatory.js, ručne overiť načítanie PDF zo Synlabu v Ambulantnej kalkulačke, odstrániť starý adresár a spustiť php tools/dependency_register.php --update.",
+      "used_by": "calculator_ambulatory.js (výber textu z výsledkového listu PDF v prehliadači; len getTextContent, bez vykresľovania)",
+      "patterns": ["assets/pdfjs/*/*"],
+      "files": {
+        "assets/pdfjs/6.5.438/LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "assets/pdfjs/6.5.438/pdf.min.mjs": "3a88402882cfa3e7e72c2c9b5149f52f0f88baf1c5b62aa11a41abdbc2072440",
+        "assets/pdfjs/6.5.438/pdf.worker.min.mjs": "1e64c8240e54735ec5913b37acd5134747799cb8c6bb3777c70adbc01232d2aa"
       }
     },
     {

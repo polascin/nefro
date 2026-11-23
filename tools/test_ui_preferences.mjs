@@ -214,29 +214,17 @@ assert.match(
     'fallback musí pri zobrazení bannera zrušiť inert.',
 );
 
-// Nastavenia formátu laboratórnych výsledkov sú preferenčné úložisko: zápis aj čítanie
-// iba po preferenčnom súhlase a pri jeho odvolaní sa kľúč vymaže (cookies.php, bod 1).
+// Ambulantná kalkulačka si od 23. 11. 2026 nepamätá nastavenia laboratórnych výsledkov
+// (formát určuje pevná šablóna), preto nesmie zapisovať do localStorage. Starší kľúč
+// sa pri odvolaní preferenčného súhlasu stále vymaže u používateľov, ktorí ho majú uložený.
 const ambulatorySource = fs.readFileSync(path.join(root, 'calculator_ambulatory.js'), 'utf8');
-const labsKey = (ambulatorySource.match(/LABS_PREFS_KEY = '([^']+)'/) || [])[1];
-assert.ok(labsKey, 'LABS_PREFS_KEY sa musí dať prečítať z calculator_ambulatory.js');
 assert.ok(
-    source.includes(`localStorage.removeItem('${labsKey}')`),
-    'odvolanie preferenčného súhlasu musí vymazať nastavenia formátu laboratórnych výsledkov.',
+    !/localStorage/.test(ambulatorySource),
+    'calculator_ambulatory.js nesmie bez súhlasu ukladať do localStorage.',
 );
-assert.match(
-    ambulatorySource,
-    /if \(labsPrefsAllowed\(\) && [^\n]+\{\s+try \{\s+var saved = JSON\.parse\(window\.localStorage\.getItem\(LABS_PREFS_KEY\)/,
-    'čítanie nastavení laboratórnych výsledkov musí byť podmienené preferenčným súhlasom.',
-);
-assert.match(
-    ambulatorySource,
-    /addEventListener\('submit', function \(\) \{\s+if \(!labsPrefsAllowed\(\)\) \{\s+return;/,
-    'zápis nastavení laboratórnych výsledkov musí byť podmienený preferenčným súhlasom.',
-);
-assert.match(
-    ambulatorySource,
-    /labsPrefsAllowed = function \(\) \{\s+return typeof window\.npsHasConsent === 'function' && window\.npsHasConsent\('preferences'\);/,
-    'labsPrefsAllowed musí vychádzať z npsHasConsent(\'preferences\').',
+assert.ok(
+    source.includes("localStorage.removeItem('nefro.ambulatory.labs.v1')"),
+    'odvolanie preferenčného súhlasu musí vymazať staršie nastavenia laboratórnych výsledkov.',
 );
 
 console.log('ui-preferences: všetky testy prešli');

@@ -161,6 +161,8 @@ ServerSignature Off
     AddType application/vnd.amazon.ebook .azw3
     AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
     AddType application/vnd.oasis.opendocument.text .odt
+    # ES moduly (pdf.js v Ambulantnej kalkulačke): prehliadač modul s iným typom odmietne.
+    AddType text/javascript .mjs
 </IfModule>
 <IfModule mod_headers.c>
     # Proxy/CDN musia cachovať pôvodný (PNG/JPEG) aj WebP variant podľa Accept

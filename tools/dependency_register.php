@@ -28,6 +28,7 @@ const DEPENDENCY_COVERAGE_GLOBS = [
     'assets/katex/*/fonts/*',
     'assets/katex/*/LICENSE',
     'assets/fonts/*',
+    'assets/pdfjs/*/*',
     'assets/*.js',
     'tools/*.phar',
 ];
