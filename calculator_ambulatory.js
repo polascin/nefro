@@ -500,6 +500,30 @@
         return pdfjsPromise;
     }
 
+    // labs-file-text:start (tools/test_ambulatory_file_text.mjs vykonáva tento úsek izolovane)
+    // Riadky s označenými osobnými údajmi (rodné číslo, meno, adresa, poisťovňa) sa do poľa
+    // nevložia; z riadka ostane nanajvýš dátum odberu. Meno bez označenia sa strojovo
+    // rozpoznať nedá, preto volajúci používateľa vyzve na kontrolu textu.
+    var IDENTITY_NUMBER = /(^|\D)\d{6}\s?\/\s?\d{3,4}(?!\d)/;
+    var IDENTITY_LABEL = /rodn[eé]\s+[čc][ií]slo|(^|[^A-Za-zÀ-ž])(R\.?\s?[ČC]\.?|meno|priezvisko|pacient(ka)?|bydlisko|adresa|pois[ťt]ov[ňn]a|tel(ef[óo]n)?\.?|nar\.|naroden[ýáie]+|d[áa]tum\s+nar[a-zé]*)\s*:/i;
+    var SAMPLED_DATE = /Odber:?\s*(\d{1,2}\.\s?\d{1,2}\.\s?\d{4})/i;
+    function stripIdentityLines(lines) {
+        var kept = [];
+        var removed = 0;
+        lines.forEach(function (line) {
+            if (!IDENTITY_NUMBER.test(line) && !IDENTITY_LABEL.test(line)) {
+                kept.push(line);
+                return;
+            }
+            removed++;
+            var sampled = line.match(SAMPLED_DATE);
+            if (sampled) {
+                kept.push('Odber: ' + sampled[1].replace(/\s/g, ''));
+            }
+        });
+        return {lines: kept, removed: removed};
+    }
+
     // Textové položky strany zoskupí do riadkov podľa výšky (y) a zoradí podľa x.
     function pdfRows(items) {
         var cells = items.filter(function (item) {
@@ -542,7 +566,7 @@
         var splitX = null;
         rows.forEach(function (row, index) {
             var text = rowText(row.cells);
-            var sampled = text.match(/Odber:?\s*(\d{1,2}\.\s?\d{1,2}\.\s?\d{4})/i);
+            var sampled = text.match(SAMPLED_DATE);
             if (sampled && !state.date) {
                 state.date = sampled[1].replace(/\s/g, '');
             }
@@ -557,9 +581,14 @@
             }
         });
         if (headerIndex === -1) {
-            return rows.map(function (row) {
+            // Strana bez hlavičky tabuľky Synlab: rozloženie nepoznáme, preto sa
+            // odstránia aspoň riadky s označenými osobnými údajmi.
+            var stripped = stripIdentityLines(rows.map(function (row) {
                 return rowText(row.cells);
-            });
+            }));
+            state.unrecognized = true;
+            state.removed += stripped.removed;
+            return stripped.lines;
         }
         var left = [];
         var right = [];
@@ -583,6 +612,7 @@
         }
         return lines.concat(left, right);
     }
+    // labs-file-text:end
 
     function pdfToLabsText(buffer) {
         var loadingTask = null;
@@ -590,7 +620,7 @@
             loadingTask = pdfjs.getDocument({data: buffer, isEvalSupported: false, disableFontFace: true});
             return loadingTask.promise;
         }).then(function (pdf) {
-            var state = {date: null};
+            var state = {date: null, unrecognized: false, removed: 0};
             var pages = [];
             var chain = Promise.resolve();
             for (var number = 1; number <= Math.min(pdf.numPages, 30); number++) {
@@ -606,7 +636,11 @@
             }
             return chain.then(function () {
                 loadingTask.destroy();
-                return (state.date ? 'Odber: ' + state.date + '\n' : '') + pages.join('\n');
+                return {
+                    text: (state.date ? 'Odber: ' + state.date + '\n' : '') + pages.join('\n'),
+                    unrecognized: state.unrecognized,
+                    removed: state.removed
+                };
             });
         });
     }
@@ -622,6 +656,9 @@
         if (labsFileGroup && labsFile && labsInput && window.TextDecoder && window.Uint8Array) {
             labsFileGroup.hidden = false;
             var lastLabsFile = null;
+            var removedNote = function (count) {
+                return count > 0 ? '; vynechané riadky s osobnými údajmi: ' + count : '';
+            };
             var readLabsFile = function (file) {
                 if (!file) {
                     return;
@@ -636,13 +673,15 @@
                             return;
                         }
                         labsFileStatus.textContent = 'Spracúvam PDF…';
-                        pdfToLabsText(bytes).then(function (text) {
-                            if (text.trim() === '') {
+                        pdfToLabsText(bytes).then(function (result) {
+                            if (result.text.trim() === '') {
                                 labsFileStatus.textContent = 'PDF neobsahuje text (môže ísť o sken). Výsledky vložte ako text.';
                                 return;
                             }
-                            labsInput.value = text;
-                            labsFileStatus.textContent = 'Načítané: ' + file.name + ' (PDF). Skontrolujte text a stlačte „Načítať hodnoty do formulára“.';
+                            labsInput.value = result.text;
+                            labsFileStatus.textContent = 'Načítané: ' + file.name + ' (PDF). ' + (result.unrecognized
+                                ? 'Rozloženie výsledkového listu Synlab sa nerozpoznalo na všetkých stranách' + removedNote(result.removed) + '. Pred odoslaním skontrolujte, či text neobsahuje meno alebo iné údaje pacienta, a stlačte „Načítať hodnoty do formulára“.'
+                                : 'Skontrolujte text a stlačte „Načítať hodnoty do formulára“.');
                         }).catch(function (error) {
                             if (window.console && console.error) {
                                 console.error('PDF:', error && error.message ? error.message : error);
@@ -656,8 +695,9 @@
                         return;
                     }
                     var decoded = decodeLabsFile(bytes, labsEncoding ? labsEncoding.value : 'auto');
-                    labsInput.value = decoded.text.replace(/^﻿/, '').replace(/\r\n?/g, '\n');
-                    labsFileStatus.textContent = 'Načítané: ' + file.name + ' (kódovanie ' + decoded.used + '). Skontrolujte diakritiku v poli nižšie.';
+                    var cleaned = stripIdentityLines(decoded.text.replace(/^﻿/, '').replace(/\r\n?/g, '\n').split('\n'));
+                    labsInput.value = cleaned.lines.join('\n');
+                    labsFileStatus.textContent = 'Načítané: ' + file.name + ' (kódovanie ' + decoded.used + ')' + removedNote(cleaned.removed) + '. Skontrolujte diakritiku a to, či text neobsahuje meno pacienta.';
                 };
                 reader.onerror = function () {
                     labsFileStatus.textContent = 'Súbor sa nepodarilo načítať.';
