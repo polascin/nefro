@@ -555,7 +555,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <option value="utf-8">TXT: UTF-8</option>
                                 </select>
                             </div>
-                            <small id="labs_file_status" role="status" aria-live="polite">PDF aj TXT sa spracujú priamo v prehliadači; do poľa nižšie sa vloží len text výsledkov bez hlavičky s menom a rodným číslom.</small>
+                            <small id="labs_file_status" role="status" aria-live="polite">PDF aj TXT sa spracujú priamo v prehliadači. Z výsledkového listu Synlab sa do poľa nižšie vloží len text výsledkov bez hlavičky s menom a rodným číslom; pri inom súbore sa vynechajú riadky s rodným číslom a označenými osobnými údajmi. Text pred odoslaním skontrolujte.</small>
                         </div>
                         <div class="form-group">
                             <label for="labs_input">Text laboratórnych výsledkov</label>
