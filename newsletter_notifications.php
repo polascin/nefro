@@ -1111,9 +1111,11 @@ if (!function_exists('getWeeklyDigestArticles')) {
      */
     function getWeeklyDigestArticles(PDO $pdo, string $since, string $until): array
     {
+        // Článok o biotíne bol schválený na publikovanie bez newslettera.
         $stmt = $pdo->prepare("SELECT id, title, slug, excerpt, published_at
             FROM articles
             WHERE is_published = 1
+              AND slug <> 'biotin-hemodialyza-parathormon-vitamin-d'
               AND published_at > :since
               AND published_at <= :until
             ORDER BY published_at DESC, id DESC");

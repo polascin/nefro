@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'biotin-hemodialyza-parathormon-vitamin-d' => ['Richard A. Plasse', 'Stephen W. Olson', 'Christina M. Yuan', 'Robert Nee'],
         'prchave-biomarkery-moc-dych-diagnostika' => ['Marta Zaraska'],
         'ai-ekg-monitorovanie-tazkej-hypokaliemie' => ['Nancy A. Melville'],
         'asundexian-fda-sekundarna-prevencia-mozgovej-prihody' => ['Megan Brooks'],
