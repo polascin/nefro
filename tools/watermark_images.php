@@ -50,6 +50,7 @@ const MANIFEST_REL   = 'tools/.watermark-manifest.json';
 
 // Značkové/UI assety, ktoré sa NEvodoznakujú (regex na basename, bez prípony).
 const DENY_PATTERNS = [
+    '/^naltrexon-bupropion-obezita-ckd$/i', // ilustrácia článku má zostať bez textu
     '/^nps(-.*)?$/i',                // nps.png, nps-logo, nps-abstract
     '/^nefro\.polascin\.net\.\d+$/i', // brandové screenshoty
     '/^lubomir-polascin$/i',         // portrét autora
